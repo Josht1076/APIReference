@@ -1,0 +1,316 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ThreadInfo.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="22/12/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ThreadInfo" name="contextid"/>
+<meta content="ThreadInfo Object" name="description"/>
+<meta content="GUID-8283090f-20f4-4853-865c-883e22bf9b7e" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ThreadInfo Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ThreadInfo Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/ThreadInfo.h&gt;<h2 class="api">
+          Description
+        </h2>This class defines the methods and properties that define the type and size of a thread. This object is used to create and query thread and tapped (straight and tapered) hole features. A new ThreadInfo object is created by using the ThreadInfo.create method. If the ThreadInfo object is obtained from an existing thread or hole feature, modifying the ThreadInfo object will modify the feature.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_create.htm">create</a></td>
+<td class="api-list">This method creates a new ThreadInfo object that can be used to create a thread or tapped-hole feature. The ThreadInfo object defines the type and size of the thread to create. When creating a thread, the type and size of the thread are defined by specifying the thread type, designation, and class. Fusion uses this information to look up the full details of the thread in tables delivered with Fusion. The ThreadDataQuery object can be used to determine valid input for this information.<br><br/> The thread type implicitly defines if the thread is standard or tapered. Tapered threads can only be used when creating tapped holes and are not supported for thread features.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_redefine.htm">redefine</a></td>
+<td class="api-list">Method that redefines an existing ThreadInfo object. This is typically used to change the thread of an existing thread or tapped hole.<br/><br/> The ThreadInfo object defines the type and size of a thread by specifying the thread type, designation, and class. Fusion uses this information to look up the full details of the thread in tables delivered with Fusion. The ThreadDataQuery object can be used to determine valid input for this information.<br/><br/> Tapered threads can only be used when creating or editing tapped holes and are not supported for thread features.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_isInternal.htm">isInternal</a></td>
+<td class="api-list">Returns and sets if the thread is an internal or external thread. A value of true indicates an internal thread. It defaults to true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_isRightHanded.htm">isRightHanded</a></td>
+<td class="api-list">Gets and sets if the thread is right or left-handed thread. A value of true indicates a right-handed thread. It defaults to true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_isTapered.htm">isTapered</a></td>
+<td class="api-list">Indicates if this ThreadInfo object defines a standard or tapered thread.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_majorDiameter.htm">majorDiameter</a></td>
+<td class="api-list">Returns the value that defines the major diameter. The units are centimeters.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_minorDiameter.htm">minorDiameter</a></td>
+<td class="api-list">Returns the value that defines the minor diameter. The units are centimeters.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_pitchDiameter.htm">pitchDiameter</a></td>
+<td class="api-list">Returns the value that defines the pitch diameter. The units are centimeters.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_taperAngle.htm">taperAngle</a></td>
+<td class="api-list">Returns the angle of the tapered thread in centimeters.<br/><br/> This is only valid when isTapered is true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_taperTapDrillDiameter.htm">taperTapDrillDiameter</a></td>
+<td class="api-list">Returns the Diameter of the tap drill required to create this tap.<br/><br/> This is only valid when isTapered is true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_taperThreadHeight.htm">taperThreadHeight</a></td>
+<td class="api-list">Returns the height of a tapered thread in centimeters.<br/><br/> This is only valid when isTapered is true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_taperUsefulThreadLength.htm">taperUsefulThreadLength</a></td>
+<td class="api-list">Returns the useful length of threads for a tapered thread in centimeters.<br/><br/> This is only valid when isTapered is true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_taperWrenchMakeupInternalDiameter.htm">taperWrenchMakeupInternalDiameter</a></td>
+<td class="api-list">The wrench makeup internal diameter for a taper pipe thread, also known as the effective thread diameter, is the diameter at the point where the thread engagement occurs when the pipe is tightened with a wrench.<br/><br/> This is only valid when isTapered is true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_threadAngle.htm">threadAngle</a></td>
+<td class="api-list">Returns the value that defines the thread angle. The units are degrees.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_threadClass.htm">threadClass</a></td>
+<td class="api-list">Returns and sets the string that defines the thread class.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_threadDesignation.htm">threadDesignation</a></td>
+<td class="api-list">Returns and sets the string that defines the thread designation.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_threadPitch.htm">threadPitch</a></td>
+<td class="api-list">Returns the value that defines the thread pitch. The units are centimeters.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_threadSize.htm">threadSize</a></td>
+<td class="api-list">Returns the string that defines the thread size.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadInfo_threadType.htm">threadType</a></td>
+<td class="api-list">Returns and sets the string that defines the thread type.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="HoleFeature_tappedHoleInfo.htm">HoleFeature.tappedHoleInfo</a>, <a href="ThreadFeature_threadInfo.htm">ThreadFeature.threadInfo</a>, <a href="ThreadFeatureInput_threadInfo.htm">ThreadFeatureInput.threadInfo</a>, <a href="ThreadFeatures_createThreadInfo.htm">ThreadFeatures.createThreadInfo</a>, <a href="ThreadInfo_create.htm">ThreadInfo.create</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadFeatureSample_Sample.htm">Thread Feature API Sample</a></td>
+<td class="api-list">Demonstrates creating a new thread feature.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2015<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ThreadInfo%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+returnValue = adsk::fusion::ThreadInfo::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">create Method</h3><p class="api">This method creates a new ThreadInfo object that can be used to create a thread or tapped-hole feature. The ThreadInfo object defines the type and size of the thread to create. When creating a thread, the type and size of the thread are defined by specifying the thread type, designation, and class. Fusion uses this information to look up the full details of the thread in tables delivered with Fusion. The ThreadDataQuery object can be used to determine valid input for this information. The thread type implicitly defines if the thread is standard or tapered. Tapered threads can only be used when creating tapped holes and are not supported for thread features.</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+returnValue = adsk::fusion::ThreadInfo::
+create
+(isTapered, isInternal, threadType, threadDesignation, threadClass, isRightHanded);</pre><p class="api">Return Value: ThreadInfo - Returns the newly created ThreadInfo object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">isTapered</td><td class="api-list">boolean</td><td class="api-list">Input Boolean that indicates if the thread is straight or tapered.</td></tr><tr><td class="api-list">isInternal</td><td class="api-list">boolean</td><td class="api-list">Input Boolean that indicates if the thread is internal or external. A value of true indicates an internal thread. When the ThreadInfo is used to create a tapped hole, this value is ignored since it is always an internal thread.</td></tr><tr><td class="api-list">threadType</td><td class="api-list">string</td><td class="api-list">Input string that defines the thread type.</td></tr><tr><td class="api-list">threadDesignation</td><td class="api-list">string</td><td class="api-list">Input string that contains the thread designation.</td></tr><tr><td class="api-list">threadClass</td><td class="api-list">string</td><td class="api-list">Input string that defines the thread class. This argument is ignored for tapered threads, so an empty string can be used.</td></tr><tr><td class="api-list">isRightHanded</td><td class="api-list">boolean</td><td class="api-list">Input boolean that defines if the thread is right or left-handed.</td></tr></table><h3 class="api-member">isInternal Property</h3><p class="api">Returns and sets if the thread is an internal or external thread. A value of true indicates an internal thread. It defaults to true.</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+boolean propertyValue = threadInfo_var-&gt;
+isInternal
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = threadInfo_var-&gt;
+isInternal
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isRightHanded Property</h3><p class="api">Gets and sets if the thread is right or left-handed thread. A value of true indicates a right-handed thread. It defaults to true.</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+boolean propertyValue = threadInfo_var-&gt;
+isRightHanded
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = threadInfo_var-&gt;
+isRightHanded
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isTapered Property</h3><p class="api">Indicates if this ThreadInfo object defines a standard or tapered thread.</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+boolean propertyValue = threadInfo_var-&gt;
+isTapered
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+boolean propertyValue = threadInfo_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">majorDiameter Property</h3><p class="api">Returns the value that defines the major diameter. The units are centimeters.</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+double propertyValue = threadInfo_var-&gt;
+majorDiameter
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">minorDiameter Property</h3><p class="api">Returns the value that defines the minor diameter. The units are centimeters.</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+double propertyValue = threadInfo_var-&gt;
+minorDiameter
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+string propertyValue = threadInfo_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">pitchDiameter Property</h3><p class="api">Returns the value that defines the pitch diameter. The units are centimeters.</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+double propertyValue = threadInfo_var-&gt;
+pitchDiameter
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">redefine Method</h3><p class="api">Method that redefines an existing ThreadInfo object. This is typically used to change the thread of an existing thread or tapped hole. The ThreadInfo object defines the type and size of a thread by specifying the thread type, designation, and class. Fusion uses this information to look up the full details of the thread in tables delivered with Fusion. The ThreadDataQuery object can be used to determine valid input for this information. Tapered threads can only be used when creating or editing tapped holes and are not supported for thread features.</p><pre class="api-code">"threadInfo_var" is a variable referencing a
+ThreadInfo
+object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+returnValue = threadInfo_var-&gt;
+redefine
+(isTapered, isInternal, threadType, threadDesignation, threadClass, isRightHanded);</pre><p class="api">Return Value: boolean - Returns true if the redefinition was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">isTapered</td><td class="api-list">boolean</td><td class="api-list">Input Boolean that indicates if the thread is straight or tapered.</td></tr><tr><td class="api-list">isInternal</td><td class="api-list">boolean</td><td class="api-list">Input Boolean that indicates if the thread is internal or external. A value of true indicates an internal thread. This value is ignored when the ThreadInfo is used for a tapped hole since they are always internal.</td></tr><tr><td class="api-list">threadType</td><td class="api-list">string</td><td class="api-list">Input string that defines the thread type.</td></tr><tr><td class="api-list">threadDesignation</td><td class="api-list">string</td><td class="api-list">Input string that defines the thread designation.</td></tr><tr><td class="api-list">threadClass</td><td class="api-list">string</td><td class="api-list">Input string that defines the thread class. This argument is ignored for tapered threads.</td></tr><tr><td class="api-list">isRightHanded</td><td class="api-list">boolean</td><td class="api-list">Input Boolean that specifies if the thread is straight or tapered.</td></tr></table><h3 class="api-member">taperAngle Property</h3><p class="api">Returns the angle of the tapered thread in centimeters. This is only valid when isTapered is true.</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+double propertyValue = threadInfo_var-&gt;
+taperAngle
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">taperTapDrillDiameter Property</h3><p class="api">Returns the Diameter of the tap drill required to create this tap. This is only valid when isTapered is true.</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+double propertyValue = threadInfo_var-&gt;
+taperTapDrillDiameter
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">taperThreadHeight Property</h3><p class="api">Returns the height of a tapered thread in centimeters. This is only valid when isTapered is true.</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+double propertyValue = threadInfo_var-&gt;
+taperThreadHeight
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">taperUsefulThreadLength Property</h3><p class="api">Returns the useful length of threads for a tapered thread in centimeters. This is only valid when isTapered is true.</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+double propertyValue = threadInfo_var-&gt;
+taperUsefulThreadLength
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">taperWrenchMakeupInternalDiameter Property</h3><p class="api">The wrench makeup internal diameter for a taper pipe thread, also known as the effective thread diameter, is the diameter at the point where the thread engagement occurs when the pipe is tightened with a wrench. This is only valid when isTapered is true.</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+double propertyValue = threadInfo_var-&gt;
+taperWrenchMakeupInternalDiameter
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">threadAngle Property</h3><p class="api">Returns the value that defines the thread angle. The units are degrees.</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+double propertyValue = threadInfo_var-&gt;
+threadAngle
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">threadClass Property</h3><p class="api">Returns and sets the string that defines the thread class.</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+string propertyValue = threadInfo_var-&gt;
+threadClass
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = threadInfo_var-&gt;
+threadClass
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">threadDesignation Property</h3><p class="api">Returns and sets the string that defines the thread designation.</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+string propertyValue = threadInfo_var-&gt;
+threadDesignation
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = threadInfo_var-&gt;
+threadDesignation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">threadPitch Property</h3><p class="api">Returns the value that defines the thread pitch. The units are centimeters.</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+double propertyValue = threadInfo_var-&gt;
+threadPitch
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">threadSize Property</h3><p class="api">Returns the string that defines the thread size.</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+string propertyValue = threadInfo_var-&gt;
+threadSize
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">threadType Property</h3><p class="api">Returns and sets the string that defines the thread type.</p><pre class="api-code">"threadInfo_var" is a variable referencing a ThreadInfo object.
+#include &lt;Fusion/Features/ThreadInfo.h&gt;
+// Get the value of the property.
+string propertyValue = threadInfo_var-&gt;
+threadType
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = threadInfo_var-&gt;
+threadType
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p></body>
+</html>

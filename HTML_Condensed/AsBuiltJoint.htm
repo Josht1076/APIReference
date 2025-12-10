@@ -1,0 +1,405 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/AsBuiltJoint.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="10/9/2015" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="AsBuiltJoint" name="contextid"/>
+<meta content="AsBuiltJoint Object" name="description"/>
+<meta content="GUID-FA533597-D305-4F38-A4AE-84B5A69A770D" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>AsBuiltJoint Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">AsBuiltJoint Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Components/AsBuiltJoint.h&gt;<h2 class="api">
+          Description
+        </h2>Represent an as-built joint.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_createForAssemblyContext.htm">createForAssemblyContext</a></td>
+<td class="api-list">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes this as-built joint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_setAsBallJointMotion.htm">setAsBallJointMotion</a></td>
+<td class="api-list">Redefines the relationship between the two joint geometries as a ball joint.<br><br/> To use this method, you need to position the timeline marker to immediately before this as-built joint. This can be accomplished using the following code: thisAsBuiltJoint.timelineObject.rollTo(True)</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_setAsCylindricalJointMotion.htm">setAsCylindricalJointMotion</a></td>
+<td class="api-list">Redefines the relationship between the two joint geometries as a cylindrical joint.<br/><br/> To use this method, you need to position the timeline marker to immediately before this as-built joint. This can be accomplished using the following code: thisAsBuiltJoint.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_setAsPinSlotJointMotion.htm">setAsPinSlotJointMotion</a></td>
+<td class="api-list">Redefines the relationship between the two joint geometries as a pin-slot joint.<br/><br/> To use this method, you need to position the timeline marker to immediately before this as-built joint. This can be accomplished using the following code: thisAsBuiltJoint.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_setAsPlanarJointMotion.htm">setAsPlanarJointMotion</a></td>
+<td class="api-list">Redefines the relationship between the two joint geometries as a planar joint.<br/><br/> To use this method, you need to position the timeline marker to immediately before this as-built joint. This can be accomplished using the following code: thisAsBuiltJoint.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_setAsRevoluteJointMotion.htm">setAsRevoluteJointMotion</a></td>
+<td class="api-list">Redefines the relationship between the two joint geometries as a revolute joint.<br/><br/> To use this method, you need to position the timeline marker to immediately before this as-built joint. This can be accomplished using the following code: thisAsBuiltJoint.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_setAsRigidJointMotion.htm">setAsRigidJointMotion</a></td>
+<td class="api-list">Redefines the relationship between the two joint geometries as a rigid joint.<br/><br/> To use this method, you need to position the timeline marker to immediately before this as-built joint. This can be accomplished using the following code: thisAsBuiltJoint.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_setAsSliderJointMotion.htm">setAsSliderJointMotion</a></td>
+<td class="api-list">Redefines the relationship between the two joint geometries as a slider joint.<br/><br/> To use this method, you need to position the timeline marker to immediately before this as-built joint. This can be accomplished using the following code: thisAsBuiltJoint.timelineObject.rollTo(True)</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_assemblyContext.htm">assemblyContext</a></td>
+<td class="api-list">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_attributes.htm">attributes</a></td>
+<td class="api-list">Returns the collection of attributes associated with this as-built joint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_entityToken.htm">entityToken</a></td>
+<td class="api-list">Returns a token for the AsBuiltJoint object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same as-built joint.<br/><br/> When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_geometry.htm">geometry</a></td>
+<td class="api-list">Specifies the position of the joint. Getting this property will return null and setting it will be ignored in the case where the joint motion is rigid.<br/><br/> To set this property, you need to position the timeline marker to immediately before this as-built joint. This can be accomplished using the following code: thisAsBuiltJoint.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_isLightBulbOn.htm">isLightBulbOn</a></td>
+<td class="api-list">Gets and sets if the light bulb of this as-built joint as displayed in the browser is on or off. A joint will only be visible if the light bulb is switched on. However, the light bulb can be on and the joint still invisible if a higher level occurrence in the assembly context is not visible because its light bulb is off or the joints folder is light bulb is off.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_isSuppressed.htm">isSuppressed</a></td>
+<td class="api-list">Gets and sets if this as-built joint is suppressed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_isVisible.htm">isVisible</a></td>
+<td class="api-list">Gets whether the as-built joint is visible. To change the visibility see the isLightBulbOn property. This property is affected by the assembly context.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_jointMotion.htm">jointMotion</a></td>
+<td class="api-list">Returns a JointMotion object that defines the motion relationship between the two geometries.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_motionLinks.htm">motionLinks</a></td>
+<td class="api-list">Returns the MotionLink objects that this joint is involved in.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_name.htm">name</a></td>
+<td class="api-list">The name of the as-built joint as it is displayed in the timeline and the browser. The name can be changed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_nativeObject.htm">nativeObject</a></td>
+<td class="api-list">The NativeObject is the object outside the context of an assembly and in the context of it's parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_occurrenceOne.htm">occurrenceOne</a></td>
+<td class="api-list">Specifies the first of two occurrences the joint is between.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_occurrenceTwo.htm">occurrenceTwo</a></td>
+<td class="api-list">Specifies the second of two occurrences the joint is between.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_parentComponent.htm">parentComponent</a></td>
+<td class="api-list">Returns the parent component that owns this AsBuiltJoint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_timelineObject.htm">timelineObject</a></td>
+<td class="api-list">Returns the timeline object associated with this as-built joint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJoint_transform.htm">transform</a></td>
+<td class="api-list">Returns the position and orientation of the joint geometry associated with this as-built joint. This is returned as a 3D matrix which provides the origin and the X, Y, and Z axis vectors of the coordinate system.<br/><br/> This property is especially useful in cases where the JointGeometry cannot be obtained. This can happen when the model has been modified in a way where the geometry used to create the joint is no longer available.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="AsBuiltJoint_createForAssemblyContext.htm">AsBuiltJoint.createForAssemblyContext</a>, <a href="AsBuiltJoint_nativeObject.htm">AsBuiltJoint.nativeObject</a>, <a href="AsBuiltJointList_item.htm">AsBuiltJointList.item</a>, <a href="AsBuiltJointList_itemByName.htm">AsBuiltJointList.itemByName</a>, <a href="AsBuiltJoints_add.htm">AsBuiltJoints.add</a>, <a href="AsBuiltJoints_item.htm">AsBuiltJoints.item</a>, <a href="AsBuiltJoints_itemByName.htm">AsBuiltJoints.itemByName</a>, <a href="Component_allAsBuiltJoints.htm">Component.allAsBuiltJoints</a>, <a href="FlatPatternComponent_allAsBuiltJoints.htm">FlatPatternComponent.allAsBuiltJoints</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJointSample_Sample.htm">As-Built Joint Sample</a></td>
+<td class="api-list">Demonstrates creating a new As-Built Joint.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2015<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(AsBuiltJoint%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">assemblyContext Property</h3><p class="api">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an AsBuiltJoint object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = asBuiltJoint_var-&gt;
+assemblyContext
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">attributes Property</h3><p class="api">Returns the collection of attributes associated with this as-built joint.</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an AsBuiltJoint object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Get the value of the property.
+Ptr&lt;Attributes&gt; propertyValue = asBuiltJoint_var-&gt;
+attributes
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+returnValue = adsk::fusion::AsBuiltJoint::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">createForAssemblyContext Method</h3><p class="api">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an
+AsBuiltJoint
+object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+returnValue = asBuiltJoint_var-&gt;
+createForAssemblyContext
+(occurrence);</pre><p class="api">Return Value: AsBuiltJoint - Returns the proxy object or null if this isn't the NativeObject.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">occurrence</td><td class="api-list">Occurrence</td><td class="api-list">The occurrence that defines the context to create the proxy in.</td></tr></table><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes this as-built joint.</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an
+AsBuiltJoint
+object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+returnValue = asBuiltJoint_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true if the delete was successful.</p><h3 class="api-member">entityToken Property</h3><p class="api">Returns a token for the AsBuiltJoint object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same as-built joint. When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an AsBuiltJoint object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Get the value of the property.
+string propertyValue = asBuiltJoint_var-&gt;
+entityToken
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">geometry Property</h3><p class="api">Specifies the position of the joint. Getting this property will return null and setting it will be ignored in the case where the joint motion is rigid. To set this property, you need to position the timeline marker to immediately before this as-built joint. This can be accomplished using the following code: thisAsBuiltJoint.timelineObject.rollTo(True)</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an AsBuiltJoint object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Get the value of the property.
+Ptr&lt;JointGeometry&gt; propertyValue = asBuiltJoint_var-&gt;
+geometry
+();
+// Set the value of the property, where value_var is a JointGeometry.
+bool returnValue = asBuiltJoint_var-&gt;
+geometry
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">isLightBulbOn Property</h3><p class="api">Gets and sets if the light bulb of this as-built joint as displayed in the browser is on or off. A joint will only be visible if the light bulb is switched on. However, the light bulb can be on and the joint still invisible if a higher level occurrence in the assembly context is not visible because its light bulb is off or the joints folder is light bulb is off.</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an AsBuiltJoint object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Get the value of the property.
+boolean propertyValue = asBuiltJoint_var-&gt;
+isLightBulbOn
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = asBuiltJoint_var-&gt;
+isLightBulbOn
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isSuppressed Property</h3><p class="api">Gets and sets if this as-built joint is suppressed.</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an AsBuiltJoint object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Get the value of the property.
+boolean propertyValue = asBuiltJoint_var-&gt;
+isSuppressed
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = asBuiltJoint_var-&gt;
+isSuppressed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an AsBuiltJoint object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Get the value of the property.
+boolean propertyValue = asBuiltJoint_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isVisible Property</h3><p class="api">Gets whether the as-built joint is visible. To change the visibility see the isLightBulbOn property. This property is affected by the assembly context.</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an AsBuiltJoint object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Get the value of the property.
+boolean propertyValue = asBuiltJoint_var-&gt;
+isVisible
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">jointMotion Property</h3><p class="api">Returns a JointMotion object that defines the motion relationship between the two geometries.</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an AsBuiltJoint object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Get the value of the property.
+Ptr&lt;JointMotion&gt; propertyValue = asBuiltJoint_var-&gt;
+jointMotion
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">motionLinks Property</h3><p class="api">Returns the MotionLink objects that this joint is involved in.</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an AsBuiltJoint object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;MotionLink&gt;&gt; propertyValue = asBuiltJoint_var-&gt;
+motionLinks
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type .</p><h3 class="api-member">name Property</h3><p class="api">The name of the as-built joint as it is displayed in the timeline and the browser. The name can be changed.</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an AsBuiltJoint object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Get the value of the property.
+string propertyValue = asBuiltJoint_var-&gt;
+name
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = asBuiltJoint_var-&gt;
+name
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">nativeObject Property</h3><p class="api">The NativeObject is the object outside the context of an assembly and in the context of it's parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an AsBuiltJoint object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Get the value of the property.
+Ptr&lt;AsBuiltJoint&gt; propertyValue = asBuiltJoint_var-&gt;
+nativeObject
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an AsBuiltJoint object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Get the value of the property.
+string propertyValue = asBuiltJoint_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">occurrenceOne Property</h3><p class="api">Specifies the first of two occurrences the joint is between.</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an AsBuiltJoint object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = asBuiltJoint_var-&gt;
+occurrenceOne
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">occurrenceTwo Property</h3><p class="api">Specifies the second of two occurrences the joint is between.</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an AsBuiltJoint object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = asBuiltJoint_var-&gt;
+occurrenceTwo
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">parentComponent Property</h3><p class="api">Returns the parent component that owns this AsBuiltJoint.</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an AsBuiltJoint object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Get the value of the property.
+Ptr&lt;Component&gt; propertyValue = asBuiltJoint_var-&gt;
+parentComponent
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">setAsBallJointMotion Method</h3><p class="api">Redefines the relationship between the two joint geometries as a ball joint. To use this method, you need to position the timeline marker to immediately before this as-built joint. This can be accomplished using the following code: thisAsBuiltJoint.timelineObject.rollTo(True)</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an
+AsBuiltJoint
+object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Uses no optional arguments.
+returnValue = asBuiltJoint_var-&gt;
+setAsBallJointMotion
+(pitchDirection, yawDirection);
+// Uses optional arguments.
+returnValue = asBuiltJoint_var-&gt;
+setAsBallJointMotion
+(pitchDirection, yawDirection, geometry, customPitchDirection, customYawDirection);</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pitchDirection</td><td class="api-list">JointDirections</td><td class="api-list">Defines the direction the pitch angle is measured from. This can be ZAxisJointDirection or CustomJointDirection. If CustomJointDirection is specified then you must also provide a value for the customPitchDirection argument.</td></tr><tr><td class="api-list">yawDirection</td><td class="api-list">JointDirections</td><td class="api-list">Defines the direction the yaw is measured from. This can be XAxisJointDirection or CustomJointDirection. If CustomJointDirection is specified then you must also provide a value for the customYawDirection argument.</td></tr><tr><td class="api-list">geometry</td><td class="api-list">JointGeometry</td><td class="api-list">Redefines the joint geometry. If not provided, the existing geometry is used. This argument is required if the current joint motion is rigid. This is an optional argument whose default value is null.</td></tr><tr><td class="api-list">customPitchDirection</td><td class="api-list">Base</td><td class="api-list">If the pitchDirection argument is customPitchDirection this argument is used to define the direction the pitch angel is measured from. This can be several types of entities that can define a direction. This is an optional argument whose default value is null.</td></tr><tr><td class="api-list">customYawDirection</td><td class="api-list">Base</td><td class="api-list">If the yawDirection argument is customPitchDirection this argument is used to define the direction the yaw angel is measured from. This can be several types of entities that can define a direction. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">setAsCylindricalJointMotion Method</h3><p class="api">Redefines the relationship between the two joint geometries as a cylindrical joint. To use this method, you need to position the timeline marker to immediately before this as-built joint. This can be accomplished using the following code: thisAsBuiltJoint.timelineObject.rollTo(True)</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an
+AsBuiltJoint
+object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Uses no optional arguments.
+returnValue = asBuiltJoint_var-&gt;
+setAsCylindricalJointMotion
+(rotationAxis);
+// Uses optional arguments.
+returnValue = asBuiltJoint_var-&gt;
+setAsCylindricalJointMotion
+(rotationAxis, geometry, customRotationAxisEntity);</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">rotationAxis</td><td class="api-list">JointDirections</td><td class="api-list">Specifies which axis the rotation is around. If this is set to CustomJointDirection then the customRotationAxisEntity argument must also be provided.</td></tr><tr><td class="api-list">geometry</td><td class="api-list">JointGeometry</td><td class="api-list">Redefines the joint geometry. If not provided, the existing geometry is used. This argument is required if the current joint motion is rigid. This is an optional argument whose default value is null.</td></tr><tr><td class="api-list">customRotationAxisEntity</td><td class="api-list">Base</td><td class="api-list">If the rotationAxis is customAxisEntity this argument is used to specify the entity that defines the custom axis of rotation. This can be several types of entities that an axis can be derived from. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">setAsPinSlotJointMotion Method</h3><p class="api">Redefines the relationship between the two joint geometries as a pin-slot joint. To use this method, you need to position the timeline marker to immediately before this as-built joint. This can be accomplished using the following code: thisAsBuiltJoint.timelineObject.rollTo(True)</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an
+AsBuiltJoint
+object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Uses no optional arguments.
+returnValue = asBuiltJoint_var-&gt;
+setAsPinSlotJointMotion
+(rotationAxis, slideDirection);
+// Uses optional arguments.
+returnValue = asBuiltJoint_var-&gt;
+setAsPinSlotJointMotion
+(rotationAxis, slideDirection, geometry, customRotationAxisEntity, customSlideDirectionEntity);</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">rotationAxis</td><td class="api-list">JointDirections</td><td class="api-list">Specifies which axis the rotation is around. If this is set to CustomJointDirection then the customRotationAxisEntity argument must also be provided.</td></tr><tr><td class="api-list">slideDirection</td><td class="api-list">JointDirections</td><td class="api-list">Specifies which axis the slide direction is along. If this is set to CustomJointDirection then the customSlideDirectionEntity argument must also be provided.</td></tr><tr><td class="api-list">geometry</td><td class="api-list">JointGeometry</td><td class="api-list">Redefines the joint geometry. If not provided, the existing geometry is used. This argument is required if the current joint motion is rigid. This is an optional argument whose default value is null.</td></tr><tr><td class="api-list">customRotationAxisEntity</td><td class="api-list">Base</td><td class="api-list">If the rotationAxis is customAxisEntity this argument is used to specify the entity that defines the custom axis of rotation. This can be several types of entities that an axis can be derived This is an optional argument whose default value is null.</td></tr><tr><td class="api-list">customSlideDirectionEntity</td><td class="api-list">Base</td><td class="api-list">If the slideDirection is CustomJointDirection this argument is used to specify the entity that defines the custom slide direction. This can be several types of entities that can define a direction. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">setAsPlanarJointMotion Method</h3><p class="api">Redefines the relationship between the two joint geometries as a planar joint. To use this method, you need to position the timeline marker to immediately before this as-built joint. This can be accomplished using the following code: thisAsBuiltJoint.timelineObject.rollTo(True)</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an
+AsBuiltJoint
+object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Uses no optional arguments.
+returnValue = asBuiltJoint_var-&gt;
+setAsPlanarJointMotion
+(normalDirection);
+// Uses optional arguments.
+returnValue = asBuiltJoint_var-&gt;
+setAsPlanarJointMotion
+(normalDirection, geometry, customNormalDirectionEntity, customPrimarySlideDirection);</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">normalDirection</td><td class="api-list">JointDirections</td><td class="api-list">Defines the direction of the normal of the single degree of rotation. This can be set to XAxisJointDirection, YAxisJointDirection, ZAxisJointDirection, or CustomJointDirection. If set to CustomJointDirection then the customNormalDirectionEntity argument must also be provided.</td></tr><tr><td class="api-list">geometry</td><td class="api-list">JointGeometry</td><td class="api-list">Redefines the joint geometry. If not provided, the existing geometry is used. This argument is required if the current joint motion is rigid. This is an optional argument whose default value is null.</td></tr><tr><td class="api-list">customNormalDirectionEntity</td><td class="api-list">Base</td><td class="api-list">If the normalDirection is CustomJointDirection this argument is used to specify the entity that defines the direction of the normal. This can be several types of entities that can define a direction. This is an optional argument whose default value is null.</td></tr><tr><td class="api-list">customPrimarySlideDirection</td><td class="api-list">Base</td><td class="api-list">This arguments defines the direction of the primary slide direction. A default primary slide direction is automatically chosen and will be used if this argument is not provided or is null. The secondary slide direction is automatically inferred from the normal and primary slide directions. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">setAsRevoluteJointMotion Method</h3><p class="api">Redefines the relationship between the two joint geometries as a revolute joint. To use this method, you need to position the timeline marker to immediately before this as-built joint. This can be accomplished using the following code: thisAsBuiltJoint.timelineObject.rollTo(True)</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an
+AsBuiltJoint
+object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Uses no optional arguments.
+returnValue = asBuiltJoint_var-&gt;
+setAsRevoluteJointMotion
+(rotationAxis);
+// Uses optional arguments.
+returnValue = asBuiltJoint_var-&gt;
+setAsRevoluteJointMotion
+(rotationAxis, geometry, customRotationAxisEntity);</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">rotationAxis</td><td class="api-list">JointDirections</td><td class="api-list">Specifies which axis the rotation is around. If this is set to CustomJointDirection then the customRotationAxisEntity argument must also be provided.</td></tr><tr><td class="api-list">geometry</td><td class="api-list">JointGeometry</td><td class="api-list">Redefines the joint geometry. If not provided, the existing geometry is used. This argument is required if the current joint motion is rigid. This is an optional argument whose default value is null.</td></tr><tr><td class="api-list">customRotationAxisEntity</td><td class="api-list">Base</td><td class="api-list">If the rotationAxis is customAxisEntity this argument is used to specify the entity that defines the custom axis of rotation. This can be several types of entities that an axis can be derived from. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">setAsRigidJointMotion Method</h3><p class="api">Redefines the relationship between the two joint geometries as a rigid joint. To use this method, you need to position the timeline marker to immediately before this as-built joint. This can be accomplished using the following code: thisAsBuiltJoint.timelineObject.rollTo(True)</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an
+AsBuiltJoint
+object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+returnValue = asBuiltJoint_var-&gt;
+setAsRigidJointMotion
+();</pre><p class="api">Return Value: boolean - Returns true if successful.</p><h3 class="api-member">setAsSliderJointMotion Method</h3><p class="api">Redefines the relationship between the two joint geometries as a slider joint. To use this method, you need to position the timeline marker to immediately before this as-built joint. This can be accomplished using the following code: thisAsBuiltJoint.timelineObject.rollTo(True)</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an
+AsBuiltJoint
+object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Uses no optional arguments.
+returnValue = asBuiltJoint_var-&gt;
+setAsSliderJointMotion
+(sliderDirection);
+// Uses optional arguments.
+returnValue = asBuiltJoint_var-&gt;
+setAsSliderJointMotion
+(sliderDirection, geometry, customSliderDirectionEntity);</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">sliderDirection</td><td class="api-list">JointDirections</td><td class="api-list">Specifies which axis the slide direction is along. If this is set to CustomJointDirection then the customSliderDirectionEntity argument must also be provided.</td></tr><tr><td class="api-list">geometry</td><td class="api-list">JointGeometry</td><td class="api-list">Redefines the joint geometry. If not provided, the existing geometry is used. This argument is required if the current joint motion is rigid. This is an optional argument whose default value is null.</td></tr><tr><td class="api-list">customSliderDirectionEntity</td><td class="api-list">Base</td><td class="api-list">If the sliderDirection is CustomJointDirection this argument is used to specify the entity that defines the custom slider direction. This can be several types of entities that can define a direction. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">timelineObject Property</h3><p class="api">Returns the timeline object associated with this as-built joint.</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an AsBuiltJoint object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Get the value of the property.
+Ptr&lt;TimelineObject&gt; propertyValue = asBuiltJoint_var-&gt;
+timelineObject
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">transform Property</h3><p class="api">Returns the position and orientation of the joint geometry associated with this as-built joint. This is returned as a 3D matrix which provides the origin and the X, Y, and Z axis vectors of the coordinate system. This property is especially useful in cases where the JointGeometry cannot be obtained. This can happen when the model has been modified in a way where the geometry used to create the joint is no longer available.</p><pre class="api-code">"asBuiltJoint_var" is a variable referencing an AsBuiltJoint object.
+#include &lt;Fusion/Components/AsBuiltJoint.h&gt;
+// Get the value of the property.
+Ptr&lt;Matrix3D&gt; propertyValue = asBuiltJoint_var-&gt;
+transform
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

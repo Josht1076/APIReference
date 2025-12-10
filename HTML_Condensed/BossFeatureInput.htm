@@ -1,0 +1,236 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/BossFeatureInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="11/10/2022" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="BossFeatureInput" name="contextid"/>
+<meta content="BossFeatureInput Object" name="description"/>
+<meta content="GUID-DFF0A76C-0401-45E6-B703-54F768C7D73E" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>BossFeatureInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">BossFeatureInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Plastic/BossFeatureInput.h&gt;<h2 class="api">
+          Description
+        </h2>This class defines the methods and properties that pertain to the definition of a boss feature or a boss connection<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="BossFeatureInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BossFeatureInput_createSideInput.htm">createSideInput</a></td>
+<td class="api-list">Creates a new BossFeatureSideInput object that is used to specify the input for boss feature side. This object can be set to side1 or side2. Side1 is meant to be side where screw head engages with the boss and Side2 is meant to be a side where screw thread engages with the part or metal inserts.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BossFeatureInput_setPositionBySketchPoints.htm">setPositionBySketchPoints</a></td>
+<td class="api-list">Defines the position and orientation of the boss feature using a sketch point(s).</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="BossFeatureInput_creationOccurrence.htm">creationOccurrence</a></td>
+<td class="api-list">In order for geometry to be transformed correctly, an Occurrence for creation needs to be specified when the boss feature is created based on geometry (e.g. point) in another component AND (the boss) is not in the root component. The CreationOccurrence is analogous to the active occurrence in the UI A value of null indicates that everything is in the context of a single component. The occurrence provided sets scope for detection of target participant bodies.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BossFeatureInput_isDefaultDirection.htm">isDefaultDirection</a></td>
+<td class="api-list">Get or set if the boss feature (or boss connection) goes in the default direction or is reversed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BossFeatureInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BossFeatureInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="BossFeatureInput_offset.htm">offset</a></td>
+<td class="api-list">Get or set offset of the parting face from the selected position point.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BossFeatureInput_participantBodies.htm">participantBodies</a></td>
+<td class="api-list">Gets and sets the list of bodies that will participate in the boss feature. If body provided does not intersect with direction vector at proposed position points it will be ignored. If more bodies intersect at given position point only the closest body will be accepted. Boss feature works with solid bodies only. If this property has not been set (or is empty) closest visible bodies will be detected automatically based on proposed positions and orientation.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BossFeatureInput_side1.htm">side1</a></td>
+<td class="api-list">Gets or sets inputs for top side of the boss feature connection. It is the side where screw head engages with the boss. Default Side1 direction is considered direction of Z-axis of the parent sketch for selected position point.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BossFeatureInput_side2.htm">side2</a></td>
+<td class="api-list">Gets or sets inputs for bottom side of the boss feature connection. It is the side where screw thread engages with the part or metal insert. Default Side2 direction is considered opposite to the direction Z-axis of the parent sketch for selected position point.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BossFeatureInput_targetBaseFeature.htm">targetBaseFeature</a></td>
+<td class="api-list">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature.<br/><br/> Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="BossFeature_createInput.htm">BossFeature.createInput</a>, <a href="BossFeatures_createInput.htm">BossFeatures.createInput</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="BossFeatureSample_Sample.htm">Boss Feature Sample</a></td>
+<td class="api-list">Demonstrates creating a new boss feature</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version October 2022<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(BossFeatureInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Plastic/BossFeatureInput.h&gt;
+returnValue = adsk::fusion::BossFeatureInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">createSideInput Method</h3><p class="api">Creates a new BossFeatureSideInput object that is used to specify the input for boss feature side. This object can be set to side1 or side2. Side1 is meant to be side where screw head engages with the boss and Side2 is meant to be a side where screw thread engages with the part or metal inserts.</p><pre class="api-code">"bossFeatureInput_var" is a variable referencing a
+BossFeatureInput
+object.
+#include &lt;Fusion/Plastic/BossFeatureInput.h&gt;
+returnValue = bossFeatureInput_var-&gt;
+createSideInput
+();</pre><p class="api">Return Value: BossFeatureSideInput - Returns BossFeatureSideInput if successful.</p><h3 class="api-member">creationOccurrence Property</h3><p class="api">In order for geometry to be transformed correctly, an Occurrence for creation needs to be specified when the boss feature is created based on geometry (e.g. point) in another component AND (the boss) is not in the root component. The CreationOccurrence is analogous to the active occurrence in the UI A value of null indicates that everything is in the context of a single component. The occurrence provided sets scope for detection of target participant bodies.</p><pre class="api-code">"bossFeatureInput_var" is a variable referencing a BossFeatureInput object.
+#include &lt;Fusion/Plastic/BossFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = bossFeatureInput_var-&gt;
+creationOccurrence
+();
+// Set the value of the property, where value_var is an Occurrence.
+bool returnValue = bossFeatureInput_var-&gt;
+creationOccurrence
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">isDefaultDirection Property</h3><p class="api">Get or set if the boss feature (or boss connection) goes in the default direction or is reversed.</p><pre class="api-code">"bossFeatureInput_var" is a variable referencing a BossFeatureInput object.
+#include &lt;Fusion/Plastic/BossFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = bossFeatureInput_var-&gt;
+isDefaultDirection
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = bossFeatureInput_var-&gt;
+isDefaultDirection
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"bossFeatureInput_var" is a variable referencing a BossFeatureInput object.
+#include &lt;Fusion/Plastic/BossFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = bossFeatureInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"bossFeatureInput_var" is a variable referencing a BossFeatureInput object.
+#include &lt;Fusion/Plastic/BossFeatureInput.h&gt;
+// Get the value of the property.
+string propertyValue = bossFeatureInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">offset Property</h3><p class="api">Get or set offset of the parting face from the selected position point.</p><pre class="api-code">"bossFeatureInput_var" is a variable referencing a BossFeatureInput object.
+#include &lt;Fusion/Plastic/BossFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = bossFeatureInput_var-&gt;
+offset
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = bossFeatureInput_var-&gt;
+offset
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">participantBodies Property</h3><p class="api">Gets and sets the list of bodies that will participate in the boss feature. If body provided does not intersect with direction vector at proposed position points it will be ignored. If more bodies intersect at given position point only the closest body will be accepted. Boss feature works with solid bodies only. If this property has not been set (or is empty) closest visible bodies will be detected automatically based on proposed positions and orientation.</p><pre class="api-code">"bossFeatureInput_var" is a variable referencing a BossFeatureInput object.
+#include &lt;Fusion/Plastic/BossFeatureInput.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;BRepBody&gt;&gt; propertyValue = bossFeatureInput_var-&gt;
+participantBodies
+();
+// Set the value of the property, where value_var is a BRepBody.
+bool returnValue = bossFeatureInput_var-&gt;
+participantBodies
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an array of type .</p><h3 class="api-member">setPositionBySketchPoints Method</h3><p class="api">Defines the position and orientation of the boss feature using a sketch point(s).</p><pre class="api-code">"bossFeatureInput_var" is a variable referencing a
+BossFeatureInput
+object.
+#include &lt;Fusion/Plastic/BossFeatureInput.h&gt;
+returnValue = bossFeatureInput_var-&gt;
+setPositionBySketchPoints
+(pointOrPoints);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pointOrPoints</td><td class="api-list">Base</td><td class="api-list">The sketch point or ObjectCollection of sketch points that defines the position(s) for boss mating location. The orientation of the boss feature is inferred from the normal (Z-axis) of the point's parent sketch. The natural direction (or direction of the screw) will be opposite the normal of the sketch. If multiple sketch points are provided all must belong to the same sketch. Participant bodies will be inferred from closest visible bodies unless specified explicitly.</td></tr></table><h3 class="api-member">side1 Property</h3><p class="api">Gets or sets inputs for top side of the boss feature connection. It is the side where screw head engages with the boss. Default Side1 direction is considered direction of Z-axis of the parent sketch for selected position point.</p><pre class="api-code">"bossFeatureInput_var" is a variable referencing a BossFeatureInput object.
+#include &lt;Fusion/Plastic/BossFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BossFeatureSideInput&gt; propertyValue = bossFeatureInput_var-&gt;
+side1
+();
+// Set the value of the property, where value_var is a BossFeatureSideInput.
+bool returnValue = bossFeatureInput_var-&gt;
+side1
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">side2 Property</h3><p class="api">Gets or sets inputs for bottom side of the boss feature connection. It is the side where screw thread engages with the part or metal insert. Default Side2 direction is considered opposite to the direction Z-axis of the parent sketch for selected position point.</p><pre class="api-code">"bossFeatureInput_var" is a variable referencing a BossFeatureInput object.
+#include &lt;Fusion/Plastic/BossFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BossFeatureSideInput&gt; propertyValue = bossFeatureInput_var-&gt;
+side2
+();
+// Set the value of the property, where value_var is a BossFeatureSideInput.
+bool returnValue = bossFeatureInput_var-&gt;
+side2
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">targetBaseFeature Property</h3><p class="api">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature. Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</p><pre class="api-code">"bossFeatureInput_var" is a variable referencing a BossFeatureInput object.
+#include &lt;Fusion/Plastic/BossFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BaseFeature&gt; propertyValue = bossFeatureInput_var-&gt;
+targetBaseFeature
+();
+// Set the value of the property, where value_var is a BaseFeature.
+bool returnValue = bossFeatureInput_var-&gt;
+targetBaseFeature
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

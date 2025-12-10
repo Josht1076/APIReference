@@ -1,0 +1,128 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/Event.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="Event" name="contextid"/>
+<meta content="Event Object" name="description"/>
+<meta content="GUID-8fe1eb12-c1dd-4bb5-b8f5-18ec63a5f464" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>Event Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">Event Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Application/Event.h&gt;<h2 class="api">
+          Description
+        </h2>Objects can have several Event properties that fire when some 'event' occurs. Clients can attach EventHandlers to one or more Events and they get notified when the 'event' occurs.<br><br/> This is a base class - classes like DocumentEvent add type safety (i.e. only allow the correct type of handler to be added to them).<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Event_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Event_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Event_name.htm">name</a></td>
+<td class="api-list">The name of the event - e.g. "DocumentOpening"</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Event_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Event_sender.htm">sender</a></td>
+<td class="api-list">The object that is firing the event. For example, in the case of a command input event this will return the command.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ActiveSelectionEventArgs_firingEvent.htm">ActiveSelectionEventArgs.firingEvent</a>, <a href="ApplicationCommandEventArgs_firingEvent.htm">ApplicationCommandEventArgs.firingEvent</a>, <a href="ApplicationEventArgs_firingEvent.htm">ApplicationEventArgs.firingEvent</a>, <a href="CameraEventArgs_firingEvent.htm">CameraEventArgs.firingEvent</a>, <a href="CommandCreatedEventArgs_firingEvent.htm">CommandCreatedEventArgs.firingEvent</a>, <a href="CommandEventArgs_firingEvent.htm">CommandEventArgs.firingEvent</a>, <a href="CustomEventArgs_firingEvent.htm">CustomEventArgs.firingEvent</a>, <a href="CustomFeatureEventArgs_firingEvent.htm">CustomFeatureEventArgs.firingEvent</a>, <a href="DataEventArgs_firingEvent.htm">DataEventArgs.firingEvent</a>, <a href="DocumentEventArgs_firingEvent.htm">DocumentEventArgs.firingEvent</a>, <a href="EventArgs_firingEvent.htm">EventArgs.firingEvent</a>, <a href="HTMLEventArgs_firingEvent.htm">HTMLEventArgs.firingEvent</a>, <a href="HttpEventArgs_firingEvent.htm">HttpEventArgs.firingEvent</a>, <a href="InputChangedEventArgs_firingEvent.htm">InputChangedEventArgs.firingEvent</a>, <a href="KeyboardEventArgs_firingEvent.htm">KeyboardEventArgs.firingEvent</a>, <a href="MarkingMenuEventArgs_firingEvent.htm">MarkingMenuEventArgs.firingEvent</a>, <a href="MFGDMDataEventArgs_firingEvent.htm">MFGDMDataEventArgs.firingEvent</a>, <a href="MouseEventArgs_firingEvent.htm">MouseEventArgs.firingEvent</a>, <a href="NavigationEventArgs_firingEvent.htm">NavigationEventArgs.firingEvent</a>, <a href="RenderEventArgs_firingEvent.htm">RenderEventArgs.firingEvent</a>, <a href="SelectionEventArgs_firingEvent.htm">SelectionEventArgs.firingEvent</a>, <a href="SetupChangeEventArgs_firingEvent.htm">SetupChangeEventArgs.firingEvent</a>, <a href="SetupEventArgs_firingEvent.htm">SetupEventArgs.firingEvent</a>, <a href="UserInterfaceGeneralEventArgs_firingEvent.htm">UserInterfaceGeneralEventArgs.firingEvent</a>, <a href="ValidateInputsEventArgs_firingEvent.htm">ValidateInputsEventArgs.firingEvent</a>, <a href="WebRequestEventArgs_firingEvent.htm">WebRequestEventArgs.firingEvent</a>, <a href="WorkspaceEventArgs_firingEvent.htm">WorkspaceEventArgs.firingEvent</a><h2 class="api">
+            Derived Classes
+          </h2><a href="ActiveSelectionEvent.htm">ActiveSelectionEvent</a>, <a href="ApplicationCommandEvent.htm">ApplicationCommandEvent</a>, <a href="ApplicationEvent.htm">ApplicationEvent</a>, <a href="CameraEvent.htm">CameraEvent</a>, <a href="CommandCreatedEvent.htm">CommandCreatedEvent</a>, <a href="CommandEvent.htm">CommandEvent</a>, <a href="CustomEvent.htm">CustomEvent</a>, <a href="CustomFeatureEvent.htm">CustomFeatureEvent</a>, <a href="DataEvent.htm">DataEvent</a>, <a href="DocumentEvent.htm">DocumentEvent</a>, <a href="HTMLEvent.htm">HTMLEvent</a>, <a href="HttpEvent.htm">HttpEvent</a>, <a href="InputChangedEvent.htm">InputChangedEvent</a>, <a href="KeyboardEvent.htm">KeyboardEvent</a>, <a href="MarkingMenuEvent.htm">MarkingMenuEvent</a>, <a href="MFGDMDataEvent.htm">MFGDMDataEvent</a>, <a href="MouseEvent.htm">MouseEvent</a>, <a href="NavigationEvent.htm">NavigationEvent</a>, <a href="RenderEvent.htm">RenderEvent</a>, <a href="SelectionEvent.htm">SelectionEvent</a>, <a href="SetupChangeEvent.htm">SetupChangeEvent</a>, <a href="SetupEvent.htm">SetupEvent</a>, <a href="UserInterfaceGeneralEvent.htm">UserInterfaceGeneralEvent</a>, <a href="ValidateInputsEvent.htm">ValidateInputsEvent</a>, <a href="WebRequestEvent.htm">WebRequestEvent</a>, <a href="WorkspaceEvent.htm">WorkspaceEvent</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(Event%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+</br><h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Application/Event.h&gt;
+returnValue = adsk::core::Event::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"event_var" is a variable referencing an Event object.
+#include &lt;Core/Application/Event.h&gt;
+// Get the value of the property.
+boolean propertyValue = event_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">name Property</h3><p class="api">The name of the event - e.g. "DocumentOpening"</p><pre class="api-code">"event_var" is a variable referencing an Event object.
+#include &lt;Core/Application/Event.h&gt;
+// Get the value of the property.
+string propertyValue = event_var-&gt;
+name
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"event_var" is a variable referencing an Event object.
+#include &lt;Core/Application/Event.h&gt;
+// Get the value of the property.
+string propertyValue = event_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">sender Property</h3><p class="api">The object that is firing the event. For example, in the case of a command input event this will return the command.</p><pre class="api-code">"event_var" is a variable referencing an Event object.
+#include &lt;Core/Application/Event.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = event_var-&gt;
+sender
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

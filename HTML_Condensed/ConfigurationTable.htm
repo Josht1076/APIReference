@@ -1,0 +1,138 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ConfigurationTable.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="27/12/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ConfigurationTable" name="contextid"/>
+<meta content="ConfigurationTable Object" name="description"/>
+<meta content="GUID-D3032AC7-E47F-42B6-BE66-ADB8F3DCF7A1" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ConfigurationTable Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ConfigurationTable Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Configurations/ConfigurationTable.h&gt;<h2 class="api">
+          Description
+        </h2>The base class of all configuration tables.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationTable_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationTable_getCell.htm">getCell</a></td>
+<td class="api-list">Returns the cell at the specified row and column.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationTable_id.htm">id</a></td>
+<td class="api-list">Returns the unique ID of this table.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationTable_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationTable_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationTable_rows.htm">rows</a></td>
+<td class="api-list">Returns the rows (configurations) defined for this table and provides the functionality to create new rows.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ConfigurationFeatureAspectColumn_parentTable.htm">ConfigurationFeatureAspectColumn.parentTable</a>, <a href="ConfigurationInsertColumn_parentTable.htm">ConfigurationInsertColumn.parentTable</a>, <a href="ConfigurationInsertStandardDesignColumn_parentTable.htm">ConfigurationInsertStandardDesignColumn.parentTable</a>, <a href="ConfigurationJointSnapColumn_parentTable.htm">ConfigurationJointSnapColumn.parentTable</a>, <a href="ConfigurationParameterColumn_parentTable.htm">ConfigurationParameterColumn.parentTable</a>, <a href="ConfigurationPropertyColumn_parentTable.htm">ConfigurationPropertyColumn.parentTable</a>, <a href="ConfigurationRow_parentTable.htm">ConfigurationRow.parentTable</a>, <a href="ConfigurationSuppressColumn_parentTable.htm">ConfigurationSuppressColumn.parentTable</a>, <a href="ConfigurationThemeColumn_parentTable.htm">ConfigurationThemeColumn.parentTable</a>, <a href="ConfigurationThemeColumn_referencedTable.htm">ConfigurationThemeColumn.referencedTable</a>, <a href="ConfigurationVisibilityColumn_parentTable.htm">ConfigurationVisibilityColumn.parentTable</a><h2 class="api">
+            Derived Classes
+          </h2><a href="ConfigurationAppearanceTable.htm">ConfigurationAppearanceTable</a>, <a href="ConfigurationCustomThemeTable.htm">ConfigurationCustomThemeTable</a>, <a href="ConfigurationMaterialTable.htm">ConfigurationMaterialTable</a>, <a href="ConfigurationPlasticRuleTable.htm">ConfigurationPlasticRuleTable</a>, <a href="ConfigurationSheetMetalRuleTable.htm">ConfigurationSheetMetalRuleTable</a>, <a href="ConfigurationTopTable.htm">ConfigurationTopTable</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2024<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ConfigurationTable%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Configurations/ConfigurationTable.h&gt;
+returnValue = adsk::fusion::ConfigurationTable::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">getCell Method</h3><p class="api">Returns the cell at the specified row and column.</p><pre class="api-code">"configurationTable_var" is a variable referencing a
+ConfigurationTable
+object.
+#include &lt;Fusion/Configurations/ConfigurationTable.h&gt;
+returnValue = configurationTable_var-&gt;
+getCell
+(column, row);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">column</td><td class="api-list">uinteger</td><td class="api-list">The index of the column the cell is in. An index of 0 is the first column and does not include the name column.</td></tr><tr><td class="api-list">row</td><td class="api-list">uinteger</td><td class="api-list">The index of the row the cell is in. An index of 0 is the first row and does not include the header row.</td></tr></table><h3 class="api-member">id Property</h3><p class="api">Returns the unique ID of this table.</p><pre class="api-code">"configurationTable_var" is a variable referencing a ConfigurationTable object.
+#include &lt;Fusion/Configurations/ConfigurationTable.h&gt;
+// Get the value of the property.
+string propertyValue = configurationTable_var-&gt;
+id
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"configurationTable_var" is a variable referencing a ConfigurationTable object.
+#include &lt;Fusion/Configurations/ConfigurationTable.h&gt;
+// Get the value of the property.
+boolean propertyValue = configurationTable_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"configurationTable_var" is a variable referencing a ConfigurationTable object.
+#include &lt;Fusion/Configurations/ConfigurationTable.h&gt;
+// Get the value of the property.
+string propertyValue = configurationTable_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">rows Property</h3><p class="api">Returns the rows (configurations) defined for this table and provides the functionality to create new rows.</p><pre class="api-code">"configurationTable_var" is a variable referencing a ConfigurationTable object.
+#include &lt;Fusion/Configurations/ConfigurationTable.h&gt;
+// Get the value of the property.
+Ptr&lt;ConfigurationRows&gt; propertyValue = configurationTable_var-&gt;
+rows
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

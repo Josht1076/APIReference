@@ -1,0 +1,288 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/NurbsCurve2D.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="NurbsCurve2D" name="contextid"/>
+<meta content="NurbsCurve2D Object" name="description"/>
+<meta content="GUID-e6a6f526-4911-4482-9e76-770d0ee43fd3" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>NurbsCurve2D Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">NurbsCurve2D Object
+			</h1>
+              Derived from: <a href="Curve2D.htm">Curve2D</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Geometry/NurbsCurve2D.h&gt;<h2 class="api">
+          Description
+        </h2>Transient 2D NURBS curve. A transient NURBS curve is not displayed or saved in a document. Transient 2D NURBS curves are used as a wrapper to work with raw 2D NURBS curve information. They are created statically using one of the create methods of the NurbsCurve2D class.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_copy.htm">copy</a></td>
+<td class="api-list">Creates and returns an independent copy of this NurbsCurve2D object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_createNonRational.htm">createNonRational</a></td>
+<td class="api-list">Creates a transient 2D NURBS non-rational b-spline object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_createRational.htm">createRational</a></td>
+<td class="api-list">Creates a transient 2D NURBS rational b-spline object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_extract.htm">extract</a></td>
+<td class="api-list">Defines a new NURBS curve that is the subset of this NURBS curve in the parameter range of [startParam, endParam]</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_getData.htm">getData</a></td>
+<td class="api-list">Gets the data that defines a transient 2D NURBS rational b-spline object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_merge.htm">merge</a></td>
+<td class="api-list">Define a new NURBS curve that is the result of combining this NURBS curve with another NURBS curve. The curves are merged with the end point of the current curve merging with the start point of the other curve. The curves are forced to join even if they are not physically touching so you will typically want to make sure the end and start points of the curves are where you expect them to be.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_reverse.htm">reverse</a></td>
+<td class="api-list">Reverses the orientation of the curve so the start and end points are swapped. The shape of the curve remains unchanged. This is especially useful to prepare the curves to use with the merge method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_set.htm">set</a></td>
+<td class="api-list">Sets the data that defines a transient 2D NURBS rational b-spline object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_transformBy.htm">transformBy</a></td>
+<td class="api-list">Transforms this curve in 2D space.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_controlPointCount.htm">controlPointCount</a></td>
+<td class="api-list">Gets the number of control points that define the curve</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_controlPoints.htm">controlPoints</a></td>
+<td class="api-list">Returns an array of Point2D objects that define the control points of the curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_curveType.htm">curveType</a></td>
+<td class="api-list">Returns the type of geometry this curve represents.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_degree.htm">degree</a></td>
+<td class="api-list">Returns the degree of the curve</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_evaluator.htm">evaluator</a></td>
+<td class="api-list">Returns an evaluator object that lets you perform additional evaluations on the curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_isClosed.htm">isClosed</a></td>
+<td class="api-list">Returns if the curve is closed</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_isPeriodic.htm">isPeriodic</a></td>
+<td class="api-list">Returns if the curve is periodic.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_isRational.htm">isRational</a></td>
+<td class="api-list">Returns if the curve is rational or non-rational type</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_knotCount.htm">knotCount</a></td>
+<td class="api-list">Returns the knot count of the curve</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_knots.htm">knots</a></td>
+<td class="api-list">Returns an array of numbers that define the Knots of the curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NurbsCurve2D_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Arc2D_asNurbsCurve.htm">Arc2D.asNurbsCurve</a>, <a href="Circle2D_asNurbsCurve.htm">Circle2D.asNurbsCurve</a>, <a href="Ellipse2D_asNurbsCurve.htm">Ellipse2D.asNurbsCurve</a>, <a href="EllipticalArc2D_asNurbsCurve.htm">EllipticalArc2D.asNurbsCurve</a>, <a href="Line2D_asNurbsCurve.htm">Line2D.asNurbsCurve</a>, <a href="NurbsCurve2D_copy.htm">NurbsCurve2D.copy</a>, <a href="NurbsCurve2D_createNonRational.htm">NurbsCurve2D.createNonRational</a>, <a href="NurbsCurve2D_createRational.htm">NurbsCurve2D.createRational</a>, <a href="NurbsCurve2D_extract.htm">NurbsCurve2D.extract</a>, <a href="NurbsCurve2D_merge.htm">NurbsCurve2D.merge</a>, <a href="Polyline2D_asNurbsCurve.htm">Polyline2D.asNurbsCurve</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(NurbsCurve2D%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+returnValue = adsk::core::NurbsCurve2D::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">controlPointCount Property</h3><p class="api">Gets the number of control points that define the curve</p><pre class="api-code">"nurbsCurve2D_var" is a variable referencing a NurbsCurve2D object.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+// Get the value of the property.
+integer propertyValue = nurbsCurve2D_var-&gt;
+controlPointCount
+();</pre><p class="api">Property Value: This is a read only property whose value is an integer.</p><h3 class="api-member">controlPoints Property</h3><p class="api">Returns an array of Point2D objects that define the control points of the curve.</p><pre class="api-code">"nurbsCurve2D_var" is a variable referencing a NurbsCurve2D object.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;Point2D&gt;&gt; propertyValue = nurbsCurve2D_var-&gt;
+controlPoints
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type .</p><h3 class="api-member">copy Method</h3><p class="api">Creates and returns an independent copy of this NurbsCurve2D object.</p><pre class="api-code">"nurbsCurve2D_var" is a variable referencing a
+NurbsCurve2D
+object.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+returnValue = nurbsCurve2D_var-&gt;
+copy
+();</pre><p class="api">Return Value: NurbsCurve2D - Returns an independent copy of this NurbsCurve2D.</p><h3 class="api-member">createNonRational Method</h3><p class="api">Creates a transient 2D NURBS non-rational b-spline object.</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+returnValue = adsk::core::NurbsCurve2D::
+createNonRational
+(controlPoints, degree, knots, isPeriodic);</pre><p class="api">Return Value: NurbsCurve2D - Returns the new NurbsCurve2D object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">controlPoints</td><td class="api-list">Point2D[]</td><td class="api-list">An array of control point that define the path of the spline</td></tr><tr><td class="api-list">degree</td><td class="api-list">integer</td><td class="api-list">The degree of curvature of the spline</td></tr><tr><td class="api-list">knots</td><td class="api-list">double[]</td><td class="api-list">An array of numbers that define the knot vector of the spline. The knots is an array of (&gt;=degree + N + 1) numbers, where N is the number of control points.</td></tr><tr><td class="api-list">isPeriodic</td><td class="api-list">boolean</td><td class="api-list">A bool specifying if the spline is to be Periodic. A periodic spline has a start point and end point that meet forming a closed loop.</td></tr></table><h3 class="api-member">createRational Method</h3><p class="api">Creates a transient 2D NURBS rational b-spline object.</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+returnValue = adsk::core::NurbsCurve2D::
+createRational
+(controlPoints, degree, knots, weights, isPeriodic);</pre><p class="api">Return Value: NurbsCurve2D - Returns the new NurbsCurve2D object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">controlPoints</td><td class="api-list">Point2D[]</td><td class="api-list">An array of control point that define the path of the spline</td></tr><tr><td class="api-list">degree</td><td class="api-list">integer</td><td class="api-list">The degree of curvature of the spline</td></tr><tr><td class="api-list">knots</td><td class="api-list">double[]</td><td class="api-list">An array of numbers that define the knot vector of the spline. The knots is an array of (&gt;=degree + N + 1) numbers, where N is the number of control points.</td></tr><tr><td class="api-list">weights</td><td class="api-list">double[]</td><td class="api-list">An array of numbers that define the weights for the spline.</td></tr><tr><td class="api-list">isPeriodic</td><td class="api-list">boolean</td><td class="api-list">A bool specifying if the spline is to be Periodic. A periodic curve has a start point and end point that meet (with curvature continuity) forming a closed loop.</td></tr></table><h3 class="api-member">curveType Property</h3><p class="api">Returns the type of geometry this curve represents.</p><pre class="api-code">"nurbsCurve2D_var" is a variable referencing a NurbsCurve2D object.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+// Get the value of the property.
+Curve2DTypes propertyValue = nurbsCurve2D_var-&gt;
+curveType
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">degree Property</h3><p class="api">Returns the degree of the curve</p><pre class="api-code">"nurbsCurve2D_var" is a variable referencing a NurbsCurve2D object.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+// Get the value of the property.
+integer propertyValue = nurbsCurve2D_var-&gt;
+degree
+();</pre><p class="api">Property Value: This is a read only property whose value is an integer.</p><h3 class="api-member">evaluator Property</h3><p class="api">Returns an evaluator object that lets you perform additional evaluations on the curve.</p><pre class="api-code">"nurbsCurve2D_var" is a variable referencing a NurbsCurve2D object.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+// Get the value of the property.
+Ptr&lt;CurveEvaluator2D&gt; propertyValue = nurbsCurve2D_var-&gt;
+evaluator
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">extract Method</h3><p class="api">Defines a new NURBS curve that is the subset of this NURBS curve in the parameter range of [startParam, endParam]</p><pre class="api-code">"nurbsCurve2D_var" is a variable referencing a
+NurbsCurve2D
+object.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+returnValue = nurbsCurve2D_var-&gt;
+extract
+(startParam, endParam);</pre><p class="api">Return Value: NurbsCurve2D - Returns a new NurbsCurve2D object.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">startParam</td><td class="api-list">double</td><td class="api-list">The parameter position of the start of the subset.</td></tr><tr><td class="api-list">endParam</td><td class="api-list">double</td><td class="api-list">The parameter position of the end of the subset.</td></tr></table><h3 class="api-member">getData Method</h3><p class="api">Gets the data that defines a transient 2D NURBS rational b-spline object.</p><pre class="api-code">#include &lt;Core/Geometry/NurbsCurve2D.h
+// Declare the output arguments.
+Point2D[] controlPoints;
+integer degree;
+double[] knots;
+boolean isRational;
+double[] weights;
+boolean isPeriodic;
+boolean returnValue = nurbsCurve2D_var-&gt;
+getData
+(controlPoints, degree, knots, isRational, weights, isPeriodic);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">controlPoints</td><td class="api-list">Point2D[]</td><td class="api-list">The output array of control point that define the path of the spline.</td></tr><tr><td class="api-list">degree</td><td class="api-list">integer</td><td class="api-list">The output degree of curvature of the spline.</td></tr><tr><td class="api-list">knots</td><td class="api-list">double[]</td><td class="api-list">The output array of numbers that define the knots of the spline.</td></tr><tr><td class="api-list">isRational</td><td class="api-list">boolean</td><td class="api-list">The output value indicating if the spline is rational. A rational spline will have a weight value for each control point.</td></tr><tr><td class="api-list">weights</td><td class="api-list">double[]</td><td class="api-list">The output array of numbers that define the weights for the spline.</td></tr><tr><td class="api-list">isPeriodic</td><td class="api-list">boolean</td><td class="api-list">The output value indicating if the spline is Periodic. A periodic curve has a start point and end point that meet (with curvature continuity) forming a closed loop.</td></tr></table><h3 class="api-member">isClosed Property</h3><p class="api">Returns if the curve is closed</p><pre class="api-code">"nurbsCurve2D_var" is a variable referencing a NurbsCurve2D object.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+// Get the value of the property.
+boolean propertyValue = nurbsCurve2D_var-&gt;
+isClosed
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isPeriodic Property</h3><p class="api">Returns if the curve is periodic.</p><pre class="api-code">"nurbsCurve2D_var" is a variable referencing a NurbsCurve2D object.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+// Get the value of the property.
+boolean propertyValue = nurbsCurve2D_var-&gt;
+isPeriodic
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isRational Property</h3><p class="api">Returns if the curve is rational or non-rational type</p><pre class="api-code">"nurbsCurve2D_var" is a variable referencing a NurbsCurve2D object.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+// Get the value of the property.
+boolean propertyValue = nurbsCurve2D_var-&gt;
+isRational
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"nurbsCurve2D_var" is a variable referencing a NurbsCurve2D object.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+// Get the value of the property.
+boolean propertyValue = nurbsCurve2D_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">knotCount Property</h3><p class="api">Returns the knot count of the curve</p><pre class="api-code">"nurbsCurve2D_var" is a variable referencing a NurbsCurve2D object.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+// Get the value of the property.
+integer propertyValue = nurbsCurve2D_var-&gt;
+knotCount
+();</pre><p class="api">Property Value: This is a read only property whose value is an integer.</p><h3 class="api-member">knots Property</h3><p class="api">Returns an array of numbers that define the Knots of the curve.</p><pre class="api-code">"nurbsCurve2D_var" is a variable referencing a NurbsCurve2D object.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+// Get the value of the property.
+std::vector&lt;double&gt; propertyValue = nurbsCurve2D_var-&gt;
+knots
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type double.</p><h3 class="api-member">merge Method</h3><p class="api">Define a new NURBS curve that is the result of combining this NURBS curve with another NURBS curve. The curves are merged with the end point of the current curve merging with the start point of the other curve. The curves are forced to join even if they are not physically touching so you will typically want to make sure the end and start points of the curves are where you expect them to be.</p><pre class="api-code">"nurbsCurve2D_var" is a variable referencing a
+NurbsCurve2D
+object.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+returnValue = nurbsCurve2D_var-&gt;
+merge
+(nurbsCurve);</pre><p class="api">Return Value: NurbsCurve2D - Returns a new NurbsCurve2D object.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">nurbsCurve</td><td class="api-list">NurbsCurve2D</td><td class="api-list">The NURBS curve to combine with</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"nurbsCurve2D_var" is a variable referencing a NurbsCurve2D object.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+// Get the value of the property.
+string propertyValue = nurbsCurve2D_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">reverse Method</h3><p class="api">Reverses the orientation of the curve so the start and end points are swapped. The shape of the curve remains unchanged. This is especially useful to prepare the curves to use with the merge method.</p><pre class="api-code">"nurbsCurve2D_var" is a variable referencing a
+NurbsCurve2D
+object.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+returnValue = nurbsCurve2D_var-&gt;
+reverse
+();</pre><h3 class="api-member">set Method</h3><p class="api">Sets the data that defines a transient 2D NURBS rational b-spline object.</p><pre class="api-code">"nurbsCurve2D_var" is a variable referencing a
+NurbsCurve2D
+object.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+returnValue = nurbsCurve2D_var-&gt;
+set
+(controlPoints, degree, knots, isRational, weights, isPeriodic);</pre><p class="api">Return Value: boolean - Returns true if successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">controlPoints</td><td class="api-list">Point2D[]</td><td class="api-list">The array of control point that define the path of the spline</td></tr><tr><td class="api-list">degree</td><td class="api-list">integer</td><td class="api-list">The degree of curvature of the spline</td></tr><tr><td class="api-list">knots</td><td class="api-list">double[]</td><td class="api-list">An array of numbers that define the knots of the spline.</td></tr><tr><td class="api-list">isRational</td><td class="api-list">boolean</td><td class="api-list">A bool indicating if the spline is rational. A rational spline must have a weight value for each control point.</td></tr><tr><td class="api-list">weights</td><td class="api-list">double[]</td><td class="api-list">An array of numbers that define the weights for the spline.</td></tr><tr><td class="api-list">isPeriodic</td><td class="api-list">boolean</td><td class="api-list">A bool specifying if the spline is to be Periodic. A periodic curve has a start point and end point that meet (with curvature continuity) forming a closed loop.</td></tr></table><h3 class="api-member">transformBy Method</h3><p class="api">Transforms this curve in 2D space.</p><pre class="api-code">"nurbsCurve2D_var" is a variable referencing a
+NurbsCurve2D
+object.
+#include &lt;Core/Geometry/NurbsCurve2D.h&gt;
+returnValue = nurbsCurve2D_var-&gt;
+transformBy
+(matrix);</pre><p class="api">Return Value: boolean - Return true if the transform was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">matrix</td><td class="api-list">Matrix2D</td><td class="api-list">A 2D matrix that defines the transform to apply to the curve.</td></tr></table></body>
+</html>

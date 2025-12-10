@@ -1,0 +1,1139 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/Application.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="Application" name="contextid"/>
+<meta content="Application Object" name="description"/>
+<meta content="GUID-7209c4c7-bc58-4388-9e20-036410459094" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>Application Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">Application Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Application/Application.h&gt;<h2 class="api">
+          Description
+        </h2>The top-level object that represents the Fusion application (all of Fusion). This provides access to the modeler and files.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_executeTextCommand.htm">executeTextCommand</a></td>
+<td class="api-list">Executes the input text command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_fireCustomEvent.htm">fireCustomEvent</a></td>
+<td class="api-list">Fires a previously registered custom event. This method is used by a worker thread or another add-in to fire an event to the add-in that registered the event and is running in the primary thread.<br><br/> Firing a custom event does not immediately result in the event handler being called. When a custom event is fired the event is put on the queue and will be handled in the main thread when Fusion is idle.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_get.htm">get</a></td>
+<td class="api-list">Access to the root Application object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_getLastError.htm">getLastError</a></td>
+<td class="api-list">Returns information about the last error that occurred.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_log.htm">log</a></td>
+<td class="api-list">Logs messages to either the TEXT COMMAND window or the Fusion app log file.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_registerCustomEvent.htm">registerCustomEvent</a></td>
+<td class="api-list">This registers a new CustomEvent which is intended to be primarily used to send an event from a worker thread you've created back to your add-in running in the primary thread. It's also possible that two add-ins could be cooperating and another add-in can fire the event to your add-in.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_unregisterCustomEvent.htm">unregisterCustomEvent</a></td>
+<td class="api-list">Unregisters an existing CustomEvent.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_activeDocument.htm">activeDocument</a></td>
+<td class="api-list">Returns the current active document.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_activeEditObject.htm">activeEditObject</a></td>
+<td class="api-list">Returns the current edit target as seen in the user interface. This edit target is defined as the container object that will be added to if something is created. For example, a component can be an edit target so that when new bodies are created they are added to that component. A sketch can also be an edit target.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_activeProduct.htm">activeProduct</a></td>
+<td class="api-list">Returns the current active product.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_activeViewport.htm">activeViewport</a></td>
+<td class="api-list">Returns the currently active graphics view.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_applicationFolders.htm">applicationFolders</a></td>
+<td class="api-list">Returns the ApplicationFolders object which provides access to the paths of various folders associated with Fusion.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_currentUser.htm">currentUser</a></td>
+<td class="api-list">Returns the User that is currently logged in.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_data.htm">data</a></td>
+<td class="api-list">Returns the Data object which provides access the files.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_documents.htm">documents</a></td>
+<td class="api-list">Returns the Documents collection object which supports accessing opened documents, opening existing documents, and creating new documents.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_favoriteAppearances.htm">favoriteAppearances</a></td>
+<td class="api-list">Returns the set of favorite appearances.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_favoriteMaterials.htm">favoriteMaterials</a></td>
+<td class="api-list">Returns the set of favorite materials.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_fontNames.htm">fontNames</a></td>
+<td class="api-list">Returns the names of all of the fonts that are available in Fusion when creating text.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_hasActiveJobs.htm">hasActiveJobs</a></td>
+<td class="api-list">Gets whether there are any active jobs.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_importManager.htm">importManager</a></td>
+<td class="api-list">Returns the ImportManager. You use the ImportManager to import files (of various neutral formats.) into existing components or new document.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_isComponentColorsDisplayed.htm">isComponentColorsDisplayed</a></td>
+<td class="api-list">Get and sets if component colors are used when displaying the components within a design. This is the API equivalent of the "Display Component Colors" command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_isOffLine.htm">isOffLine</a></td>
+<td class="api-list">Gets and sets if Fusion is offline or not.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_isStartupComplete.htm">isStartupComplete</a></td>
+<td class="api-list">Boolean property indicating whether Fusion has completed its initialization. This includes initialization of all the Add-ins loaded at startup.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_lightingEnvironment.htm">lightingEnvironment</a></td>
+<td class="api-list">Gets and sets the current lighting environment to use when rendering the graphics.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_materialLibraries.htm">materialLibraries</a></td>
+<td class="api-list">Returns the collection of material libraries currently available.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_measureManager.htm">measureManager</a></td>
+<td class="api-list">Get the MeasureManager object which can be used to perform measurements of geometry.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_pointTolerance.htm">pointTolerance</a></td>
+<td class="api-list">The modeling tolerance used internally when comparing two points. The value is in centimeters.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_preferences.htm">preferences</a></td>
+<td class="api-list">Provides access to all of the application preferences.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_scripts.htm">scripts</a></td>
+<td class="api-list">Returns the Scripts object which provides the ability to manage scripts and add-ins.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_supportedProductTypes.htm">supportedProductTypes</a></td>
+<td class="api-list">Returns an array containing the names of the products types currently supported by Fusion. For example, the name returned for Fusion is "DesignProductType". These product type names are used to identify specific products in some other API functions such as the productType property on the Workspace and ToolbarPanel objects.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_userId.htm">userId</a></td>
+<td class="api-list">Returns the internal name of the Autodesk account currently logged in. This can be used by applications sold through the Autodesk Exchange Store to verify that the user has in fact purchased the product.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_userInterface.htm">userInterface</a></td>
+<td class="api-list">Provides access to functionality specific to the user interface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_userName.htm">userName</a></td>
+<td class="api-list">Returns the user name of the Autodesk account currently logged in.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_vectorAngleTolerance.htm">vectorAngleTolerance</a></td>
+<td class="api-list">The modeling tolerance used when comparing vector angles. The value is in radians.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_version.htm">version</a></td>
+<td class="api-list">Returns the current version of the Fusion application.</td>
+</tr>
+</table>
+<h2 class="api">
+            Events
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_cameraChanged.htm">cameraChanged</a></td>
+<td class="api-list">The cameraChanged event fires immediately after a change in the camera has been made. Camera changes happen when user changes the view by rotating, zooming in or out, panning, changing from parallel to perspective, or when the extents of the viewport changes.<br/><br/> You can add or remove event handlers from the CameraEvent.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_dataFileComplete.htm">dataFileComplete</a></td>
+<td class="api-list">The dataFileComplete event fires when a data file upload has completed including any cloud side translations.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_dataFileCopyComplete.htm">dataFileCopyComplete</a></td>
+<td class="api-list">The dataFileCopyComplete event fires when a data file copy has completed including any PIM Data copy.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_documentActivated.htm">documentActivated</a></td>
+<td class="api-list">The DocumentActivated event fires at the VERY end of a document being activated.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_documentActivating.htm">documentActivating</a></td>
+<td class="api-list">The DocumentActivating event fires at the VERY start of a document being activated.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_documentClosed.htm">documentClosed</a></td>
+<td class="api-list">The DocumentClosed event fires at the VERY end of a document being closed. The Document object is not longer available because it has been closed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_documentClosing.htm">documentClosing</a></td>
+<td class="api-list">The DocumentClosing event fires at the VERY start of a document being closed. User can set the isSaveCanceled property of DocumentEventArgs to true to cancel the document close.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_documentCreated.htm">documentCreated</a></td>
+<td class="api-list">The DocumentCreated event fires when a new document is created.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_documentDeactivated.htm">documentDeactivated</a></td>
+<td class="api-list">The DocumentDeactivated event fires at the VERY end of a document being deactivated.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_documentDeactivating.htm">documentDeactivating</a></td>
+<td class="api-list">The DocumentDeactivating event fires at the VERY start of a document being deactivated.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_documentOpened.htm">documentOpened</a></td>
+<td class="api-list">The DocumentOpened event fires at the VERY end of a document being opened so the Document object is available to be used.<br/><br/> When a document is opened that references other documents, only the top-level document will cause the documentOpened event to be fired. You can access the referenced documents by using the documentReferences property of the Document object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_documentOpening.htm">documentOpening</a></td>
+<td class="api-list">The DocumentOpening event fires at the VERY start of a document being opened. There is no promise that the document will be opened, hence a documentOpened event may not follow.<br/><br/> When a document is being opened that references other documents, only the top-level document will cause a documentOpening event to be fired.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_documentSaved.htm">documentSaved</a></td>
+<td class="api-list">The DocumentSaved event fires after the save operation has been completed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_documentSaving.htm">documentSaving</a></td>
+<td class="api-list">The DocumentSaving event fires at the VERY start of a document being saved. You can set the isSaveCanceled property of DocumentEventArgs to true to cancel the document save.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_insertedFromURL.htm">insertedFromURL</a></td>
+<td class="api-list">The insertedFromURL event fires after the user has clicked a link in a web page that uses the Fusion protocol handler to insert a file as new component and that operation has completed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_insertingFromURL.htm">insertingFromURL</a></td>
+<td class="api-list">The insertingFromURL event fires when the user has clicked a link in a web page that uses the Fusion protocol handler to insert a file as new component. This event is fired at the beginning of the request but before Fusion has take any action so that it's still possible to cancel the operation.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_mfgdmDataReady.htm">mfgdmDataReady</a></td>
+<td class="api-list">The mfgdmDataReady event fires when the MFGDM data structure for a document has been updated and properties to IDs and structure from the data model is ready.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_onlineStatusChanged.htm">onlineStatusChanged</a></td>
+<td class="api-list">The onlineStatusChanged event fires immediately after Fusion goes online or offline. This event fires whether or not the online status was changed deliberately by the user by using the Fusion 'Work Offline' command or because of inadvertent network/Internet connectivity issues. You can get the isOffline property of ApplicationEventArgs to determine whether Fusion has gone Offline or has come back online. The client can add or remove ApplicationEventHandlers from the ApplicationEvent.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_openedFromURL.htm">openedFromURL</a></td>
+<td class="api-list">The openedFromURL event fires after the user has clicked a link in a web page that uses the Fusion protocol handler to create a new using an existing file as the initial contents and that operation has completed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_openingFromURL.htm">openingFromURL</a></td>
+<td class="api-list">The openingFromURL event fires when the user has clicked a link in a web page that uses the Fusion protocol handler to create a new file using an existing file as the initial contents. This event is fired at the beginning of the request but before Fusion has take any action so that it's still possible to cancel the operation.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Application_startupCompleted.htm">startupCompleted</a></td>
+<td class="api-list">The startupCompleted event fires after Fusion has completed its initialization. This includes initialization of all the Add-ins loaded at startup. The client can add or remove ApplicationEventHandlers from the ApplicationEvent.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Application_get.htm">Application.get</a>, <a href="Document_parent.htm">Document.parent</a>, <a href="DrawingDocument_parent.htm">DrawingDocument.parent</a>, <a href="FusionDocument_parent.htm">FusionDocument.parent</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(Application%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">activeDocument Property</h3><p class="api">Returns the current active document.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+Ptr&lt;Document&gt; propertyValue = application_var-&gt;
+activeDocument
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">activeEditObject Property</h3><p class="api">Returns the current edit target as seen in the user interface. This edit target is defined as the container object that will be added to if something is created. For example, a component can be an edit target so that when new bodies are created they are added to that component. A sketch can also be an edit target.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = application_var-&gt;
+activeEditObject
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">activeProduct Property</h3><p class="api">Returns the current active product.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+Ptr&lt;Product&gt; propertyValue = application_var-&gt;
+activeProduct
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">activeViewport Property</h3><p class="api">Returns the currently active graphics view.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+Ptr&lt;Viewport&gt; propertyValue = application_var-&gt;
+activeViewport
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">applicationFolders Property</h3><p class="api">Returns the ApplicationFolders object which provides access to the paths of various folders associated with Fusion.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+Ptr&lt;ApplicationFolders&gt; propertyValue = application_var-&gt;
+applicationFolders
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">cameraChanged Member</h3><p class="api">The cameraChanged event fires immediately after a change in the camera has been made. Camera changes happen when user changes the view by rotating, zooming in or out, panning, changing from parallel to perspective, or when the extents of the viewport changes. You can add or remove event handlers from the CameraEvent.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/CameraEvent.h&gt;
+#include &lt;Core/Application/CameraEventHandler.h&gt;
+#include &lt;Core/Application/CameraEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the cameraChanged event.
+class MyCameraChangedEventHandler : public adsk::core::CameraEventHandler
+{
+public:
+void notify(const Ptr&lt;CameraEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyCameraChangedEventHandler event handler.");
+}
+} _cameraChanged;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;CameraEvent&gt; cameraChangedEvent = application_var-&gt;
+cameraChanged
+();
+if (!cameraChangedEvent)
+return;
+bool isOk = cameraChangedEvent-&gt;add(&amp;_cameraChanged);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Application/Application.h&gt;
+returnValue = adsk::core::Application::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">currentUser Property</h3><p class="api">Returns the User that is currently logged in.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+Ptr&lt;User&gt; propertyValue = application_var-&gt;
+currentUser
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">data Property</h3><p class="api">Returns the Data object which provides access the files.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+Ptr&lt;Data&gt; propertyValue = application_var-&gt;
+data
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">dataFileComplete Member</h3><p class="api">The dataFileComplete event fires when a data file upload has completed including any cloud side translations.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Dashboard/DataEvent.h&gt;
+#include &lt;Core/Dashboard/DataEventHandler.h&gt;
+#include &lt;Core/Dashboard/DataEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the dataFileComplete event.
+class MyDataFileCompleteEventHandler : public adsk::core::DataEventHandler
+{
+public:
+void notify(const Ptr&lt;DataEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyDataFileCompleteEventHandler event handler.");
+}
+} _dataFileComplete;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;DataEvent&gt; dataFileCompleteEvent = application_var-&gt;
+dataFileComplete
+();
+if (!dataFileCompleteEvent)
+return;
+bool isOk = dataFileCompleteEvent-&gt;add(&amp;_dataFileComplete);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">dataFileCopyComplete Member</h3><p class="api">The dataFileCopyComplete event fires when a data file copy has completed including any PIM Data copy.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Dashboard/DataEvent.h&gt;
+#include &lt;Core/Dashboard/DataEventHandler.h&gt;
+#include &lt;Core/Dashboard/DataEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the dataFileCopyComplete event.
+class MyDataFileCopyCompleteEventHandler : public adsk::core::DataEventHandler
+{
+public:
+void notify(const Ptr&lt;DataEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyDataFileCopyCompleteEventHandler event handler.");
+}
+} _dataFileCopyComplete;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;DataEvent&gt; dataFileCopyCompleteEvent = application_var-&gt;
+dataFileCopyComplete
+();
+if (!dataFileCopyCompleteEvent)
+return;
+bool isOk = dataFileCopyCompleteEvent-&gt;add(&amp;_dataFileCopyComplete);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">documentActivated Member</h3><p class="api">The DocumentActivated event fires at the VERY end of a document being activated.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/DocumentEvent.h&gt;
+#include &lt;Core/Application/DocumentEventHandler.h&gt;
+#include &lt;Core/Application/DocumentEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the documentActivated event.
+class MyDocumentActivatedEventHandler : public adsk::core::DocumentEventHandler
+{
+public:
+void notify(const Ptr&lt;DocumentEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyDocumentActivatedEventHandler event handler.");
+}
+} _documentActivated;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;DocumentEvent&gt; documentActivatedEvent = application_var-&gt;
+documentActivated
+();
+if (!documentActivatedEvent)
+return;
+bool isOk = documentActivatedEvent-&gt;add(&amp;_documentActivated);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">documentActivating Member</h3><p class="api">The DocumentActivating event fires at the VERY start of a document being activated.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/DocumentEvent.h&gt;
+#include &lt;Core/Application/DocumentEventHandler.h&gt;
+#include &lt;Core/Application/DocumentEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the documentActivating event.
+class MyDocumentActivatingEventHandler : public adsk::core::DocumentEventHandler
+{
+public:
+void notify(const Ptr&lt;DocumentEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyDocumentActivatingEventHandler event handler.");
+}
+} _documentActivating;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;DocumentEvent&gt; documentActivatingEvent = application_var-&gt;
+documentActivating
+();
+if (!documentActivatingEvent)
+return;
+bool isOk = documentActivatingEvent-&gt;add(&amp;_documentActivating);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">documentClosed Member</h3><p class="api">The DocumentClosed event fires at the VERY end of a document being closed. The Document object is not longer available because it has been closed.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/DocumentEvent.h&gt;
+#include &lt;Core/Application/DocumentEventHandler.h&gt;
+#include &lt;Core/Application/DocumentEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the documentClosed event.
+class MyDocumentClosedEventHandler : public adsk::core::DocumentEventHandler
+{
+public:
+void notify(const Ptr&lt;DocumentEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyDocumentClosedEventHandler event handler.");
+}
+} _documentClosed;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;DocumentEvent&gt; documentClosedEvent = application_var-&gt;
+documentClosed
+();
+if (!documentClosedEvent)
+return;
+bool isOk = documentClosedEvent-&gt;add(&amp;_documentClosed);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">documentClosing Member</h3><p class="api">The DocumentClosing event fires at the VERY start of a document being closed. User can set the isSaveCanceled property of DocumentEventArgs to true to cancel the document close.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/DocumentEvent.h&gt;
+#include &lt;Core/Application/DocumentEventHandler.h&gt;
+#include &lt;Core/Application/DocumentEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the documentClosing event.
+class MyDocumentClosingEventHandler : public adsk::core::DocumentEventHandler
+{
+public:
+void notify(const Ptr&lt;DocumentEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyDocumentClosingEventHandler event handler.");
+}
+} _documentClosing;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;DocumentEvent&gt; documentClosingEvent = application_var-&gt;
+documentClosing
+();
+if (!documentClosingEvent)
+return;
+bool isOk = documentClosingEvent-&gt;add(&amp;_documentClosing);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">documentCreated Member</h3><p class="api">The DocumentCreated event fires when a new document is created.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/DocumentEvent.h&gt;
+#include &lt;Core/Application/DocumentEventHandler.h&gt;
+#include &lt;Core/Application/DocumentEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the documentCreated event.
+class MyDocumentCreatedEventHandler : public adsk::core::DocumentEventHandler
+{
+public:
+void notify(const Ptr&lt;DocumentEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyDocumentCreatedEventHandler event handler.");
+}
+} _documentCreated;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;DocumentEvent&gt; documentCreatedEvent = application_var-&gt;
+documentCreated
+();
+if (!documentCreatedEvent)
+return;
+bool isOk = documentCreatedEvent-&gt;add(&amp;_documentCreated);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">documentDeactivated Member</h3><p class="api">The DocumentDeactivated event fires at the VERY end of a document being deactivated.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/DocumentEvent.h&gt;
+#include &lt;Core/Application/DocumentEventHandler.h&gt;
+#include &lt;Core/Application/DocumentEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the documentDeactivated event.
+class MyDocumentDeactivatedEventHandler : public adsk::core::DocumentEventHandler
+{
+public:
+void notify(const Ptr&lt;DocumentEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyDocumentDeactivatedEventHandler event handler.");
+}
+} _documentDeactivated;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;DocumentEvent&gt; documentDeactivatedEvent = application_var-&gt;
+documentDeactivated
+();
+if (!documentDeactivatedEvent)
+return;
+bool isOk = documentDeactivatedEvent-&gt;add(&amp;_documentDeactivated);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">documentDeactivating Member</h3><p class="api">The DocumentDeactivating event fires at the VERY start of a document being deactivated.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/DocumentEvent.h&gt;
+#include &lt;Core/Application/DocumentEventHandler.h&gt;
+#include &lt;Core/Application/DocumentEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the documentDeactivating event.
+class MyDocumentDeactivatingEventHandler : public adsk::core::DocumentEventHandler
+{
+public:
+void notify(const Ptr&lt;DocumentEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyDocumentDeactivatingEventHandler event handler.");
+}
+} _documentDeactivating;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;DocumentEvent&gt; documentDeactivatingEvent = application_var-&gt;
+documentDeactivating
+();
+if (!documentDeactivatingEvent)
+return;
+bool isOk = documentDeactivatingEvent-&gt;add(&amp;_documentDeactivating);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">documentOpened Member</h3><p class="api">The DocumentOpened event fires at the VERY end of a document being opened so the Document object is available to be used. When a document is opened that references other documents, only the top-level document will cause the documentOpened event to be fired. You can access the referenced documents by using the documentReferences property of the Document object.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/DocumentEvent.h&gt;
+#include &lt;Core/Application/DocumentEventHandler.h&gt;
+#include &lt;Core/Application/DocumentEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the documentOpened event.
+class MyDocumentOpenedEventHandler : public adsk::core::DocumentEventHandler
+{
+public:
+void notify(const Ptr&lt;DocumentEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyDocumentOpenedEventHandler event handler.");
+}
+} _documentOpened;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;DocumentEvent&gt; documentOpenedEvent = application_var-&gt;
+documentOpened
+();
+if (!documentOpenedEvent)
+return;
+bool isOk = documentOpenedEvent-&gt;add(&amp;_documentOpened);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">documentOpening Member</h3><p class="api">The DocumentOpening event fires at the VERY start of a document being opened. There is no promise that the document will be opened, hence a documentOpened event may not follow. When a document is being opened that references other documents, only the top-level document will cause a documentOpening event to be fired.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/DocumentEvent.h&gt;
+#include &lt;Core/Application/DocumentEventHandler.h&gt;
+#include &lt;Core/Application/DocumentEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the documentOpening event.
+class MyDocumentOpeningEventHandler : public adsk::core::DocumentEventHandler
+{
+public:
+void notify(const Ptr&lt;DocumentEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyDocumentOpeningEventHandler event handler.");
+}
+} _documentOpening;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;DocumentEvent&gt; documentOpeningEvent = application_var-&gt;
+documentOpening
+();
+if (!documentOpeningEvent)
+return;
+bool isOk = documentOpeningEvent-&gt;add(&amp;_documentOpening);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">documents Property</h3><p class="api">Returns the Documents collection object which supports accessing opened documents, opening existing documents, and creating new documents.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+Ptr&lt;Documents&gt; propertyValue = application_var-&gt;
+documents
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">documentSaved Member</h3><p class="api">The DocumentSaved event fires after the save operation has been completed.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/DocumentEvent.h&gt;
+#include &lt;Core/Application/DocumentEventHandler.h&gt;
+#include &lt;Core/Application/DocumentEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the documentSaved event.
+class MyDocumentSavedEventHandler : public adsk::core::DocumentEventHandler
+{
+public:
+void notify(const Ptr&lt;DocumentEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyDocumentSavedEventHandler event handler.");
+}
+} _documentSaved;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;DocumentEvent&gt; documentSavedEvent = application_var-&gt;
+documentSaved
+();
+if (!documentSavedEvent)
+return;
+bool isOk = documentSavedEvent-&gt;add(&amp;_documentSaved);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">documentSaving Member</h3><p class="api">The DocumentSaving event fires at the VERY start of a document being saved. You can set the isSaveCanceled property of DocumentEventArgs to true to cancel the document save.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/DocumentEvent.h&gt;
+#include &lt;Core/Application/DocumentEventHandler.h&gt;
+#include &lt;Core/Application/DocumentEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the documentSaving event.
+class MyDocumentSavingEventHandler : public adsk::core::DocumentEventHandler
+{
+public:
+void notify(const Ptr&lt;DocumentEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyDocumentSavingEventHandler event handler.");
+}
+} _documentSaving;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;DocumentEvent&gt; documentSavingEvent = application_var-&gt;
+documentSaving
+();
+if (!documentSavingEvent)
+return;
+bool isOk = documentSavingEvent-&gt;add(&amp;_documentSaving);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">executeTextCommand Method</h3><p class="api">Executes the input text command.</p><pre class="api-code">"application_var" is a variable referencing an
+Application
+object.
+#include &lt;Core/Application/Application.h&gt;
+returnValue = application_var-&gt;
+executeTextCommand
+(command);</pre><p class="api">Return Value: string - Returns the result of the input text command.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">command</td><td class="api-list">string</td><td class="api-list">The text command to execute.</td></tr></table><h3 class="api-member">favoriteAppearances Property</h3><p class="api">Returns the set of favorite appearances.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+Ptr&lt;FavoriteAppearances&gt; propertyValue = application_var-&gt;
+favoriteAppearances
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">favoriteMaterials Property</h3><p class="api">Returns the set of favorite materials.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+Ptr&lt;FavoriteMaterials&gt; propertyValue = application_var-&gt;
+favoriteMaterials
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">fireCustomEvent Method</h3><p class="api">Fires a previously registered custom event. This method is used by a worker thread or another add-in to fire an event to the add-in that registered the event and is running in the primary thread. Firing a custom event does not immediately result in the event handler being called. When a custom event is fired the event is put on the queue and will be handled in the main thread when Fusion is idle.</p><pre class="api-code">"application_var" is a variable referencing an
+Application
+object.
+#include &lt;Core/Application/Application.h&gt;
+// Uses no optional arguments.
+returnValue = application_var-&gt;
+fireCustomEvent
+(eventId);
+// Uses optional arguments.
+returnValue = application_var-&gt;
+fireCustomEvent
+(eventId, additionalInfo);</pre><p class="api">Return Value: boolean - Returns true if the event was successfully added to the event queue. A value of true does not indicate that the event was fired and handled but only that it's been put on the primary thread's event queue to be fired when application is idle.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">eventId</td><td class="api-list">string</td><td class="api-list">The ID of the custom event you want to fire.</td></tr><tr><td class="api-list">additionalInfo</td><td class="api-list">string</td><td class="api-list">Any additional information you want to pass through the event to the add-in in the primary thread. This is an optional argument whose default value is "".</td></tr></table><h3 class="api-member">fontNames Property</h3><p class="api">Returns the names of all of the fonts that are available in Fusion when creating text.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+std::vector&lt;string&gt; propertyValue = application_var-&gt;
+fontNames
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type string.</p><h3 class="api-member">get Method</h3><p class="api">Access to the root Application object.</p><pre class="api-code">This is a static method.
+#include &lt;Core/Application/Application.h&gt;
+returnValue = adsk::core::Application::
+get
+();</pre><p class="api">Return Value: Application - Return the root Application object or null if it failed.</p><h3 class="api-member">getLastError Method</h3><p class="api">Returns information about the last error that occurred.</p><pre class="api-code">#include &lt;Core/Application/Application.h
+// Uses no optional arguments.
+// Declare the output arguments.
+integer returnValue = application_var-&gt;
+getLastError
+();
+// Uses optional arguments.
+// Declare the output arguments.
+string description;
+// Call the function.
+Ptr&lt;Application&gt; returnValue = application_var-&gt;
+getLastError
+(description);</pre><p class="api">Return Value: integer - Returns the number of the specific error.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">description</td><td class="api-list">string</td><td class="api-list">A description of the last error in English. This is an optional argument whose default value is "".</td></tr></table><h3 class="api-member">hasActiveJobs Property</h3><p class="api">Gets whether there are any active jobs.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+boolean propertyValue = application_var-&gt;
+hasActiveJobs
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">importManager Property</h3><p class="api">Returns the ImportManager. You use the ImportManager to import files (of various neutral formats.) into existing components or new document.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+Ptr&lt;ImportManager&gt; propertyValue = application_var-&gt;
+importManager
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">insertedFromURL Member</h3><p class="api">The insertedFromURL event fires after the user has clicked a link in a web page that uses the Fusion protocol handler to insert a file as new component and that operation has completed.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/WebRequestEvent.h&gt;
+#include &lt;Core/Application/WebRequestEventHandler.h&gt;
+#include &lt;Core/Application/WebRequestEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the insertedFromURL event.
+class MyInsertedFromURLEventHandler : public adsk::core::WebRequestEventHandler
+{
+public:
+void notify(const Ptr&lt;WebRequestEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyInsertedFromURLEventHandler event handler.");
+}
+} _insertedFromURL;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;WebRequestEvent&gt; insertedFromURLEvent = application_var-&gt;
+insertedFromURL
+();
+if (!insertedFromURLEvent)
+return;
+bool isOk = insertedFromURLEvent-&gt;add(&amp;_insertedFromURL);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">insertingFromURL Member</h3><p class="api">The insertingFromURL event fires when the user has clicked a link in a web page that uses the Fusion protocol handler to insert a file as new component. This event is fired at the beginning of the request but before Fusion has take any action so that it's still possible to cancel the operation.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/WebRequestEvent.h&gt;
+#include &lt;Core/Application/WebRequestEventHandler.h&gt;
+#include &lt;Core/Application/WebRequestEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the insertingFromURL event.
+class MyInsertingFromURLEventHandler : public adsk::core::WebRequestEventHandler
+{
+public:
+void notify(const Ptr&lt;WebRequestEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyInsertingFromURLEventHandler event handler.");
+}
+} _insertingFromURL;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;WebRequestEvent&gt; insertingFromURLEvent = application_var-&gt;
+insertingFromURL
+();
+if (!insertingFromURLEvent)
+return;
+bool isOk = insertingFromURLEvent-&gt;add(&amp;_insertingFromURL);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">isComponentColorsDisplayed Property</h3><p class="api">Get and sets if component colors are used when displaying the components within a design. This is the API equivalent of the "Display Component Colors" command.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+boolean propertyValue = application_var-&gt;
+isComponentColorsDisplayed
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = application_var-&gt;
+isComponentColorsDisplayed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isOffLine Property</h3><p class="api">Gets and sets if Fusion is offline or not.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+boolean propertyValue = application_var-&gt;
+isOffLine
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = application_var-&gt;
+isOffLine
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isStartupComplete Property</h3><p class="api">Boolean property indicating whether Fusion has completed its initialization. This includes initialization of all the Add-ins loaded at startup.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+boolean propertyValue = application_var-&gt;
+isStartupComplete
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+boolean propertyValue = application_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">lightingEnvironment Property</h3><p class="api">Gets and sets the current lighting environment to use when rendering the graphics.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+LightingEnvironments propertyValue = application_var-&gt;
+lightingEnvironment
+();
+// Set the value of the property, where value_var is a LightingEnvironments.
+bool returnValue = application_var-&gt;
+lightingEnvironment
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">log Method</h3><p class="api">Logs messages to either the TEXT COMMAND window or the Fusion app log file.</p><pre class="api-code">This is a static method.
+#include &lt;Core/Application/Application.h&gt;
+// Uses no optional arguments.
+returnValue = adsk::core::Application::
+log
+(message);
+// Uses optional arguments.
+returnValue = adsk::core::Application::
+log
+(message, level, type);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">message</td><td class="api-list">string</td><td class="api-list">The message to write to the log.</td></tr><tr><td class="api-list">level</td><td class="api-list">LogLevels</td><td class="api-list">The log level. Default value is InfoLogLevel. This is only used when the log type is FileLogType where the log message will include the log level. This is an optional argument whose default value is LogLevels.InfoLogLevel.</td></tr><tr><td class="api-list">type</td><td class="api-list">LogTypes</td><td class="api-list">The log type. The default value is ConsoleLogType to write the message to the TEXT COMMAND window. When the type is FileLogType, the message is written to Fusion's app log file which is the same file where Fusion writes all of its log messages. You can get the path and filename of the current log file by using the TEXT COMMAND window. In the lower-right corner you can choose "Txt", "Py", or "Js". Choose the "Txt" option and type "paths.get" in the input field and press return. A list of all of the various paths used by Fusion will be displayed in the TEXT COMMAND window. The line for "AppLogFilePath" has the full path to the log file. This is an optional argument whose default value is LogTypes.ConsoleLogType.</td></tr></table><h3 class="api-member">materialLibraries Property</h3><p class="api">Returns the collection of material libraries currently available.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+Ptr&lt;MaterialLibraries&gt; propertyValue = application_var-&gt;
+materialLibraries
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">measureManager Property</h3><p class="api">Get the MeasureManager object which can be used to perform measurements of geometry.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+Ptr&lt;MeasureManager&gt; propertyValue = application_var-&gt;
+measureManager
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">mfgdmDataReady Member</h3><p class="api">The mfgdmDataReady event fires when the MFGDM data structure for a document has been updated and properties to IDs and structure from the data model is ready.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/MFGDMDataEvent.h&gt;
+#include &lt;Core/Application/MFGDMDataEventHandler.h&gt;
+#include &lt;Core/Application/MFGDMDataEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the mfgdmDataReady event.
+class MyMfgdmDataReadyEventHandler : public adsk::core::MFGDMDataEventHandler
+{
+public:
+void notify(const Ptr&lt;MFGDMDataEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyMfgdmDataReadyEventHandler event handler.");
+}
+} _mfgdmDataReady;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;MFGDMDataEvent&gt; mfgdmDataReadyEvent = application_var-&gt;
+mfgdmDataReady
+();
+if (!mfgdmDataReadyEvent)
+return;
+bool isOk = mfgdmDataReadyEvent-&gt;add(&amp;_mfgdmDataReady);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+string propertyValue = application_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">onlineStatusChanged Member</h3><p class="api">The onlineStatusChanged event fires immediately after Fusion goes online or offline. This event fires whether or not the online status was changed deliberately by the user by using the Fusion 'Work Offline' command or because of inadvertent network/Internet connectivity issues. You can get the isOffline property of ApplicationEventArgs to determine whether Fusion has gone Offline or has come back online. The client can add or remove ApplicationEventHandlers from the ApplicationEvent.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/ApplicationEvent.h&gt;
+#include &lt;Core/Application/ApplicationEventHandler.h&gt;
+#include &lt;Core/Application/ApplicationEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the onlineStatusChanged event.
+class MyOnlineStatusChangedEventHandler : public adsk::core::ApplicationEventHandler
+{
+public:
+void notify(const Ptr&lt;ApplicationEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyOnlineStatusChangedEventHandler event handler.");
+}
+} _onlineStatusChanged;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;ApplicationEvent&gt; onlineStatusChangedEvent = application_var-&gt;
+onlineStatusChanged
+();
+if (!onlineStatusChangedEvent)
+return;
+bool isOk = onlineStatusChangedEvent-&gt;add(&amp;_onlineStatusChanged);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns an .</p><h3 class="api-member">openedFromURL Member</h3><p class="api">The openedFromURL event fires after the user has clicked a link in a web page that uses the Fusion protocol handler to create a new using an existing file as the initial contents and that operation has completed.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/WebRequestEvent.h&gt;
+#include &lt;Core/Application/WebRequestEventHandler.h&gt;
+#include &lt;Core/Application/WebRequestEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the openedFromURL event.
+class MyOpenedFromURLEventHandler : public adsk::core::WebRequestEventHandler
+{
+public:
+void notify(const Ptr&lt;WebRequestEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyOpenedFromURLEventHandler event handler.");
+}
+} _openedFromURL;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;WebRequestEvent&gt; openedFromURLEvent = application_var-&gt;
+openedFromURL
+();
+if (!openedFromURLEvent)
+return;
+bool isOk = openedFromURLEvent-&gt;add(&amp;_openedFromURL);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">openingFromURL Member</h3><p class="api">The openingFromURL event fires when the user has clicked a link in a web page that uses the Fusion protocol handler to create a new file using an existing file as the initial contents. This event is fired at the beginning of the request but before Fusion has take any action so that it's still possible to cancel the operation.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/WebRequestEvent.h&gt;
+#include &lt;Core/Application/WebRequestEventHandler.h&gt;
+#include &lt;Core/Application/WebRequestEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the openingFromURL event.
+class MyOpeningFromURLEventHandler : public adsk::core::WebRequestEventHandler
+{
+public:
+void notify(const Ptr&lt;WebRequestEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyOpeningFromURLEventHandler event handler.");
+}
+} _openingFromURL;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;WebRequestEvent&gt; openingFromURLEvent = application_var-&gt;
+openingFromURL
+();
+if (!openingFromURLEvent)
+return;
+bool isOk = openingFromURLEvent-&gt;add(&amp;_openingFromURL);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">pointTolerance Property</h3><p class="api">The modeling tolerance used internally when comparing two points. The value is in centimeters.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+double propertyValue = application_var-&gt;
+pointTolerance
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">preferences Property</h3><p class="api">Provides access to all of the application preferences.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+Ptr&lt;Preferences&gt; propertyValue = application_var-&gt;
+preferences
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">registerCustomEvent Method</h3><p class="api">This registers a new CustomEvent which is intended to be primarily used to send an event from a worker thread you've created back to your add-in running in the primary thread. It's also possible that two add-ins could be cooperating and another add-in can fire the event to your add-in.</p><pre class="api-code">"application_var" is a variable referencing an
+Application
+object.
+#include &lt;Core/Application/Application.h&gt;
+returnValue = application_var-&gt;
+registerCustomEvent
+(eventId);</pre><p class="api">Return Value: CustomEvent - Returns the registered CustomEvent or null in the case of failure, which would typically be because the provided eventId is not unique.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">eventId</td><td class="api-list">string</td><td class="api-list">This serves as the unique ID for this event and is used by the worker thread or other add-in to identify which custom event to fire using the fireCustomEvent method.</td></tr></table><h3 class="api-member">scripts Property</h3><p class="api">Returns the Scripts object which provides the ability to manage scripts and add-ins.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+Ptr&lt;Scripts&gt; propertyValue = application_var-&gt;
+scripts
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">startupCompleted Member</h3><p class="api">The startupCompleted event fires after Fusion has completed its initialization. This includes initialization of all the Add-ins loaded at startup. The client can add or remove ApplicationEventHandlers from the ApplicationEvent.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/Application/ApplicationEvent.h&gt;
+#include &lt;Core/Application/ApplicationEventHandler.h&gt;
+#include &lt;Core/Application/ApplicationEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the startupCompleted event.
+class MyStartupCompletedEventHandler : public adsk::core::ApplicationEventHandler
+{
+public:
+void notify(const Ptr&lt;ApplicationEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyStartupCompletedEventHandler event handler.");
+}
+} _startupCompleted;
+--------- Connect the handler to the event. ---------
+// "application_var" is a variable referencing an
+Application
+object.
+// Connect the handler function to the event.
+Ptr&lt;ApplicationEvent&gt; startupCompletedEvent = application_var-&gt;
+startupCompleted
+();
+if (!startupCompletedEvent)
+return;
+bool isOk = startupCompletedEvent-&gt;add(&amp;_startupCompleted);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns an .</p><h3 class="api-member">supportedProductTypes Property</h3><p class="api">Returns an array containing the names of the products types currently supported by Fusion. For example, the name returned for Fusion is "DesignProductType". These product type names are used to identify specific products in some other API functions such as the productType property on the Workspace and ToolbarPanel objects.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+std::vector&lt;string&gt; propertyValue = application_var-&gt;
+supportedProductTypes
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type string.</p><h3 class="api-member">unregisterCustomEvent Method</h3><p class="api">Unregisters an existing CustomEvent.</p><pre class="api-code">"application_var" is a variable referencing an
+Application
+object.
+#include &lt;Core/Application/Application.h&gt;
+returnValue = application_var-&gt;
+unregisterCustomEvent
+(eventId);</pre><p class="api">Return Value: boolean - Returns True if the unregister succeeded.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">eventId</td><td class="api-list">string</td><td class="api-list">Th unique ID of the custom event you want to unregister.</td></tr></table><h3 class="api-member">userId Property</h3><p class="api">Returns the internal name of the Autodesk account currently logged in. This can be used by applications sold through the Autodesk Exchange Store to verify that the user has in fact purchased the product.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+string propertyValue = application_var-&gt;
+userId
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">userInterface Property</h3><p class="api">Provides access to functionality specific to the user interface.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+Ptr&lt;UserInterface&gt; propertyValue = application_var-&gt;
+userInterface
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">userName Property</h3><p class="api">Returns the user name of the Autodesk account currently logged in.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+string propertyValue = application_var-&gt;
+userName
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">vectorAngleTolerance Property</h3><p class="api">The modeling tolerance used when comparing vector angles. The value is in radians.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+double propertyValue = application_var-&gt;
+vectorAngleTolerance
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">version Property</h3><p class="api">Returns the current version of the Fusion application.</p><pre class="api-code">"application_var" is a variable referencing an Application object.
+#include &lt;Core/Application/Application.h&gt;
+// Get the value of the property.
+string propertyValue = application_var-&gt;
+version
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

@@ -1,0 +1,356 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/SketchCurve.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="SketchCurve" name="contextid"/>
+<meta content="SketchCurve Object" name="description"/>
+<meta content="GUID-abb8b507-00ee-4867-9fdb-6aa9b1cc2921" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>SketchCurve Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">SketchCurve Object
+			</h1>
+              Derived from: <a href="SketchEntity.htm">SketchEntity</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Sketch/SketchCurve.h&gt;<h2 class="api">
+          Description
+        </h2>A single sketch curve. This is the base class for the specific curve types.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_breakCurve.htm">breakCurve</a></td>
+<td class="api-list">Breaks a curve into two or three pieces by finding intersections of this curve with all other curves in the sketch and splitting this curve at the nearest intersections to a specified point on the curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes the entity from the sketch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_extend.htm">extend</a></td>
+<td class="api-list">Extend a curve by specifying a point that determines the end of the curve to extend</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_intersections.htm">intersections</a></td>
+<td class="api-list">Get the curves that intersect this curve along with the intersection points (Point3D)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_split.htm">split</a></td>
+<td class="api-list">Split a curve at a position specified along the curve</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_trim.htm">trim</a></td>
+<td class="api-list">Trim a curve by specifying a point that determines the segment of the curve to trim away</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_assemblyContext.htm">assemblyContext</a></td>
+<td class="api-list">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_attributes.htm">attributes</a></td>
+<td class="api-list">Returns the collection of attributes associated with this face.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_boundingBox.htm">boundingBox</a></td>
+<td class="api-list">Returns the bounding box of the entity in sketch space.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_entityToken.htm">entityToken</a></td>
+<td class="api-list">Returns a token for the SketchEntity object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same sketch entity.<br><br/> When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_geometricConstraints.htm">geometricConstraints</a></td>
+<td class="api-list">Returns the sketch constraints that are attached to this curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_is2D.htm">is2D</a></td>
+<td class="api-list">Indicates if this curve lies entirely on the sketch x-y plane.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_isConstruction.htm">isConstruction</a></td>
+<td class="api-list">Gets and sets whether this curve is construction geometry.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_isDeletable.htm">isDeletable</a></td>
+<td class="api-list">Indicates if this sketch entity can be deleted. There are cases, especially with sketch points where another entity is dependent on an entity so deleting it is not allowed. For example, you can't delete the center point of circle by itself but deleting the circle will delete the point. The same is true for the end points of a line.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_isFixed.htm">isFixed</a></td>
+<td class="api-list">Indicates if this geometry is "fixed".</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_isFullyConstrained.htm">isFullyConstrained</a></td>
+<td class="api-list">Indicates if this sketch entity is fully constrained.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_isLinked.htm">isLinked</a></td>
+<td class="api-list">Indicates if this sketch entity was created by a projection, inclusion, or driven by an API script. If this returns true, then the entity is presented to the user as not editable and with a 'break link' command available.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_isReference.htm">isReference</a></td>
+<td class="api-list">Indicates if this geometry is a reference. Changing this property from true to false removes the reference. This property can not be set to true if it is already false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_isVisible.htm">isVisible</a></td>
+<td class="api-list">When a sketch is created, geometry is sometimes automatically added to the sketch. For example a sketch point that references the origin point is always included and if a face was selected to create the sketch on, geometry from the face is also included. This automatically created geometry behaves in a special way in that it is invisible but is available for selection and it also participates in profile calculations. It's not possible to make them visible but they can be deleted and they can be used for any other standard sketch operation.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_length.htm">length</a></td>
+<td class="api-list">Returns the length of the curve in centimeters.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_parentSketch.htm">parentSketch</a></td>
+<td class="api-list">Returns the parent sketch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_referencedEntity.htm">referencedEntity</a></td>
+<td class="api-list">Returns the referenced entity in the case where IsReference is true. However, this property can also return null when IsReference is true in the case where the reference is not parametric.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCurve_sketchDimensions.htm">sketchDimensions</a></td>
+<td class="api-list">Returns the sketch dimensions that are attached to this curve.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ConcentricConstraint_entityOne.htm">ConcentricConstraint.entityOne</a>, <a href="ConcentricConstraint_entityTwo.htm">ConcentricConstraint.entityTwo</a>, <a href="EqualConstraint_curveOne.htm">EqualConstraint.curveOne</a>, <a href="EqualConstraint_curveTwo.htm">EqualConstraint.curveTwo</a>, <a href="MidPointConstraint_midPointCurve.htm">MidPointConstraint.midPointCurve</a>, <a href="OffsetConstraint_childCurves.htm">OffsetConstraint.childCurves</a>, <a href="OffsetConstraint_parentCurves.htm">OffsetConstraint.parentCurves</a>, <a href="OffsetConstraintInput_curves.htm">OffsetConstraintInput.curves</a>, <a href="PerpendicularToSurfaceConstraint_curve.htm">PerpendicularToSurfaceConstraint.curve</a>, <a href="SharedPointCoincident_curveOne.htm">SharedPointCoincident.curveOne</a>, <a href="SharedPointCoincident_curveTwo.htm">SharedPointCoincident.curveTwo</a>, <a href="SketchConcentricCircleDimension_circleOne.htm">SketchConcentricCircleDimension.circleOne</a>, <a href="SketchConcentricCircleDimension_circleTwo.htm">SketchConcentricCircleDimension.circleTwo</a>, <a href="SketchCurves_item.htm">SketchCurves.item</a>, <a href="SketchDiameterDimension_entity.htm">SketchDiameterDimension.entity</a>, <a href="SketchEllipseMajorRadiusDimension_ellipse.htm">SketchEllipseMajorRadiusDimension.ellipse</a>, <a href="SketchEllipseMinorRadiusDimension_ellipse.htm">SketchEllipseMinorRadiusDimension.ellipse</a>, <a href="SketchRadialDimension_entity.htm">SketchRadialDimension.entity</a>, <a href="SketchTangentDistanceDimension_circleOrArc.htm">SketchTangentDistanceDimension.circleOrArc</a>, <a href="SketchText_explode.htm">SketchText.explode</a>, <a href="SmoothConstraint_curveOne.htm">SmoothConstraint.curveOne</a>, <a href="SmoothConstraint_curveTwo.htm">SmoothConstraint.curveTwo</a>, <a href="TangentConstraint_curveOne.htm">TangentConstraint.curveOne</a>, <a href="TangentConstraint_curveTwo.htm">TangentConstraint.curveTwo</a><h2 class="api">
+            Derived Classes
+          </h2><a href="SketchArc.htm">SketchArc</a>, <a href="SketchCircle.htm">SketchCircle</a>, <a href="SketchConicCurve.htm">SketchConicCurve</a>, <a href="SketchControlPointSpline.htm">SketchControlPointSpline</a>, <a href="SketchEllipse.htm">SketchEllipse</a>, <a href="SketchEllipticalArc.htm">SketchEllipticalArc</a>, <a href="SketchFittedSpline.htm">SketchFittedSpline</a>, <a href="SketchFixedSpline.htm">SketchFixedSpline</a>, <a href="SketchLine.htm">SketchLine</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(SketchCurve%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">assemblyContext Property</h3><p class="api">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = sketchCurve_var-&gt;
+assemblyContext
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">attributes Property</h3><p class="api">Returns the collection of attributes associated with this face.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+Ptr&lt;Attributes&gt; propertyValue = sketchCurve_var-&gt;
+attributes
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">boundingBox Property</h3><p class="api">Returns the bounding box of the entity in sketch space.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+Ptr&lt;BoundingBox3D&gt; propertyValue = sketchCurve_var-&gt;
+boundingBox
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">breakCurve Method</h3><p class="api">Breaks a curve into two or three pieces by finding intersections of this curve with all other curves in the sketch and splitting this curve at the nearest intersections to a specified point on the curve.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a
+SketchCurve
+object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Uses no optional arguments.
+returnValue = sketchCurve_var-&gt;
+breakCurve
+(segmentPoint);
+// Uses optional arguments.
+returnValue = sketchCurve_var-&gt;
+breakCurve
+(segmentPoint, createConstraints);</pre><p class="api">Return Value: ObjectCollection - All of the curves resulting from the break are returned in an ObjectCollection. In the case where no intersections are found and as a result the curve is not broken, an empty ObjectCollection is returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">segmentPoint</td><td class="api-list">Point3D</td><td class="api-list">A point that specifies the segment of the curve that is to be split from the rest of the curve. The nearest intersection(s) to this point define the break location(s).</td></tr><tr><td class="api-list">createConstraints</td><td class="api-list">boolean</td><td class="api-list">Optional argument that specifies if constraints should be created between the new curve segments. A value of true indicates constraints will be created. This is an optional argument whose default value is True.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+returnValue = adsk::fusion::SketchCurve::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes the entity from the sketch.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a
+SketchCurve
+object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+returnValue = sketchCurve_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true is the delete was successful.</p><h3 class="api-member">entityToken Property</h3><p class="api">Returns a token for the SketchEntity object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same sketch entity. When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+string propertyValue = sketchCurve_var-&gt;
+entityToken
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">extend Method</h3><p class="api">Extend a curve by specifying a point that determines the end of the curve to extend</p><pre class="api-code">"sketchCurve_var" is a variable referencing a
+SketchCurve
+object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Uses no optional arguments.
+returnValue = sketchCurve_var-&gt;
+extend
+(endPoint);
+// Uses optional arguments.
+returnValue = sketchCurve_var-&gt;
+extend
+(endPoint, createConstraints);</pre><p class="api">Return Value: ObjectCollection - Returns the modified original curve if the start or end of the curve is extended If the extend joins a curve to another, the two original curves are deleted and a new curve is returned If an arc is extended so as to become a circle, the original arc is deleted and a new circle is returned</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">endPoint</td><td class="api-list">Point3D</td><td class="api-list">A point (transient Point3D) on or closest to the end of the curve to extend. (start or end) The end of the curve closest to the endPoint gets extended</td></tr><tr><td class="api-list">createConstraints</td><td class="api-list">boolean</td><td class="api-list">Constraints are created by default. Specify false to not create constraints. This is an optional argument whose default value is True.</td></tr></table><h3 class="api-member">geometricConstraints Property</h3><p class="api">Returns the sketch constraints that are attached to this curve.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+Ptr&lt;GeometricConstraintList&gt; propertyValue = sketchCurve_var-&gt;
+geometricConstraints
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">intersections Method</h3><p class="api">Get the curves that intersect this curve along with the intersection points (Point3D)</p><pre class="api-code">#include &lt;Fusion/Sketch/SketchCurve.h
+// Declare the output arguments.
+Ptr&lt;ObjectCollection&gt; sketchCurves;
+Ptr&lt;ObjectCollection&gt; intersectingCurves;
+Ptr&lt;ObjectCollection&gt; intersectionPoints;
+boolean returnValue = sketchCurve_var-&gt;
+intersections
+(sketchCurves, intersectingCurves, intersectionPoints);</pre><p class="api">Return Value: boolean - Returns true if the method was successful. It can be successful regardless of whether intersections were found or not.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">sketchCurves</td><td class="api-list">ObjectCollection</td><td class="api-list">A collection of curves to attempt to find intersections with. Set the value of this parameter to null to use all curves in the sketch for the calculation.</td></tr><tr><td class="api-list">intersectingCurves</td><td class="api-list">ObjectCollection</td><td class="api-list">A collection of the actual intersecting curves</td></tr><tr><td class="api-list">intersectionPoints</td><td class="api-list">ObjectCollection</td><td class="api-list">A collection of intersection points (Point3D) Item numbers in this collection correspond to the item numbers in the intersectingCurves collection.</td></tr></table><h3 class="api-member">is2D Property</h3><p class="api">Indicates if this curve lies entirely on the sketch x-y plane.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchCurve_var-&gt;
+is2D
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isConstruction Property</h3><p class="api">Gets and sets whether this curve is construction geometry.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchCurve_var-&gt;
+isConstruction
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sketchCurve_var-&gt;
+isConstruction
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isDeletable Property</h3><p class="api">Indicates if this sketch entity can be deleted. There are cases, especially with sketch points where another entity is dependent on an entity so deleting it is not allowed. For example, you can't delete the center point of circle by itself but deleting the circle will delete the point. The same is true for the end points of a line.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchCurve_var-&gt;
+isDeletable
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isFixed Property</h3><p class="api">Indicates if this geometry is "fixed".</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchCurve_var-&gt;
+isFixed
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sketchCurve_var-&gt;
+isFixed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isFullyConstrained Property</h3><p class="api">Indicates if this sketch entity is fully constrained.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchCurve_var-&gt;
+isFullyConstrained
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isLinked Property</h3><p class="api">Indicates if this sketch entity was created by a projection, inclusion, or driven by an API script. If this returns true, then the entity is presented to the user as not editable and with a 'break link' command available.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchCurve_var-&gt;
+isLinked
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isReference Property</h3><p class="api">Indicates if this geometry is a reference. Changing this property from true to false removes the reference. This property can not be set to true if it is already false.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchCurve_var-&gt;
+isReference
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sketchCurve_var-&gt;
+isReference
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchCurve_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isVisible Property</h3><p class="api">When a sketch is created, geometry is sometimes automatically added to the sketch. For example a sketch point that references the origin point is always included and if a face was selected to create the sketch on, geometry from the face is also included. This automatically created geometry behaves in a special way in that it is invisible but is available for selection and it also participates in profile calculations. It's not possible to make them visible but they can be deleted and they can be used for any other standard sketch operation.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchCurve_var-&gt;
+isVisible
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">length Property</h3><p class="api">Returns the length of the curve in centimeters.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+double propertyValue = sketchCurve_var-&gt;
+length
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+string propertyValue = sketchCurve_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentSketch Property</h3><p class="api">Returns the parent sketch.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+Ptr&lt;Sketch&gt; propertyValue = sketchCurve_var-&gt;
+parentSketch
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">referencedEntity Property</h3><p class="api">Returns the referenced entity in the case where IsReference is true. However, this property can also return null when IsReference is true in the case where the reference is not parametric.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = sketchCurve_var-&gt;
+referencedEntity
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">sketchDimensions Property</h3><p class="api">Returns the sketch dimensions that are attached to this curve.</p><pre class="api-code">"sketchCurve_var" is a variable referencing a SketchCurve object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Get the value of the property.
+Ptr&lt;SketchDimensionList&gt; propertyValue = sketchCurve_var-&gt;
+sketchDimensions
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">split Method</h3><p class="api">Split a curve at a position specified along the curve</p><pre class="api-code">"sketchCurve_var" is a variable referencing a
+SketchCurve
+object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Uses no optional arguments.
+returnValue = sketchCurve_var-&gt;
+split
+(splitPoint);
+// Uses optional arguments.
+returnValue = sketchCurve_var-&gt;
+split
+(splitPoint, createConstraints);</pre><p class="api">Return Value: ObjectCollection - Returns the resulting 2 curves; the original curve + the newly created curve When split spline the original is deleted and two new curves returned. Empty collection returned if curve is closed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">splitPoint</td><td class="api-list">Point3D</td><td class="api-list">A position (transient Point3D) on the curve that defines the point at which to split the curve</td></tr><tr><td class="api-list">createConstraints</td><td class="api-list">boolean</td><td class="api-list">Constraints are created by default. Specify false to create no constraints. This is an optional argument whose default value is True.</td></tr></table><h3 class="api-member">trim Method</h3><p class="api">Trim a curve by specifying a point that determines the segment of the curve to trim away</p><pre class="api-code">"sketchCurve_var" is a variable referencing a
+SketchCurve
+object.
+#include &lt;Fusion/Sketch/SketchCurve.h&gt;
+// Uses no optional arguments.
+returnValue = sketchCurve_var-&gt;
+trim
+(segmentPoint);
+// Uses optional arguments.
+returnValue = sketchCurve_var-&gt;
+trim
+(segmentPoint, createConstraints);</pre><p class="api">Return Value: ObjectCollection - When trimming the start or end side of a line, unclosed circular or elliptical arc, the original entity is modified and returned When trimming the middle of a line, unclosed circular or elliptical arc the original entity is deleted and two new entities are returned When trimming the start or end of any type of closed curve, the original is deleted and a new curve is returned Any trimming of a spline (open or closed) deletes the original and new spline/s are returned Trimming a curve having no intersections deletes the original and returns an empty collection</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">segmentPoint</td><td class="api-list">Point3D</td><td class="api-list">A point (transient Point3D) on or closest to the segment of the curve to remove. (start, end or middle) The segment of the curve closest to the segmentPoint gets removed</td></tr><tr><td class="api-list">createConstraints</td><td class="api-list">boolean</td><td class="api-list">Constraints are created by default. Specify false to not create constraints. This is an optional argument whose default value is True.</td></tr></table></body>
+</html>

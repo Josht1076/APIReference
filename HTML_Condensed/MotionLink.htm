@@ -1,0 +1,308 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/MotionLink.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="22/09/2025" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="MotionLink" name="contextid"/>
+<meta content="MotionLink Object" name="description"/>
+<meta content="GUID-33E960B0-7158-4A1D-8F74-6AFD987C9339" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>MotionLink Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">MotionLink Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Components/MotionLink.h&gt;<h2 class="api">
+          Description
+        </h2>A MotionLink in a design.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_createForAssemblyContext.htm">createForAssemblyContext</a></td>
+<td class="api-list">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes this MotionLink.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_setMotionData.htm">setMotionData</a></td>
+<td class="api-list">Method that sets the motion data.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_assemblyContext.htm">assemblyContext</a></td>
+<td class="api-list">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_attributes.htm">attributes</a></td>
+<td class="api-list">Returns the collection of attributes associated with this MotionLink.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_entityToken.htm">entityToken</a></td>
+<td class="api-list">Returns a token for the MotionLink object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same MotionLink.<br><br/> When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_errorOrWarningMessage.htm">errorOrWarningMessage</a></td>
+<td class="api-list">Returns the error or warning message in the case where the healthState property returns either WarningFeatureHealthState or ErrorFeatureHealthState. Otherwise this property returns an empty string.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_healthState.htm">healthState</a></td>
+<td class="api-list">Returns the current health state of the MotionLink.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_isReversed.htm">isReversed</a></td>
+<td class="api-list">Gets and sets whether the motion is reversed or not.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_isSuppressed.htm">isSuppressed</a></td>
+<td class="api-list">Gets and sets if this MotionLink is suppressed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_jointOne.htm">jointOne</a></td>
+<td class="api-list">Gets the first joint for this MotionLink.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_jointTwo.htm">jointTwo</a></td>
+<td class="api-list">Gets the second joint for this MotionLink. This can return null if the linked motions are from the same joint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_motionOne.htm">motionOne</a></td>
+<td class="api-list">Gets the first motion type.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_motionTwo.htm">motionTwo</a></td>
+<td class="api-list">Gets the second motion type.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_name.htm">name</a></td>
+<td class="api-list">Gets and sets the name of the MotionLink.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_nativeObject.htm">nativeObject</a></td>
+<td class="api-list">The NativeObject is the object outside the context of an assembly and in the context of it's parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_parentComponent.htm">parentComponent</a></td>
+<td class="api-list">Returns the parent component that owns this MotionLink.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_timelineObject.htm">timelineObject</a></td>
+<td class="api-list">Returns the timeline object associated with this MotionLink.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_valueOne.htm">valueOne</a></td>
+<td class="api-list">Returns the ModelParameter for the first motion link value.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLink_valueTwo.htm">valueTwo</a></td>
+<td class="api-list">Returns the ModelParameter for the second motion link value.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="AsBuiltJoint_motionLinks.htm">AsBuiltJoint.motionLinks</a>, <a href="Joint_motionLinks.htm">Joint.motionLinks</a>, <a href="MotionLink_createForAssemblyContext.htm">MotionLink.createForAssemblyContext</a>, <a href="MotionLink_nativeObject.htm">MotionLink.nativeObject</a>, <a href="MotionLinks_add.htm">MotionLinks.add</a>, <a href="MotionLinks_item.htm">MotionLinks.item</a>, <a href="MotionLinks_itemByName.htm">MotionLinks.itemByName</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version November 2025<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(MotionLink%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">assemblyContext Property</h3><p class="api">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = motionLink_var-&gt;
+assemblyContext
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">attributes Property</h3><p class="api">Returns the collection of attributes associated with this MotionLink.</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+Ptr&lt;Attributes&gt; propertyValue = motionLink_var-&gt;
+attributes
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+returnValue = adsk::fusion::MotionLink::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">createForAssemblyContext Method</h3><p class="api">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</p><pre class="api-code">"motionLink_var" is a variable referencing a
+MotionLink
+object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+returnValue = motionLink_var-&gt;
+createForAssemblyContext
+(occurrence);</pre><p class="api">Return Value: MotionLink - Returns the proxy object or null if this isn't the NativeObject.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">occurrence</td><td class="api-list">Occurrence</td><td class="api-list">The occurrence that defines the context to create the proxy in.</td></tr></table><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes this MotionLink.</p><pre class="api-code">"motionLink_var" is a variable referencing a
+MotionLink
+object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+returnValue = motionLink_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true if the delete is successful.</p><h3 class="api-member">entityToken Property</h3><p class="api">Returns a token for the MotionLink object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same MotionLink. When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+string propertyValue = motionLink_var-&gt;
+entityToken
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">errorOrWarningMessage Property</h3><p class="api">Returns the error or warning message in the case where the healthState property returns either WarningFeatureHealthState or ErrorFeatureHealthState. Otherwise this property returns an empty string.</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+string propertyValue = motionLink_var-&gt;
+errorOrWarningMessage
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">healthState Property</h3><p class="api">Returns the current health state of the MotionLink.</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+FeatureHealthStates propertyValue = motionLink_var-&gt;
+healthState
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">isReversed Property</h3><p class="api">Gets and sets whether the motion is reversed or not.</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+boolean propertyValue = motionLink_var-&gt;
+isReversed
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = motionLink_var-&gt;
+isReversed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isSuppressed Property</h3><p class="api">Gets and sets if this MotionLink is suppressed.</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+boolean propertyValue = motionLink_var-&gt;
+isSuppressed
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = motionLink_var-&gt;
+isSuppressed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+boolean propertyValue = motionLink_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">jointOne Property</h3><p class="api">Gets the first joint for this MotionLink.</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = motionLink_var-&gt;
+jointOne
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">jointTwo Property</h3><p class="api">Gets the second joint for this MotionLink. This can return null if the linked motions are from the same joint.</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = motionLink_var-&gt;
+jointTwo
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">motionOne Property</h3><p class="api">Gets the first motion type.</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+JointMotionTypes propertyValue = motionLink_var-&gt;
+motionOne
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">motionTwo Property</h3><p class="api">Gets the second motion type.</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+JointMotionTypes propertyValue = motionLink_var-&gt;
+motionTwo
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">name Property</h3><p class="api">Gets and sets the name of the MotionLink.</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+string propertyValue = motionLink_var-&gt;
+name
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = motionLink_var-&gt;
+name
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">nativeObject Property</h3><p class="api">The NativeObject is the object outside the context of an assembly and in the context of it's parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+Ptr&lt;MotionLink&gt; propertyValue = motionLink_var-&gt;
+nativeObject
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+string propertyValue = motionLink_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentComponent Property</h3><p class="api">Returns the parent component that owns this MotionLink.</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+Ptr&lt;Component&gt; propertyValue = motionLink_var-&gt;
+parentComponent
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">setMotionData Method</h3><p class="api">Method that sets the motion data.</p><pre class="api-code">"motionLink_var" is a variable referencing a
+MotionLink
+object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Uses no optional arguments.
+returnValue = motionLink_var-&gt;
+setMotionData
+(motionOne, valueOne, motionTwo, valueTwo);
+// Uses optional arguments.
+returnValue = motionLink_var-&gt;
+setMotionData
+(motionOne, valueOne, motionTwo, valueTwo, isReversed);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">motionOne</td><td class="api-list">JointMotionTypes</td><td class="api-list">Specifies the first motion to link.</td></tr><tr><td class="api-list">valueOne</td><td class="api-list">ValueInput</td><td class="api-list">Specifies the first motion link value. If the ValueInput uses a real then it is interpreted as centimeters for length and radians for angle. If it is a string then the units can be defined as part of the string (i.e. "2 in" or "60 deg") or if no units are specified it is interpreted using the current default units for length or angle.</td></tr><tr><td class="api-list">motionTwo</td><td class="api-list">JointMotionTypes</td><td class="api-list">Specifies the second motion to link.</td></tr><tr><td class="api-list">valueTwo</td><td class="api-list">ValueInput</td><td class="api-list">Specifies the second motion link value. If the ValueInput uses a real then it is interpreted as centimeters for length and radians for angle. If it is a string then the units can be defined as part of the string (i.e. "2 in" or "60 deg") or if no units are specified it is interpreted using the current default units for length or angle.</td></tr><tr><td class="api-list">isReversed</td><td class="api-list">boolean</td><td class="api-list">Optional argument that specifies whether to reverse the direction of the motion. This is an optional argument whose default value is False.</td></tr></table><h3 class="api-member">timelineObject Property</h3><p class="api">Returns the timeline object associated with this MotionLink.</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+Ptr&lt;TimelineObject&gt; propertyValue = motionLink_var-&gt;
+timelineObject
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">valueOne Property</h3><p class="api">Returns the ModelParameter for the first motion link value.</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+Ptr&lt;ModelParameter&gt; propertyValue = motionLink_var-&gt;
+valueOne
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">valueTwo Property</h3><p class="api">Returns the ModelParameter for the second motion link value.</p><pre class="api-code">"motionLink_var" is a variable referencing a MotionLink object.
+#include &lt;Fusion/Components/MotionLink.h&gt;
+// Get the value of the property.
+Ptr&lt;ModelParameter&gt; propertyValue = motionLink_var-&gt;
+valueTwo
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

@@ -1,0 +1,252 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/SketchLines.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="SketchLines" name="contextid"/>
+<meta content="SketchLines Object" name="description"/>
+<meta content="GUID-283db855-7ca1-4b44-9c59-588a5ff85ee4" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>SketchLines Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">SketchLines Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Sketch/SketchLines.h&gt;<h2 class="api">
+          Description
+        </h2>The collection of lines in a sketch. This provides access to the existing lines and supports the methods to create new lines.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_addAngleChamfer.htm">addAngleChamfer</a></td>
+<td class="api-list">Creates a chamfer between two sketch lines. In the case where the two input lines cross each other creating an "X" shape, this results in four quadrants where the chamfer can be placed. The point arguments are used to define which of the four quadrants the chamfer should be created in. The two points define which side of the two lines should be kept and the other end will be trimmed by the chamfer. The easiest way to use this is to use the end points of the lines on the side you want to keep. In the case where the lines don't intersect or connect at the end points, there is only one valid quadrant for the chamfer so the points are ignored.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_addByTwoPoints.htm">addByTwoPoints</a></td>
+<td class="api-list">Creates a sketch line between the two input points. The input points can be either existing SketchPoints or Point3D objects. If a SketchPoint is used the new line will be based on that sketch point and update if the sketch point is modified.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_addCenterPointRectangle.htm">addCenterPointRectangle</a></td>
+<td class="api-list">Creates four sketch lines representing a rectangle where the first point represents the center of the rectangle. The second point is the corner of the rectangle and can be either an existing SketchPoint or Point3D object. The four sketch lines are returned.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_addDistanceChamfer.htm">addDistanceChamfer</a></td>
+<td class="api-list">Creates a chamfer between two sketch lines. In the case where the two input lines cross each other creating an "X" shape, this results in four quadrants where the chamfer can be placed. The point arguments are used to define which of the four quadrants the chamfer should be created in. The two points define which side of the two lines should be kept and the other end will be trimmed by the chamfer. The easiest way to use this is to use the end points of the lines on the side you want to keep. In the case where the lines don't intersect or connect at the end points, there is only one valid quadrant for the chamfer so the points are ignored.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_addEdgePolygon.htm">addEdgePolygon</a></td>
+<td class="api-list">Creates a polygon where two points specify an edge of the polygon. By specifying an edge, the size and position of the polygon is also defined.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_addScribedPolygon.htm">addScribedPolygon</a></td>
+<td class="api-list">Creates either an inscribed or circumscribed n-sided polygon.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_addThreePointRectangle.htm">addThreePointRectangle</a></td>
+<td class="api-list">Creates four sketch lines representing a rectangle where the first two points are the base corners of the rectangle and the third point defines the height.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_addTwoPointRectangle.htm">addTwoPointRectangle</a></td>
+<td class="api-list">Creates four sketch lines representing a rectangle where the two points are the opposing corners of the rectangle. The input points can be either existing SketchPoints or Point3D objects. If a SketchPoint is used the new lines will be based on that sketch point and update if the sketch point is modified.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_item.htm">item</a></td>
+<td class="api-list">Function that returns the specified sketch line using an index into the collection.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_count.htm">count</a></td>
+<td class="api-list">Returns the number of lines in the sketch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="SketchCurves_sketchLines.htm">SketchCurves.sketchLines</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CreateSketchLines_Sample.htm">API Sample that demonstrates creating sketch lines in various ways.</a></td>
+<td class="api-list">Demonstrates several ways to create sketch lines, including as the result of creating a rectangle.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SimpleRevolveFeatureSample_Sample.htm">Simple Revolve Feature Sample</a></td>
+<td class="api-list">Creates a new revolve feature, resulting in a new component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_addAngleChamfer_Sample.htm">SketchLines.addAngleChamfer</a></td>
+<td class="api-list">Demonstrates the SketchLines.addAngleChamfer method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_addByTwoPoints_Sample.htm">SketchLines.addByTwoPoints</a></td>
+<td class="api-list">Demonstrates the SketchLines.addByTwoPoints method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_addCenterPointRectangle_Sample.htm">SketchLines.addCenterPointRectangle</a></td>
+<td class="api-list">Demonstrates the SketchLines.addCenterPointRectangle method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_addDistanceChamfer_Sample.htm">SketchLines.addDistanceChamfer</a></td>
+<td class="api-list">Demonstrates the SketchLines.addDistanceChamfer method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_addThreePointRectangle_Sample.htm">SketchLines.addThreePointRectangle</a></td>
+<td class="api-list">Demonstrates the SketchLines.addThreePointRectangle method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchLines_addTwoPointRectangle_Sample.htm">SketchLines.addTwoPointRectangle</a></td>
+<td class="api-list">Demonstrates the SketchLines.addTwoPointRectangle method.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(SketchLines%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">addAngleChamfer Method</h3><p class="api">Creates a chamfer between two sketch lines. In the case where the two input lines cross each other creating an "X" shape, this results in four quadrants where the chamfer can be placed. The point arguments are used to define which of the four quadrants the chamfer should be created in. The two points define which side of the two lines should be kept and the other end will be trimmed by the chamfer. The easiest way to use this is to use the end points of the lines on the side you want to keep. In the case where the lines don't intersect or connect at the end points, there is only one valid quadrant for the chamfer so the points are ignored.</p><pre class="api-code">"sketchLines_var" is a variable referencing a
+SketchLines
+object.
+#include &lt;Fusion/Sketch/SketchLines.h&gt;
+returnValue = sketchLines_var-&gt;
+addAngleChamfer
+(firstLine, firstLinePoint, secondLine, secondLinePoint, distance, angle);</pre><p class="api">Return Value: SketchLine - Returns the newly created SketchLine object that represents the chamfer or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">firstLine</td><td class="api-list">SketchLine</td><td class="api-list">The first line you want to chamfer.</td></tr><tr><td class="api-list">firstLinePoint</td><td class="api-list">Point3D</td><td class="api-list">A point on the first line that is on the side of the intersection with the second line that you want to keep.</td></tr><tr><td class="api-list">secondLine</td><td class="api-list">SketchLine</td><td class="api-list">The second line you want to chamfer.</td></tr><tr><td class="api-list">secondLinePoint</td><td class="api-list">Point3D</td><td class="api-list">A point on the second line that is on the side of the intersection with the first line that you want to keep.</td></tr><tr><td class="api-list">distance</td><td class="api-list">double</td><td class="api-list">Defines the distance of the start point of the chamfer from the intersection point of the two lines along the first line. The distance is defined in centimeters.</td></tr><tr><td class="api-list">angle</td><td class="api-list">double</td><td class="api-list">Defines the angle of the chamfer as measured from the first line. The angle is defined in radians.</td></tr></table><h3 class="api-member">addAngleChamfer Member</h3><h3 class="api-member">addByTwoPoints Method</h3><p class="api">Creates a sketch line between the two input points. The input points can be either existing SketchPoints or Point3D objects. If a SketchPoint is used the new line will be based on that sketch point and update if the sketch point is modified.</p><pre class="api-code">"sketchLines_var" is a variable referencing a
+SketchLines
+object.
+#include &lt;Fusion/Sketch/SketchLines.h&gt;
+returnValue = sketchLines_var-&gt;
+addByTwoPoints
+(startPoint, endPoint);</pre><p class="api">Return Value: SketchLine - Returns the newly created SketchLine object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">startPoint</td><td class="api-list">Base</td><td class="api-list">The start point of the line. It can be a SketchPoint or Point3D object.</td></tr><tr><td class="api-list">endPoint</td><td class="api-list">Base</td><td class="api-list">The end point of the line. It can be a SketchPoint or Point3D object.</td></tr></table><h3 class="api-member">addByTwoPoints Member</h3><h3 class="api-member">addCenterPointRectangle Method</h3><p class="api">Creates four sketch lines representing a rectangle where the first point represents the center of the rectangle. The second point is the corner of the rectangle and can be either an existing SketchPoint or Point3D object. The four sketch lines are returned.</p><pre class="api-code">"sketchLines_var" is a variable referencing a
+SketchLines
+object.
+#include &lt;Fusion/Sketch/SketchLines.h&gt;
+returnValue = sketchLines_var-&gt;
+addCenterPointRectangle
+(centerPoint, cornerPoint);</pre><p class="api">Return Value: SketchLineList - Returns the four new sketch lines or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">centerPoint</td><td class="api-list">Point3D</td><td class="api-list">The center point of the rectangle</td></tr><tr><td class="api-list">cornerPoint</td><td class="api-list">Base</td><td class="api-list">The corner of the rectangle. It can be a SketchPoint or Point3D object.</td></tr></table><h3 class="api-member">addCenterPointRectangle Member</h3><h3 class="api-member">addDistanceChamfer Method</h3><p class="api">Creates a chamfer between two sketch lines. In the case where the two input lines cross each other creating an "X" shape, this results in four quadrants where the chamfer can be placed. The point arguments are used to define which of the four quadrants the chamfer should be created in. The two points define which side of the two lines should be kept and the other end will be trimmed by the chamfer. The easiest way to use this is to use the end points of the lines on the side you want to keep. In the case where the lines don't intersect or connect at the end points, there is only one valid quadrant for the chamfer so the points are ignored.</p><pre class="api-code">"sketchLines_var" is a variable referencing a
+SketchLines
+object.
+#include &lt;Fusion/Sketch/SketchLines.h&gt;
+returnValue = sketchLines_var-&gt;
+addDistanceChamfer
+(firstLine, firstLinePoint, secondLine, secondLinePoint, distanceOne, distanceTwo);</pre><p class="api">Return Value: SketchLine - Returns the newly created SketchLine object that represents the chamfer or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">firstLine</td><td class="api-list">SketchLine</td><td class="api-list">The first line you want to chamfer.</td></tr><tr><td class="api-list">firstLinePoint</td><td class="api-list">Point3D</td><td class="api-list">A point on the first line that is on the side of the intersection with the second line that you want to keep.</td></tr><tr><td class="api-list">secondLine</td><td class="api-list">SketchLine</td><td class="api-list">The second line you want to chamfer.</td></tr><tr><td class="api-list">secondLinePoint</td><td class="api-list">Point3D</td><td class="api-list">A point on the second line that is on the side of the intersection with the first line that you want to keep.</td></tr><tr><td class="api-list">distanceOne</td><td class="api-list">double</td><td class="api-list">Defines the distance of the start point of the chamfer line from the intersection point of the two lines along the first line. The distance is defined in centimeters.</td></tr><tr><td class="api-list">distanceTwo</td><td class="api-list">double</td><td class="api-list">Defines the distance of the start point of the chamfer line from the intersection point of the two lines along the second line. The distance is defined in centimeters.</td></tr></table><h3 class="api-member">addDistanceChamfer Member</h3><h3 class="api-member">addEdgePolygon Method</h3><p class="api">Creates a polygon where two points specify an edge of the polygon. By specifying an edge, the size and position of the polygon is also defined.</p><pre class="api-code">"sketchLines_var" is a variable referencing a
+SketchLines
+object.
+#include &lt;Fusion/Sketch/SketchLines.h&gt;
+returnValue = sketchLines_var-&gt;
+addEdgePolygon
+(pointOne, pointTwo, isRight, edgeCount);</pre><p class="api">Return Value: SketchLineList - Returns a list of the sketch lines that were created to represent the polygon or null in the case of bad input.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pointOne</td><td class="api-list">Base</td><td class="api-list">The first point of the edge.</td></tr><tr><td class="api-list">pointTwo</td><td class="api-list">Base</td><td class="api-list">The second point of the edge.</td></tr><tr><td class="api-list">isRight</td><td class="api-list">boolean</td><td class="api-list">After defining points one and two, a polygon can be created on either side of the line defined by the two points. This argument specifies which side of the line the polygon will be created on. If this is true, the polygon will be created to the right of the line from the perspective of looking from point one to point two. If false, it will be to the left of the line.</td></tr><tr><td class="api-list">edgeCount</td><td class="api-list">integer</td><td class="api-list">The number of edges in the resulting polygon.</td></tr></table><h3 class="api-member">addScribedPolygon Method</h3><p class="api">Creates either an inscribed or circumscribed n-sided polygon.</p><pre class="api-code">"sketchLines_var" is a variable referencing a
+SketchLines
+object.
+#include &lt;Fusion/Sketch/SketchLines.h&gt;
+returnValue = sketchLines_var-&gt;
+addScribedPolygon
+(centerPoint, edgeCount, angle, radius, isInscribed);</pre><p class="api">Return Value: SketchLineList - Returns a list of the sketch lines that were created to represent the polygon or null in the case of bad input.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">centerPoint</td><td class="api-list">Base</td><td class="api-list">Either an existing SketchPoint or a Point3D object that defines the center point of the polygon. If a SketchPoint object is provided the point will continue to control the center of the polygon.</td></tr><tr><td class="api-list">edgeCount</td><td class="api-list">integer</td><td class="api-list">The number of edges in the resulting polygon.</td></tr><tr><td class="api-list">angle</td><td class="api-list">double</td><td class="api-list">Controls the rotation of the polygon around the center point. For a circumscribed polygon, this defines where the center of one of the edges will be positioned. For an inscribed polygon, this defines where one of the corners of the polygon will be positioned.</td></tr><tr><td class="api-list">radius</td><td class="api-list">double</td><td class="api-list">The radius of the circle in centimeters that the polygon goes to, either outside (circumscribed) or inside (inscribed) the circle.</td></tr><tr><td class="api-list">isInscribed</td><td class="api-list">boolean</td><td class="api-list">Specifies if a circumscribed or inscribed polygon should be created.</td></tr></table><h3 class="api-member">addThreePointRectangle Method</h3><p class="api">Creates four sketch lines representing a rectangle where the first two points are the base corners of the rectangle and the third point defines the height.</p><pre class="api-code">"sketchLines_var" is a variable referencing a
+SketchLines
+object.
+#include &lt;Fusion/Sketch/SketchLines.h&gt;
+returnValue = sketchLines_var-&gt;
+addThreePointRectangle
+(pointOne, pointTwo, pointThree);</pre><p class="api">Return Value: SketchLineList - Returns the four new sketch lines or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pointOne</td><td class="api-list">Base</td><td class="api-list">The first corner of the rectangle. It can be a SketchPoint or Point3D object.</td></tr><tr><td class="api-list">pointTwo</td><td class="api-list">Base</td><td class="api-list">The first corner of the rectangle. It can be a SketchPoint or Point3D object.</td></tr><tr><td class="api-list">pointThree</td><td class="api-list">Point3D</td><td class="api-list">The first corner of the rectangle. a Point3D object defining the height of the rectangle.</td></tr></table><h3 class="api-member">addThreePointRectangle Member</h3><h3 class="api-member">addTwoPointRectangle Method</h3><p class="api">Creates four sketch lines representing a rectangle where the two points are the opposing corners of the rectangle. The input points can be either existing SketchPoints or Point3D objects. If a SketchPoint is used the new lines will be based on that sketch point and update if the sketch point is modified.</p><pre class="api-code">"sketchLines_var" is a variable referencing a
+SketchLines
+object.
+#include &lt;Fusion/Sketch/SketchLines.h&gt;
+returnValue = sketchLines_var-&gt;
+addTwoPointRectangle
+(pointOne, pointTwo);</pre><p class="api">Return Value: SketchLineList - Returns the four new sketch lines or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pointOne</td><td class="api-list">Base</td><td class="api-list">The first corner of the rectangle. It can be a SketchPoint or Point3D object.</td></tr><tr><td class="api-list">pointTwo</td><td class="api-list">Base</td><td class="api-list">The second corner of the rectangle. It can be a SketchPoint or Point3D object.</td></tr></table><h3 class="api-member">addTwoPointRectangle Member</h3><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Sketch/SketchLines.h&gt;
+returnValue = adsk::fusion::SketchLines::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">Returns the number of lines in the sketch.</p><pre class="api-code">"sketchLines_var" is a variable referencing a SketchLines object.
+#include &lt;Fusion/Sketch/SketchLines.h&gt;
+// Get the value of the property.
+uinteger propertyValue = sketchLines_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"sketchLines_var" is a variable referencing a SketchLines object.
+#include &lt;Fusion/Sketch/SketchLines.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchLines_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Function that returns the specified sketch line using an index into the collection.</p><pre class="api-code">"sketchLines_var" is a variable referencing a
+SketchLines
+object.
+#include &lt;Fusion/Sketch/SketchLines.h&gt;
+returnValue = sketchLines_var-&gt;
+item
+(index);</pre><p class="api">Return Value: SketchLine - Returns the specified item or null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the item within the collection to return. The first item in the collection has an index of 0.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"sketchLines_var" is a variable referencing a SketchLines object.
+#include &lt;Fusion/Sketch/SketchLines.h&gt;
+// Get the value of the property.
+string propertyValue = sketchLines_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

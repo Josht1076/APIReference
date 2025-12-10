@@ -1,0 +1,173 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/OptimizedOrientationResults.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="26/06/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="OptimizedOrientationResults" name="contextid"/>
+<meta content="OptimizedOrientationResults Object" name="description"/>
+<meta content="GUID-40584AF0-3AFD-4185-A324-A6DD620FF4DB" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>OptimizedOrientationResults Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">OptimizedOrientationResults Object
+			</h1>
+              Derived from: <a href="GeneratedData.htm">GeneratedData</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/GeneratedData/OptimizedOrientationResults.h&gt;<h2 class="api">
+          Description
+        </h2>Collection of OptimizedOrientationResult instances associated with a given optimized orientation object inside an additive setup. The number of instances is the number of results given and the initial orientation result. The initial orientation will contain the orientation matrix, but not the other values calculated by the orientation operation. Setting an OptimizedOrientationResult as the currentOrientationResult will transform the Occurrence assigned to the orientation operation.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="OptimizedOrientationResults_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OptimizedOrientationResults_item.htm">item</a></td>
+<td class="api-list">Gets the desired orientation result at the given index. The list is ordered given the orientation parameters of the parent orientation operation.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="OptimizedOrientationResults_count.htm">count</a></td>
+<td class="api-list">The number of items in the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OptimizedOrientationResults_currentOrientationResult.htm">currentOrientationResult</a></td>
+<td class="api-list">Gets or sets the desired OrientationResult. When setting, the orientation matrix is applied to the component selected in the parent orientation operation, possibly invalidating other operations.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OptimizedOrientationResults_initialOrientationResult.htm">initialOrientationResult</a></td>
+<td class="api-list">Gets the initial orientation of the component before any result has been applied.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OptimizedOrientationResults_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OptimizedOrientationResults_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="AdditiveFFFManufacturingSample_Sample.htm">Additive Manufacturing FFF API Sample</a></td>
+<td class="api-list"><p>Demonstrates how to automate the creation of an additive FFF manufacturing setup and generate a toolpath.</p>
+<p>To run the sample script, have a design with one or more components open in Fusion’s DESIGN workspace. This script will switch the UI from the DESIGN workspace to the MANUFACTURE workspace, create a new Manufacturing Model, and create an Additive setup using that manufacturing model as an input.</p>
+<p>The setup will select an FFF 3D printer from Fusion’s machine library and a print setting from the print setting library. All components in the Manufacturing model will be automatically oriented and arranged within the build area of the selected FFF machine. This script will also create support structures, if required, based on the orientation of each component. Finally, the script generates the toolpath for the active setup and lets the user choose if they wish to post process the resulting toolpath or if they want to simulate it.</p></td>
+</tr>
+<tr>
+<td class="api-list"><a href="AdditiveSLAManufacturingSample_Sample.htm">Additive Manufacturing SLA API Sample</a></td>
+<td class="api-list"><p>Demonstrates how to automate the creation of an additive SLA manufacturing setup.</p>
+<p>To run the sample script, have a design with one or more components open in Fusion’s DESIGN workspace. This script will switch the UI from the DESIGN workspace to the MANUFACTURE workspace, create a new Manufacturing Model, and create an Additive setup using that manufacturing model as an input.</p>
+<p>The setup will select a SLA 3D printer from Fusion’s machine library and a print setting from the print setting library. All components in the Manufacturing model will be automatically oriented and arranged within the build area of the selected SLA machine. This script will also create support structures, based on the orientation of each component.</p>
+<p>The support and orientation operations are created from a template. The script further demonstrates how to wrap script code into a command such that only one undo entry is created for the entire script instead of one entry per internal action.</p></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version July 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(OptimizedOrientationResults%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/GeneratedData/OptimizedOrientationResults.h&gt;
+returnValue = adsk::cam::OptimizedOrientationResults::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">The number of items in the collection.</p><pre class="api-code">"optimizedOrientationResults_var" is a variable referencing an OptimizedOrientationResults object.
+#include &lt;Cam/GeneratedData/OptimizedOrientationResults.h&gt;
+// Get the value of the property.
+uinteger propertyValue = optimizedOrientationResults_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">currentOrientationResult Property</h3><p class="api">Gets or sets the desired OrientationResult. When setting, the orientation matrix is applied to the component selected in the parent orientation operation, possibly invalidating other operations.</p><pre class="api-code">"optimizedOrientationResults_var" is a variable referencing an OptimizedOrientationResults object.
+#include &lt;Cam/GeneratedData/OptimizedOrientationResults.h&gt;
+// Get the value of the property.
+Ptr&lt;OptimizedOrientationResult&gt; propertyValue = optimizedOrientationResults_var-&gt;
+currentOrientationResult
+();
+// Set the value of the property, where value_var is an OptimizedOrientationResult.
+bool returnValue = optimizedOrientationResults_var-&gt;
+currentOrientationResult
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">initialOrientationResult Property</h3><p class="api">Gets the initial orientation of the component before any result has been applied.</p><pre class="api-code">"optimizedOrientationResults_var" is a variable referencing an OptimizedOrientationResults object.
+#include &lt;Cam/GeneratedData/OptimizedOrientationResults.h&gt;
+// Get the value of the property.
+Ptr&lt;OptimizedOrientationResult&gt; propertyValue = optimizedOrientationResults_var-&gt;
+initialOrientationResult
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"optimizedOrientationResults_var" is a variable referencing an OptimizedOrientationResults object.
+#include &lt;Cam/GeneratedData/OptimizedOrientationResults.h&gt;
+// Get the value of the property.
+boolean propertyValue = optimizedOrientationResults_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Gets the desired orientation result at the given index. The list is ordered given the orientation parameters of the parent orientation operation.</p><pre class="api-code">"optimizedOrientationResults_var" is a variable referencing an
+OptimizedOrientationResults
+object.
+#include &lt;Cam/GeneratedData/OptimizedOrientationResults.h&gt;
+returnValue = optimizedOrientationResults_var-&gt;
+item
+(index);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">integer</td><td class="api-list"></td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"optimizedOrientationResults_var" is a variable referencing an OptimizedOrientationResults object.
+#include &lt;Cam/GeneratedData/OptimizedOrientationResults.h&gt;
+// Get the value of the property.
+string propertyValue = optimizedOrientationResults_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

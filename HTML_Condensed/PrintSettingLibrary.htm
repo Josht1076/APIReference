@@ -1,0 +1,279 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/PrintSettingLibrary.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="21/02/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="PrintSettingLibrary" name="contextid"/>
+<meta content="PrintSettingLibrary Object" name="description"/>
+<meta content="GUID-F1725C92-5B56-4494-B0AE-FA0F5D9ED2F6" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>PrintSettingLibrary Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">PrintSettingLibrary Object
+			</h1>
+              Derived from: <a href="CAMLibrary.htm">CAMLibrary</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/PrintSetting/PrintSettingLibrary.h&gt;<h2 class="api">
+          Description
+        </h2>The PrintSettingLibrary provides access to PrintSettings. Using this object you can import PrintSettings and get existing PrintSettings using either URL or query to find specific PrintSetting.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PrintSettingLibrary_childAssetURLs.htm">childAssetURLs</a></td>
+<td class="api-list">Get all assets under given URL.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PrintSettingLibrary_childFolderURLs.htm">childFolderURLs</a></td>
+<td class="api-list">Get all library folders under given URL.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PrintSettingLibrary_childPrintSettings.htm">childPrintSettings</a></td>
+<td class="api-list">Get all PrintSettings by the given parent folder URL. Returns null, if the URL does not exist.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PrintSettingLibrary_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PrintSettingLibrary_createFolder.htm">createFolder</a></td>
+<td class="api-list">Create a new folder in the library. Create the folder under given parent URL with given folder name. Add counting suffix, in case a folder with given name already exists. Throw an error if given URL does not point to a valid folder or the URL is read-only. Also throws an error if given folder name is empty.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PrintSettingLibrary_createQuery.htm">createQuery</a></td>
+<td class="api-list">Creates a new PrintSettingQuery that is used to query the library for PrintSettings matching the query.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PrintSettingLibrary_deleteAsset.htm">deleteAsset</a></td>
+<td class="api-list">Delete asset by URL from the library. Throw an error if given URL does not point to a valid asset or the URL is read-only.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PrintSettingLibrary_deleteFolder.htm">deleteFolder</a></td>
+<td class="api-list">Delete folder by URL from the library. Any content of the folder will also be deleted. Throw an error if given URL does not point to a valid folder or the URL is read-only.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PrintSettingLibrary_displayName.htm">displayName</a></td>
+<td class="api-list">Get the localized display name for a given URL. The URL must point to a folder.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PrintSettingLibrary_doesPathExist.htm">doesPathExist</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Checks if the given URL points to an existing folder or asset in the library.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PrintSettingLibrary_importPrintSetting.htm">importPrintSetting</a></td>
+<td class="api-list">Import a given PrintSetting at a specific location. The PrintSetting will be stored in the library. Throws an error if the given URL is read-only.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PrintSettingLibrary_printSettingAtURL.htm">printSettingAtURL</a></td>
+<td class="api-list">Get a specific PrintSetting by the given URL. Returns null if the URL does not exist.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PrintSettingLibrary_updatePrintSetting.htm">updatePrintSetting</a></td>
+<td class="api-list">Update a PrintSetting in the library. The library overrides the URL by given PrintSetting. Throws an error if the URL does not already point to an existing printSetting.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PrintSettingLibrary_urlByLocation.htm">urlByLocation</a></td>
+<td class="api-list">Get the URL for a given LibraryLocations.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PrintSettingLibrary_assetTypeName.htm">assetTypeName</a></td>
+<td class="api-list">Get the name of the asset type which can be accessed by the library.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PrintSettingLibrary_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PrintSettingLibrary_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CAMLibraryManager_printSettingLibrary.htm">CAMLibraryManager.printSettingLibrary</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="AdditiveFFFManufacturingSample_Sample.htm">Additive Manufacturing FFF API Sample</a></td>
+<td class="api-list"><p>Demonstrates how to automate the creation of an additive FFF manufacturing setup and generate a toolpath.</p>
+<p>To run the sample script, have a design with one or more components open in Fusion’s DESIGN workspace. This script will switch the UI from the DESIGN workspace to the MANUFACTURE workspace, create a new Manufacturing Model, and create an Additive setup using that manufacturing model as an input.</p>
+<p>The setup will select an FFF 3D printer from Fusion’s machine library and a print setting from the print setting library. All components in the Manufacturing model will be automatically oriented and arranged within the build area of the selected FFF machine. This script will also create support structures, if required, based on the orientation of each component. Finally, the script generates the toolpath for the active setup and lets the user choose if they wish to post process the resulting toolpath or if they want to simulate it.</p></td>
+</tr>
+<tr>
+<td class="api-list"><a href="AdditiveMJFManufacturingSample_Sample.htm">Additive Manufacturing MJF API Sample</a></td>
+<td class="api-list"><p>Demonstrates how to automate the creation of an additive MJF manufacturing setup and arrange components within the build volume of a 3D printer.</p>
+<p>To run the sample script, have a design with one or more components open in Fusion’s DESIGN workspace. This script will switch the UI from the DESIGN workspace to the MANUFACTURE workspace, create a new Manufacturing Model, and create an Additive Arrange using that manufacturing model as an input.</p>
+<p>The setup will select an MJF 3D printer from Fusion’s machine library and a print setting from the print setting library. All components in the Manufacturing model will be automatically arranged within the build volume of the selected MJF machine.</p></td>
+</tr>
+<tr>
+<td class="api-list"><a href="AdditiveSLAManufacturingSample_Sample.htm">Additive Manufacturing SLA API Sample</a></td>
+<td class="api-list"><p>Demonstrates how to automate the creation of an additive SLA manufacturing setup.</p>
+<p>To run the sample script, have a design with one or more components open in Fusion’s DESIGN workspace. This script will switch the UI from the DESIGN workspace to the MANUFACTURE workspace, create a new Manufacturing Model, and create an Additive setup using that manufacturing model as an input.</p>
+<p>The setup will select a SLA 3D printer from Fusion’s machine library and a print setting from the print setting library. All components in the Manufacturing model will be automatically oriented and arranged within the build area of the selected SLA machine. This script will also create support structures, based on the orientation of each component.</p>
+<p>The support and orientation operations are created from a template. The script further demonstrates how to wrap script code into a command such that only one undo entry is created for the entire script instead of one entry per internal action.</p></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version April 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(PrintSettingLibrary%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">assetTypeName Property</h3><p class="api">Get the name of the asset type which can be accessed by the library.</p><pre class="api-code">"printSettingLibrary_var" is a variable referencing a PrintSettingLibrary object.
+#include &lt;Cam/PrintSetting/PrintSettingLibrary.h&gt;
+// Get the value of the property.
+string propertyValue = printSettingLibrary_var-&gt;
+assetTypeName
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">childAssetURLs Method</h3><p class="api">Get all assets under given URL.</p><pre class="api-code">"printSettingLibrary_var" is a variable referencing a
+PrintSettingLibrary
+object.
+#include &lt;Cam/PrintSetting/PrintSettingLibrary.h&gt;
+returnValue = printSettingLibrary_var-&gt;
+childAssetURLs
+(url);</pre><p class="api">Return Value: URL [] - Returns list of asset URLs at given location.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to the parent folder.</td></tr></table><h3 class="api-member">childFolderURLs Method</h3><p class="api">Get all library folders under given URL.</p><pre class="api-code">"printSettingLibrary_var" is a variable referencing a
+PrintSettingLibrary
+object.
+#include &lt;Cam/PrintSetting/PrintSettingLibrary.h&gt;
+returnValue = printSettingLibrary_var-&gt;
+childFolderURLs
+(url);</pre><p class="api">Return Value: URL [] - Returns list of folder URLs at given location.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to the parent folder.</td></tr></table><h3 class="api-member">childPrintSettings Method</h3><p class="api">Get all PrintSettings by the given parent folder URL. Returns null, if the URL does not exist.</p><pre class="api-code">"printSettingLibrary_var" is a variable referencing a
+PrintSettingLibrary
+object.
+#include &lt;Cam/PrintSetting/PrintSettingLibrary.h&gt;
+returnValue = printSettingLibrary_var-&gt;
+childPrintSettings
+(url);</pre><p class="api">Return Value: PrintSetting [] - Returns the PrintSetting for a valid URL, returns null otherwise.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL of the folder to get PrintSettings from.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/PrintSetting/PrintSettingLibrary.h&gt;
+returnValue = adsk::cam::PrintSettingLibrary::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">createFolder Method</h3><p class="api">Create a new folder in the library. Create the folder under given parent URL with given folder name. Add counting suffix, in case a folder with given name already exists. Throw an error if given URL does not point to a valid folder or the URL is read-only. Also throws an error if given folder name is empty.</p><pre class="api-code">"printSettingLibrary_var" is a variable referencing a
+PrintSettingLibrary
+object.
+#include &lt;Cam/PrintSetting/PrintSettingLibrary.h&gt;
+returnValue = printSettingLibrary_var-&gt;
+createFolder
+(parentUrl, folderName);</pre><p class="api">Return Value: URL - Returns the URL to the newly created folder</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parentUrl</td><td class="api-list">URL</td><td class="api-list">The parent URL for the folder to be created.</td></tr><tr><td class="api-list">folderName</td><td class="api-list">string</td><td class="api-list">Name of the new folder to be created. Must not be empty.</td></tr></table><h3 class="api-member">createQuery Method</h3><p class="api">Creates a new PrintSettingQuery that is used to query the library for PrintSettings matching the query.</p><pre class="api-code">"printSettingLibrary_var" is a variable referencing a
+PrintSettingLibrary
+object.
+#include &lt;Cam/PrintSetting/PrintSettingLibrary.h&gt;
+returnValue = printSettingLibrary_var-&gt;
+createQuery
+(location);</pre><p class="api">Return Value: PrintSettingQuery - Returns a new PrintSettingQuery. The query is predefined by given parameter.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">location</td><td class="api-list">LibraryLocations</td><td class="api-list">The location specifies the LibraryLocations where to search for in the PrintSetting library.</td></tr></table><h3 class="api-member">deleteAsset Method</h3><p class="api">Delete asset by URL from the library. Throw an error if given URL does not point to a valid asset or the URL is read-only.</p><pre class="api-code">"printSettingLibrary_var" is a variable referencing a
+PrintSettingLibrary
+object.
+#include &lt;Cam/PrintSetting/PrintSettingLibrary.h&gt;
+returnValue = printSettingLibrary_var-&gt;
+deleteAsset
+(url);</pre><p class="api">Return Value: boolean - Returns true if asset was deleted successfully, false otherwise</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to the asset that should be removed.</td></tr></table><h3 class="api-member">deleteFolder Method</h3><p class="api">Delete folder by URL from the library. Any content of the folder will also be deleted. Throw an error if given URL does not point to a valid folder or the URL is read-only.</p><pre class="api-code">"printSettingLibrary_var" is a variable referencing a
+PrintSettingLibrary
+object.
+#include &lt;Cam/PrintSetting/PrintSettingLibrary.h&gt;
+returnValue = printSettingLibrary_var-&gt;
+deleteFolder
+(url);</pre><p class="api">Return Value: boolean - Returns true if folder was deleted successfully, false otherwise</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to the folder that should be removed.</td></tr></table><h3 class="api-member">displayName Method</h3><p class="api">Get the localized display name for a given URL. The URL must point to a folder.</p><pre class="api-code">"printSettingLibrary_var" is a variable referencing a
+PrintSettingLibrary
+object.
+#include &lt;Cam/PrintSetting/PrintSettingLibrary.h&gt;
+returnValue = printSettingLibrary_var-&gt;
+displayName
+(url);</pre><p class="api">Return Value: string - Returns localized display name for the folder. Returns empty string for invalid URL.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL that defines the path to a folder.</td></tr></table><h3 class="api-member">doesPathExist Method</h3><p class="api">Checks if the given URL points to an existing folder or asset in the library.</p><pre class="api-code">"printSettingLibrary_var" is a variable referencing a
+PrintSettingLibrary
+object.
+#include &lt;Cam/PrintSetting/PrintSettingLibrary.h&gt;
+returnValue = printSettingLibrary_var-&gt;
+doesPathExist
+(url);</pre><p class="api">Return Value: boolean - Returns true if the URL points to an existing folder or asset, false otherwise.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to be checked.</td></tr></table><h3 class="api-member">importPrintSetting Method</h3><p class="api">Import a given PrintSetting at a specific location. The PrintSetting will be stored in the library. Throws an error if the given URL is read-only.</p><pre class="api-code">"printSettingLibrary_var" is a variable referencing a
+PrintSettingLibrary
+object.
+#include &lt;Cam/PrintSetting/PrintSettingLibrary.h&gt;
+returnValue = printSettingLibrary_var-&gt;
+importPrintSetting
+(printSetting, destinationUrl, printSettingName);</pre><p class="api">Return Value: URL - Returns the URL of the newly imported PrintSetting, or null if the import failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">printSetting</td><td class="api-list">PrintSetting</td><td class="api-list">The PrintSetting that should be imported.</td></tr><tr><td class="api-list">destinationUrl</td><td class="api-list">URL</td><td class="api-list">The URL to the folder where to save the PrintSetting.</td></tr><tr><td class="api-list">printSettingName</td><td class="api-list">string</td><td class="api-list">The name that should be assigned to imported PrintSetting. The name can be extended if there already exists a PrintSetting at given location to ensure a unique name.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"printSettingLibrary_var" is a variable referencing a PrintSettingLibrary object.
+#include &lt;Cam/PrintSetting/PrintSettingLibrary.h&gt;
+// Get the value of the property.
+boolean propertyValue = printSettingLibrary_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"printSettingLibrary_var" is a variable referencing a PrintSettingLibrary object.
+#include &lt;Cam/PrintSetting/PrintSettingLibrary.h&gt;
+// Get the value of the property.
+string propertyValue = printSettingLibrary_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">printSettingAtURL Method</h3><p class="api">Get a specific PrintSetting by the given URL. Returns null if the URL does not exist.</p><pre class="api-code">"printSettingLibrary_var" is a variable referencing a
+PrintSettingLibrary
+object.
+#include &lt;Cam/PrintSetting/PrintSettingLibrary.h&gt;
+returnValue = printSettingLibrary_var-&gt;
+printSettingAtURL
+(url);</pre><p class="api">Return Value: PrintSetting - Returns the PrintSetting for a valid URL, returns null otherwise.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to the PrintSetting to be loaded.</td></tr></table><h3 class="api-member">updatePrintSetting Method</h3><p class="api">Update a PrintSetting in the library. The library overrides the URL by given PrintSetting. Throws an error if the URL does not already point to an existing printSetting.</p><pre class="api-code">"printSettingLibrary_var" is a variable referencing a
+PrintSettingLibrary
+object.
+#include &lt;Cam/PrintSetting/PrintSettingLibrary.h&gt;
+returnValue = printSettingLibrary_var-&gt;
+updatePrintSetting
+(url, printSetting);</pre><p class="api">Return Value: boolean - Returns true if asset was updated successfully, false otherwise.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to the existing asset in the library that should be updated.</td></tr><tr><td class="api-list">printSetting</td><td class="api-list">PrintSetting</td><td class="api-list">The PrintSetting that should be persisted.</td></tr></table><h3 class="api-member">urlByLocation Method</h3><p class="api">Get the URL for a given LibraryLocations.</p><pre class="api-code">"printSettingLibrary_var" is a variable referencing a
+PrintSettingLibrary
+object.
+#include &lt;Cam/PrintSetting/PrintSettingLibrary.h&gt;
+returnValue = printSettingLibrary_var-&gt;
+urlByLocation
+(location);</pre><p class="api">Return Value: URL - Returns the URL for given location.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">location</td><td class="api-list">LibraryLocations</td><td class="api-list">The LibraryLocations to be converted into an URL.</td></tr></table></body>
+</html>

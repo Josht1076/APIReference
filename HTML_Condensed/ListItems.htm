@@ -1,0 +1,180 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ListItems.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="22/12/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ListItems" name="contextid"/>
+<meta content="ListItems Object" name="description"/>
+<meta content="GUID-37442c94-cc15-4510-96ee-3638f29b401f" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ListItems Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ListItems Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/UserInterface/ListItems.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access to the list of items in a check box list. This object supports the ability to add items to the list and iterate through the existing items.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ListItems_add.htm">add</a></td>
+<td class="api-list">Adds a new item to the list.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ListItems_addSeparator.htm">addSeparator</a></td>
+<td class="api-list">Adds a separator to the list. This is not supported for button rows.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ListItems_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ListItems_clear.htm">clear</a></td>
+<td class="api-list">Clears all of the items from the list.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ListItems_item.htm">item</a></td>
+<td class="api-list">Returns the specified check box list item using an index into the collection.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ListItems_count.htm">count</a></td>
+<td class="api-list">Gets the number of items in the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ListItems_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ListItems_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ButtonRowCommandInput_listItems.htm">ButtonRowCommandInput.listItems</a>, <a href="DropDownCommandInput_listItems.htm">DropDownCommandInput.listItems</a>, <a href="ListControlDefinition_listItems.htm">ListControlDefinition.listItems</a>, <a href="RadioButtonGroupCommandInput_listItems.htm">RadioButtonGroupCommandInput.listItems</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandInputsSample_Sample.htm">Command Inputs API Sample</a></td>
+<td class="api-list"><p>Creates a command dialog that demonstrates all of the available command inputs.</p>
+<p>To use the sample, create a new Python or C++ script and copy and paste this code, replacing the default code.  You also need to unpack this zip file which contains a <a href="../ExtraFiles/CommandInputsResources.zip">resource folder</a> into the same folder where the source code file (.py or .cpp) is.</p></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2015<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ListItems%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">add Method</h3><p class="api">Adds a new item to the list.</p><pre class="api-code">"listItems_var" is a variable referencing a
+ListItems
+object.
+#include &lt;Core/UserInterface/ListItems.h&gt;
+// Uses no optional arguments.
+returnValue = listItems_var-&gt;
+add
+(name, isSelected);
+// Uses optional arguments.
+returnValue = listItems_var-&gt;
+add
+(name, isSelected, icon, beforeIndex);</pre><p class="api">Return Value: ListItem - Returns the new ListControlItem or null in the case of a failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">name</td><td class="api-list">string</td><td class="api-list">The name of this item as it is displayed in the list.</td></tr><tr><td class="api-list">isSelected</td><td class="api-list">boolean</td><td class="api-list">Sets whether this item is selected or not. If this list is associated with a control or input that can only have one item selected any other selected items will be unselected and this one will be the only selected item.</td></tr><tr><td class="api-list">icon</td><td class="api-list">string</td><td class="api-list">The path to the folder containing the image files to use for the icon. This is an optional argument but is required in the case of ButtonRowCommandInput objects. It is optional in the case of a DropDownCommandInput whose style is LabeledIconDropDownStyle and for ListControlType whose type is not RadioButtonListType. In other cases it is not used and is ignored. Icons can be defined using either PNG or SVG files. More information about icons can be found in the user manual topic User Interface Customization . This is an optional argument whose default value is "".</td></tr><tr><td class="api-list">beforeIndex</td><td class="api-list">integer</td><td class="api-list">The position of the item within the list. This value indicates the index of the current item to insert this new item just before. For example, a value of 0 will insert it before the first item in the list. An index of -1 will position the button at the bottom of the list. This is an optional argument whose default value is -1.</td></tr></table><h3 class="api-member">addSeparator Method</h3><p class="api">Adds a separator to the list. This is not supported for button rows.</p><pre class="api-code">"listItems_var" is a variable referencing a
+ListItems
+object.
+#include &lt;Core/UserInterface/ListItems.h&gt;
+returnValue = listItems_var-&gt;
+addSeparator
+(beforeIndex);</pre><p class="api">Return Value: ListItem - Returns the new ListControlItem or null in the case of a failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">beforeIndex</td><td class="api-list">integer</td><td class="api-list">The position of the item within the list. This value indicates the index of the current item to insert this new item just before. For example, a value of 0 will insert it before the first item in the list. An index of -1 will position the button at the bottom of the list.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/UserInterface/ListItems.h&gt;
+returnValue = adsk::core::ListItems::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">clear Method</h3><p class="api">Clears all of the items from the list.</p><pre class="api-code">"listItems_var" is a variable referencing a
+ListItems
+object.
+#include &lt;Core/UserInterface/ListItems.h&gt;
+returnValue = listItems_var-&gt;
+clear
+();</pre><p class="api">Return Value: boolean - Returns true if successful.</p><h3 class="api-member">count Property</h3><p class="api">Gets the number of items in the collection.</p><pre class="api-code">"listItems_var" is a variable referencing a ListItems object.
+#include &lt;Core/UserInterface/ListItems.h&gt;
+// Get the value of the property.
+uinteger propertyValue = listItems_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"listItems_var" is a variable referencing a ListItems object.
+#include &lt;Core/UserInterface/ListItems.h&gt;
+// Get the value of the property.
+boolean propertyValue = listItems_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Returns the specified check box list item using an index into the collection.</p><pre class="api-code">"listItems_var" is a variable referencing a
+ListItems
+object.
+#include &lt;Core/UserInterface/ListItems.h&gt;
+returnValue = listItems_var-&gt;
+item
+(index);</pre><p class="api">Return Value: ListItem - Returns the specified item or null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the item within the collection to return. The first item in the collection has an index of 0.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"listItems_var" is a variable referencing a ListItems object.
+#include &lt;Core/UserInterface/ListItems.h&gt;
+// Get the value of the property.
+string propertyValue = listItems_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

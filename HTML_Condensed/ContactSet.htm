@@ -1,0 +1,174 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ContactSet.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/9/2016" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ContactSet" name="contextid"/>
+<meta content="ContactSet Object" name="description"/>
+<meta content="GUID-502D3B85-9BAD-4A8B-B9C1-EE369D20EF89" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ContactSet Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ContactSet Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Components/ContactSet.h&gt;<h2 class="api">
+          Description
+        </h2>Represents a contact set in a design.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ContactSet_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ContactSet_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes this contact set from the design.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ContactSet_isSuppressed.htm">isSuppressed</a></td>
+<td class="api-list">Gets and sets if this contact set is currently suppressed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ContactSet_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ContactSet_name.htm">name</a></td>
+<td class="api-list">Gets and sets the name of the contact set.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ContactSet_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ContactSet_occurencesAndBodies.htm">occurencesAndBodies</a></td>
+<td class="api-list">Gets and sets the group of Occurrence and/or BRepBody objects that are part of this contact set.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ContactSets_add.htm">ContactSets.add</a>, <a href="ContactSets_item.htm">ContactSets.item</a>, <a href="ContactSets_itemByName.htm">ContactSets.itemByName</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SliderJointMotionSample_Sample.htm">SliderJointMotion API Sample</a></td>
+<td class="api-list">Demonstrates creating a joint with slider joint motion.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2016<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ContactSet%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Components/ContactSet.h&gt;
+returnValue = adsk::fusion::ContactSet::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes this contact set from the design.</p><pre class="api-code">"contactSet_var" is a variable referencing a
+ContactSet
+object.
+#include &lt;Fusion/Components/ContactSet.h&gt;
+returnValue = contactSet_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true if the delete was succcessful.</p><h3 class="api-member">isSuppressed Property</h3><p class="api">Gets and sets if this contact set is currently suppressed.</p><pre class="api-code">"contactSet_var" is a variable referencing a ContactSet object.
+#include &lt;Fusion/Components/ContactSet.h&gt;
+// Get the value of the property.
+boolean propertyValue = contactSet_var-&gt;
+isSuppressed
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = contactSet_var-&gt;
+isSuppressed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"contactSet_var" is a variable referencing a ContactSet object.
+#include &lt;Fusion/Components/ContactSet.h&gt;
+// Get the value of the property.
+boolean propertyValue = contactSet_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">name Property</h3><p class="api">Gets and sets the name of the contact set.</p><pre class="api-code">"contactSet_var" is a variable referencing a ContactSet object.
+#include &lt;Fusion/Components/ContactSet.h&gt;
+// Get the value of the property.
+string propertyValue = contactSet_var-&gt;
+name
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = contactSet_var-&gt;
+name
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"contactSet_var" is a variable referencing a ContactSet object.
+#include &lt;Fusion/Components/ContactSet.h&gt;
+// Get the value of the property.
+string propertyValue = contactSet_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">occurencesAndBodies Property</h3><p class="api">Gets and sets the group of Occurrence and/or BRepBody objects that are part of this contact set.</p><pre class="api-code">"contactSet_var" is a variable referencing a ContactSet object.
+#include &lt;Fusion/Components/ContactSet.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;Base&gt;&gt; propertyValue = contactSet_var-&gt;
+occurencesAndBodies
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = contactSet_var-&gt;
+occurencesAndBodies
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an array of type .</p></body>
+</html>

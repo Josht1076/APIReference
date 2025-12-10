@@ -1,0 +1,160 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ChordLengthFilletEdgeSetInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="09/11/2022" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ChordLengthFilletEdgeSetInput" name="contextid"/>
+<meta content="ChordLengthFilletEdgeSetInput Object" name="description"/>
+<meta content="GUID-C68456D0-028F-4241-886A-9130F486B4CA" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ChordLengthFilletEdgeSetInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ChordLengthFilletEdgeSetInput Object
+			</h1>
+              Derived from: <a href="FilletEdgeSetInput.htm">FilletEdgeSetInput</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/ChordLengthFilletEdgeSetInput.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access to the edges and the parameter associated with a chord length fillet.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChordLengthFilletEdgeSetInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChordLengthFilletEdgeSetInput_chordLength.htm">chordLength</a></td>
+<td class="api-list">Gets and sets a ValueInput object that defines the chord length of the fillet. If the ValueInput uses a real value then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in") or if no units are specified it is interpreted using the current document units for length.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChordLengthFilletEdgeSetInput_continuity.htm">continuity</a></td>
+<td class="api-list">Gets and sets the continuity of the fillet edge set. Valid values are TangentSurfaceContinuityType and CurvatureSurfaceContinuityType. The default is TangentSurfaceContinuityType.<br><br/> For an asymmetric fillet edge set, this must always be tangent continuity (G1) and setting it to another value will fail.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChordLengthFilletEdgeSetInput_entities.htm">entities</a></td>
+<td class="api-list">Gets and sets the entities associated with this fillet edge set. For constant radius and chord length edge sets, this can be edges, faces, and features. For variable radius edges sets, this must be edges.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChordLengthFilletEdgeSetInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChordLengthFilletEdgeSetInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChordLengthFilletEdgeSetInput_tangencyWeight.htm">tangencyWeight</a></td>
+<td class="api-list">Gets and sets the tangency weight for the given edge set. The tangency weight controls the influence of the continuity (G1 or G2) on the fillet. The ValueInput must be a real value between 0.1 and 2.0 inclusive, with no units. The default value is 1.0.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="FilletEdgeSetInputs_addChordLengthEdgeSet.htm">FilletEdgeSetInputs.addChordLengthEdgeSet</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version November 2022<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ChordLengthFilletEdgeSetInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">chordLength Property</h3><p class="api">Gets and sets a ValueInput object that defines the chord length of the fillet. If the ValueInput uses a real value then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in") or if no units are specified it is interpreted using the current document units for length.</p><pre class="api-code">"chordLengthFilletEdgeSetInput_var" is a variable referencing a ChordLengthFilletEdgeSetInput object.
+#include &lt;Fusion/Features/ChordLengthFilletEdgeSetInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = chordLengthFilletEdgeSetInput_var-&gt;
+chordLength
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = chordLengthFilletEdgeSetInput_var-&gt;
+chordLength
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/ChordLengthFilletEdgeSetInput.h&gt;
+returnValue = adsk::fusion::ChordLengthFilletEdgeSetInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">continuity Property</h3><p class="api">Gets and sets the continuity of the fillet edge set. Valid values are TangentSurfaceContinuityType and CurvatureSurfaceContinuityType. The default is TangentSurfaceContinuityType. For an asymmetric fillet edge set, this must always be tangent continuity (G1) and setting it to another value will fail.</p><pre class="api-code">"chordLengthFilletEdgeSetInput_var" is a variable referencing a ChordLengthFilletEdgeSetInput object.
+#include &lt;Fusion/Features/ChordLengthFilletEdgeSetInput.h&gt;
+// Get the value of the property.
+SurfaceContinuityTypes propertyValue = chordLengthFilletEdgeSetInput_var-&gt;
+continuity
+();
+// Set the value of the property, where value_var is a SurfaceContinuityTypes.
+bool returnValue = chordLengthFilletEdgeSetInput_var-&gt;
+continuity
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">entities Property</h3><p class="api">Gets and sets the entities associated with this fillet edge set. For constant radius and chord length edge sets, this can be edges, faces, and features. For variable radius edges sets, this must be edges.</p><pre class="api-code">"chordLengthFilletEdgeSetInput_var" is a variable referencing a ChordLengthFilletEdgeSetInput object.
+#include &lt;Fusion/Features/ChordLengthFilletEdgeSetInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ObjectCollection&gt; propertyValue = chordLengthFilletEdgeSetInput_var-&gt;
+entities
+();
+// Set the value of the property, where value_var is an ObjectCollection.
+bool returnValue = chordLengthFilletEdgeSetInput_var-&gt;
+entities
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"chordLengthFilletEdgeSetInput_var" is a variable referencing a ChordLengthFilletEdgeSetInput object.
+#include &lt;Fusion/Features/ChordLengthFilletEdgeSetInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = chordLengthFilletEdgeSetInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"chordLengthFilletEdgeSetInput_var" is a variable referencing a ChordLengthFilletEdgeSetInput object.
+#include &lt;Fusion/Features/ChordLengthFilletEdgeSetInput.h&gt;
+// Get the value of the property.
+string propertyValue = chordLengthFilletEdgeSetInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">tangencyWeight Property</h3><p class="api">Gets and sets the tangency weight for the given edge set. The tangency weight controls the influence of the continuity (G1 or G2) on the fillet. The ValueInput must be a real value between 0.1 and 2.0 inclusive, with no units. The default value is 1.0.</p><pre class="api-code">"chordLengthFilletEdgeSetInput_var" is a variable referencing a ChordLengthFilletEdgeSetInput object.
+#include &lt;Fusion/Features/ChordLengthFilletEdgeSetInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = chordLengthFilletEdgeSetInput_var-&gt;
+tangencyWeight
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = chordLengthFilletEdgeSetInput_var-&gt;
+tangencyWeight
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

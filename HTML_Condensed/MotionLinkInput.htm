@@ -1,0 +1,199 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/MotionLinkInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="22/09/2025" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="MotionLinkInput" name="contextid"/>
+<meta content="MotionLinkInput Object" name="description"/>
+<meta content="GUID-21696F6C-837F-488E-B2B2-0CFC39F9EBA5" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>MotionLinkInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">MotionLinkInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Components/MotionLinkInput.h&gt;<h2 class="api">
+          Description
+        </h2>Defines all of the information required to create a new MotionLink. This object provides equivalent functionality to the MotionLink command dialog in that it gathers the required information to create a MotionLink.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLinkInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLinkInput_isReversed.htm">isReversed</a></td>
+<td class="api-list">Gets and sets whether the direction of the motion is reversed or not.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLinkInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLinkInput_jointOne.htm">jointOne</a></td>
+<td class="api-list">Gets and sets the first Joint or AsBuiltJoint for this MotionLink. When you link two motions from the same joint, a valid joint should have its joint motion type of BallJointType, CylindricalJointType, PinSlotJointType or PlanarJointType. A joint whose joint motion is a RigidJointMotion type is never valid as the first joint..</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLinkInput_jointTwo.htm">jointTwo</a></td>
+<td class="api-list">Gets and sets the second Joint or AsBuiltJoint for this MotionLink. This can be a joint or null, when this is set to null then the two motions are from the same joint specified by jointOne. A joint whose joint motion is a RigidJointMotion type is never valid as the second joint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLinkInput_motionOne.htm">motionOne</a></td>
+<td class="api-list">Gets and sets the first motion type.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLinkInput_motionTwo.htm">motionTwo</a></td>
+<td class="api-list">Gets and sets the second motion type.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLinkInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLinkInput_valueOne.htm">valueOne</a></td>
+<td class="api-list">Gets and sets the first motion link value. If the ValueInput uses a real then it is interpreted as centimeters for length and radians for angle. If it is a string then the units can be defined as part of the string (i.e. "2 in" or "60 deg") or if no units are specified it is interpreted using the current default units for length or angle.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MotionLinkInput_valueTwo.htm">valueTwo</a></td>
+<td class="api-list">Gets and sets the second motion link value. If the ValueInput uses a real then it is interpreted as centimeters for length and radians for angle. If it is a string then the units can be defined as part of the string (i.e. "2 in" or "60 deg") or if no units are specified it is interpreted using the current default units for length or angle.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="MotionLinks_createInput.htm">MotionLinks.createInput</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version November 2025<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(MotionLinkInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Components/MotionLinkInput.h&gt;
+returnValue = adsk::fusion::MotionLinkInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">isReversed Property</h3><p class="api">Gets and sets whether the direction of the motion is reversed or not.</p><pre class="api-code">"motionLinkInput_var" is a variable referencing a MotionLinkInput object.
+#include &lt;Fusion/Components/MotionLinkInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = motionLinkInput_var-&gt;
+isReversed
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = motionLinkInput_var-&gt;
+isReversed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"motionLinkInput_var" is a variable referencing a MotionLinkInput object.
+#include &lt;Fusion/Components/MotionLinkInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = motionLinkInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">jointOne Property</h3><p class="api">Gets and sets the first Joint or AsBuiltJoint for this MotionLink. When you link two motions from the same joint, a valid joint should have its joint motion type of BallJointType, CylindricalJointType, PinSlotJointType or PlanarJointType. A joint whose joint motion is a RigidJointMotion type is never valid as the first joint..</p><pre class="api-code">"motionLinkInput_var" is a variable referencing a MotionLinkInput object.
+#include &lt;Fusion/Components/MotionLinkInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = motionLinkInput_var-&gt;
+jointOne
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = motionLinkInput_var-&gt;
+jointOne
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">jointTwo Property</h3><p class="api">Gets and sets the second Joint or AsBuiltJoint for this MotionLink. This can be a joint or null, when this is set to null then the two motions are from the same joint specified by jointOne. A joint whose joint motion is a RigidJointMotion type is never valid as the second joint.</p><pre class="api-code">"motionLinkInput_var" is a variable referencing a MotionLinkInput object.
+#include &lt;Fusion/Components/MotionLinkInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = motionLinkInput_var-&gt;
+jointTwo
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = motionLinkInput_var-&gt;
+jointTwo
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">motionOne Property</h3><p class="api">Gets and sets the first motion type.</p><pre class="api-code">"motionLinkInput_var" is a variable referencing a MotionLinkInput object.
+#include &lt;Fusion/Components/MotionLinkInput.h&gt;
+// Get the value of the property.
+JointMotionTypes propertyValue = motionLinkInput_var-&gt;
+motionOne
+();
+// Set the value of the property, where value_var is a JointMotionTypes.
+bool returnValue = motionLinkInput_var-&gt;
+motionOne
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">motionTwo Property</h3><p class="api">Gets and sets the second motion type.</p><pre class="api-code">"motionLinkInput_var" is a variable referencing a MotionLinkInput object.
+#include &lt;Fusion/Components/MotionLinkInput.h&gt;
+// Get the value of the property.
+JointMotionTypes propertyValue = motionLinkInput_var-&gt;
+motionTwo
+();
+// Set the value of the property, where value_var is a JointMotionTypes.
+bool returnValue = motionLinkInput_var-&gt;
+motionTwo
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"motionLinkInput_var" is a variable referencing a MotionLinkInput object.
+#include &lt;Fusion/Components/MotionLinkInput.h&gt;
+// Get the value of the property.
+string propertyValue = motionLinkInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">valueOne Property</h3><p class="api">Gets and sets the first motion link value. If the ValueInput uses a real then it is interpreted as centimeters for length and radians for angle. If it is a string then the units can be defined as part of the string (i.e. "2 in" or "60 deg") or if no units are specified it is interpreted using the current default units for length or angle.</p><pre class="api-code">"motionLinkInput_var" is a variable referencing a MotionLinkInput object.
+#include &lt;Fusion/Components/MotionLinkInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = motionLinkInput_var-&gt;
+valueOne
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = motionLinkInput_var-&gt;
+valueOne
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">valueTwo Property</h3><p class="api">Gets and sets the second motion link value. If the ValueInput uses a real then it is interpreted as centimeters for length and radians for angle. If it is a string then the units can be defined as part of the string (i.e. "2 in" or "60 deg") or if no units are specified it is interpreted using the current default units for length or angle.</p><pre class="api-code">"motionLinkInput_var" is a variable referencing a MotionLinkInput object.
+#include &lt;Fusion/Components/MotionLinkInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = motionLinkInput_var-&gt;
+valueTwo
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = motionLinkInput_var-&gt;
+valueTwo
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

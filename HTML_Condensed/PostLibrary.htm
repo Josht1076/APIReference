@@ -1,0 +1,258 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/PostLibrary.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="21/02/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="PostLibrary" name="contextid"/>
+<meta content="PostLibrary Object" name="description"/>
+<meta content="GUID-3EE13254-CD32-4A49-AF2F-73EA4D60A987" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>PostLibrary Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">PostLibrary Object
+			</h1>
+              Derived from: <a href="CAMLibrary.htm">CAMLibrary</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/Post/PostLibrary.h&gt;<h2 class="api">
+          Description
+        </h2>The PostLibrary provides access to post configurations. Using this object you can import post configurations and get existing post configurations using either a URL or query to find specific post configurations.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PostLibrary_childAssetURLs.htm">childAssetURLs</a></td>
+<td class="api-list">Get all assets under given URL.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PostLibrary_childFolderURLs.htm">childFolderURLs</a></td>
+<td class="api-list">Get all library folders under given URL.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PostLibrary_childPostConfigurations.htm">childPostConfigurations</a></td>
+<td class="api-list">Get all posts by the given parent folder URL. Returns null, if the URL does not exist.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PostLibrary_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PostLibrary_createFolder.htm">createFolder</a></td>
+<td class="api-list">Create a new folder in the library. Create the folder under given parent URL with given folder name. Add counting suffix, in case a folder with given name already exists. Throw an error if given URL does not point to a valid folder or the URL is read-only. Also throws an error if given folder name is empty.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PostLibrary_createQuery.htm">createQuery</a></td>
+<td class="api-list">Creates a new PostConfigurationQuery that is used to query the library for post configurations matching the query.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PostLibrary_deleteAsset.htm">deleteAsset</a></td>
+<td class="api-list">Delete asset by URL from the library. Throw an error if given URL does not point to a valid asset or the URL is read-only.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PostLibrary_deleteFolder.htm">deleteFolder</a></td>
+<td class="api-list">Delete folder by URL from the library. Any content of the folder will also be deleted. Throw an error if given URL does not point to a valid folder or the URL is read-only.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PostLibrary_displayName.htm">displayName</a></td>
+<td class="api-list">Get the localized display name for a given URL. The URL must point to a folder.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PostLibrary_doesPathExist.htm">doesPathExist</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Checks if the given URL points to an existing folder or asset in the library.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PostLibrary_importPostConfiguration.htm">importPostConfiguration</a></td>
+<td class="api-list">Import a given post configuration at a specific location. The post configuration will be stored in the library. Throws an error, if the given URL is read-only.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PostLibrary_postConfigurationAtURL.htm">postConfigurationAtURL</a></td>
+<td class="api-list">Get a specific post configuration by the given URL. Returns null, if the URL does not exist.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PostLibrary_urlByLocation.htm">urlByLocation</a></td>
+<td class="api-list">Get the URL for a given LibraryLocations.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PostLibrary_assetTypeName.htm">assetTypeName</a></td>
+<td class="api-list">Get the name of the asset type which can be accessed by the library.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PostLibrary_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PostLibrary_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CAMLibraryManager_postLibrary.htm">CAMLibraryManager.postLibrary</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ManufacturingWorkflowAPISample_Sample.htm">Manufacturing Workflow API Sample</a></td>
+<td class="api-list">Manufacturing Workflow API Sample<p>This sample script starts by creating a simple component which is then used to describe a milling workflow. It creates a setup, a few operations, pick some tools from a Fusion sample tool library using loops and queries and ends up post-processing the operations out using an NC Program.</p></td>
+</tr>
+<tr>
+<td class="api-list"><a href="Turning_Workflow_API_Sample_Sample.htm">Turning Workflow API Sample</a></td>
+<td class="api-list">Turning Workflow API Sample<p>This sample script starts by opening a simple component which is then used to describe a basic turning workflow. It creates a setup, a few operations, pick some tools from a Fusion sample tool library using loops and queries and ends up post-processing the operations out using an NC Program.</p></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version April 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(PostLibrary%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">assetTypeName Property</h3><p class="api">Get the name of the asset type which can be accessed by the library.</p><pre class="api-code">"postLibrary_var" is a variable referencing a PostLibrary object.
+#include &lt;Cam/Post/PostLibrary.h&gt;
+// Get the value of the property.
+string propertyValue = postLibrary_var-&gt;
+assetTypeName
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">childAssetURLs Method</h3><p class="api">Get all assets under given URL.</p><pre class="api-code">"postLibrary_var" is a variable referencing a
+PostLibrary
+object.
+#include &lt;Cam/Post/PostLibrary.h&gt;
+returnValue = postLibrary_var-&gt;
+childAssetURLs
+(url);</pre><p class="api">Return Value: URL [] - Returns list of asset URLs at given location.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to the parent folder.</td></tr></table><h3 class="api-member">childFolderURLs Method</h3><p class="api">Get all library folders under given URL.</p><pre class="api-code">"postLibrary_var" is a variable referencing a
+PostLibrary
+object.
+#include &lt;Cam/Post/PostLibrary.h&gt;
+returnValue = postLibrary_var-&gt;
+childFolderURLs
+(url);</pre><p class="api">Return Value: URL [] - Returns list of folder URLs at given location.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to the parent folder.</td></tr></table><h3 class="api-member">childPostConfigurations Method</h3><p class="api">Get all posts by the given parent folder URL. Returns null, if the URL does not exist.</p><pre class="api-code">"postLibrary_var" is a variable referencing a
+PostLibrary
+object.
+#include &lt;Cam/Post/PostLibrary.h&gt;
+returnValue = postLibrary_var-&gt;
+childPostConfigurations
+(url);</pre><p class="api">Return Value: PostConfiguration [] - Returns all children posts for a valid URL, returns null otherwise.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL of the folder to get post configurations from.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/Post/PostLibrary.h&gt;
+returnValue = adsk::cam::PostLibrary::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">createFolder Method</h3><p class="api">Create a new folder in the library. Create the folder under given parent URL with given folder name. Add counting suffix, in case a folder with given name already exists. Throw an error if given URL does not point to a valid folder or the URL is read-only. Also throws an error if given folder name is empty.</p><pre class="api-code">"postLibrary_var" is a variable referencing a
+PostLibrary
+object.
+#include &lt;Cam/Post/PostLibrary.h&gt;
+returnValue = postLibrary_var-&gt;
+createFolder
+(parentUrl, folderName);</pre><p class="api">Return Value: URL - Returns the URL to the newly created folder</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parentUrl</td><td class="api-list">URL</td><td class="api-list">The parent URL for the folder to be created.</td></tr><tr><td class="api-list">folderName</td><td class="api-list">string</td><td class="api-list">Name of the new folder to be created. Must not be empty.</td></tr></table><h3 class="api-member">createQuery Method</h3><p class="api">Creates a new PostConfigurationQuery that is used to query the library for post configurations matching the query.</p><pre class="api-code">"postLibrary_var" is a variable referencing a
+PostLibrary
+object.
+#include &lt;Cam/Post/PostLibrary.h&gt;
+returnValue = postLibrary_var-&gt;
+createQuery
+(location);</pre><p class="api">Return Value: PostConfigurationQuery - Returns a new PostConfigurationQuery. The query is predefined by given parameter.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">location</td><td class="api-list">LibraryLocations</td><td class="api-list">The location specifies the LibraryLocations where to search for in the post library.</td></tr></table><h3 class="api-member">deleteAsset Method</h3><p class="api">Delete asset by URL from the library. Throw an error if given URL does not point to a valid asset or the URL is read-only.</p><pre class="api-code">"postLibrary_var" is a variable referencing a
+PostLibrary
+object.
+#include &lt;Cam/Post/PostLibrary.h&gt;
+returnValue = postLibrary_var-&gt;
+deleteAsset
+(url);</pre><p class="api">Return Value: boolean - Returns true if asset was deleted successfully, false otherwise</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to the asset that should be removed.</td></tr></table><h3 class="api-member">deleteFolder Method</h3><p class="api">Delete folder by URL from the library. Any content of the folder will also be deleted. Throw an error if given URL does not point to a valid folder or the URL is read-only.</p><pre class="api-code">"postLibrary_var" is a variable referencing a
+PostLibrary
+object.
+#include &lt;Cam/Post/PostLibrary.h&gt;
+returnValue = postLibrary_var-&gt;
+deleteFolder
+(url);</pre><p class="api">Return Value: boolean - Returns true if folder was deleted successfully, false otherwise</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to the folder that should be removed.</td></tr></table><h3 class="api-member">displayName Method</h3><p class="api">Get the localized display name for a given URL. The URL must point to a folder.</p><pre class="api-code">"postLibrary_var" is a variable referencing a
+PostLibrary
+object.
+#include &lt;Cam/Post/PostLibrary.h&gt;
+returnValue = postLibrary_var-&gt;
+displayName
+(url);</pre><p class="api">Return Value: string - Returns localized display name for the folder. Returns empty string for invalid URL.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL that defines the path to a folder.</td></tr></table><h3 class="api-member">doesPathExist Method</h3><p class="api">Checks if the given URL points to an existing folder or asset in the library.</p><pre class="api-code">"postLibrary_var" is a variable referencing a
+PostLibrary
+object.
+#include &lt;Cam/Post/PostLibrary.h&gt;
+returnValue = postLibrary_var-&gt;
+doesPathExist
+(url);</pre><p class="api">Return Value: boolean - Returns true if the URL points to an existing folder or asset, false otherwise.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to be checked.</td></tr></table><h3 class="api-member">importPostConfiguration Method</h3><p class="api">Import a given post configuration at a specific location. The post configuration will be stored in the library. Throws an error, if the given URL is read-only.</p><pre class="api-code">"postLibrary_var" is a variable referencing a
+PostLibrary
+object.
+#include &lt;Cam/Post/PostLibrary.h&gt;
+returnValue = postLibrary_var-&gt;
+importPostConfiguration
+(postConfig, destinationUrl, postName);</pre><p class="api">Return Value: URL - Returns the URL of the newly imported post configuration, or null if the import failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">postConfig</td><td class="api-list">PostConfiguration</td><td class="api-list">The post configuration that should be imported.</td></tr><tr><td class="api-list">destinationUrl</td><td class="api-list">URL</td><td class="api-list">The URL to the folder where to save the post configuration.</td></tr><tr><td class="api-list">postName</td><td class="api-list">string</td><td class="api-list">The name of the post configuration that should be created due to the import. The name can be extended if the name already exists at given location to ensure a unique name.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"postLibrary_var" is a variable referencing a PostLibrary object.
+#include &lt;Cam/Post/PostLibrary.h&gt;
+// Get the value of the property.
+boolean propertyValue = postLibrary_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"postLibrary_var" is a variable referencing a PostLibrary object.
+#include &lt;Cam/Post/PostLibrary.h&gt;
+// Get the value of the property.
+string propertyValue = postLibrary_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">postConfigurationAtURL Method</h3><p class="api">Get a specific post configuration by the given URL. Returns null, if the URL does not exist.</p><pre class="api-code">"postLibrary_var" is a variable referencing a
+PostLibrary
+object.
+#include &lt;Cam/Post/PostLibrary.h&gt;
+returnValue = postLibrary_var-&gt;
+postConfigurationAtURL
+(url);</pre><p class="api">Return Value: PostConfiguration - Returns the post configuration for a valid URL, returns null otherwise.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to the post configuration to be loaded.</td></tr></table><h3 class="api-member">urlByLocation Method</h3><p class="api">Get the URL for a given LibraryLocations.</p><pre class="api-code">"postLibrary_var" is a variable referencing a
+PostLibrary
+object.
+#include &lt;Cam/Post/PostLibrary.h&gt;
+returnValue = postLibrary_var-&gt;
+urlByLocation
+(location);</pre><p class="api">Return Value: URL - Returns the URL for given location.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">location</td><td class="api-list">LibraryLocations</td><td class="api-list">The LibraryLocations to be converted into an URL.</td></tr></table></body>
+</html>

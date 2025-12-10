@@ -1,0 +1,134 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/PlasticRuleValue.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="27/12/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="PlasticRuleValue" name="contextid"/>
+<meta content="PlasticRuleValue Object" name="description"/>
+<meta content="GUID-DA142F17-8D40-49FB-B60F-F22E25FAF127" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>PlasticRuleValue Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">PlasticRuleValue Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Plastic/PlasticRuleValue.h&gt;<h2 class="api">
+          Description
+        </h2>Used to get and set the current value associated with a plastic rule. A value can be gotten or set using a string or a double. A string can contain equations and unit specifiers, whereas a double defines the size in centimeters. In the user interface, the user is always setting the string expression. However, when programming, it is typically more convenient to set it using an explicit value. When the value is set using a double, Fusion creates an equivalent expression.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PlasticRuleValue_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PlasticRuleValue_expression.htm">expression</a></td>
+<td class="api-list">Gets and sets the expression of the plastic rule value. This can be an equation that includes the name "Thickness" and can also include length unit specifiers. For example, a valid expression is "Thickness / 2 + 1 mm". If no units are specified, the unit is implied and uses the units associated with the rule which can be mm or inch. For example an expression of "3" will be 3 inches if the rule units are inches or 3 mm if the rule units are millimeters. You can find out what units are used for a rule using the PlasticRule.units property.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PlasticRuleValue_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PlasticRuleValue_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="PlasticRuleValue_value.htm">value</a></td>
+<td class="api-list">Gets and sets the value of the plastic rule value in centimeters. Setting this value will create a new expression that is equivalent to the new value.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="PlasticRule_clearance.htm">PlasticRule.clearance</a>, <a href="PlasticRule_draftAngle.htm">PlasticRule.draftAngle</a>, <a href="PlasticRule_knifeEdgeThreshold.htm">PlasticRule.knifeEdgeThreshold</a>, <a href="PlasticRule_nominalRadius.htm">PlasticRule.nominalRadius</a>, <a href="PlasticRule_revealHeight.htm">PlasticRule.revealHeight</a>, <a href="PlasticRule_thickness.htm">PlasticRule.thickness</a>, <a href="PlasticRule_thicknessVariation.htm">PlasticRule.thicknessVariation</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2024<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(PlasticRuleValue%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Plastic/PlasticRuleValue.h&gt;
+returnValue = adsk::fusion::PlasticRuleValue::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">expression Property</h3><p class="api">Gets and sets the expression of the plastic rule value. This can be an equation that includes the name "Thickness" and can also include length unit specifiers. For example, a valid expression is "Thickness / 2 + 1 mm". If no units are specified, the unit is implied and uses the units associated with the rule which can be mm or inch. For example an expression of "3" will be 3 inches if the rule units are inches or 3 mm if the rule units are millimeters. You can find out what units are used for a rule using the PlasticRule.units property.</p><pre class="api-code">"plasticRuleValue_var" is a variable referencing a PlasticRuleValue object.
+#include &lt;Fusion/Plastic/PlasticRuleValue.h&gt;
+// Get the value of the property.
+string propertyValue = plasticRuleValue_var-&gt;
+expression
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = plasticRuleValue_var-&gt;
+expression
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"plasticRuleValue_var" is a variable referencing a PlasticRuleValue object.
+#include &lt;Fusion/Plastic/PlasticRuleValue.h&gt;
+// Get the value of the property.
+boolean propertyValue = plasticRuleValue_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"plasticRuleValue_var" is a variable referencing a PlasticRuleValue object.
+#include &lt;Fusion/Plastic/PlasticRuleValue.h&gt;
+// Get the value of the property.
+string propertyValue = plasticRuleValue_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">value Property</h3><p class="api">Gets and sets the value of the plastic rule value in centimeters. Setting this value will create a new expression that is equivalent to the new value.</p><pre class="api-code">"plasticRuleValue_var" is a variable referencing a PlasticRuleValue object.
+#include &lt;Fusion/Plastic/PlasticRuleValue.h&gt;
+// Get the value of the property.
+double propertyValue = plasticRuleValue_var-&gt;
+value
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = plasticRuleValue_var-&gt;
+value
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p></body>
+</html>

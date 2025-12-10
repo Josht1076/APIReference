@@ -1,0 +1,323 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/JointInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="16/7/2015" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="JointInput" name="contextid"/>
+<meta content="JointInput Object" name="description"/>
+<meta content="GUID-e54adb12-2eb4-4045-8e6e-e719ed3fd4a5" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>JointInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">JointInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Components/JointInput.h&gt;<h2 class="api">
+          Description
+        </h2>Defines all of the information required to create a new joint. This object provides equivalent functionality to the Joint command dialog in that it gathers the required information to create a joint.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointInput_setAsBallJointMotion.htm">setAsBallJointMotion</a></td>
+<td class="api-list">Defines the relationship between the two joint geometries as a ball joint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointInput_setAsCylindricalJointMotion.htm">setAsCylindricalJointMotion</a></td>
+<td class="api-list">Defines the relationship between the two joint geometries as a cylindrical joint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointInput_setAsPinSlotJointMotion.htm">setAsPinSlotJointMotion</a></td>
+<td class="api-list">Defines the relationship between the two joint geometries as a pin-slot joint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointInput_setAsPlanarJointMotion.htm">setAsPlanarJointMotion</a></td>
+<td class="api-list">Defines the relationship between the two joint geometries as a planar joint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointInput_setAsRevoluteJointMotion.htm">setAsRevoluteJointMotion</a></td>
+<td class="api-list">Defines the relationship between the two joint geometries as a revolute joint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointInput_setAsRigidJointMotion.htm">setAsRigidJointMotion</a></td>
+<td class="api-list">Defines the relationship between the two joint geometries as a rigid joint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointInput_setAsSliderJointMotion.htm">setAsSliderJointMotion</a></td>
+<td class="api-list">Defines the relationship between the two joint geometries as a slider joint.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointInput_angle.htm">angle</a></td>
+<td class="api-list">Specifies the angle between two input geometries. This is effectively the angle between the two primary axes of the input geometries. When a new JointInput object is created, this value defaults to zero. When the joint is created this will become the value of the parameter that controls the joint angle.<br><br/> When using a real value to define the angle, the value is in radians. When using a string the expression is evaluated using the document default units for angles.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointInput_geometryOrOriginOne.htm">geometryOrOriginOne</a></td>
+<td class="api-list">Gets and sets the first JointGeometry or JointOrigin for this joint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointInput_geometryOrOriginTwo.htm">geometryOrOriginTwo</a></td>
+<td class="api-list">Gets and sets the second JointGeometry or JointOrigin for this joint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointInput_isFlipped.htm">isFlipped</a></td>
+<td class="api-list">Gets and sets if the joint direction is flipped or not. This is effectively specifying if the third axis of the two input geometries is facing (false) or opposed (true).</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointInput_jointMotion.htm">jointMotion</a></td>
+<td class="api-list">Returns an object derived from JointMotion that defines how the motion between the two joint geometries is defined.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointInput_offset.htm">offset</a></td>
+<td class="api-list">Specifies the offset between two input geometries. This is effectively the offset distance between the two planes defined by the primary and secondary axes of the input geometries. When a new JointInput object is created, this value defaults to zero. When the joint is created this will become the value of the parameter that controls the joint offset.<br/><br/> When using a real value to define the offset, the value is in centimeters. When using a string the expression is evaluated using the document default units for distance.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Joints_createInput.htm">Joints.createInput</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotionSample_Sample.htm">BallJointMotion API Sample</a></td>
+<td class="api-list">Demonstrates creating a joint with ball joint motion</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CylindricalJointMotionSample_Sample.htm">CylindricalJointMotion API Sample</a></td>
+<td class="api-list">Demonstrates creating a joint with cylindrical joint motion.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointSample_Sample.htm">Joint API Sample</a></td>
+<td class="api-list">Demonstrates creating a new joint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PinSlotJointMotionSample_Sample.htm">Pin Slot Joint Motion API Sample</a></td>
+<td class="api-list">Demonstrates creating a joint with pin slot joint motion</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PlanarJointMotionSample_Sample.htm">Planar Joint Motion API Sample</a></td>
+<td class="api-list">Demonstrates creating a joint with planar joint motion</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RevoluteJointMotionSample_Sample.htm">RevoluteJointMotion API Sample</a></td>
+<td class="api-list">Demonstrates creating a joint with revolute joint motion.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SliderJointMotionSample_Sample.htm">SliderJointMotion API Sample</a></td>
+<td class="api-list">Demonstrates creating a joint with slider joint motion.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version July 2015<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(JointInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">angle Property</h3><p class="api">Specifies the angle between two input geometries. This is effectively the angle between the two primary axes of the input geometries. When a new JointInput object is created, this value defaults to zero. When the joint is created this will become the value of the parameter that controls the joint angle. When using a real value to define the angle, the value is in radians. When using a string the expression is evaluated using the document default units for angles.</p><pre class="api-code">"jointInput_var" is a variable referencing a JointInput object.
+#include &lt;Fusion/Components/JointInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = jointInput_var-&gt;
+angle
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = jointInput_var-&gt;
+angle
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Components/JointInput.h&gt;
+returnValue = adsk::fusion::JointInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">geometryOrOriginOne Property</h3><p class="api">Gets and sets the first JointGeometry or JointOrigin for this joint.</p><pre class="api-code">"jointInput_var" is a variable referencing a JointInput object.
+#include &lt;Fusion/Components/JointInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = jointInput_var-&gt;
+geometryOrOriginOne
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = jointInput_var-&gt;
+geometryOrOriginOne
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">geometryOrOriginTwo Property</h3><p class="api">Gets and sets the second JointGeometry or JointOrigin for this joint.</p><pre class="api-code">"jointInput_var" is a variable referencing a JointInput object.
+#include &lt;Fusion/Components/JointInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = jointInput_var-&gt;
+geometryOrOriginTwo
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = jointInput_var-&gt;
+geometryOrOriginTwo
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">isFlipped Property</h3><p class="api">Gets and sets if the joint direction is flipped or not. This is effectively specifying if the third axis of the two input geometries is facing (false) or opposed (true).</p><pre class="api-code">"jointInput_var" is a variable referencing a JointInput object.
+#include &lt;Fusion/Components/JointInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = jointInput_var-&gt;
+isFlipped
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = jointInput_var-&gt;
+isFlipped
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"jointInput_var" is a variable referencing a JointInput object.
+#include &lt;Fusion/Components/JointInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = jointInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">jointMotion Property</h3><p class="api">Returns an object derived from JointMotion that defines how the motion between the two joint geometries is defined.</p><pre class="api-code">"jointInput_var" is a variable referencing a JointInput object.
+#include &lt;Fusion/Components/JointInput.h&gt;
+// Get the value of the property.
+Ptr&lt;JointMotion&gt; propertyValue = jointInput_var-&gt;
+jointMotion
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"jointInput_var" is a variable referencing a JointInput object.
+#include &lt;Fusion/Components/JointInput.h&gt;
+// Get the value of the property.
+string propertyValue = jointInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">offset Property</h3><p class="api">Specifies the offset between two input geometries. This is effectively the offset distance between the two planes defined by the primary and secondary axes of the input geometries. When a new JointInput object is created, this value defaults to zero. When the joint is created this will become the value of the parameter that controls the joint offset. When using a real value to define the offset, the value is in centimeters. When using a string the expression is evaluated using the document default units for distance.</p><pre class="api-code">"jointInput_var" is a variable referencing a JointInput object.
+#include &lt;Fusion/Components/JointInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = jointInput_var-&gt;
+offset
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = jointInput_var-&gt;
+offset
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">setAsBallJointMotion Method</h3><p class="api">Defines the relationship between the two joint geometries as a ball joint.</p><pre class="api-code">"jointInput_var" is a variable referencing a
+JointInput
+object.
+#include &lt;Fusion/Components/JointInput.h&gt;
+// Uses no optional arguments.
+returnValue = jointInput_var-&gt;
+setAsBallJointMotion
+(pitchDirection, yawDirection);
+// Uses optional arguments.
+returnValue = jointInput_var-&gt;
+setAsBallJointMotion
+(pitchDirection, yawDirection, customPitchDirection, customYawDirection);</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pitchDirection</td><td class="api-list">JointDirections</td><td class="api-list">Defines the direction the pitch angle is measured from. This can be ZAxisJointDirection or CustomJointDirection. If CustomJointDirection is specified then you must also provide a value for the customPitchDirection argument.</td></tr><tr><td class="api-list">yawDirection</td><td class="api-list">JointDirections</td><td class="api-list">Defines the direction the yaw is measured from. This can be XAxisJointDirection or CustomJointDirection. If CustomJointDirection is specified then you must also provide a value for the customYawDirection argument.</td></tr><tr><td class="api-list">customPitchDirection</td><td class="api-list">Base</td><td class="api-list">If the pitchDirection argument is customPitchDirection this argument is used to define the direction the pitch angel is measured from. This can be several types of entities that can define a direction. This is an optional argument whose default value is null.</td></tr><tr><td class="api-list">customYawDirection</td><td class="api-list">Base</td><td class="api-list">If the yawDirection argument is customPitchDirection this argument is used to define the direction the yaw angel is measured from. This can be several types of entities that can define a direction. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">setAsCylindricalJointMotion Method</h3><p class="api">Defines the relationship between the two joint geometries as a cylindrical joint.</p><pre class="api-code">"jointInput_var" is a variable referencing a
+JointInput
+object.
+#include &lt;Fusion/Components/JointInput.h&gt;
+// Uses no optional arguments.
+returnValue = jointInput_var-&gt;
+setAsCylindricalJointMotion
+(rotationAxis);
+// Uses optional arguments.
+returnValue = jointInput_var-&gt;
+setAsCylindricalJointMotion
+(rotationAxis, customRotationAxisEntity);</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">rotationAxis</td><td class="api-list">JointDirections</td><td class="api-list">Specifies which axis the rotation is around. If this is set to CustomJointDirection then the customRotationAxisEntity argument must also be provided.</td></tr><tr><td class="api-list">customRotationAxisEntity</td><td class="api-list">Base</td><td class="api-list">If the rotationAxis is customAxisEntity this argument is used to specify the entity that defines the custom axis of rotation. This can be several types of entities that an axis can be derived from. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">setAsPinSlotJointMotion Method</h3><p class="api">Defines the relationship between the two joint geometries as a pin-slot joint.</p><pre class="api-code">"jointInput_var" is a variable referencing a
+JointInput
+object.
+#include &lt;Fusion/Components/JointInput.h&gt;
+// Uses no optional arguments.
+returnValue = jointInput_var-&gt;
+setAsPinSlotJointMotion
+(rotationAxis, slideDirection);
+// Uses optional arguments.
+returnValue = jointInput_var-&gt;
+setAsPinSlotJointMotion
+(rotationAxis, slideDirection, customRotationAxisEntity, customSlideDirectionEntity);</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">rotationAxis</td><td class="api-list">JointDirections</td><td class="api-list">Specifies which axis the rotation is around. If this is set to CustomJointDirection then the customRotationAxisEntity argument must also be provided.</td></tr><tr><td class="api-list">slideDirection</td><td class="api-list">JointDirections</td><td class="api-list">Specifies which axis the slide direction is along. If this is set to CustomJointDirection then the customSlideDirectionEntity argument must also be provided.</td></tr><tr><td class="api-list">customRotationAxisEntity</td><td class="api-list">Base</td><td class="api-list">If the rotationAxis is customAxisEntity this argument is used to specify the entity that defines the custom axis of rotation. This can be several types of entities that an axis can be derived This is an optional argument whose default value is null.</td></tr><tr><td class="api-list">customSlideDirectionEntity</td><td class="api-list">Base</td><td class="api-list">If the slideDirection is CustomJointDirection this argument is used to specify the entity that defines the custom slide direction. This can be several types of entities that can define a direction. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">setAsPlanarJointMotion Method</h3><p class="api">Defines the relationship between the two joint geometries as a planar joint.</p><pre class="api-code">"jointInput_var" is a variable referencing a
+JointInput
+object.
+#include &lt;Fusion/Components/JointInput.h&gt;
+// Uses no optional arguments.
+returnValue = jointInput_var-&gt;
+setAsPlanarJointMotion
+(normalDirection);
+// Uses optional arguments.
+returnValue = jointInput_var-&gt;
+setAsPlanarJointMotion
+(normalDirection, customNormalDirectionEntity, customPrimarySlideDirection);</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">normalDirection</td><td class="api-list">JointDirections</td><td class="api-list">Defines the direction of the normal of the single degree of rotation. This can be set to XAxisJointDirection, YAxisJointDirection, ZAxisJointDirection, or CustomJointDirection. If set to CustomJointDirection then the customNormalDirectionEntity argument must also be provided.</td></tr><tr><td class="api-list">customNormalDirectionEntity</td><td class="api-list">Base</td><td class="api-list">If the normalDirection is CustomJointDirection this argument is used to specify the entity that defines the direction of the normal. This can be several types of entities that can define a direction. This is an optional argument whose default value is null.</td></tr><tr><td class="api-list">customPrimarySlideDirection</td><td class="api-list">Base</td><td class="api-list">This arguments defines the direction of the primary slide direction. A default primary slide direction is automatically chosen and will be used if this argument is not provided or is null. The secondary slide direction is automatically inferred from the normal and primary slide directions. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">setAsRevoluteJointMotion Method</h3><p class="api">Defines the relationship between the two joint geometries as a revolute joint.</p><pre class="api-code">"jointInput_var" is a variable referencing a
+JointInput
+object.
+#include &lt;Fusion/Components/JointInput.h&gt;
+// Uses no optional arguments.
+returnValue = jointInput_var-&gt;
+setAsRevoluteJointMotion
+(rotationAxis);
+// Uses optional arguments.
+returnValue = jointInput_var-&gt;
+setAsRevoluteJointMotion
+(rotationAxis, customRotationAxisEntity);</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">rotationAxis</td><td class="api-list">JointDirections</td><td class="api-list">Specifies which axis the rotation is around. If this is set to CustomJointDirection then the customRotationAxisEntity argument must also be provided.</td></tr><tr><td class="api-list">customRotationAxisEntity</td><td class="api-list">Base</td><td class="api-list">If the rotationAxis is customAxisEntity this argument is used to specify the entity that defines the custom axis of rotation. This can be several types of entities that an axis can be derived from. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">setAsRigidJointMotion Method</h3><p class="api">Defines the relationship between the two joint geometries as a rigid joint.</p><pre class="api-code">"jointInput_var" is a variable referencing a
+JointInput
+object.
+#include &lt;Fusion/Components/JointInput.h&gt;
+returnValue = jointInput_var-&gt;
+setAsRigidJointMotion
+();</pre><p class="api">Return Value: boolean - Returns true if successful.</p><h3 class="api-member">setAsSliderJointMotion Method</h3><p class="api">Defines the relationship between the two joint geometries as a slider joint.</p><pre class="api-code">"jointInput_var" is a variable referencing a
+JointInput
+object.
+#include &lt;Fusion/Components/JointInput.h&gt;
+// Uses no optional arguments.
+returnValue = jointInput_var-&gt;
+setAsSliderJointMotion
+(sliderDirection);
+// Uses optional arguments.
+returnValue = jointInput_var-&gt;
+setAsSliderJointMotion
+(sliderDirection, customSliderDirectionEntity);</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">sliderDirection</td><td class="api-list">JointDirections</td><td class="api-list">Specifies which axis the slide direction is along. If this is set to CustomJointDirection then the customSliderDirectionEntity argument must also be provided.</td></tr><tr><td class="api-list">customSliderDirectionEntity</td><td class="api-list">Base</td><td class="api-list">If the sliderDirection is CustomJointDirection this argument is used to specify the entity that defines the custom slider direction. This can be several types of entities that can define a direction. This is an optional argument whose default value is null.</td></tr></table></body>
+</html>

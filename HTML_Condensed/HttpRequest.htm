@@ -1,0 +1,300 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/HttpRequest.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="27/12/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="HttpRequest" name="contextid"/>
+<meta content="HttpRequest Object" name="description"/>
+<meta content="GUID-5CEA1C43-C3A6-434D-B095-6CFC4E975A63" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>HttpRequest Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">HttpRequest Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Application/HttpRequest.h&gt;<h2 class="api">
+          Description
+        </h2>Supports the ability to make HTTP requests.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="HttpRequest_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HttpRequest_create.htm">create</a></td>
+<td class="api-list">Creates a new HttpRequest object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HttpRequest_execute.htm">execute</a></td>
+<td class="api-list">Execute this request asynchronously. The response will be sent to the completed event.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HttpRequest_executeSync.htm">executeSync</a></td>
+<td class="api-list">Execute this request synchronously. This will block the thread until the request completes.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HttpRequest_getHeader.htm">getHeader</a></td>
+<td class="api-list">Gets the value of the specified header and returns the value.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HttpRequest_hasHeader.htm">hasHeader</a></td>
+<td class="api-list">Gets if the request has a header with the given name. This is useful to distinguish between the case where a header is not set and the case where a header is set to an empty string.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HttpRequest_headers.htm">headers</a></td>
+<td class="api-list">Get the request headers.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HttpRequest_removeHeader.htm">removeHeader</a></td>
+<td class="api-list">Removes a header from the request.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HttpRequest_setHeader.htm">setHeader</a></td>
+<td class="api-list">Sets a header for the request.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="HttpRequest_data.htm">data</a></td>
+<td class="api-list">Gets and sets the body data to send with this request.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HttpRequest_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HttpRequest_method.htm">method</a></td>
+<td class="api-list">Gets and sets the method to use for the request.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HttpRequest_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="HttpRequest_url.htm">url</a></td>
+<td class="api-list">Gets and sets the URL to make the request to.</td>
+</tr>
+</table>
+<h2 class="api">
+            Events
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="HttpRequest_completed.htm">completed</a></td>
+<td class="api-list">The completed event fires when the request has completed. This event will fire on successful or failure.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="HttpRequest_create.htm">HttpRequest.create</a>, <a href="HttpResponse_request.htm">HttpResponse.request</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="FetchBulkComponentProperties_Sample.htm">Gets all properties using GraphQL</a></td>
+<td class="api-list"><p>Fetches bulk component properties of the root component and from occurrences via single GraphQL query.</p></td>
+</tr>
+<tr>
+<td class="api-list"><a href="FetchPartNumberForComponents_Sample.htm">Get part number using GraphQL</a></td>
+<td class="api-list">Fetches part number of root component and from occurrences via GQL query.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SetPartNumberUsingGraphQL_Sample.htm">Set part number using GraphQL</a></td>
+<td class="api-list">Sets part number of root component and from occurrences via GQL query.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2024<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(HttpRequest%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Application/HttpRequest.h&gt;
+returnValue = adsk::core::HttpRequest::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">completed Member</h3><p class="api">The completed event fires when the request has completed. This event will fire on successful or failure.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/Application/HttpRequest.h&gt;
+#include &lt;Core/Application/HttpEvent.h&gt;
+#include &lt;Core/Application/HttpEventHandler.h&gt;
+#include &lt;Core/Application/HttpEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the completed event.
+class MyCompletedEventHandler : public adsk::core::HttpEventHandler
+{
+public:
+void notify(const Ptr&lt;HttpEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyCompletedEventHandler event handler.");
+}
+} _completed;
+--------- Connect the handler to the event. ---------
+// "httpRequest_var" is a variable referencing a
+HttpRequest
+object.
+// Connect the handler function to the event.
+Ptr&lt;HttpEvent&gt; completedEvent = httpRequest_var-&gt;
+completed
+();
+if (!completedEvent)
+return;
+bool isOk = completedEvent-&gt;add(&amp;_completed);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">create Method</h3><p class="api">Creates a new HttpRequest object.</p><pre class="api-code">This is a static method.
+#include &lt;Core/Application/HttpRequest.h&gt;
+// Uses no optional arguments.
+returnValue = adsk::core::HttpRequest::
+create
+(url);
+// Uses optional arguments.
+returnValue = adsk::core::HttpRequest::
+create
+(url, method);</pre><p class="api">Return Value: HttpRequest - Returns the new HttpRequest object.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">string</td><td class="api-list">The URL to make the request to.</td></tr><tr><td class="api-list">method</td><td class="api-list">HttpMethods</td><td class="api-list">The method to use for the request. The default is GetMethod. This is an optional argument whose default value is HttpMethods.GetMethod.</td></tr></table><h3 class="api-member">data Property</h3><p class="api">Gets and sets the body data to send with this request.</p><pre class="api-code">"httpRequest_var" is a variable referencing a HttpRequest object.
+#include &lt;Core/Application/HttpRequest.h&gt;
+// Get the value of the property.
+string propertyValue = httpRequest_var-&gt;
+data
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = httpRequest_var-&gt;
+data
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">execute Method</h3><p class="api">Execute this request asynchronously. The response will be sent to the completed event.</p><pre class="api-code">"httpRequest_var" is a variable referencing a
+HttpRequest
+object.
+#include &lt;Core/Application/HttpRequest.h&gt;
+returnValue = httpRequest_var-&gt;
+execute
+();</pre><p class="api">Return Value: boolean - Returns true if the request was successfully started.</p><h3 class="api-member">executeSync Method</h3><p class="api">Execute this request synchronously. This will block the thread until the request completes.</p><pre class="api-code">"httpRequest_var" is a variable referencing a
+HttpRequest
+object.
+#include &lt;Core/Application/HttpRequest.h&gt;
+returnValue = httpRequest_var-&gt;
+executeSync
+();</pre><p class="api">Return Value: HttpResponse - Returns the response from making this request, or null if an error prevents the request from starting.</p><h3 class="api-member">getHeader Method</h3><p class="api">Gets the value of the specified header and returns the value.</p><pre class="api-code">"httpRequest_var" is a variable referencing a
+HttpRequest
+object.
+#include &lt;Core/Application/HttpRequest.h&gt;
+returnValue = httpRequest_var-&gt;
+getHeader
+(name);</pre><p class="api">Return Value: string - Returns the value of the header, or empty if the header was not found. You can use the hasHeader method to determine if the header exists before getting it. This is especially useful in the case where the header exists but has an empty string value.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">name</td><td class="api-list">string</td><td class="api-list">The case insensitive name of the header.</td></tr></table><h3 class="api-member">hasHeader Method</h3><p class="api">Gets if the request has a header with the given name. This is useful to distinguish between the case where a header is not set and the case where a header is set to an empty string.</p><pre class="api-code">"httpRequest_var" is a variable referencing a
+HttpRequest
+object.
+#include &lt;Core/Application/HttpRequest.h&gt;
+returnValue = httpRequest_var-&gt;
+hasHeader
+(name);</pre><p class="api">Return Value: boolean - Returns true if a header with this name was set in the response.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">name</td><td class="api-list">string</td><td class="api-list">The case insensitive name of the header.</td></tr></table><h3 class="api-member">headers Method</h3><p class="api">Get the request headers.</p><pre class="api-code">#include &lt;Core/Application/HttpRequest.h
+// Declare the output arguments.
+string[] names;
+string[] values;
+boolean returnValue = httpRequest_var-&gt;
+headers
+(names, values);</pre><p class="api">Return Value: boolean - Returns true on success or false on error.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">names</td><td class="api-list">string[]</td><td class="api-list">An array of all the header key names.</td></tr><tr><td class="api-list">values</td><td class="api-list">string[]</td><td class="api-list">An array of all the header values.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"httpRequest_var" is a variable referencing a HttpRequest object.
+#include &lt;Core/Application/HttpRequest.h&gt;
+// Get the value of the property.
+boolean propertyValue = httpRequest_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">method Property</h3><p class="api">Gets and sets the method to use for the request.</p><pre class="api-code">"httpRequest_var" is a variable referencing a HttpRequest object.
+#include &lt;Core/Application/HttpRequest.h&gt;
+// Get the value of the property.
+HttpMethods propertyValue = httpRequest_var-&gt;
+method
+();
+// Set the value of the property, where value_var is a HttpMethods.
+bool returnValue = httpRequest_var-&gt;
+method
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"httpRequest_var" is a variable referencing a HttpRequest object.
+#include &lt;Core/Application/HttpRequest.h&gt;
+// Get the value of the property.
+string propertyValue = httpRequest_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">removeHeader Method</h3><p class="api">Removes a header from the request.</p><pre class="api-code">"httpRequest_var" is a variable referencing a
+HttpRequest
+object.
+#include &lt;Core/Application/HttpRequest.h&gt;
+returnValue = httpRequest_var-&gt;
+removeHeader
+(name);</pre><p class="api">Return Value: boolean - Returns true if the header was found and removed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">name</td><td class="api-list">string</td><td class="api-list">The case insensitive name of the header.</td></tr></table><h3 class="api-member">setHeader Method</h3><p class="api">Sets a header for the request.</p><pre class="api-code">"httpRequest_var" is a variable referencing a
+HttpRequest
+object.
+#include &lt;Core/Application/HttpRequest.h&gt;
+returnValue = httpRequest_var-&gt;
+setHeader
+(name, value);</pre><p class="api">Return Value: boolean - Returns true if setting the header succeeds.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">name</td><td class="api-list">string</td><td class="api-list">The name of the header value.</td></tr><tr><td class="api-list">value</td><td class="api-list">string</td><td class="api-list">The header's value.</td></tr></table><h3 class="api-member">url Property</h3><p class="api">Gets and sets the URL to make the request to.</p><pre class="api-code">"httpRequest_var" is a variable referencing a HttpRequest object.
+#include &lt;Core/Application/HttpRequest.h&gt;
+// Get the value of the property.
+string propertyValue = httpRequest_var-&gt;
+url
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = httpRequest_var-&gt;
+url
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p></body>
+</html>

@@ -1,0 +1,151 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/EqualDistanceChamferEdgeSet.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="01/12/2020" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="EqualDistanceChamferEdgeSet" name="contextid"/>
+<meta content="EqualDistanceChamferEdgeSet Object" name="description"/>
+<meta content="GUID-845A70E9-3A38-499B-81B3-6D8F6DB367C4" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>EqualDistanceChamferEdgeSet Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">EqualDistanceChamferEdgeSet Object
+			</h1>
+              Derived from: <a href="ChamferEdgeSet.htm">ChamferEdgeSet</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/EqualDistanceChamferEdgeSet.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access to the edges and the parameter associated with a equal distance offset chamfer.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="EqualDistanceChamferEdgeSet_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="EqualDistanceChamferEdgeSet_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes the chamfer edge set from the chamfer.<br><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="EqualDistanceChamferEdgeSet_distance.htm">distance</a></td>
+<td class="api-list">Returns the model parameter that controls the offset distance of the chamfer. You can edit the distance by using the properties on the returned ModelParameter object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="EqualDistanceChamferEdgeSet_edges.htm">edges</a></td>
+<td class="api-list">Gets and sets the edges that will be chamfered. This collection can contain BRepEdge, BRepFace, and Feature objects. If BRepFace or Feature are objects are provided, all of the edges associated with those objects will be chamfered.<br/><br/> To use this property, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="EqualDistanceChamferEdgeSet_isTangentChain.htm">isTangentChain</a></td>
+<td class="api-list">Gets and sets the Tangent chain for chamfer. This enables tangent chain option for chamfer.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="EqualDistanceChamferEdgeSet_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="EqualDistanceChamferEdgeSet_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version December 2020<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(EqualDistanceChamferEdgeSet%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/EqualDistanceChamferEdgeSet.h&gt;
+returnValue = adsk::fusion::EqualDistanceChamferEdgeSet::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes the chamfer edge set from the chamfer. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"equalDistanceChamferEdgeSet_var" is a variable referencing an
+EqualDistanceChamferEdgeSet
+object.
+#include &lt;Fusion/Features/EqualDistanceChamferEdgeSet.h&gt;
+returnValue = equalDistanceChamferEdgeSet_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><h3 class="api-member">distance Property</h3><p class="api">Returns the model parameter that controls the offset distance of the chamfer. You can edit the distance by using the properties on the returned ModelParameter object.</p><pre class="api-code">"equalDistanceChamferEdgeSet_var" is a variable referencing an EqualDistanceChamferEdgeSet object.
+#include &lt;Fusion/Features/EqualDistanceChamferEdgeSet.h&gt;
+// Get the value of the property.
+Ptr&lt;ModelParameter&gt; propertyValue = equalDistanceChamferEdgeSet_var-&gt;
+distance
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">edges Property</h3><p class="api">Gets and sets the edges that will be chamfered. This collection can contain BRepEdge, BRepFace, and Feature objects. If BRepFace or Feature are objects are provided, all of the edges associated with those objects will be chamfered. To use this property, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"equalDistanceChamferEdgeSet_var" is a variable referencing an EqualDistanceChamferEdgeSet object.
+#include &lt;Fusion/Features/EqualDistanceChamferEdgeSet.h&gt;
+// Get the value of the property.
+Ptr&lt;ObjectCollection&gt; propertyValue = equalDistanceChamferEdgeSet_var-&gt;
+edges
+();
+// Set the value of the property, where value_var is an ObjectCollection.
+bool returnValue = equalDistanceChamferEdgeSet_var-&gt;
+edges
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">isTangentChain Property</h3><p class="api">Gets and sets the Tangent chain for chamfer. This enables tangent chain option for chamfer.</p><pre class="api-code">"equalDistanceChamferEdgeSet_var" is a variable referencing an EqualDistanceChamferEdgeSet object.
+#include &lt;Fusion/Features/EqualDistanceChamferEdgeSet.h&gt;
+// Get the value of the property.
+boolean propertyValue = equalDistanceChamferEdgeSet_var-&gt;
+isTangentChain
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = equalDistanceChamferEdgeSet_var-&gt;
+isTangentChain
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"equalDistanceChamferEdgeSet_var" is a variable referencing an EqualDistanceChamferEdgeSet object.
+#include &lt;Fusion/Features/EqualDistanceChamferEdgeSet.h&gt;
+// Get the value of the property.
+boolean propertyValue = equalDistanceChamferEdgeSet_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"equalDistanceChamferEdgeSet_var" is a variable referencing an EqualDistanceChamferEdgeSet object.
+#include &lt;Fusion/Features/EqualDistanceChamferEdgeSet.h&gt;
+// Get the value of the property.
+string propertyValue = equalDistanceChamferEdgeSet_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

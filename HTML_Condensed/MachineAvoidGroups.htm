@@ -1,0 +1,208 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/MachineAvoidGroups.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="09/08/2024" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="MachineAvoidGroups" name="contextid"/>
+<meta content="MachineAvoidGroups Object" name="description"/>
+<meta content="GUID-A6092818-200F-47AA-BA34-82744AC7CFC1" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>MachineAvoidGroups Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">MachineAvoidGroups Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/MachineAvoidSelections/MachineAvoidGroups.h&gt;<h2 class="api">
+          Description
+        </h2>Collection of all the mutually exclusive surface groups to be passed to a toolpath with stock to leave and avoid clearances associated to them. This is a read-only container that gets passed to CadMachineAvoidGroupsParameterValue object. It returns the groups associated with the parent parameter value object, but does not write to it. To apply changes done to the collection and the selections it contains, CadMachineAvoidGroupsParameterValue.applyMachineAvoidGroups() needs to be called.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineAvoidGroups_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineAvoidGroups_clear.htm">clear</a></td>
+<td class="api-list">Clears all entries.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineAvoidGroups_createNewMachineAvoidDirectSelectionGroup.htm">createNewMachineAvoidDirectSelectionGroup</a></td>
+<td class="api-list">Creates a new machine avoid group and adds it to the end of the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineAvoidGroups_defaultGroup.htm">defaultGroup</a></td>
+<td class="api-list">Function that returns the specified machine/avoid default group selection object using the group type. Default groups contain surfaces that have a specific meaning within the toolpath operation, for example Model, Fixture, Drive etc.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineAvoidGroups_item.htm">item</a></td>
+<td class="api-list">Function that returns the specified machine/avoid group selection object using an index into the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineAvoidGroups_remove.htm">remove</a></td>
+<td class="api-list">Function that removes the specified group object using an index in the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineAvoidGroups_removeByObject.htm">removeByObject</a></td>
+<td class="api-list">Function that removes the specified group object from the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineAvoidGroups_sync.htm">sync</a></td>
+<td class="api-list">Function that synchronizes the selections and properties of the default groups from the current operation. This is needed when there are changes made to parameters that drive the default groups (e.g. Setup model or fixture selection changes to be reflected in the MachineAvoidGroups object on the API side). WARNING: This function must not be called before applyMachineAvoidGroups, because temporary group settings and selections will not have been stored in the operation object and will be overwritten.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineAvoidGroups_count.htm">count</a></td>
+<td class="api-list">The number of items in the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineAvoidGroups_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineAvoidGroups_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CadMachineAvoidGroupsParameterValue_getMachineAvoidGroups.htm">CadMachineAvoidGroupsParameterValue.getMachineAvoidGroups</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="AvoidMachineSurfaceSettings_Sample.htm">Avoid Machine Surface Settings API Sample</a></td>
+<td class="api-list"><p>This sample script demonstrates how to use Machine/Avoid/Gouge/Fixture functionality.</p><p>The script starts by opening a sample model from the CAM Samples folder via its URN. The model comprises a curved surface with a through slot, a countersunk hole and a raised, circular and filleted upstand from the surface. The model is supported by two rectangular blocks, themselves mounted on a fixture plate. A setup is included with a single operation running a 3-axis diagonal raster over the model, supports and fixture. The operation machines the fixture, the supporting blocks, the upper surface of the upstand and the area within the slot and hole, something we would like to avoid.</p><p>The script duplicates the original operation and then proceeds to create a series of MachineAvoidGroups. These are labelled as either Machine in the case of 2 cap surfaces for the slot and hole, Fixture for the fixture plate, Gouge for the supporting blocks and Avoid for the top face of the upstand. Additionally, both AxialOffset and RadialOffset can be specified for the Machine, Avoid and Fixture passes.</p></td>
+</tr>
+<tr>
+<td class="api-list"><a href="CreateEngravingsSelectionSets_Sample.htm">Create Engravings Selection Sets API Sample</a></td>
+<td class="api-list"><p>This sample script demonstrates how to find and machine engravings in the Z+ direction using pocket recognition.</p><p>The script will first open an example model via its URN. Using pocket recognition, it will identify pockets that may be engravings based on their dimensions.</p><p>We assume here that an engraving pocket is:<ul><li>Made with a flat bottom face and no fillet.</li><li>A closed pocket.</li><li>Have a Z height less than 2 mm</li></ul><p>We demonstrate creating selection sets in both design and manufacture workspaces and use one of the selection sets as an operation geometry selection input to generate an engraving operation.</p><p>The engraving toolpath can be seen by expanding the setup and selecting the operation.</p></p></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2024<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(MachineAvoidGroups%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/MachineAvoidSelections/MachineAvoidGroups.h&gt;
+returnValue = adsk::cam::MachineAvoidGroups::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">clear Method</h3><p class="api">Clears all entries.</p><pre class="api-code">"machineAvoidGroups_var" is a variable referencing a
+MachineAvoidGroups
+object.
+#include &lt;Cam/MachineAvoidSelections/MachineAvoidGroups.h&gt;
+returnValue = machineAvoidGroups_var-&gt;
+clear
+();</pre><h3 class="api-member">count Property</h3><p class="api">The number of items in the collection.</p><pre class="api-code">"machineAvoidGroups_var" is a variable referencing a MachineAvoidGroups object.
+#include &lt;Cam/MachineAvoidSelections/MachineAvoidGroups.h&gt;
+// Get the value of the property.
+uinteger propertyValue = machineAvoidGroups_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">createNewMachineAvoidDirectSelectionGroup Method</h3><p class="api">Creates a new machine avoid group and adds it to the end of the collection.</p><pre class="api-code">"machineAvoidGroups_var" is a variable referencing a
+MachineAvoidGroups
+object.
+#include &lt;Cam/MachineAvoidSelections/MachineAvoidGroups.h&gt;
+returnValue = machineAvoidGroups_var-&gt;
+createNewMachineAvoidDirectSelectionGroup
+();</pre><p class="api">Return Value: MachineAvoidDirectSelection - Returns newly created MachineAvoidDirectSelection.</p><h3 class="api-member">defaultGroup Method</h3><p class="api">Function that returns the specified machine/avoid default group selection object using the group type. Default groups contain surfaces that have a specific meaning within the toolpath operation, for example Model, Fixture, Drive etc.</p><pre class="api-code">"machineAvoidGroups_var" is a variable referencing a
+MachineAvoidGroups
+object.
+#include &lt;Cam/MachineAvoidSelections/MachineAvoidGroups.h&gt;
+returnValue = machineAvoidGroups_var-&gt;
+defaultGroup
+(type);</pre><p class="api">Return Value: MachineAvoidSelectionBase - Returns the specified item or null if there isn't a group of the specified type</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">type</td><td class="api-list">DefaultGroupType</td><td class="api-list">The type of the default group within the collection to return. There can be only one default group of a given type</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"machineAvoidGroups_var" is a variable referencing a MachineAvoidGroups object.
+#include &lt;Cam/MachineAvoidSelections/MachineAvoidGroups.h&gt;
+// Get the value of the property.
+boolean propertyValue = machineAvoidGroups_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Function that returns the specified machine/avoid group selection object using an index into the collection.</p><pre class="api-code">"machineAvoidGroups_var" is a variable referencing a
+MachineAvoidGroups
+object.
+#include &lt;Cam/MachineAvoidSelections/MachineAvoidGroups.h&gt;
+returnValue = machineAvoidGroups_var-&gt;
+item
+(index);</pre><p class="api">Return Value: MachineAvoidSelectionBase - Returns the specified item or null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the item within the collection to return. The first item in the collection has an index of 0.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"machineAvoidGroups_var" is a variable referencing a MachineAvoidGroups object.
+#include &lt;Cam/MachineAvoidSelections/MachineAvoidGroups.h&gt;
+// Get the value of the property.
+string propertyValue = machineAvoidGroups_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">remove Method</h3><p class="api">Function that removes the specified group object using an index in the collection.</p><pre class="api-code">"machineAvoidGroups_var" is a variable referencing a
+MachineAvoidGroups
+object.
+#include &lt;Cam/MachineAvoidSelections/MachineAvoidGroups.h&gt;
+returnValue = machineAvoidGroups_var-&gt;
+remove
+(index);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the item within the collection to remove. The first item in the collection has an index of 0.</td></tr></table><h3 class="api-member">removeByObject Method</h3><p class="api">Function that removes the specified group object from the collection.</p><pre class="api-code">"machineAvoidGroups_var" is a variable referencing a
+MachineAvoidGroups
+object.
+#include &lt;Cam/MachineAvoidSelections/MachineAvoidGroups.h&gt;
+returnValue = machineAvoidGroups_var-&gt;
+removeByObject
+(group);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">group</td><td class="api-list">MachineAvoidSelectionBase</td><td class="api-list"></td></tr></table><h3 class="api-member">sync Method</h3><p class="api">Function that synchronizes the selections and properties of the default groups from the current operation. This is needed when there are changes made to parameters that drive the default groups (e.g. Setup model or fixture selection changes to be reflected in the MachineAvoidGroups object on the API side). WARNING: This function must not be called before applyMachineAvoidGroups, because temporary group settings and selections will not have been stored in the operation object and will be overwritten.</p><pre class="api-code">"machineAvoidGroups_var" is a variable referencing a
+MachineAvoidGroups
+object.
+#include &lt;Cam/MachineAvoidSelections/MachineAvoidGroups.h&gt;
+returnValue = machineAvoidGroups_var-&gt;
+sync
+();</pre></body>
+</html>

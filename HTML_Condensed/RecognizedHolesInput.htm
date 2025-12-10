@@ -1,0 +1,146 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/RecognizedHolesInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="27/12/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="RecognizedHolesInput" name="contextid"/>
+<meta content="RecognizedHolesInput Object" name="description"/>
+<meta content="GUID-AB01C356-F769-4CE7-8661-0E84AC438654" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>RecognizedHolesInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">RecognizedHolesInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/HoleRecognition/RecognizedHolesInput.h&gt;<h2 class="api">
+          Description
+        </h2>Object that contains the settings used by recognizedHoles and recognizedHoleGroups.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="RecognizedHolesInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RecognizedHolesInput_create.htm">create</a></td>
+<td class="api-list">Creates an empty input object to be passed into recognizedHoles or recognizedHoleGroups</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="RecognizedHolesInput_filterPartialHoles.htm">filterPartialHoles</a></td>
+<td class="api-list">Partial holes will not be included in recognized holes when set to true. Holes that intersect edges are considered partial holes. If a hole has multiple segments, such as a counterbore hole, all the segments inside the hole must intersect an edge for the hole to be considered a partial hole.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RecognizedHolesInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RecognizedHolesInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="RecognizedHolesInput_create.htm">RecognizedHolesInput.create</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CreateSetupsFromHoleRecognition_Sample.htm">Create Setups From Hole Recognition API Sample</a></td>
+<td class="api-list"><p>This sample script demonstrates how to create a correctly oriented setup using Hole Recognition functionality.</p><p>The Fusion Manufacturing Extension is required for Hole Recognition.</p><p>The script starts by opening a sample model from the CAM Samples folder via its URN. The model comprises a 3 way coupling containing holes in various orientations and mounted on a fixture. A reference setup is created for the model using a simple stock mode and offsets. The Hole Recognition feature of the Fusion Manufacturing Extension creates 5 hole groups containing 11 holes between them. For each unique hole group vector captured, a new setup is created and its orientation transformed to match the vector.</p></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2024<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(RecognizedHolesInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/HoleRecognition/RecognizedHolesInput.h&gt;
+returnValue = adsk::cam::RecognizedHolesInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">create Method</h3><p class="api">Creates an empty input object to be passed into recognizedHoles or recognizedHoleGroups</p><pre class="api-code">This is a static method.
+#include &lt;Cam/HoleRecognition/RecognizedHolesInput.h&gt;
+returnValue = adsk::cam::RecognizedHolesInput::
+create
+();</pre><p class="api">Return Value: RecognizedHolesInput - The newly created input object.</p><h3 class="api-member">filterPartialHoles Property</h3><p class="api">Partial holes will not be included in recognized holes when set to true. Holes that intersect edges are considered partial holes. If a hole has multiple segments, such as a counterbore hole, all the segments inside the hole must intersect an edge for the hole to be considered a partial hole.</p><pre class="api-code">"recognizedHolesInput_var" is a variable referencing a RecognizedHolesInput object.
+#include &lt;Cam/HoleRecognition/RecognizedHolesInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = recognizedHolesInput_var-&gt;
+filterPartialHoles
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = recognizedHolesInput_var-&gt;
+filterPartialHoles
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"recognizedHolesInput_var" is a variable referencing a RecognizedHolesInput object.
+#include &lt;Cam/HoleRecognition/RecognizedHolesInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = recognizedHolesInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"recognizedHolesInput_var" is a variable referencing a RecognizedHolesInput object.
+#include &lt;Cam/HoleRecognition/RecognizedHolesInput.h&gt;
+// Get the value of the property.
+string propertyValue = recognizedHolesInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

@@ -1,0 +1,204 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ChordLengthFilletEdgeSet.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="10/10/2015" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ChordLengthFilletEdgeSet" name="contextid"/>
+<meta content="ChordLengthFilletEdgeSet Object" name="description"/>
+<meta content="GUID-50912677-EC1B-4BB7-BEF3-675C22C5A822" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ChordLengthFilletEdgeSet Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ChordLengthFilletEdgeSet Object
+			</h1>
+              Derived from: <a href="FilletEdgeSet.htm">FilletEdgeSet</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/ChordLengthFilletEdgeSet.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access to the edges and the parameter associated with a chord length fillet.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChordLengthFilletEdgeSet_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChordLengthFilletEdgeSet_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes the fillet edge set from the fillet.<br><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChordLengthFilletEdgeSet_chordLength.htm">chordLength</a></td>
+<td class="api-list">Returns the model parameter that controls the chord length of the fillet. You can edit the chord length by using the properties on the returned ModelParameter object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChordLengthFilletEdgeSet_continuity.htm">continuity</a></td>
+<td class="api-list">Gets and sets the continuity of the fillet edge set. Valid values are TangentSurfaceContinuityType and CurvatureSurfaceContinuityType.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChordLengthFilletEdgeSet_edges.htm">edges</a></td>
+<td class="api-list">Gets and sets an ObjectCollection containing the BRepEdge, BRepFace, and Feature that are filleted. If the isTangentChain argument is true additional edges or faces may also get filleted if they are tangentially connected to any of the input edges or faces.<br/><br/> To use this property, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChordLengthFilletEdgeSet_isTangentChain.htm">isTangentChain</a></td>
+<td class="api-list">Gets and sets the Tangent chain for fillet. This enables tangent chain option for fillet.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChordLengthFilletEdgeSet_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChordLengthFilletEdgeSet_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChordLengthFilletEdgeSet_tangencyWeight.htm">tangencyWeight</a></td>
+<td class="api-list">Returns the model parameter that controls the G1 or G2 tangency weight of the fillet. It must be a real value between 0.1 and 2.0 inclusive. You can edit the tangency weight by using the properties on the returned ModelParameter object.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="FilletEdgeSets_addChordLengthEdgeSet.htm">FilletEdgeSets.addChordLengthEdgeSet</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletFeatureEditSample_Sample.htm">Fillet Feature Edit API Sample</a></td>
+<td class="api-list"><p></p>Demonstrates editing a fillet feature.<br/>To successfully run this sample you can use this <a api"="" href="../ExtraFiles/APISampleFilletEdgeSetData.f3d&gt; file&lt;/a&gt; or create a new model with the described fillet feature.&lt;/p&gt;
+	&lt;p&gt;
+	&lt;ol&gt;
+	&lt;li&gt;Create a new model and add a block feature.&lt;/li&gt;
+	&lt;li&gt;Create a single fillet feature that defines three different fillets. The fillets need to be created in a way where they don't interact with one another. The easiest way is to create the fillets only on the vertical edges of the box.
+	&lt;ol&gt;
+	&lt;li&gt;Create a constant radius fillet with a radius that is about 1/4 the size of the box.&lt;/li&gt;
+	&lt;li&gt;Create a chord length fillet whose radius is also about 1/4 the size of the box.&lt;/li&gt;
+	&lt;li&gt;Create a variable radius fillet with one intermediate radius and the radii are about 1/4 the size of the box and less.&lt;/li&gt;
+	&lt;/ol&gt;
+&lt;/ol&gt;
+Running the sample script will modify various settings of each fillet and change the edge each fillet is applied to.
+	&lt;/p&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/Table&gt;
+    &lt;h2 class=">
+            Version
+          
+        Introduced in version November 2015<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ChordLengthFilletEdgeSet%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+</a></td></tr></table><h2 class="api">Members Detail (C++)</h2><h3 class="api-member">chordLength Property</h3><p class="api">Returns the model parameter that controls the chord length of the fillet. You can edit the chord length by using the properties on the returned ModelParameter object.</p><pre class="api-code">"chordLengthFilletEdgeSet_var" is a variable referencing a ChordLengthFilletEdgeSet object.
+#include &lt;Fusion/Features/ChordLengthFilletEdgeSet.h&gt;
+// Get the value of the property.
+Ptr&lt;ModelParameter&gt; propertyValue = chordLengthFilletEdgeSet_var-&gt;
+chordLength
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/ChordLengthFilletEdgeSet.h&gt;
+returnValue = adsk::fusion::ChordLengthFilletEdgeSet::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">continuity Property</h3><p class="api">Gets and sets the continuity of the fillet edge set. Valid values are TangentSurfaceContinuityType and CurvatureSurfaceContinuityType.</p><pre class="api-code">"chordLengthFilletEdgeSet_var" is a variable referencing a ChordLengthFilletEdgeSet object.
+#include &lt;Fusion/Features/ChordLengthFilletEdgeSet.h&gt;
+// Get the value of the property.
+SurfaceContinuityTypes propertyValue = chordLengthFilletEdgeSet_var-&gt;
+continuity
+();
+// Set the value of the property, where value_var is a SurfaceContinuityTypes.
+bool returnValue = chordLengthFilletEdgeSet_var-&gt;
+continuity
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes the fillet edge set from the fillet. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"chordLengthFilletEdgeSet_var" is a variable referencing a
+ChordLengthFilletEdgeSet
+object.
+#include &lt;Fusion/Features/ChordLengthFilletEdgeSet.h&gt;
+returnValue = chordLengthFilletEdgeSet_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><h3 class="api-member">edges Property</h3><p class="api">Gets and sets an ObjectCollection containing the BRepEdge, BRepFace, and Feature that are filleted. If the isTangentChain argument is true additional edges or faces may also get filleted if they are tangentially connected to any of the input edges or faces. To use this property, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"chordLengthFilletEdgeSet_var" is a variable referencing a ChordLengthFilletEdgeSet object.
+#include &lt;Fusion/Features/ChordLengthFilletEdgeSet.h&gt;
+// Get the value of the property.
+Ptr&lt;ObjectCollection&gt; propertyValue = chordLengthFilletEdgeSet_var-&gt;
+edges
+();
+// Set the value of the property, where value_var is an ObjectCollection.
+bool returnValue = chordLengthFilletEdgeSet_var-&gt;
+edges
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">isTangentChain Property</h3><p class="api">Gets and sets the Tangent chain for fillet. This enables tangent chain option for fillet.</p><pre class="api-code">"chordLengthFilletEdgeSet_var" is a variable referencing a ChordLengthFilletEdgeSet object.
+#include &lt;Fusion/Features/ChordLengthFilletEdgeSet.h&gt;
+// Get the value of the property.
+boolean propertyValue = chordLengthFilletEdgeSet_var-&gt;
+isTangentChain
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = chordLengthFilletEdgeSet_var-&gt;
+isTangentChain
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"chordLengthFilletEdgeSet_var" is a variable referencing a ChordLengthFilletEdgeSet object.
+#include &lt;Fusion/Features/ChordLengthFilletEdgeSet.h&gt;
+// Get the value of the property.
+boolean propertyValue = chordLengthFilletEdgeSet_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"chordLengthFilletEdgeSet_var" is a variable referencing a ChordLengthFilletEdgeSet object.
+#include &lt;Fusion/Features/ChordLengthFilletEdgeSet.h&gt;
+// Get the value of the property.
+string propertyValue = chordLengthFilletEdgeSet_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">tangencyWeight Property</h3><p class="api">Returns the model parameter that controls the G1 or G2 tangency weight of the fillet. It must be a real value between 0.1 and 2.0 inclusive. You can edit the tangency weight by using the properties on the returned ModelParameter object.</p><pre class="api-code">"chordLengthFilletEdgeSet_var" is a variable referencing a ChordLengthFilletEdgeSet object.
+#include &lt;Fusion/Features/ChordLengthFilletEdgeSet.h&gt;
+// Get the value of the property.
+Ptr&lt;ModelParameter&gt; propertyValue = chordLengthFilletEdgeSet_var-&gt;
+tangencyWeight
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

@@ -1,0 +1,272 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/Parameter.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="Parameter" name="contextid"/>
+<meta content="Parameter Object" name="description"/>
+<meta content="GUID-55297469-5aa5-4dd7-90ba-27483db7151a" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>Parameter Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">Parameter Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Fusion/Parameter.h&gt;<h2 class="api">
+          Description
+        </h2>The base class Parameter object that can represent model or user parameters.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Parameter_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Parameter_attributes.htm">attributes</a></td>
+<td class="api-list">Returns the collection of attributes associated with this face.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Parameter_comment.htm">comment</a></td>
+<td class="api-list">The comment associated with this parameter</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Parameter_dependencyParameters.htm">dependencyParameters</a></td>
+<td class="api-list">Returns a list of parameters that this parameter is dependent on.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Parameter_dependentParameters.htm">dependentParameters</a></td>
+<td class="api-list">Returns a list of parameters that are dependent on this parameter as a result of this parameter being referenced in their equation.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Parameter_entityToken.htm">entityToken</a></td>
+<td class="api-list">Returns a token for the Parameter object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same parameter.<br><br/> When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="Parameter_expression.htm">expression</a></td>
+<td class="api-list">Gets and sets the expression used to calculate the value of the parameter. This is the equivalent of the "Expression" column in the Parameters dialog. Numeric parameters can be defined by a simple expression like "6.25", which will be interpreted based on whatever the default units are for the document. For example, if the units are set to millimeters, the value will be 6.25 mm; if the units are inches, it will be 6.25 inches. The expression can also contain the units so "6.25 in" will always be evaluated as inches regardless of the document units.<br/><br/> An expression can also contain references to other parameters and use equations. For example, the expression "Length / 2" is valid for a numeric parameter as long as there is a numeric parameter named "Length". Expressions can also be used for text parameters, such as concatenating two other text parameters. For example, if there are two existing text parameters named text1 and text2, the expression for another text parameter can be "text1 + text2". More complex equations can also be used with text parameters like "if (Length &lt; 20 mm; 'Short'; 'Long')" where "Length" is a numeric parameter. The resulting string can be obtained using the textValue property.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Parameter_isDeletable.htm">isDeletable</a></td>
+<td class="api-list">Gets if this parameter can be deleted. Parameters that have dependents cannot be deleted, and model parameters typically cannot be deleted. However, there is the possibility in uncommon workflows where a model parameter no longer has any dependents, and it was not automatically deleted. In this case, this property will return true, and the deleteMe method can delete the parameter.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Parameter_isFavorite.htm">isFavorite</a></td>
+<td class="api-list">Gets and sets whether this parameter is included in the Favorites list in the parameters dialog</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Parameter_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Parameter_name.htm">name</a></td>
+<td class="api-list">Gets and sets the name of the parameter. Setting the name can fail if the name is not unique with respect to all other parameters in the design.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Parameter_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Parameter_textValue.htm">textValue</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Gets and sets the value of the parameter when it is a text parameter. This can be determined by checking the valueType property. Setting this value will cause the current expression to be overwritten. If the parameter is not a text parameter, the value of this property should be ignored and setting will fail.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Parameter_unit.htm">unit</a></td>
+<td class="api-list">The unit type associated with this parameter. An empty string is returned for parameters that don't have a unit type.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Parameter_value.htm">value</a></td>
+<td class="api-list">Gets and sets the real value (a double) of the parameter in database units. Setting this property will set/reset the expression value for this parameter.<br/><br/> This property is only valid for numeric parameters and will fail for text parameters. You can determine the value type of the parameter by using the valueType property. Use the textValue property to get and set the value of text parameters.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Parameter_valueType.htm">valueType</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the type of value this parameter is. For a numeric parameter, you can get the value using the value property. For a text parameter, you can get the value using the textValue property.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ConfigurationParameterColumn_parameter.htm">ConfigurationParameterColumn.parameter</a>, <a href="ConstructionPlaneAtAngleDefinition_angle.htm">ConstructionPlaneAtAngleDefinition.angle</a>, <a href="ConstructionPlaneDistanceOnPathDefinition_distance.htm">ConstructionPlaneDistanceOnPathDefinition.distance</a>, <a href="ConstructionPlaneOffsetDefinition_offset.htm">ConstructionPlaneOffsetDefinition.offset</a>, <a href="ConstructionPlaneTangentDefinition_angle.htm">ConstructionPlaneTangentDefinition.angle</a>, <a href="ParameterList_item.htm">ParameterList.item</a>, <a href="ParameterList_itemByName.htm">ParameterList.itemByName</a><h2 class="api">
+            Derived Classes
+          </h2><a href="ModelParameter.htm">ModelParameter</a>, <a href="UserParameter.htm">UserParameter</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CreateAnimation_Sample.htm">Create Animation API Sample</a></td>
+<td class="api-list">Creates a series of images of a design where a parameter is being changed. The series of images can be used to create an animation using other software. To run this sample, have a part open that contains a parameter named "Length". The parameter should be able to be successfully modified from 10 to 15 centimeters. Run the sample and choose or create a directory for the output. After running you should have a folder full of images that are snapshots of each parameter value.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SetParametersFromACsvFileAndExportToSTEP_Sample.htm">Set parameters from a csv file and export to STEP</a></td>
+<td class="api-list">Reads data from a .csv file and sets user parameters in the model and then exports the model to STEP. When setting parameters be aware that this sample is setting user parameters. It's also possible to set model parameters but that's not demonstrated here. Also when accessing parameters, it is case sensitive so the names you use in your program much exactly match the names in the model.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(Parameter%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">attributes Property</h3><p class="api">Returns the collection of attributes associated with this face.</p><pre class="api-code">"parameter_var" is a variable referencing a Parameter object.
+#include &lt;Fusion/Fusion/Parameter.h&gt;
+// Get the value of the property.
+Ptr&lt;Attributes&gt; propertyValue = parameter_var-&gt;
+attributes
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Fusion/Parameter.h&gt;
+returnValue = adsk::fusion::Parameter::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">comment Property</h3><p class="api">The comment associated with this parameter</p><pre class="api-code">"parameter_var" is a variable referencing a Parameter object.
+#include &lt;Fusion/Fusion/Parameter.h&gt;
+// Get the value of the property.
+string propertyValue = parameter_var-&gt;
+comment
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = parameter_var-&gt;
+comment
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">dependencyParameters Property</h3><p class="api">Returns a list of parameters that this parameter is dependent on.</p><pre class="api-code">"parameter_var" is a variable referencing a Parameter object.
+#include &lt;Fusion/Fusion/Parameter.h&gt;
+// Get the value of the property.
+Ptr&lt;ParameterList&gt; propertyValue = parameter_var-&gt;
+dependencyParameters
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">dependentParameters Property</h3><p class="api">Returns a list of parameters that are dependent on this parameter as a result of this parameter being referenced in their equation.</p><pre class="api-code">"parameter_var" is a variable referencing a Parameter object.
+#include &lt;Fusion/Fusion/Parameter.h&gt;
+// Get the value of the property.
+Ptr&lt;ParameterList&gt; propertyValue = parameter_var-&gt;
+dependentParameters
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">entityToken Property</h3><p class="api">Returns a token for the Parameter object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same parameter. When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</p><pre class="api-code">"parameter_var" is a variable referencing a Parameter object.
+#include &lt;Fusion/Fusion/Parameter.h&gt;
+// Get the value of the property.
+string propertyValue = parameter_var-&gt;
+entityToken
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">expression Property</h3><p class="api">Gets and sets the expression used to calculate the value of the parameter. This is the equivalent of the "Expression" column in the Parameters dialog. Numeric parameters can be defined by a simple expression like "6.25", which will be interpreted based on whatever the default units are for the document. For example, if the units are set to millimeters, the value will be 6.25 mm; if the units are inches, it will be 6.25 inches. The expression can also contain the units so "6.25 in" will always be evaluated as inches regardless of the document units. An expression can also contain references to other parameters and use equations. For example, the expression "Length / 2" is valid for a numeric parameter as long as there is a numeric parameter named "Length". Expressions can also be used for text parameters, such as concatenating two other text parameters. For example, if there are two existing text parameters named text1 and text2, the expression for another text parameter can be "text1 + text2". More complex equations can also be used with text parameters like "if (Length &lt; 20 mm; 'Short'; 'Long')" where "Length" is a numeric parameter. The resulting string can be obtained using the textValue property.</p><pre class="api-code">"parameter_var" is a variable referencing a Parameter object.
+#include &lt;Fusion/Fusion/Parameter.h&gt;
+// Get the value of the property.
+string propertyValue = parameter_var-&gt;
+expression
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = parameter_var-&gt;
+expression
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">isDeletable Property</h3><p class="api">Gets if this parameter can be deleted. Parameters that have dependents cannot be deleted, and model parameters typically cannot be deleted. However, there is the possibility in uncommon workflows where a model parameter no longer has any dependents, and it was not automatically deleted. In this case, this property will return true, and the deleteMe method can delete the parameter.</p><pre class="api-code">"parameter_var" is a variable referencing a Parameter object.
+#include &lt;Fusion/Fusion/Parameter.h&gt;
+// Get the value of the property.
+boolean propertyValue = parameter_var-&gt;
+isDeletable
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isFavorite Property</h3><p class="api">Gets and sets whether this parameter is included in the Favorites list in the parameters dialog</p><pre class="api-code">"parameter_var" is a variable referencing a Parameter object.
+#include &lt;Fusion/Fusion/Parameter.h&gt;
+// Get the value of the property.
+boolean propertyValue = parameter_var-&gt;
+isFavorite
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = parameter_var-&gt;
+isFavorite
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"parameter_var" is a variable referencing a Parameter object.
+#include &lt;Fusion/Fusion/Parameter.h&gt;
+// Get the value of the property.
+boolean propertyValue = parameter_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">name Property</h3><p class="api">Gets and sets the name of the parameter. Setting the name can fail if the name is not unique with respect to all other parameters in the design.</p><pre class="api-code">"parameter_var" is a variable referencing a Parameter object.
+#include &lt;Fusion/Fusion/Parameter.h&gt;
+// Get the value of the property.
+string propertyValue = parameter_var-&gt;
+name
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = parameter_var-&gt;
+name
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"parameter_var" is a variable referencing a Parameter object.
+#include &lt;Fusion/Fusion/Parameter.h&gt;
+// Get the value of the property.
+string propertyValue = parameter_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">textValue Property</h3><p class="api">Gets and sets the value of the parameter when it is a text parameter. This can be determined by checking the valueType property. Setting this value will cause the current expression to be overwritten. If the parameter is not a text parameter, the value of this property should be ignored and setting will fail.</p><pre class="api-code">"parameter_var" is a variable referencing a Parameter object.
+#include &lt;Fusion/Fusion/Parameter.h&gt;
+// Get the value of the property.
+string propertyValue = parameter_var-&gt;
+textValue
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = parameter_var-&gt;
+textValue
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">unit Property</h3><p class="api">The unit type associated with this parameter. An empty string is returned for parameters that don't have a unit type.</p><pre class="api-code">"parameter_var" is a variable referencing a Parameter object.
+#include &lt;Fusion/Fusion/Parameter.h&gt;
+// Get the value of the property.
+string propertyValue = parameter_var-&gt;
+unit
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">value Property</h3><p class="api">Gets and sets the real value (a double) of the parameter in database units. Setting this property will set/reset the expression value for this parameter. This property is only valid for numeric parameters and will fail for text parameters. You can determine the value type of the parameter by using the valueType property. Use the textValue property to get and set the value of text parameters.</p><pre class="api-code">"parameter_var" is a variable referencing a Parameter object.
+#include &lt;Fusion/Fusion/Parameter.h&gt;
+// Get the value of the property.
+double propertyValue = parameter_var-&gt;
+value
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = parameter_var-&gt;
+value
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">valueType Property</h3><p class="api">Returns the type of value this parameter is. For a numeric parameter, you can get the value using the value property. For a text parameter, you can get the value using the textValue property.</p><pre class="api-code">"parameter_var" is a variable referencing a Parameter object.
+#include &lt;Fusion/Fusion/Parameter.h&gt;
+// Get the value of the property.
+ParameterValueTypes propertyValue = parameter_var-&gt;
+valueType
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

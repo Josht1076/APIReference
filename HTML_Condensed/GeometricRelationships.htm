@@ -1,0 +1,149 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/GeometricRelationships.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="06/06/2025" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="GeometricRelationships" name="contextid"/>
+<meta content="GeometricRelationships Object" name="description"/>
+<meta content="GUID-303FFDCC-F94A-4EA0-BEA6-01094A7758B2" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>GeometricRelationships Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">GeometricRelationships Object <img alt="Preview" src="../images/TestTubeLarge.png"/></h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Components/GeometricRelationships.h&gt;<p class="api-preview"><img alt="Preview" src="../images/TestTubeSmall.png"/>This functionality is provided as a preview
+				of intended future API capabilities. You are encouraged to use it and report any problems or suggestions using the
+				<a href="https://forums.autodesk.com/t5/fusion-360-api-and-scripts/bd-p/22">Fusion API and Scripts</a> forum.<br/><br/>
+	
+                Because this is a preview of future functionality, there is the possibility that it will change, which will possibly
+		        break any existing programs that use this functionality. Because of that, you should never deliver any programs that use
+		        any preview capabilities. For a distributed program, you should wait until it has moved from preview to released state.
+		    </p>
+<h2 class="api">
+          Description
+        </h2>This object represents a set of geometry relationships. They are used when creating a new inferred joint or assembly constraint and querying an existing one.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationships_add.htm">add</a></td>
+<td class="api-list">Creates a GeometricRelationship object, which defines two entities that will be used to either infer a joint or to create an assembly constraint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationships_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationships_item.htm">item</a></td>
+<td class="api-list">Function that returns the specified GeometricRelationship using an index into the collection.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationships_count.htm">count</a></td>
+<td class="api-list">Returns number of geometric relationships in the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationships_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationships_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="AssemblyConstraint_geometricRelationships.htm">AssemblyConstraint.geometricRelationships</a>, <a href="AssemblyConstraintInput_geometricRelationships.htm">AssemblyConstraintInput.geometricRelationships</a>, <a href="InferredJointInput_geometricRelationships.htm">InferredJointInput.geometricRelationships</a>, <a href="Joint_geometricRelationships.htm">Joint.geometricRelationships</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version July 2025<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(GeometricRelationships%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">add Method</h3><p class="api">Creates a GeometricRelationship object, which defines two entities that will be used to either infer a joint or to create an assembly constraint.</p><pre class="api-code">"geometricRelationships_var" is a variable referencing a
+GeometricRelationships
+object.
+#include &lt;Fusion/Components/GeometricRelationships.h&gt;
+// Uses no optional arguments.
+returnValue = geometricRelationships_var-&gt;
+add
+(entityOne, entityTwo, isMate, value);
+// Uses optional arguments.
+returnValue = geometricRelationships_var-&gt;
+add
+(entityOne, entityTwo, isMate, value, biasPointOne, biasPointTwo);</pre><p class="api">Return Value: GeometricRelationship - Returns the GeometricRelationship object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">entityOne</td><td class="api-list">Base</td><td class="api-list">Specifies the entity from the first occurrence being constrained. The entity can be a BRepFace, BRepEdge, BRepVertex ,SketchLine, SketchPoint, ConstructionPlane, ConstructionAxis, or ConstructionPoint object in the component referenced by the occurrence. It must be a proxy relative to the root component of the assembly. For an inferred joint, if multiple geometric relationships are created, the entities for entityOne must all be from the same occurrence.This is because a single joint will be inferred between the two occurrences. For an assembly constraint, if multiple geometric relationships are created, the entities for entityOne must all be from the same occurrence. This is because all the geometric relationships constrain the occurrence this entity is from.</td></tr><tr><td class="api-list">entityTwo</td><td class="api-list">Base</td><td class="api-list">Specifies the entity from the second occurrence being constrained. The entity can be a BRepFace, BRepEdge, BRepVertex, SketchLine, SketchPoint, ConstructionPlane, ConstructionAxis, or ConstructionPoint object in the component referenced by the occurrence. It must be a proxy relative to the root component of the assembly. For an inferred joint, if multiple geometric relationships are created, the entities for entityTwo must all be from the same occurrence. This is because a single joint will be inferred between the two occurrences. For an assembly constraint, if multiple geometric relationships are created, the entities for entityTwo must all be from the same occurrence. This is because all the geometric relationships constrain the occurrence this entity is from.</td></tr><tr><td class="api-list">isMate</td><td class="api-list">boolean</td><td class="api-list">Specifies if this geometric relationship defines a mate or an angle between the two input entities. If true, it defines a mate; if false, it is an angle.</td></tr><tr><td class="api-list">value</td><td class="api-list">ValueInput</td><td class="api-list">Specifies the value associated with the geometric relationship. If isMate is true, the value is a length, and a real value in centimeters. If it is a string, it is an expression that must evaluate to a length. If the isMate argument is False, the value is an angle, and a real value in radians. If it is a string, it is an expression that must evaluate to an angle.</td></tr><tr><td class="api-list">biasPointOne</td><td class="api-list">Point3D</td><td class="api-list">This optional argument defines a position on the first entity that will be used when positioning the two occurrences. In the user interface, if you select two faces and create an inferred joint, the two faces will be used to mate the occurrences together. Still, there are infinite possibilities of how the occurrences can be positioned relative to one another. The location of the selection points is used to determine a single result, and the occurrences will be positioned so that the selection points are coincident. There aren't selection points in the API, but you can optionally define points that will be used, like the selection points. Fusion will calculate arbitrary points on the entities if the bias points aren't provided. The bias points are not remembered and are only used for the initial placement. This is an optional argument whose default value is null.</td></tr><tr><td class="api-list">biasPointTwo</td><td class="api-list">Point3D</td><td class="api-list">See the description for biasPointOne. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Components/GeometricRelationships.h&gt;
+returnValue = adsk::fusion::GeometricRelationships::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">Returns number of geometric relationships in the collection.</p><pre class="api-code">"geometricRelationships_var" is a variable referencing a GeometricRelationships object.
+#include &lt;Fusion/Components/GeometricRelationships.h&gt;
+// Get the value of the property.
+uinteger propertyValue = geometricRelationships_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"geometricRelationships_var" is a variable referencing a GeometricRelationships object.
+#include &lt;Fusion/Components/GeometricRelationships.h&gt;
+// Get the value of the property.
+boolean propertyValue = geometricRelationships_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Function that returns the specified GeometricRelationship using an index into the collection.</p><pre class="api-code">"geometricRelationships_var" is a variable referencing a
+GeometricRelationships
+object.
+#include &lt;Fusion/Components/GeometricRelationships.h&gt;
+returnValue = geometricRelationships_var-&gt;
+item
+(index);</pre><p class="api">Return Value: GeometricRelationship - Returns the specified item or null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the item within the collection to return. The first item in the collection has an index of 0.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"geometricRelationships_var" is a variable referencing a GeometricRelationships object.
+#include &lt;Fusion/Components/GeometricRelationships.h&gt;
+// Get the value of the property.
+string propertyValue = geometricRelationships_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

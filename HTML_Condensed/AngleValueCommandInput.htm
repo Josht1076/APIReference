@@ -1,0 +1,409 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/AngleValueCommandInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="6/1/2017" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="AngleValueCommandInput" name="contextid"/>
+<meta content="AngleValueCommandInput Object" name="description"/>
+<meta content="GUID-E6F923D7-D6B0-4C15-A4AC-6B11C7712E0E" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>AngleValueCommandInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">AngleValueCommandInput Object
+			</h1>
+              Derived from: <a href="CommandInput.htm">CommandInput</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/UserInterface/AngleValueCommandInput.h&gt;<h2 class="api">
+          Description
+        </h2>Represents a command input that gets an angle from the user. This displays an entry in the command dialog where the user can enter a value and also displays a manipulator in the graphics window to allow them to graphically set the value. The input box is displayed in the dialog when the isVisible property of the command input is true. The manipulator is displayed in the graphics when both the isVisible and isEnabled properties are true.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes this Command input.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_setManipulator.htm">setManipulator</a></td>
+<td class="api-list">Defines the position and orientation of the manipulator. The manipulator is only visible when both the isVisible and isEnabled properties are true. If those properties are true and the setManipulator has not been called, the manipulator will be displayed in a default location (0,0,0) using default directions; x direction (1,0,0) and y direction (0,1,0). Because of that the input is typically set to be invisible and/or disabled and then enabled once enough input has been specified that you can display the manipulator in the desired location.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_commandInputs.htm">commandInputs</a></td>
+<td class="api-list">Gets the CommandInputs class of the parent, which can be a Command, GroupCommandInput or TabCommandInput.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_expression.htm">expression</a></td>
+<td class="api-list">Gets or sets the expression displayed in the input field. This can contain equations and references to parameters but must result in a valid angle expression. If units are not specified as part of the expression, the default user units of degrees are used.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_hasMaximumValue.htm">hasMaximumValue</a></td>
+<td class="api-list">Gets and sets if there is a maximum value for this command input. When setting this property, it is only valid to set it to False to remove the maximum value. Setting the maximumValue property will result in this property being set to True.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_hasMinimumValue.htm">hasMinimumValue</a></td>
+<td class="api-list">Gets and sets if there is a minimum value for this command input. When setting this property, it is only valid to set it to False to remove the minimum value. Setting the minimumValue property will result in this property being set to True.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_id.htm">id</a></td>
+<td class="api-list">Gets the unique identifier for this input in the command's CommandInputs.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_isEnabled.htm">isEnabled</a></td>
+<td class="api-list">Gets or sets if this input is currently enabled or disabled for user interaction.<br><br/> Currently, the isEnabled property does not disable SelectionCommandInput objects but instead has the same effect as the SelectionCommandInput.hasFocus property.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_isFullWidth.htm">isFullWidth</a></td>
+<td class="api-list">Gets or sets if this input fills the entire width of the dialog. If true, the name is ignored and the input control will fill the entire width of the command dialog. The default value for this property in a new command input if false, or not to fill the width. This property does not apply to GroupCommandInputs or TabCommandInputs.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_isMaximumValueInclusive.htm">isMaximumValueInclusive</a></td>
+<td class="api-list">Gets and sets if the value of the input includes the maximum value or is up to the maximum value. For example, if the maximum value is the value of pi (180 degrees) and this property is True, the maximum value can be pi. If this is False, the minimum value must be less than pi. When the maximum value is first defined using the maximumValue property, this property is set to True. The value returned by this property is only meaningful when the hasMaximumValue property returns True.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_isMinimumValueInclusive.htm">isMinimumValueInclusive</a></td>
+<td class="api-list">Gets and sets if the value of the input includes the minimum value or is up to the minimum value. For example, if the minimum value is zero and this property is True, the minimum value can be zero. If this is False, the minimum value must be greater than zero. When the minimum value is first defined using the minimumValue property, this property is set to True. The value returned by this property is only meaningful when the hasMinimumValue property returns True.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_isValidExpression.htm">isValidExpression</a></td>
+<td class="api-list">Returns true if the current expression is valid and can be evaluated. If this is false, the value returned should be ignored because there currently is not a valid value.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_isVisible.htm">isVisible</a></td>
+<td class="api-list">Gets or sets if this input will be visible to the user.<br/><br/> Setting a SelectionCommandInput to be invisible will clear any selections it currently has.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_manipulatorOrigin.htm">manipulatorOrigin</a></td>
+<td class="api-list">Gets the origin point of the manipulator in the model space of the root component. To set the origin use the setManipulator method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_manipulatorXDirection.htm">manipulatorXDirection</a></td>
+<td class="api-list">Gets the X direction of the manipulator in the model space of the root component. The X direction is the 0 angle direction. This direction, along with the Y direction vector define the plane that the manipulator is displayed on.<br/><br/> To set the direction use the setManipulator method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_manipulatorYDirection.htm">manipulatorYDirection</a></td>
+<td class="api-list">Gets the Y direction of the manipulator in the model space of the root component. The X and Y direction vectors define the plane that the manipulator is displayed on.<br/><br/> To set the direction use the setManipulator method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_maximumValue.htm">maximumValue</a></td>
+<td class="api-list">Gets and sets maximum value, if any, that the value can be. The value is in radians. When getting this property you should first check the hasMaximumValue property to see if this property applies. Also, the isMaximumValueInclusive indicates if the minimum includes this value or will be up to this value.<br/><br/> Setting this value will change the isMaximumValueInclusive to True and the hasMaximumValue property to True if hasMaximumValue is currently False, otherwise it will just update the value.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_minimumValue.htm">minimumValue</a></td>
+<td class="api-list">Gets and sets minimum value, if any, that the value can be. The value is in radians. When getting this property you should first check the hasMinimumValue property to see if this property applies. Also, the isMinimumValueInclusive indicates if the minimum includes this value or will be up to this value.<br/><br/> Setting this value will change the isMinimumValueInclusive to True and the hasMinimumValue property to True if hasMinimumValue is currently False, otherwise it will just update the value.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_name.htm">name</a></td>
+<td class="api-list">Gets the user visible name of this input.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_parentCommand.htm">parentCommand</a></td>
+<td class="api-list">Gets the parent Command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_parentCommandInput.htm">parentCommandInput</a></td>
+<td class="api-list">Gets the parent CommandInput if this commandInput is the child of a TabCommandInput or GroupCommandInput. Returns null if there is no parent.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_toolClipFilename.htm">toolClipFilename</a></td>
+<td class="api-list">Gets or sets the full filename of the image file (PNG) used for the tool clip. The tooltip is always shown but as the user hovers over the control it will progressively display the tool clip and description text.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_tooltip.htm">tooltip</a></td>
+<td class="api-list">Gets or sets the base tooltip string. This is always shown for commands. If the tooltip description and/or tool clip are also specified then the tooltip will progressively display more information as the user hovers the mouse over the control.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_tooltipDescription.htm">tooltipDescription</a></td>
+<td class="api-list">Gets or sets additional text to display progressively along with the tooltip. The text for the description can contain some basic HTML formatting tags to format the tags. For example the br tag can be used to create multiple paragraphs. The tooltip is always shown but as the user hovers over the control it will progressively display the tool clip and description text.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AngleValueCommandInput_value.htm">value</a></td>
+<td class="api-list">Gets and sets the current value of the command input. The value is in radians but will be displayed to the user in degrees. Setting this value can fail if the input value is not within the minimum and maximum value range.<br/><br/> The isValidExpression property should be checked before using the value within the command because if the expression can't be evaluated there isn't a valid value. Fusion won't allow the execution of a command that contains ValueCommandInput object with invalid expressions so you can dependably use the value in the execute event of the command.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CommandInputs_addAngleValueCommandInput.htm">CommandInputs.addAngleValueCommandInput</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandInputsSample_Sample.htm">Command Inputs API Sample</a></td>
+<td class="api-list"><p>Creates a command dialog that demonstrates all of the available command inputs.</p>
+<p>To use the sample, create a new Python or C++ script and copy and paste this code, replacing the default code.  You also need to unpack this zip file which contains a <a href="../ExtraFiles/CommandInputsResources.zip">resource folder</a> into the same folder where the source code file (.py or .cpp) is.</p></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2017<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(AngleValueCommandInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+returnValue = adsk::core::AngleValueCommandInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">commandInputs Property</h3><p class="api">Gets the CommandInputs class of the parent, which can be a Command, GroupCommandInput or TabCommandInput.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+Ptr&lt;CommandInputs&gt; propertyValue = angleValueCommandInput_var-&gt;
+commandInputs
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes this Command input.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an
+AngleValueCommandInput
+object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+returnValue = angleValueCommandInput_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true if the delete was successful.</p><h3 class="api-member">expression Property</h3><p class="api">Gets or sets the expression displayed in the input field. This can contain equations and references to parameters but must result in a valid angle expression. If units are not specified as part of the expression, the default user units of degrees are used.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = angleValueCommandInput_var-&gt;
+expression
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = angleValueCommandInput_var-&gt;
+expression
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">hasMaximumValue Property</h3><p class="api">Gets and sets if there is a maximum value for this command input. When setting this property, it is only valid to set it to False to remove the maximum value. Setting the maximumValue property will result in this property being set to True.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = angleValueCommandInput_var-&gt;
+hasMaximumValue
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = angleValueCommandInput_var-&gt;
+hasMaximumValue
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">hasMinimumValue Property</h3><p class="api">Gets and sets if there is a minimum value for this command input. When setting this property, it is only valid to set it to False to remove the minimum value. Setting the minimumValue property will result in this property being set to True.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = angleValueCommandInput_var-&gt;
+hasMinimumValue
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = angleValueCommandInput_var-&gt;
+hasMinimumValue
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">id Property</h3><p class="api">Gets the unique identifier for this input in the command's CommandInputs.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = angleValueCommandInput_var-&gt;
+id
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">isEnabled Property</h3><p class="api">Gets or sets if this input is currently enabled or disabled for user interaction. Currently, the isEnabled property does not disable SelectionCommandInput objects but instead has the same effect as the SelectionCommandInput.hasFocus property.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = angleValueCommandInput_var-&gt;
+isEnabled
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = angleValueCommandInput_var-&gt;
+isEnabled
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isFullWidth Property</h3><p class="api">Gets or sets if this input fills the entire width of the dialog. If true, the name is ignored and the input control will fill the entire width of the command dialog. The default value for this property in a new command input if false, or not to fill the width. This property does not apply to GroupCommandInputs or TabCommandInputs.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = angleValueCommandInput_var-&gt;
+isFullWidth
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = angleValueCommandInput_var-&gt;
+isFullWidth
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isMaximumValueInclusive Property</h3><p class="api">Gets and sets if the value of the input includes the maximum value or is up to the maximum value. For example, if the maximum value is the value of pi (180 degrees) and this property is True, the maximum value can be pi. If this is False, the minimum value must be less than pi. When the maximum value is first defined using the maximumValue property, this property is set to True. The value returned by this property is only meaningful when the hasMaximumValue property returns True.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = angleValueCommandInput_var-&gt;
+isMaximumValueInclusive
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = angleValueCommandInput_var-&gt;
+isMaximumValueInclusive
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isMinimumValueInclusive Property</h3><p class="api">Gets and sets if the value of the input includes the minimum value or is up to the minimum value. For example, if the minimum value is zero and this property is True, the minimum value can be zero. If this is False, the minimum value must be greater than zero. When the minimum value is first defined using the minimumValue property, this property is set to True. The value returned by this property is only meaningful when the hasMinimumValue property returns True.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = angleValueCommandInput_var-&gt;
+isMinimumValueInclusive
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = angleValueCommandInput_var-&gt;
+isMinimumValueInclusive
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = angleValueCommandInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValidExpression Property</h3><p class="api">Returns true if the current expression is valid and can be evaluated. If this is false, the value returned should be ignored because there currently is not a valid value.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = angleValueCommandInput_var-&gt;
+isValidExpression
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isVisible Property</h3><p class="api">Gets or sets if this input will be visible to the user. Setting a SelectionCommandInput to be invisible will clear any selections it currently has.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = angleValueCommandInput_var-&gt;
+isVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = angleValueCommandInput_var-&gt;
+isVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">manipulatorOrigin Property</h3><p class="api">Gets the origin point of the manipulator in the model space of the root component. To set the origin use the setManipulator method.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = angleValueCommandInput_var-&gt;
+manipulatorOrigin
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">manipulatorXDirection Property</h3><p class="api">Gets the X direction of the manipulator in the model space of the root component. The X direction is the 0 angle direction. This direction, along with the Y direction vector define the plane that the manipulator is displayed on. To set the direction use the setManipulator method.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Vector3D&gt; propertyValue = angleValueCommandInput_var-&gt;
+manipulatorXDirection
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">manipulatorYDirection Property</h3><p class="api">Gets the Y direction of the manipulator in the model space of the root component. The X and Y direction vectors define the plane that the manipulator is displayed on. To set the direction use the setManipulator method.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Vector3D&gt; propertyValue = angleValueCommandInput_var-&gt;
+manipulatorYDirection
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">maximumValue Property</h3><p class="api">Gets and sets maximum value, if any, that the value can be. The value is in radians. When getting this property you should first check the hasMaximumValue property to see if this property applies. Also, the isMaximumValueInclusive indicates if the minimum includes this value or will be up to this value. Setting this value will change the isMaximumValueInclusive to True and the hasMaximumValue property to True if hasMaximumValue is currently False, otherwise it will just update the value.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = angleValueCommandInput_var-&gt;
+maximumValue
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = angleValueCommandInput_var-&gt;
+maximumValue
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">minimumValue Property</h3><p class="api">Gets and sets minimum value, if any, that the value can be. The value is in radians. When getting this property you should first check the hasMinimumValue property to see if this property applies. Also, the isMinimumValueInclusive indicates if the minimum includes this value or will be up to this value. Setting this value will change the isMinimumValueInclusive to True and the hasMinimumValue property to True if hasMinimumValue is currently False, otherwise it will just update the value.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = angleValueCommandInput_var-&gt;
+minimumValue
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = angleValueCommandInput_var-&gt;
+minimumValue
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">name Property</h3><p class="api">Gets the user visible name of this input.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = angleValueCommandInput_var-&gt;
+name
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = angleValueCommandInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentCommand Property</h3><p class="api">Gets the parent Command.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Command&gt; propertyValue = angleValueCommandInput_var-&gt;
+parentCommand
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">parentCommandInput Property</h3><p class="api">Gets the parent CommandInput if this commandInput is the child of a TabCommandInput or GroupCommandInput. Returns null if there is no parent.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+Ptr&lt;CommandInput&gt; propertyValue = angleValueCommandInput_var-&gt;
+parentCommandInput
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">setManipulator Method</h3><p class="api">Defines the position and orientation of the manipulator. The manipulator is only visible when both the isVisible and isEnabled properties are true. If those properties are true and the setManipulator has not been called, the manipulator will be displayed in a default location (0,0,0) using default directions; x direction (1,0,0) and y direction (0,1,0). Because of that the input is typically set to be invisible and/or disabled and then enabled once enough input has been specified that you can display the manipulator in the desired location.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an
+AngleValueCommandInput
+object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+returnValue = angleValueCommandInput_var-&gt;
+setManipulator
+(origin, xDirection, yDirection);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">origin</td><td class="api-list">Point3D</td><td class="api-list">Defines the center position of the manipulator in root component space.</td></tr><tr><td class="api-list">xDirection</td><td class="api-list">Vector3D</td><td class="api-list">Defines the X direction of the manipulator in root component space. The X direction is the 0 angle direction. This direction, along with the Y direction vector define the plane that the manipulator is displayed on.</td></tr><tr><td class="api-list">yDirection</td><td class="api-list">Vector3D</td><td class="api-list">Defines the Y direction of the manipulator in root component space. The X and Y direction vectors define the plane the manipulator is displayed one. When the manipulator is rotated from the xDirection vector towards the yDirection vector that is the positive direction.</td></tr></table><h3 class="api-member">toolClipFilename Property</h3><p class="api">Gets or sets the full filename of the image file (PNG) used for the tool clip. The tooltip is always shown but as the user hovers over the control it will progressively display the tool clip and description text.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = angleValueCommandInput_var-&gt;
+toolClipFilename
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = angleValueCommandInput_var-&gt;
+toolClipFilename
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">tooltip Property</h3><p class="api">Gets or sets the base tooltip string. This is always shown for commands. If the tooltip description and/or tool clip are also specified then the tooltip will progressively display more information as the user hovers the mouse over the control.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = angleValueCommandInput_var-&gt;
+tooltip
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = angleValueCommandInput_var-&gt;
+tooltip
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">tooltipDescription Property</h3><p class="api">Gets or sets additional text to display progressively along with the tooltip. The text for the description can contain some basic HTML formatting tags to format the tags. For example the br tag can be used to create multiple paragraphs. The tooltip is always shown but as the user hovers over the control it will progressively display the tool clip and description text.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = angleValueCommandInput_var-&gt;
+tooltipDescription
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = angleValueCommandInput_var-&gt;
+tooltipDescription
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">value Property</h3><p class="api">Gets and sets the current value of the command input. The value is in radians but will be displayed to the user in degrees. Setting this value can fail if the input value is not within the minimum and maximum value range. The isValidExpression property should be checked before using the value within the command because if the expression can't be evaluated there isn't a valid value. Fusion won't allow the execution of a command that contains ValueCommandInput object with invalid expressions so you can dependably use the value in the execute event of the command.</p><pre class="api-code">"angleValueCommandInput_var" is a variable referencing an AngleValueCommandInput object.
+#include &lt;Core/UserInterface/AngleValueCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = angleValueCommandInput_var-&gt;
+value
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = angleValueCommandInput_var-&gt;
+value
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p></body>
+</html>

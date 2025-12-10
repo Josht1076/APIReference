@@ -1,0 +1,308 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/SheetMetalRule.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="09/11/2022" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="SheetMetalRule" name="contextid"/>
+<meta content="SheetMetalRule Object" name="description"/>
+<meta content="GUID-D89344FC-AB4D-435D-889A-7EFB6E9C22C2" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>SheetMetalRule Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">SheetMetalRule Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;<h2 class="api">
+          Description
+        </h2>A sheet metal rule.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes the rule from the design or library. If the rule is in the library and set as the default rule, you cannot delete it. If the rule is in a design and is used by a component you cannot use it.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_bendRadius.htm">bendRadius</a></td>
+<td class="api-list">The interior radius of the bends. Use the returned SheetMetalRuleValue object to get and set the current value of the radius.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_gap.htm">gap</a></td>
+<td class="api-list">The value used for miter, rip, and seam, gaps. Use the returned SheetMetalRuleValue object to get and set the current value of the gap.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_isDefault.htm">isDefault</a></td>
+<td class="api-list">This gets and sets which rule in a library is the default rule. This is only valid for rules in a library and will fail for rules in a design.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_isUsed.htm">isUsed</a></td>
+<td class="api-list">Indicates if this rule is currently being used by a component. This is only valid for rules in a design.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_kFactor.htm">kFactor</a></td>
+<td class="api-list">The K Factor value that is used when calculating the flat pattern. It must be a value between 0 and 1.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_name.htm">name</a></td>
+<td class="api-list">The name of the sheet metal rule. When setting the name, it should be unique with respect to other sheet metal rules in the design or library.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_parentDesign.htm">parentDesign</a></td>
+<td class="api-list">Returns the parent design for a sheet metal rule in a design or it returns null if the sheet metal rule is in the library.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_reliefDepth.htm">reliefDepth</a></td>
+<td class="api-list">The relief depth used in the flat pattern. Use the returned SheetMetalRuleValue object to get and set the current value of the relief depth.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_reliefRemnant.htm">reliefRemnant</a></td>
+<td class="api-list">The relief remnant used in the flat pattern. Use the returned SheetMetalRuleValue object to get and set the current value of the relief remnant.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_reliefShape.htm">reliefShape</a></td>
+<td class="api-list">Gets and sets the bend relief shape to use.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_reliefWidth.htm">reliefWidth</a></td>
+<td class="api-list">The relief width used in the flat pattern. Use the returned SheetMetalRuleValue object to get and set the current value of the relief width.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_thickness.htm">thickness</a></td>
+<td class="api-list">The thickness of the part. Use the returned SheetMetalRuleValue object to get and set the current value of the thickness.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_threeBendReliefRadius.htm">threeBendReliefRadius</a></td>
+<td class="api-list">The relief size used when three bends meet in the flat pattern and the relief shape is "round with radius". Use the returned SheetMetalRuleValue object to get and set the current value of the relief size.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_threeBendReliefShape.htm">threeBendReliefShape</a></td>
+<td class="api-list">Gets and sets the relief shape to use when three bends intersect.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_twoBendReliefPlacement.htm">twoBendReliefPlacement</a></td>
+<td class="api-list">Gets and sets the relief placement for a two-bend relief shape. When the relief shape is round, both intersection and tangent are valid placements. For square shape, only intersection is valid. For all other shapes, this property will return NoTwoBendReliefPlacement because the placement option is not used.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_twoBendReliefShape.htm">twoBendReliefShape</a></td>
+<td class="api-list">Gets and sets the relief shape to use when two bends intersect.<br/><br/> When set to square or round relief shape, the value of the twoBendReliefPlacement property will be set to IntersectionTwoBendReliefPlacement. For a round relief shape you can change the twoBendReliefPlacment property to TangentTwoBendReliefPlacement.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_twoBendReliefSize.htm">twoBendReliefSize</a></td>
+<td class="api-list">The relief size used when two bends meet in the flat pattern and the relief shape is round or square. Use the returned SheetMetalRuleValue object to get and set the current value of the relief size.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SheetMetalRule_units.htm">units</a></td>
+<td class="api-list">Gets the units this rule uses to display values in the dialog. Rules currently only use mm or inch and the units are permanently associated with a rule and cannot be modified.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Component_activeSheetMetalRule.htm">Component.activeSheetMetalRule</a>, <a href="ConfigurationSheetMetalRuleCell_sheetMetalRule.htm">ConfigurationSheetMetalRuleCell.sheetMetalRule</a>, <a href="FlatPatternComponent_activeSheetMetalRule.htm">FlatPatternComponent.activeSheetMetalRule</a>, <a href="SheetMetalRules_addByCopy.htm">SheetMetalRules.addByCopy</a>, <a href="SheetMetalRules_item.htm">SheetMetalRules.item</a>, <a href="SheetMetalRules_itemByName.htm">SheetMetalRules.itemByName</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version November 2022<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(SheetMetalRule%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">bendRadius Property</h3><p class="api">The interior radius of the bends. Use the returned SheetMetalRuleValue object to get and set the current value of the radius.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+Ptr&lt;SheetMetalRuleValue&gt; propertyValue = sheetMetalRule_var-&gt;
+bendRadius
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+returnValue = adsk::fusion::SheetMetalRule::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes the rule from the design or library. If the rule is in the library and set as the default rule, you cannot delete it. If the rule is in a design and is used by a component you cannot use it.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a
+SheetMetalRule
+object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+returnValue = sheetMetalRule_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true if the delete was successful.</p><h3 class="api-member">gap Property</h3><p class="api">The value used for miter, rip, and seam, gaps. Use the returned SheetMetalRuleValue object to get and set the current value of the gap.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+Ptr&lt;SheetMetalRuleValue&gt; propertyValue = sheetMetalRule_var-&gt;
+gap
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">isDefault Property</h3><p class="api">This gets and sets which rule in a library is the default rule. This is only valid for rules in a library and will fail for rules in a design.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+boolean propertyValue = sheetMetalRule_var-&gt;
+isDefault
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sheetMetalRule_var-&gt;
+isDefault
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isUsed Property</h3><p class="api">Indicates if this rule is currently being used by a component. This is only valid for rules in a design.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+boolean propertyValue = sheetMetalRule_var-&gt;
+isUsed
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+boolean propertyValue = sheetMetalRule_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">kFactor Property</h3><p class="api">The K Factor value that is used when calculating the flat pattern. It must be a value between 0 and 1.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+double propertyValue = sheetMetalRule_var-&gt;
+kFactor
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = sheetMetalRule_var-&gt;
+kFactor
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">name Property</h3><p class="api">The name of the sheet metal rule. When setting the name, it should be unique with respect to other sheet metal rules in the design or library.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+string propertyValue = sheetMetalRule_var-&gt;
+name
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = sheetMetalRule_var-&gt;
+name
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+string propertyValue = sheetMetalRule_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentDesign Property</h3><p class="api">Returns the parent design for a sheet metal rule in a design or it returns null if the sheet metal rule is in the library.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+Ptr&lt;Design&gt; propertyValue = sheetMetalRule_var-&gt;
+parentDesign
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">reliefDepth Property</h3><p class="api">The relief depth used in the flat pattern. Use the returned SheetMetalRuleValue object to get and set the current value of the relief depth.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+Ptr&lt;SheetMetalRuleValue&gt; propertyValue = sheetMetalRule_var-&gt;
+reliefDepth
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">reliefRemnant Property</h3><p class="api">The relief remnant used in the flat pattern. Use the returned SheetMetalRuleValue object to get and set the current value of the relief remnant.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+Ptr&lt;SheetMetalRuleValue&gt; propertyValue = sheetMetalRule_var-&gt;
+reliefRemnant
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">reliefShape Property</h3><p class="api">Gets and sets the bend relief shape to use.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+BendReliefShapes propertyValue = sheetMetalRule_var-&gt;
+reliefShape
+();
+// Set the value of the property, where value_var is a BendReliefShapes.
+bool returnValue = sheetMetalRule_var-&gt;
+reliefShape
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">reliefWidth Property</h3><p class="api">The relief width used in the flat pattern. Use the returned SheetMetalRuleValue object to get and set the current value of the relief width.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+Ptr&lt;SheetMetalRuleValue&gt; propertyValue = sheetMetalRule_var-&gt;
+reliefWidth
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">thickness Property</h3><p class="api">The thickness of the part. Use the returned SheetMetalRuleValue object to get and set the current value of the thickness.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+Ptr&lt;SheetMetalRuleValue&gt; propertyValue = sheetMetalRule_var-&gt;
+thickness
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">threeBendReliefRadius Property</h3><p class="api">The relief size used when three bends meet in the flat pattern and the relief shape is "round with radius". Use the returned SheetMetalRuleValue object to get and set the current value of the relief size.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+Ptr&lt;SheetMetalRuleValue&gt; propertyValue = sheetMetalRule_var-&gt;
+threeBendReliefRadius
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">threeBendReliefShape Property</h3><p class="api">Gets and sets the relief shape to use when three bends intersect.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+ThreeBendReliefShapes propertyValue = sheetMetalRule_var-&gt;
+threeBendReliefShape
+();
+// Set the value of the property, where value_var is a ThreeBendReliefShapes.
+bool returnValue = sheetMetalRule_var-&gt;
+threeBendReliefShape
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">twoBendReliefPlacement Property</h3><p class="api">Gets and sets the relief placement for a two-bend relief shape. When the relief shape is round, both intersection and tangent are valid placements. For square shape, only intersection is valid. For all other shapes, this property will return NoTwoBendReliefPlacement because the placement option is not used.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+TwoBendReliefPlacements propertyValue = sheetMetalRule_var-&gt;
+twoBendReliefPlacement
+();
+// Set the value of the property, where value_var is a TwoBendReliefPlacements.
+bool returnValue = sheetMetalRule_var-&gt;
+twoBendReliefPlacement
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">twoBendReliefShape Property</h3><p class="api">Gets and sets the relief shape to use when two bends intersect. When set to square or round relief shape, the value of the twoBendReliefPlacement property will be set to IntersectionTwoBendReliefPlacement. For a round relief shape you can change the twoBendReliefPlacment property to TangentTwoBendReliefPlacement.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+TwoBendReliefShapes propertyValue = sheetMetalRule_var-&gt;
+twoBendReliefShape
+();
+// Set the value of the property, where value_var is a TwoBendReliefShapes.
+bool returnValue = sheetMetalRule_var-&gt;
+twoBendReliefShape
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">twoBendReliefSize Property</h3><p class="api">The relief size used when two bends meet in the flat pattern and the relief shape is round or square. Use the returned SheetMetalRuleValue object to get and set the current value of the relief size.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+Ptr&lt;SheetMetalRuleValue&gt; propertyValue = sheetMetalRule_var-&gt;
+twoBendReliefSize
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">units Property</h3><p class="api">Gets the units this rule uses to display values in the dialog. Rules currently only use mm or inch and the units are permanently associated with a rule and cannot be modified.</p><pre class="api-code">"sheetMetalRule_var" is a variable referencing a SheetMetalRule object.
+#include &lt;Fusion/SheetMetal/SheetMetalRule.h&gt;
+// Get the value of the property.
+string propertyValue = sheetMetalRule_var-&gt;
+units
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

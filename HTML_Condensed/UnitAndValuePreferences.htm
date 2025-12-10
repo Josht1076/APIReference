@@ -1,0 +1,290 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/UnitAndValuePreferences.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="UnitAndValuePreferences" name="contextid"/>
+<meta content="UnitAndValuePreferences Object" name="description"/>
+<meta content="GUID-8a6c8d28-03b0-4ad4-9f59-2845e1020ac7" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>UnitAndValuePreferences Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">UnitAndValuePreferences Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Application/UnitAndValuePreferences.h&gt;<h2 class="api">
+          Description
+        </h2>The UnitAndValuePreferences object provides access to unit and value precision related preferences.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="UnitAndValuePreferences_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="UnitAndValuePreferences_angularPrecision.htm">angularPrecision</a></td>
+<td class="api-list">Gets and sets the angular precision. This value specifies the number of decimals to display.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UnitAndValuePreferences_areAbbreviationsForUnitDisplayed.htm">areAbbreviationsForUnitDisplayed</a></td>
+<td class="api-list">Gets and sets if abbreviations are used for units display.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UnitAndValuePreferences_areSymbolsForUnitDisplayed.htm">areSymbolsForUnitDisplayed</a></td>
+<td class="api-list">Gets and sets if symbols are used for units display.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UnitAndValuePreferences_areTrailingZerosHidden.htm">areTrailingZerosHidden</a></td>
+<td class="api-list">Gets and sets if trailing zeros are hidden when displaying numbers.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UnitAndValuePreferences_degreeDisplayFormat.htm">degreeDisplayFormat</a></td>
+<td class="api-list">Gets and sets the degree display format.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UnitAndValuePreferences_footAndInchDisplayFormat.htm">footAndInchDisplayFormat</a></td>
+<td class="api-list">Gets and sets the foot and inch display format.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UnitAndValuePreferences_generalPrecision.htm">generalPrecision</a></td>
+<td class="api-list">Gets and sets the general precision for distance values. This value specifies the number of decimals to display.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UnitAndValuePreferences_isPeriodDecimalPoint.htm">isPeriodDecimalPoint</a></td>
+<td class="api-list">Gets and sets if the decimal is a period or comma.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UnitAndValuePreferences_isScientificNotationUsed.htm">isScientificNotationUsed</a></td>
+<td class="api-list">Gets and sets if scientific notation is used when displaying numbers.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UnitAndValuePreferences_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UnitAndValuePreferences_materialDisplayUnit.htm">materialDisplayUnit</a></td>
+<td class="api-list">Gets and sets the units types to use when displaying values.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UnitAndValuePreferences_minimumPrecisionWhenHidingZeros.htm">minimumPrecisionWhenHidingZeros</a></td>
+<td class="api-list">Gets and sets the minimum number of digits to the right of the decimal to display before hiding trailing zeros.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UnitAndValuePreferences_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="UnitAndValuePreferences_scientificNotationPrecision.htm">scientificNotationPrecision</a></td>
+<td class="api-list">Gets and sets the number scientific notation precision. This value specifies the number of decimals to display.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UnitAndValuePreferences_useScientficNotationAbove.htm">useScientficNotationAbove</a></td>
+<td class="api-list">Gets and sets the number of whole digits that will be displayed before switching to scientific notation.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UnitAndValuePreferences_useScientficNotationBelow.htm">useScientficNotationBelow</a></td>
+<td class="api-list">Gets and sets the number of non zero decimal places that will be displayed before switching to scientific notation.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Preferences_unitAndValuePreferences.htm">Preferences.unitAndValuePreferences</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(UnitAndValuePreferences%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">angularPrecision Property</h3><p class="api">Gets and sets the angular precision. This value specifies the number of decimals to display.</p><pre class="api-code">"unitAndValuePreferences_var" is a variable referencing a UnitAndValuePreferences object.
+#include &lt;Core/Application/UnitAndValuePreferences.h&gt;
+// Get the value of the property.
+integer propertyValue = unitAndValuePreferences_var-&gt;
+angularPrecision
+();
+// Set the value of the property, where value_var is an integer.
+bool returnValue = unitAndValuePreferences_var-&gt;
+angularPrecision
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an integer.</p><h3 class="api-member">areAbbreviationsForUnitDisplayed Property</h3><p class="api">Gets and sets if abbreviations are used for units display.</p><pre class="api-code">"unitAndValuePreferences_var" is a variable referencing a UnitAndValuePreferences object.
+#include &lt;Core/Application/UnitAndValuePreferences.h&gt;
+// Get the value of the property.
+boolean propertyValue = unitAndValuePreferences_var-&gt;
+areAbbreviationsForUnitDisplayed
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = unitAndValuePreferences_var-&gt;
+areAbbreviationsForUnitDisplayed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">areSymbolsForUnitDisplayed Property</h3><p class="api">Gets and sets if symbols are used for units display.</p><pre class="api-code">"unitAndValuePreferences_var" is a variable referencing a UnitAndValuePreferences object.
+#include &lt;Core/Application/UnitAndValuePreferences.h&gt;
+// Get the value of the property.
+boolean propertyValue = unitAndValuePreferences_var-&gt;
+areSymbolsForUnitDisplayed
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = unitAndValuePreferences_var-&gt;
+areSymbolsForUnitDisplayed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">areTrailingZerosHidden Property</h3><p class="api">Gets and sets if trailing zeros are hidden when displaying numbers.</p><pre class="api-code">"unitAndValuePreferences_var" is a variable referencing a UnitAndValuePreferences object.
+#include &lt;Core/Application/UnitAndValuePreferences.h&gt;
+// Get the value of the property.
+boolean propertyValue = unitAndValuePreferences_var-&gt;
+areTrailingZerosHidden
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = unitAndValuePreferences_var-&gt;
+areTrailingZerosHidden
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Application/UnitAndValuePreferences.h&gt;
+returnValue = adsk::core::UnitAndValuePreferences::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">degreeDisplayFormat Property</h3><p class="api">Gets and sets the degree display format.</p><pre class="api-code">"unitAndValuePreferences_var" is a variable referencing a UnitAndValuePreferences object.
+#include &lt;Core/Application/UnitAndValuePreferences.h&gt;
+// Get the value of the property.
+DegreeDisplayFormats propertyValue = unitAndValuePreferences_var-&gt;
+degreeDisplayFormat
+();
+// Set the value of the property, where value_var is a DegreeDisplayFormats.
+bool returnValue = unitAndValuePreferences_var-&gt;
+degreeDisplayFormat
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">footAndInchDisplayFormat Property</h3><p class="api">Gets and sets the foot and inch display format.</p><pre class="api-code">"unitAndValuePreferences_var" is a variable referencing a UnitAndValuePreferences object.
+#include &lt;Core/Application/UnitAndValuePreferences.h&gt;
+// Get the value of the property.
+FootAndInchDisplayFormats propertyValue = unitAndValuePreferences_var-&gt;
+footAndInchDisplayFormat
+();
+// Set the value of the property, where value_var is a FootAndInchDisplayFormats.
+bool returnValue = unitAndValuePreferences_var-&gt;
+footAndInchDisplayFormat
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">generalPrecision Property</h3><p class="api">Gets and sets the general precision for distance values. This value specifies the number of decimals to display.</p><pre class="api-code">"unitAndValuePreferences_var" is a variable referencing a UnitAndValuePreferences object.
+#include &lt;Core/Application/UnitAndValuePreferences.h&gt;
+// Get the value of the property.
+integer propertyValue = unitAndValuePreferences_var-&gt;
+generalPrecision
+();
+// Set the value of the property, where value_var is an integer.
+bool returnValue = unitAndValuePreferences_var-&gt;
+generalPrecision
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an integer.</p><h3 class="api-member">isPeriodDecimalPoint Property</h3><p class="api">Gets and sets if the decimal is a period or comma.</p><pre class="api-code">"unitAndValuePreferences_var" is a variable referencing a UnitAndValuePreferences object.
+#include &lt;Core/Application/UnitAndValuePreferences.h&gt;
+// Get the value of the property.
+boolean propertyValue = unitAndValuePreferences_var-&gt;
+isPeriodDecimalPoint
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = unitAndValuePreferences_var-&gt;
+isPeriodDecimalPoint
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isScientificNotationUsed Property</h3><p class="api">Gets and sets if scientific notation is used when displaying numbers.</p><pre class="api-code">"unitAndValuePreferences_var" is a variable referencing a UnitAndValuePreferences object.
+#include &lt;Core/Application/UnitAndValuePreferences.h&gt;
+// Get the value of the property.
+boolean propertyValue = unitAndValuePreferences_var-&gt;
+isScientificNotationUsed
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = unitAndValuePreferences_var-&gt;
+isScientificNotationUsed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"unitAndValuePreferences_var" is a variable referencing a UnitAndValuePreferences object.
+#include &lt;Core/Application/UnitAndValuePreferences.h&gt;
+// Get the value of the property.
+boolean propertyValue = unitAndValuePreferences_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">materialDisplayUnit Property</h3><p class="api">Gets and sets the units types to use when displaying values.</p><pre class="api-code">"unitAndValuePreferences_var" is a variable referencing a UnitAndValuePreferences object.
+#include &lt;Core/Application/UnitAndValuePreferences.h&gt;
+// Get the value of the property.
+MaterialDisplayUnits propertyValue = unitAndValuePreferences_var-&gt;
+materialDisplayUnit
+();
+// Set the value of the property, where value_var is a MaterialDisplayUnits.
+bool returnValue = unitAndValuePreferences_var-&gt;
+materialDisplayUnit
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">minimumPrecisionWhenHidingZeros Property</h3><p class="api">Gets and sets the minimum number of digits to the right of the decimal to display before hiding trailing zeros.</p><pre class="api-code">"unitAndValuePreferences_var" is a variable referencing a UnitAndValuePreferences object.
+#include &lt;Core/Application/UnitAndValuePreferences.h&gt;
+// Get the value of the property.
+integer propertyValue = unitAndValuePreferences_var-&gt;
+minimumPrecisionWhenHidingZeros
+();
+// Set the value of the property, where value_var is an integer.
+bool returnValue = unitAndValuePreferences_var-&gt;
+minimumPrecisionWhenHidingZeros
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an integer.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"unitAndValuePreferences_var" is a variable referencing a UnitAndValuePreferences object.
+#include &lt;Core/Application/UnitAndValuePreferences.h&gt;
+// Get the value of the property.
+string propertyValue = unitAndValuePreferences_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">scientificNotationPrecision Property</h3><p class="api">Gets and sets the number scientific notation precision. This value specifies the number of decimals to display.</p><pre class="api-code">"unitAndValuePreferences_var" is a variable referencing a UnitAndValuePreferences object.
+#include &lt;Core/Application/UnitAndValuePreferences.h&gt;
+// Get the value of the property.
+integer propertyValue = unitAndValuePreferences_var-&gt;
+scientificNotationPrecision
+();
+// Set the value of the property, where value_var is an integer.
+bool returnValue = unitAndValuePreferences_var-&gt;
+scientificNotationPrecision
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an integer.</p><h3 class="api-member">useScientficNotationAbove Property</h3><p class="api">Gets and sets the number of whole digits that will be displayed before switching to scientific notation.</p><pre class="api-code">"unitAndValuePreferences_var" is a variable referencing a UnitAndValuePreferences object.
+#include &lt;Core/Application/UnitAndValuePreferences.h&gt;
+// Get the value of the property.
+integer propertyValue = unitAndValuePreferences_var-&gt;
+useScientficNotationAbove
+();
+// Set the value of the property, where value_var is an integer.
+bool returnValue = unitAndValuePreferences_var-&gt;
+useScientficNotationAbove
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an integer.</p><h3 class="api-member">useScientficNotationBelow Property</h3><p class="api">Gets and sets the number of non zero decimal places that will be displayed before switching to scientific notation.</p><pre class="api-code">"unitAndValuePreferences_var" is a variable referencing a UnitAndValuePreferences object.
+#include &lt;Core/Application/UnitAndValuePreferences.h&gt;
+// Get the value of the property.
+integer propertyValue = unitAndValuePreferences_var-&gt;
+useScientficNotationBelow
+();
+// Set the value of the property, where value_var is an integer.
+bool returnValue = unitAndValuePreferences_var-&gt;
+useScientficNotationBelow
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an integer.</p></body>
+</html>

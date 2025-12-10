@@ -1,0 +1,142 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/CommandCreatedEventArgs.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="CommandCreatedEventArgs" name="contextid"/>
+<meta content="CommandCreatedEventArgs Object" name="description"/>
+<meta content="GUID-97617dc7-d815-4b05-ac50-8880afe8937b" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>CommandCreatedEventArgs Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">CommandCreatedEventArgs Object
+			</h1>
+              Derived from: <a href="EventArgs.htm">EventArgs</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/UserInterface/CommandCreatedEventArgs.h&gt;<h2 class="api">
+          Description
+        </h2>Provides data for the CommandCreated event.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandCreatedEventArgs_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandCreatedEventArgs_command.htm">command</a></td>
+<td class="api-list">Gets the newly created Command object that allows you to perform an action in response to the control being clicked.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandCreatedEventArgs_firingEvent.htm">firingEvent</a></td>
+<td class="api-list">The event that the firing is in response to.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandCreatedEventArgs_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandCreatedEventArgs_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandInputsSample_Sample.htm">Command Inputs API Sample</a></td>
+<td class="api-list"><p>Creates a command dialog that demonstrates all of the available command inputs.</p>
+<p>To use the sample, create a new Python or C++ script and copy and paste this code, replacing the default code.  You also need to unpack this zip file which contains a <a href="../ExtraFiles/CommandInputsResources.zip">resource folder</a> into the same folder where the source code file (.py or .cpp) is.</p></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(CommandCreatedEventArgs%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/UserInterface/CommandCreatedEventArgs.h&gt;
+returnValue = adsk::core::CommandCreatedEventArgs::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">command Property</h3><p class="api">Gets the newly created Command object that allows you to perform an action in response to the control being clicked.</p><pre class="api-code">"commandCreatedEventArgs_var" is a variable referencing a CommandCreatedEventArgs object.
+#include &lt;Core/UserInterface/CommandCreatedEventArgs.h&gt;
+// Get the value of the property.
+Ptr&lt;Command&gt; propertyValue = commandCreatedEventArgs_var-&gt;
+command
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">firingEvent Property</h3><p class="api">The event that the firing is in response to.</p><pre class="api-code">"commandCreatedEventArgs_var" is a variable referencing a CommandCreatedEventArgs object.
+#include &lt;Core/UserInterface/CommandCreatedEventArgs.h&gt;
+// Get the value of the property.
+Ptr&lt;Event&gt; propertyValue = commandCreatedEventArgs_var-&gt;
+firingEvent
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"commandCreatedEventArgs_var" is a variable referencing a CommandCreatedEventArgs object.
+#include &lt;Core/UserInterface/CommandCreatedEventArgs.h&gt;
+// Get the value of the property.
+boolean propertyValue = commandCreatedEventArgs_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"commandCreatedEventArgs_var" is a variable referencing a CommandCreatedEventArgs object.
+#include &lt;Core/UserInterface/CommandCreatedEventArgs.h&gt;
+// Get the value of the property.
+string propertyValue = commandCreatedEventArgs_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

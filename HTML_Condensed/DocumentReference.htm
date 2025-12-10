@@ -1,0 +1,167 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/DocumentReference.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="12/6/2017" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="DocumentReference" name="contextid"/>
+<meta content="DocumentReference Object" name="description"/>
+<meta content="GUID-6F1927B4-B34D-463A-A0B3-BE338309DA06" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>DocumentReference Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">DocumentReference Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Application/DocumentReference.h&gt;<h2 class="api">
+          Description
+        </h2>Represents a reference to a document from another document.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentReference_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentReference_getLatestVersion.htm">getLatestVersion</a></td>
+<td class="api-list">Updates the reference to use the latest version. This is only useful when the isOutOfDate property is true.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentReference_dataFile.htm">dataFile</a></td>
+<td class="api-list">The dataFile on A360 that this object references.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentReference_isOutOfDate.htm">isOutOfDate</a></td>
+<td class="api-list">Indicates if this reference is out of date, meaning that the reference is not referencing the latest version.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentReference_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentReference_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentReference_parentDocument.htm">parentDocument</a></td>
+<td class="api-list">The document that is doing the referencing and owns this reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentReference_referencedDocument.htm">referencedDocument</a></td>
+<td class="api-list">The document currently open in Fusion that this object references.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentReference_version.htm">version</a></td>
+<td class="api-list">Gets and sets the version of the dataFile on A360 that this document currently represents. Setting this property will cause all occurrences referencing this document to update to that version.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="DocumentReferences_item.htm">DocumentReferences.item</a>, <a href="Occurrence_documentReference.htm">Occurrence.documentReference</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version June 2017<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(DocumentReference%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Application/DocumentReference.h&gt;
+returnValue = adsk::core::DocumentReference::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">dataFile Property</h3><p class="api">The dataFile on A360 that this object references.</p><pre class="api-code">"documentReference_var" is a variable referencing a DocumentReference object.
+#include &lt;Core/Application/DocumentReference.h&gt;
+// Get the value of the property.
+Ptr&lt;DataFile&gt; propertyValue = documentReference_var-&gt;
+dataFile
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">getLatestVersion Method</h3><p class="api">Updates the reference to use the latest version. This is only useful when the isOutOfDate property is true.</p><pre class="api-code">"documentReference_var" is a variable referencing a
+DocumentReference
+object.
+#include &lt;Core/Application/DocumentReference.h&gt;
+returnValue = documentReference_var-&gt;
+getLatestVersion
+();</pre><p class="api">Return Value: boolean - Returns true if getting the latest version was successful.</p><h3 class="api-member">isOutOfDate Property</h3><p class="api">Indicates if this reference is out of date, meaning that the reference is not referencing the latest version.</p><pre class="api-code">"documentReference_var" is a variable referencing a DocumentReference object.
+#include &lt;Core/Application/DocumentReference.h&gt;
+// Get the value of the property.
+boolean propertyValue = documentReference_var-&gt;
+isOutOfDate
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"documentReference_var" is a variable referencing a DocumentReference object.
+#include &lt;Core/Application/DocumentReference.h&gt;
+// Get the value of the property.
+boolean propertyValue = documentReference_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"documentReference_var" is a variable referencing a DocumentReference object.
+#include &lt;Core/Application/DocumentReference.h&gt;
+// Get the value of the property.
+string propertyValue = documentReference_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentDocument Property</h3><p class="api">The document that is doing the referencing and owns this reference.</p><pre class="api-code">"documentReference_var" is a variable referencing a DocumentReference object.
+#include &lt;Core/Application/DocumentReference.h&gt;
+// Get the value of the property.
+Ptr&lt;Document&gt; propertyValue = documentReference_var-&gt;
+parentDocument
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">referencedDocument Property</h3><p class="api">The document currently open in Fusion that this object references.</p><pre class="api-code">"documentReference_var" is a variable referencing a DocumentReference object.
+#include &lt;Core/Application/DocumentReference.h&gt;
+// Get the value of the property.
+Ptr&lt;Document&gt; propertyValue = documentReference_var-&gt;
+referencedDocument
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">version Property</h3><p class="api">Gets and sets the version of the dataFile on A360 that this document currently represents. Setting this property will cause all occurrences referencing this document to update to that version.</p><pre class="api-code">"documentReference_var" is a variable referencing a DocumentReference object.
+#include &lt;Core/Application/DocumentReference.h&gt;
+// Get the value of the property.
+integer propertyValue = documentReference_var-&gt;
+version
+();
+// Set the value of the property, where value_var is an integer.
+bool returnValue = documentReference_var-&gt;
+version
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an integer.</p></body>
+</html>

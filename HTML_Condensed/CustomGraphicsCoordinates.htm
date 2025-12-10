@@ -1,0 +1,191 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/CustomGraphicsCoordinates.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="18/09/2017" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="CustomGraphicsCoordinates" name="contextid"/>
+<meta content="CustomGraphicsCoordinates Object" name="description"/>
+<meta content="GUID-191F3E84-05E5-4A1E-B449-1FBA7CDCD000" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>CustomGraphicsCoordinates Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">CustomGraphicsCoordinates Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Graphics/CustomGraphicsCoordinates.h&gt;<h2 class="api">
+          Description
+        </h2>Represents coordinates that are used to define vertices in custom graphics.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsCoordinates_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsCoordinates_create.htm">create</a></td>
+<td class="api-list">Static method that creates a CustomGraphicsCoordinates object which can be used as input to various custom graphics methods.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsCoordinates_getColor.htm">getColor</a></td>
+<td class="api-list">Gets the color assigned to the coordinate at the specified index.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsCoordinates_getCoordinate.htm">getCoordinate</a></td>
+<td class="api-list">Gets the coordinate at the specified index.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsCoordinates_setColor.htm">setColor</a></td>
+<td class="api-list">Sets the color of the coordinate at the specified index.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsCoordinates_setCoordinate.htm">setCoordinate</a></td>
+<td class="api-list">Sets the coordinate at the specified index.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsCoordinates_colors.htm">colors</a></td>
+<td class="api-list">Gets and sets the colors associated with the coordinate data. This is used when a mesh is displayed using per-vertex coloring. The color at each vertex is represented by four values where they are the red, green, blue, and alpha values. This should contain the same number of colors as vertices.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsCoordinates_coordinateCount.htm">coordinateCount</a></td>
+<td class="api-list">Returns the number of coordinates defined in the CustomGraphicsCoordinates object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsCoordinates_coordinates.htm">coordinates</a></td>
+<td class="api-list">Gets and sets the coordinate data associated with this CustomGraphicsCoordinates object. This data represents the x, y, z components of the coordinates where the unit of measure is centimeters.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsCoordinates_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsCoordinates_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CustomGraphicsCoordinates_create.htm">CustomGraphicsCoordinates.create</a>, <a href="CustomGraphicsLines_coordinates.htm">CustomGraphicsLines.coordinates</a>, <a href="CustomGraphicsMesh_coordinates.htm">CustomGraphicsMesh.coordinates</a>, <a href="CustomGraphicsPointSet_coordinates.htm">CustomGraphicsPointSet.coordinates</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2017<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(CustomGraphicsCoordinates%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Graphics/CustomGraphicsCoordinates.h&gt;
+returnValue = adsk::fusion::CustomGraphicsCoordinates::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">colors Property</h3><p class="api">Gets and sets the colors associated with the coordinate data. This is used when a mesh is displayed using per-vertex coloring. The color at each vertex is represented by four values where they are the red, green, blue, and alpha values. This should contain the same number of colors as vertices.</p><pre class="api-code">"customGraphicsCoordinates_var" is a variable referencing a CustomGraphicsCoordinates object.
+#include &lt;Fusion/Graphics/CustomGraphicsCoordinates.h&gt;
+// Get the value of the property.
+std::vector&lt;short&gt; propertyValue = customGraphicsCoordinates_var-&gt;
+colors
+();
+// Set the value of the property, where value_var is a short.
+bool returnValue = customGraphicsCoordinates_var-&gt;
+colors
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an array of type short.</p><h3 class="api-member">coordinateCount Property</h3><p class="api">Returns the number of coordinates defined in the CustomGraphicsCoordinates object.</p><pre class="api-code">"customGraphicsCoordinates_var" is a variable referencing a CustomGraphicsCoordinates object.
+#include &lt;Fusion/Graphics/CustomGraphicsCoordinates.h&gt;
+// Get the value of the property.
+integer propertyValue = customGraphicsCoordinates_var-&gt;
+coordinateCount
+();</pre><p class="api">Property Value: This is a read only property whose value is an integer.</p><h3 class="api-member">coordinates Property</h3><p class="api">Gets and sets the coordinate data associated with this CustomGraphicsCoordinates object. This data represents the x, y, z components of the coordinates where the unit of measure is centimeters.</p><pre class="api-code">"customGraphicsCoordinates_var" is a variable referencing a CustomGraphicsCoordinates object.
+#include &lt;Fusion/Graphics/CustomGraphicsCoordinates.h&gt;
+// Get the value of the property.
+std::vector&lt;double&gt; propertyValue = customGraphicsCoordinates_var-&gt;
+coordinates
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = customGraphicsCoordinates_var-&gt;
+coordinates
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an array of type double.</p><h3 class="api-member">create Method</h3><p class="api">Static method that creates a CustomGraphicsCoordinates object which can be used as input to various custom graphics methods.</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Graphics/CustomGraphicsCoordinates.h&gt;
+returnValue = adsk::fusion::CustomGraphicsCoordinates::
+create
+(coordinates);</pre><p class="api">Return Value: CustomGraphicsCoordinates - Returns the created CustomGraphicsCoordinates object or null in the case of failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">coordinates</td><td class="api-list">double[]</td><td class="api-list">An array of doubles where the values are the x, y, z components of each coordinate where the unit of measure is centimeters.</td></tr></table><h3 class="api-member">getColor Method</h3><p class="api">Gets the color assigned to the coordinate at the specified index.</p><pre class="api-code">"customGraphicsCoordinates_var" is a variable referencing a
+CustomGraphicsCoordinates
+object.
+#include &lt;Fusion/Graphics/CustomGraphicsCoordinates.h&gt;
+returnValue = customGraphicsCoordinates_var-&gt;
+getColor
+(index);</pre><p class="api">Return Value: Color - Returns the color associated with the index. Can also return null in the case where there is no color assigned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">integer</td><td class="api-list">The index of the color to return. The first color has an index of 0.</td></tr></table><h3 class="api-member">getCoordinate Method</h3><p class="api">Gets the coordinate at the specified index.</p><pre class="api-code">"customGraphicsCoordinates_var" is a variable referencing a
+CustomGraphicsCoordinates
+object.
+#include &lt;Fusion/Graphics/CustomGraphicsCoordinates.h&gt;
+returnValue = customGraphicsCoordinates_var-&gt;
+getCoordinate
+(index);</pre><p class="api">Return Value: Point3D - Returns the coordinate as a Point3D object.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">integer</td><td class="api-list">The index of the coordinate to return. The first coordinate has an index of 0.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"customGraphicsCoordinates_var" is a variable referencing a CustomGraphicsCoordinates object.
+#include &lt;Fusion/Graphics/CustomGraphicsCoordinates.h&gt;
+// Get the value of the property.
+boolean propertyValue = customGraphicsCoordinates_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"customGraphicsCoordinates_var" is a variable referencing a CustomGraphicsCoordinates object.
+#include &lt;Fusion/Graphics/CustomGraphicsCoordinates.h&gt;
+// Get the value of the property.
+string propertyValue = customGraphicsCoordinates_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">setColor Method</h3><p class="api">Sets the color of the coordinate at the specified index.</p><pre class="api-code">"customGraphicsCoordinates_var" is a variable referencing a
+CustomGraphicsCoordinates
+object.
+#include &lt;Fusion/Graphics/CustomGraphicsCoordinates.h&gt;
+returnValue = customGraphicsCoordinates_var-&gt;
+setColor
+(index, color);</pre><p class="api">Return Value: boolean - Returns true if setting the color was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">integer</td><td class="api-list">The index of the coordinate to set. The first coordinate has an index of 0.</td></tr><tr><td class="api-list">color</td><td class="api-list">Color</td><td class="api-list">The color value as a Color object.</td></tr></table><h3 class="api-member">setCoordinate Method</h3><p class="api">Sets the coordinate at the specified index.</p><pre class="api-code">"customGraphicsCoordinates_var" is a variable referencing a
+CustomGraphicsCoordinates
+object.
+#include &lt;Fusion/Graphics/CustomGraphicsCoordinates.h&gt;
+returnValue = customGraphicsCoordinates_var-&gt;
+setCoordinate
+(index, coordinate);</pre><p class="api">Return Value: boolean - Returns true if setting the coordinate was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">integer</td><td class="api-list">The index of the coordinate to set. The first coordinate has an index of 0.</td></tr><tr><td class="api-list">coordinate</td><td class="api-list">Point3D</td><td class="api-list">The coordinate value as a Point3D object.</td></tr></table></body>
+</html>

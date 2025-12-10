@@ -1,0 +1,119 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ConstructionAxisDefinition.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ConstructionAxisDefinition" name="contextid"/>
+<meta content="ConstructionAxisDefinition Object" name="description"/>
+<meta content="GUID-8e6aab4a-6b64-4de0-b5a7-5f437d15ff4f" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ConstructionAxisDefinition Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ConstructionAxisDefinition Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Construction/ConstructionAxisDefinition.h&gt;<h2 class="api">
+          Description
+        </h2>A Base class to return the information (possibly parametric) used to define a ConstructionAxis.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxisDefinition_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxisDefinition_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxisDefinition_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxisDefinition_parentConstructionAxis.htm">parentConstructionAxis</a></td>
+<td class="api-list">Returns the ConstructionAxis object</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ConstructionAxis_definition.htm">ConstructionAxis.definition</a><h2 class="api">
+            Derived Classes
+          </h2><a href="ConstructionAxisByLineDefinition.htm">ConstructionAxisByLineDefinition</a>, <a href="ConstructionAxisCircularFaceDefinition.htm">ConstructionAxisCircularFaceDefinition</a>, <a href="ConstructionAxisEdgeDefinition.htm">ConstructionAxisEdgeDefinition</a>, <a href="ConstructionAxisNormalToFaceAtPointDefinition.htm">ConstructionAxisNormalToFaceAtPointDefinition</a>, <a href="ConstructionAxisPerpendicularAtPointDefinition.htm">ConstructionAxisPerpendicularAtPointDefinition</a>, <a href="ConstructionAxisTwoPlaneDefinition.htm">ConstructionAxisTwoPlaneDefinition</a>, <a href="ConstructionAxisTwoPointDefinition.htm">ConstructionAxisTwoPointDefinition</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ConstructionAxisDefinition%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Construction/ConstructionAxisDefinition.h&gt;
+returnValue = adsk::fusion::ConstructionAxisDefinition::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"constructionAxisDefinition_var" is a variable referencing a ConstructionAxisDefinition object.
+#include &lt;Fusion/Construction/ConstructionAxisDefinition.h&gt;
+// Get the value of the property.
+boolean propertyValue = constructionAxisDefinition_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"constructionAxisDefinition_var" is a variable referencing a ConstructionAxisDefinition object.
+#include &lt;Fusion/Construction/ConstructionAxisDefinition.h&gt;
+// Get the value of the property.
+string propertyValue = constructionAxisDefinition_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentConstructionAxis Property</h3><p class="api">Returns the ConstructionAxis object</p><pre class="api-code">"constructionAxisDefinition_var" is a variable referencing a ConstructionAxisDefinition object.
+#include &lt;Fusion/Construction/ConstructionAxisDefinition.h&gt;
+// Get the value of the property.
+Ptr&lt;ConstructionAxis&gt; propertyValue = constructionAxisDefinition_var-&gt;
+parentConstructionAxis
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

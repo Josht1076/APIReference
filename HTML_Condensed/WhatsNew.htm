@@ -1,0 +1,428 @@
+<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="topic-type" content="reference-adsk">
+    <meta name="helpsystempath" content="/view/NINVFUS/ENU/">
+    <link rel="canonical" href="/cloudhelp/ENU/Fusion-360-API/files/WhatsNew.htm#!">
+    <meta name="product" content="NINVFUS">
+    <meta name="release" content="NA">
+    <meta name="book" content="Developer">
+    <meta name="component" content="Fusion-360-API">
+    <meta name="created" content="30/10/2025">
+    <meta name="user-comments" content="enable">
+    <meta name="contextid" content="APIWhatsNew">
+    <meta name="description" content="">
+    <meta name="topicid" content="GUID-36B1FFB5-5291-4532-8F11-90E912769B34">
+    <meta name="experiencelevel" content="expert">
+    <meta name="audience" content="programmer">
+    <meta name="language" content="ENU">
+    <title>
+          What's New
+        </title>
+    <link rel="stylesheet" type="text/css" href="../Style/APIHelp-chm.css">
+    <link rel="stylesheet" type="text/css" href="/view/clientframework/client.css"><script type="text/javascript" src="/view/clientframework/client.js"></script><script>
+          // This turns on the display of the copyright notice which is not visible by default.
+          // Because the head is removed when used in the web help, this function will only exists
+          // when the chm help is being created.
+          window.onload = function() {
+          copyrightElement = document.getElementById('CopyrightNotice');
+          copyrightElement.style.display = 'block';
+          };
+        </script></head>
+  <body>
+    <link rel="stylesheet" type="text/css" href="../Style/APIHelp.css">
+    <div class="body">
+      <h1 class="api">
+          What's New For the November 2025 Release
+        </h1><h3 class="API">Enhancements</h3>
+<ol>
+<li>
+<p class="Normal"><b><mark>API For the New Assembly Constraint Functionality is Still in Progress</mark></b><br>
+The July release began introducing some of the API for the new assembly constraint functionality. It is a preview feature, and since July, the functionality has been modified in Fusion, necessitating an API change. The changes are still ongoing, so nothing has changed in the November release. However, they will change in January, so if you start using this API, be aware that your existing code will need to be updated to function correctly. 
+</p>
+</li>
+
+<li>
+<p class="Normal"><b><mark>Assembly User Interface Changes (Insiders Only)</mark></b><br>
+There are changes to the assembly workflow currently being tested by those in the Insider program. These changes can affect add-ins. Both when you're writing and using them. If you have this feature enabled and are having trouble with an add-in, like missing commands or bad behavior, try turning it off.</p>
+
+<p class="Normal">If you're writing add-ins that are impacted, please let your users know to turn off the preview feature. You'll need to wait for the next release for more information about how to modify your add-in to be compatible with these new changes. You'll also want to join the Insider program so you can do some early testing and have your add-in ready to go when the new functionality is released.</p>
+</li>
+
+<li>
+<p class="Normal"><b><mark>Python Update Coming in the Next Release</mark></b><br>
+The next major release of Fusion is updating the version of Python it uses from 3.12 to 3.14. Besides the API, Fusion uses Python for a few other things, and this update includes security fixes from the new version. Most people won't notice any change. Those affected are the developers and users of any Python apps delivered as .pyc files. They'll be broken because .pyc files are tied to the minor version of Python that was used to create them. Add-ins compiled with the current version (3.12) will not be compatible with the next release (3.14) and will fail to load. This change does not affect any add-ins where the .py source code is available.</p>
+
+<p class="Normal">There's nothing you can do yet. If you deliver apps as pyc files, you need to wait for access to the Fusion Insider builds for the next major release. Then, test your add-in and rebuild it to get new pyc files that you can make available when the new release of Fusion goes out. The Autodesk App Store team is aware and will be watching for these updates and timing their release to coincide with the Fusion release.</p>
+
+<p class="Normal">If you're a user, wait for the next major release to come out. You'll know if any apps are impacted because you'll see a notification message saying the app couldn't be loaded. Check the Autodesk App Store or the developer's website to download a new compatible version, install it, and continue using it as before. If you can't find an updated app, contact the app developer directly.</p>
+</li>
+
+<li>
+<p class="Normal"><b>Support for Sketch Text using Parameters</b><br>
+In the last release, we added API support for text parameters, but the API could not use them when creating text in a sketch. That's remedied in this release. To support it, a new <a href="SketchTexts_createInput3.htm">createInput3</a> method has been added to the SketchTexts object. It replaces the previous createInput2, although that method also still works to support existing programs.</p>
+
+<p class="Normal">Some of the enhancements to sketch text in the last release make sketch text more parametric by adding parameters that control the contents of the text and its height. Some changes were made to the API to support this. The previous "text" property would get and set a simple string that defined the text of the text box. Now, the text of a text box is defined by a parameter, which is created when the sketch text is created. Because of this, the previous "text" property has been retired and replaced by a new <a href="SketchText_textParameter.htm">textParameter</a> that gives you access to this parameter. You edit the text by changing the parameter's value. The retired "text" property will continue to work to support existing programs, but internally it now edits the value of the associated parameter. The same is true of the "height" property. It has been retired and is replaced by the new <a href="SketchText_heightParameter.htm">heightParameter</a> property.</p>
+</li>
+
+<li>
+<p class="Normal"><b>Fillet Feature Enhancements</b><br>
+Two significant enhancements have been made to the API for the fillet feature. Using the API, you can now create asymmetric and rule fillets. The previous release added an API to support full round fillets. With these enhancements, the API now fully supports the fillet feature.</p>
+</li>
+
+<div align="center"><img src="../images/NewFilletTypes.png" border=0 align="middle" alt="New Fillet Types"></div>
+<br />
+
+<li>
+<p class="Normal"><b>Full Support for the Offset Faces Feature</b><br>
+The API now has full support to create, query, and edit <a href="OffsetFacesFeatures.htm">Offset Faces features</a>.</p>
+</li>
+
+<li>
+<p class="Normal"><b>Full API Support for the Display Settings</b><br>
+There are many related settings available in the Navigation toolbar in the "Display Settings" drop-down. Some of these have been supported by the API for a long time, like Camera and Visual Style, but many have never been available in the API. Below is a list of the different settings and links to the API objects or functions that now support them. For completeness, this shows how all of them are accessed, regardless of whether they're new in this release.</p>
+
+<p class="Normal">Set how the model is rendered using the <a href="Viewport_visualStyle.htm">Viewport.visualStyle</a> property. This has been in the API for a long time.</p>
+<div align="center"><img src="../images/VisualStyleSettings.png" border=0 align="middle" alt="Visual Style Settings"></div>
+<br />
+
+<p class="Normal">New in this release is the ability to get and set which environment is used to render the view. Use the new <a href="Application_lightingEnvironment.htm">Application.lightingEnvironment</a> property.</p>
+<div align="center"><img src="../images/LightingEnvironment.png" border=0 align="middle" alt="Lighting Environment"></div>
+<br />
+
+<p class="Normal">Released earlier this year is the ability to get and set the various canvas effects. They are accessed through the <a href="GraphicsPreferences_canvasEffects.htm">GraphicsPreferences.canvasEffects</a> property. The GraphicsPreferences object is accessed using <code>Application.preferences.graphicsPreferences</code>.</p>
+<div align="center"><img src="../images/CanvasEffects.png" border=0 align="middle" alt="Canvas Effects"></div>
+<br />
+
+<p class="Normal">New in this release is the ability to get and set which objects are visible. This is done using the <a href="ObjectVisibility.htm">ObjectVisibility</a> object, which is obtained using the <a href="Design_objectVisibility.htm">Design.objectVisibility</a> property.</p>
+<div align="center"><img src="../images/ObjectVisibility.png" border=0 align="middle" alt="Object Visibility"></div>
+<br />
+
+<p class="Normal">Support for the Camera settings has been available for a long time by using the <a href="Camera.htm">Camera</a> object. You get the Camera object from a Viewport using the <a href="Viewport_camera.htm">Viewport.camera</a> property.</p>
+<div align="center"><img src="../images/CameraSettings.png" border=0 align="middle" alt="Camera Settings"></div>
+<br />
+
+<p class="Normal">Support for the ground plane offset is new in this release. This is done through two new properties, <a href="Design_isAdaptiveGroundPlane.htm">Design.isAdaptiveGroundPlane</a> and <a href="setGroundPlaneOffset.htm">Design.setGroundPlaneOffset</a>. Setting the offset to be adaptive allows the ground plane to automatically adjust so it is always at the bottom of the model. Setting the offset turns off the adaptive setting and moves the ground plane from the bottom of the model.</p>
+<div align="center"><img src="../images/GroundPlaneOffset.png" border=0 align="middle" alt="Groundplane Offset"></div>
+<br />
+</li>
+
+<li>
+<p class="Normal"><b>Full Support for Motion Links</b><br>
+The API now fully supports the Motion Link functionality in Fusion. This lets you create different kinds of relationships between joints. This is accessed in the API through the <a href="MotionLinks.htm">MotionLinks</a> collection object, which is obtained from the Component object.</p>
+</li>
+
+<li>
+<p class="Normal"><b>Support for Inserting Standard Designs in Configurations</b><br>
+Fusion now supports defining the insertion of a standard design using a configuration. That is now also supported by the API through the <a href="ConfigurationColumns_addInsertStandardDesignColumn.htm">ConfigurationColumns.addInsertStandardDesignColumn</a> method.</p>
+</li>
+
+<li>
+<p class="Normal"><b>Creation of Slots in a Sketch</b><br>
+Two new methods have been added to the Sketch object to simplify the creation of slot shapes. The API already supported the creation of a center-to-center slot, but now also supports centerpoint and overall slot definitions using the <a href="Sketch_addCenterPointSlot.htm">Sketch.addCenterPointSlot</a> and <a href="Sketch_addOverallSlot.htm">Sketch.addOverallSlot</a> methods.</p>
+</li>
+
+<li>
+<p class="Normal"><b>Full Support for the Mesh Remove feature</b><br>
+The API now fully supports the Mesh Remove feature. This is accessed in the API through the <a href="MeshRemoveFeatures.htm">MeshRemoveFeatures</a> collection object obtained from the Features object, which you get from a Component object.</p>
+</li>
+
+<li>
+<p class="Normal"><b>Custom Graphics Performance Improvements</b><br>
+Some changes have been made to the internals of custom graphics to improve their performance. There's no change in the API objects, but there is a slight behavior change. </p>
+
+<p class="Normal">First, let's look at the performance. Previously, the time to create custom graphics would get exponentially longer the more custom graphics you created. A test that creates 10,000 circles, sets their color, and makes each one selectable would take 447 seconds (7 minutes 27 seconds). Now it takes 2.4 seconds and is 186 times faster than before. However, doing the same thing—creating 1000 circles —used to take 2.14 seconds, but now it takes 0.23 seconds. Still, it's a great improvement, though not as significant as when creating more custom graphics. You'll see some improvement in all cases.</p>
+
+<p class="Normal">Besides the speed improvement, the other behavior change is how custom graphics are transacted. Another way to state this is by how it appears in the undo list. Previously, for a script, every custom graphics-related call you made would result in a new item in the undo list. For the circle example, there would be three items in the undo list for each circle: creating it, setting its color, and making it selectable. If you were using custom graphics within a custom command, all of those undo steps were combined into the single undo of the command, so you didn't see them, but the individual transactions still existed. It was all these transactions that were hurting the performance. Now, any custom graphics calls are not transacted, and those changes are added to the current or previous transaction. For example, if you have a custom command, it starts a transaction that contains all the changes made by the command. The custom graphics changes will be contained within the command transaction. For a script that doesn't have a command, the custom graphics changes will be combined with the previous transaction. For example, if the user creates a sketch line, runs your script to draw custom graphics, and then checks the undo list, they'll only see the sketch line listed. If they undo the action, the sketch line and the custom graphics will be undone. If they redo, both of them will return.</p>
+</li>
+
+<li>
+<p class="Normal"><b>Get the Thumbnail from Cloud Files</b><br>
+The DataFile object now supports the <a href="DataFile_thumbnail.htm">thumbnail</a> property that lets you get the thumbnail of a document on the cloud. This is the same thumbnail that's shown in the Data Panel.</p>
+</li>
+
+<li>
+<p class="Normal"><b>Predefined variables in the TEXT COMMANDS windows</b><br>
+For those of you who use the "Py" option in the TEXT COMMANDS window, there are now two predefined variables: app and ui, so every time you want to use this, you won't need to define them.</p>
+</li>
+
+<li>
+<p class="Normal"><b>Create Data Versions and Custom Properties</b><br>
+Two new methods have been added to support the creation of new versions: <a href="DataFile_createDataVersion.htm">DataFile.createDataVersion</a> and <a href="Document_saveDataVersion.htm">Document.saveDataVersion</a>.</p>
+
+<p class="Normal">Also, somewhat related, additional information has been added to the <a href="MFGDMAPI_UM.htm#CustomProperties">user manual</a> about custom properties in the MFGDM API.</p>
+</li>
+
+</ol>
+
+<h3 class="API">Fixes</h3>
+<ol>
+<li>
+<p class="Normal">
+robertASTUP reported a problem on the <a href="https://forums.autodesk.com/t5/fusion-api-and-scripts-forum/fusion-api-error-when-getting-chamfer-edge-set/td-p/12573042">forum</a> about the API failing to return the geometry being chamfered. This has been fixed.</p>
+</li>
+
+<li>
+<p class="Normal">
+A problem was reported when creating a Ruled Surface feature. It was always requiring a direction entity, even when creating a ruled surface that didn't need a direction. It works now.</p>
+</li>
+
+<li>
+<p class="Normal">
+A problem was reported when using Canvas.saveImage. It would fail if the canvas weren't visible in the graphics window. It should work in all cases now.</p>
+</li>
+</ol>
+
+<h3 class="API">Custom Features</h3>
+<p class="Normal">
+	Custom Features is a new functionality that is currently in preview. This release has nothing new for custom features, but we still encourage you to try it and let us know your thoughts. You can learn more about it in the <a href="CustomFeatures_UM.htm">Custom Feature</a> topic in the API User Manual. There are also two add-in samples referenced in that document that you can use to see the functionality.</p>
+<p class="Normal">
+	<mark>This functionality is provided as a preview of intended future API capabilities. You are encouraged to use it and report any problems or suggestions using the <a href="https://forums.autodesk.com/t5/fusion-api-and-scripts-forum/bd-p/fusion-api-scripts-forum-en">Fusion API and Scripts Forum</a>. However, because this previews future functionality, it may change, breaking any existing programs that use it. Therefore, you should never deliver programs that utilize any preview capabilities.</mark>
+</p>
+<br><h2 class="api">
+          New Objects
+        </h2>
+      <Table class="api-list">
+        <tr class="header">
+          <td class="api-list" style="width:1%;">
+              Name
+            </td>
+          <td class="api-list">
+              Description
+            </td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="AsymmetricFilletEdgeSet.htm">AsymmetricFilletEdgeSet</a></td>
+          <td class="api-list">Provides access to the edges and the parameters associated with an asymmetric fillet.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="AsymmetricFilletEdgeSetInput.htm">AsymmetricFilletEdgeSetInput</a></td>
+          <td class="api-list">Provides access to the edges and the parameters associated with an asymmetric fillet.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="MeshRemoveFeature.htm">MeshRemoveFeature</a></td>
+          <td class="api-list">Object that represents an existing mesh remove feature in a design.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="MeshRemoveFeatureInput.htm">MeshRemoveFeatureInput</a></td>
+          <td class="api-list">This class defines the methods and properties that pertain to the definition of a mesh remove feature.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="MeshRemoveFeatures.htm">MeshRemoveFeatures</a></td>
+          <td class="api-list">Collection that provides access to all of the existing mesh remove features in a component and supports the ability to create new mesh remove features.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="MotionLink.htm">MotionLink</a></td>
+          <td class="api-list">A MotionLink in a design.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="MotionLinkInput.htm">MotionLinkInput</a></td>
+          <td class="api-list">Defines all of the information required to create a new MotionLink. This object provides equivalent functionality to the MotionLink command dialog in that it gathers the required information to create a MotionLink.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="MotionLinks.htm">MotionLinks</a></td>
+          <td class="api-list">The collection of MotionLinks in this component. This provides access to all existing MotionLinks and supports the ability to create new MotionLinks.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="ObjectVisibility.htm">ObjectVisibility</a></td>
+          <td class="api-list">An object that provides control over which objects are displayed in the graphics window. This is the equivalent of the "Object Visibility" settings in the Display Settings drop-down in the navigation toolbar at the bottom of the Fusion graphics window.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="OffsetFacesFeatureInput.htm">OffsetFacesFeatureInput</a></td>
+          <td class="api-list">Object that represents an existing Offset Faces feature in a design. Offset Faces features are created in the UI using the "Offset Face" or "Press Pull" command.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="RuleFilletFeatureInput.htm">RuleFilletFeatureInput</a></td>
+          <td class="api-list">This class defines the methods and properties that pertain to the definition of a rule fillet feature.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="RuleFilletSettings.htm">RuleFilletSettings</a></td>
+          <td class="api-list">The settings for the rule fillet feature.</td>
+        </tr>
+      </Table>
+      <h2 class="api">
+          New Methods, Properties and Events
+        </h2>
+      <Table class="api-list">
+        <tr class="header">
+          <td class="api-list" style="width:1%;">
+              Name
+            </td>
+          <td class="api-list">
+              Description
+            </td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="Application_lightingEnvironment.htm">Application.lightingEnvironment</a></td>
+          <td class="api-list">Gets and sets the current lighting environment to use when rendering the graphics.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="AsBuiltJoint_motionLinks.htm">AsBuiltJoint.motionLinks</a></td>
+          <td class="api-list">Returns the MotionLink objects that this joint is involved in.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="Component_motionLinks.htm">Component.motionLinks</a></td>
+          <td class="api-list">Returns the collection of MotionLinks associated with this component.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="DataFile_createDataVersion.htm">DataFile.createDataVersion</a></td>
+          <td class="api-list">Creates a version of this DataFile at tip.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="DataFile_thumbnail.htm">DataFile.thumbnail</a></td>
+          <td class="api-list">Starts the process to get the thumbnail image data associated with this DataFile. Because the data exists on the cloud, a DataObjectFuture is returned that you can use to monitor the state of downloading the thumbnail and then getting the image once it is available.<br/><br/> The data returned is a 256x256 PNG image. For cases where the DataFile does not have an associated thumbnail, the dataObject property of the returned DataObjectFuture will return null and the state property will return 'FailedFutureState'.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="Design_isAdaptiveGroundPlane.htm">Design.isAdaptiveGroundPlane</a></td>
+          <td class="api-list">Gets and sets if the position of the ground plane for this design is adaptive. If true, the ground plane will automatically move to be just below the model. The orientation of the ground plane is always normal to the "up" direction as defined by the view cube.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="Design_objectVisibility.htm">Design.objectVisibility</a></td>
+          <td class="api-list">Returns the ObjectVisibility object associated with this design which controls which objects are displayed in the graphics window. This is the equivalent of the "Object Visibility" settings in the Display Settings drop-down in the navigation toolbar at the bottom of the Fusion graphics window.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="Design_setGroundPlaneOffset.htm">Design.setGroundPlaneOffset</a></td>
+          <td class="api-list">Sets the offset of the ground plane. If the isAdpativeGroundPlane property is true, setting the offset will change isAdaptiveGroundPlane to false. The offset value is an offset relative to the current position of the ground plane.<br/><br/> One example of how this method can be used is to set the isAdaptiveGroundPlane property to true, which will position the ground plane at the bottom of the part. By doing this, you know the current position of the ground plane. Then calling this method with a value of -2.0 will reposition the ground plane 2 cm below the part. If you called this method again with a value of -1.0 the ground plane will be moved an additional 1 cm away from the geometry, since this is defining an offset relative to the current position.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="Document_saveDataVersion.htm">Document.saveDataVersion</a></td>
+          <td class="api-list">Creates a version on a dirty document by implictly saving it first. This method is not applicable when saving a document for the first time. In that case, you must use the Document.saveAs method. You can determine if a document has been saved by checking the value of the isSaved property.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="DrawingDocument_saveDataVersion.htm">DrawingDocument.saveDataVersion</a></td>
+          <td class="api-list">Creates a version on a dirty document by implictly saving it first. This method is not applicable when saving a document for the first time. In that case, you must use the Document.saveAs method. You can determine if a document has been saved by checking the value of the isSaved property.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="FaceGroup_attributes.htm">FaceGroup.attributes</a></td>
+          <td class="api-list">Returns the collection of attributes associated with this face group.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="Features_meshRemoveFeatures.htm">Features.meshRemoveFeatures</a></td>
+          <td class="api-list">Returns the collection that provides access to the mesh remove features within the component and supports the creation of new mesh remove features.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="FilletEdgeSetInputs_addAsymmetricRadiusEdgeSet.htm">FilletEdgeSetInputs.addAsymmetricRadiusEdgeSet</a></td>
+          <td class="api-list">Adds an asymmetric fillet edge set to the fillet feature input. Some settings are initialized with a default value and can be set by modifying properties on the returned AsymmetricFilletEdgeSetInput object.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="FilletEdgeSets_addAsymmetricRadiusEdgeSet.htm">FilletEdgeSets.addAsymmetricRadiusEdgeSet</a></td>
+          <td class="api-list">Adds an asymmetric fillet edge set to the fillet feature.<br/><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="FilletFeature_ruleFilletSettings.htm">FilletFeature.ruleFilletSettings</a></td>
+          <td class="api-list">Gets the RuleFilletSettings object for the rule fillet.<br/><br/> This is valid only when the filletFeatureType is FilletFeatureTypes.RuleFilletFeatureType, otherwise this returns null.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="FilletFeatures_addRuleFillet.htm">FilletFeatures.addRuleFillet</a></td>
+          <td class="api-list">Creates a new rule fillet feature.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="FilletFeatures_createRuleFilletInput.htm">FilletFeatures.createRuleFilletInput</a></td>
+          <td class="api-list">Creates a RuleFilletFeatureInput object. Use properties and methods on this object to define the fillet you want to create and then use the addRuleFillet method, passing in the RuleFilletFeatureInput object.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="FlatPatternComponent_motionLinks.htm">FlatPatternComponent.motionLinks</a></td>
+          <td class="api-list">Returns the collection of MotionLinks associated with this component.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="FlatPatternProduct_isAdaptiveGroundPlane.htm">FlatPatternProduct.isAdaptiveGroundPlane</a></td>
+          <td class="api-list">Gets and sets if the position of the ground plane for this design is adaptive. If true, the ground plane will automatically move to be just below the model. The orientation of the ground plane is always normal to the "up" direction as defined by the view cube.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="FlatPatternProduct_objectVisibility.htm">FlatPatternProduct.objectVisibility</a></td>
+          <td class="api-list">Returns the ObjectVisibility object associated with this design which controls which objects are displayed in the graphics window. This is the equivalent of the "Object Visibility" settings in the Display Settings drop-down in the navigation toolbar at the bottom of the Fusion graphics window.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="FlatPatternProduct_setGroundPlaneOffset.htm">FlatPatternProduct.setGroundPlaneOffset</a></td>
+          <td class="api-list">Sets the offset of the ground plane. If the isAdpativeGroundPlane property is true, setting the offset will change isAdaptiveGroundPlane to false. The offset value is an offset relative to the current position of the ground plane.<br/><br/> One example of how this method can be used is to set the isAdaptiveGroundPlane property to true, which will position the ground plane at the bottom of the part. By doing this, you know the current position of the ground plane. Then calling this method with a value of -2.0 will reposition the ground plane 2 cm below the part. If you called this method again with a value of -1.0 the ground plane will be moved an additional 1 cm away from the geometry, since this is defining an offset relative to the current position.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="FusionDocument_saveDataVersion.htm">FusionDocument.saveDataVersion</a></td>
+          <td class="api-list">Creates a version on a dirty document by implictly saving it first. This method is not applicable when saving a document for the first time. In that case, you must use the Document.saveAs method. You can determine if a document has been saved by checking the value of the isSaved property.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="Joint_motionLinks.htm">Joint.motionLinks</a></td>
+          <td class="api-list">Returns the MotionLink objects that this joint is involved in.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="OffsetFacesFeature_createForAssemblyContext.htm">OffsetFacesFeature.createForAssemblyContext</a></td>
+          <td class="api-list">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="OffsetFacesFeature_distance.htm">OffsetFacesFeature.distance</a></td>
+          <td class="api-list">Returns the parameter that controls the offset distance. You can modify the distance by using the properties of the returned ModelParameter object.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="OffsetFacesFeature_inputFaces.htm">OffsetFacesFeature.inputFaces</a></td>
+          <td class="api-list">Returns an array of BRepFace objects that were offset. The timeline must be rolled back to immediately before this feature when getting or setting this property so the faces are available.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="OffsetFacesFeature_nativeObject.htm">OffsetFacesFeature.nativeObject</a></td>
+          <td class="api-list">The NativeObject is the object outside the context of an assembly and in the context of its parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="OffsetFacesFeatures_add.htm">OffsetFacesFeatures.add</a></td>
+          <td class="api-list">Creates a new offset feature.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="OffsetFacesFeatures_createInput.htm">OffsetFacesFeatures.createInput</a></td>
+          <td class="api-list">Creates an OffsetFacesFeatureInput object. Use properties and methods on this object to define the offset feature you want to create and then use the add method, passing in the OffsetFacesFeatureInput object to create the feature.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="Sketch_addCenterPointSlot.htm">Sketch.addCenterPointSlot</a></td>
+          <td class="api-list">Creates the geometry that represents a slot where the first point defines the center of the slot and the second point defines the direction and half-length. Geometric constraints are automatically added to the geometry to maintain the slot shape and optionally, dimensions to control the size can be added. The created geometry and constraints are returned.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="Sketch_addOverallSlot.htm">Sketch.addOverallSlot</a></td>
+          <td class="api-list">Creates the geometry that represents an overall slot. Geometric constraints are automatically added to the geometry to maintain the slot shape and optionally, dimensions to control the size can be added. The created geometry and constraints are returned.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="SketchText_heightParameter.htm">SketchText.heightParameter</a></td>
+          <td class="api-list">Returns the model parameter that was created when the sketch text was created that controls the height of the sketch text. To edit the height, you can use the expression and value properties of the returned ModelParameter object.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="SketchText_textParameter.htm">SketchText.textParameter</a></td>
+          <td class="api-list">Returns the model parameter that was created when the sketch text was created that controls the contents of the sketch text. To edit the text, you can use the expression and textValue properties of the returned ModelParameter object.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="SketchTextInput_expression.htm">SketchTextInput.expression</a></td>
+          <td class="api-list">Gets and sets the expression of the parameter that will be created when this SketchText is created. It can be a simple string or it can be an expression that combines text with parameter values. Simple text must be enclosed within single quotes, the same as it is required in the TEXT command dialog.<br/><br/> An example of a valid expression is: "'Length: ' + lengthParam" and will result in "Length: 3.0 mm". The expression result can be obtained by using the text property on the created SketchTextInput object.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="SketchTextInput_height2.htm">SketchTextInput.height2</a></td>
+          <td class="api-list">Gets and sets the ValueInput that defines the height of the text. This value is used to create a parameter that will control the height of the text. It can be a value where it defines the height of the text in centimeters, or it can be a string where it defines the equation of the parameter and must evaluate to a valid length.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="SketchTexts_createInput3.htm">SketchTexts.createInput3</a></td>
+          <td class="api-list">Creates a SketchTextInput object that is used to define the additional input to create text. The SketchTextInput object is equivalent to the Sketch Text dialog in that it collects all of the input required to create sketch text. You must call setAsFitOnPath, setAsAlongPath, or setAsMultiLine methods to define one of the three types of text. Once the properties of the SketchTextInput object have been defined, pass the SketchTextInput to the add method to create the sketch text.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="WorkingModel_isAdaptiveGroundPlane.htm">WorkingModel.isAdaptiveGroundPlane</a></td>
+          <td class="api-list">Gets and sets if the position of the ground plane for this design is adaptive. If true, the ground plane will automatically move to be just below the model. The orientation of the ground plane is always normal to the "up" direction as defined by the view cube.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="WorkingModel_objectVisibility.htm">WorkingModel.objectVisibility</a></td>
+          <td class="api-list">Returns the ObjectVisibility object associated with this design which controls which objects are displayed in the graphics window. This is the equivalent of the "Object Visibility" settings in the Display Settings drop-down in the navigation toolbar at the bottom of the Fusion graphics window.</td>
+        </tr>
+        <tr>
+          <td class="api-list"><a href="WorkingModel_setGroundPlaneOffset.htm">WorkingModel.setGroundPlaneOffset</a></td>
+          <td class="api-list">Sets the offset of the ground plane. If the isAdpativeGroundPlane property is true, setting the offset will change isAdaptiveGroundPlane to false. The offset value is an offset relative to the current position of the ground plane.<br/><br/> One example of how this method can be used is to set the isAdaptiveGroundPlane property to true, which will position the ground plane at the bottom of the part. By doing this, you know the current position of the ground plane. Then calling this method with a value of -2.0 will reposition the ground plane 2 cm below the part. If you called this method again with a value of -1.0 the ground plane will be moved an additional 1 cm away from the geometry, since this is defining an offset relative to the current position.</td>
+        </tr>
+      </Table><br><p>
+        <font size="1">
+          Help created: Thursday, October 30, 2025 3:52 PM</font>
+      </p><br><br><div id="CopyrightNotice" style="display:none;">
+        <hr>
+        <table width="100%" style="font-size:15">
+          <tr>
+            <td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+            <td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(Whats%20New)">Comment on this page.</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

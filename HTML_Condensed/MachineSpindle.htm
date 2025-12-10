@@ -1,0 +1,186 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/MachineSpindle.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="21/02/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="MachineSpindle" name="contextid"/>
+<meta content="MachineSpindle Object" name="description"/>
+<meta content="GUID-C4E64DDE-F040-42F4-8992-8071A8DF4551" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>MachineSpindle Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">MachineSpindle Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/Machine/MachineSpindle.h&gt;<h2 class="api">
+          Description
+        </h2>Object representing a spindle on the machine<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineSpindle_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineSpindle_description.htm">description</a></td>
+<td class="api-list">The description of this spindle.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineSpindle_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineSpindle_maxSpeed.htm">maxSpeed</a></td>
+<td class="api-list">Specifies the maximum speed (rpm) for this spindle.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineSpindle_minSpeed.htm">minSpeed</a></td>
+<td class="api-list">Specifies the minimum speed (rpm) for this spindle.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineSpindle_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineSpindle_peakTorque.htm">peakTorque</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Specifies the peak torque (Nm) for this spindle.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineSpindle_peakTorqueSpeed.htm">peakTorqueSpeed</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Specifies the speed (rpm) at which this spindle reaches peak torque (Nm).</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineSpindle_power.htm">power</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Specifies the power (kW) for this spindle.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="MachinePart_spindle.htm">MachinePart.spindle</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version April 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(MachineSpindle%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/Machine/MachineSpindle.h&gt;
+returnValue = adsk::cam::MachineSpindle::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">description Property</h3><p class="api">The description of this spindle.</p><pre class="api-code">"machineSpindle_var" is a variable referencing a MachineSpindle object.
+#include &lt;Cam/Machine/MachineSpindle.h&gt;
+// Get the value of the property.
+string propertyValue = machineSpindle_var-&gt;
+description
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = machineSpindle_var-&gt;
+description
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"machineSpindle_var" is a variable referencing a MachineSpindle object.
+#include &lt;Cam/Machine/MachineSpindle.h&gt;
+// Get the value of the property.
+boolean propertyValue = machineSpindle_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">maxSpeed Property</h3><p class="api">Specifies the maximum speed (rpm) for this spindle.</p><pre class="api-code">"machineSpindle_var" is a variable referencing a MachineSpindle object.
+#include &lt;Cam/Machine/MachineSpindle.h&gt;
+// Get the value of the property.
+double propertyValue = machineSpindle_var-&gt;
+maxSpeed
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = machineSpindle_var-&gt;
+maxSpeed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">minSpeed Property</h3><p class="api">Specifies the minimum speed (rpm) for this spindle.</p><pre class="api-code">"machineSpindle_var" is a variable referencing a MachineSpindle object.
+#include &lt;Cam/Machine/MachineSpindle.h&gt;
+// Get the value of the property.
+double propertyValue = machineSpindle_var-&gt;
+minSpeed
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = machineSpindle_var-&gt;
+minSpeed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"machineSpindle_var" is a variable referencing a MachineSpindle object.
+#include &lt;Cam/Machine/MachineSpindle.h&gt;
+// Get the value of the property.
+string propertyValue = machineSpindle_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">peakTorque Property</h3><p class="api">Specifies the peak torque (Nm) for this spindle.</p><pre class="api-code">"machineSpindle_var" is a variable referencing a MachineSpindle object.
+#include &lt;Cam/Machine/MachineSpindle.h&gt;
+// Get the value of the property.
+double propertyValue = machineSpindle_var-&gt;
+peakTorque
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = machineSpindle_var-&gt;
+peakTorque
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">peakTorqueSpeed Property</h3><p class="api">Specifies the speed (rpm) at which this spindle reaches peak torque (Nm).</p><pre class="api-code">"machineSpindle_var" is a variable referencing a MachineSpindle object.
+#include &lt;Cam/Machine/MachineSpindle.h&gt;
+// Get the value of the property.
+double propertyValue = machineSpindle_var-&gt;
+peakTorqueSpeed
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = machineSpindle_var-&gt;
+peakTorqueSpeed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">power Property</h3><p class="api">Specifies the power (kW) for this spindle.</p><pre class="api-code">"machineSpindle_var" is a variable referencing a MachineSpindle object.
+#include &lt;Cam/Machine/MachineSpindle.h&gt;
+// Get the value of the property.
+double propertyValue = machineSpindle_var-&gt;
+power
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = machineSpindle_var-&gt;
+power
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p></body>
+</html>

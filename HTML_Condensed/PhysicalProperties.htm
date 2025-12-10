@@ -1,0 +1,237 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/PhysicalProperties.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="10/9/2015" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="PhysicalProperties" name="contextid"/>
+<meta content="PhysicalProperties Object" name="description"/>
+<meta content="GUID-534772A3-99BE-487F-A01E-20B5420CC93F" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>PhysicalProperties Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">PhysicalProperties Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Fusion/PhysicalProperties.h&gt;<h2 class="api">
+          Description
+        </h2>The physical properties of a Component, Occurrence or BRepBody<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PhysicalProperties_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PhysicalProperties_getPrincipalAxes.htm">getPrincipalAxes</a></td>
+<td class="api-list">Method that returns the principal axes.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PhysicalProperties_getPrincipalMomentsOfInertia.htm">getPrincipalMomentsOfInertia</a></td>
+<td class="api-list">Method that returns the moments of inertia about the principal axes. Unit for returned values is kg*cm^2.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PhysicalProperties_getRadiusOfGyration.htm">getRadiusOfGyration</a></td>
+<td class="api-list">Method that returns the radius of gyration about the principal axes. Unit for returned values is cm.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PhysicalProperties_getRotationToPrincipal.htm">getRotationToPrincipal</a></td>
+<td class="api-list">Gets the rotation from the world coordinate system of the target to the principal coordinate system.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PhysicalProperties_getXYZMomentsOfInertia.htm">getXYZMomentsOfInertia</a></td>
+<td class="api-list">Method that gets the moment of inertia about the world coordinate system. Unit for returned values is kg*cm^2.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PhysicalProperties_accuracy.htm">accuracy</a></td>
+<td class="api-list">Returns the accuracy that was used for the calculation.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PhysicalProperties_area.htm">area</a></td>
+<td class="api-list">Gets the area in square centimeters.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PhysicalProperties_centerOfMass.htm">centerOfMass</a></td>
+<td class="api-list">Returns the center of mass position</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PhysicalProperties_density.htm">density</a></td>
+<td class="api-list">Gets the density in kilograms per cubic centimeter.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PhysicalProperties_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PhysicalProperties_mass.htm">mass</a></td>
+<td class="api-list">Gets the mass in kilograms.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PhysicalProperties_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="PhysicalProperties_volume.htm">volume</a></td>
+<td class="api-list">Gets the volume in the cubic centimeters.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="BRepBody_getPhysicalProperties.htm">BRepBody.getPhysicalProperties</a>, <a href="BRepBody_physicalProperties.htm">BRepBody.physicalProperties</a>, <a href="Component_getPhysicalProperties.htm">Component.getPhysicalProperties</a>, <a href="Component_physicalProperties.htm">Component.physicalProperties</a>, <a href="Design_physicalProperties.htm">Design.physicalProperties</a>, <a href="FlatPatternComponent_getPhysicalProperties.htm">FlatPatternComponent.getPhysicalProperties</a>, <a href="FlatPatternComponent_physicalProperties.htm">FlatPatternComponent.physicalProperties</a>, <a href="FlatPatternProduct_physicalProperties.htm">FlatPatternProduct.physicalProperties</a>, <a href="Occurrence_getPhysicalProperties.htm">Occurrence.getPhysicalProperties</a>, <a href="Occurrence_physicalProperties.htm">Occurrence.physicalProperties</a>, <a href="WorkingModel_physicalProperties.htm">WorkingModel.physicalProperties</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="GetPhysicalProperties_Sample.htm">Get Physical Properties API Sample</a></td>
+<td class="api-list">Script that demonstrates getting physical properties using the API. When this script is run it will create a new document, build a simple model, and get the various physical properties from the model.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2015<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(PhysicalProperties%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">accuracy Property</h3><p class="api">Returns the accuracy that was used for the calculation.</p><pre class="api-code">"physicalProperties_var" is a variable referencing a PhysicalProperties object.
+#include &lt;Fusion/Fusion/PhysicalProperties.h&gt;
+// Get the value of the property.
+CalculationAccuracy propertyValue = physicalProperties_var-&gt;
+accuracy
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">area Property</h3><p class="api">Gets the area in square centimeters.</p><pre class="api-code">"physicalProperties_var" is a variable referencing a PhysicalProperties object.
+#include &lt;Fusion/Fusion/PhysicalProperties.h&gt;
+// Get the value of the property.
+double propertyValue = physicalProperties_var-&gt;
+area
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">centerOfMass Property</h3><p class="api">Returns the center of mass position</p><pre class="api-code">"physicalProperties_var" is a variable referencing a PhysicalProperties object.
+#include &lt;Fusion/Fusion/PhysicalProperties.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = physicalProperties_var-&gt;
+centerOfMass
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Fusion/PhysicalProperties.h&gt;
+returnValue = adsk::fusion::PhysicalProperties::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">density Property</h3><p class="api">Gets the density in kilograms per cubic centimeter.</p><pre class="api-code">"physicalProperties_var" is a variable referencing a PhysicalProperties object.
+#include &lt;Fusion/Fusion/PhysicalProperties.h&gt;
+// Get the value of the property.
+double propertyValue = physicalProperties_var-&gt;
+density
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">getPrincipalAxes Method</h3><p class="api">Method that returns the principal axes.</p><pre class="api-code">#include &lt;Fusion/Fusion/PhysicalProperties.h
+// Declare the output arguments.
+Ptr&lt;Vector3D&gt; xAxis;
+Ptr&lt;Vector3D&gt; yAxis;
+Ptr&lt;Vector3D&gt; zAxis;
+boolean returnValue = physicalProperties_var-&gt;
+getPrincipalAxes
+(xAxis, yAxis, zAxis);</pre><p class="api">Return Value: boolean - Returns true if successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">xAxis</td><td class="api-list">Vector3D</td><td class="api-list">The output Vector3D object that indicates the direction of the x axis.</td></tr><tr><td class="api-list">yAxis</td><td class="api-list">Vector3D</td><td class="api-list">The output Vector3D object that indicates the direction of the y axis.</td></tr><tr><td class="api-list">zAxis</td><td class="api-list">Vector3D</td><td class="api-list">The output Vector3D object that indicates the direction of the z axis.</td></tr></table><h3 class="api-member">getPrincipalMomentsOfInertia Method</h3><p class="api">Method that returns the moments of inertia about the principal axes. Unit for returned values is kg*cm^2.</p><pre class="api-code">#include &lt;Fusion/Fusion/PhysicalProperties.h
+// Declare the output arguments.
+double i1;
+double i2;
+double i3;
+boolean returnValue = physicalProperties_var-&gt;
+getPrincipalMomentsOfInertia
+(i1, i2, i3);</pre><p class="api">Return Value: boolean - Returns true if successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">i1</td><td class="api-list">double</td><td class="api-list">Output Double that specifies the first moment of inertia.</td></tr><tr><td class="api-list">i2</td><td class="api-list">double</td><td class="api-list">Output Double that specifies the second moment of inertia.</td></tr><tr><td class="api-list">i3</td><td class="api-list">double</td><td class="api-list">Output Double that specifies the third moment of inertia.</td></tr></table><h3 class="api-member">getRadiusOfGyration Method</h3><p class="api">Method that returns the radius of gyration about the principal axes. Unit for returned values is cm.</p><pre class="api-code">#include &lt;Fusion/Fusion/PhysicalProperties.h
+// Declare the output arguments.
+double kx;
+double ky;
+double kz;
+boolean returnValue = physicalProperties_var-&gt;
+getRadiusOfGyration
+(kx, ky, kz);</pre><p class="api">Return Value: boolean - Returns true if successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">kx</td><td class="api-list">double</td><td class="api-list">Output Double that returns the X partial radius of gyration.</td></tr><tr><td class="api-list">ky</td><td class="api-list">double</td><td class="api-list">Output Double that returns the Y partial radius of gyration.</td></tr><tr><td class="api-list">kz</td><td class="api-list">double</td><td class="api-list">Output Double that returns the Z partial radius of gyration.</td></tr></table><h3 class="api-member">getRotationToPrincipal Method</h3><p class="api">Gets the rotation from the world coordinate system of the target to the principal coordinate system.</p><pre class="api-code">#include &lt;Fusion/Fusion/PhysicalProperties.h
+// Declare the output arguments.
+double rx;
+double ry;
+double rz;
+boolean returnValue = physicalProperties_var-&gt;
+getRotationToPrincipal
+(rx, ry, rz);</pre><p class="api">Return Value: boolean - Returns true if successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">rx</td><td class="api-list">double</td><td class="api-list"></td></tr><tr><td class="api-list">ry</td><td class="api-list">double</td><td class="api-list"></td></tr><tr><td class="api-list">rz</td><td class="api-list">double</td><td class="api-list"></td></tr></table><h3 class="api-member">getXYZMomentsOfInertia Method</h3><p class="api">Method that gets the moment of inertia about the world coordinate system. Unit for returned values is kg*cm^2.</p><pre class="api-code">#include &lt;Fusion/Fusion/PhysicalProperties.h
+// Declare the output arguments.
+double xx;
+double yy;
+double zz;
+double xy;
+double yz;
+double xz;
+boolean returnValue = physicalProperties_var-&gt;
+getXYZMomentsOfInertia
+(xx, yy, zz, xy, yz, xz);</pre><p class="api">Return Value: boolean - Returns true if successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">xx</td><td class="api-list">double</td><td class="api-list">Output Double that returns the XX partial moment.</td></tr><tr><td class="api-list">yy</td><td class="api-list">double</td><td class="api-list">Output Double that returns the YY partial moment.</td></tr><tr><td class="api-list">zz</td><td class="api-list">double</td><td class="api-list">Output Double that returns the ZZ partial moment.</td></tr><tr><td class="api-list">xy</td><td class="api-list">double</td><td class="api-list">Output Double that returns the XY partial moment.</td></tr><tr><td class="api-list">yz</td><td class="api-list">double</td><td class="api-list">Output Double that returns the YZ partial moment.</td></tr><tr><td class="api-list">xz</td><td class="api-list">double</td><td class="api-list">Output Double that returns the XZ partial moment.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"physicalProperties_var" is a variable referencing a PhysicalProperties object.
+#include &lt;Fusion/Fusion/PhysicalProperties.h&gt;
+// Get the value of the property.
+boolean propertyValue = physicalProperties_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">mass Property</h3><p class="api">Gets the mass in kilograms.</p><pre class="api-code">"physicalProperties_var" is a variable referencing a PhysicalProperties object.
+#include &lt;Fusion/Fusion/PhysicalProperties.h&gt;
+// Get the value of the property.
+double propertyValue = physicalProperties_var-&gt;
+mass
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"physicalProperties_var" is a variable referencing a PhysicalProperties object.
+#include &lt;Fusion/Fusion/PhysicalProperties.h&gt;
+// Get the value of the property.
+string propertyValue = physicalProperties_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">volume Property</h3><p class="api">Gets the volume in the cubic centimeters.</p><pre class="api-code">"physicalProperties_var" is a variable referencing a PhysicalProperties object.
+#include &lt;Fusion/Fusion/PhysicalProperties.h&gt;
+// Get the value of the property.
+double propertyValue = physicalProperties_var-&gt;
+volume
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p></body>
+</html>

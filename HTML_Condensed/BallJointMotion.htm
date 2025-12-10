@@ -1,0 +1,277 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/BallJointMotion.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="16/7/2015" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="BallJointMotion" name="contextid"/>
+<meta content="BallJointMotion Object" name="description"/>
+<meta content="GUID-caf17992-cd48-465d-833c-29928a3da5c3" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>BallJointMotion Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">BallJointMotion Object
+			</h1>
+              Derived from: <a href="JointMotion.htm">JointMotion</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Components/BallJointMotion.h&gt;<h2 class="api">
+          Description
+        </h2>Represents the set of information specific to a ball joint.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotion_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotion_customPitchDirectionEntity.htm">customPitchDirectionEntity</a></td>
+<td class="api-list">This property defines a custom pitch direction and can be set using various types of entities that can infer a direction. For example, a linear edge, sketch line, planar face, and cylindrical face.This property is only valid in the case where the pitchDirection property returns CustomJointDirection. Setting this property will automatically set the pitchDirection property to CustomJointDirection.<br><br/> To set this property, you need to position the timeline marker to immediately before this joint. This can be accomplished using the following code: thisJoint.timelineObject.rollTo(True)</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotion_customYawDirectionEntity.htm">customYawDirectionEntity</a></td>
+<td class="api-list">This property defines a custom yaw direction and can be set using various types of entities that can infer a direction. For example, a linear edge, sketch line, planar face, and cylindrical face.This property is only valid in the case where the yawDirection property returns CustomJointDirection. Setting this property will automatically set the yawDirection property to CustomJointDirection.<br/><br/> To set this property, you need to position the timeline marker to immediately before this joint. This can be accomplished using the following code: thisJoint.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotion_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotion_jointType.htm">jointType</a></td>
+<td class="api-list">Returns an enum value indicating the type of joint this joint represents.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotion_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotion_pitchDirection.htm">pitchDirection</a></td>
+<td class="api-list">Gets and sets the direction that the pitch is measured from. This can only be set to ZAxisJointDirection and can return ZAxisJointDirection or CustomJointDirection. If this returns CustomJointDirection then the customNormalDirectionEntity will return an entity that defines the direction. If there is a custom direction defined and this property is set to ZAxisJointDirection, the custom direction will be removed and customNormalDirectionEntity will return null.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotion_pitchDirectionVector.htm">pitchDirectionVector</a></td>
+<td class="api-list">Returns the direction that the pitch angle is measured from. This property will return null in the case where the BallJointMotion object was obtained from a JointInput object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotion_pitchLimits.htm">pitchLimits</a></td>
+<td class="api-list">Returns a JointLimits object that defines the limits of rotation for the pitch. Use the functionality of the returned JointLimits object to get, set, and modify the joint limits.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotion_pitchValue.htm">pitchValue</a></td>
+<td class="api-list">Gets and sets the pitch value. This is in radians. Setting this value is the equivalent of using the Drive Joints command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotion_rollDirectionVector.htm">rollDirectionVector</a></td>
+<td class="api-list">Returns the direction that the roll angle is measured from. This property will return null in the case where the BallJointMotion object was obtained from a JointInput object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotion_rollLimits.htm">rollLimits</a></td>
+<td class="api-list">Returns a JointLimits object that defines the limits of rotation for the roll. Use the functionality of the returned JointLimits object to get, set, and modify the joint limits.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotion_rollValue.htm">rollValue</a></td>
+<td class="api-list">Gets and sets the roll value. This is in radians. Setting this value is the equivalent of using the Drive Joints command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotion_yawDirection.htm">yawDirection</a></td>
+<td class="api-list">Gets and sets the direction that the pitch is measured from. This can only be set to XAxisJointDirection and can return XAxisJointDirection or CustomJointDirection. If this returns CustomJointDirection then the customYawDirectionEntity will return an entity that defines the direction. If there is a custom direction defined and this property is set to XAxisJointDirection, the custom direction will be removed and customYawDirectionEntity will return null.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotion_yawDirectionVector.htm">yawDirectionVector</a></td>
+<td class="api-list">Returns the direction that the yaw angle is measured from. This property will return null in the case where the BallJointMotion object was obtained from a JointInput object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotion_yawLimits.htm">yawLimits</a></td>
+<td class="api-list">Returns a JointLimits object that defines the limits of rotation for the yaw. Use the functionality of the returned JointLimits object to get, set, and modify the joint limits.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotion_yawValue.htm">yawValue</a></td>
+<td class="api-list">Gets and sets the yaw value. This is in radians. Setting this value is the equivalent of using the Drive Joints command.</td>
+</tr>
+</table>
+<h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotionSample_Sample.htm">BallJointMotion API Sample</a></td>
+<td class="api-list">Demonstrates creating a joint with ball joint motion</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version July 2015<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(BallJointMotion%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Components/BallJointMotion.h&gt;
+returnValue = adsk::fusion::BallJointMotion::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">customPitchDirectionEntity Property</h3><p class="api">This property defines a custom pitch direction and can be set using various types of entities that can infer a direction. For example, a linear edge, sketch line, planar face, and cylindrical face.This property is only valid in the case where the pitchDirection property returns CustomJointDirection. Setting this property will automatically set the pitchDirection property to CustomJointDirection. To set this property, you need to position the timeline marker to immediately before this joint. This can be accomplished using the following code: thisJoint.timelineObject.rollTo(True)</p><pre class="api-code">"ballJointMotion_var" is a variable referencing a BallJointMotion object.
+#include &lt;Fusion/Components/BallJointMotion.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = ballJointMotion_var-&gt;
+customPitchDirectionEntity
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = ballJointMotion_var-&gt;
+customPitchDirectionEntity
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">customYawDirectionEntity Property</h3><p class="api">This property defines a custom yaw direction and can be set using various types of entities that can infer a direction. For example, a linear edge, sketch line, planar face, and cylindrical face.This property is only valid in the case where the yawDirection property returns CustomJointDirection. Setting this property will automatically set the yawDirection property to CustomJointDirection. To set this property, you need to position the timeline marker to immediately before this joint. This can be accomplished using the following code: thisJoint.timelineObject.rollTo(True)</p><pre class="api-code">"ballJointMotion_var" is a variable referencing a BallJointMotion object.
+#include &lt;Fusion/Components/BallJointMotion.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = ballJointMotion_var-&gt;
+customYawDirectionEntity
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = ballJointMotion_var-&gt;
+customYawDirectionEntity
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"ballJointMotion_var" is a variable referencing a BallJointMotion object.
+#include &lt;Fusion/Components/BallJointMotion.h&gt;
+// Get the value of the property.
+boolean propertyValue = ballJointMotion_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">jointType Property</h3><p class="api">Returns an enum value indicating the type of joint this joint represents.</p><pre class="api-code">"ballJointMotion_var" is a variable referencing a BallJointMotion object.
+#include &lt;Fusion/Components/BallJointMotion.h&gt;
+// Get the value of the property.
+JointTypes propertyValue = ballJointMotion_var-&gt;
+jointType
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"ballJointMotion_var" is a variable referencing a BallJointMotion object.
+#include &lt;Fusion/Components/BallJointMotion.h&gt;
+// Get the value of the property.
+string propertyValue = ballJointMotion_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">pitchDirection Property</h3><p class="api">Gets and sets the direction that the pitch is measured from. This can only be set to ZAxisJointDirection and can return ZAxisJointDirection or CustomJointDirection. If this returns CustomJointDirection then the customNormalDirectionEntity will return an entity that defines the direction. If there is a custom direction defined and this property is set to ZAxisJointDirection, the custom direction will be removed and customNormalDirectionEntity will return null.</p><pre class="api-code">"ballJointMotion_var" is a variable referencing a BallJointMotion object.
+#include &lt;Fusion/Components/BallJointMotion.h&gt;
+// Get the value of the property.
+JointDirections propertyValue = ballJointMotion_var-&gt;
+pitchDirection
+();
+// Set the value of the property, where value_var is a JointDirections.
+bool returnValue = ballJointMotion_var-&gt;
+pitchDirection
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">pitchDirectionVector Property</h3><p class="api">Returns the direction that the pitch angle is measured from. This property will return null in the case where the BallJointMotion object was obtained from a JointInput object.</p><pre class="api-code">"ballJointMotion_var" is a variable referencing a BallJointMotion object.
+#include &lt;Fusion/Components/BallJointMotion.h&gt;
+// Get the value of the property.
+Ptr&lt;Vector3D&gt; propertyValue = ballJointMotion_var-&gt;
+pitchDirectionVector
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">pitchLimits Property</h3><p class="api">Returns a JointLimits object that defines the limits of rotation for the pitch. Use the functionality of the returned JointLimits object to get, set, and modify the joint limits.</p><pre class="api-code">"ballJointMotion_var" is a variable referencing a BallJointMotion object.
+#include &lt;Fusion/Components/BallJointMotion.h&gt;
+// Get the value of the property.
+Ptr&lt;JointLimits&gt; propertyValue = ballJointMotion_var-&gt;
+pitchLimits
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">pitchValue Property</h3><p class="api">Gets and sets the pitch value. This is in radians. Setting this value is the equivalent of using the Drive Joints command.</p><pre class="api-code">"ballJointMotion_var" is a variable referencing a BallJointMotion object.
+#include &lt;Fusion/Components/BallJointMotion.h&gt;
+// Get the value of the property.
+double propertyValue = ballJointMotion_var-&gt;
+pitchValue
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = ballJointMotion_var-&gt;
+pitchValue
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">rollDirectionVector Property</h3><p class="api">Returns the direction that the roll angle is measured from. This property will return null in the case where the BallJointMotion object was obtained from a JointInput object.</p><pre class="api-code">"ballJointMotion_var" is a variable referencing a BallJointMotion object.
+#include &lt;Fusion/Components/BallJointMotion.h&gt;
+// Get the value of the property.
+Ptr&lt;Vector3D&gt; propertyValue = ballJointMotion_var-&gt;
+rollDirectionVector
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">rollLimits Property</h3><p class="api">Returns a JointLimits object that defines the limits of rotation for the roll. Use the functionality of the returned JointLimits object to get, set, and modify the joint limits.</p><pre class="api-code">"ballJointMotion_var" is a variable referencing a BallJointMotion object.
+#include &lt;Fusion/Components/BallJointMotion.h&gt;
+// Get the value of the property.
+Ptr&lt;JointLimits&gt; propertyValue = ballJointMotion_var-&gt;
+rollLimits
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">rollValue Property</h3><p class="api">Gets and sets the roll value. This is in radians. Setting this value is the equivalent of using the Drive Joints command.</p><pre class="api-code">"ballJointMotion_var" is a variable referencing a BallJointMotion object.
+#include &lt;Fusion/Components/BallJointMotion.h&gt;
+// Get the value of the property.
+double propertyValue = ballJointMotion_var-&gt;
+rollValue
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = ballJointMotion_var-&gt;
+rollValue
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">yawDirection Property</h3><p class="api">Gets and sets the direction that the pitch is measured from. This can only be set to XAxisJointDirection and can return XAxisJointDirection or CustomJointDirection. If this returns CustomJointDirection then the customYawDirectionEntity will return an entity that defines the direction. If there is a custom direction defined and this property is set to XAxisJointDirection, the custom direction will be removed and customYawDirectionEntity will return null.</p><pre class="api-code">"ballJointMotion_var" is a variable referencing a BallJointMotion object.
+#include &lt;Fusion/Components/BallJointMotion.h&gt;
+// Get the value of the property.
+JointDirections propertyValue = ballJointMotion_var-&gt;
+yawDirection
+();
+// Set the value of the property, where value_var is a JointDirections.
+bool returnValue = ballJointMotion_var-&gt;
+yawDirection
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">yawDirectionVector Property</h3><p class="api">Returns the direction that the yaw angle is measured from. This property will return null in the case where the BallJointMotion object was obtained from a JointInput object.</p><pre class="api-code">"ballJointMotion_var" is a variable referencing a BallJointMotion object.
+#include &lt;Fusion/Components/BallJointMotion.h&gt;
+// Get the value of the property.
+Ptr&lt;Vector3D&gt; propertyValue = ballJointMotion_var-&gt;
+yawDirectionVector
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">yawLimits Property</h3><p class="api">Returns a JointLimits object that defines the limits of rotation for the yaw. Use the functionality of the returned JointLimits object to get, set, and modify the joint limits.</p><pre class="api-code">"ballJointMotion_var" is a variable referencing a BallJointMotion object.
+#include &lt;Fusion/Components/BallJointMotion.h&gt;
+// Get the value of the property.
+Ptr&lt;JointLimits&gt; propertyValue = ballJointMotion_var-&gt;
+yawLimits
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">yawValue Property</h3><p class="api">Gets and sets the yaw value. This is in radians. Setting this value is the equivalent of using the Drive Joints command.</p><pre class="api-code">"ballJointMotion_var" is a variable referencing a BallJointMotion object.
+#include &lt;Fusion/Components/BallJointMotion.h&gt;
+// Get the value of the property.
+double propertyValue = ballJointMotion_var-&gt;
+yawValue
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = ballJointMotion_var-&gt;
+yawValue
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p></body>
+</html>

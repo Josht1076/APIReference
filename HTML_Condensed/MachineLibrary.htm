@@ -1,0 +1,284 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/MachineLibrary.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="21/02/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="MachineLibrary" name="contextid"/>
+<meta content="MachineLibrary Object" name="description"/>
+<meta content="GUID-CA9010F5-8535-40B6-9F77-0DE41CAA951C" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>MachineLibrary Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">MachineLibrary Object
+			</h1>
+              Derived from: <a href="CAMLibrary.htm">CAMLibrary</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/Machine/MachineLibrary.h&gt;<h2 class="api">
+          Description
+        </h2>The MachineLibrary provides access to machines. Using this object you can import machines and get existing machines using either URL or query to find specific Machines.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineLibrary_childAssetURLs.htm">childAssetURLs</a></td>
+<td class="api-list">Get all assets under given URL.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineLibrary_childFolderURLs.htm">childFolderURLs</a></td>
+<td class="api-list">Get all library folders under given URL.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineLibrary_childMachines.htm">childMachines</a></td>
+<td class="api-list">Get all machines by the given parent folder URL. Returns null, if the URL does not exist.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineLibrary_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineLibrary_createFolder.htm">createFolder</a></td>
+<td class="api-list">Create a new folder in the library. Create the folder under given parent URL with given folder name. Add counting suffix, in case a folder with given name already exists. Throw an error if given URL does not point to a valid folder or the URL is read-only. Also throws an error if given folder name is empty.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineLibrary_createQuery.htm">createQuery</a></td>
+<td class="api-list">Creates a new MachineQuery that is used to query the library for machines matching the query.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineLibrary_deleteAsset.htm">deleteAsset</a></td>
+<td class="api-list">Delete asset by URL from the library. Throw an error if given URL does not point to a valid asset or the URL is read-only.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineLibrary_deleteFolder.htm">deleteFolder</a></td>
+<td class="api-list">Delete folder by URL from the library. Any content of the folder will also be deleted. Throw an error if given URL does not point to a valid folder or the URL is read-only.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineLibrary_displayName.htm">displayName</a></td>
+<td class="api-list">Get the localized display name for a given URL. The URL must point to a folder.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineLibrary_doesPathExist.htm">doesPathExist</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Checks if the given URL points to an existing folder or asset in the library.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineLibrary_importMachine.htm">importMachine</a></td>
+<td class="api-list">Import a given machine at a specific location. The machine will be stored in the library. Throws an error, if the given URL is read-only.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineLibrary_machineAtURL.htm">machineAtURL</a></td>
+<td class="api-list">Get a specific machine by the given URL. Returns null, if the URL does not exist.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineLibrary_updateMachine.htm">updateMachine</a></td>
+<td class="api-list">Update a machine in the library. The library overrides the URL by given machine. Throws an error if the URL does not already point to an existing machine.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineLibrary_urlByLocation.htm">urlByLocation</a></td>
+<td class="api-list">Get the URL for a given LibraryLocations.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineLibrary_assetTypeName.htm">assetTypeName</a></td>
+<td class="api-list">Get the name of the asset type which can be accessed by the library.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineLibrary_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineLibrary_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CAMLibraryManager_machineLibrary.htm">CAMLibraryManager.machineLibrary</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="AdditiveFFFManufacturingSample_Sample.htm">Additive Manufacturing FFF API Sample</a></td>
+<td class="api-list"><p>Demonstrates how to automate the creation of an additive FFF manufacturing setup and generate a toolpath.</p>
+<p>To run the sample script, have a design with one or more components open in Fusion’s DESIGN workspace. This script will switch the UI from the DESIGN workspace to the MANUFACTURE workspace, create a new Manufacturing Model, and create an Additive setup using that manufacturing model as an input.</p>
+<p>The setup will select an FFF 3D printer from Fusion’s machine library and a print setting from the print setting library. All components in the Manufacturing model will be automatically oriented and arranged within the build area of the selected FFF machine. This script will also create support structures, if required, based on the orientation of each component. Finally, the script generates the toolpath for the active setup and lets the user choose if they wish to post process the resulting toolpath or if they want to simulate it.</p></td>
+</tr>
+<tr>
+<td class="api-list"><a href="AdditiveMJFManufacturingSample_Sample.htm">Additive Manufacturing MJF API Sample</a></td>
+<td class="api-list"><p>Demonstrates how to automate the creation of an additive MJF manufacturing setup and arrange components within the build volume of a 3D printer.</p>
+<p>To run the sample script, have a design with one or more components open in Fusion’s DESIGN workspace. This script will switch the UI from the DESIGN workspace to the MANUFACTURE workspace, create a new Manufacturing Model, and create an Additive Arrange using that manufacturing model as an input.</p>
+<p>The setup will select an MJF 3D printer from Fusion’s machine library and a print setting from the print setting library. All components in the Manufacturing model will be automatically arranged within the build volume of the selected MJF machine.</p></td>
+</tr>
+<tr>
+<td class="api-list"><a href="AdditiveSLAManufacturingSample_Sample.htm">Additive Manufacturing SLA API Sample</a></td>
+<td class="api-list"><p>Demonstrates how to automate the creation of an additive SLA manufacturing setup.</p>
+<p>To run the sample script, have a design with one or more components open in Fusion’s DESIGN workspace. This script will switch the UI from the DESIGN workspace to the MANUFACTURE workspace, create a new Manufacturing Model, and create an Additive setup using that manufacturing model as an input.</p>
+<p>The setup will select a SLA 3D printer from Fusion’s machine library and a print setting from the print setting library. All components in the Manufacturing model will be automatically oriented and arranged within the build area of the selected SLA machine. This script will also create support structures, based on the orientation of each component.</p>
+<p>The support and orientation operations are created from a template. The script further demonstrates how to wrap script code into a command such that only one undo entry is created for the entire script instead of one entry per internal action.</p></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version April 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(MachineLibrary%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">assetTypeName Property</h3><p class="api">Get the name of the asset type which can be accessed by the library.</p><pre class="api-code">"machineLibrary_var" is a variable referencing a MachineLibrary object.
+#include &lt;Cam/Machine/MachineLibrary.h&gt;
+// Get the value of the property.
+string propertyValue = machineLibrary_var-&gt;
+assetTypeName
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">childAssetURLs Method</h3><p class="api">Get all assets under given URL.</p><pre class="api-code">"machineLibrary_var" is a variable referencing a
+MachineLibrary
+object.
+#include &lt;Cam/Machine/MachineLibrary.h&gt;
+returnValue = machineLibrary_var-&gt;
+childAssetURLs
+(url);</pre><p class="api">Return Value: URL [] - Returns list of asset URLs at given location.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to the parent folder.</td></tr></table><h3 class="api-member">childFolderURLs Method</h3><p class="api">Get all library folders under given URL.</p><pre class="api-code">"machineLibrary_var" is a variable referencing a
+MachineLibrary
+object.
+#include &lt;Cam/Machine/MachineLibrary.h&gt;
+returnValue = machineLibrary_var-&gt;
+childFolderURLs
+(url);</pre><p class="api">Return Value: URL [] - Returns list of folder URLs at given location.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to the parent folder.</td></tr></table><h3 class="api-member">childMachines Method</h3><p class="api">Get all machines by the given parent folder URL. Returns null, if the URL does not exist.</p><pre class="api-code">"machineLibrary_var" is a variable referencing a
+MachineLibrary
+object.
+#include &lt;Cam/Machine/MachineLibrary.h&gt;
+returnValue = machineLibrary_var-&gt;
+childMachines
+(url);</pre><p class="api">Return Value: Machine [] - Returns the machine for a valid URL, returns null otherwise.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL of the folder to get machines from.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/Machine/MachineLibrary.h&gt;
+returnValue = adsk::cam::MachineLibrary::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">createFolder Method</h3><p class="api">Create a new folder in the library. Create the folder under given parent URL with given folder name. Add counting suffix, in case a folder with given name already exists. Throw an error if given URL does not point to a valid folder or the URL is read-only. Also throws an error if given folder name is empty.</p><pre class="api-code">"machineLibrary_var" is a variable referencing a
+MachineLibrary
+object.
+#include &lt;Cam/Machine/MachineLibrary.h&gt;
+returnValue = machineLibrary_var-&gt;
+createFolder
+(parentUrl, folderName);</pre><p class="api">Return Value: URL - Returns the URL to the newly created folder</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parentUrl</td><td class="api-list">URL</td><td class="api-list">The parent URL for the folder to be created.</td></tr><tr><td class="api-list">folderName</td><td class="api-list">string</td><td class="api-list">Name of the new folder to be created. Must not be empty.</td></tr></table><h3 class="api-member">createQuery Method</h3><p class="api">Creates a new MachineQuery that is used to query the library for machines matching the query.</p><pre class="api-code">"machineLibrary_var" is a variable referencing a
+MachineLibrary
+object.
+#include &lt;Cam/Machine/MachineLibrary.h&gt;
+// Uses no optional arguments.
+returnValue = machineLibrary_var-&gt;
+createQuery
+(location);
+// Uses optional arguments.
+returnValue = machineLibrary_var-&gt;
+createQuery
+(location, vendor, model);</pre><p class="api">Return Value: MachineQuery - Returns a new MachineQuery. The query is predefined by given parameter.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">location</td><td class="api-list">LibraryLocations</td><td class="api-list">The location specifies the LibraryLocations where to search for in the machine library.</td></tr><tr><td class="api-list">vendor</td><td class="api-list">string</td><td class="api-list">The vendor specifies the vendor of the machine. The default empty vendor applies to all machines. This is an optional argument whose default value is "".</td></tr><tr><td class="api-list">model</td><td class="api-list">string</td><td class="api-list">The model specifies the model of the machine. The default empty model applies to all machines. This is an optional argument whose default value is "".</td></tr></table><h3 class="api-member">deleteAsset Method</h3><p class="api">Delete asset by URL from the library. Throw an error if given URL does not point to a valid asset or the URL is read-only.</p><pre class="api-code">"machineLibrary_var" is a variable referencing a
+MachineLibrary
+object.
+#include &lt;Cam/Machine/MachineLibrary.h&gt;
+returnValue = machineLibrary_var-&gt;
+deleteAsset
+(url);</pre><p class="api">Return Value: boolean - Returns true if asset was deleted successfully, false otherwise</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to the asset that should be removed.</td></tr></table><h3 class="api-member">deleteFolder Method</h3><p class="api">Delete folder by URL from the library. Any content of the folder will also be deleted. Throw an error if given URL does not point to a valid folder or the URL is read-only.</p><pre class="api-code">"machineLibrary_var" is a variable referencing a
+MachineLibrary
+object.
+#include &lt;Cam/Machine/MachineLibrary.h&gt;
+returnValue = machineLibrary_var-&gt;
+deleteFolder
+(url);</pre><p class="api">Return Value: boolean - Returns true if folder was deleted successfully, false otherwise</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to the folder that should be removed.</td></tr></table><h3 class="api-member">displayName Method</h3><p class="api">Get the localized display name for a given URL. The URL must point to a folder.</p><pre class="api-code">"machineLibrary_var" is a variable referencing a
+MachineLibrary
+object.
+#include &lt;Cam/Machine/MachineLibrary.h&gt;
+returnValue = machineLibrary_var-&gt;
+displayName
+(url);</pre><p class="api">Return Value: string - Returns localized display name for the folder. Returns empty string for invalid URL.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL that defines the path to a folder.</td></tr></table><h3 class="api-member">doesPathExist Method</h3><p class="api">Checks if the given URL points to an existing folder or asset in the library.</p><pre class="api-code">"machineLibrary_var" is a variable referencing a
+MachineLibrary
+object.
+#include &lt;Cam/Machine/MachineLibrary.h&gt;
+returnValue = machineLibrary_var-&gt;
+doesPathExist
+(url);</pre><p class="api">Return Value: boolean - Returns true if the URL points to an existing folder or asset, false otherwise.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to be checked.</td></tr></table><h3 class="api-member">importMachine Method</h3><p class="api">Import a given machine at a specific location. The machine will be stored in the library. Throws an error, if the given URL is read-only.</p><pre class="api-code">"machineLibrary_var" is a variable referencing a
+MachineLibrary
+object.
+#include &lt;Cam/Machine/MachineLibrary.h&gt;
+returnValue = machineLibrary_var-&gt;
+importMachine
+(machine, destinationUrl, machineName);</pre><p class="api">Return Value: URL - Returns the URL of the newly imported machine, or null if the import failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">machine</td><td class="api-list">Machine</td><td class="api-list">The machine that should be imported.</td></tr><tr><td class="api-list">destinationUrl</td><td class="api-list">URL</td><td class="api-list">The URL to the folder where to save the machine.</td></tr><tr><td class="api-list">machineName</td><td class="api-list">string</td><td class="api-list">The name of the machine that should be created due to the import. The name can be extended if the asset already exists at given location to ensure a unique name.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"machineLibrary_var" is a variable referencing a MachineLibrary object.
+#include &lt;Cam/Machine/MachineLibrary.h&gt;
+// Get the value of the property.
+boolean propertyValue = machineLibrary_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">machineAtURL Method</h3><p class="api">Get a specific machine by the given URL. Returns null, if the URL does not exist.</p><pre class="api-code">"machineLibrary_var" is a variable referencing a
+MachineLibrary
+object.
+#include &lt;Cam/Machine/MachineLibrary.h&gt;
+returnValue = machineLibrary_var-&gt;
+machineAtURL
+(url);</pre><p class="api">Return Value: Machine - Returns the machine for a valid URL, returns null otherwise.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to the machine to be loaded.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"machineLibrary_var" is a variable referencing a MachineLibrary object.
+#include &lt;Cam/Machine/MachineLibrary.h&gt;
+// Get the value of the property.
+string propertyValue = machineLibrary_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">updateMachine Method</h3><p class="api">Update a machine in the library. The library overrides the URL by given machine. Throws an error if the URL does not already point to an existing machine.</p><pre class="api-code">"machineLibrary_var" is a variable referencing a
+MachineLibrary
+object.
+#include &lt;Cam/Machine/MachineLibrary.h&gt;
+returnValue = machineLibrary_var-&gt;
+updateMachine
+(url, machine);</pre><p class="api">Return Value: boolean - Returns true if asset was updated successfully, false otherwise.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">url</td><td class="api-list">URL</td><td class="api-list">The URL to the existing asset in the library that should be updated.</td></tr><tr><td class="api-list">machine</td><td class="api-list">Machine</td><td class="api-list">The machine that should be persisted.</td></tr></table><h3 class="api-member">urlByLocation Method</h3><p class="api">Get the URL for a given LibraryLocations.</p><pre class="api-code">"machineLibrary_var" is a variable referencing a
+MachineLibrary
+object.
+#include &lt;Cam/Machine/MachineLibrary.h&gt;
+returnValue = machineLibrary_var-&gt;
+urlByLocation
+(location);</pre><p class="api">Return Value: URL - Returns the URL for given location.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">location</td><td class="api-list">LibraryLocations</td><td class="api-list">The LibraryLocations to be converted into an URL.</td></tr></table></body>
+</html>

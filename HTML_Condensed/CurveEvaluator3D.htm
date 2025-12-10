@@ -1,0 +1,321 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/CurveEvaluator3D.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="CurveEvaluator3D" name="contextid"/>
+<meta content="CurveEvaluator3D Object" name="description"/>
+<meta content="GUID-dc7ae251-e060-4d87-b6b8-e7f78abc0777" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>CurveEvaluator3D Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">CurveEvaluator3D Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Geometry/CurveEvaluator3D.h&gt;<h2 class="api">
+          Description
+        </h2>3D curve evaluator that is obtained from a transient curve and allows you to perform various evaluations on the curve.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getCurvature.htm">getCurvature</a></td>
+<td class="api-list">Get the curvature value at a parameter position on the curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getCurvatures.htm">getCurvatures</a></td>
+<td class="api-list">Get the curvature values at a number of parameter positions on the curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getEndPoints.htm">getEndPoints</a></td>
+<td class="api-list">Get the end points of the curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getFirstDerivative.htm">getFirstDerivative</a></td>
+<td class="api-list">Get the first derivative of the curve at the specified parameter position.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getFirstDerivatives.htm">getFirstDerivatives</a></td>
+<td class="api-list">Get the first derivatives of the curve at the specified parameter positions.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getLengthAtParameter.htm">getLengthAtParameter</a></td>
+<td class="api-list">Get the length of the curve between two parameter positions on the curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getParameterAtLength.htm">getParameterAtLength</a></td>
+<td class="api-list">Get the parameter position on the curve that is the specified curve length from the specified starting parameter position.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getParameterAtPoint.htm">getParameterAtPoint</a></td>
+<td class="api-list">Get the parameter position that correspond to a point on the curve. For reliable results, the point should lie on the curve within model tolerance. If the point does not lie on the curve, the parameter of the nearest point on the curve will generally be returned.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getParameterExtents.htm">getParameterExtents</a></td>
+<td class="api-list">Get the parametric range of the curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getParametersAtPoints.htm">getParametersAtPoints</a></td>
+<td class="api-list">Get the parameter positions that correspond to a set of points on the curve. For reliable results, the points should lie on the curve within model tolerance. If the points do not lie on the curve, the parameter of the nearest point on the curve will generally be returned.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getPointAtParameter.htm">getPointAtParameter</a></td>
+<td class="api-list">Get the point on the curve that corresponds to evaluating a parameter position on the curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getPointsAtParameters.htm">getPointsAtParameters</a></td>
+<td class="api-list">Get the points on the curve that correspond to evaluating a set of parameter positions on the curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getSecondDerivative.htm">getSecondDerivative</a></td>
+<td class="api-list">Get the second derivative of the curve at the specified parameter position.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getSecondDerivatives.htm">getSecondDerivatives</a></td>
+<td class="api-list">Get the second derivatives of the curve at the specified parameter positions.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getStrokes.htm">getStrokes</a></td>
+<td class="api-list">Get a sequence of points between two curve parameter positions. The points will be a linear interpolation along the curve between these two parameter positions where the maximum deviation between the curve and each line segment will not exceed the specified tolerance value.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getTangent.htm">getTangent</a></td>
+<td class="api-list">Get the tangent to the curve at a parameter position on the curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getTangents.htm">getTangents</a></td>
+<td class="api-list">Get the tangent to the curve at a number of parameter positions on the curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getThirdDerivative.htm">getThirdDerivative</a></td>
+<td class="api-list">Get the third derivative of the curve at the specified parameter position.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_getThirdDerivatives.htm">getThirdDerivatives</a></td>
+<td class="api-list">Get the third derivatives of the curve at the specified parameter positions.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CurveEvaluator3D_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Arc3D_evaluator.htm">Arc3D.evaluator</a>, <a href="BRepEdge_evaluator.htm">BRepEdge.evaluator</a>, <a href="Circle3D_evaluator.htm">Circle3D.evaluator</a>, <a href="Curve3D_evaluator.htm">Curve3D.evaluator</a>, <a href="Ellipse3D_evaluator.htm">Ellipse3D.evaluator</a>, <a href="EllipticalArc3D_evaluator.htm">EllipticalArc3D.evaluator</a>, <a href="InfiniteLine3D_evaluator.htm">InfiniteLine3D.evaluator</a>, <a href="Line3D_evaluator.htm">Line3D.evaluator</a>, <a href="NurbsCurve3D_evaluator.htm">NurbsCurve3D.evaluator</a>, <a href="Polyline3D_evaluator.htm">Polyline3D.evaluator</a>, <a href="SketchConicCurve_evaluator.htm">SketchConicCurve.evaluator</a>, <a href="SketchControlPointSpline_evaluator.htm">SketchControlPointSpline.evaluator</a>, <a href="SketchFixedSpline_evaluator.htm">SketchFixedSpline.evaluator</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchArcs_split_Sample.htm">SketchArcs.split</a></td>
+<td class="api-list">Demonstrates the SketchArc.split method.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(CurveEvaluator3D%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/CurveEvaluator3D.h&gt;
+returnValue = adsk::core::CurveEvaluator3D::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">getCurvature Method</h3><p class="api">Get the curvature value at a parameter position on the curve.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+double parameter;
+Ptr&lt;Vector3D&gt; direction;
+double curvature;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getCurvature
+(parameter, direction, curvature);</pre><p class="api">Return Value: boolean - Returns true if the curvature was successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameter</td><td class="api-list">double</td><td class="api-list">The parameter position to return the curvature information at. This value must be within the range of the parameter extents as provided by getParameterExtents.</td></tr><tr><td class="api-list">direction</td><td class="api-list">Vector3D</td><td class="api-list">The output direction of the curvature at the position on the curve.</td></tr><tr><td class="api-list">curvature</td><td class="api-list">double</td><td class="api-list">The output magnitude of the curvature at the position on the curve.</td></tr></table><h3 class="api-member">getCurvatures Method</h3><p class="api">Get the curvature values at a number of parameter positions on the curve.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+double[] parameters;
+Vector3D[] directions;
+double[] curvatures;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getCurvatures
+(parameters, directions, curvatures);</pre><p class="api">Return Value: boolean - Returns true if the curvatures were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameters</td><td class="api-list">double[]</td><td class="api-list">The array of parameter positions to return curvature information at. Each parameter value must be within the range of the parameter extents as provided by getParameterExtents.</td></tr><tr><td class="api-list">directions</td><td class="api-list">Vector3D[]</td><td class="api-list">The output array of the direction of the curvature at each position on the curve. The length of this array will be the same as the length of the parameters array provided.</td></tr><tr><td class="api-list">curvatures</td><td class="api-list">double[]</td><td class="api-list">The output array of the magnitude of the curvature at the position on the curve. The length of this array will be the same as the length of the parameters array provided.</td></tr></table><h3 class="api-member">getEndPoints Method</h3><p class="api">Get the end points of the curve.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+Ptr&lt;Point3D&gt; startPoint;
+Ptr&lt;Point3D&gt; endPoint;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getEndPoints
+(startPoint, endPoint);</pre><p class="api">Return Value: boolean - Returns true if the end points were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">startPoint</td><td class="api-list">Point3D</td><td class="api-list">The output start point of the curve. If the curve is unbounded at the start, this value will be null.</td></tr><tr><td class="api-list">endPoint</td><td class="api-list">Point3D</td><td class="api-list">The output end point of the curve. If the curve is unbounded at the end, this value will be null.</td></tr></table><h3 class="api-member">getFirstDerivative Method</h3><p class="api">Get the first derivative of the curve at the specified parameter position.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+double parameter;
+Ptr&lt;Vector3D&gt; firstDerivative;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getFirstDerivative
+(parameter, firstDerivative);</pre><p class="api">Return Value: boolean - Returns true if the first derivative was successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameter</td><td class="api-list">double</td><td class="api-list">The parameter position to get the curve first derivative at. The parameter value must be within the range of the parameter extents as provided by getParameterExtents.</td></tr><tr><td class="api-list">firstDerivative</td><td class="api-list">Vector3D</td><td class="api-list">The output first derivative vector at the parameter position specified.</td></tr></table><h3 class="api-member">getFirstDerivatives Method</h3><p class="api">Get the first derivatives of the curve at the specified parameter positions.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+double[] parameters;
+Vector3D[] firstDerivatives;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getFirstDerivatives
+(parameters, firstDerivatives);</pre><p class="api">Return Value: boolean - Returns true if the first derivatives were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameters</td><td class="api-list">double[]</td><td class="api-list">The array of parameter positions to get the curve first derivative at. Each parameter value must be within the range of the parameter extents as provided by getParameterExtents.</td></tr><tr><td class="api-list">firstDerivatives</td><td class="api-list">Vector3D[]</td><td class="api-list">The output array of first derivative vectors at each parameter position specified. The length of this array is equal to the length of the parameters array specified.</td></tr></table><h3 class="api-member">getLengthAtParameter Method</h3><p class="api">Get the length of the curve between two parameter positions on the curve.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+double fromParameter;
+double toParameter;
+double length;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getLengthAtParameter
+(fromParameter, toParameter, length);</pre><p class="api">Return Value: boolean - Returns true if the length was successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">fromParameter</td><td class="api-list">double</td><td class="api-list">The parameter position to measure the curve length from. This value must be within the range of the parameter extents as provided by getParameterExtents.</td></tr><tr><td class="api-list">toParameter</td><td class="api-list">double</td><td class="api-list">The parameter position to measure the curve length to. This value must be within the range of the parameter extents as provided by getParameterExtents.</td></tr><tr><td class="api-list">length</td><td class="api-list">double</td><td class="api-list">The output curve length between the from and to parameter positions on the curve.</td></tr></table><h3 class="api-member">getParameterAtLength Method</h3><p class="api">Get the parameter position on the curve that is the specified curve length from the specified starting parameter position.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+double fromParameter;
+double length;
+double parameter;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getParameterAtLength
+(fromParameter, length, parameter);</pre><p class="api">Return Value: boolean - Returns true if the parameter was successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">fromParameter</td><td class="api-list">double</td><td class="api-list">The parameter position to start measuring the curve length from. This value must be within the range of the parameter extents as provided by getParameterExtents.</td></tr><tr><td class="api-list">length</td><td class="api-list">double</td><td class="api-list">The curve length to offset the from parameter by. A negative length value will offset in the negative parameter direction.</td></tr><tr><td class="api-list">parameter</td><td class="api-list">double</td><td class="api-list">The output parameter value that is the specified curve length from the starting parameter position.</td></tr></table><h3 class="api-member">getParameterAtPoint Method</h3><p class="api">Get the parameter position that correspond to a point on the curve. For reliable results, the point should lie on the curve within model tolerance. If the point does not lie on the curve, the parameter of the nearest point on the curve will generally be returned.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+Ptr&lt;Point3D&gt; point;
+double parameter;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getParameterAtPoint
+(point, parameter);</pre><p class="api">Return Value: boolean - Returns true of the parameter was successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">point</td><td class="api-list">Point3D</td><td class="api-list">The point to get the curve parameter value at.</td></tr><tr><td class="api-list">parameter</td><td class="api-list">double</td><td class="api-list">The output parameter position corresponding to the point.</td></tr></table><h3 class="api-member">getParameterExtents Method</h3><p class="api">Get the parametric range of the curve.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+double startParameter;
+double endParameter;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getParameterExtents
+(startParameter, endParameter);</pre><p class="api">Return Value: boolean - Returns true if the curve is bounded and the parameter extents were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">startParameter</td><td class="api-list">double</td><td class="api-list">The output lower bound of the parameter range.</td></tr><tr><td class="api-list">endParameter</td><td class="api-list">double</td><td class="api-list">The output upper bound of the parameter range.</td></tr></table><h3 class="api-member">getParametersAtPoints Method</h3><p class="api">Get the parameter positions that correspond to a set of points on the curve. For reliable results, the points should lie on the curve within model tolerance. If the points do not lie on the curve, the parameter of the nearest point on the curve will generally be returned.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+Point3D[] points;
+double[] parameters;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getParametersAtPoints
+(points, parameters);</pre><p class="api">Return Value: boolean - Returns true if the parameters were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">points</td><td class="api-list">Point3D[]</td><td class="api-list">An array of points to get the curve parameter values at.</td></tr><tr><td class="api-list">parameters</td><td class="api-list">double[]</td><td class="api-list">The output array of parameter positions corresponding to the set of points. The length of this array will be equal to the length of the points array specified.</td></tr></table><h3 class="api-member">getPointAtParameter Method</h3><p class="api">Get the point on the curve that corresponds to evaluating a parameter position on the curve.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+double parameter;
+Ptr&lt;Point3D&gt; point;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getPointAtParameter
+(parameter, point);</pre><p class="api">Return Value: boolean - Returns true if the point was successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameter</td><td class="api-list">double</td><td class="api-list">The parameter position to evaluate the curve position at. The parameter value must be within the range of the parameter extents as provided by getParameterExtents.</td></tr><tr><td class="api-list">point</td><td class="api-list">Point3D</td><td class="api-list">The output curve position corresponding to evaluating the curve at that parameter position.</td></tr></table><h3 class="api-member">getPointsAtParameters Method</h3><p class="api">Get the points on the curve that correspond to evaluating a set of parameter positions on the curve.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+double[] parameters;
+Point3D[] points;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getPointsAtParameters
+(parameters, points);</pre><p class="api">Return Value: boolean - Returns true if the points were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameters</td><td class="api-list">double[]</td><td class="api-list">The array of parameter positions to evaluate the curve position at. Each parameter value must be within the range of the parameter extents as provided by getParameterExtents.</td></tr><tr><td class="api-list">points</td><td class="api-list">Point3D[]</td><td class="api-list">The output array of curve positions corresponding to evaluating the curve at that parameter position. The length of this array will be equal to the length of the parameters array specified.</td></tr></table><h3 class="api-member">getSecondDerivative Method</h3><p class="api">Get the second derivative of the curve at the specified parameter position.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+double parameter;
+Ptr&lt;Vector3D&gt; secondDerivative;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getSecondDerivative
+(parameter, secondDerivative);</pre><p class="api">Return Value: boolean - Returns true if the second derivative was successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameter</td><td class="api-list">double</td><td class="api-list">The parameter position to get the curve second derivative at. The parameter value must be within the range of the parameter extents as provided by getParameterExtents.</td></tr><tr><td class="api-list">secondDerivative</td><td class="api-list">Vector3D</td><td class="api-list">The output second derivative vector at the parameter position specified.</td></tr></table><h3 class="api-member">getSecondDerivatives Method</h3><p class="api">Get the second derivatives of the curve at the specified parameter positions.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+double[] parameters;
+Vector3D[] secondDerivatives;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getSecondDerivatives
+(parameters, secondDerivatives);</pre><p class="api">Return Value: boolean - Returns true if the second derivatives were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameters</td><td class="api-list">double[]</td><td class="api-list">The array of parameter positions to get the curve second derivative at. Each parameter value must be within the range of the parameter extents as provided by getParameterExtents.</td></tr><tr><td class="api-list">secondDerivatives</td><td class="api-list">Vector3D[]</td><td class="api-list">The output array of second derivative vectors at each parameter position specified. The length of this array is equal to the length of the parameters array specified.</td></tr></table><h3 class="api-member">getStrokes Method</h3><p class="api">Get a sequence of points between two curve parameter positions. The points will be a linear interpolation along the curve between these two parameter positions where the maximum deviation between the curve and each line segment will not exceed the specified tolerance value.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+double fromParameter;
+double toParameter;
+double tolerance;
+Point3D[] vertexCoordinates;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getStrokes
+(fromParameter, toParameter, tolerance, vertexCoordinates);</pre><p class="api">Return Value: boolean - Returns true if the interpolation points were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">fromParameter</td><td class="api-list">double</td><td class="api-list">The starting parameter position to interpolate points from. The parameter value must be within the range of the parameter extents as provided by getParameterExtents.</td></tr><tr><td class="api-list">toParameter</td><td class="api-list">double</td><td class="api-list">The ending parameter position to interpolate points to. The parameter value must be within the range of the parameter extents as provided by getParameterExtents.</td></tr><tr><td class="api-list">tolerance</td><td class="api-list">double</td><td class="api-list">The maximum distance tolerance between the curve and the linear interpolation.</td></tr><tr><td class="api-list">vertexCoordinates</td><td class="api-list">Point3D[]</td><td class="api-list">The output array of linear interpolation points.</td></tr></table><h3 class="api-member">getTangent Method</h3><p class="api">Get the tangent to the curve at a parameter position on the curve.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+double parameter;
+Ptr&lt;Vector3D&gt; tangent;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getTangent
+(parameter, tangent);</pre><p class="api">Return Value: boolean - Returns true if the tangent was successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameter</td><td class="api-list">double</td><td class="api-list">The parameter position to return the tangent at. This value must be within the range of the parameter extents as provided by getParameterExtents.</td></tr><tr><td class="api-list">tangent</td><td class="api-list">Vector3D</td><td class="api-list">The output tangent vector at the curve position.</td></tr></table><h3 class="api-member">getTangents Method</h3><p class="api">Get the tangent to the curve at a number of parameter positions on the curve.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+double[] parameters;
+Vector3D[] tangents;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getTangents
+(parameters, tangents);</pre><p class="api">Return Value: boolean - Returns true if the tangents were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameters</td><td class="api-list">double[]</td><td class="api-list">The array of parameter positions to return the tangent at. Each parameter value must be within the range of the parameter extents as provided by getParameterExtents.</td></tr><tr><td class="api-list">tangents</td><td class="api-list">Vector3D[]</td><td class="api-list">The output array of tangent vectors for each position on the curve. The length of this array will be the same as the length of the parameters array provided.</td></tr></table><h3 class="api-member">getThirdDerivative Method</h3><p class="api">Get the third derivative of the curve at the specified parameter position.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+double parameter;
+Ptr&lt;Vector3D&gt; thirdDerivative;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getThirdDerivative
+(parameter, thirdDerivative);</pre><p class="api">Return Value: boolean - Returns true if the third derivative was successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameter</td><td class="api-list">double</td><td class="api-list">The parameter position to get the curve third derivative at. The parameter value must be within the range of the parameter extents as provided by getParameterExtents.</td></tr><tr><td class="api-list">thirdDerivative</td><td class="api-list">Vector3D</td><td class="api-list">The output third derivative vector at the parameter position specified.</td></tr></table><h3 class="api-member">getThirdDerivatives Method</h3><p class="api">Get the third derivatives of the curve at the specified parameter positions.</p><pre class="api-code">#include &lt;Core/Geometry/CurveEvaluator3D.h
+// Declare the output arguments.
+double[] parameters;
+Vector3D[] thirdDerivatives;
+boolean returnValue = curveEvaluator3D_var-&gt;
+getThirdDerivatives
+(parameters, thirdDerivatives);</pre><p class="api">Return Value: boolean - Returns true if the third derivatives were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameters</td><td class="api-list">double[]</td><td class="api-list">The array of parameter positions to get the curve third derivative at. Each parameter value must be within the range of the parameter extents as provided by getParameterExtents.</td></tr><tr><td class="api-list">thirdDerivatives</td><td class="api-list">Vector3D[]</td><td class="api-list">The output array of third derivative vectors at each parameter position specified. The length of this array is equal to the length of the parameters array specified.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"curveEvaluator3D_var" is a variable referencing a CurveEvaluator3D object.
+#include &lt;Core/Geometry/CurveEvaluator3D.h&gt;
+// Get the value of the property.
+boolean propertyValue = curveEvaluator3D_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"curveEvaluator3D_var" is a variable referencing a CurveEvaluator3D object.
+#include &lt;Core/Geometry/CurveEvaluator3D.h&gt;
+// Get the value of the property.
+string propertyValue = curveEvaluator3D_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

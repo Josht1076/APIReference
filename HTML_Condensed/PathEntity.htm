@@ -1,0 +1,181 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/PathEntity.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="14/10/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="PathEntity" name="contextid"/>
+<meta content="PathEntity Object" name="description"/>
+<meta content="GUID-3ca1dab6-b8d9-478e-871b-1df07a9a607a" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>PathEntity Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">PathEntity Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/PathEntity.h&gt;<h2 class="api">
+          Description
+        </h2>The PathEntity object represents a curve within a path<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PathEntity_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PathEntity_createForAssemblyContext.htm">createForAssemblyContext</a></td>
+<td class="api-list">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PathEntity_assemblyContext.htm">assemblyContext</a></td>
+<td class="api-list">This property is not supported for a PathEntity object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PathEntity_curve.htm">curve</a></td>
+<td class="api-list">Property that returns the geometry of the entity. This is different from the original path curve if the true start point is not the same as the start point of the original path curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PathEntity_curveType.htm">curveType</a></td>
+<td class="api-list">Property that returns the type of the curve referenced by the path entity. This property allows you to determine what type of object will be returned by the Curve property.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PathEntity_entity.htm">entity</a></td>
+<td class="api-list">Property that gets the sketch curve or edge this entity was derived from.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PathEntity_isOpposedToEntity.htm">isOpposedToEntity</a></td>
+<td class="api-list">Indicates if the orientation of this PathEntity is in the same direction or opposed to the natural direction of the SketchCurve or BRepEdge object it is derived from.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PathEntity_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PathEntity_nativeObject.htm">nativeObject</a></td>
+<td class="api-list">This property is not supported for a PathEntity object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PathEntity_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="PathEntity_parentPath.htm">parentPath</a></td>
+<td class="api-list">Property that returns the parent Path of the entity.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Path_item.htm">Path.item</a>, <a href="PathEntity_createForAssemblyContext.htm">PathEntity.createForAssemblyContext</a>, <a href="PathEntity_nativeObject.htm">PathEntity.nativeObject</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version November 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(PathEntity%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">assemblyContext Property</h3><p class="api">This property is not supported for a PathEntity object.</p><pre class="api-code">"pathEntity_var" is a variable referencing a PathEntity object.
+#include &lt;Fusion/Features/PathEntity.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = pathEntity_var-&gt;
+assemblyContext
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/PathEntity.h&gt;
+returnValue = adsk::fusion::PathEntity::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">createForAssemblyContext Method</h3><p class="api">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</p><pre class="api-code">"pathEntity_var" is a variable referencing a
+PathEntity
+object.
+#include &lt;Fusion/Features/PathEntity.h&gt;
+returnValue = pathEntity_var-&gt;
+createForAssemblyContext
+(occurrence);</pre><p class="api">Return Value: PathEntity - Returns the proxy object or null if this isn't the NativeObject.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">occurrence</td><td class="api-list">Occurrence</td><td class="api-list"></td></tr></table><h3 class="api-member">curve Property</h3><p class="api">Property that returns the geometry of the entity. This is different from the original path curve if the true start point is not the same as the start point of the original path curve.</p><pre class="api-code">"pathEntity_var" is a variable referencing a PathEntity object.
+#include &lt;Fusion/Features/PathEntity.h&gt;
+// Get the value of the property.
+Ptr&lt;Curve3D&gt; propertyValue = pathEntity_var-&gt;
+curve
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">curveType Property</h3><p class="api">Property that returns the type of the curve referenced by the path entity. This property allows you to determine what type of object will be returned by the Curve property.</p><pre class="api-code">"pathEntity_var" is a variable referencing a PathEntity object.
+#include &lt;Fusion/Features/PathEntity.h&gt;
+// Get the value of the property.
+Curve3DTypes propertyValue = pathEntity_var-&gt;
+curveType
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">entity Property</h3><p class="api">Property that gets the sketch curve or edge this entity was derived from.</p><pre class="api-code">"pathEntity_var" is a variable referencing a PathEntity object.
+#include &lt;Fusion/Features/PathEntity.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = pathEntity_var-&gt;
+entity
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">isOpposedToEntity Property</h3><p class="api">Indicates if the orientation of this PathEntity is in the same direction or opposed to the natural direction of the SketchCurve or BRepEdge object it is derived from.</p><pre class="api-code">"pathEntity_var" is a variable referencing a PathEntity object.
+#include &lt;Fusion/Features/PathEntity.h&gt;
+// Get the value of the property.
+boolean propertyValue = pathEntity_var-&gt;
+isOpposedToEntity
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"pathEntity_var" is a variable referencing a PathEntity object.
+#include &lt;Fusion/Features/PathEntity.h&gt;
+// Get the value of the property.
+boolean propertyValue = pathEntity_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">nativeObject Property</h3><p class="api">This property is not supported for a PathEntity object.</p><pre class="api-code">"pathEntity_var" is a variable referencing a PathEntity object.
+#include &lt;Fusion/Features/PathEntity.h&gt;
+// Get the value of the property.
+Ptr&lt;PathEntity&gt; propertyValue = pathEntity_var-&gt;
+nativeObject
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"pathEntity_var" is a variable referencing a PathEntity object.
+#include &lt;Fusion/Features/PathEntity.h&gt;
+// Get the value of the property.
+string propertyValue = pathEntity_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentPath Property</h3><p class="api">Property that returns the parent Path of the entity.</p><pre class="api-code">"pathEntity_var" is a variable referencing a PathEntity object.
+#include &lt;Fusion/Features/PathEntity.h&gt;
+// Get the value of the property.
+Ptr&lt;Path&gt; propertyValue = pathEntity_var-&gt;
+parentPath
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

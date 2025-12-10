@@ -1,0 +1,214 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/Product.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="Product" name="contextid"/>
+<meta content="Product Object" name="description"/>
+<meta content="GUID-c1fb15c9-0117-4666-a8c3-2dd305f7f6ac" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>Product Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">Product Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Application/Product.h&gt;<h2 class="api">
+          Description
+        </h2>The base class for the various product specific containers. For Fusion this is the Design object. For manufacturing this is a CAM object.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Product_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Product_deleteEntities.htm">deleteEntities</a></td>
+<td class="api-list">Deletes the specified set of entities that are associated with this product.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Product_findAttributes.htm">findAttributes</a></td>
+<td class="api-list">Find attributes attached to objects in this product that match the group and or attribute name. This does not find attributes attached directly to the Product or Document objects but finds the attributes attached to entities within the product.<br><br/> The search string for both the groupName and attributeName arguments can be either an absolute name value, or a regular expression. With an absolute name, the search string must match the entire groupName or attributeName, including case. An empty string will match everything. For example if you have an attribute group named "MyStuff" that contains the attribute "Length1", using the search string "MyStuff" as the group name and "Length1" as the attribute name will find the attributes with those names. Searching for "MyStuff" as the group name and "" as the attribute name will find all attributes that have "MyStuff" as the group name.<br/><br/> Regular expressions provide a more flexible way of searching. To use a regular expression, prefix the input string for the groupName or attributeName arguments with "re:". The regular expression much match the entire group or attribute name. For example if you have a group that contains attributes named "Length1", "Length2", "Width1", and "Width2" and want to find any of the length attributes you can use a regular expression using the string "re:Length.*". For more information on attributes see the Attributes topic in the user manual.</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Product_attributes.htm">attributes</a></td>
+<td class="api-list">Returns the collection of attributes associated with this product.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Product_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Product_namedViews.htm">namedViews</a></td>
+<td class="api-list">Returns the NamedViews object associated with this product. The NamedViews collection provides access to the named views defined in this product and supports the creation of new named views.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Product_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Product_parentDocument.htm">parentDocument</a></td>
+<td class="api-list">Returns the parent Document object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Product_productType.htm">productType</a></td>
+<td class="api-list">Returns the product type name of this product. A list of all of the possible product types can be obtained by using the Application.supportedProductTypes property.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Product_selectionSets.htm">selectionSets</a></td>
+<td class="api-list">Returns the SelectionSets object associated with this product. If the product does not support selection sets, null is returned. The SelectionSets object is used to create and access existing selection sets.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Product_unitsManager.htm">unitsManager</a></td>
+<td class="api-list">Returns the UnitsManager object associated with this product.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Product_workspaces.htm">workspaces</a></td>
+<td class="api-list">Returns the workspaces associated with this product.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Application_activeProduct.htm">Application.activeProduct</a>, <a href="FusionUnitsManager_product.htm">FusionUnitsManager.product</a>, <a href="NamedView_parentProduct.htm">NamedView.parentProduct</a>, <a href="Products_item.htm">Products.item</a>, <a href="Products_itemByProductType.htm">Products.itemByProductType</a>, <a href="RenderManager_parentDesign.htm">RenderManager.parentDesign</a>, <a href="UnitsManager_product.htm">UnitsManager.product</a><h2 class="api">
+            Derived Classes
+          </h2><a href="CAM.htm">CAM</a>, <a href="Design.htm">Design</a>, <a href="Drawing.htm">Drawing</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SimpleExtrusionSample_Sample.htm">Simple Extrusion Sample</a></td>
+<td class="api-list">Creates a new extrusion feature, resulting in a new component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SimpleRevolveFeatureSample_Sample.htm">Simple Revolve Feature Sample</a></td>
+<td class="api-list">Creates a new revolve feature, resulting in a new component.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(Product%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">attributes Property</h3><p class="api">Returns the collection of attributes associated with this product.</p><pre class="api-code">"product_var" is a variable referencing a Product object.
+#include &lt;Core/Application/Product.h&gt;
+// Get the value of the property.
+Ptr&lt;Attributes&gt; propertyValue = product_var-&gt;
+attributes
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Application/Product.h&gt;
+returnValue = adsk::core::Product::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">deleteEntities Method</h3><p class="api">Deletes the specified set of entities that are associated with this product.</p><pre class="api-code">"product_var" is a variable referencing a
+Product
+object.
+#include &lt;Core/Application/Product.h&gt;
+returnValue = product_var-&gt;
+deleteEntities
+(entities);</pre><p class="api">Return Value: boolean - Returns True if any of the entities provided in the list were deleted. If entities were specified that can't be deleted or aren't owned by this product, they are ignored.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">entities</td><td class="api-list">ObjectCollection</td><td class="api-list">An ObjectCollection containing the list of entities to delete.</td></tr></table><h3 class="api-member">findAttributes Method</h3><p class="api">Find attributes attached to objects in this product that match the group and or attribute name. This does not find attributes attached directly to the Product or Document objects but finds the attributes attached to entities within the product. The search string for both the groupName and attributeName arguments can be either an absolute name value, or a regular expression. With an absolute name, the search string must match the entire groupName or attributeName, including case. An empty string will match everything. For example if you have an attribute group named "MyStuff" that contains the attribute "Length1", using the search string "MyStuff" as the group name and "Length1" as the attribute name will find the attributes with those names. Searching for "MyStuff" as the group name and "" as the attribute name will find all attributes that have "MyStuff" as the group name. Regular expressions provide a more flexible way of searching. To use a regular expression, prefix the input string for the groupName or attributeName arguments with "re:". The regular expression much match the entire group or attribute name. For example if you have a group that contains attributes named "Length1", "Length2", "Width1", and "Width2" and want to find any of the length attributes you can use a regular expression using the string "re:Length.*". For more information on attributes see the Attributes topic in the user manual.</p><pre class="api-code">"product_var" is a variable referencing a
+Product
+object.
+#include &lt;Core/Application/Product.h&gt;
+returnValue = product_var-&gt;
+findAttributes
+(groupName, attributeName);</pre><p class="api">Return Value: Attribute [] - An array of Attribute objects that were found. An empty array is returned if no attributes were found.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">groupName</td><td class="api-list">string</td><td class="api-list">The search string for the group name. See above for more details.</td></tr><tr><td class="api-list">attributeName</td><td class="api-list">string</td><td class="api-list">The search string for the attribute name. See above for more details.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"product_var" is a variable referencing a Product object.
+#include &lt;Core/Application/Product.h&gt;
+// Get the value of the property.
+boolean propertyValue = product_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">namedViews Property</h3><p class="api">Returns the NamedViews object associated with this product. The NamedViews collection provides access to the named views defined in this product and supports the creation of new named views.</p><pre class="api-code">"product_var" is a variable referencing a Product object.
+#include &lt;Core/Application/Product.h&gt;
+// Get the value of the property.
+Ptr&lt;NamedViews&gt; propertyValue = product_var-&gt;
+namedViews
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"product_var" is a variable referencing a Product object.
+#include &lt;Core/Application/Product.h&gt;
+// Get the value of the property.
+string propertyValue = product_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentDocument Property</h3><p class="api">Returns the parent Document object.</p><pre class="api-code">"product_var" is a variable referencing a Product object.
+#include &lt;Core/Application/Product.h&gt;
+// Get the value of the property.
+Ptr&lt;Document&gt; propertyValue = product_var-&gt;
+parentDocument
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">productType Property</h3><p class="api">Returns the product type name of this product. A list of all of the possible product types can be obtained by using the Application.supportedProductTypes property.</p><pre class="api-code">"product_var" is a variable referencing a Product object.
+#include &lt;Core/Application/Product.h&gt;
+// Get the value of the property.
+string propertyValue = product_var-&gt;
+productType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">selectionSets Property</h3><p class="api">Returns the SelectionSets object associated with this product. If the product does not support selection sets, null is returned. The SelectionSets object is used to create and access existing selection sets.</p><pre class="api-code">"product_var" is a variable referencing a Product object.
+#include &lt;Core/Application/Product.h&gt;
+// Get the value of the property.
+Ptr&lt;SelectionSets&gt; propertyValue = product_var-&gt;
+selectionSets
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">unitsManager Property</h3><p class="api">Returns the UnitsManager object associated with this product.</p><pre class="api-code">"product_var" is a variable referencing a Product object.
+#include &lt;Core/Application/Product.h&gt;
+// Get the value of the property.
+Ptr&lt;UnitsManager&gt; propertyValue = product_var-&gt;
+unitsManager
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">workspaces Property</h3><p class="api">Returns the workspaces associated with this product.</p><pre class="api-code">"product_var" is a variable referencing a Product object.
+#include &lt;Core/Application/Product.h&gt;
+// Get the value of the property.
+Ptr&lt;WorkspaceList&gt; propertyValue = product_var-&gt;
+workspaces
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

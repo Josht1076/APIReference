@@ -1,0 +1,136 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/AdditiveSetupUtility.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="22/08/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="AdditiveSetupUtility" name="contextid"/>
+<meta content="AdditiveSetupUtility Object" name="description"/>
+<meta content="GUID-B621EBE7-8D41-48FD-8FA7-45B968060C50" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>AdditiveSetupUtility Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">AdditiveSetupUtility Object
+			</h1>
+              Derived from: <a href="ModifyUtility.htm">ModifyUtility</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/ModifyUtility/AdditiveSetupUtility.h&gt;<h2 class="api">
+          Description
+        </h2>AdditiveSetupUtility provides functionality for modifications of additive setups.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="AdditiveSetupUtility_assignPartsToBodyPreset.htm">assignPartsToBodyPreset</a></td>
+<td class="api-list">Assigns an array of parts to the body preset operation corresponding to the chosen PrintSettingItem in the PrintSetting. If a part has been previously assigned to a different preset (i.e. the default preset), it will be removed from its previous owner to ensure a body can only be mapped to one preset. If the previous owner preset ends up being empty, it will be removed from the setup.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AdditiveSetupUtility_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AdditiveSetupUtility_removeExcessParts.htm">removeExcessParts</a></td>
+<td class="api-list">Remove components from setups, that are outside of the buildroom.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AdditiveSetupUtility_splitSupport.htm">splitSupport</a></td>
+<td class="api-list">Splits support structure of given target bodies into separate mesh body.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="AdditiveSetupUtility_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AdditiveSetupUtility_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(AdditiveSetupUtility%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">assignPartsToBodyPreset Method</h3><p class="api">Assigns an array of parts to the body preset operation corresponding to the chosen PrintSettingItem in the PrintSetting. If a part has been previously assigned to a different preset (i.e. the default preset), it will be removed from its previous owner to ensure a body can only be mapped to one preset. If the previous owner preset ends up being empty, it will be removed from the setup.</p><pre class="api-code">"additiveSetupUtility_var" is a variable referencing an
+AdditiveSetupUtility
+object.
+#include &lt;Cam/ModifyUtility/AdditiveSetupUtility.h&gt;
+returnValue = additiveSetupUtility_var-&gt;
+assignPartsToBodyPreset
+(parts, presetName);</pre><p class="api">Return Value: Operation - The preset corresponding to the preset name. Returns null if the preset has been removed from the setup due to passing an empty or invalid array.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parts</td><td class="api-list">Base[]</td><td class="api-list">Parts to be assigned to a preset. The array may contain BRepBody, MeshBody or Occurrence objects. If occurrences are passed in, the preset will contain their resolved bodies or meshes. If the array is empty, the preset will be removed from the setup, but the PrintSettingItem will stay in the PrintSetting.</td></tr><tr><td class="api-list">presetName</td><td class="api-list">string</td><td class="api-list">The name of the PrintSettingItem defined in the PrintSetting, which serves as the basis for the to be created operation.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/ModifyUtility/AdditiveSetupUtility.h&gt;
+returnValue = adsk::cam::AdditiveSetupUtility::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"additiveSetupUtility_var" is a variable referencing an AdditiveSetupUtility object.
+#include &lt;Cam/ModifyUtility/AdditiveSetupUtility.h&gt;
+// Get the value of the property.
+boolean propertyValue = additiveSetupUtility_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"additiveSetupUtility_var" is a variable referencing an AdditiveSetupUtility object.
+#include &lt;Cam/ModifyUtility/AdditiveSetupUtility.h&gt;
+// Get the value of the property.
+string propertyValue = additiveSetupUtility_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">removeExcessParts Method</h3><p class="api">Remove components from setups, that are outside of the buildroom.</p><pre class="api-code">"additiveSetupUtility_var" is a variable referencing an
+AdditiveSetupUtility
+object.
+#include &lt;Cam/ModifyUtility/AdditiveSetupUtility.h&gt;
+returnValue = additiveSetupUtility_var-&gt;
+removeExcessParts
+();</pre><p class="api">Return Value: integer - Returns count of removed parts on success and -1 on failure.</p><h3 class="api-member">splitSupport Method</h3><p class="api">Splits support structure of given target bodies into separate mesh body.</p><pre class="api-code">"additiveSetupUtility_var" is a variable referencing an
+AdditiveSetupUtility
+object.
+#include &lt;Cam/ModifyUtility/AdditiveSetupUtility.h&gt;
+returnValue = additiveSetupUtility_var-&gt;
+splitSupport
+(targets, splitType);</pre><p class="api">Return Value: boolean - True on success, false on errors</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">targets</td><td class="api-list">Base[]</td><td class="api-list">Targets contain any input bodies whose support is to be inserted into a new mesh body. Input target must belong to the setup and must be part of the associated manufacturing model. Raises an error if any input target is not part of the setup or is not part of the associated manufacturing model.</td></tr><tr><td class="api-list">splitType</td><td class="api-list">SplitSupportTypes</td><td class="api-list">The splitType defines the behavior for support that contains solid and open mesh geometry.</td></tr></table></body>
+</html>

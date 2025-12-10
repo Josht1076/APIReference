@@ -1,0 +1,179 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/SectionAnalysisInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="18/01/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="SectionAnalysisInput" name="contextid"/>
+<meta content="SectionAnalysisInput Object" name="description"/>
+<meta content="GUID-C9762F1E-A314-4718-BC3C-11C6727AB712" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>SectionAnalysisInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">SectionAnalysisInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Fusion/SectionAnalysisInput.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access the all of the settings available when creating a section analysis. This object is the API equivalent of the command dialog that contains the inputs to create a section analysis. Use this object to define the settings you need and then pass this into the add method to create the section analysis.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SectionAnalysisInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SectionAnalysisInput_flip.htm">flip</a></td>
+<td class="api-list">A property that flips which side of the part is cut away by the section. This is a convenience method that results in flipping the Z axis of the transform while maintaining a valid rectangular coordinate system. You can directly manipulate the transform matrix to have the same effect.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SectionAnalysisInput_cutPlaneEntity.htm">cutPlaneEntity</a></td>
+<td class="api-list">A property that gets and sets the planar entity used to define the cut plane and can be either a planar BRepFace or a ConstructionPlane object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SectionAnalysisInput_initialPosition.htm">initialPosition</a></td>
+<td class="api-list">Returns the matrix that describes the initial position and orientation of the specified cut plane entity. Any additional offsets or rotations are defined by a transformation matrix that is applied to this initial position matrix. That matrix is obtained and set using the transform property.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SectionAnalysisInput_isHatchShown.htm">isHatchShown</a></td>
+<td class="api-list">A property that gets and sets if a hatch pattern should be shown on the section. This property defaults to true when the input is created.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SectionAnalysisInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SectionAnalysisInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="SectionAnalysisInput_sectionColor.htm">sectionColor</a></td>
+<td class="api-list">A property that gets and sets the color of the section. This property defaults to null, indicating that the component color should be used. The opacity value of the color is ignored.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SectionAnalysisInput_transform.htm">transform</a></td>
+<td class="api-list">The initial position of the section plane is defined by the specified cut plane entity. Any offsets or rotations are defined by a transformation matrix that is applied to the initial position. This property allows you to get and set the transformation matrix.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="SectionAnalyses_createInput.htm">SectionAnalyses.createInput</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(SectionAnalysisInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Fusion/SectionAnalysisInput.h&gt;
+returnValue = adsk::fusion::SectionAnalysisInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">cutPlaneEntity Property</h3><p class="api">A property that gets and sets the planar entity used to define the cut plane and can be either a planar BRepFace or a ConstructionPlane object.</p><pre class="api-code">"sectionAnalysisInput_var" is a variable referencing a SectionAnalysisInput object.
+#include &lt;Fusion/Fusion/SectionAnalysisInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = sectionAnalysisInput_var-&gt;
+cutPlaneEntity
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = sectionAnalysisInput_var-&gt;
+cutPlaneEntity
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">flip Method</h3><p class="api">A property that flips which side of the part is cut away by the section. This is a convenience method that results in flipping the Z axis of the transform while maintaining a valid rectangular coordinate system. You can directly manipulate the transform matrix to have the same effect.</p><pre class="api-code">"sectionAnalysisInput_var" is a variable referencing a
+SectionAnalysisInput
+object.
+#include &lt;Fusion/Fusion/SectionAnalysisInput.h&gt;
+returnValue = sectionAnalysisInput_var-&gt;
+flip
+();</pre><h3 class="api-member">initialPosition Property</h3><p class="api">Returns the matrix that describes the initial position and orientation of the specified cut plane entity. Any additional offsets or rotations are defined by a transformation matrix that is applied to this initial position matrix. That matrix is obtained and set using the transform property.</p><pre class="api-code">"sectionAnalysisInput_var" is a variable referencing a SectionAnalysisInput object.
+#include &lt;Fusion/Fusion/SectionAnalysisInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Matrix3D&gt; propertyValue = sectionAnalysisInput_var-&gt;
+initialPosition
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">isHatchShown Property</h3><p class="api">A property that gets and sets if a hatch pattern should be shown on the section. This property defaults to true when the input is created.</p><pre class="api-code">"sectionAnalysisInput_var" is a variable referencing a SectionAnalysisInput object.
+#include &lt;Fusion/Fusion/SectionAnalysisInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = sectionAnalysisInput_var-&gt;
+isHatchShown
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sectionAnalysisInput_var-&gt;
+isHatchShown
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"sectionAnalysisInput_var" is a variable referencing a SectionAnalysisInput object.
+#include &lt;Fusion/Fusion/SectionAnalysisInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = sectionAnalysisInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"sectionAnalysisInput_var" is a variable referencing a SectionAnalysisInput object.
+#include &lt;Fusion/Fusion/SectionAnalysisInput.h&gt;
+// Get the value of the property.
+string propertyValue = sectionAnalysisInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">sectionColor Property</h3><p class="api">A property that gets and sets the color of the section. This property defaults to null, indicating that the component color should be used. The opacity value of the color is ignored.</p><pre class="api-code">"sectionAnalysisInput_var" is a variable referencing a SectionAnalysisInput object.
+#include &lt;Fusion/Fusion/SectionAnalysisInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Color&gt; propertyValue = sectionAnalysisInput_var-&gt;
+sectionColor
+();
+// Set the value of the property, where value_var is a Color.
+bool returnValue = sectionAnalysisInput_var-&gt;
+sectionColor
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">transform Property</h3><p class="api">The initial position of the section plane is defined by the specified cut plane entity. Any offsets or rotations are defined by a transformation matrix that is applied to the initial position. This property allows you to get and set the transformation matrix.</p><pre class="api-code">"sectionAnalysisInput_var" is a variable referencing a SectionAnalysisInput object.
+#include &lt;Fusion/Fusion/SectionAnalysisInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Matrix3D&gt; propertyValue = sectionAnalysisInput_var-&gt;
+transform
+();
+// Set the value of the property, where value_var is a Matrix3D.
+bool returnValue = sectionAnalysisInput_var-&gt;
+transform
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

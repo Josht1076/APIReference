@@ -1,0 +1,395 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/SelectionCommandInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="SelectionCommandInput" name="contextid"/>
+<meta content="SelectionCommandInput Object" name="description"/>
+<meta content="GUID-568db63a-0f28-4307-9e02-e29f54820db1" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>SelectionCommandInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">SelectionCommandInput Object
+			</h1>
+              Derived from: <a href="CommandInput.htm">CommandInput</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/UserInterface/SelectionCommandInput.h&gt;<h2 class="api">
+          Description
+        </h2>Provides a command input to get a selection from the user.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_addSelection.htm">addSelection</a></td>
+<td class="api-list">Adds the selection to the list of selections associated with this input. This method is not valid within the commandCreated event but must be used later in the command lifetime. If you want to pre-populate the selection when the command is starting, you can use this method in the activate method of the Command. It's also valid to use in other events once the command is running, such as the validateInputs event.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_addSelectionFilter.htm">addSelectionFilter</a></td>
+<td class="api-list">Adds an additional filter to the existing filter list.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_clearSelection.htm">clearSelection</a></td>
+<td class="api-list">Clears the current selection so no entities are in the selection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_clearSelectionFilter.htm">clearSelectionFilter</a></td>
+<td class="api-list">Clears the list of selection filters.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes this Command input.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_getSelectionLimits.htm">getSelectionLimits</a></td>
+<td class="api-list">Get the limits currently defined for this input.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_selection.htm">selection</a></td>
+<td class="api-list">Returns the selection at the specified index.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_setSelectionLimits.htm">setSelectionLimits</a></td>
+<td class="api-list">Defines the limits for the number of selections associated with this input. A maximum value of 0 indicates that there is no maximum.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_commandInputs.htm">commandInputs</a></td>
+<td class="api-list">Gets the CommandInputs class of the parent, which can be a Command, GroupCommandInput or TabCommandInput.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_commandPrompt.htm">commandPrompt</a></td>
+<td class="api-list">Gets or sets the tooltip shown next to the cursor.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_hasFocus.htm">hasFocus</a></td>
+<td class="api-list">Gets and sets if this selection input has focus with respect to other selection inputs on the command dialog. Only one selection input on a dialog can have focus at a time, so setting hasFocus to true will remove the focus from the selection input that previously had focus. When a selection input has focus; any user selections will be added to that selection input, and the selection rules associated with that selection input will apply.<br><br/> Setting hasFocus to True for a selection input whose isVisible property is false will fail.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_id.htm">id</a></td>
+<td class="api-list">Gets the unique identifier for this input in the command's CommandInputs.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_isEnabled.htm">isEnabled</a></td>
+<td class="api-list">Gets or sets if this input is currently enabled or disabled for user interaction.<br/><br/> Currently, the isEnabled property does not disable SelectionCommandInput objects but instead has the same effect as the SelectionCommandInput.hasFocus property.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_isFullWidth.htm">isFullWidth</a></td>
+<td class="api-list">Gets or sets if this input fills the entire width of the dialog. If true, the name is ignored and the input control will fill the entire width of the command dialog. The default value for this property in a new command input if false, or not to fill the width. This property does not apply to GroupCommandInputs or TabCommandInputs.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_isUseCurrentSelections.htm">isUseCurrentSelections</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Determines if any selections the user has made before starting the command can be used by the command's selection inputs. The default is true, which means the active selections will be added to the first selection input whose selection filter allows for that entity type. For example, if you have two selection inputs that have filters to select any number of faces and there are four faces selected when the command is started, those four faces will be selected by the selection input. If there's another selection input for the same command that has the filter set to select sketch curves, and there are faces and sketch curves selected when you start the command, the faces will be selected by the selection input filtering for faces, and the sketch curves will be selected by the selection input filtering for sketch curves.<br/><br/> You can programmatically control which selected entities will be added to the selection inputs by using the preSelect event of the command. The preSelect event will fire for each entity that was already selected before it's added to the selection input, and you can use it to control if it will be added to the selection input.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_isVisible.htm">isVisible</a></td>
+<td class="api-list">Gets or sets if this input will be visible to the user.<br/><br/> Setting a SelectionCommandInput to be invisible will clear any selections it currently has.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_name.htm">name</a></td>
+<td class="api-list">Gets the user visible name of this input.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_parentCommand.htm">parentCommand</a></td>
+<td class="api-list">Gets the parent Command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_parentCommandInput.htm">parentCommandInput</a></td>
+<td class="api-list">Gets the parent CommandInput if this commandInput is the child of a TabCommandInput or GroupCommandInput. Returns null if there is no parent.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_selectionCount.htm">selectionCount</a></td>
+<td class="api-list">Gets the current number of selections the user has made for this input.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_selectionFilters.htm">selectionFilters</a></td>
+<td class="api-list">Gets or sets the list of selection filters.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_toolClipFilename.htm">toolClipFilename</a></td>
+<td class="api-list">Gets or sets the full filename of the image file (PNG) used for the tool clip. The tooltip is always shown but as the user hovers over the control it will progressively display the tool clip and description text.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_tooltip.htm">tooltip</a></td>
+<td class="api-list">Gets or sets the base tooltip string. This is always shown for commands. If the tooltip description and/or tool clip are also specified then the tooltip will progressively display more information as the user hovers the mouse over the control.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SelectionCommandInput_tooltipDescription.htm">tooltipDescription</a></td>
+<td class="api-list">Gets or sets additional text to display progressively along with the tooltip. The text for the description can contain some basic HTML formatting tags to format the tags. For example the br tag can be used to create multiple paragraphs. The tooltip is always shown but as the user hovers over the control it will progressively display the tool clip and description text.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CommandInputs_addSelectionInput.htm">CommandInputs.addSelectionInput</a>, <a href="SelectionEvent_activeInput.htm">SelectionEvent.activeInput</a>, <a href="SelectionEventArgs_activeInput.htm">SelectionEventArgs.activeInput</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandInputsSample_Sample.htm">Command Inputs API Sample</a></td>
+<td class="api-list"><p>Creates a command dialog that demonstrates all of the available command inputs.</p>
+<p>To use the sample, create a new Python or C++ script and copy and paste this code, replacing the default code.  You also need to unpack this zip file which contains a <a href="../ExtraFiles/CommandInputsResources.zip">resource folder</a> into the same folder where the source code file (.py or .cpp) is.</p></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(SelectionCommandInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">addSelection Method</h3><p class="api">Adds the selection to the list of selections associated with this input. This method is not valid within the commandCreated event but must be used later in the command lifetime. If you want to pre-populate the selection when the command is starting, you can use this method in the activate method of the Command. It's also valid to use in other events once the command is running, such as the validateInputs event.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a
+SelectionCommandInput
+object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+returnValue = selectionCommandInput_var-&gt;
+addSelection
+(selection);</pre><p class="api">Return Value: boolean - Returns true if a selection to the entity was added to this input.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">selection</td><td class="api-list">Base</td><td class="api-list">The entity to add a selection of to this input. The addition may fail if the entity does not match the selection filter, or adding it would exceed the limits.</td></tr></table><h3 class="api-member">addSelectionFilter Method</h3><p class="api">Adds an additional filter to the existing filter list.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a
+SelectionCommandInput
+object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+returnValue = selectionCommandInput_var-&gt;
+addSelectionFilter
+(filter);</pre><p class="api">Return Value: boolean - Returns true if the filter was added successfully.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">filter</td><td class="api-list">string</td><td class="api-list">The name of a selection filter to add. The valid list of selection filters can be found here: Selection Filters .</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+returnValue = adsk::core::SelectionCommandInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">clearSelection Method</h3><p class="api">Clears the current selection so no entities are in the selection.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a
+SelectionCommandInput
+object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+returnValue = selectionCommandInput_var-&gt;
+clearSelection
+();</pre><p class="api">Return Value: boolean - Returns true if successful.</p><h3 class="api-member">clearSelectionFilter Method</h3><p class="api">Clears the list of selection filters.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a
+SelectionCommandInput
+object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+returnValue = selectionCommandInput_var-&gt;
+clearSelectionFilter
+();</pre><p class="api">Return Value: boolean - Returns true if successful.</p><h3 class="api-member">commandInputs Property</h3><p class="api">Gets the CommandInputs class of the parent, which can be a Command, GroupCommandInput or TabCommandInput.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a SelectionCommandInput object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Get the value of the property.
+Ptr&lt;CommandInputs&gt; propertyValue = selectionCommandInput_var-&gt;
+commandInputs
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">commandPrompt Property</h3><p class="api">Gets or sets the tooltip shown next to the cursor.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a SelectionCommandInput object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = selectionCommandInput_var-&gt;
+commandPrompt
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = selectionCommandInput_var-&gt;
+commandPrompt
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes this Command input.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a
+SelectionCommandInput
+object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+returnValue = selectionCommandInput_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true if the delete was successful.</p><h3 class="api-member">getSelectionLimits Method</h3><p class="api">Get the limits currently defined for this input.</p><pre class="api-code">#include &lt;Core/UserInterface/SelectionCommandInput.h
+// Declare the output arguments.
+uinteger minimum;
+uinteger maximum;
+boolean returnValue = selectionCommandInput_var-&gt;
+getSelectionLimits
+(minimum, maximum);</pre><p class="api">Return Value: boolean - Returns true if the selection limits were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">minimum</td><td class="api-list">uinteger</td><td class="api-list">The minimum number of selections required. A value of zero means that there is no minimum limit.</td></tr><tr><td class="api-list">maximum</td><td class="api-list">uinteger</td><td class="api-list">The maximum number of selections required. A value of zero means that there is no maximum limit.</td></tr></table><h3 class="api-member">hasFocus Property</h3><p class="api">Gets and sets if this selection input has focus with respect to other selection inputs on the command dialog. Only one selection input on a dialog can have focus at a time, so setting hasFocus to true will remove the focus from the selection input that previously had focus. When a selection input has focus; any user selections will be added to that selection input, and the selection rules associated with that selection input will apply. Setting hasFocus to True for a selection input whose isVisible property is false will fail.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a SelectionCommandInput object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = selectionCommandInput_var-&gt;
+hasFocus
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = selectionCommandInput_var-&gt;
+hasFocus
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">id Property</h3><p class="api">Gets the unique identifier for this input in the command's CommandInputs.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a SelectionCommandInput object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = selectionCommandInput_var-&gt;
+id
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">isEnabled Property</h3><p class="api">Gets or sets if this input is currently enabled or disabled for user interaction. Currently, the isEnabled property does not disable SelectionCommandInput objects but instead has the same effect as the SelectionCommandInput.hasFocus property.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a SelectionCommandInput object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = selectionCommandInput_var-&gt;
+isEnabled
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = selectionCommandInput_var-&gt;
+isEnabled
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isFullWidth Property</h3><p class="api">Gets or sets if this input fills the entire width of the dialog. If true, the name is ignored and the input control will fill the entire width of the command dialog. The default value for this property in a new command input if false, or not to fill the width. This property does not apply to GroupCommandInputs or TabCommandInputs.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a SelectionCommandInput object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = selectionCommandInput_var-&gt;
+isFullWidth
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = selectionCommandInput_var-&gt;
+isFullWidth
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isUseCurrentSelections Property</h3><p class="api">Determines if any selections the user has made before starting the command can be used by the command's selection inputs. The default is true, which means the active selections will be added to the first selection input whose selection filter allows for that entity type. For example, if you have two selection inputs that have filters to select any number of faces and there are four faces selected when the command is started, those four faces will be selected by the selection input. If there's another selection input for the same command that has the filter set to select sketch curves, and there are faces and sketch curves selected when you start the command, the faces will be selected by the selection input filtering for faces, and the sketch curves will be selected by the selection input filtering for sketch curves. You can programmatically control which selected entities will be added to the selection inputs by using the preSelect event of the command. The preSelect event will fire for each entity that was already selected before it's added to the selection input, and you can use it to control if it will be added to the selection input.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a SelectionCommandInput object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = selectionCommandInput_var-&gt;
+isUseCurrentSelections
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = selectionCommandInput_var-&gt;
+isUseCurrentSelections
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a SelectionCommandInput object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = selectionCommandInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isVisible Property</h3><p class="api">Gets or sets if this input will be visible to the user. Setting a SelectionCommandInput to be invisible will clear any selections it currently has.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a SelectionCommandInput object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = selectionCommandInput_var-&gt;
+isVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = selectionCommandInput_var-&gt;
+isVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">name Property</h3><p class="api">Gets the user visible name of this input.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a SelectionCommandInput object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = selectionCommandInput_var-&gt;
+name
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a SelectionCommandInput object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = selectionCommandInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentCommand Property</h3><p class="api">Gets the parent Command.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a SelectionCommandInput object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Command&gt; propertyValue = selectionCommandInput_var-&gt;
+parentCommand
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">parentCommandInput Property</h3><p class="api">Gets the parent CommandInput if this commandInput is the child of a TabCommandInput or GroupCommandInput. Returns null if there is no parent.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a SelectionCommandInput object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Get the value of the property.
+Ptr&lt;CommandInput&gt; propertyValue = selectionCommandInput_var-&gt;
+parentCommandInput
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">selection Method</h3><p class="api">Returns the selection at the specified index.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a
+SelectionCommandInput
+object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+returnValue = selectionCommandInput_var-&gt;
+selection
+(index);</pre><p class="api">Return Value: Selection - Returns the Selection at the specified index, or null on error.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the selection to return.</td></tr></table><h3 class="api-member">selectionCount Property</h3><p class="api">Gets the current number of selections the user has made for this input.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a SelectionCommandInput object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Get the value of the property.
+uinteger propertyValue = selectionCommandInput_var-&gt;
+selectionCount
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">selectionFilters Property</h3><p class="api">Gets or sets the list of selection filters.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a SelectionCommandInput object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Get the value of the property.
+std::vector&lt;string&gt; propertyValue = selectionCommandInput_var-&gt;
+selectionFilters
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = selectionCommandInput_var-&gt;
+selectionFilters
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an array of type string.</p><h3 class="api-member">setSelectionLimits Method</h3><p class="api">Defines the limits for the number of selections associated with this input. A maximum value of 0 indicates that there is no maximum.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a
+SelectionCommandInput
+object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Uses no optional arguments.
+returnValue = selectionCommandInput_var-&gt;
+setSelectionLimits
+(minimum);
+// Uses optional arguments.
+returnValue = selectionCommandInput_var-&gt;
+setSelectionLimits
+(minimum, maximum);</pre><p class="api">Return Value: boolean - Returns true if the limits were successfully set.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">minimum</td><td class="api-list">uinteger</td><td class="api-list">The minimum number of selections required. A value of zero means that there is no minimum limit.</td></tr><tr><td class="api-list">maximum</td><td class="api-list">uinteger</td><td class="api-list">The maximum number of selections required. A value of zero means that there is no maximum limit. If maximum is equal to minimum, then exactly that number of selections is required. This is an optional argument whose default value is 0.</td></tr></table><h3 class="api-member">toolClipFilename Property</h3><p class="api">Gets or sets the full filename of the image file (PNG) used for the tool clip. The tooltip is always shown but as the user hovers over the control it will progressively display the tool clip and description text.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a SelectionCommandInput object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = selectionCommandInput_var-&gt;
+toolClipFilename
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = selectionCommandInput_var-&gt;
+toolClipFilename
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">tooltip Property</h3><p class="api">Gets or sets the base tooltip string. This is always shown for commands. If the tooltip description and/or tool clip are also specified then the tooltip will progressively display more information as the user hovers the mouse over the control.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a SelectionCommandInput object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = selectionCommandInput_var-&gt;
+tooltip
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = selectionCommandInput_var-&gt;
+tooltip
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">tooltipDescription Property</h3><p class="api">Gets or sets additional text to display progressively along with the tooltip. The text for the description can contain some basic HTML formatting tags to format the tags. For example the br tag can be used to create multiple paragraphs. The tooltip is always shown but as the user hovers over the control it will progressively display the tool clip and description text.</p><pre class="api-code">"selectionCommandInput_var" is a variable referencing a SelectionCommandInput object.
+#include &lt;Core/UserInterface/SelectionCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = selectionCommandInput_var-&gt;
+tooltipDescription
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = selectionCommandInput_var-&gt;
+tooltipDescription
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p></body>
+</html>

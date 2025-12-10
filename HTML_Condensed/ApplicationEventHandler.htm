@@ -1,0 +1,107 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ApplicationEventHandler.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="9/12/2015" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ApplicationEventHandler" name="contextid"/>
+<meta content="ApplicationEventHandler Object" name="description"/>
+<meta content="GUID-40321BBC-B6C8-4A6B-8549-D5411297BC78" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ApplicationEventHandler Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ApplicationEventHandler Object
+			</h1>
+              Derived from: <a href="EventHandler.htm">EventHandler</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Application/ApplicationEventHandler.h&gt;<h2 class="api">
+          Description
+        </h2>The ApplicationEventHandler is a client implemented class that can be added as a handler to an ApplicationEvent.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ApplicationEventHandler_notify.htm">notify</a></td>
+<td class="api-list">The function called by Fusion when the associated event is fired.</td>
+</tr>
+</table>
+<h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ApplicationEventSample_Sample.htm">Application Event API Sample</a></td>
+<td class="api-list">Add-In that demonstrates application events. To use this sample, create a new folder using the name you want to use for the new add-in. Inside the folder, create a new file that is the same name as the folder but has a .py extension. Copy the code below into the .py file. Create another file that is the same name as the folder but has a .manifest extension and copy the JSON data below into that file.
+	
+{
+"autodeskProduct":	"Fusion360",
+"type":	"addin",
+"author":	"",
+"description":	{
+	"":	""
+},
+"supportedOS":	"windows|mac",
+"editEnabled":	true
+}
+
+Run the "Scripts and Add-Ins" command and click the green plus button near the top of the dialog. Browse to the location where you created the folder and select the folder. The add-in should now be displayed in the list of add-ins on the "Add-Ins" tab of the dialog. Select the add-in and click the "Run" button. This will load the add-in and when any of the application events occurr that it is watching for it will report them in the TEXT COMMAND window.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2016<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ApplicationEventHandler%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">notify Method</h3><p class="api">The function called by Fusion when the associated event is fired.</p><pre class="api-code">"applicationEventHandler_var" is a variable referencing an
+ApplicationEventHandler
+object.
+#include &lt;Core/Application/ApplicationEventHandler.h&gt;
+returnValue = applicationEventHandler_var-&gt;
+notify
+(eventArgs);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">eventArgs</td><td class="api-list">ApplicationEventArgs</td><td class="api-list">Returns an object that provides access to additional information associated with the event.</td></tr></table></body>
+</html>

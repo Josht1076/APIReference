@@ -1,0 +1,160 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/OffsetConstraintInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="09/08/2024" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="OffsetConstraintInput" name="contextid"/>
+<meta content="OffsetConstraintInput Object" name="description"/>
+<meta content="GUID-B82F687C-0D15-4091-85FD-591F961D9EAA" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>OffsetConstraintInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">OffsetConstraintInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Sketch/OffsetConstraintInput.h&gt;<h2 class="api">
+          Description
+        </h2>Used to define the inputs needed to create an offset constraint.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="OffsetConstraintInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="OffsetConstraintInput_curves.htm">curves</a></td>
+<td class="api-list">Gets and sets an array of SketchCurve objects that defines the connected curves that will be offset. The Sketch.FindConnectedCurves method is a convenient way to get this set of curves.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OffsetConstraintInput_dimensionPoint.htm">dimensionPoint</a></td>
+<td class="api-list">A location on one of the curves where the offset dimension will be created. A value of null can be used to indicate that a default location should be used.<br><br/> When the OffsetContraintInput is created this property defaults to null.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="OffsetConstraintInput_isTopologyMatched.htm">isTopologyMatched</a></td>
+<td class="api-list">Specifies if the offset curves must match the topology of the original curves. For example, if you have a sketch containing two lines with a fillet (arc) connecting them and offset them inward more than the arc radius, the resulting offset will be two lines. This is a change in topology because the original curves were line-arc-line, and the offset is line-line. An offset of less than the radius still results in a line-arc-line result. If this property is true, indicating the topology must match, creating the offset with a value greater than the arc radius will fail because the result will not have a matching topology.<br/><br/> When the OffsetConstraintInput is created, this property default to true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OffsetConstraintInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OffsetConstraintInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OffsetConstraintInput_offset.htm">offset</a></td>
+<td class="api-list">Gets and sets the value that defines the offset. This is a ValueInput object so it can be a float value to define the offset in centimeters or it can be a string defining an expression that will be used by the parameter controlling the offset. A positive offset value creates the offset curve to the "right" and a negative offset value goes to the "left".<br/><br/> The flow direction of the provided curves implies the offset direction. For example, if two connected lines are offset, the flow direction is from line 1 to line 2. Left and right are evaluated relative to the input geometry. If you are standing on line 1 and looking towards line 2, the offset's left side is on your left, and the right side is to your right. Closed single curves like circles and ellipses always have a counterclockwise flow, so a positive offset is always to the outside. For closed splines, the positive direction is based on the spline's parameterization.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="GeometricConstraints_createOffsetInput.htm">GeometricConstraints.createOffsetInput</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2024<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(OffsetConstraintInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Sketch/OffsetConstraintInput.h&gt;
+returnValue = adsk::fusion::OffsetConstraintInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">curves Property</h3><p class="api">Gets and sets an array of SketchCurve objects that defines the connected curves that will be offset. The Sketch.FindConnectedCurves method is a convenient way to get this set of curves.</p><pre class="api-code">"offsetConstraintInput_var" is a variable referencing an OffsetConstraintInput object.
+#include &lt;Fusion/Sketch/OffsetConstraintInput.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;SketchCurve&gt;&gt; propertyValue = offsetConstraintInput_var-&gt;
+curves
+();
+// Set the value of the property, where value_var is a SketchCurve.
+bool returnValue = offsetConstraintInput_var-&gt;
+curves
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an array of type .</p><h3 class="api-member">dimensionPoint Property</h3><p class="api">A location on one of the curves where the offset dimension will be created. A value of null can be used to indicate that a default location should be used. When the OffsetContraintInput is created this property defaults to null.</p><pre class="api-code">"offsetConstraintInput_var" is a variable referencing an OffsetConstraintInput object.
+#include &lt;Fusion/Sketch/OffsetConstraintInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = offsetConstraintInput_var-&gt;
+dimensionPoint
+();
+// Set the value of the property, where value_var is a Point3D.
+bool returnValue = offsetConstraintInput_var-&gt;
+dimensionPoint
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">isTopologyMatched Property</h3><p class="api">Specifies if the offset curves must match the topology of the original curves. For example, if you have a sketch containing two lines with a fillet (arc) connecting them and offset them inward more than the arc radius, the resulting offset will be two lines. This is a change in topology because the original curves were line-arc-line, and the offset is line-line. An offset of less than the radius still results in a line-arc-line result. If this property is true, indicating the topology must match, creating the offset with a value greater than the arc radius will fail because the result will not have a matching topology. When the OffsetConstraintInput is created, this property default to true.</p><pre class="api-code">"offsetConstraintInput_var" is a variable referencing an OffsetConstraintInput object.
+#include &lt;Fusion/Sketch/OffsetConstraintInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = offsetConstraintInput_var-&gt;
+isTopologyMatched
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = offsetConstraintInput_var-&gt;
+isTopologyMatched
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"offsetConstraintInput_var" is a variable referencing an OffsetConstraintInput object.
+#include &lt;Fusion/Sketch/OffsetConstraintInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = offsetConstraintInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"offsetConstraintInput_var" is a variable referencing an OffsetConstraintInput object.
+#include &lt;Fusion/Sketch/OffsetConstraintInput.h&gt;
+// Get the value of the property.
+string propertyValue = offsetConstraintInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">offset Property</h3><p class="api">Gets and sets the value that defines the offset. This is a ValueInput object so it can be a float value to define the offset in centimeters or it can be a string defining an expression that will be used by the parameter controlling the offset. A positive offset value creates the offset curve to the "right" and a negative offset value goes to the "left". The flow direction of the provided curves implies the offset direction. For example, if two connected lines are offset, the flow direction is from line 1 to line 2. Left and right are evaluated relative to the input geometry. If you are standing on line 1 and looking towards line 2, the offset's left side is on your left, and the right side is to your right. Closed single curves like circles and ellipses always have a counterclockwise flow, so a positive offset is always to the outside. For closed splines, the positive direction is based on the spline's parameterization.</p><pre class="api-code">"offsetConstraintInput_var" is a variable referencing an OffsetConstraintInput object.
+#include &lt;Fusion/Sketch/OffsetConstraintInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = offsetConstraintInput_var-&gt;
+offset
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = offsetConstraintInput_var-&gt;
+offset
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

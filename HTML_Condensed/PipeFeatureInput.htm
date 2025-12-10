@@ -1,0 +1,251 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/PipeFeatureInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="09/10/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="PipeFeatureInput" name="contextid"/>
+<meta content="PipeFeatureInput Object" name="description"/>
+<meta content="GUID-0FEEA49A-8692-4FCB-BC63-1ACA3906C09B" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>PipeFeatureInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">PipeFeatureInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/PipeFeatureInput.h&gt;<h2 class="api">
+          Description
+        </h2>This class defines the methods and properties that pertain to the definition of a Pipe feature.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PipeFeatureInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PipeFeatureInput_creationOccurrence.htm">creationOccurrence</a></td>
+<td class="api-list">In order for geometry to be transformed correctly, an Occurrence for creation needs to be specified when the Pipe is created based on geometry (e.g. a path) in another component AND (the Pipe) is not in the root component. The CreationOccurrence is analogous to the active occurrence in the UI</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PipeFeatureInput_distanceOne.htm">distanceOne</a></td>
+<td class="api-list">Gets and sets the distance for the pipe created while following the path given as input, in the same order. This value defaults to 1.0 if not set.<br><br/> If the path is open, setting this to a value between 0.0 and 1.0 decides the length of the created Pipe. If the path is closed, setting this value should not be higher than 1.0 - distanceTwo. Ex: Path is made of curves A-B-C-A. The distanceOne returns and sets the length of the pipe going from A-B-C-A.<br/><br/> This property returns null in the case where the feature is non-parametric.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="PipeFeatureInput_distanceTwo.htm">distanceTwo</a></td>
+<td class="api-list">Gets and sets the distance for the pipe created while following the reversed path given as input. Before setting this value, distanceOne must be set.<br/><br/> If the path is open, getting this value returns null, and setting the value is ignored. If the path is closed, setting this value should not be higher than 1.0 - distanceOne. Ex: Path is made of curves A-B-C-A. The distanceTwo returns and sets the length of the pipe going from A-C-B-A.<br/><br/> This property returns null in the case where the feature is non-parametric.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PipeFeatureInput_isHollow.htm">isHollow</a></td>
+<td class="api-list">Specifies if the Pipe is hollow or not.<br/><br/> Setting this to true will default the sectionThickness to 0.1 cm.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PipeFeatureInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PipeFeatureInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PipeFeatureInput_operation.htm">operation</a></td>
+<td class="api-list">Gets and sets the type of operation performed by the Pipe.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PipeFeatureInput_participantBodies.htm">participantBodies</a></td>
+<td class="api-list">Gets and sets the list of bodies that will participate in the feature when the operation is a cut or intersection.<br/><br/> If this property has not been set, the default behavior is that all bodies that are intersected by the feature will participate.<br/><br/> This property can return null in the case where the feature has not been fully defined so that possible intersecting bodies can be computed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PipeFeatureInput_path.htm">path</a></td>
+<td class="api-list">Gets and sets the path to create the Pipe.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PipeFeatureInput_sectionSize.htm">sectionSize</a></td>
+<td class="api-list">Gets and sets the section size of the Pipe.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PipeFeatureInput_sectionThickness.htm">sectionThickness</a></td>
+<td class="api-list">Gets and sets the section thickness of the Pipe.<br/><br/> Setting this will also set the isHollow setting to true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PipeFeatureInput_sectionType.htm">sectionType</a></td>
+<td class="api-list">Gets and sets the section type of the Pipe. The type can be: Circular, Square, Triangular.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PipeFeatureInput_targetBaseFeature.htm">targetBaseFeature</a></td>
+<td class="api-list">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature.<br/><br/> Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="PipeFeatures_createInput.htm">PipeFeatures.createInput</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version October 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(PipeFeatureInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/PipeFeatureInput.h&gt;
+returnValue = adsk::fusion::PipeFeatureInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">creationOccurrence Property</h3><p class="api">In order for geometry to be transformed correctly, an Occurrence for creation needs to be specified when the Pipe is created based on geometry (e.g. a path) in another component AND (the Pipe) is not in the root component. The CreationOccurrence is analogous to the active occurrence in the UI</p><pre class="api-code">"pipeFeatureInput_var" is a variable referencing a PipeFeatureInput object.
+#include &lt;Fusion/Features/PipeFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = pipeFeatureInput_var-&gt;
+creationOccurrence
+();
+// Set the value of the property, where value_var is an Occurrence.
+bool returnValue = pipeFeatureInput_var-&gt;
+creationOccurrence
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">distanceOne Property</h3><p class="api">Gets and sets the distance for the pipe created while following the path given as input, in the same order. This value defaults to 1.0 if not set. If the path is open, setting this to a value between 0.0 and 1.0 decides the length of the created Pipe. If the path is closed, setting this value should not be higher than 1.0 - distanceTwo. Ex: Path is made of curves A-B-C-A. The distanceOne returns and sets the length of the pipe going from A-B-C-A. This property returns null in the case where the feature is non-parametric.</p><pre class="api-code">"pipeFeatureInput_var" is a variable referencing a PipeFeatureInput object.
+#include &lt;Fusion/Features/PipeFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = pipeFeatureInput_var-&gt;
+distanceOne
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = pipeFeatureInput_var-&gt;
+distanceOne
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">distanceTwo Property</h3><p class="api">Gets and sets the distance for the pipe created while following the reversed path given as input. Before setting this value, distanceOne must be set. If the path is open, getting this value returns null, and setting the value is ignored. If the path is closed, setting this value should not be higher than 1.0 - distanceOne. Ex: Path is made of curves A-B-C-A. The distanceTwo returns and sets the length of the pipe going from A-C-B-A. This property returns null in the case where the feature is non-parametric.</p><pre class="api-code">"pipeFeatureInput_var" is a variable referencing a PipeFeatureInput object.
+#include &lt;Fusion/Features/PipeFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = pipeFeatureInput_var-&gt;
+distanceTwo
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = pipeFeatureInput_var-&gt;
+distanceTwo
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">isHollow Property</h3><p class="api">Specifies if the Pipe is hollow or not. Setting this to true will default the sectionThickness to 0.1 cm.</p><pre class="api-code">"pipeFeatureInput_var" is a variable referencing a PipeFeatureInput object.
+#include &lt;Fusion/Features/PipeFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = pipeFeatureInput_var-&gt;
+isHollow
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = pipeFeatureInput_var-&gt;
+isHollow
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"pipeFeatureInput_var" is a variable referencing a PipeFeatureInput object.
+#include &lt;Fusion/Features/PipeFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = pipeFeatureInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"pipeFeatureInput_var" is a variable referencing a PipeFeatureInput object.
+#include &lt;Fusion/Features/PipeFeatureInput.h&gt;
+// Get the value of the property.
+string propertyValue = pipeFeatureInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">operation Property</h3><p class="api">Gets and sets the type of operation performed by the Pipe.</p><pre class="api-code">"pipeFeatureInput_var" is a variable referencing a PipeFeatureInput object.
+#include &lt;Fusion/Features/PipeFeatureInput.h&gt;
+// Get the value of the property.
+FeatureOperations propertyValue = pipeFeatureInput_var-&gt;
+operation
+();
+// Set the value of the property, where value_var is a FeatureOperations.
+bool returnValue = pipeFeatureInput_var-&gt;
+operation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">participantBodies Property</h3><p class="api">Gets and sets the list of bodies that will participate in the feature when the operation is a cut or intersection. If this property has not been set, the default behavior is that all bodies that are intersected by the feature will participate. This property can return null in the case where the feature has not been fully defined so that possible intersecting bodies can be computed.</p><pre class="api-code">"pipeFeatureInput_var" is a variable referencing a PipeFeatureInput object.
+#include &lt;Fusion/Features/PipeFeatureInput.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;BRepBody&gt;&gt; propertyValue = pipeFeatureInput_var-&gt;
+participantBodies
+();
+// Set the value of the property, where value_var is a BRepBody.
+bool returnValue = pipeFeatureInput_var-&gt;
+participantBodies
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an array of type .</p><h3 class="api-member">path Property</h3><p class="api">Gets and sets the path to create the Pipe.</p><pre class="api-code">"pipeFeatureInput_var" is a variable referencing a PipeFeatureInput object.
+#include &lt;Fusion/Features/PipeFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Path&gt; propertyValue = pipeFeatureInput_var-&gt;
+path
+();
+// Set the value of the property, where value_var is a Path.
+bool returnValue = pipeFeatureInput_var-&gt;
+path
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">sectionSize Property</h3><p class="api">Gets and sets the section size of the Pipe.</p><pre class="api-code">"pipeFeatureInput_var" is a variable referencing a PipeFeatureInput object.
+#include &lt;Fusion/Features/PipeFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = pipeFeatureInput_var-&gt;
+sectionSize
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = pipeFeatureInput_var-&gt;
+sectionSize
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">sectionThickness Property</h3><p class="api">Gets and sets the section thickness of the Pipe. Setting this will also set the isHollow setting to true.</p><pre class="api-code">"pipeFeatureInput_var" is a variable referencing a PipeFeatureInput object.
+#include &lt;Fusion/Features/PipeFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = pipeFeatureInput_var-&gt;
+sectionThickness
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = pipeFeatureInput_var-&gt;
+sectionThickness
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">sectionType Property</h3><p class="api">Gets and sets the section type of the Pipe. The type can be: Circular, Square, Triangular.</p><pre class="api-code">"pipeFeatureInput_var" is a variable referencing a PipeFeatureInput object.
+#include &lt;Fusion/Features/PipeFeatureInput.h&gt;
+// Get the value of the property.
+PipeSectionTypes propertyValue = pipeFeatureInput_var-&gt;
+sectionType
+();
+// Set the value of the property, where value_var is a PipeSectionTypes.
+bool returnValue = pipeFeatureInput_var-&gt;
+sectionType
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">targetBaseFeature Property</h3><p class="api">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature. Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</p><pre class="api-code">"pipeFeatureInput_var" is a variable referencing a PipeFeatureInput object.
+#include &lt;Fusion/Features/PipeFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BaseFeature&gt; propertyValue = pipeFeatureInput_var-&gt;
+targetBaseFeature
+();
+// Set the value of the property, where value_var is a BaseFeature.
+bool returnValue = pipeFeatureInput_var-&gt;
+targetBaseFeature
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

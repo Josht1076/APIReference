@@ -1,0 +1,171 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/MachiningTime.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="18/09/2017" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="MachiningTime" name="contextid"/>
+<meta content="MachiningTime Object" name="description"/>
+<meta content="GUID-E0CFD34D-9263-456F-B266-B0F45902F25E" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>MachiningTime Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">MachiningTime Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/CAM/MachiningTime.h&gt;<h2 class="api">
+          Description
+        </h2>Object returned when using the getMachiningTime method from the CAM class. Use the properties on this object to get the machining time results.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachiningTime_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachiningTime_feedDistance.htm">feedDistance</a></td>
+<td class="api-list">Gets the feed distance in centimeters.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachiningTime_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachiningTime_machiningTime.htm">machiningTime</a></td>
+<td class="api-list">Gets the machining time in seconds.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachiningTime_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachiningTime_rapidDistance.htm">rapidDistance</a></td>
+<td class="api-list">Gets the calculated rapid distance in centimeters.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachiningTime_toolChangeCount.htm">toolChangeCount</a></td>
+<td class="api-list">Gets the number of tool changes.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachiningTime_totalFeedTime.htm">totalFeedTime</a></td>
+<td class="api-list">Get the total feed time in seconds.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachiningTime_totalRapidTime.htm">totalRapidTime</a></td>
+<td class="api-list">Gets the total rapid feed time in seconds.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachiningTime_totalToolChangeTime.htm">totalToolChangeTime</a></td>
+<td class="api-list">Gets the total tool change time in seconds.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CAM_getMachiningTime.htm">CAM.getMachiningTime</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2017<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(MachiningTime%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/CAM/MachiningTime.h&gt;
+returnValue = adsk::cam::MachiningTime::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">feedDistance Property</h3><p class="api">Gets the feed distance in centimeters.</p><pre class="api-code">"machiningTime_var" is a variable referencing a MachiningTime object.
+#include &lt;Cam/CAM/MachiningTime.h&gt;
+// Get the value of the property.
+double propertyValue = machiningTime_var-&gt;
+feedDistance
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"machiningTime_var" is a variable referencing a MachiningTime object.
+#include &lt;Cam/CAM/MachiningTime.h&gt;
+// Get the value of the property.
+boolean propertyValue = machiningTime_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">machiningTime Property</h3><p class="api">Gets the machining time in seconds.</p><pre class="api-code">"machiningTime_var" is a variable referencing a MachiningTime object.
+#include &lt;Cam/CAM/MachiningTime.h&gt;
+// Get the value of the property.
+double propertyValue = machiningTime_var-&gt;
+machiningTime
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"machiningTime_var" is a variable referencing a MachiningTime object.
+#include &lt;Cam/CAM/MachiningTime.h&gt;
+// Get the value of the property.
+string propertyValue = machiningTime_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">rapidDistance Property</h3><p class="api">Gets the calculated rapid distance in centimeters.</p><pre class="api-code">"machiningTime_var" is a variable referencing a MachiningTime object.
+#include &lt;Cam/CAM/MachiningTime.h&gt;
+// Get the value of the property.
+double propertyValue = machiningTime_var-&gt;
+rapidDistance
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">toolChangeCount Property</h3><p class="api">Gets the number of tool changes.</p><pre class="api-code">"machiningTime_var" is a variable referencing a MachiningTime object.
+#include &lt;Cam/CAM/MachiningTime.h&gt;
+// Get the value of the property.
+integer propertyValue = machiningTime_var-&gt;
+toolChangeCount
+();</pre><p class="api">Property Value: This is a read only property whose value is an integer.</p><h3 class="api-member">totalFeedTime Property</h3><p class="api">Get the total feed time in seconds.</p><pre class="api-code">"machiningTime_var" is a variable referencing a MachiningTime object.
+#include &lt;Cam/CAM/MachiningTime.h&gt;
+// Get the value of the property.
+double propertyValue = machiningTime_var-&gt;
+totalFeedTime
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">totalRapidTime Property</h3><p class="api">Gets the total rapid feed time in seconds.</p><pre class="api-code">"machiningTime_var" is a variable referencing a MachiningTime object.
+#include &lt;Cam/CAM/MachiningTime.h&gt;
+// Get the value of the property.
+double propertyValue = machiningTime_var-&gt;
+totalRapidTime
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">totalToolChangeTime Property</h3><p class="api">Gets the total tool change time in seconds.</p><pre class="api-code">"machiningTime_var" is a variable referencing a MachiningTime object.
+#include &lt;Cam/CAM/MachiningTime.h&gt;
+// Get the value of the property.
+double propertyValue = machiningTime_var-&gt;
+totalToolChangeTime
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p></body>
+</html>

@@ -1,0 +1,198 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/InteractionsMachineElement.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="06/08/2025" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="InteractionsMachineElement" name="contextid"/>
+<meta content="InteractionsMachineElement Object" name="description"/>
+<meta content="GUID-36C099C4-FDAC-45D9-95B3-9A985976DE0A" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>InteractionsMachineElement Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">InteractionsMachineElement Object <img alt="Preview" src="../images/TestTubeLarge.png"/></h1>
+              Derived from: <a href="MachineElement.htm">MachineElement</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/Machine/InteractionsMachineElement.h&gt;<p class="api-preview"><img alt="Preview" src="../images/TestTubeSmall.png"/>This functionality is provided as a preview
+				of intended future API capabilities. You are encouraged to use it and report any problems or suggestions using the
+				<a href="https://forums.autodesk.com/t5/fusion-360-api-and-scripts/bd-p/22">Fusion API and Scripts</a> forum.<br/><br/>
+	
+                Because this is a preview of future functionality, there is the possibility that it will change, which will possibly
+		        break any existing programs that use this functionality. Because of that, you should never deliver any programs that use
+		        any preview capabilities. For a distributed program, you should wait until it has moved from preview to released state.
+		    </p>
+<h2 class="api">
+          Description
+        </h2>Machine element representing the machine's interactions. This controls how MachineItems interact with each other.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="InteractionsMachineElement_apply.htm">apply</a></td>
+<td class="api-list">Add an MachineInteractionPair. This will overwrite any existing MachineInteractionPair with the same item1 and item2.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InteractionsMachineElement_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InteractionsMachineElement_createMachineInteractionPair.htm">createMachineInteractionPair</a></td>
+<td class="api-list">Create a MachineInteractionPair that will control how the two items interact.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InteractionsMachineElement_createMachineItem.htm">createMachineItem</a></td>
+<td class="api-list">Create a MachineItem.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InteractionsMachineElement_item.htm">item</a></td>
+<td class="api-list">Get the MachineInteractionPair at index in this collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InteractionsMachineElement_resetMachineInteractionPairs.htm">resetMachineInteractionPairs</a></td>
+<td class="api-list">Restore all MachineInteractionPairs to their defaults.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InteractionsMachineElement_staticTypeId.htm">staticTypeId</a></td>
+<td class="api-list">Identifying name for all elements of this type. Pass this to the itemByType or itemById methods of MachineElements to filter to elements of this type.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="InteractionsMachineElement_count.htm">count</a></td>
+<td class="api-list">Get the number of pairs in this collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InteractionsMachineElement_elementId.htm">elementId</a></td>
+<td class="api-list">Identifier for this element. Unique within an element type.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InteractionsMachineElement_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InteractionsMachineElement_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="InteractionsMachineElement_typeId.htm">typeId</a></td>
+<td class="api-list">Identifier for this type of machine element.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2025<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(InteractionsMachineElement%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">apply Method</h3><p class="api">Add an MachineInteractionPair. This will overwrite any existing MachineInteractionPair with the same item1 and item2.</p><pre class="api-code">"interactionsMachineElement_var" is a variable referencing an
+InteractionsMachineElement
+object.
+#include &lt;Cam/Machine/InteractionsMachineElement.h&gt;
+returnValue = interactionsMachineElement_var-&gt;
+apply
+(setting);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">setting</td><td class="api-list">MachineInteractionPair</td><td class="api-list"></td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/Machine/InteractionsMachineElement.h&gt;
+returnValue = adsk::cam::InteractionsMachineElement::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">Get the number of pairs in this collection.</p><pre class="api-code">"interactionsMachineElement_var" is a variable referencing an InteractionsMachineElement object.
+#include &lt;Cam/Machine/InteractionsMachineElement.h&gt;
+// Get the value of the property.
+uinteger propertyValue = interactionsMachineElement_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">createMachineInteractionPair Method</h3><p class="api">Create a MachineInteractionPair that will control how the two items interact.</p><pre class="api-code">"interactionsMachineElement_var" is a variable referencing an
+InteractionsMachineElement
+object.
+#include &lt;Cam/Machine/InteractionsMachineElement.h&gt;
+returnValue = interactionsMachineElement_var-&gt;
+createMachineInteractionPair
+(item1, item2);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">item1</td><td class="api-list">MachineItem</td><td class="api-list"></td></tr><tr><td class="api-list">item2</td><td class="api-list">MachineItem</td><td class="api-list"></td></tr></table><h3 class="api-member">createMachineItem Method</h3><p class="api">Create a MachineItem.</p><pre class="api-code">"interactionsMachineElement_var" is a variable referencing an
+InteractionsMachineElement
+object.
+#include &lt;Cam/Machine/InteractionsMachineElement.h&gt;
+returnValue = interactionsMachineElement_var-&gt;
+createMachineItem
+(type, part);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">type</td><td class="api-list">MachineItemType</td><td class="api-list"></td></tr><tr><td class="api-list">part</td><td class="api-list">MachinePart</td><td class="api-list"></td></tr></table><h3 class="api-member">elementId Property</h3><p class="api">Identifier for this element. Unique within an element type.</p><pre class="api-code">"interactionsMachineElement_var" is a variable referencing an InteractionsMachineElement object.
+#include &lt;Cam/Machine/InteractionsMachineElement.h&gt;
+// Get the value of the property.
+string propertyValue = interactionsMachineElement_var-&gt;
+elementId
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"interactionsMachineElement_var" is a variable referencing an InteractionsMachineElement object.
+#include &lt;Cam/Machine/InteractionsMachineElement.h&gt;
+// Get the value of the property.
+boolean propertyValue = interactionsMachineElement_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Get the MachineInteractionPair at index in this collection.</p><pre class="api-code">"interactionsMachineElement_var" is a variable referencing an
+InteractionsMachineElement
+object.
+#include &lt;Cam/Machine/InteractionsMachineElement.h&gt;
+returnValue = interactionsMachineElement_var-&gt;
+item
+(index);</pre><p class="api">Return Value: MachineInteractionPair - The MachineInteractionPair at index.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">integer</td><td class="api-list">The index of the MachineInteractionPair.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"interactionsMachineElement_var" is a variable referencing an InteractionsMachineElement object.
+#include &lt;Cam/Machine/InteractionsMachineElement.h&gt;
+// Get the value of the property.
+string propertyValue = interactionsMachineElement_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">resetMachineInteractionPairs Method</h3><p class="api">Restore all MachineInteractionPairs to their defaults.</p><pre class="api-code">"interactionsMachineElement_var" is a variable referencing an
+InteractionsMachineElement
+object.
+#include &lt;Cam/Machine/InteractionsMachineElement.h&gt;
+returnValue = interactionsMachineElement_var-&gt;
+resetMachineInteractionPairs
+();</pre><h3 class="api-member">staticTypeId Method</h3><p class="api">Identifying name for all elements of this type. Pass this to the itemByType or itemById methods of MachineElements to filter to elements of this type.</p><pre class="api-code">This is a static method.
+#include &lt;Cam/Machine/InteractionsMachineElement.h&gt;
+returnValue = adsk::cam::InteractionsMachineElement::
+staticTypeId
+();</pre><p class="api">Return Value: string - Returns identifier of this type.</p><h3 class="api-member">typeId Property</h3><p class="api">Identifier for this type of machine element.</p><pre class="api-code">"interactionsMachineElement_var" is a variable referencing an InteractionsMachineElement object.
+#include &lt;Cam/Machine/InteractionsMachineElement.h&gt;
+// Get the value of the property.
+string propertyValue = interactionsMachineElement_var-&gt;
+typeId
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

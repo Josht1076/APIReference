@@ -1,0 +1,162 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ClearanceHoleInfo.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="06/08/2025" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ClearanceHoleInfo" name="contextid"/>
+<meta content="ClearanceHoleInfo Object" name="description"/>
+<meta content="GUID-EF0DE780-508B-449D-9658-9A25C7DB1B2F" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ClearanceHoleInfo Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ClearanceHoleInfo Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/ClearanceHoleInfo.h&gt;<h2 class="api">
+          Description
+        </h2>This object defines the methods and properties that define the size of a clearance hole. This object is used to create new hole features whose size is defined as a clearance hole for a specific size fastener. A new ClearanceHoleInfo object is created by using the ClearanceHoleInfo.create method. To determine valid values when creating a ClearanceHoleInfo object, you can use the ClearanceHoleDataQuery object, which is statically created using the ClearanceHoleDataQuery.create method.<br><br/> If the ClearanceHoleInfo object is obtained from an existing HoleFeature object, modifying properties on the returned ClearanceHoleInfo object will modify the feature.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ClearanceHoleInfo_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ClearanceHoleInfo_create.htm">create</a></td>
+<td class="api-list">Method that creates a new ClearanceHoleInfo object to use in creating clearance holes. The ClearanceHoleInfo object defines the type, size, and fit of the clearance hole to create. Fusion uses this information to look up the full details of the clearance hole in tables delivered with Fusion. The ClearanceHoleDataQuery object can be used to determine valid input for this information. It's statically created using the ClearanceHoleDataQuery.create method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ClearanceHoleInfo_redefine.htm">redefine</a></td>
+<td class="api-list">Method that redefines the values associated with an existing ClearanceHoleInfo object. This is done to modify an existing clearance hole. The ClearanceHoleInfo object defines the type, size, and fit of the clearance hole to create. Fusion uses this information to look up the full details of the clearance hole in tables delivered with Fusion. The ClearanceHoleDataQuery object can be used to determine valid input for this information.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ClearanceHoleInfo_fastenerType.htm">fastenerType</a></td>
+<td class="api-list">Returns the string that defines the fastener type.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ClearanceHoleInfo_fit.htm">fit</a></td>
+<td class="api-list">Returns the enum value that defines the amount of clearance between the hole and the fastener.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ClearanceHoleInfo_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ClearanceHoleInfo_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ClearanceHoleInfo_size.htm">size</a></td>
+<td class="api-list">Returns the string that defines the fastener size the clearance hole is sized for.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ClearanceHoleInfo_standard.htm">standard</a></td>
+<td class="api-list">Returns the string that defines the standard. This is typically obtained by using the ClearanceHoleDataQuery object.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ClearanceHoleInfo_create.htm">ClearanceHoleInfo.create</a>, <a href="HoleFeature_clearanceHoleInfo.htm">HoleFeature.clearanceHoleInfo</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2025<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ClearanceHoleInfo%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+</br><h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/ClearanceHoleInfo.h&gt;
+returnValue = adsk::fusion::ClearanceHoleInfo::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">create Method</h3><p class="api">Method that creates a new ClearanceHoleInfo object to use in creating clearance holes. The ClearanceHoleInfo object defines the type, size, and fit of the clearance hole to create. Fusion uses this information to look up the full details of the clearance hole in tables delivered with Fusion. The ClearanceHoleDataQuery object can be used to determine valid input for this information. It's statically created using the ClearanceHoleDataQuery.create method.</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/ClearanceHoleInfo.h&gt;
+returnValue = adsk::fusion::ClearanceHoleInfo::
+create
+(standard, fastenerType, size, fit);</pre><p class="api">Return Value: ClearanceHoleInfo - Returns the newly created ClearanceHoleInfo object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">standard</td><td class="api-list">string</td><td class="api-list">Input string that specifies the standard.</td></tr><tr><td class="api-list">fastenerType</td><td class="api-list">string</td><td class="api-list">Input string that specifies the fastener type.</td></tr><tr><td class="api-list">size</td><td class="api-list">string</td><td class="api-list">Input string that specifies the fastener size.</td></tr><tr><td class="api-list">fit</td><td class="api-list">ClearanceHoleFits</td><td class="api-list">Input enum value that specifies the fit of the fastener within the hole.</td></tr></table><h3 class="api-member">fastenerType Property</h3><p class="api">Returns the string that defines the fastener type.</p><pre class="api-code">"clearanceHoleInfo_var" is a variable referencing a ClearanceHoleInfo object.
+#include &lt;Fusion/Features/ClearanceHoleInfo.h&gt;
+// Get the value of the property.
+string propertyValue = clearanceHoleInfo_var-&gt;
+fastenerType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">fit Property</h3><p class="api">Returns the enum value that defines the amount of clearance between the hole and the fastener.</p><pre class="api-code">"clearanceHoleInfo_var" is a variable referencing a ClearanceHoleInfo object.
+#include &lt;Fusion/Features/ClearanceHoleInfo.h&gt;
+// Get the value of the property.
+ClearanceHoleFits propertyValue = clearanceHoleInfo_var-&gt;
+fit
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"clearanceHoleInfo_var" is a variable referencing a ClearanceHoleInfo object.
+#include &lt;Fusion/Features/ClearanceHoleInfo.h&gt;
+// Get the value of the property.
+boolean propertyValue = clearanceHoleInfo_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"clearanceHoleInfo_var" is a variable referencing a ClearanceHoleInfo object.
+#include &lt;Fusion/Features/ClearanceHoleInfo.h&gt;
+// Get the value of the property.
+string propertyValue = clearanceHoleInfo_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">redefine Method</h3><p class="api">Method that redefines the values associated with an existing ClearanceHoleInfo object. This is done to modify an existing clearance hole. The ClearanceHoleInfo object defines the type, size, and fit of the clearance hole to create. Fusion uses this information to look up the full details of the clearance hole in tables delivered with Fusion. The ClearanceHoleDataQuery object can be used to determine valid input for this information.</p><pre class="api-code">"clearanceHoleInfo_var" is a variable referencing a
+ClearanceHoleInfo
+object.
+#include &lt;Fusion/Features/ClearanceHoleInfo.h&gt;
+returnValue = clearanceHoleInfo_var-&gt;
+redefine
+(standard, fastenerType, size, fit);</pre><p class="api">Return Value: boolean - Returns true if the redefinition was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">standard</td><td class="api-list">string</td><td class="api-list">Input string that specifies the standard.</td></tr><tr><td class="api-list">fastenerType</td><td class="api-list">string</td><td class="api-list">Input string that specifies the fastener type.</td></tr><tr><td class="api-list">size</td><td class="api-list">string</td><td class="api-list">Input string that specifies the fastener size.</td></tr><tr><td class="api-list">fit</td><td class="api-list">ClearanceHoleFits</td><td class="api-list">Input enum value that specifies the amount of clearance between the hole and the fastener.</td></tr></table><h3 class="api-member">size Property</h3><p class="api">Returns the string that defines the fastener size the clearance hole is sized for.</p><pre class="api-code">"clearanceHoleInfo_var" is a variable referencing a ClearanceHoleInfo object.
+#include &lt;Fusion/Features/ClearanceHoleInfo.h&gt;
+// Get the value of the property.
+string propertyValue = clearanceHoleInfo_var-&gt;
+size
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">standard Property</h3><p class="api">Returns the string that defines the standard. This is typically obtained by using the ClearanceHoleDataQuery object.</p><pre class="api-code">"clearanceHoleInfo_var" is a variable referencing a ClearanceHoleInfo object.
+#include &lt;Fusion/Features/ClearanceHoleInfo.h&gt;
+// Get the value of the property.
+string propertyValue = clearanceHoleInfo_var-&gt;
+standard
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

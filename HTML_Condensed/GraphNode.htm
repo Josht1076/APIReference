@@ -1,0 +1,264 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/GraphNode.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="10/04/2025" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="GraphNode" name="contextid"/>
+<meta content="GraphNode Object" name="description"/>
+<meta content="GUID-3EED7F32-B803-4012-A01E-F3C32E4249A4" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>GraphNode Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">GraphNode Object <img alt="Preview" src="../images/TestTubeLarge.png"/></h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::volume" and the header file is &lt;Volume/Volumetric/GraphNode.h&gt;<p class="api-preview"><img alt="Preview" src="../images/TestTubeSmall.png"/>This functionality is provided as a preview
+				of intended future API capabilities. You are encouraged to use it and report any problems or suggestions using the
+				<a href="https://forums.autodesk.com/t5/fusion-360-api-and-scripts/bd-p/22">Fusion API and Scripts</a> forum.<br/><br/>
+	
+                Because this is a preview of future functionality, there is the possibility that it will change, which will possibly
+		        break any existing programs that use this functionality. Because of that, you should never deliver any programs that use
+		        any preview capabilities. For a distributed program, you should wait until it has moved from preview to released state.
+		    </p>
+<h2 class="api">
+          Description
+        </h2>An individual node within a graph.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphNode_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphNode_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes the graphNode and all of its connections.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphNode_getInputPinCount.htm">getInputPinCount</a></td>
+<td class="api-list">How many input pins does this node have.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphNode_getInputPinName.htm">getInputPinName</a></td>
+<td class="api-list">The name of this graph node input pin describing its function.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphNode_getInputPinType.htm">getInputPinType</a></td>
+<td class="api-list">Get the type of the node input pin.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphNode_getOutputPinCount.htm">getOutputPinCount</a></td>
+<td class="api-list">How many output pins does this node have.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphNode_getOutputPinName.htm">getOutputPinName</a></td>
+<td class="api-list">The name of this graph node input pin describing its function.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphNode_getOutputPinType.htm">getOutputPinType</a></td>
+<td class="api-list">Get the type of the node output pin.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphNode_hasValidProperties.htm">hasValidProperties</a></td>
+<td class="api-list">Check if the graph node properties are valid.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphNode_isInputPinOptional.htm">isInputPinOptional</a></td>
+<td class="api-list">Some input pins can be optional, so they do not need to be connected for the node to work.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphNode_description.htm">description</a></td>
+<td class="api-list">A user readable description that explains the function of this node type.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphNode_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphNode_name.htm">name</a></td>
+<td class="api-list">The name of this graph node as give on creation. Node names for each graph should be unique.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphNode_nodeType.htm">nodeType</a></td>
+<td class="api-list">Get the string node type that is was created with.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphNode_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphNode_properties.htm">properties</a></td>
+<td class="api-list">Get a collection of all node properties supported by this node.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Graph_addNode.htm">Graph.addNode</a>, <a href="Graph_allNodes.htm">Graph.allNodes</a>, <a href="Graph_getNode.htm">Graph.getNode</a>, <a href="Graph_getOutputNode.htm">Graph.getOutputNode</a>, <a href="GraphConnector_sourceGraphNode.htm">GraphConnector.sourceGraphNode</a>, <a href="GraphConnector_targetGraphNode.htm">GraphConnector.targetGraphNode</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="VolumetricCustomFeatureSample_Sample.htm">Volumetric Custom Feature API Sample</a></td>
+<td class="api-list"><p>Demonstrates how to create a Volumetric Custom Feature using the API for graph creation.</p>
+<p>To run the sample script, have a document open in Fusion’s DESIGN workspace. This script will create a component with a box by sketching then extruding that sketch. It will then use that box as a boundary body and create a Volumetric Custom Feature.</p>
+<p>The script will the create a gyroid lattice using the Volumetric Model API with the appropriate Graphs, Nodes and Connections for a minimal example. Finally, the script will convert that Volumetric Model to Mesh using the API and the VolumetricModelToMeshFeature.</p></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version May 2025<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(GraphNode%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Volume/Volumetric/GraphNode.h&gt;
+returnValue = adsk::volume::GraphNode::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes the graphNode and all of its connections.</p><pre class="api-code">"graphNode_var" is a variable referencing a
+GraphNode
+object.
+#include &lt;Volume/Volumetric/GraphNode.h&gt;
+returnValue = graphNode_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true in the case where the deletion was successful. All properties and proery objects of this node will become invalid after this call. Output nodes cannot be deleted.</p><h3 class="api-member">description Property</h3><p class="api">A user readable description that explains the function of this node type.</p><pre class="api-code">"graphNode_var" is a variable referencing a GraphNode object.
+#include &lt;Volume/Volumetric/GraphNode.h&gt;
+// Get the value of the property.
+string propertyValue = graphNode_var-&gt;
+description
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">getInputPinCount Method</h3><p class="api">How many input pins does this node have.</p><pre class="api-code">"graphNode_var" is a variable referencing a
+GraphNode
+object.
+#include &lt;Volume/Volumetric/GraphNode.h&gt;
+returnValue = graphNode_var-&gt;
+getInputPinCount
+();</pre><p class="api">Return Value: uinteger - Pin count.</p><h3 class="api-member">getInputPinName Method</h3><p class="api">The name of this graph node input pin describing its function.</p><pre class="api-code">"graphNode_var" is a variable referencing a
+GraphNode
+object.
+#include &lt;Volume/Volumetric/GraphNode.h&gt;
+returnValue = graphNode_var-&gt;
+getInputPinName
+(pinIndex);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pinIndex</td><td class="api-list">uinteger</td><td class="api-list">Zero based index of the pin to get. Should be less than the pin count.</td></tr></table><h3 class="api-member">getInputPinType Method</h3><p class="api">Get the type of the node input pin.</p><pre class="api-code">"graphNode_var" is a variable referencing a
+GraphNode
+object.
+#include &lt;Volume/Volumetric/GraphNode.h&gt;
+returnValue = graphNode_var-&gt;
+getInputPinType
+(pinIndex);</pre><p class="api">Return Value: NodePinTypes - The pin type enum.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pinIndex</td><td class="api-list">uinteger</td><td class="api-list">Zero based index of the pin to get. Should be less than the pin count.</td></tr></table><h3 class="api-member">getOutputPinCount Method</h3><p class="api">How many output pins does this node have.</p><pre class="api-code">"graphNode_var" is a variable referencing a
+GraphNode
+object.
+#include &lt;Volume/Volumetric/GraphNode.h&gt;
+returnValue = graphNode_var-&gt;
+getOutputPinCount
+();</pre><p class="api">Return Value: uinteger - Pin count.</p><h3 class="api-member">getOutputPinName Method</h3><p class="api">The name of this graph node input pin describing its function.</p><pre class="api-code">"graphNode_var" is a variable referencing a
+GraphNode
+object.
+#include &lt;Volume/Volumetric/GraphNode.h&gt;
+returnValue = graphNode_var-&gt;
+getOutputPinName
+(pinIndex);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pinIndex</td><td class="api-list">uinteger</td><td class="api-list">Zero based index of the pin to get. Should be less than the pin count.</td></tr></table><h3 class="api-member">getOutputPinType Method</h3><p class="api">Get the type of the node output pin.</p><pre class="api-code">"graphNode_var" is a variable referencing a
+GraphNode
+object.
+#include &lt;Volume/Volumetric/GraphNode.h&gt;
+returnValue = graphNode_var-&gt;
+getOutputPinType
+(pinIndex);</pre><p class="api">Return Value: NodePinTypes - The pin type enum.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pinIndex</td><td class="api-list">uinteger</td><td class="api-list">Zero based index of the pin to get. Should be less than the pin count.</td></tr></table><h3 class="api-member">hasValidProperties Method</h3><p class="api">Check if the graph node properties are valid.</p><pre class="api-code">"graphNode_var" is a variable referencing a
+GraphNode
+object.
+#include &lt;Volume/Volumetric/GraphNode.h&gt;
+returnValue = graphNode_var-&gt;
+hasValidProperties
+();</pre><p class="api">Return Value: boolean - True if the node has good inputs for its properties, false otherwise.</p><h3 class="api-member">isInputPinOptional Method</h3><p class="api">Some input pins can be optional, so they do not need to be connected for the node to work.</p><pre class="api-code">"graphNode_var" is a variable referencing a
+GraphNode
+object.
+#include &lt;Volume/Volumetric/GraphNode.h&gt;
+returnValue = graphNode_var-&gt;
+isInputPinOptional
+(pinIndex);</pre><p class="api">Return Value: boolean - True if pin is optional, false if it is required.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pinIndex</td><td class="api-list">uinteger</td><td class="api-list">Zero based index of the pin to get. Should be less than the pin count.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"graphNode_var" is a variable referencing a GraphNode object.
+#include &lt;Volume/Volumetric/GraphNode.h&gt;
+// Get the value of the property.
+boolean propertyValue = graphNode_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">name Property</h3><p class="api">The name of this graph node as give on creation. Node names for each graph should be unique.</p><pre class="api-code">"graphNode_var" is a variable referencing a GraphNode object.
+#include &lt;Volume/Volumetric/GraphNode.h&gt;
+// Get the value of the property.
+string propertyValue = graphNode_var-&gt;
+name
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = graphNode_var-&gt;
+name
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">nodeType Property</h3><p class="api">Get the string node type that is was created with.</p><pre class="api-code">"graphNode_var" is a variable referencing a GraphNode object.
+#include &lt;Volume/Volumetric/GraphNode.h&gt;
+// Get the value of the property.
+string propertyValue = graphNode_var-&gt;
+nodeType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"graphNode_var" is a variable referencing a GraphNode object.
+#include &lt;Volume/Volumetric/GraphNode.h&gt;
+// Get the value of the property.
+string propertyValue = graphNode_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">properties Property</h3><p class="api">Get a collection of all node properties supported by this node.</p><pre class="api-code">"graphNode_var" is a variable referencing a GraphNode object.
+#include &lt;Volume/Volumetric/GraphNode.h&gt;
+// Get the value of the property.
+Ptr&lt;GraphNodeProperties&gt; propertyValue = graphNode_var-&gt;
+properties
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

@@ -1,0 +1,417 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ExportManager.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="13/1/2015" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ExportManager" name="contextid"/>
+<meta content="ExportManager Object" name="description"/>
+<meta content="GUID-bb9ca64f-0fc0-43a8-a381-076bded65744" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ExportManager Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ExportManager Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Fusion/ExportManager.h&gt;<h2 class="api">
+          Description
+        </h2>Provides support for exporting model data to various formats.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ExportManager_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ExportManager_createC3MFExportOptions.htm">createC3MFExportOptions</a></td>
+<td class="api-list">Creates a C3MFExportOptions object that's used to export a design in 3MF format. Creation of the C3MFExportOptions object does not perform the export. You must pass this object to the ExportManager.execute method to perform the export.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ExportManager_createDXFFlatPatternExportOptions.htm">createDXFFlatPatternExportOptions</a></td>
+<td class="api-list">Creates a DXFFlatPatternExport object that's used to export a flat pattern in DXF format. Creation of the DXFFlatPatternExport object does not perform the export. You must call the execute method. You can change any additional settings by setting properties on the returned object before calling the execute method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ExportManager_createDXFSketchExportOptions.htm">createDXFSketchExportOptions</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Creates a DXFSketchExportOptions object that's used to export a sketch in DXF format. Creation of the DXFSketchExportOptions object does not perform the export. You must call the execute method after changing the settings to the desired values.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ExportManager_createFusionArchiveExportOptions.htm">createFusionArchiveExportOptions</a></td>
+<td class="api-list">Creates an FusionArchiveExportOptions object that's used to export a design in Fusion archive format. Creation of the FusionArchiveExportOptions object does not perform the export. You must pass this object to the ExportManager.execute method to perform the export. The FusionArchiveExportOptions supports any available options when exporting to Fusion archive format.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ExportManager_createIGESExportOptions.htm">createIGESExportOptions</a></td>
+<td class="api-list">Creates an IGESExportOptions object that's used to export a design in IGES format. Creation of the IGESExportOptions object does not perform the export. You must pass this object to the ExportManager.execute method to perform the export. The IGESExportOptions supports any available options when exporting to IGES format.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ExportManager_createOBJExportOptions.htm">createOBJExportOptions</a></td>
+<td class="api-list">Creates an OBJExportOptions object that's used to export a design in OBJ format. Creation of the OBJExportOptions object does not perform the export. You must pass this object to the ExportManager.execute method to perform the export.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ExportManager_createSATExportOptions.htm">createSATExportOptions</a></td>
+<td class="api-list">Creates an SATExportOptions object that's used to export a design in SAT format. Creation of the SATExportOptions object does not perform the export. You must pass this object to the ExportManager.execute method to perform the export. The SATExportOptions supports any available options when exporting to SAT format.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ExportManager_createSMTExportOptions.htm">createSMTExportOptions</a></td>
+<td class="api-list">Creates an SMTExportOptions object that's used to export a design in SMT format. Creation of the SMTExportOptions object does not perform the export. You must pass this object to the ExportManager.execute method to perform the export. The SMTExportOptions supports any available options when exporting to SMT format.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ExportManager_createSTEPExportOptions.htm">createSTEPExportOptions</a></td>
+<td class="api-list">Creates an STEPExportOptions object that's used to export a design in STEP format. Creation of the STEPExportOptions object does not perform the export. You must pass this object to the ExportManager.execute method to perform the export. The STEPExportOptions supports any available options when exporting to STEP format.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ExportManager_createSTLExportOptions.htm">createSTLExportOptions</a></td>
+<td class="api-list">Creates an STLExportOptions object that's used to export a design in STL format. Creation of the STLExportOptions object does not perform the export. You must pass this object to the ExportManager.execute method to perform the export.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ExportManager_createUSDExportOptions.htm">createUSDExportOptions</a></td>
+<td class="api-list">Creates an USDExportOptions object that's used to export a design in USD format. Creation of the USDExportOptions object does not perform the export. You must pass this object to the ExportManager.execute method to perform the export. The USDExportOptions supports any available options when exporting to USD format.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ExportManager_execute.htm">execute</a></td>
+<td class="api-list">Executes the export operation to create the file in the format specified by the provided ExportOptions object.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ExportManager_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ExportManager_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Design_exportManager.htm">Design.exportManager</a>, <a href="FlatPatternProduct_exportManager.htm">FlatPatternProduct.exportManager</a>, <a href="WorkingModel_exportManager.htm">WorkingModel.exportManager</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ExportManager_Sample.htm">ExportManager API Sample</a></td>
+<td class="api-list">Demonstrates how to export f3d to different formats.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ExportToOtherFormats_Sample.htm">Export to other formats API Sample</a></td>
+<td class="api-list">Demonstrates exporting the active design to IGES, STEP, SAT, SMT, F3D and STL formats. To run this sample, have a design open and run the script. It will write out the translated files to a temp directory, which will it show in a message box.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SetParametersFromACsvFileAndExportToSTEP_Sample.htm">Set parameters from a csv file and export to STEP</a></td>
+<td class="api-list">Reads data from a .csv file and sets user parameters in the model and then exports the model to STEP. When setting parameters be aware that this sample is setting user parameters. It's also possible to set model parameters but that's not demonstrated here. Also when accessing parameters, it is case sensitive so the names you use in your program much exactly match the names in the model.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="STLExport_Sample.htm">STLExport API Sample</a></td>
+<td class="api-list">Demonstrates how to export f3d to STL format.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2015<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ExportManager%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Fusion/ExportManager.h&gt;
+returnValue = adsk::fusion::ExportManager::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">createC3MFExportOptions Method</h3><p class="api">Creates a C3MFExportOptions object that's used to export a design in 3MF format. Creation of the C3MFExportOptions object does not perform the export. You must pass this object to the ExportManager.execute method to perform the export.</p><pre class="api-code">"exportManager_var" is a variable referencing an
+ExportManager
+object.
+#include &lt;Fusion/Fusion/ExportManager.h&gt;
+// Uses no optional arguments.
+returnValue = exportManager_var-&gt;
+createC3MFExportOptions
+(geometry);
+// Uses optional arguments.
+returnValue = exportManager_var-&gt;
+createC3MFExportOptions
+(geometry, filename);</pre><p class="api">Return Value: C3MFExportOptions - The created createC3MFExportOptions object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">geometry</td><td class="api-list">Base</td><td class="api-list">The geometry to export. This can be a BRepBody, Occurrence, or Component object.</td></tr><tr><td class="api-list">filename</td><td class="api-list">string</td><td class="api-list">The filename of the 3MF file to be created. This is optional and can be left out if the mesh will be opened in a mesh editor. This is an optional argument whose default value is "".</td></tr></table><h3 class="api-member">createDXFFlatPatternExportOptions Method</h3><p class="api">Creates a DXFFlatPatternExport object that's used to export a flat pattern in DXF format. Creation of the DXFFlatPatternExport object does not perform the export. You must call the execute method. You can change any additional settings by setting properties on the returned object before calling the execute method.</p><pre class="api-code">"exportManager_var" is a variable referencing an
+ExportManager
+object.
+#include &lt;Fusion/Fusion/ExportManager.h&gt;
+returnValue = exportManager_var-&gt;
+createDXFFlatPatternExportOptions
+(filename, flatPattern);</pre><p class="api">Return Value: DXFFlatPatternExportOptions - The created DXFFlatPatternExport object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">filename</td><td class="api-list">string</td><td class="api-list">The filename of the DXF file to be created.</td></tr><tr><td class="api-list">flatPattern</td><td class="api-list">FlatPattern</td><td class="api-list">The FlatPattern object to export.</td></tr></table><h3 class="api-member">createDXFSketchExportOptions Method</h3><p class="api">Creates a DXFSketchExportOptions object that's used to export a sketch in DXF format. Creation of the DXFSketchExportOptions object does not perform the export. You must call the execute method after changing the settings to the desired values.</p><pre class="api-code">"exportManager_var" is a variable referencing an
+ExportManager
+object.
+#include &lt;Fusion/Fusion/ExportManager.h&gt;
+returnValue = exportManager_var-&gt;
+createDXFSketchExportOptions
+(filename, sketch);</pre><p class="api">Return Value: DXFSketchExportOptions - The created DXFSketchExportOptions object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">filename</td><td class="api-list">string</td><td class="api-list">The filename of the DXF file to be created.</td></tr><tr><td class="api-list">sketch</td><td class="api-list">Sketch</td><td class="api-list">The Sketch object to export.</td></tr></table><h3 class="api-member">createFusionArchiveExportOptions Method</h3><p class="api">Creates an FusionArchiveExportOptions object that's used to export a design in Fusion archive format. Creation of the FusionArchiveExportOptions object does not perform the export. You must pass this object to the ExportManager.execute method to perform the export. The FusionArchiveExportOptions supports any available options when exporting to Fusion archive format.</p><pre class="api-code">"exportManager_var" is a variable referencing an
+ExportManager
+object.
+#include &lt;Fusion/Fusion/ExportManager.h&gt;
+// Uses no optional arguments.
+returnValue = exportManager_var-&gt;
+createFusionArchiveExportOptions
+(filename);
+// Uses optional arguments.
+returnValue = exportManager_var-&gt;
+createFusionArchiveExportOptions
+(filename, geometry);</pre><p class="api">Return Value: FusionArchiveExportOptions - The created FusionArchiveExportOptions object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">filename</td><td class="api-list">string</td><td class="api-list">The filename of the Fusion archive file to be created.</td></tr><tr><td class="api-list">geometry</td><td class="api-list">Base</td><td class="api-list">The geometry to export. Valid geometry for this is currently a Component object. This argument is optional and if not specified, it results in the root component and it entire contents being exported. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">createIGESExportOptions Method</h3><p class="api">Creates an IGESExportOptions object that's used to export a design in IGES format. Creation of the IGESExportOptions object does not perform the export. You must pass this object to the ExportManager.execute method to perform the export. The IGESExportOptions supports any available options when exporting to IGES format.</p><pre class="api-code">"exportManager_var" is a variable referencing an
+ExportManager
+object.
+#include &lt;Fusion/Fusion/ExportManager.h&gt;
+// Uses no optional arguments.
+returnValue = exportManager_var-&gt;
+createIGESExportOptions
+(filename);
+// Uses optional arguments.
+returnValue = exportManager_var-&gt;
+createIGESExportOptions
+(filename, geometry);</pre><p class="api">Return Value: IGESExportOptions - The created IGESExportOptions object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">filename</td><td class="api-list">string</td><td class="api-list">The filename of the IGES file to be created.</td></tr><tr><td class="api-list">geometry</td><td class="api-list">Base</td><td class="api-list">The geometry to export. Valid geometry for this is currently a Component object. This argument is optional and if not specified, it results in the root component and it entire contents being exported. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">createOBJExportOptions Method</h3><p class="api">Creates an OBJExportOptions object that's used to export a design in OBJ format. Creation of the OBJExportOptions object does not perform the export. You must pass this object to the ExportManager.execute method to perform the export.</p><pre class="api-code">"exportManager_var" is a variable referencing an
+ExportManager
+object.
+#include &lt;Fusion/Fusion/ExportManager.h&gt;
+// Uses no optional arguments.
+returnValue = exportManager_var-&gt;
+createOBJExportOptions
+(geometry);
+// Uses optional arguments.
+returnValue = exportManager_var-&gt;
+createOBJExportOptions
+(geometry, filename);</pre><p class="api">Return Value: OBJExportOptions - The created createOBJExportOptions object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">geometry</td><td class="api-list">Base</td><td class="api-list">The geometry to export. This can be a BRepBody, Occurrence, or Component object.</td></tr><tr><td class="api-list">filename</td><td class="api-list">string</td><td class="api-list">The filename of the OBJ file to be created. This is optional and can be left out if the mesh will be opened in a mesh editor. This is an optional argument whose default value is "".</td></tr></table><h3 class="api-member">createSATExportOptions Method</h3><p class="api">Creates an SATExportOptions object that's used to export a design in SAT format. Creation of the SATExportOptions object does not perform the export. You must pass this object to the ExportManager.execute method to perform the export. The SATExportOptions supports any available options when exporting to SAT format.</p><pre class="api-code">"exportManager_var" is a variable referencing an
+ExportManager
+object.
+#include &lt;Fusion/Fusion/ExportManager.h&gt;
+// Uses no optional arguments.
+returnValue = exportManager_var-&gt;
+createSATExportOptions
+(filename);
+// Uses optional arguments.
+returnValue = exportManager_var-&gt;
+createSATExportOptions
+(filename, geometry);</pre><p class="api">Return Value: SATExportOptions - The created SATExportOptions object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">filename</td><td class="api-list">string</td><td class="api-list">The filename of the SAT file to be created.</td></tr><tr><td class="api-list">geometry</td><td class="api-list">Base</td><td class="api-list">The geometry to export. Valid geometry for this is currently a Component object. This argument is optional and if not specified, it results in the root component and it entire contents being exported. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">createSMTExportOptions Method</h3><p class="api">Creates an SMTExportOptions object that's used to export a design in SMT format. Creation of the SMTExportOptions object does not perform the export. You must pass this object to the ExportManager.execute method to perform the export. The SMTExportOptions supports any available options when exporting to SMT format.</p><pre class="api-code">"exportManager_var" is a variable referencing an
+ExportManager
+object.
+#include &lt;Fusion/Fusion/ExportManager.h&gt;
+// Uses no optional arguments.
+returnValue = exportManager_var-&gt;
+createSMTExportOptions
+(filename);
+// Uses optional arguments.
+returnValue = exportManager_var-&gt;
+createSMTExportOptions
+(filename, geometry);</pre><p class="api">Return Value: SMTExportOptions - The created SMTExportOptions object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">filename</td><td class="api-list">string</td><td class="api-list">The filename of the SMT file to be created.</td></tr><tr><td class="api-list">geometry</td><td class="api-list">Base</td><td class="api-list">The geometry to export. Valid geometry for this is currently a Component object. This argument is optional and if not specified, it results in the root component and it entire contents being exported. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">createSTEPExportOptions Method</h3><p class="api">Creates an STEPExportOptions object that's used to export a design in STEP format. Creation of the STEPExportOptions object does not perform the export. You must pass this object to the ExportManager.execute method to perform the export. The STEPExportOptions supports any available options when exporting to STEP format.</p><pre class="api-code">"exportManager_var" is a variable referencing an
+ExportManager
+object.
+#include &lt;Fusion/Fusion/ExportManager.h&gt;
+// Uses no optional arguments.
+returnValue = exportManager_var-&gt;
+createSTEPExportOptions
+(filename);
+// Uses optional arguments.
+returnValue = exportManager_var-&gt;
+createSTEPExportOptions
+(filename, geometry);</pre><p class="api">Return Value: STEPExportOptions - The created STEPExportOptions object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">filename</td><td class="api-list">string</td><td class="api-list">The filename of the STEP file to be created.</td></tr><tr><td class="api-list">geometry</td><td class="api-list">Base</td><td class="api-list">The geometry to export. Valid geometry for this is currently a Component object. This argument is optional and if not specified, it results in the root component and it entire contents being exported. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">createSTLExportOptions Method</h3><p class="api">Creates an STLExportOptions object that's used to export a design in STL format. Creation of the STLExportOptions object does not perform the export. You must pass this object to the ExportManager.execute method to perform the export.</p><pre class="api-code">"exportManager_var" is a variable referencing an
+ExportManager
+object.
+#include &lt;Fusion/Fusion/ExportManager.h&gt;
+// Uses no optional arguments.
+returnValue = exportManager_var-&gt;
+createSTLExportOptions
+(geometry);
+// Uses optional arguments.
+returnValue = exportManager_var-&gt;
+createSTLExportOptions
+(geometry, filename);</pre><p class="api">Return Value: STLExportOptions - The created createSTLExportOptions object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">geometry</td><td class="api-list">Base</td><td class="api-list">The geometry to export. This can be a BRepBody, Occurrence, or Component object.</td></tr><tr><td class="api-list">filename</td><td class="api-list">string</td><td class="api-list">The filename of the STL file to be created. This is optional and can be left out if the mesh will be opened in a mesh editor. This is an optional argument whose default value is "".</td></tr></table><h3 class="api-member">createUSDExportOptions Method</h3><p class="api">Creates an USDExportOptions object that's used to export a design in USD format. Creation of the USDExportOptions object does not perform the export. You must pass this object to the ExportManager.execute method to perform the export. The USDExportOptions supports any available options when exporting to USD format.</p><pre class="api-code">"exportManager_var" is a variable referencing an
+ExportManager
+object.
+#include &lt;Fusion/Fusion/ExportManager.h&gt;
+// Uses no optional arguments.
+returnValue = exportManager_var-&gt;
+createUSDExportOptions
+(filename);
+// Uses optional arguments.
+returnValue = exportManager_var-&gt;
+createUSDExportOptions
+(filename, geometry);</pre><p class="api">Return Value: USDExportOptions - The created USDExportOptions object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">filename</td><td class="api-list">string</td><td class="api-list">The filename of the USD file to be created.</td></tr><tr><td class="api-list">geometry</td><td class="api-list">Base</td><td class="api-list">The geometry to export. Valid geometry for this is currently a Component object. This argument is optional and if not specified, it results in the root component and it entire contents being exported. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">execute Method</h3><p class="api">Executes the export operation to create the file in the format specified by the provided ExportOptions object.</p><pre class="api-code">"exportManager_var" is a variable referencing an
+ExportManager
+object.
+#include &lt;Fusion/Fusion/ExportManager.h&gt;
+returnValue = exportManager_var-&gt;
+execute
+(exportOptions);</pre><p class="api">Return Value: boolean - Returns true if the export was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">exportOptions</td><td class="api-list">ExportOptions</td><td class="api-list">An ExportOptions object that is created using one of the create methods on the ExportManager object. This defines the type of file and any available options supported for that file type.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"exportManager_var" is a variable referencing an ExportManager object.
+#include &lt;Fusion/Fusion/ExportManager.h&gt;
+// Get the value of the property.
+boolean propertyValue = exportManager_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"exportManager_var" is a variable referencing an ExportManager object.
+#include &lt;Fusion/Fusion/ExportManager.h&gt;
+// Get the value of the property.
+string propertyValue = exportManager_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">ExportManager Member</h3><pre class="api-code">Copy Code
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/UserInterface/UserInterface.h&gt;
+#include &lt;Core/Application/Document.h&gt;
+
+#include &lt;Fusion/Fusion/Design.h&gt;
+#include &lt;Fusion/Fusion/ExportManager.h&gt;
+#include &lt;Fusion/Fusion/ExportOptions.h&gt;
+#include &lt;Fusion/Fusion/IGESExportOptions.h&gt;
+#include &lt;Fusion/Fusion/FusionArchiveExportOptions.h&gt;
+#include &lt;Fusion/Fusion/SATExportOptions.h&gt;
+#include &lt;Fusion/Fusion/SMTExportOptions.h&gt;
+#include &lt;Fusion/Fusion/STEPExportOptions.h&gt;
+#include &lt;Fusion/Components/Components.h&gt;
+#include &lt;Fusion/Components/Component.h&gt;
+
+
+using namespace adsk::core;
+using namespace adsk::fusion;
+
+Ptr&lt;UserInterface&gt; ui;
+
+std::string getDllPath();
+
+extern "C" XI_EXPORT bool run(const char* context)
+{
+    Ptr&lt;Application&gt; app = Application::get();
+    if (!app)
+        return false;
+
+    ui = app-&gt;userInterface();
+    if (!ui)
+        return false;
+// get active design
+Ptr&lt;Product&gt; product = app-&gt;activeProduct();
+    if (!product)
+        return false;
+
+    Ptr&lt;Design&gt; design = product;
+    if (!design)
+        return false;
+// get all components in this design
+Ptr&lt;Components&gt; comps = design-&gt;allComponents();
+    if (!comps)
+        return false;
+// create a single exportManager instance
+Ptr&lt;ExportManager&gt; exportMgr = design-&gt;exportManager();
+    if (!exportMgr)
+        return false;
+// export the component one by one with a specified format
+size_t count = comps-&gt;count();
+    for (size_t index = 0; index &lt; count; ++index)
+    {
+        Ptr&lt;Component&gt; comp = comps-&gt;item(index);
+        std::string name = comp-&gt;name();
+        std::string fileName = getDllPath() + "/" + name;
+// export the component with IGS format
+Ptr&lt;IGESExportOptions&gt; igesOptions = exportMgr-&gt;createIGESExportOptions(fileName, comp);
+        if (!igesOptions)
+            continue;
+        exportMgr-&gt;execute(igesOptions);
+// export the component with SAT format
+Ptr&lt;SATExportOptions&gt; satOptions = exportMgr-&gt;createSATExportOptions(fileName, comp);
+        if (!satOptions)
+            continue;
+        exportMgr-&gt;execute(satOptions);
+// export the component with SMT format
+Ptr&lt;SMTExportOptions&gt; smtOptions = exportMgr-&gt;createSMTExportOptions(fileName, comp);
+        if (!smtOptions)
+            continue;
+        exportMgr-&gt;execute(smtOptions);
+// export the component with STP format
+Ptr&lt;STEPExportOptions&gt; stepOptions = exportMgr-&gt;createSTEPExportOptions(fileName, comp);
+        if (!stepOptions)
+            continue;
+        exportMgr-&gt;execute(stepOptions);
+// export the component with F3D format
+Ptr&lt;FusionArchiveExportOptions&gt; archOptions = exportMgr-&gt;createFusionArchiveExportOptions(fileName, comp);
+        if (!stepOptions)
+            continue;
+        exportMgr-&gt;execute(archOptions);
+    }
+
+
+    return true;
+}
+
+std::string getDllPath()
+{
+#if defined(_WINDOWS) || defined(_WIN32) || defined(_WIN64)
+    HMODULE hModule = NULL;
+    if (!GetModuleHandleExA(
+            GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT,
+            (LPCSTR)&amp;getDllPath,
+            &amp;hModule))
+        return "";
+
+    char winTempPath[2048];
+    ::GetModuleFileNameA(hModule, winTempPath, 2048);
+
+    std::string strPath = winTempPath;
+    size_t stPos = strPath.rfind('\\');
+    return strPath.substr(0, stPos);
+#else
+    Dl_info info;
+    dladdr((void*)getDllPath, &amp;info);
+
+    std::string strPath = info.dli_fname;
+    int stPos = (int)strPath.rfind('/');
+    if (stPos != -1)
+        return strPath.substr(0, stPos);
+    else
+        return "";
+    ;
+#endif
+}</pre></body>
+</html>

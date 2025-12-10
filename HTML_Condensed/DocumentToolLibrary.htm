@@ -1,0 +1,213 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/DocumentToolLibrary.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="21/02/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="DocumentToolLibrary" name="contextid"/>
+<meta content="DocumentToolLibrary Object" name="description"/>
+<meta content="GUID-C0A61669-1C70-4A68-8CAA-158108844FC7" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>DocumentToolLibrary Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">DocumentToolLibrary Object
+			</h1>
+              Derived from: <a href="ToolLibrary.htm">ToolLibrary</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/Tools/DocumentToolLibrary.h&gt;<h2 class="api">
+          Description
+        </h2>DocumentToolLibrary provides access to tools used by the document. It supports adding, updating and deleting tools in the document tool library.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentToolLibrary_add.htm">add</a></td>
+<td class="api-list">Inserts a Tool at the end of the ToolLibrary.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentToolLibrary_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentToolLibrary_createEmpty.htm">createEmpty</a></td>
+<td class="api-list">Creates an empty ToolLibrary.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentToolLibrary_createFromJson.htm">createFromJson</a></td>
+<td class="api-list">Creates a ToolLibrary by given JSON-string. Raises an error if the given JSON is invalid.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentToolLibrary_createQuery.htm">createQuery</a></td>
+<td class="api-list">Creates a new ToolQuery that is used to query the library for tools matching the query.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentToolLibrary_item.htm">item</a></td>
+<td class="api-list">Get Tool by index in ToolLibrary.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentToolLibrary_operationsByTool.htm">operationsByTool</a></td>
+<td class="api-list">Returns all operations that use the given tool. The tool must exist in the document tool library. Raises an error if the tool is not in the document.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentToolLibrary_remove.htm">remove</a></td>
+<td class="api-list">Remove Tool by index from ToolLibrary.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentToolLibrary_toJson.htm">toJson</a></td>
+<td class="api-list">Generate and return JSON string that contains all tools of that list.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentToolLibrary_toolsBySetupOrFolder.htm">toolsBySetupOrFolder</a></td>
+<td class="api-list">Returns all tools used in a given setup or folder. Given setup or folder must belong to the document of the DocumentToolLibrary. Raises an error if given operation is not in the document.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentToolLibrary_update.htm">update</a></td>
+<td class="api-list">Update the given tool in the document tool library. The update applies all changes to the tool in the document tool library and therefore on all operations that use the tool. Will error if the tool does not exist in the document tool library.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentToolLibrary_count.htm">count</a></td>
+<td class="api-list">The number of tools in the ToolLibrary.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentToolLibrary_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DocumentToolLibrary_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CAM_documentToolLibrary.htm">CAM.documentToolLibrary</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version April 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(DocumentToolLibrary%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">add Method</h3><p class="api">Inserts a Tool at the end of the ToolLibrary.</p><pre class="api-code">"documentToolLibrary_var" is a variable referencing a
+DocumentToolLibrary
+object.
+#include &lt;Cam/Tools/DocumentToolLibrary.h&gt;
+returnValue = documentToolLibrary_var-&gt;
+add
+(tool);</pre><p class="api">Return Value: boolean - Returns true for successful insertion, false otherwise</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">tool</td><td class="api-list">Tool</td><td class="api-list">The Tool that should be added.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/Tools/DocumentToolLibrary.h&gt;
+returnValue = adsk::cam::DocumentToolLibrary::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">The number of tools in the ToolLibrary.</p><pre class="api-code">"documentToolLibrary_var" is a variable referencing a DocumentToolLibrary object.
+#include &lt;Cam/Tools/DocumentToolLibrary.h&gt;
+// Get the value of the property.
+uinteger propertyValue = documentToolLibrary_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">createEmpty Method</h3><p class="api">Creates an empty ToolLibrary.</p><pre class="api-code">This is a static method.
+#include &lt;Cam/Tools/DocumentToolLibrary.h&gt;
+returnValue = adsk::cam::DocumentToolLibrary::
+createEmpty
+();</pre><p class="api">Return Value: ToolLibrary - Returns the newly created ToolLibrary.</p><h3 class="api-member">createFromJson Method</h3><p class="api">Creates a ToolLibrary by given JSON-string. Raises an error if the given JSON is invalid.</p><pre class="api-code">This is a static method.
+#include &lt;Cam/Tools/DocumentToolLibrary.h&gt;
+returnValue = adsk::cam::DocumentToolLibrary::
+createFromJson
+(json);</pre><p class="api">Return Value: ToolLibrary - Returns the newly created ToolLibrary.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">json</td><td class="api-list">string</td><td class="api-list">The JSON contains all tools that should be added to the new ToolLibrary</td></tr></table><h3 class="api-member">createQuery Method</h3><p class="api">Creates a new ToolQuery that is used to query the library for tools matching the query.</p><pre class="api-code">"documentToolLibrary_var" is a variable referencing a
+DocumentToolLibrary
+object.
+#include &lt;Cam/Tools/DocumentToolLibrary.h&gt;
+returnValue = documentToolLibrary_var-&gt;
+createQuery
+();</pre><p class="api">Return Value: ToolQuery - Returns a new ToolQuery. The query is predefined by given parameter.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"documentToolLibrary_var" is a variable referencing a DocumentToolLibrary object.
+#include &lt;Cam/Tools/DocumentToolLibrary.h&gt;
+// Get the value of the property.
+boolean propertyValue = documentToolLibrary_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Get Tool by index in ToolLibrary.</p><pre class="api-code">"documentToolLibrary_var" is a variable referencing a
+DocumentToolLibrary
+object.
+#include &lt;Cam/Tools/DocumentToolLibrary.h&gt;
+returnValue = documentToolLibrary_var-&gt;
+item
+(index);</pre><p class="api">Return Value: Tool - Returns the Tool in the ToolLibrary by given index.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">Index of the Tool in the ToolLibrary.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"documentToolLibrary_var" is a variable referencing a DocumentToolLibrary object.
+#include &lt;Cam/Tools/DocumentToolLibrary.h&gt;
+// Get the value of the property.
+string propertyValue = documentToolLibrary_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">operationsByTool Method</h3><p class="api">Returns all operations that use the given tool. The tool must exist in the document tool library. Raises an error if the tool is not in the document.</p><pre class="api-code">"documentToolLibrary_var" is a variable referencing a
+DocumentToolLibrary
+object.
+#include &lt;Cam/Tools/DocumentToolLibrary.h&gt;
+returnValue = documentToolLibrary_var-&gt;
+operationsByTool
+(tool);</pre><p class="api">Return Value: Operation [] - Returns operations using a specific tool.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">tool</td><td class="api-list">Tool</td><td class="api-list">The tool to search for in operations. The tool must exist in the document.</td></tr></table><h3 class="api-member">remove Method</h3><p class="api">Remove Tool by index from ToolLibrary.</p><pre class="api-code">"documentToolLibrary_var" is a variable referencing a
+DocumentToolLibrary
+object.
+#include &lt;Cam/Tools/DocumentToolLibrary.h&gt;
+returnValue = documentToolLibrary_var-&gt;
+remove
+(index);</pre><p class="api">Return Value: boolean - Returns true for successful deletion, false otherwise</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">Index of the Tool in the ToolLibrary that should be removed.</td></tr></table><h3 class="api-member">toJson Method</h3><p class="api">Generate and return JSON string that contains all tools of that list.</p><pre class="api-code">"documentToolLibrary_var" is a variable referencing a
+DocumentToolLibrary
+object.
+#include &lt;Cam/Tools/DocumentToolLibrary.h&gt;
+returnValue = documentToolLibrary_var-&gt;
+toJson
+();</pre><p class="api">Return Value: string - Returns JSON string that contains all tools of that list.</p><h3 class="api-member">toolsBySetupOrFolder Method</h3><p class="api">Returns all tools used in a given setup or folder. Given setup or folder must belong to the document of the DocumentToolLibrary. Raises an error if given operation is not in the document.</p><pre class="api-code">"documentToolLibrary_var" is a variable referencing a
+DocumentToolLibrary
+object.
+#include &lt;Cam/Tools/DocumentToolLibrary.h&gt;
+returnValue = documentToolLibrary_var-&gt;
+toolsBySetupOrFolder
+(setupOrFolder);</pre><p class="api">Return Value: Tool [] - Returns tools used by a specific setup or folder.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">setupOrFolder</td><td class="api-list">OperationBase</td><td class="api-list">The setup or folder to get tools from. Must belong to the document.</td></tr></table><h3 class="api-member">update Method</h3><p class="api">Update the given tool in the document tool library. The update applies all changes to the tool in the document tool library and therefore on all operations that use the tool. Will error if the tool does not exist in the document tool library.</p><pre class="api-code">"documentToolLibrary_var" is a variable referencing a
+DocumentToolLibrary
+object.
+#include &lt;Cam/Tools/DocumentToolLibrary.h&gt;
+returnValue = documentToolLibrary_var-&gt;
+update
+(tool, updateFeedAndSpeed);</pre><p class="api">Return Value: boolean - Returns true if the update was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">tool</td><td class="api-list">Tool</td><td class="api-list">The tool that should be updated.</td></tr><tr><td class="api-list">updateFeedAndSpeed</td><td class="api-list">boolean</td><td class="api-list">Setting updateFeedAndSpeed to true will override the feed and speed parameters of operations within the document which use the given tool.</td></tr></table></body>
+</html>

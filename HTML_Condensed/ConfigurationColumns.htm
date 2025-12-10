@@ -1,0 +1,227 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ConfigurationColumns.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="27/12/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ConfigurationColumns" name="contextid"/>
+<meta content="ConfigurationColumns Object" name="description"/>
+<meta content="GUID-9F99E4A7-B700-47B3-B3AF-9CBCB22D6A0C" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ConfigurationColumns Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ConfigurationColumns Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Configurations/ConfigurationColumns.h&gt;<h2 class="api">
+          Description
+        </h2>Returns a collection of the columns in the table. The Name column is not included in this list.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationColumns_addClearanceTypeColumns.htm">addClearanceTypeColumns</a></td>
+<td class="api-list">Creates the columns in the configuration table to control the clearance information associated with a clearance hole. Because configuring a clearance hole requires several pieces of related information, this method collects it all at once and creates all the corresponding feature aspect columns.<br><br/> The fit is also a setting that controls the hole clearance, but it's independent of the other settings and can be created independently using the addFeatureAspectColumn method.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationColumns_addFeatureAspectColumn.htm">addFeatureAspectColumn</a></td>
+<td class="api-list">Creates a new column to control an aspect of a feature that supports being configured.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationColumns_addInsertColumn.htm">addInsertColumn</a></td>
+<td class="api-list">Add a new column to control which configuration is used for an inserted configuration. If an insert column already exists for the occurrence, the existing column is returned.<br/><br/> This is only valid for ConfigurationTopTable and ConfigurationCustomThemeTable objects and will fail for all other table types.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationColumns_addInsertStandardDesignColumn.htm">addInsertStandardDesignColumn</a></td>
+<td class="api-list">Add a new column to control which standard design is used for an inserted design. If an insert column already exists for the occurrence, the existing column is returned.<br/><br/> This is only valid for ConfigurationTopTable and ConfigurationCustomThemeTable objects and will fail for all other table types.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationColumns_addParameterColumn.htm">addParameterColumn</a></td>
+<td class="api-list">Adds a new parameter column to the configuration table. If a parameter column already exists for the parameter, the existing column is returned.<br/><br/> This is only valid for TopConfigurationTable and ThemeConfigurationTable objects. It will fail for all other table types.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationColumns_addPropertyColumn.htm">addPropertyColumn</a></td>
+<td class="api-list">Add a new column to control the property inside the component. The component is the owner of the property. This is only valid for TopConfigurationTable. It will fail for all other table types.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationColumns_addSuppressColumn.htm">addSuppressColumn</a></td>
+<td class="api-list">Adds a new column to control the suppression of a feature. The term "feature" is used broadly and includes anything displayed in the timeline. If a suppression column already exists for the feature, the existing column is returned.<br/><br/> This is only valid for TopConfigurationTable and ThemeConfigurationTable objects. It will fail for all other table types.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationColumns_addThreadTypeColumns.htm">addThreadTypeColumns</a></td>
+<td class="api-list">Creates the columns in the configuration table to control the type of thread associated with a thread feature or a tapped hole. Because configuring a thread requires several pieces of information, this method collects it all at once and creates all the corresponding feature aspect columns.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationColumns_addVisibilityColumn.htm">addVisibilityColumn</a></td>
+<td class="api-list">Adds a new column to control the visibility of an entity. If a visibility column already exists for the entity, the existing column is returned.<br/><br/> This is only valid for ConfigurationTopTable and ConfigurationCustomThemeTable objects and will fail for all other table types.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationColumns_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationColumns_item.htm">item</a></td>
+<td class="api-list">A method that returns the specified column object using an index into the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationColumns_itemById.htm">itemById</a></td>
+<td class="api-list">A method that returns the specified column object using the ID of the column.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationColumns_count.htm">count</a></td>
+<td class="api-list">Returns the number of columns in the table. The name column is not included.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationColumns_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationColumns_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ConfigurationCustomThemeTable_columns.htm">ConfigurationCustomThemeTable.columns</a>, <a href="ConfigurationTopTable_columns.htm">ConfigurationTopTable.columns</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2024<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ConfigurationColumns%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">addClearanceTypeColumns Method</h3><p class="api">Creates the columns in the configuration table to control the clearance information associated with a clearance hole. Because configuring a clearance hole requires several pieces of related information, this method collects it all at once and creates all the corresponding feature aspect columns. The fit is also a setting that controls the hole clearance, but it's independent of the other settings and can be created independently using the addFeatureAspectColumn method.</p><pre class="api-code">"configurationColumns_var" is a variable referencing a
+ConfigurationColumns
+object.
+#include &lt;Fusion/Configurations/ConfigurationColumns.h&gt;
+returnValue = configurationColumns_var-&gt;
+addClearanceTypeColumns
+(holeFeature, holeClearanceColumns);</pre><p class="api">Return Value: ConfigurationFeatureAspectColumn [] - Returns an array of the columns created. They are in order of standard, fastener type, and size.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">holeFeature</td><td class="api-list">HoleFeature</td><td class="api-list">The hole feature that defines a clearance hole whose clearance will be controlled by the configuration table.</td></tr><tr><td class="api-list">holeClearanceColumns</td><td class="api-list">ConfigurationClearanceHoleColumns</td><td class="api-list">Enum value that indicates which columns should be created to control the clearance hole definition. You can fully define the clearance hole by specifying the standard, fastener type, and size. Or you can leave the standard controlled by the hole and only configure the fastener type, and size. Or you can leave the standard and fastener type controlled by the hole and only configure the size. As a result, this can create and return 3, 2, or 1 columns. The fit is also a setting that controls the hole clearance, but it's independent of the other settings and can be created independently using the addFeatureAspectColumn method.</td></tr></table><h3 class="api-member">addFeatureAspectColumn Method</h3><p class="api">Creates a new column to control an aspect of a feature that supports being configured.</p><pre class="api-code">"configurationColumns_var" is a variable referencing a
+ConfigurationColumns
+object.
+#include &lt;Fusion/Configurations/ConfigurationColumns.h&gt;
+returnValue = configurationColumns_var-&gt;
+addFeatureAspectColumn
+(feature, aspectType);</pre><p class="api">Return Value: ConfigurationFeatureAspectColumn - Retruns the created ConfigurationFeatureAspectColumn or null in the case of failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">feature</td><td class="api-list">Base</td><td class="api-list">The feature to be configured. The term "feature" is used broadly and includes ThreadFeature, HoleFeature that is tapped, Joint, and AsBuiltJoint objects. The existing column is returned if a feature aspect column already exists for the feature and aspect type.</td></tr><tr><td class="api-list">aspectType</td><td class="api-list">ConfigurationFeatureAspectTypes</td><td class="api-list">The aspect type to create a column for. The type specified must be a valid type for the specified feature; otherwise, this will fail with an error.</td></tr></table><h3 class="api-member">addInsertColumn Method</h3><p class="api">Add a new column to control which configuration is used for an inserted configuration. If an insert column already exists for the occurrence, the existing column is returned. This is only valid for ConfigurationTopTable and ConfigurationCustomThemeTable objects and will fail for all other table types.</p><pre class="api-code">"configurationColumns_var" is a variable referencing a
+ConfigurationColumns
+object.
+#include &lt;Fusion/Configurations/ConfigurationColumns.h&gt;
+returnValue = configurationColumns_var-&gt;
+addInsertColumn
+(occurrence);</pre><p class="api">Return Value: ConfigurationInsertColumn - Returns the new column or null in the case of failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">occurrence</td><td class="api-list">Occurrence</td><td class="api-list">The occurrence that references a configuration.</td></tr></table><h3 class="api-member">addInsertStandardDesignColumn Method</h3><p class="api">Add a new column to control which standard design is used for an inserted design. If an insert column already exists for the occurrence, the existing column is returned. This is only valid for ConfigurationTopTable and ConfigurationCustomThemeTable objects and will fail for all other table types.</p><pre class="api-code">"configurationColumns_var" is a variable referencing a
+ConfigurationColumns
+object.
+#include &lt;Fusion/Configurations/ConfigurationColumns.h&gt;
+returnValue = configurationColumns_var-&gt;
+addInsertStandardDesignColumn
+(occurrence);</pre><p class="api">Return Value: ConfigurationInsertStandardDesignColumn - Returns the new column or null in the case of failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">occurrence</td><td class="api-list">Occurrence</td><td class="api-list">The occurrence that references a standard design.</td></tr></table><h3 class="api-member">addParameterColumn Method</h3><p class="api">Adds a new parameter column to the configuration table. If a parameter column already exists for the parameter, the existing column is returned. This is only valid for TopConfigurationTable and ThemeConfigurationTable objects. It will fail for all other table types.</p><pre class="api-code">"configurationColumns_var" is a variable referencing a
+ConfigurationColumns
+object.
+#include &lt;Fusion/Configurations/ConfigurationColumns.h&gt;
+returnValue = configurationColumns_var-&gt;
+addParameterColumn
+(parameter);</pre><p class="api">Return Value: ConfigurationParameterColumn - Returns the new column or null in the case of failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameter</td><td class="api-list">Parameter</td><td class="api-list">The parameter to add to the table.</td></tr></table><h3 class="api-member">addPropertyColumn Method</h3><p class="api">Add a new column to control the property inside the component. The component is the owner of the property. This is only valid for TopConfigurationTable. It will fail for all other table types.</p><pre class="api-code">"configurationColumns_var" is a variable referencing a
+ConfigurationColumns
+object.
+#include &lt;Fusion/Configurations/ConfigurationColumns.h&gt;
+returnValue = configurationColumns_var-&gt;
+addPropertyColumn
+(property);</pre><p class="api">Return Value: ConfigurationPropertyColumn - Returns the new column or null in the case of failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">property</td><td class="api-list">Property</td><td class="api-list">The property to add to the table.</td></tr></table><h3 class="api-member">addSuppressColumn Method</h3><p class="api">Adds a new column to control the suppression of a feature. The term "feature" is used broadly and includes anything displayed in the timeline. If a suppression column already exists for the feature, the existing column is returned. This is only valid for TopConfigurationTable and ThemeConfigurationTable objects. It will fail for all other table types.</p><pre class="api-code">"configurationColumns_var" is a variable referencing a
+ConfigurationColumns
+object.
+#include &lt;Fusion/Configurations/ConfigurationColumns.h&gt;
+returnValue = configurationColumns_var-&gt;
+addSuppressColumn
+(feature);</pre><p class="api">Return Value: ConfigurationSuppressColumn - Returns the new column or null in the case of failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">feature</td><td class="api-list">Base</td><td class="api-list">The feature to add to the table. Any object that is displayed in the timeline can be used as input. For example, some valid objects are any modeling features, sketches, construction geometry, and joints.</td></tr></table><h3 class="api-member">addThreadTypeColumns Method</h3><p class="api">Creates the columns in the configuration table to control the type of thread associated with a thread feature or a tapped hole. Because configuring a thread requires several pieces of information, this method collects it all at once and creates all the corresponding feature aspect columns.</p><pre class="api-code">"configurationColumns_var" is a variable referencing a
+ConfigurationColumns
+object.
+#include &lt;Fusion/Configurations/ConfigurationColumns.h&gt;
+returnValue = configurationColumns_var-&gt;
+addThreadTypeColumns
+(threadFeature, threadColumns);</pre><p class="api">Return Value: ConfigurationFeatureAspectColumn [] - Returns an array of the columns created. They are in order of type, size, designation, and class.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">threadFeature</td><td class="api-list">Feature</td><td class="api-list">The thread or tapped hole feature whose thread will be controlled by the configuration table.</td></tr><tr><td class="api-list">threadColumns</td><td class="api-list">ConfigurationThreadColumns</td><td class="api-list">Enum value that indicates which columns should be created to control the thread type. You can fully define the thread type by specifying the type, size, designation, and class. Or you can leave the thread type controlled by the feature and only configure the size, designation, and class. Or you can leave the thread type and size controlled by the feature and only configure the designation and class. Or you can leave the thread type, size, and designation controlled by the feature and only configure the class. As a result, this can create and return 4, 3, 2, or 1 columns.</td></tr></table><h3 class="api-member">addVisibilityColumn Method</h3><p class="api">Adds a new column to control the visibility of an entity. If a visibility column already exists for the entity, the existing column is returned. This is only valid for ConfigurationTopTable and ConfigurationCustomThemeTable objects and will fail for all other table types.</p><pre class="api-code">"configurationColumns_var" is a variable referencing a
+ConfigurationColumns
+object.
+#include &lt;Fusion/Configurations/ConfigurationColumns.h&gt;
+returnValue = configurationColumns_var-&gt;
+addVisibilityColumn
+(entity);</pre><p class="api">Return Value: ConfigurationVisibilityColumn - Returns the new column or null in the case of failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">entity</td><td class="api-list">Base</td><td class="api-list">Returns the entity whose visibility will be controlled by this column.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Configurations/ConfigurationColumns.h&gt;
+returnValue = adsk::fusion::ConfigurationColumns::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">Returns the number of columns in the table. The name column is not included.</p><pre class="api-code">"configurationColumns_var" is a variable referencing a ConfigurationColumns object.
+#include &lt;Fusion/Configurations/ConfigurationColumns.h&gt;
+// Get the value of the property.
+uinteger propertyValue = configurationColumns_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"configurationColumns_var" is a variable referencing a ConfigurationColumns object.
+#include &lt;Fusion/Configurations/ConfigurationColumns.h&gt;
+// Get the value of the property.
+boolean propertyValue = configurationColumns_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">A method that returns the specified column object using an index into the collection.</p><pre class="api-code">"configurationColumns_var" is a variable referencing a
+ConfigurationColumns
+object.
+#include &lt;Fusion/Configurations/ConfigurationColumns.h&gt;
+returnValue = configurationColumns_var-&gt;
+item
+(index);</pre><p class="api">Return Value: ConfigurationColumn - Returns the specified item or null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the item within the collection to return. The first item in the collection has an index of 0.</td></tr></table><h3 class="api-member">itemById Method</h3><p class="api">A method that returns the specified column object using the ID of the column.</p><pre class="api-code">"configurationColumns_var" is a variable referencing a
+ConfigurationColumns
+object.
+#include &lt;Fusion/Configurations/ConfigurationColumns.h&gt;
+returnValue = configurationColumns_var-&gt;
+itemById
+(id);</pre><p class="api">Return Value: ConfigurationColumn - Returns the specified item or null if no column matches the provided ID.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">id</td><td class="api-list">string</td><td class="api-list">The ID of the column within the collection to return.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"configurationColumns_var" is a variable referencing a ConfigurationColumns object.
+#include &lt;Fusion/Configurations/ConfigurationColumns.h&gt;
+// Get the value of the property.
+string propertyValue = configurationColumns_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

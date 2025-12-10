@@ -1,0 +1,147 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/PlasticRules.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="27/12/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="PlasticRules" name="contextid"/>
+<meta content="PlasticRules Object" name="description"/>
+<meta content="GUID-7C32F95D-0225-482E-AB86-A437BB65D0C0" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>PlasticRules Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">PlasticRules Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Plastic/PlasticRules.h&gt;<h2 class="api">
+          Description
+        </h2>A collection of plastic rules.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PlasticRules_addByCopy.htm">addByCopy</a></td>
+<td class="api-list">Creates a new plastic rule by copying an existing rule. The new rule can then be edited to define the rule characteristics you want.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PlasticRules_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PlasticRules_item.htm">item</a></td>
+<td class="api-list">Function that returns the specified plastic rule using an index into the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PlasticRules_itemByName.htm">itemByName</a></td>
+<td class="api-list">Function that returns the specified plastic rule using the name of the rule.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PlasticRules_count.htm">count</a></td>
+<td class="api-list">The number of plastic rules in the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PlasticRules_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PlasticRules_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Design_designPlasticRules.htm">Design.designPlasticRules</a>, <a href="Design_libraryPlasticRules.htm">Design.libraryPlasticRules</a>, <a href="FlatPatternProduct_designPlasticRules.htm">FlatPatternProduct.designPlasticRules</a>, <a href="FlatPatternProduct_libraryPlasticRules.htm">FlatPatternProduct.libraryPlasticRules</a>, <a href="WorkingModel_designPlasticRules.htm">WorkingModel.designPlasticRules</a>, <a href="WorkingModel_libraryPlasticRules.htm">WorkingModel.libraryPlasticRules</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2024<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(PlasticRules%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">addByCopy Method</h3><p class="api">Creates a new plastic rule by copying an existing rule. The new rule can then be edited to define the rule characteristics you want.</p><pre class="api-code">"plasticRules_var" is a variable referencing a
+PlasticRules
+object.
+#include &lt;Fusion/Plastic/PlasticRules.h&gt;
+returnValue = plasticRules_var-&gt;
+addByCopy
+(existingPlasticRule, name);</pre><p class="api">Return Value: PlasticRule - Returns the new PlasticRule object or will assert in the case where it fails.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">existingPlasticRule</td><td class="api-list">PlasticRule</td><td class="api-list">The existing PlasticRule object you want to copy. This can be a rule from the library or the design.</td></tr><tr><td class="api-list">name</td><td class="api-list">string</td><td class="api-list">The name to assign to the new plastic rule. This name must be unique with respect to other plastic rules in the design or library it's created in.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Plastic/PlasticRules.h&gt;
+returnValue = adsk::fusion::PlasticRules::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">The number of plastic rules in the collection.</p><pre class="api-code">"plasticRules_var" is a variable referencing a PlasticRules object.
+#include &lt;Fusion/Plastic/PlasticRules.h&gt;
+// Get the value of the property.
+uinteger propertyValue = plasticRules_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"plasticRules_var" is a variable referencing a PlasticRules object.
+#include &lt;Fusion/Plastic/PlasticRules.h&gt;
+// Get the value of the property.
+boolean propertyValue = plasticRules_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Function that returns the specified plastic rule using an index into the collection.</p><pre class="api-code">"plasticRules_var" is a variable referencing a
+PlasticRules
+object.
+#include &lt;Fusion/Plastic/PlasticRules.h&gt;
+returnValue = plasticRules_var-&gt;
+item
+(index);</pre><p class="api">Return Value: PlasticRule - Returns the specified item or null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the item within the collection to return. The first item in the collection has an index of 0.</td></tr></table><h3 class="api-member">itemByName Method</h3><p class="api">Function that returns the specified plastic rule using the name of the rule.</p><pre class="api-code">"plasticRules_var" is a variable referencing a
+PlasticRules
+object.
+#include &lt;Fusion/Plastic/PlasticRules.h&gt;
+returnValue = plasticRules_var-&gt;
+itemByName
+(name);</pre><p class="api">Return Value: PlasticRule - Returns the specified item or null if the specified name was not found.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">name</td><td class="api-list">string</td><td class="api-list">The name of the rule within the collection to return. This is the name seen in the Plastic Rules dialog.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"plasticRules_var" is a variable referencing a PlasticRules object.
+#include &lt;Fusion/Plastic/PlasticRules.h&gt;
+// Get the value of the property.
+string propertyValue = plasticRules_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

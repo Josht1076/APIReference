@@ -1,0 +1,157 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/MachineParts.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="21/02/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="MachineParts" name="contextid"/>
+<meta content="MachineParts Object" name="description"/>
+<meta content="GUID-3DDA429C-208B-44B7-9FB8-4D20DB07EC58" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>MachineParts Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">MachineParts Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/Machine/MachineParts.h&gt;<h2 class="api">
+          Description
+        </h2>Object that represents a collection of machine parts. These parts are the children of another part or the collection of base parts from MachineKinematics.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineParts_add.htm">add</a></td>
+<td class="api-list">Add a new part to this collection. The part's parent will be set to the owner of this collection, or null if this is the root parts collection.<br><br/> If the passed MachinePartInput has a MachineAxisInput a new MachineAxis will be created.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineParts_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineParts_createPartInput.htm">createPartInput</a></td>
+<td class="api-list">Create a new MachinePartInput.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineParts_item.htm">item</a></td>
+<td class="api-list">Get the part at index in this collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineParts_itemById.htm">itemById</a></td>
+<td class="api-list">Get the part with the given ID.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineParts_count.htm">count</a></td>
+<td class="api-list">Get the number of parts in this collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineParts_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MachineParts_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="KinematicsMachineElement_parts.htm">KinematicsMachineElement.parts</a>, <a href="MachinePart_children.htm">MachinePart.children</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version April 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(MachineParts%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">add Method</h3><p class="api">Add a new part to this collection. The part's parent will be set to the owner of this collection, or null if this is the root parts collection. If the passed MachinePartInput has a MachineAxisInput a new MachineAxis will be created.</p><pre class="api-code">"machineParts_var" is a variable referencing a
+MachineParts
+object.
+#include &lt;Cam/Machine/MachineParts.h&gt;
+returnValue = machineParts_var-&gt;
+add
+(partInput);</pre><p class="api">Return Value: MachinePart - Returns the newly created MachinePart or null if creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">partInput</td><td class="api-list">MachinePartInput</td><td class="api-list">Part input object used to create the new MachinePart.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/Machine/MachineParts.h&gt;
+returnValue = adsk::cam::MachineParts::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">Get the number of parts in this collection.</p><pre class="api-code">"machineParts_var" is a variable referencing a MachineParts object.
+#include &lt;Cam/Machine/MachineParts.h&gt;
+// Get the value of the property.
+uinteger propertyValue = machineParts_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">createPartInput Method</h3><p class="api">Create a new MachinePartInput.</p><pre class="api-code">"machineParts_var" is a variable referencing a
+MachineParts
+object.
+#include &lt;Cam/Machine/MachineParts.h&gt;
+returnValue = machineParts_var-&gt;
+createPartInput
+(partType);</pre><p class="api">Return Value: MachinePartInput - Returns the new MachinePartInput or null if creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">partType</td><td class="api-list">MachinePartTypes</td><td class="api-list">The type of part to create. When this parameter is Axis, you must set a value for axisInput.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"machineParts_var" is a variable referencing a MachineParts object.
+#include &lt;Cam/Machine/MachineParts.h&gt;
+// Get the value of the property.
+boolean propertyValue = machineParts_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Get the part at index in this collection.</p><pre class="api-code">"machineParts_var" is a variable referencing a
+MachineParts
+object.
+#include &lt;Cam/Machine/MachineParts.h&gt;
+returnValue = machineParts_var-&gt;
+item
+(index);</pre><p class="api">Return Value: MachinePart - The MachinePart at index.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">integer</td><td class="api-list">The index of the part.</td></tr></table><h3 class="api-member">itemById Method</h3><p class="api">Get the part with the given ID.</p><pre class="api-code">"machineParts_var" is a variable referencing a
+MachineParts
+object.
+#include &lt;Cam/Machine/MachineParts.h&gt;
+returnValue = machineParts_var-&gt;
+itemById
+(id);</pre><p class="api">Return Value: MachinePart - Returns the MachinePart with the given ID, or null if the given ID does not match any part in the collection.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">id</td><td class="api-list">string</td><td class="api-list">The ID for the part to get.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"machineParts_var" is a variable referencing a MachineParts object.
+#include &lt;Cam/Machine/MachineParts.h&gt;
+// Get the value of the property.
+string propertyValue = machineParts_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

@@ -1,0 +1,279 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/CommandDefinition.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="CommandDefinition" name="contextid"/>
+<meta content="CommandDefinition Object" name="description"/>
+<meta content="GUID-5e5a72e2-0869-4f85-936f-eab4ebd4aced" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>CommandDefinition Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">CommandDefinition Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/UserInterface/CommandDefinition.h&gt;<h2 class="api">
+          Description
+        </h2>The CommandDefinition is the base class of the various types of commands. Command types are based on the type of control used to execute them in the user-interface. For example, most commands will use a ButtonDefinition since they're executed using a button in the user-interface. A command definition contains the information that defines the user-interface. For example, the name and icon. The command definition and also gets the notification when the user interacts with the associated control.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinition_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinition_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes this command definition. This is only valid for API created command definitions and will fail if the isNative property is true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinition_execute.htm">execute</a></td>
+<td class="api-list">Executes this command definition. This is the same as the user clicking a button that is associated with this command definition.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinition_controlDefinition.htm">controlDefinition</a></td>
+<td class="api-list">Gets the ControlDefinition associated with this command. The control definition defines the type of control that can exist in the user interface to execute this command. You can use properties on the control definition to define the look and behavior of the control.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinition_id.htm">id</a></td>
+<td class="api-list">Gets the unique id for this command definition. This is guaranteed to be unique with respect to all other command definitions.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinition_isNative.htm">isNative</a></td>
+<td class="api-list">Gets if this is a native command definition. If True then there are limitations to edits that can be done on the command definition. For example a native command definition cannot be deleted.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinition_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinition_name.htm">name</a></td>
+<td class="api-list">Gets or sets the visible name of the command when seen in the user interface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinition_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinition_resourceFolder.htm">resourceFolder</a></td>
+<td class="api-list">This argument defines the resource folder that contains the images used for the command icon. Icons can be defined using either PNG or SVG files. More information about icons can be found in the user manual topic <a href="UserInterface_UM.htm#IconsForCommands">User Interface Customization</a>.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinition_toolClipFilename.htm">toolClipFilename</a></td>
+<td class="api-list">Gets or sets the full filename of the image file (PNG) used for the tool clip. The tooltip is always shown but as the user hovers over the control it will progressively display the tool clip along with the tooltip text.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinition_tooltip.htm">tooltip</a></td>
+<td class="api-list">Gets or sets the tooltip string. This is always shown for commands. If the tooltip description and/or tool clip are also specified then the tooltip will progressively display more information as the user hovers the mouse over the control.<br/><br/> The width of all tooltips is limited to 300 pixels. Word wrapping is enabled, so Fusion will automatically break the line and flow your text to the next line. However, if you include a long word that exceeds 300 pixels, it doesn't wrap and the right portion will be clipped. This is common when displaying paths or URL's. If a single word is longer than 300 pixels there are a couple of options to avoid the clipping.<br/><br/> The first option is to insert one or more zero width space characters within the word to define where the word should be broken. The UNICODE character '\u200b' defines a zero width space. This is not displayed is only used to designate a possible break point.<br/><br/> The second option is to shorten the word by removing a section. For example, if the word is a full path to a file and a portion of the path is common you can remove that portion and replace it with the ellipsis character to indicate there is some missing text. There is a single UNICODE character you can use the ellipsis. It is '\u2026'.</td>
+</tr>
+</table>
+<h2 class="api">
+            Events
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinition_commandCreated.htm">commandCreated</a></td>
+<td class="api-list">This event is fired when the associated control is manipulated by the user. A new Command object is created and passed back through this event which you can then use to interact with the user to get any input the command requires.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ApplicationCommandEventArgs_commandDefinition.htm">ApplicationCommandEventArgs.commandDefinition</a>, <a href="Command_parentCommandDefinition.htm">Command.parentCommandDefinition</a>, <a href="CommandControl_commandDefinition.htm">CommandControl.commandDefinition</a>, <a href="CommandDefinitions_addButtonDefinition.htm">CommandDefinitions.addButtonDefinition</a>, <a href="CommandDefinitions_addCheckBoxDefinition.htm">CommandDefinitions.addCheckBoxDefinition</a>, <a href="CommandDefinitions_addListDefinition.htm">CommandDefinitions.addListDefinition</a>, <a href="CommandDefinitions_item.htm">CommandDefinitions.item</a>, <a href="CommandDefinitions_itemById.htm">CommandDefinitions.itemById</a>, <a href="SplitButtonControl_additionalDefinitions.htm">SplitButtonControl.additionalDefinitions</a>, <a href="SplitButtonControl_defaultCommandDefinition.htm">SplitButtonControl.defaultCommandDefinition</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandInputsSample_Sample.htm">Command Inputs API Sample</a></td>
+<td class="api-list"><p>Creates a command dialog that demonstrates all of the available command inputs.</p>
+<p>To use the sample, create a new Python or C++ script and copy and paste this code, replacing the default code.  You also need to unpack this zip file which contains a <a href="../ExtraFiles/CommandInputsResources.zip">resource folder</a> into the same folder where the source code file (.py or .cpp) is.</p></td>
+</tr>
+<tr>
+<td class="api-list"><a href="UICustomizationSample_Sample.htm">Customizing the UI using the API Sample</a></td>
+<td class="api-list">Demonstrates how to work with tabs, panels, and command in the user interface. The full source for <a href="../ExtraFiles/UICustomizationSampleCPP.zip">C++</a> and <a href="../ExtraFiles/UICustomizationSamplePython.zip">Python</a> samples can be downloaded. This is especially useful for getting the resource files.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(CommandDefinition%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/UserInterface/CommandDefinition.h&gt;
+returnValue = adsk::core::CommandDefinition::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">commandCreated Member</h3><p class="api">This event is fired when the associated control is manipulated by the user. A new Command object is created and passed back through this event which you can then use to interact with the user to get any input the command requires.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/CommandDefinition.h&gt;
+#include &lt;Core/UserInterface/CommandCreatedEvent.h&gt;
+#include &lt;Core/UserInterface/CommandCreatedEventHandler.h&gt;
+#include &lt;Core/UserInterface/CommandCreatedEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the commandCreated event.
+class MyCommandCreatedEventHandler : public adsk::core::CommandCreatedEventHandler
+{
+public:
+void notify(const Ptr&lt;CommandCreatedEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyCommandCreatedEventHandler event handler.");
+}
+} _commandCreated;
+--------- Connect the handler to the event. ---------
+// "commandDefinition_var" is a variable referencing a
+CommandDefinition
+object.
+// Connect the handler function to the event.
+Ptr&lt;CommandCreatedEvent&gt; commandCreatedEvent = commandDefinition_var-&gt;
+commandCreated
+();
+if (!commandCreatedEvent)
+return;
+bool isOk = commandCreatedEvent-&gt;add(&amp;_commandCreated);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">controlDefinition Property</h3><p class="api">Gets the ControlDefinition associated with this command. The control definition defines the type of control that can exist in the user interface to execute this command. You can use properties on the control definition to define the look and behavior of the control.</p><pre class="api-code">"commandDefinition_var" is a variable referencing a CommandDefinition object.
+#include &lt;Core/UserInterface/CommandDefinition.h&gt;
+// Get the value of the property.
+Ptr&lt;ControlDefinition&gt; propertyValue = commandDefinition_var-&gt;
+controlDefinition
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes this command definition. This is only valid for API created command definitions and will fail if the isNative property is true.</p><pre class="api-code">"commandDefinition_var" is a variable referencing a
+CommandDefinition
+object.
+#include &lt;Core/UserInterface/CommandDefinition.h&gt;
+returnValue = commandDefinition_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true or false indicating if the deletion was successful.</p><h3 class="api-member">execute Method</h3><p class="api">Executes this command definition. This is the same as the user clicking a button that is associated with this command definition.</p><pre class="api-code">"commandDefinition_var" is a variable referencing a
+CommandDefinition
+object.
+#include &lt;Core/UserInterface/CommandDefinition.h&gt;
+// Uses no optional arguments.
+returnValue = commandDefinition_var-&gt;
+execute
+();
+// Uses optional arguments.
+returnValue = commandDefinition_var-&gt;
+execute
+(input);</pre><p class="api">Return Value: boolean - Returns true or false indicating if the execution was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">input</td><td class="api-list">NamedValues</td><td class="api-list">This argument is ignored and exists for possible future use. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">id Property</h3><p class="api">Gets the unique id for this command definition. This is guaranteed to be unique with respect to all other command definitions.</p><pre class="api-code">"commandDefinition_var" is a variable referencing a CommandDefinition object.
+#include &lt;Core/UserInterface/CommandDefinition.h&gt;
+// Get the value of the property.
+string propertyValue = commandDefinition_var-&gt;
+id
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">isNative Property</h3><p class="api">Gets if this is a native command definition. If True then there are limitations to edits that can be done on the command definition. For example a native command definition cannot be deleted.</p><pre class="api-code">"commandDefinition_var" is a variable referencing a CommandDefinition object.
+#include &lt;Core/UserInterface/CommandDefinition.h&gt;
+// Get the value of the property.
+boolean propertyValue = commandDefinition_var-&gt;
+isNative
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"commandDefinition_var" is a variable referencing a CommandDefinition object.
+#include &lt;Core/UserInterface/CommandDefinition.h&gt;
+// Get the value of the property.
+boolean propertyValue = commandDefinition_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">name Property</h3><p class="api">Gets or sets the visible name of the command when seen in the user interface.</p><pre class="api-code">"commandDefinition_var" is a variable referencing a CommandDefinition object.
+#include &lt;Core/UserInterface/CommandDefinition.h&gt;
+// Get the value of the property.
+string propertyValue = commandDefinition_var-&gt;
+name
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = commandDefinition_var-&gt;
+name
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"commandDefinition_var" is a variable referencing a CommandDefinition object.
+#include &lt;Core/UserInterface/CommandDefinition.h&gt;
+// Get the value of the property.
+string propertyValue = commandDefinition_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">resourceFolder Property</h3><p class="api">This argument defines the resource folder that contains the images used for the command icon. Icons can be defined using either PNG or SVG files. More information about icons can be found in the user manual topic User Interface Customization .</p><pre class="api-code">"commandDefinition_var" is a variable referencing a CommandDefinition object.
+#include &lt;Core/UserInterface/CommandDefinition.h&gt;
+// Get the value of the property.
+string propertyValue = commandDefinition_var-&gt;
+resourceFolder
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = commandDefinition_var-&gt;
+resourceFolder
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">toolClipFilename Property</h3><p class="api">Gets or sets the full filename of the image file (PNG) used for the tool clip. The tooltip is always shown but as the user hovers over the control it will progressively display the tool clip along with the tooltip text.</p><pre class="api-code">"commandDefinition_var" is a variable referencing a CommandDefinition object.
+#include &lt;Core/UserInterface/CommandDefinition.h&gt;
+// Get the value of the property.
+string propertyValue = commandDefinition_var-&gt;
+toolClipFilename
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = commandDefinition_var-&gt;
+toolClipFilename
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">tooltip Property</h3><p class="api">Gets or sets the tooltip string. This is always shown for commands. If the tooltip description and/or tool clip are also specified then the tooltip will progressively display more information as the user hovers the mouse over the control. The width of all tooltips is limited to 300 pixels. Word wrapping is enabled, so Fusion will automatically break the line and flow your text to the next line. However, if you include a long word that exceeds 300 pixels, it doesn't wrap and the right portion will be clipped. This is common when displaying paths or URL's. If a single word is longer than 300 pixels there are a couple of options to avoid the clipping. The first option is to insert one or more zero width space characters within the word to define where the word should be broken. The UNICODE character '\u200b' defines a zero width space. This is not displayed is only used to designate a possible break point. The second option is to shorten the word by removing a section. For example, if the word is a full path to a file and a portion of the path is common you can remove that portion and replace it with the ellipsis character to indicate there is some missing text. There is a single UNICODE character you can use the ellipsis. It is '\u2026'.</p><pre class="api-code">"commandDefinition_var" is a variable referencing a CommandDefinition object.
+#include &lt;Core/UserInterface/CommandDefinition.h&gt;
+// Get the value of the property.
+string propertyValue = commandDefinition_var-&gt;
+tooltip
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = commandDefinition_var-&gt;
+tooltip
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p></body>
+</html>

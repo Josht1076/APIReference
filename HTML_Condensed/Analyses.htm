@@ -1,0 +1,222 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/Analyses.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="18/01/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="Analyses" name="contextid"/>
+<meta content="Analyses Object" name="description"/>
+<meta content="GUID-08F0F2E7-7B2A-42C9-95A5-48F77BF108D0" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>Analyses Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">Analyses Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Fusion/Analyses.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access to the existing analysis results within a design.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Analyses_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Analyses_item.htm">item</a></td>
+<td class="api-list">A method that returns the specified Analysis using an index into the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Analyses_itemByName.htm">itemByName</a></td>
+<td class="api-list">A method that returns the specified Analysis using the name of the analysis as it is displayed in the browser.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Analyses_accessibilityAnalyses.htm">accessibilityAnalyses</a></td>
+<td class="api-list">Returns the AccessibilityAnalyses object, which provides access to any existing AccessibilityAnalysis objects in the design.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Analyses_count.htm">count</a></td>
+<td class="api-list">Returns the number of Analysis objects in the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Analyses_curvatureCombAnalyses.htm">curvatureCombAnalyses</a></td>
+<td class="api-list">Returns the CurvatureCombAnalyses object, which provides access to any existing CurvatureCombAnalysis objects in the design.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Analyses_curvatureMapAnalyses.htm">curvatureMapAnalyses</a></td>
+<td class="api-list">Returns the CurvatureMapAnalyses object, which provides access to any existing CurvatureMapAnalysis objects in the design.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Analyses_draftAnalyses.htm">draftAnalyses</a></td>
+<td class="api-list">Returns the DraftAnalyses object, which provides access to any existing DraftAnalysis objects in the design.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Analyses_isLightBulbOn.htm">isLightBulbOn</a></td>
+<td class="api-list">A property that gets and sets if the display is enabled for all Analysis objects in the design. If this is false, all Analysis results will be hidden. If this is true, the Analysis objects whose isLightBulbOn property is also true will be visible.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Analyses_isoCurveAnalyses.htm">isoCurveAnalyses</a></td>
+<td class="api-list">Returns the IsoCurveAnalyses object, which provides access to any existing IsoCurveAnalysis objects in the design.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Analyses_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Analyses_minimumRadiusAnalyses.htm">minimumRadiusAnalyses</a></td>
+<td class="api-list">Returns the MinimumRadiusAnalyses object, which provides access to any existing MinimumRadiusAnalysis objects in the design.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Analyses_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="Analyses_sectionAnalyses.htm">sectionAnalyses</a></td>
+<td class="api-list">Returns the SectionAnalyses object, which provides access to any existing SectionAnalysis objects in the design.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Analyses_zebraAnalyses.htm">zebraAnalyses</a></td>
+<td class="api-list">Returns the ZebraAnalyses object, which provides access to any existing ZebraAnalysis objects in the design.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Design_analyses.htm">Design.analyses</a>, <a href="FlatPatternProduct_analyses.htm">FlatPatternProduct.analyses</a>, <a href="WorkingModel_analyses.htm">WorkingModel.analyses</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(Analyses%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">accessibilityAnalyses Property</h3><p class="api">Returns the AccessibilityAnalyses object, which provides access to any existing AccessibilityAnalysis objects in the design.</p><pre class="api-code">"analyses_var" is a variable referencing an Analyses object.
+#include &lt;Fusion/Fusion/Analyses.h&gt;
+// Get the value of the property.
+Ptr&lt;AccessibilityAnalyses&gt; propertyValue = analyses_var-&gt;
+accessibilityAnalyses
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Fusion/Analyses.h&gt;
+returnValue = adsk::fusion::Analyses::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">Returns the number of Analysis objects in the collection.</p><pre class="api-code">"analyses_var" is a variable referencing an Analyses object.
+#include &lt;Fusion/Fusion/Analyses.h&gt;
+// Get the value of the property.
+uinteger propertyValue = analyses_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">curvatureCombAnalyses Property</h3><p class="api">Returns the CurvatureCombAnalyses object, which provides access to any existing CurvatureCombAnalysis objects in the design.</p><pre class="api-code">"analyses_var" is a variable referencing an Analyses object.
+#include &lt;Fusion/Fusion/Analyses.h&gt;
+// Get the value of the property.
+Ptr&lt;CurvatureCombAnalyses&gt; propertyValue = analyses_var-&gt;
+curvatureCombAnalyses
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">curvatureMapAnalyses Property</h3><p class="api">Returns the CurvatureMapAnalyses object, which provides access to any existing CurvatureMapAnalysis objects in the design.</p><pre class="api-code">"analyses_var" is a variable referencing an Analyses object.
+#include &lt;Fusion/Fusion/Analyses.h&gt;
+// Get the value of the property.
+Ptr&lt;CurvatureMapAnalyses&gt; propertyValue = analyses_var-&gt;
+curvatureMapAnalyses
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">draftAnalyses Property</h3><p class="api">Returns the DraftAnalyses object, which provides access to any existing DraftAnalysis objects in the design.</p><pre class="api-code">"analyses_var" is a variable referencing an Analyses object.
+#include &lt;Fusion/Fusion/Analyses.h&gt;
+// Get the value of the property.
+Ptr&lt;DraftAnalyses&gt; propertyValue = analyses_var-&gt;
+draftAnalyses
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">isLightBulbOn Property</h3><p class="api">A property that gets and sets if the display is enabled for all Analysis objects in the design. If this is false, all Analysis results will be hidden. If this is true, the Analysis objects whose isLightBulbOn property is also true will be visible.</p><pre class="api-code">"analyses_var" is a variable referencing an Analyses object.
+#include &lt;Fusion/Fusion/Analyses.h&gt;
+// Get the value of the property.
+boolean propertyValue = analyses_var-&gt;
+isLightBulbOn
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = analyses_var-&gt;
+isLightBulbOn
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isoCurveAnalyses Property</h3><p class="api">Returns the IsoCurveAnalyses object, which provides access to any existing IsoCurveAnalysis objects in the design.</p><pre class="api-code">"analyses_var" is a variable referencing an Analyses object.
+#include &lt;Fusion/Fusion/Analyses.h&gt;
+// Get the value of the property.
+Ptr&lt;IsoCurveAnalyses&gt; propertyValue = analyses_var-&gt;
+isoCurveAnalyses
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"analyses_var" is a variable referencing an Analyses object.
+#include &lt;Fusion/Fusion/Analyses.h&gt;
+// Get the value of the property.
+boolean propertyValue = analyses_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">A method that returns the specified Analysis using an index into the collection.</p><pre class="api-code">"analyses_var" is a variable referencing an
+Analyses
+object.
+#include &lt;Fusion/Fusion/Analyses.h&gt;
+returnValue = analyses_var-&gt;
+item
+(index);</pre><p class="api">Return Value: Analysis - Returns the specified item or null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the item within the collection to return. The first item in the collection has an index of 0.</td></tr></table><h3 class="api-member">itemByName Method</h3><p class="api">A method that returns the specified Analysis using the name of the analysis as it is displayed in the browser.</p><pre class="api-code">"analyses_var" is a variable referencing an
+Analyses
+object.
+#include &lt;Fusion/Fusion/Analyses.h&gt;
+returnValue = analyses_var-&gt;
+itemByName
+(name);</pre><p class="api">Return Value: Analysis - Returns the specified item or null if an invalid name was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">name</td><td class="api-list">string</td><td class="api-list">The name of the Analysis as it is displayed in the browser.</td></tr></table><h3 class="api-member">minimumRadiusAnalyses Property</h3><p class="api">Returns the MinimumRadiusAnalyses object, which provides access to any existing MinimumRadiusAnalysis objects in the design.</p><pre class="api-code">"analyses_var" is a variable referencing an Analyses object.
+#include &lt;Fusion/Fusion/Analyses.h&gt;
+// Get the value of the property.
+Ptr&lt;MinimumRadiusAnalyses&gt; propertyValue = analyses_var-&gt;
+minimumRadiusAnalyses
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"analyses_var" is a variable referencing an Analyses object.
+#include &lt;Fusion/Fusion/Analyses.h&gt;
+// Get the value of the property.
+string propertyValue = analyses_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">sectionAnalyses Property</h3><p class="api">Returns the SectionAnalyses object, which provides access to any existing SectionAnalysis objects in the design.</p><pre class="api-code">"analyses_var" is a variable referencing an Analyses object.
+#include &lt;Fusion/Fusion/Analyses.h&gt;
+// Get the value of the property.
+Ptr&lt;SectionAnalyses&gt; propertyValue = analyses_var-&gt;
+sectionAnalyses
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">zebraAnalyses Property</h3><p class="api">Returns the ZebraAnalyses object, which provides access to any existing ZebraAnalysis objects in the design.</p><pre class="api-code">"analyses_var" is a variable referencing an Analyses object.
+#include &lt;Fusion/Fusion/Analyses.h&gt;
+// Get the value of the property.
+Ptr&lt;ZebraAnalyses&gt; propertyValue = analyses_var-&gt;
+zebraAnalyses
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

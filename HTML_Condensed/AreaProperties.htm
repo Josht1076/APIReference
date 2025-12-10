@@ -1,0 +1,234 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/AreaProperties.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="24/3/2016" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="AreaProperties" name="contextid"/>
+<meta content="AreaProperties Object" name="description"/>
+<meta content="GUID-28947558-3DF6-4ABB-BA04-9417CF622817" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>AreaProperties Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">AreaProperties Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Fusion/AreaProperties.h&gt;<h2 class="api">
+          Description
+        </h2>The Area properties of a sketch profile or planar surface.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="AreaProperties_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AreaProperties_getCentroidMomentsOfInertia.htm">getCentroidMomentsOfInertia</a></td>
+<td class="api-list">Method that returns the moments of inertia about the centroid. Unit for returned values is kg*cm^2.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AreaProperties_getMomentsOfInertia.htm">getMomentsOfInertia</a></td>
+<td class="api-list">Method that, for a sketch, returns the moments of inertia about the sketch origin. For a planar face, this method returns the moments about the world coordinate system origin. Unit for returned values is kg*cm^2.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AreaProperties_getPrincipalAxes.htm">getPrincipalAxes</a></td>
+<td class="api-list">Method that returns the principal axes.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AreaProperties_getPrincipalMomentsOfInertia.htm">getPrincipalMomentsOfInertia</a></td>
+<td class="api-list">Method that returns the moments of inertia about the principal axes. Unit for returned values is kg*cm^2.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AreaProperties_getRadiusOfGyration.htm">getRadiusOfGyration</a></td>
+<td class="api-list">Method that returns the radius of gyration about the principal axes. Unit for returned values is cm.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="AreaProperties_accuracy.htm">accuracy</a></td>
+<td class="api-list">Returns the accuracy that was used for the calculation.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AreaProperties_area.htm">area</a></td>
+<td class="api-list">Gets the area in the square centimeters.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AreaProperties_centroid.htm">centroid</a></td>
+<td class="api-list">Gets the centroid where the units are centimeters. The Location is relative to the sketch origin for a profile or relative to the world coordinate system for a planar face.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AreaProperties_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AreaProperties_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="AreaProperties_perimeter.htm">perimeter</a></td>
+<td class="api-list">Gets the perimeter in centimeters. The perimeter is the sum of the length of all the curves or edges of the profile or planar surface</td>
+</tr>
+<tr>
+<td class="api-list"><a href="AreaProperties_rotationToPrincipal.htm">rotationToPrincipal</a></td>
+<td class="api-list">Gets the angle of rotation of the principal axes.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Design_areaProperties.htm">Design.areaProperties</a>, <a href="FlatPatternProduct_areaProperties.htm">FlatPatternProduct.areaProperties</a>, <a href="Profile_areaProperties.htm">Profile.areaProperties</a>, <a href="WorkingModel_areaProperties.htm">WorkingModel.areaProperties</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="AreaPropertiesSample_Sample.htm">API Sample for AreaProperties</a></td>
+<td class="api-list">Demonstrates how to use AreaProperties</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureSample_Sample.htm">Patch Feature API Sample</a></td>
+<td class="api-list">Demonstrates creating a new patch feature.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version March 2016<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(AreaProperties%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">accuracy Property</h3><p class="api">Returns the accuracy that was used for the calculation.</p><pre class="api-code">"areaProperties_var" is a variable referencing an AreaProperties object.
+#include &lt;Fusion/Fusion/AreaProperties.h&gt;
+// Get the value of the property.
+CalculationAccuracy propertyValue = areaProperties_var-&gt;
+accuracy
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">area Property</h3><p class="api">Gets the area in the square centimeters.</p><pre class="api-code">"areaProperties_var" is a variable referencing an AreaProperties object.
+#include &lt;Fusion/Fusion/AreaProperties.h&gt;
+// Get the value of the property.
+double propertyValue = areaProperties_var-&gt;
+area
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">centroid Property</h3><p class="api">Gets the centroid where the units are centimeters. The Location is relative to the sketch origin for a profile or relative to the world coordinate system for a planar face.</p><pre class="api-code">"areaProperties_var" is a variable referencing an AreaProperties object.
+#include &lt;Fusion/Fusion/AreaProperties.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = areaProperties_var-&gt;
+centroid
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Fusion/AreaProperties.h&gt;
+returnValue = adsk::fusion::AreaProperties::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">getCentroidMomentsOfInertia Method</h3><p class="api">Method that returns the moments of inertia about the centroid. Unit for returned values is kg*cm^2.</p><pre class="api-code">#include &lt;Fusion/Fusion/AreaProperties.h
+// Declare the output arguments.
+double ixx;
+double iyy;
+double izz;
+double ixy;
+double iyz;
+double ixz;
+boolean returnValue = areaProperties_var-&gt;
+getCentroidMomentsOfInertia
+(ixx, iyy, izz, ixy, iyz, ixz);</pre><p class="api">Return Value: boolean - Returns true if successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">ixx</td><td class="api-list">double</td><td class="api-list">Output Double that returns the XX partial moment.</td></tr><tr><td class="api-list">iyy</td><td class="api-list">double</td><td class="api-list">Output Double that returns the YY partial moment.</td></tr><tr><td class="api-list">izz</td><td class="api-list">double</td><td class="api-list">Output Double that returns the ZZ partial moment.</td></tr><tr><td class="api-list">ixy</td><td class="api-list">double</td><td class="api-list">Output Double that returns the XY partial moment.</td></tr><tr><td class="api-list">iyz</td><td class="api-list">double</td><td class="api-list">Output Double that returns the YZ partial moment.</td></tr><tr><td class="api-list">ixz</td><td class="api-list">double</td><td class="api-list">Output Double that returns the XZ partial moment.</td></tr></table><h3 class="api-member">getMomentsOfInertia Method</h3><p class="api">Method that, for a sketch, returns the moments of inertia about the sketch origin. For a planar face, this method returns the moments about the world coordinate system origin. Unit for returned values is kg*cm^2.</p><pre class="api-code">#include &lt;Fusion/Fusion/AreaProperties.h
+// Declare the output arguments.
+double ixx;
+double iyy;
+double izz;
+double ixy;
+double iyz;
+double ixz;
+boolean returnValue = areaProperties_var-&gt;
+getMomentsOfInertia
+(ixx, iyy, izz, ixy, iyz, ixz);</pre><p class="api">Return Value: boolean - Returns true if successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">ixx</td><td class="api-list">double</td><td class="api-list">Output Double that returns the XX partial moment.</td></tr><tr><td class="api-list">iyy</td><td class="api-list">double</td><td class="api-list">Output Double that returns the YY partial moment.</td></tr><tr><td class="api-list">izz</td><td class="api-list">double</td><td class="api-list">Output Double that returns the ZZ partial moment.</td></tr><tr><td class="api-list">ixy</td><td class="api-list">double</td><td class="api-list">Output Double that returns the XY partial moment.</td></tr><tr><td class="api-list">iyz</td><td class="api-list">double</td><td class="api-list">Output Double that returns the YZ partial moment.</td></tr><tr><td class="api-list">ixz</td><td class="api-list">double</td><td class="api-list">Output Double that returns the XZ partial moment.</td></tr></table><h3 class="api-member">getPrincipalAxes Method</h3><p class="api">Method that returns the principal axes.</p><pre class="api-code">#include &lt;Fusion/Fusion/AreaProperties.h
+// Declare the output arguments.
+Ptr&lt;Vector3D&gt; xAxis;
+Ptr&lt;Vector3D&gt; yAxis;
+boolean returnValue = areaProperties_var-&gt;
+getPrincipalAxes
+(xAxis, yAxis);</pre><p class="api">Return Value: boolean - Returns true if successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">xAxis</td><td class="api-list">Vector3D</td><td class="api-list">The output Vector3D object that indicates the direction of the x axis.</td></tr><tr><td class="api-list">yAxis</td><td class="api-list">Vector3D</td><td class="api-list">The output Vector3D object that indicates the direction of the y axis.</td></tr></table><h3 class="api-member">getPrincipalMomentsOfInertia Method</h3><p class="api">Method that returns the moments of inertia about the principal axes. Unit for returned values is kg*cm^2.</p><pre class="api-code">#include &lt;Fusion/Fusion/AreaProperties.h
+// Declare the output arguments.
+double i1;
+double i2;
+double i3;
+boolean returnValue = areaProperties_var-&gt;
+getPrincipalMomentsOfInertia
+(i1, i2, i3);</pre><p class="api">Return Value: boolean - Returns true if successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">i1</td><td class="api-list">double</td><td class="api-list">Output Double that specifies the first moment of inertia.</td></tr><tr><td class="api-list">i2</td><td class="api-list">double</td><td class="api-list">Output Double that specifies the second moment of inertia.</td></tr><tr><td class="api-list">i3</td><td class="api-list">double</td><td class="api-list">Output Double that specifies the third moment of inertia.</td></tr></table><h3 class="api-member">getRadiusOfGyration Method</h3><p class="api">Method that returns the radius of gyration about the principal axes. Unit for returned values is cm.</p><pre class="api-code">#include &lt;Fusion/Fusion/AreaProperties.h
+// Declare the output arguments.
+double kxx;
+double kyy;
+double kzz;
+boolean returnValue = areaProperties_var-&gt;
+getRadiusOfGyration
+(kxx, kyy, kzz);</pre><p class="api">Return Value: boolean - Returns true if successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">kxx</td><td class="api-list">double</td><td class="api-list">Output Double that returns the X partial radius of gyration.</td></tr><tr><td class="api-list">kyy</td><td class="api-list">double</td><td class="api-list">Output Double that returns the Y partial radius of gyration.</td></tr><tr><td class="api-list">kzz</td><td class="api-list">double</td><td class="api-list">Output Double that returns the Z partial radius of gyration.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"areaProperties_var" is a variable referencing an AreaProperties object.
+#include &lt;Fusion/Fusion/AreaProperties.h&gt;
+// Get the value of the property.
+boolean propertyValue = areaProperties_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"areaProperties_var" is a variable referencing an AreaProperties object.
+#include &lt;Fusion/Fusion/AreaProperties.h&gt;
+// Get the value of the property.
+string propertyValue = areaProperties_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">perimeter Property</h3><p class="api">Gets the perimeter in centimeters. The perimeter is the sum of the length of all the curves or edges of the profile or planar surface</p><pre class="api-code">"areaProperties_var" is a variable referencing an AreaProperties object.
+#include &lt;Fusion/Fusion/AreaProperties.h&gt;
+// Get the value of the property.
+double propertyValue = areaProperties_var-&gt;
+perimeter
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">rotationToPrincipal Property</h3><p class="api">Gets the angle of rotation of the principal axes.</p><pre class="api-code">"areaProperties_var" is a variable referencing an AreaProperties object.
+#include &lt;Fusion/Fusion/AreaProperties.h&gt;
+// Get the value of the property.
+double propertyValue = areaProperties_var-&gt;
+rotationToPrincipal
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p></body>
+</html>

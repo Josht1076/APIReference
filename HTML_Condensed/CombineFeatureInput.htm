@@ -1,0 +1,186 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/CombineFeatureInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="14/10/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="CombineFeatureInput" name="contextid"/>
+<meta content="CombineFeatureInput Object" name="description"/>
+<meta content="GUID-b6751f07-c19a-4963-8961-15b99adaab17" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>CombineFeatureInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">CombineFeatureInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/CombineFeatureInput.h&gt;<h2 class="api">
+          Description
+        </h2>This class defines the methods and properties that pertain to the definition of a combine feature.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CombineFeatureInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CombineFeatureInput_isKeepToolBodies.htm">isKeepToolBodies</a></td>
+<td class="api-list">Gets and sets a boolean value for whether or not the tool bodies are retrained after the combine results. The default value is false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CombineFeatureInput_isNewComponent.htm">isNewComponent</a></td>
+<td class="api-list">Gets and sets a boolean value for whether or not a new component will be created with the results. The default value is false. In Base feature environment NewComponent does not work.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CombineFeatureInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CombineFeatureInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="CombineFeatureInput_operation.htm">operation</a></td>
+<td class="api-list">Gets and sets the type of operation performed by the combine. The valid values are JoinFeatureOperation, CutFeatureOperation and IntersectFeatureOperation. The default value is JoinFeatureOperation.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CombineFeatureInput_targetBaseFeature.htm">targetBaseFeature</a></td>
+<td class="api-list">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature.<br/><br/> Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CombineFeatureInput_targetBody.htm">targetBody</a></td>
+<td class="api-list"></td>
+</tr>
+<tr>
+<td class="api-list"><a href="CombineFeatureInput_toolBodies.htm">toolBodies</a></td>
+<td class="api-list"></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CombineFeatures_createInput.htm">CombineFeatures.createInput</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version November 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(CombineFeatureInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/CombineFeatureInput.h&gt;
+returnValue = adsk::fusion::CombineFeatureInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">isKeepToolBodies Property</h3><p class="api">Gets and sets a boolean value for whether or not the tool bodies are retrained after the combine results. The default value is false.</p><pre class="api-code">"combineFeatureInput_var" is a variable referencing a CombineFeatureInput object.
+#include &lt;Fusion/Features/CombineFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = combineFeatureInput_var-&gt;
+isKeepToolBodies
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = combineFeatureInput_var-&gt;
+isKeepToolBodies
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isNewComponent Property</h3><p class="api">Gets and sets a boolean value for whether or not a new component will be created with the results. The default value is false. In Base feature environment NewComponent does not work.</p><pre class="api-code">"combineFeatureInput_var" is a variable referencing a CombineFeatureInput object.
+#include &lt;Fusion/Features/CombineFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = combineFeatureInput_var-&gt;
+isNewComponent
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = combineFeatureInput_var-&gt;
+isNewComponent
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"combineFeatureInput_var" is a variable referencing a CombineFeatureInput object.
+#include &lt;Fusion/Features/CombineFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = combineFeatureInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"combineFeatureInput_var" is a variable referencing a CombineFeatureInput object.
+#include &lt;Fusion/Features/CombineFeatureInput.h&gt;
+// Get the value of the property.
+string propertyValue = combineFeatureInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">operation Property</h3><p class="api">Gets and sets the type of operation performed by the combine. The valid values are JoinFeatureOperation, CutFeatureOperation and IntersectFeatureOperation. The default value is JoinFeatureOperation.</p><pre class="api-code">"combineFeatureInput_var" is a variable referencing a CombineFeatureInput object.
+#include &lt;Fusion/Features/CombineFeatureInput.h&gt;
+// Get the value of the property.
+FeatureOperations propertyValue = combineFeatureInput_var-&gt;
+operation
+();
+// Set the value of the property, where value_var is a FeatureOperations.
+bool returnValue = combineFeatureInput_var-&gt;
+operation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">targetBaseFeature Property</h3><p class="api">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature. Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</p><pre class="api-code">"combineFeatureInput_var" is a variable referencing a CombineFeatureInput object.
+#include &lt;Fusion/Features/CombineFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BaseFeature&gt; propertyValue = combineFeatureInput_var-&gt;
+targetBaseFeature
+();
+// Set the value of the property, where value_var is a BaseFeature.
+bool returnValue = combineFeatureInput_var-&gt;
+targetBaseFeature
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">targetBody Property</h3><pre class="api-code">"combineFeatureInput_var" is a variable referencing a CombineFeatureInput object.
+#include &lt;Fusion/Features/CombineFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BRepBody&gt; propertyValue = combineFeatureInput_var-&gt;
+targetBody
+();
+// Set the value of the property, where value_var is a BRepBody.
+bool returnValue = combineFeatureInput_var-&gt;
+targetBody
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">toolBodies Property</h3><pre class="api-code">"combineFeatureInput_var" is a variable referencing a CombineFeatureInput object.
+#include &lt;Fusion/Features/CombineFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ObjectCollection&gt; propertyValue = combineFeatureInput_var-&gt;
+toolBodies
+();
+// Set the value of the property, where value_var is an ObjectCollection.
+bool returnValue = combineFeatureInput_var-&gt;
+toolBodies
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p></body>
+</html>

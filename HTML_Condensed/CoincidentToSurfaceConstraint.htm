@@ -1,0 +1,200 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/CoincidentToSurfaceConstraint.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="22/08/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="CoincidentToSurfaceConstraint" name="contextid"/>
+<meta content="CoincidentToSurfaceConstraint Object" name="description"/>
+<meta content="GUID-6BD5B203-8DDB-4D06-8EC3-E42C2B276D35" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>CoincidentToSurfaceConstraint Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">CoincidentToSurfaceConstraint Object
+			</h1>
+              Derived from: <a href="GeometricConstraint.htm">GeometricConstraint</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Sketch/CoincidentToSurfaceConstraint.h&gt;<h2 class="api">
+          Description
+        </h2>A sketch constraint defining that a point is coincident to a surface.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoincidentToSurfaceConstraint_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoincidentToSurfaceConstraint_createForAssemblyContext.htm">createForAssemblyContext</a></td>
+<td class="api-list">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoincidentToSurfaceConstraint_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes this constraint. The IsDeletable property can be used to determine if this constraint can be deleted.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoincidentToSurfaceConstraint_assemblyContext.htm">assemblyContext</a></td>
+<td class="api-list">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoincidentToSurfaceConstraint_attributes.htm">attributes</a></td>
+<td class="api-list">Returns the collection of attributes associated with this geometric constraint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoincidentToSurfaceConstraint_entityToken.htm">entityToken</a></td>
+<td class="api-list">Returns a token for the GeometricConstraint object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same geometric constraint.<br><br/> When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoincidentToSurfaceConstraint_isDeletable.htm">isDeletable</a></td>
+<td class="api-list">Indicates if this constraint is deletable.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoincidentToSurfaceConstraint_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoincidentToSurfaceConstraint_nativeObject.htm">nativeObject</a></td>
+<td class="api-list">The NativeObject is the object outside the context of an assembly and in the context of it's parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoincidentToSurfaceConstraint_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoincidentToSurfaceConstraint_parentSketch.htm">parentSketch</a></td>
+<td class="api-list">Returns the parent sketch object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoincidentToSurfaceConstraint_point.htm">point</a></td>
+<td class="api-list">Returns the sketch point that is constrained.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoincidentToSurfaceConstraint_surface.htm">surface</a></td>
+<td class="api-list">Returns the BRepFace or ConstructionPlane the point is constrained to.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CoincidentToSurfaceConstraint_createForAssemblyContext.htm">CoincidentToSurfaceConstraint.createForAssemblyContext</a>, <a href="CoincidentToSurfaceConstraint_nativeObject.htm">CoincidentToSurfaceConstraint.nativeObject</a>, <a href="GeometricConstraints_addCoincidentToSurface.htm">GeometricConstraints.addCoincidentToSurface</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(CoincidentToSurfaceConstraint%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">assemblyContext Property</h3><p class="api">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"coincidentToSurfaceConstraint_var" is a variable referencing a CoincidentToSurfaceConstraint object.
+#include &lt;Fusion/Sketch/CoincidentToSurfaceConstraint.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = coincidentToSurfaceConstraint_var-&gt;
+assemblyContext
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">attributes Property</h3><p class="api">Returns the collection of attributes associated with this geometric constraint.</p><pre class="api-code">"coincidentToSurfaceConstraint_var" is a variable referencing a CoincidentToSurfaceConstraint object.
+#include &lt;Fusion/Sketch/CoincidentToSurfaceConstraint.h&gt;
+// Get the value of the property.
+Ptr&lt;Attributes&gt; propertyValue = coincidentToSurfaceConstraint_var-&gt;
+attributes
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Sketch/CoincidentToSurfaceConstraint.h&gt;
+returnValue = adsk::fusion::CoincidentToSurfaceConstraint::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">createForAssemblyContext Method</h3><p class="api">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</p><pre class="api-code">"coincidentToSurfaceConstraint_var" is a variable referencing a
+CoincidentToSurfaceConstraint
+object.
+#include &lt;Fusion/Sketch/CoincidentToSurfaceConstraint.h&gt;
+returnValue = coincidentToSurfaceConstraint_var-&gt;
+createForAssemblyContext
+(occurrence);</pre><p class="api">Return Value: CoincidentToSurfaceConstraint - Returns the proxy object or null if this isn't the NativeObject.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">occurrence</td><td class="api-list">Occurrence</td><td class="api-list">The occurrence that defines the context to create the proxy in.</td></tr></table><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes this constraint. The IsDeletable property can be used to determine if this constraint can be deleted.</p><pre class="api-code">"coincidentToSurfaceConstraint_var" is a variable referencing a
+CoincidentToSurfaceConstraint
+object.
+#include &lt;Fusion/Sketch/CoincidentToSurfaceConstraint.h&gt;
+returnValue = coincidentToSurfaceConstraint_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true if the delete was successful.</p><h3 class="api-member">entityToken Property</h3><p class="api">Returns a token for the GeometricConstraint object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same geometric constraint. When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</p><pre class="api-code">"coincidentToSurfaceConstraint_var" is a variable referencing a CoincidentToSurfaceConstraint object.
+#include &lt;Fusion/Sketch/CoincidentToSurfaceConstraint.h&gt;
+// Get the value of the property.
+string propertyValue = coincidentToSurfaceConstraint_var-&gt;
+entityToken
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">isDeletable Property</h3><p class="api">Indicates if this constraint is deletable.</p><pre class="api-code">"coincidentToSurfaceConstraint_var" is a variable referencing a CoincidentToSurfaceConstraint object.
+#include &lt;Fusion/Sketch/CoincidentToSurfaceConstraint.h&gt;
+// Get the value of the property.
+boolean propertyValue = coincidentToSurfaceConstraint_var-&gt;
+isDeletable
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"coincidentToSurfaceConstraint_var" is a variable referencing a CoincidentToSurfaceConstraint object.
+#include &lt;Fusion/Sketch/CoincidentToSurfaceConstraint.h&gt;
+// Get the value of the property.
+boolean propertyValue = coincidentToSurfaceConstraint_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">nativeObject Property</h3><p class="api">The NativeObject is the object outside the context of an assembly and in the context of it's parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"coincidentToSurfaceConstraint_var" is a variable referencing a CoincidentToSurfaceConstraint object.
+#include &lt;Fusion/Sketch/CoincidentToSurfaceConstraint.h&gt;
+// Get the value of the property.
+Ptr&lt;CoincidentToSurfaceConstraint&gt; propertyValue = coincidentToSurfaceConstraint_var-&gt;
+nativeObject
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"coincidentToSurfaceConstraint_var" is a variable referencing a CoincidentToSurfaceConstraint object.
+#include &lt;Fusion/Sketch/CoincidentToSurfaceConstraint.h&gt;
+// Get the value of the property.
+string propertyValue = coincidentToSurfaceConstraint_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentSketch Property</h3><p class="api">Returns the parent sketch object.</p><pre class="api-code">"coincidentToSurfaceConstraint_var" is a variable referencing a CoincidentToSurfaceConstraint object.
+#include &lt;Fusion/Sketch/CoincidentToSurfaceConstraint.h&gt;
+// Get the value of the property.
+Ptr&lt;Sketch&gt; propertyValue = coincidentToSurfaceConstraint_var-&gt;
+parentSketch
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">point Property</h3><p class="api">Returns the sketch point that is constrained.</p><pre class="api-code">"coincidentToSurfaceConstraint_var" is a variable referencing a CoincidentToSurfaceConstraint object.
+#include &lt;Fusion/Sketch/CoincidentToSurfaceConstraint.h&gt;
+// Get the value of the property.
+Ptr&lt;SketchPoint&gt; propertyValue = coincidentToSurfaceConstraint_var-&gt;
+point
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">surface Property</h3><p class="api">Returns the BRepFace or ConstructionPlane the point is constrained to.</p><pre class="api-code">"coincidentToSurfaceConstraint_var" is a variable referencing a CoincidentToSurfaceConstraint object.
+#include &lt;Fusion/Sketch/CoincidentToSurfaceConstraint.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = coincidentToSurfaceConstraint_var-&gt;
+surface
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

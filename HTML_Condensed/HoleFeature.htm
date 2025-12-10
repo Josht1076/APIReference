@@ -1,0 +1,637 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/HoleFeature.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="HoleFeature" name="contextid"/>
+<meta content="HoleFeature Object" name="description"/>
+<meta content="GUID-3315b7ea-f85d-417c-ad31-2d328b72f6a5" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>HoleFeature Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">HoleFeature Object
+			</h1>
+              Derived from: <a href="Feature.htm">Feature</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/HoleFeature.h&gt;<h2 class="api">
+          Description
+        </h2>Object that represents an existing hole feature in a design.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_createForAssemblyContext.htm">createForAssemblyContext</a></td>
+<td class="api-list">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes the feature. This works for both parametric and non-parametric features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_dissolve.htm">dissolve</a></td>
+<td class="api-list">Dissolves the feature so that the feature information is lost and only the B-Rep geometry defined by the feature remains. This is only valid for non-parametric features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_setAllExtent.htm">setAllExtent</a></td>
+<td class="api-list">Defines the extent of the hole to be through-all. The direction can be either positive, negative.<br><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_setDistanceExtent.htm">setDistanceExtent</a></td>
+<td class="api-list">Defines the depth of the hole using a specific distance.<br/><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_setOneSideToExtent.htm">setOneSideToExtent</a></td>
+<td class="api-list">Sets the extent of the hole to be from the sketch plane to the specified "to" face.<br/><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_setPositionAtCenter.htm">setPositionAtCenter</a></td>
+<td class="api-list">Redefines the position of the hole at the center of a circular or elliptical edge of the face.<br/><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_setPositionByPlaneAndOffsets.htm">setPositionByPlaneAndOffsets</a></td>
+<td class="api-list">Redefines the orientation of the hole using a planar face or construction plane. The position of the hole is defined by the distance from one or two edges.<br/><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_setPositionByPoint.htm">setPositionByPoint</a></td>
+<td class="api-list">Redefines the position of a the hole using a point. The point can be a vertex on the face or it can be a Point3D object to define any location on the face. If a Point3D object is provided it will be projected onto the plane along the planes normal. The orientation of the hole is defined by the planar face or construction plane. If a vertex is used, the position of the hole is associative to that vertex. If a Point3D object is used the position of the hole is not associative.<br/><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_setPositionBySketchPoint.htm">setPositionBySketchPoint</a></td>
+<td class="api-list">Redefines the position and orientation of the hole using a sketch point.<br/><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_setPositionBySketchPoints.htm">setPositionBySketchPoints</a></td>
+<td class="api-list">Redefines the position and orientation of the hole using a set of points.<br/><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_setPositionOnEdge.htm">setPositionOnEdge</a></td>
+<td class="api-list">Redefines the position and orientation of the hole to be on the start, end or center of an edge.<br/><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_setToClearanceHole.htm">setToClearanceHole</a></td>
+<td class="api-list">Sets the hole to be a clearance hole of the size specified by the ClearanceHoleInfo object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_setToCounterbore.htm">setToCounterbore</a></td>
+<td class="api-list">Calling this method will change the hole to a counterbore hole.<br/><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_setToCountersink.htm">setToCountersink</a></td>
+<td class="api-list">Calling this method will change the hole to a countersink hole.<br/><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_setToSimple.htm">setToSimple</a></td>
+<td class="api-list">Calling this method will change the hole to a simple hole.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_setToSimpleHole.htm">setToSimpleHole</a></td>
+<td class="api-list">This method sets the hole's tap to be "simple," which means that the hole will not have any tap and will be a simple hole.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_setToTappedHole.htm">setToTappedHole</a></td>
+<td class="api-list">Sets the hole to be a straight or tapered tapped hole of the size specified by the ThreadInfo object.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_assemblyContext.htm">assemblyContext</a></td>
+<td class="api-list">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_attributes.htm">attributes</a></td>
+<td class="api-list">Returns the collection of attributes associated with this face.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_baseFeature.htm">baseFeature</a></td>
+<td class="api-list">If this feature is associated with a base feature, this property will return that base feature. If it's not associated with a base feature, this property will return null.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_bodies.htm">bodies</a></td>
+<td class="api-list">Returns the bodies that were modified or created by this feature. This property works for both parametric and non-parametric features.<br/><br/> For a BaseFeature, this property has two different behaviors depending on if the BaseFeature is active for edit or not. When the base feature is active, this property returns the bodies owned by the base feature or the source bodies. When the base feature is not active, this property returns the result bodies.<br/><br/> When a body is added to a base feature, that body is owned by the base feature and is only seen in the UI when the base feature is active. This body is referred to as a "source body". Fusion creates a parametric copy of the body when you exit the base feature. This copy is referred to as the "result body," and it is used for subsequent modeling operations.<br/><br/> You can map between the source and result bodies by using their position within the bodies returned. To get a valid list of result bodies, you should roll the timeline to immediately after the base feature node in the timeline. Otherwise, subsequent operations could have done something to cause one or more bodies to no longer be available.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_clearanceHoleInfo.htm">clearanceHoleInfo</a></td>
+<td class="api-list">Returns the information used to define a clearance hole. This returns a ClearanceHoleInfo object when the holeTapType returns ClearanceHoleTapType. Otherwise this property returns null.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_counterboreDepth.htm">counterboreDepth</a></td>
+<td class="api-list">Returns the model parameter controlling the counterbore depth. This will return null in the case the hole type is not a counterbore. The depth of the counterbore can be edited through the returned parameter.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_counterboreDiameter.htm">counterboreDiameter</a></td>
+<td class="api-list">Returns the model parameter controlling the counterbore diameter. This will return null in the case the hole type is not a counterbore. The diameter of the counterbore can be edited through the returned parameter.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_countersinkAngle.htm">countersinkAngle</a></td>
+<td class="api-list">Returns the model parameter controlling the countersink angle. This will return null in the case the hole type is not a countersink. The angle of the countersink can be edited through the returned parameter.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_countersinkDiameter.htm">countersinkDiameter</a></td>
+<td class="api-list">Returns the model parameter controlling the countersink diameter. This will return null in the case the hole type is not a countersink. The diameter of the countersink can be edited through the returned parameter.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_direction.htm">direction</a></td>
+<td class="api-list">Returns the direction of the hole.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_endFaces.htm">endFaces</a></td>
+<td class="api-list">Property that returns the faces at the bottom of the hole. This will typically be a single face but could return more than one face in the case where the bottom of the hole is uneven.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_entityToken.htm">entityToken</a></td>
+<td class="api-list">Returns a token for the Feature object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same feature.<br/><br/> When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_errorOrWarningMessage.htm">errorOrWarningMessage</a></td>
+<td class="api-list">Returns the error or warning message in the case where the healthState property returns either WarningFeatureHealthState or ErrorFeatureHealthState. Otherwise this property returns an empty string.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_extentDefinition.htm">extentDefinition</a></td>
+<td class="api-list">Gets the definition object that is defining the extent of the hole. Modifying the definition object will cause the hole to recompute. The extent type of a hole is currently limited to a distance extent.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_faces.htm">faces</a></td>
+<td class="api-list">Returns the faces that were created by this feature. This works for both parametric and non-parametric features.<br/><br/> Depending on the modifications made to the body after the feature was created, this may not return all of the faces. For example, when a component is created from a body, the original body and its faces no longer exist, so this won't return any faces. However, you can roll the timeline to immediately after the feature, and all the original faces will be available.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_healthState.htm">healthState</a></td>
+<td class="api-list">Returns the current health state of the feature.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_holeDiameter.htm">holeDiameter</a></td>
+<td class="api-list">Returns the model parameter controlling the hole diameter. The diameter of the hole can be edited through the returned parameter object.<br/><br/> If there is a thread associated with the hole the thread definition controls the diameter of the hole. Even though there is a parameter for the diameter, its value is ignored when there is a thread.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_holePositionDefinition.htm">holePositionDefinition</a></td>
+<td class="api-list">Returns a HolePositionDefinition object that provides access to the information used to define the position of the hole. This returns null in the case where IsParametric is false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_holeTapType.htm">holeTapType</a></td>
+<td class="api-list">This property returns the current type of tap associated with this hole. You can set the tap type by using one of the following methods: setToSimpleHole, setToClearanceHole, or setToTappedHole.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_holeType.htm">holeType</a></td>
+<td class="api-list">Returns the current type of hole this feature represents.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_isDefaultDirection.htm">isDefaultDirection</a></td>
+<td class="api-list">Gets and sets if the hole is in the default direction or not.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_isParametric.htm">isParametric</a></td>
+<td class="api-list">Indicates if this feature is parametric or not.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_isSuppressed.htm">isSuppressed</a></td>
+<td class="api-list">Gets and sets if this feature is suppressed. This is only valid for parametric features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_linkedFeatures.htm">linkedFeatures</a></td>
+<td class="api-list">Returns the set of features that are linked to this feature. The set of linked features are all of the features that were created in various components as the result of a single feature being created in the user interface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_name.htm">name</a></td>
+<td class="api-list">Returns the name of the feature as seen in the browser (non-parametric) or in the timeline (parametric).</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_nativeObject.htm">nativeObject</a></td>
+<td class="api-list">The NativeObject is the object outside the context of an assembly and in the context of its parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_parentComponent.htm">parentComponent</a></td>
+<td class="api-list">Returns the parent component that owns this feature.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_participantBodies.htm">participantBodies</a></td>
+<td class="api-list">Gets and sets the list of bodies that will participate in the feature when the operation is a cut or intersection.<br/><br/> To use this property, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_position.htm">position</a></td>
+<td class="api-list">Returns the position of the hole.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_sideFaces.htm">sideFaces</a></td>
+<td class="api-list">Property that returns all of the side faces of the hole.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_tappedHoleInfo.htm">tappedHoleInfo</a></td>
+<td class="api-list">This property returns the information used to define a tapped hole. Otherwise, this property returns null.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_thread.htm">thread</a></td>
+<td class="api-list">When a tapped hole is created, a thread feature is also automatically created and controls the tapped threads. The thread feature is tied to the hole and is not displayed in the timeline and is suppressed if the hole is suppressed and deleted if the hole is deleted. This property returns the thread feature associated with this hole if it is a tapped hole. It returns null for all other hole types.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_timelineObject.htm">timelineObject</a></td>
+<td class="api-list">Returns the timeline object associated with this feature.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeature_tipAngle.htm">tipAngle</a></td>
+<td class="api-list">Returns the model parameter controlling the angle of the tip of the hole. The tip angle of the hole can be edited through the returned parameter object.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="HoleFeature_createForAssemblyContext.htm">HoleFeature.createForAssemblyContext</a>, <a href="HoleFeature_nativeObject.htm">HoleFeature.nativeObject</a>, <a href="HoleFeatures_add.htm">HoleFeatures.add</a>, <a href="HoleFeatures_item.htm">HoleFeatures.item</a>, <a href="HoleFeatures_itemByName.htm">HoleFeatures.itemByName</a>, <a href="ThreadFeature_hole.htm">ThreadFeature.hole</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureSample_Sample.htm">Hole Feature API Sample</a></td>
+<td class="api-list">Demonstrates creating a new hole feature.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(HoleFeature%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">assemblyContext Property</h3><p class="api">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = holeFeature_var-&gt;
+assemblyContext
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">attributes Property</h3><p class="api">Returns the collection of attributes associated with this face.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;Attributes&gt; propertyValue = holeFeature_var-&gt;
+attributes
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">baseFeature Property</h3><p class="api">If this feature is associated with a base feature, this property will return that base feature. If it's not associated with a base feature, this property will return null.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;BaseFeature&gt; propertyValue = holeFeature_var-&gt;
+baseFeature
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">bodies Property</h3><p class="api">Returns the bodies that were modified or created by this feature. This property works for both parametric and non-parametric features. For a BaseFeature, this property has two different behaviors depending on if the BaseFeature is active for edit or not. When the base feature is active, this property returns the bodies owned by the base feature or the source bodies. When the base feature is not active, this property returns the result bodies. When a body is added to a base feature, that body is owned by the base feature and is only seen in the UI when the base feature is active. This body is referred to as a "source body". Fusion creates a parametric copy of the body when you exit the base feature. This copy is referred to as the "result body," and it is used for subsequent modeling operations. You can map between the source and result bodies by using their position within the bodies returned. To get a valid list of result bodies, you should roll the timeline to immediately after the base feature node in the timeline. Otherwise, subsequent operations could have done something to cause one or more bodies to no longer be available.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;BRepBodies&gt; propertyValue = holeFeature_var-&gt;
+bodies
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+returnValue = adsk::fusion::HoleFeature::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">clearanceHoleInfo Property</h3><p class="api">Returns the information used to define a clearance hole. This returns a ClearanceHoleInfo object when the holeTapType returns ClearanceHoleTapType. Otherwise this property returns null.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;ClearanceHoleInfo&gt; propertyValue = holeFeature_var-&gt;
+clearanceHoleInfo
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">counterboreDepth Property</h3><p class="api">Returns the model parameter controlling the counterbore depth. This will return null in the case the hole type is not a counterbore. The depth of the counterbore can be edited through the returned parameter.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;ModelParameter&gt; propertyValue = holeFeature_var-&gt;
+counterboreDepth
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">counterboreDiameter Property</h3><p class="api">Returns the model parameter controlling the counterbore diameter. This will return null in the case the hole type is not a counterbore. The diameter of the counterbore can be edited through the returned parameter.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;ModelParameter&gt; propertyValue = holeFeature_var-&gt;
+counterboreDiameter
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">countersinkAngle Property</h3><p class="api">Returns the model parameter controlling the countersink angle. This will return null in the case the hole type is not a countersink. The angle of the countersink can be edited through the returned parameter.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;ModelParameter&gt; propertyValue = holeFeature_var-&gt;
+countersinkAngle
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">countersinkDiameter Property</h3><p class="api">Returns the model parameter controlling the countersink diameter. This will return null in the case the hole type is not a countersink. The diameter of the countersink can be edited through the returned parameter.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;ModelParameter&gt; propertyValue = holeFeature_var-&gt;
+countersinkDiameter
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">createForAssemblyContext Method</h3><p class="api">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</p><pre class="api-code">"holeFeature_var" is a variable referencing a
+HoleFeature
+object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+returnValue = holeFeature_var-&gt;
+createForAssemblyContext
+(occurrence);</pre><p class="api">Return Value: HoleFeature - Returns the proxy object or null if this isn't the NativeObject.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">occurrence</td><td class="api-list">Occurrence</td><td class="api-list">The occurrence that defines the context to create the proxy in.</td></tr></table><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes the feature. This works for both parametric and non-parametric features.</p><pre class="api-code">"holeFeature_var" is a variable referencing a
+HoleFeature
+object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+returnValue = holeFeature_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns a bool indicating if the delete was successful or not.</p><h3 class="api-member">direction Property</h3><p class="api">Returns the direction of the hole.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;Vector3D&gt; propertyValue = holeFeature_var-&gt;
+direction
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">dissolve Method</h3><p class="api">Dissolves the feature so that the feature information is lost and only the B-Rep geometry defined by the feature remains. This is only valid for non-parametric features.</p><pre class="api-code">"holeFeature_var" is a variable referencing a
+HoleFeature
+object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+returnValue = holeFeature_var-&gt;
+dissolve
+();</pre><p class="api">Return Value: boolean - Returns a bool indicating if the dissolve was successful or not.</p><h3 class="api-member">endFaces Property</h3><p class="api">Property that returns the faces at the bottom of the hole. This will typically be a single face but could return more than one face in the case where the bottom of the hole is uneven.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;BRepFaces&gt; propertyValue = holeFeature_var-&gt;
+endFaces
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">entityToken Property</h3><p class="api">Returns a token for the Feature object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same feature. When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+string propertyValue = holeFeature_var-&gt;
+entityToken
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">errorOrWarningMessage Property</h3><p class="api">Returns the error or warning message in the case where the healthState property returns either WarningFeatureHealthState or ErrorFeatureHealthState. Otherwise this property returns an empty string.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+string propertyValue = holeFeature_var-&gt;
+errorOrWarningMessage
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">extentDefinition Property</h3><p class="api">Gets the definition object that is defining the extent of the hole. Modifying the definition object will cause the hole to recompute. The extent type of a hole is currently limited to a distance extent.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;ExtentDefinition&gt; propertyValue = holeFeature_var-&gt;
+extentDefinition
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">faces Property</h3><p class="api">Returns the faces that were created by this feature. This works for both parametric and non-parametric features. Depending on the modifications made to the body after the feature was created, this may not return all of the faces. For example, when a component is created from a body, the original body and its faces no longer exist, so this won't return any faces. However, you can roll the timeline to immediately after the feature, and all the original faces will be available.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;BRepFaces&gt; propertyValue = holeFeature_var-&gt;
+faces
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">healthState Property</h3><p class="api">Returns the current health state of the feature.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+FeatureHealthStates propertyValue = holeFeature_var-&gt;
+healthState
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">holeDiameter Property</h3><p class="api">Returns the model parameter controlling the hole diameter. The diameter of the hole can be edited through the returned parameter object. If there is a thread associated with the hole the thread definition controls the diameter of the hole. Even though there is a parameter for the diameter, its value is ignored when there is a thread.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;ModelParameter&gt; propertyValue = holeFeature_var-&gt;
+holeDiameter
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">holePositionDefinition Property</h3><p class="api">Returns a HolePositionDefinition object that provides access to the information used to define the position of the hole. This returns null in the case where IsParametric is false.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;HolePositionDefinition&gt; propertyValue = holeFeature_var-&gt;
+holePositionDefinition
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">holeTapType Property</h3><p class="api">This property returns the current type of tap associated with this hole. You can set the tap type by using one of the following methods: setToSimpleHole, setToClearanceHole, or setToTappedHole.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+HoleTapTypes propertyValue = holeFeature_var-&gt;
+holeTapType
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">holeType Property</h3><p class="api">Returns the current type of hole this feature represents.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+HoleTypes propertyValue = holeFeature_var-&gt;
+holeType
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">isDefaultDirection Property</h3><p class="api">Gets and sets if the hole is in the default direction or not.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+boolean propertyValue = holeFeature_var-&gt;
+isDefaultDirection
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = holeFeature_var-&gt;
+isDefaultDirection
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isParametric Property</h3><p class="api">Indicates if this feature is parametric or not.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+boolean propertyValue = holeFeature_var-&gt;
+isParametric
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isSuppressed Property</h3><p class="api">Gets and sets if this feature is suppressed. This is only valid for parametric features.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+boolean propertyValue = holeFeature_var-&gt;
+isSuppressed
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = holeFeature_var-&gt;
+isSuppressed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+boolean propertyValue = holeFeature_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">linkedFeatures Property</h3><p class="api">Returns the set of features that are linked to this feature. The set of linked features are all of the features that were created in various components as the result of a single feature being created in the user interface.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;FeatureList&gt; propertyValue = holeFeature_var-&gt;
+linkedFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">name Property</h3><p class="api">Returns the name of the feature as seen in the browser (non-parametric) or in the timeline (parametric).</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+string propertyValue = holeFeature_var-&gt;
+name
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = holeFeature_var-&gt;
+name
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">nativeObject Property</h3><p class="api">The NativeObject is the object outside the context of an assembly and in the context of its parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;HoleFeature&gt; propertyValue = holeFeature_var-&gt;
+nativeObject
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+string propertyValue = holeFeature_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentComponent Property</h3><p class="api">Returns the parent component that owns this feature.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;Component&gt; propertyValue = holeFeature_var-&gt;
+parentComponent
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">participantBodies Property</h3><p class="api">Gets and sets the list of bodies that will participate in the feature when the operation is a cut or intersection. To use this property, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;BRepBody&gt;&gt; propertyValue = holeFeature_var-&gt;
+participantBodies
+();
+// Set the value of the property, where value_var is a BRepBody.
+bool returnValue = holeFeature_var-&gt;
+participantBodies
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an array of type .</p><h3 class="api-member">position Property</h3><p class="api">Returns the position of the hole.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = holeFeature_var-&gt;
+position
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">setAllExtent Method</h3><p class="api">Defines the extent of the hole to be through-all. The direction can be either positive, negative. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"holeFeature_var" is a variable referencing a
+HoleFeature
+object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+returnValue = holeFeature_var-&gt;
+setAllExtent
+(direction);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">direction</td><td class="api-list">ExtentDirections</td><td class="api-list">The direction of the hole relative to the normal of the sketch plane.</td></tr></table><h3 class="api-member">setDistanceExtent Method</h3><p class="api">Defines the depth of the hole using a specific distance. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"holeFeature_var" is a variable referencing a
+HoleFeature
+object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+returnValue = holeFeature_var-&gt;
+setDistanceExtent
+(distance);</pre><p class="api">Return Value: boolean - Returns true if setting the extent was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">distance</td><td class="api-list">ValueInput</td><td class="api-list">The depth of the hole. If a real is specified the value is in centimeters. If a string is specified the units are derived from the string. If no units are specified, the default units of the document are used.</td></tr></table><h3 class="api-member">setOneSideToExtent Method</h3><p class="api">Sets the extent of the hole to be from the sketch plane to the specified "to" face. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"holeFeature_var" is a variable referencing a
+HoleFeature
+object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Uses no optional arguments.
+returnValue = holeFeature_var-&gt;
+setOneSideToExtent
+(toEntity, matchShape);
+// Uses optional arguments.
+returnValue = holeFeature_var-&gt;
+setOneSideToExtent
+(toEntity, matchShape, directionHint);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">toEntity</td><td class="api-list">Base</td><td class="api-list">The entity that defines the "to" extent. The valid types of entities can vary depending on the type of feature this is being used with. For a hole it can be a BRepBody, BRepFace, BRepVertex, ConstructionPlane, or ConstructionPoint.</td></tr><tr><td class="api-list">matchShape</td><td class="api-list">boolean</td><td class="api-list">Indicates if the hole is not contained on the face that the hole should match the shape of the entity as if it extended beyond its current boundaries.</td></tr><tr><td class="api-list">directionHint</td><td class="api-list">Vector3D</td><td class="api-list">Specifies the direction of the hole. This is only used in the case where there are two possible solutions and the hole can hit the toEntity in either direction. Typically there is only a single solution and the direction is determined automatically. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">setPositionAtCenter Method</h3><p class="api">Redefines the position of the hole at the center of a circular or elliptical edge of the face. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"holeFeature_var" is a variable referencing a
+HoleFeature
+object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+returnValue = holeFeature_var-&gt;
+setPositionAtCenter
+(planarEntity, centerEdge);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">planarEntity</td><td class="api-list">Base</td><td class="api-list">The planar BRepFace or ConstructionPlane object that defines the orientation of the hole. The natural direction of the hole will be opposite the normal of the face or construction plane.</td></tr><tr><td class="api-list">centerEdge</td><td class="api-list">BRepEdge</td><td class="api-list">A circular or elliptical edge whose center point will be the position of the hole.</td></tr></table><h3 class="api-member">setPositionByPlaneAndOffsets Method</h3><p class="api">Redefines the orientation of the hole using a planar face or construction plane. The position of the hole is defined by the distance from one or two edges. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"holeFeature_var" is a variable referencing a
+HoleFeature
+object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Uses no optional arguments.
+returnValue = holeFeature_var-&gt;
+setPositionByPlaneAndOffsets
+(planarEntity, point, edgeOne, offsetOne);
+// Uses optional arguments.
+returnValue = holeFeature_var-&gt;
+setPositionByPlaneAndOffsets
+(planarEntity, point, edgeOne, offsetOne, edgeTwo, offsetTwo);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">planarEntity</td><td class="api-list">Base</td><td class="api-list">The planar BRepFace or ConstructionPlane object that defines the orientation of the hole. The natural direction of the hole will be opposite the normal of the face or construction plane.</td></tr><tr><td class="api-list">point</td><td class="api-list">Point3D</td><td class="api-list">A Point3D object that defines the approximate initial position of the hole. The point will be projected onto the plane. This point should be close to the final position of the hole and is used to determine which solution out of several possible solutions should be chosen for the hole location.</td></tr><tr><td class="api-list">edgeOne</td><td class="api-list">BRepEdge</td><td class="api-list">A linear BRepEdge object that the position of the hole will be measured from. The position of the hole will be measured along a perpendicular from this edge.</td></tr><tr><td class="api-list">offsetOne</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the offset distance from edgeOne. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "3 in"). If no units are specified it is interpreted using the current default units for length.</td></tr><tr><td class="api-list">edgeTwo</td><td class="api-list">BRepEdge</td><td class="api-list">You can optionally define a second edge and offset to specify the position of the hole. If you use a second edge it has the same requirements as the edgeOne argument. If you provide a second edge you must also provide the offsetTwo argument. This is an optional argument whose default value is null.</td></tr><tr><td class="api-list">offsetTwo</td><td class="api-list">ValueInput</td><td class="api-list">If edgeTwo is defined, you must provide this argument which is a ValueInput object that defines the offset from the edgeTwo. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "3 in"). If no units are specified it is interpreted using the current default units for length. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">setPositionByPoint Method</h3><p class="api">Redefines the position of a the hole using a point. The point can be a vertex on the face or it can be a Point3D object to define any location on the face. If a Point3D object is provided it will be projected onto the plane along the planes normal. The orientation of the hole is defined by the planar face or construction plane. If a vertex is used, the position of the hole is associative to that vertex. If a Point3D object is used the position of the hole is not associative. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"holeFeature_var" is a variable referencing a
+HoleFeature
+object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+returnValue = holeFeature_var-&gt;
+setPositionByPoint
+(planarEntity, point);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">planarEntity</td><td class="api-list">Base</td><td class="api-list">The planar BRepFace or ConstructionPlane object that defines the orientation of the hole. The natural direction of the hole will be opposite the normal of the face or construction plane.</td></tr><tr><td class="api-list">point</td><td class="api-list">Base</td><td class="api-list">A Point3D object or vertex that defines the position of the hole. The point will be projected onto the plane along the normal of the plane.</td></tr></table><h3 class="api-member">setPositionBySketchPoint Method</h3><p class="api">Redefines the position and orientation of the hole using a sketch point. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"holeFeature_var" is a variable referencing a
+HoleFeature
+object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+returnValue = holeFeature_var-&gt;
+setPositionBySketchPoint
+(sketchPoint);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">sketchPoint</td><td class="api-list">SketchPoint</td><td class="api-list">The sketch point that defines the position of the hole. The orientation is inferred from the normal of the point's parent sketch. The natural direction will be opposite the normal of the sketch.</td></tr></table><h3 class="api-member">setPositionBySketchPoints Method</h3><p class="api">Redefines the position and orientation of the hole using a set of points. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"holeFeature_var" is a variable referencing a
+HoleFeature
+object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+returnValue = holeFeature_var-&gt;
+setPositionBySketchPoints
+(sketchPoints);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">sketchPoints</td><td class="api-list">ObjectCollection</td><td class="api-list">A collection of sketch points that defines the positions of the holes. The orientation is inferred from the normal of the point's parent sketch. The natural direction will be opposite the normal of the sketch. All of the points must be in the same sketch.</td></tr></table><h3 class="api-member">setPositionOnEdge Method</h3><p class="api">Redefines the position and orientation of the hole to be on the start, end or center of an edge. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"holeFeature_var" is a variable referencing a
+HoleFeature
+object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+returnValue = holeFeature_var-&gt;
+setPositionOnEdge
+(planarEntity, edge, position);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">planarEntity</td><td class="api-list">Base</td><td class="api-list">The planar BRepFace or ConstructionPlane object that defines the orientation of the hole and start of the hole. The natural direction of the hole will be opposite the normal of the face or construction plane.</td></tr><tr><td class="api-list">edge</td><td class="api-list">BRepEdge</td><td class="api-list">The edge to position the hole on.</td></tr><tr><td class="api-list">position</td><td class="api-list">HoleEdgePositions</td><td class="api-list">The position along the edge to place the hole.</td></tr></table><h3 class="api-member">setToClearanceHole Method</h3><p class="api">Sets the hole to be a clearance hole of the size specified by the ClearanceHoleInfo object.</p><pre class="api-code">"holeFeature_var" is a variable referencing a
+HoleFeature
+object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+returnValue = holeFeature_var-&gt;
+setToClearanceHole
+(clearanceHoleInfo);</pre><p class="api">Return Value: boolean - Returns true if setting to a clearance hole was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">clearanceHoleInfo</td><td class="api-list">ClearanceHoleInfo</td><td class="api-list">The ClearanceHoleInfo object that specifies the size of the clearance hole.</td></tr></table><h3 class="api-member">setToCounterbore Method</h3><p class="api">Calling this method will change the hole to a counterbore hole. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"holeFeature_var" is a variable referencing a
+HoleFeature
+object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+returnValue = holeFeature_var-&gt;
+setToCounterbore
+(counterboreDiameter, counterboreDepth);</pre><p class="api">Return Value: boolean - Returns true if changing the hole was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">counterboreDiameter</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the counterbore diameter. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "3 in"). If no units are specified it is interpreted using the current default units for length.</td></tr><tr><td class="api-list">counterboreDepth</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the counterbore depth. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "3 in"). If no units are specified it is interpreted using the current default units for length.</td></tr></table><h3 class="api-member">setToCountersink Method</h3><p class="api">Calling this method will change the hole to a countersink hole. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"holeFeature_var" is a variable referencing a
+HoleFeature
+object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+returnValue = holeFeature_var-&gt;
+setToCountersink
+(countersinkDiameter, countersinkAngle);</pre><p class="api">Return Value: boolean - Returns true if changing the hole was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">countersinkDiameter</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the countersink diameter. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "3 in"). If no units are specified it is interpreted using the current default units for length.</td></tr><tr><td class="api-list">countersinkAngle</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the countersink angle. If the ValueInput uses a real then it is interpreted as radians. If it is a string then the units can be defined as part of the string (i.e. "120 deg"). If no units are specified it is interpreted using the current default units for length.</td></tr></table><h3 class="api-member">setToSimple Method</h3><p class="api">Calling this method will change the hole to a simple hole.</p><pre class="api-code">"holeFeature_var" is a variable referencing a
+HoleFeature
+object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+returnValue = holeFeature_var-&gt;
+setToSimple
+();</pre><p class="api">Return Value: boolean - Returns true if changing the hole was successful.</p><h3 class="api-member">setToSimpleHole Method</h3><p class="api">This method sets the hole's tap to be "simple," which means that the hole will not have any tap and will be a simple hole.</p><pre class="api-code">"holeFeature_var" is a variable referencing a
+HoleFeature
+object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+returnValue = holeFeature_var-&gt;
+setToSimpleHole
+();</pre><p class="api">Return Value: boolean - Returns true if successful.</p><h3 class="api-member">setToTappedHole Method</h3><p class="api">Sets the hole to be a straight or tapered tapped hole of the size specified by the ThreadInfo object.</p><pre class="api-code">"holeFeature_var" is a variable referencing a
+HoleFeature
+object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+returnValue = holeFeature_var-&gt;
+setToTappedHole
+(threadInfo);</pre><p class="api">Return Value: boolean - Returns true if setting to a tapped hole was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">threadInfo</td><td class="api-list">ThreadInfo</td><td class="api-list">The ThreadInfo object that specifies the thread to use for the tapped hole. Whether it is straight or tapered tap is defined by the input ThreadInfo object.</td></tr></table><h3 class="api-member">sideFaces Property</h3><p class="api">Property that returns all of the side faces of the hole.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;BRepFaces&gt; propertyValue = holeFeature_var-&gt;
+sideFaces
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">tappedHoleInfo Property</h3><p class="api">This property returns the information used to define a tapped hole. Otherwise, this property returns null.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;ThreadInfo&gt; propertyValue = holeFeature_var-&gt;
+tappedHoleInfo
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">thread Property</h3><p class="api">When a tapped hole is created, a thread feature is also automatically created and controls the tapped threads. The thread feature is tied to the hole and is not displayed in the timeline and is suppressed if the hole is suppressed and deleted if the hole is deleted. This property returns the thread feature associated with this hole if it is a tapped hole. It returns null for all other hole types.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;ThreadFeature&gt; propertyValue = holeFeature_var-&gt;
+thread
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">timelineObject Property</h3><p class="api">Returns the timeline object associated with this feature.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;TimelineObject&gt; propertyValue = holeFeature_var-&gt;
+timelineObject
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">tipAngle Property</h3><p class="api">Returns the model parameter controlling the angle of the tip of the hole. The tip angle of the hole can be edited through the returned parameter object.</p><pre class="api-code">"holeFeature_var" is a variable referencing a HoleFeature object.
+#include &lt;Fusion/Features/HoleFeature.h&gt;
+// Get the value of the property.
+Ptr&lt;ModelParameter&gt; propertyValue = holeFeature_var-&gt;
+tipAngle
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

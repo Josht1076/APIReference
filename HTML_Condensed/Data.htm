@@ -1,0 +1,242 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/Data.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="13/1/2015" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="Data" name="contextid"/>
+<meta content="Data Object" name="description"/>
+<meta content="GUID-fa48f86c-bbdb-4566-af28-d70680bb2ec6" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>Data Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">Data Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Dashboard/Data.h&gt;<h2 class="api">
+          Description
+        </h2>The Data class provides access to data files<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Data_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Data_findFileById.htm">findFileById</a></td>
+<td class="api-list">Returns the DataFile identified by the input id. This can fail is there isn't a DataFile identified with the specified id or if the current user doesn't have privileges to access the file.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Data_findFolderById.htm">findFolderById</a></td>
+<td class="api-list">Returns the DataFolder identified by the input id. This can fail if there isn't a DataFolder identified with the specified id or if the current user doesn't have privileges to access the folder.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Data_refreshDataPanel.htm">refreshDataPanel</a></td>
+<td class="api-list">Refreshes the contents of the data panel to ensure what is displayed reflects the latest state.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Data_activeFolder.htm">activeFolder</a></td>
+<td class="api-list">Gets the active DataFolder as seen in the Fusion Data Panel.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Data_activeHub.htm">activeHub</a></td>
+<td class="api-list">Gets the active DataHub.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Data_activeProject.htm">activeProject</a></td>
+<td class="api-list">Gets and sets the active DataProject. This is the project currently displayed in the Fusion Data Panel.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Data_dataHubs.htm">dataHubs</a></td>
+<td class="api-list">Returns a collection of accessible hubs for the current user. A DataHub represents an A360 Team or Personal hub.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Data_dataProjects.htm">dataProjects</a></td>
+<td class="api-list">Gets the collection of DataProjects associated with the active Hub.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Data_isDataPanelVisible.htm">isDataPanelVisible</a></td>
+<td class="api-list">Gets and sets if the data panel is visible within Fusion.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Data_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Data_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="Data_personalUseLimits.htm">personalUseLimits</a></td>
+<td class="api-list">If the user is running with a "Fusion for Personal Use license", this property will return a peronalUseLimits object which provides information about file limits associated with the license. If the user is running with any other license type, this property will return null.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Application_data.htm">Application.data</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="AvoidMachineSurfaceSettings_Sample.htm">Avoid Machine Surface Settings API Sample</a></td>
+<td class="api-list"><p>This sample script demonstrates how to use Machine/Avoid/Gouge/Fixture functionality.</p><p>The script starts by opening a sample model from the CAM Samples folder via its URN. The model comprises a curved surface with a through slot, a countersunk hole and a raised, circular and filleted upstand from the surface. The model is supported by two rectangular blocks, themselves mounted on a fixture plate. A setup is included with a single operation running a 3-axis diagonal raster over the model, supports and fixture. The operation machines the fixture, the supporting blocks, the upper surface of the upstand and the area within the slot and hole, something we would like to avoid.</p><p>The script duplicates the original operation and then proceeds to create a series of MachineAvoidGroups. These are labelled as either Machine in the case of 2 cap surfaces for the slot and hole, Fixture for the fixture plate, Gouge for the supporting blocks and Avoid for the top face of the upstand. Additionally, both AxialOffset and RadialOffset can be specified for the Machine, Avoid and Fixture passes.</p></td>
+</tr>
+<tr>
+<td class="api-list"><a href="CreateEngravingsSelectionSets_Sample.htm">Create Engravings Selection Sets API Sample</a></td>
+<td class="api-list"><p>This sample script demonstrates how to find and machine engravings in the Z+ direction using pocket recognition.</p><p>The script will first open an example model via its URN. Using pocket recognition, it will identify pockets that may be engravings based on their dimensions.</p><p>We assume here that an engraving pocket is:<ul><li>Made with a flat bottom face and no fillet.</li><li>A closed pocket.</li><li>Have a Z height less than 2 mm</li></ul><p>We demonstrate creating selection sets in both design and manufacture workspaces and use one of the selection sets as an operation geometry selection input to generate an engraving operation.</p><p>The engraving toolpath can be seen by expanding the setup and selecting the operation.</p></p></td>
+</tr>
+<tr>
+<td class="api-list"><a href="CreateSetupsFromHoleRecognition_Sample.htm">Create Setups From Hole Recognition API Sample</a></td>
+<td class="api-list"><p>This sample script demonstrates how to create a correctly oriented setup using Hole Recognition functionality.</p><p>The Fusion Manufacturing Extension is required for Hole Recognition.</p><p>The script starts by opening a sample model from the CAM Samples folder via its URN. The model comprises a 3 way coupling containing holes in various orientations and mounted on a fixture. A reference setup is created for the model using a simple stock mode and offsets. The Hole Recognition feature of the Fusion Manufacturing Extension creates 5 hole groups containing 11 holes between them. For each unique hole group vector captured, a new setup is created and its orientation transformed to match the vector.</p></td>
+</tr>
+<tr>
+<td class="api-list"><a href="SetViseOriginAsSetupWCSOrigin_Sample.htm">Set Vise Origin As Setup WCS Origin API Sample</a></td>
+<td class="api-list"><p>This sample script demonstrates how to define our setup WCS origin relative to our vise origin from either a component, a sketch point or a joint origin.</p><p>The Work Coordinate System is a reference point set in our CAM workspace and on our machine. All machine coordinates are drawn from the WCS. This script demonstrates defining the WCS by each of 4 alternative methods:</p><p>Setup by default with no origin defined.</p><p>Setup using vise origin as WCS origin.</p><p>Setup using a sketch point as WCS origin.</p><p>Setup using a joint origin as WCS origin.</p></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2015<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(Data%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">activeFolder Property</h3><p class="api">Gets the active DataFolder as seen in the Fusion Data Panel.</p><pre class="api-code">"data_var" is a variable referencing a Data object.
+#include &lt;Core/Dashboard/Data.h&gt;
+// Get the value of the property.
+Ptr&lt;DataFolder&gt; propertyValue = data_var-&gt;
+activeFolder
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">activeHub Property</h3><p class="api">Gets the active DataHub.</p><pre class="api-code">"data_var" is a variable referencing a Data object.
+#include &lt;Core/Dashboard/Data.h&gt;
+// Get the value of the property.
+Ptr&lt;DataHub&gt; propertyValue = data_var-&gt;
+activeHub
+();
+// Set the value of the property, where value_var is a DataHub.
+bool returnValue = data_var-&gt;
+activeHub
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">activeProject Property</h3><p class="api">Gets and sets the active DataProject. This is the project currently displayed in the Fusion Data Panel.</p><pre class="api-code">"data_var" is a variable referencing a Data object.
+#include &lt;Core/Dashboard/Data.h&gt;
+// Get the value of the property.
+Ptr&lt;DataProject&gt; propertyValue = data_var-&gt;
+activeProject
+();
+// Set the value of the property, where value_var is a DataProject.
+bool returnValue = data_var-&gt;
+activeProject
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Dashboard/Data.h&gt;
+returnValue = adsk::core::Data::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">dataHubs Property</h3><p class="api">Returns a collection of accessible hubs for the current user. A DataHub represents an A360 Team or Personal hub.</p><pre class="api-code">"data_var" is a variable referencing a Data object.
+#include &lt;Core/Dashboard/Data.h&gt;
+// Get the value of the property.
+Ptr&lt;DataHubs&gt; propertyValue = data_var-&gt;
+dataHubs
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">dataProjects Property</h3><p class="api">Gets the collection of DataProjects associated with the active Hub.</p><pre class="api-code">"data_var" is a variable referencing a Data object.
+#include &lt;Core/Dashboard/Data.h&gt;
+// Get the value of the property.
+Ptr&lt;DataProjects&gt; propertyValue = data_var-&gt;
+dataProjects
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">findFileById Method</h3><p class="api">Returns the DataFile identified by the input id. This can fail is there isn't a DataFile identified with the specified id or if the current user doesn't have privileges to access the file.</p><pre class="api-code">"data_var" is a variable referencing a
+Data
+object.
+#include &lt;Core/Dashboard/Data.h&gt;
+returnValue = data_var-&gt;
+findFileById
+(id);</pre><p class="api">Return Value: DataFile - Returns the DataFile is one was found matching the input id or null if one was not found or you don't have privileges to access it. You can use the Application.getLastError method to determine the reason for the failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">id</td><td class="api-list">string</td><td class="api-list">The full id of the file will be something similar to that shown below. The version argument can be omitted which will result in getting the latest version. urn:adsk.wipprod:fs.file:vf.NazykCYLRWKZ5tpzJtEQ1A?version=3 This is also the same id that you'll obtain if you use the APS Data Management API.</td></tr></table><h3 class="api-member">findFolderById Method</h3><p class="api">Returns the DataFolder identified by the input id. This can fail if there isn't a DataFolder identified with the specified id or if the current user doesn't have privileges to access the folder.</p><pre class="api-code">"data_var" is a variable referencing a
+Data
+object.
+#include &lt;Core/Dashboard/Data.h&gt;
+returnValue = data_var-&gt;
+findFolderById
+(id);</pre><p class="api">Return Value: DataFolder - Returns a DataFolder if one is found matching the input id or null if one is not found or you don't have privileges to access it.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">id</td><td class="api-list">string</td><td class="api-list">The full id of the folder will be something similar to that shown below. urn:adsk.wipprod:fs.folder:co.BdMZ64GqTAie4w3NShw23C This is also the same id that you'll obtain if you use the APS Data Management API.</td></tr></table><h3 class="api-member">isDataPanelVisible Property</h3><p class="api">Gets and sets if the data panel is visible within Fusion.</p><pre class="api-code">"data_var" is a variable referencing a Data object.
+#include &lt;Core/Dashboard/Data.h&gt;
+// Get the value of the property.
+boolean propertyValue = data_var-&gt;
+isDataPanelVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = data_var-&gt;
+isDataPanelVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"data_var" is a variable referencing a Data object.
+#include &lt;Core/Dashboard/Data.h&gt;
+// Get the value of the property.
+boolean propertyValue = data_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"data_var" is a variable referencing a Data object.
+#include &lt;Core/Dashboard/Data.h&gt;
+// Get the value of the property.
+string propertyValue = data_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">personalUseLimits Property</h3><p class="api">If the user is running with a "Fusion for Personal Use license", this property will return a peronalUseLimits object which provides information about file limits associated with the license. If the user is running with any other license type, this property will return null.</p><pre class="api-code">"data_var" is a variable referencing a Data object.
+#include &lt;Core/Dashboard/Data.h&gt;
+// Get the value of the property.
+Ptr&lt;PersonalUseLimits&gt; propertyValue = data_var-&gt;
+personalUseLimits
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">refreshDataPanel Method</h3><p class="api">Refreshes the contents of the data panel to ensure what is displayed reflects the latest state.</p><pre class="api-code">"data_var" is a variable referencing a
+Data
+object.
+#include &lt;Core/Dashboard/Data.h&gt;
+returnValue = data_var-&gt;
+refreshDataPanel
+();</pre><p class="api">Return Value: boolean - Returns true if the refresh was successful.</p></body>
+</html>

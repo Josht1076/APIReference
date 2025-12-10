@@ -1,0 +1,216 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ChamferFeatureInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="14/10/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ChamferFeatureInput" name="contextid"/>
+<meta content="ChamferFeatureInput Object" name="description"/>
+<meta content="GUID-f0eae304-aaca-4ced-b8c0-3b679d7c1f3d" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ChamferFeatureInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ChamferFeatureInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/ChamferFeatureInput.h&gt;<h2 class="api">
+          Description
+        </h2>This class defines the methods and properties that pertain to the definition of a chamfer feature.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChamferFeatureInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChamferFeatureInput_setToDistanceAndAngle.htm">setToDistanceAndAngle</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Adds a set of edges to this input.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChamferFeatureInput_setToEqualDistance.htm">setToEqualDistance</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Adds a set of edges to this input.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChamferFeatureInput_setToTwoDistances.htm">setToTwoDistances</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Adds a set of edges to this input.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChamferFeatureInput_chamferEdgeSets.htm">chamferEdgeSets</a></td>
+<td class="api-list">Returns the collection of edge sets for this chamfer feature input.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChamferFeatureInput_cornerType.htm">cornerType</a></td>
+<td class="api-list">Gets and sets the type of corner to be modeled when multiple edges connect at a vertex.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChamferFeatureInput_edges.htm">edges</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Gets and sets the collection of edges that will be chamfered.<br><br/> To use this property, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChamferFeatureInput_isTangentChain.htm">isTangentChain</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Gets and sets if any edges that are tangentially connected to any of chamfered edges will also be included in the chamfer.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChamferFeatureInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChamferFeatureInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ChamferFeatureInput_targetBaseFeature.htm">targetBaseFeature</a></td>
+<td class="api-list">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature.<br/><br/> Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ChamferFeatures_createInput.htm">ChamferFeatures.createInput</a>, <a href="ChamferFeatures_createInput2.htm">ChamferFeatures.createInput2</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="EqualDistanceChamferFeature_Sample.htm">Equal Distance Chamfer Feature API Sample</a></td>
+<td class="api-list">Creates an equal distance chamfer on the selected edge. If there are tangent contiguous edges that will also be included in the chamfer.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version November 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ChamferFeatureInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">chamferEdgeSets Property</h3><p class="api">Returns the collection of edge sets for this chamfer feature input.</p><pre class="api-code">"chamferFeatureInput_var" is a variable referencing a ChamferFeatureInput object.
+#include &lt;Fusion/Features/ChamferFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ChamferEdgeSets&gt; propertyValue = chamferFeatureInput_var-&gt;
+chamferEdgeSets
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/ChamferFeatureInput.h&gt;
+returnValue = adsk::fusion::ChamferFeatureInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">cornerType Property</h3><p class="api">Gets and sets the type of corner to be modeled when multiple edges connect at a vertex.</p><pre class="api-code">"chamferFeatureInput_var" is a variable referencing a ChamferFeatureInput object.
+#include &lt;Fusion/Features/ChamferFeatureInput.h&gt;
+// Get the value of the property.
+ChamferCornerTypes propertyValue = chamferFeatureInput_var-&gt;
+cornerType
+();
+// Set the value of the property, where value_var is a ChamferCornerTypes.
+bool returnValue = chamferFeatureInput_var-&gt;
+cornerType
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">edges Property</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Gets and sets the collection of edges that will be chamfered. To use this property, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"chamferFeatureInput_var" is a variable referencing a ChamferFeatureInput object.
+#include &lt;Fusion/Features/ChamferFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ObjectCollection&gt; propertyValue = chamferFeatureInput_var-&gt;
+edges
+();
+// Set the value of the property, where value_var is an ObjectCollection.
+bool returnValue = chamferFeatureInput_var-&gt;
+edges
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">isTangentChain Property</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Gets and sets if any edges that are tangentially connected to any of chamfered edges will also be included in the chamfer.</p><pre class="api-code">"chamferFeatureInput_var" is a variable referencing a ChamferFeatureInput object.
+#include &lt;Fusion/Features/ChamferFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = chamferFeatureInput_var-&gt;
+isTangentChain
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = chamferFeatureInput_var-&gt;
+isTangentChain
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"chamferFeatureInput_var" is a variable referencing a ChamferFeatureInput object.
+#include &lt;Fusion/Features/ChamferFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = chamferFeatureInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"chamferFeatureInput_var" is a variable referencing a ChamferFeatureInput object.
+#include &lt;Fusion/Features/ChamferFeatureInput.h&gt;
+// Get the value of the property.
+string propertyValue = chamferFeatureInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">setToDistanceAndAngle Method</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Adds a set of edges to this input.</p><pre class="api-code">"chamferFeatureInput_var" is a variable referencing a
+ChamferFeatureInput
+object.
+#include &lt;Fusion/Features/ChamferFeatureInput.h&gt;
+returnValue = chamferFeatureInput_var-&gt;
+setToDistanceAndAngle
+(distance, angle);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">distance</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the distance of the chamfer. This distance is along the face which is on the right of the selected edge. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in"). If no units are specified it is interpreted using the current default units for length.</td></tr><tr><td class="api-list">angle</td><td class="api-list">ValueInput</td><td class="api-list">A valueInput object that defines the angle. The direction will be towards to the face which is on the left of the selected edge. This can be a string or a value. If it's a string it is interpreted using the current document units and can include equations. For example all of the following are valid as long as they result in angle units; "45", "45 deg", "a1 / 2". If a value is input it is interpreted as radians. It cannot be negative.</td></tr></table><h3 class="api-member">setToEqualDistance Method</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Adds a set of edges to this input.</p><pre class="api-code">"chamferFeatureInput_var" is a variable referencing a
+ChamferFeatureInput
+object.
+#include &lt;Fusion/Features/ChamferFeatureInput.h&gt;
+returnValue = chamferFeatureInput_var-&gt;
+setToEqualDistance
+(distance);</pre><p class="api">Return Value: boolean - Returns true if the set of edges was successfully added to the ChamferFeatureInput.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">distance</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the size of the chamfer. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in"). If no units are specified it is interpreted using the current default units for length.</td></tr></table><h3 class="api-member">setToTwoDistances Method</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Adds a set of edges to this input.</p><pre class="api-code">"chamferFeatureInput_var" is a variable referencing a
+ChamferFeatureInput
+object.
+#include &lt;Fusion/Features/ChamferFeatureInput.h&gt;
+returnValue = chamferFeatureInput_var-&gt;
+setToTwoDistances
+(distanceOne, distanceTwo);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">distanceOne</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the distanceOne of the chamfer. This distance is along the face which is on the left of the selected edge. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in"). If no units are specified it is interpreted using the current default units for length.</td></tr><tr><td class="api-list">distanceTwo</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the distanceTwo of the chamfer. This distance is along the face which is on the right of the selected edge. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in"). If no units are specified it is interpreted using the current default units for length.</td></tr></table><h3 class="api-member">targetBaseFeature Property</h3><p class="api">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature. Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</p><pre class="api-code">"chamferFeatureInput_var" is a variable referencing a ChamferFeatureInput object.
+#include &lt;Fusion/Features/ChamferFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BaseFeature&gt; propertyValue = chamferFeatureInput_var-&gt;
+targetBaseFeature
+();
+// Set the value of the property, where value_var is a BaseFeature.
+bool returnValue = chamferFeatureInput_var-&gt;
+targetBaseFeature
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

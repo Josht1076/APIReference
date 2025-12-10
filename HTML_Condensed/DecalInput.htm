@@ -1,0 +1,186 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/DecalInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="09/08/2024" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="DecalInput" name="contextid"/>
+<meta content="DecalInput Object" name="description"/>
+<meta content="GUID-444C61FF-D0D1-4E0F-82DC-08CBC8B504AF" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>DecalInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">DecalInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Image/DecalInput.h&gt;<h2 class="api">
+          Description
+        </h2>The DecalInput object is used to define the various options when creating a new decal. It's created using the Decals.createInput method and is used by the Decals.add method to create a Decal.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="DecalInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="DecalInput_faces.htm">faces</a></td>
+<td class="api-list">Gets and sets the faces the decal will be associated with. Typically, this will be an array containing a single face and the isChainFaces property on the input will be true. The position and orientation of the decal is based on this face and the decal can wrap onto other faces in the body.<br><br/> If the isChainFace property is false, the decal will only be applied to the provided faces where the first face is used to calculate the position and orientation of the decal.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="DecalInput_imageFilename.htm">imageFilename</a></td>
+<td class="api-list">Gets and sets the filename of the image used for the decal.<br/><br/> When setting this property, it is the full filename to the image to use for the decal. PNG, JPG, and TIFF files are supported.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DecalInput_isChainFaces.htm">isChainFaces</a></td>
+<td class="api-list">Controls if the decal will wrap onto the faces that connect to the face the decal is placed on. When this is true, the list of faces should contain only one face.<br/><br/> Defaults to true when the input is created.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DecalInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DecalInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DecalInput_opacity.htm">opacity</a></td>
+<td class="api-list">Gets and sets the opacity of the decal where 0 is completely transparent and 1.0 is completely opaque. Setting this property to a value outside the range of 0-1 will result in the value being set to the closest valid value.<br/><br/> Defaults to 1.0 when the input is created.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DecalInput_targetBaseFeature.htm">targetBaseFeature</a></td>
+<td class="api-list">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature.<br/><br/> Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DecalInput_transform.htm">transform</a></td>
+<td class="api-list">Gets and sets the transform of the decal. This controls the position, rotation, scaling, and flipping. This is done by providing a 3D matrix that defines a 3D coordinate system in model space. The origin of the matrix defines the center of the decal and must lie somewhere on the first face. The Z-axis of the matrix should be the same as the normal of the face at the origin. The X and Y axes define the orientation of the decal and must be both perpendicular to the Z and each other. Reversing the direction of the X or Y axis will flip the decal in that direction. The magnitude of the X and Y axes controls the scale, and the scale can be non-uniform, meaning the length of the X and Y vectors do not need to be the same.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Decals_createInput.htm">Decals.createInput</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2024<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(DecalInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Image/DecalInput.h&gt;
+returnValue = adsk::fusion::DecalInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">faces Property</h3><p class="api">Gets and sets the faces the decal will be associated with. Typically, this will be an array containing a single face and the isChainFaces property on the input will be true. The position and orientation of the decal is based on this face and the decal can wrap onto other faces in the body. If the isChainFace property is false, the decal will only be applied to the provided faces where the first face is used to calculate the position and orientation of the decal.</p><pre class="api-code">"decalInput_var" is a variable referencing a DecalInput object.
+#include &lt;Fusion/Image/DecalInput.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;BRepFace&gt;&gt; propertyValue = decalInput_var-&gt;
+faces
+();
+// Set the value of the property, where value_var is a BRepFace.
+bool returnValue = decalInput_var-&gt;
+faces
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an array of type .</p><h3 class="api-member">imageFilename Property</h3><p class="api">Gets and sets the filename of the image used for the decal. When setting this property, it is the full filename to the image to use for the decal. PNG, JPG, and TIFF files are supported.</p><pre class="api-code">"decalInput_var" is a variable referencing a DecalInput object.
+#include &lt;Fusion/Image/DecalInput.h&gt;
+// Get the value of the property.
+string propertyValue = decalInput_var-&gt;
+imageFilename
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = decalInput_var-&gt;
+imageFilename
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">isChainFaces Property</h3><p class="api">Controls if the decal will wrap onto the faces that connect to the face the decal is placed on. When this is true, the list of faces should contain only one face. Defaults to true when the input is created.</p><pre class="api-code">"decalInput_var" is a variable referencing a DecalInput object.
+#include &lt;Fusion/Image/DecalInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = decalInput_var-&gt;
+isChainFaces
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = decalInput_var-&gt;
+isChainFaces
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"decalInput_var" is a variable referencing a DecalInput object.
+#include &lt;Fusion/Image/DecalInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = decalInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"decalInput_var" is a variable referencing a DecalInput object.
+#include &lt;Fusion/Image/DecalInput.h&gt;
+// Get the value of the property.
+string propertyValue = decalInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">opacity Property</h3><p class="api">Gets and sets the opacity of the decal where 0 is completely transparent and 1.0 is completely opaque. Setting this property to a value outside the range of 0-1 will result in the value being set to the closest valid value. Defaults to 1.0 when the input is created.</p><pre class="api-code">"decalInput_var" is a variable referencing a DecalInput object.
+#include &lt;Fusion/Image/DecalInput.h&gt;
+// Get the value of the property.
+double propertyValue = decalInput_var-&gt;
+opacity
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = decalInput_var-&gt;
+opacity
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">targetBaseFeature Property</h3><p class="api">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature. Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</p><pre class="api-code">"decalInput_var" is a variable referencing a DecalInput object.
+#include &lt;Fusion/Image/DecalInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BaseFeature&gt; propertyValue = decalInput_var-&gt;
+targetBaseFeature
+();
+// Set the value of the property, where value_var is a BaseFeature.
+bool returnValue = decalInput_var-&gt;
+targetBaseFeature
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">transform Property</h3><p class="api">Gets and sets the transform of the decal. This controls the position, rotation, scaling, and flipping. This is done by providing a 3D matrix that defines a 3D coordinate system in model space. The origin of the matrix defines the center of the decal and must lie somewhere on the first face. The Z-axis of the matrix should be the same as the normal of the face at the origin. The X and Y axes define the orientation of the decal and must be both perpendicular to the Z and each other. Reversing the direction of the X or Y axis will flip the decal in that direction. The magnitude of the X and Y axes controls the scale, and the scale can be non-uniform, meaning the length of the X and Y vectors do not need to be the same.</p><pre class="api-code">"decalInput_var" is a variable referencing a DecalInput object.
+#include &lt;Fusion/Image/DecalInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Matrix3D&gt; propertyValue = decalInput_var-&gt;
+transform
+();
+// Set the value of the property, where value_var is a Matrix3D.
+bool returnValue = decalInput_var-&gt;
+transform
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

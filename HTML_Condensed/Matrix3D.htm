@@ -1,0 +1,302 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/Matrix3D.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="Matrix3D" name="contextid"/>
+<meta content="Matrix3D Object" name="description"/>
+<meta content="GUID-b831d9f4-c231-4b9f-9b4d-658614ecdc79" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>Matrix3D Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">Matrix3D Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Geometry/Matrix3D.h&gt;<h2 class="api">
+          Description
+        </h2>Transient 3D 4x4 matrix. This object is a wrapper over 3D matrix data and is used as way to pass matrix data in and out of the API and as a convenience when operating on matrix data. They are created statically using the create method of the Matrix3D class.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_asArray.htm">asArray</a></td>
+<td class="api-list">Returns the contents of the matrix as a 16 element array.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_copy.htm">copy</a></td>
+<td class="api-list">Creates an independent copy of this matrix.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_create.htm">create</a></td>
+<td class="api-list">Creates a transient 3d matrix object. It is initialized as an identity matrix and is created statically using the Matrix3D.create method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_getAsCoordinateSystem.htm">getAsCoordinateSystem</a></td>
+<td class="api-list">Gets the matrix data as the components that define a coordinate system.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_getCell.htm">getCell</a></td>
+<td class="api-list">Gets the value of the specified cell in the 4x4 matrix.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_invert.htm">invert</a></td>
+<td class="api-list">Inverts this matrix.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_isEqualTo.htm">isEqualTo</a></td>
+<td class="api-list">Compares this matrix with another matrix and returns True if they're identical.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_setCell.htm">setCell</a></td>
+<td class="api-list">Sets the specified cell in the 4x4 matrix to the specified value.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_setToAlignCoordinateSystems.htm">setToAlignCoordinateSystems</a></td>
+<td class="api-list">Sets this matrix to be the matrix that maps from the 'from' coordinate system to the 'to' coordinate system.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_setToIdentity.htm">setToIdentity</a></td>
+<td class="api-list">Resets this matrix to an identify matrix.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_setToRotateTo.htm">setToRotateTo</a></td>
+<td class="api-list">Sets to the matrix of rotation that would align the 'from' vector with the 'to' vector. The optional axis argument may be used when the two vectors are perpendicular and in opposite directions to specify a specific solution, but is otherwise ignored</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_setToRotation.htm">setToRotation</a></td>
+<td class="api-list">Sets this matrix to the matrix of rotation by the specified angle, through the specified origin, around the specified axis</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_setWithArray.htm">setWithArray</a></td>
+<td class="api-list">Sets the contents of the array using a 16 element array.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_setWithCoordinateSystem.htm">setWithCoordinateSystem</a></td>
+<td class="api-list">Sets the matrix based on the components of a coordinate system.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_transformBy.htm">transformBy</a></td>
+<td class="api-list">Transforms this matrix using the input matrix.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_determinant.htm">determinant</a></td>
+<td class="api-list">Returns the determinant of the matrix.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="Matrix3D_translation.htm">translation</a></td>
+<td class="api-list">Gets and sets the translation component of the matrix.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="AsBuiltJoint_transform.htm">AsBuiltJoint.transform</a>, <a href="ConstructionPlane_transform.htm">ConstructionPlane.transform</a>, <a href="CustomGraphicsBRepBody_transform.htm">CustomGraphicsBRepBody.transform</a>, <a href="CustomGraphicsCurve_transform.htm">CustomGraphicsCurve.transform</a>, <a href="CustomGraphicsEntity_transform.htm">CustomGraphicsEntity.transform</a>, <a href="CustomGraphicsGroup_transform.htm">CustomGraphicsGroup.transform</a>, <a href="CustomGraphicsLines_transform.htm">CustomGraphicsLines.transform</a>, <a href="CustomGraphicsMesh_transform.htm">CustomGraphicsMesh.transform</a>, <a href="CustomGraphicsPointSet_transform.htm">CustomGraphicsPointSet.transform</a>, <a href="CustomGraphicsText_transform.htm">CustomGraphicsText.transform</a>, <a href="Decal_transform.htm">Decal.transform</a>, <a href="DecalInput_transform.htm">DecalInput.transform</a>, <a href="Joint_geometryOneTransform.htm">Joint.geometryOneTransform</a>, <a href="Joint_geometryTwoTransform.htm">Joint.geometryTwoTransform</a>, <a href="JointOrigin_transform.htm">JointOrigin.transform</a>, <a href="Matrix3D_copy.htm">Matrix3D.copy</a>, <a href="Matrix3D_create.htm">Matrix3D.create</a>, <a href="Matrix3DGraphNodeProperty_value.htm">Matrix3DGraphNodeProperty.value</a>, <a href="MoveFeature_transform.htm">MoveFeature.transform</a>, <a href="MoveFeatureFreeMoveDefinition_transform.htm">MoveFeatureFreeMoveDefinition.transform</a>, <a href="MoveFeatureInput_transform.htm">MoveFeatureInput.transform</a>, <a href="Occurrence_initialTransform.htm">Occurrence.initialTransform</a>, <a href="Occurrence_transform.htm">Occurrence.transform</a>, <a href="Occurrence_transform2.htm">Occurrence.transform2</a>, <a href="OptimizedOrientationResult_transformation.htm">OptimizedOrientationResult.transformation</a>, <a href="PatternElement_transform.htm">PatternElement.transform</a>, <a href="ProjectedTextureMapControl_transform.htm">ProjectedTextureMapControl.transform</a>, <a href="SectionAnalysis_initialPosition.htm">SectionAnalysis.initialPosition</a>, <a href="SectionAnalysis_transform.htm">SectionAnalysis.transform</a>, <a href="SectionAnalysisInput_initialPosition.htm">SectionAnalysisInput.initialPosition</a>, <a href="SectionAnalysisInput_transform.htm">SectionAnalysisInput.transform</a>, <a href="Setup_workCoordinateSystem.htm">Setup.workCoordinateSystem</a>, <a href="Sketch_transform.htm">Sketch.transform</a>, <a href="SVGImportOptions_transform.htm">SVGImportOptions.transform</a>, <a href="TextureMapControl3D_transform.htm">TextureMapControl3D.transform</a>, <a href="TriadCommandInput_lastTransform.htm">TriadCommandInput.lastTransform</a>, <a href="TriadCommandInput_positionTransform.htm">TriadCommandInput.positionTransform</a>, <a href="TriadCommandInput_transform.htm">TriadCommandInput.transform</a>, <a href="Viewport_modelToViewSpaceTransform.htm">Viewport.modelToViewSpaceTransform</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="moveFeatures_add_Sample.htm">moveFeatures.add</a></td>
+<td class="api-list">Demonstrates the moveFeatures.add method.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(Matrix3D%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">asArray Method</h3><p class="api">Returns the contents of the matrix as a 16 element array.</p><pre class="api-code">"matrix3D_var" is a variable referencing a
+Matrix3D
+object.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+returnValue = matrix3D_var-&gt;
+asArray
+();</pre><p class="api">Return Value: double[] - Returns the array of cell values.</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+returnValue = adsk::core::Matrix3D::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">copy Method</h3><p class="api">Creates an independent copy of this matrix.</p><pre class="api-code">"matrix3D_var" is a variable referencing a
+Matrix3D
+object.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+returnValue = matrix3D_var-&gt;
+copy
+();</pre><p class="api">Return Value: Matrix3D - Returns the new matrix copy.</p><h3 class="api-member">create Method</h3><p class="api">Creates a transient 3d matrix object. It is initialized as an identity matrix and is created statically using the Matrix3D.create method.</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+returnValue = adsk::core::Matrix3D::
+create
+();</pre><p class="api">Return Value: Matrix3D - Returns the new matrix.</p><h3 class="api-member">determinant Property</h3><p class="api">Returns the determinant of the matrix.</p><pre class="api-code">"matrix3D_var" is a variable referencing a Matrix3D object.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+// Get the value of the property.
+double propertyValue = matrix3D_var-&gt;
+determinant
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">getAsCoordinateSystem Method</h3><p class="api">Gets the matrix data as the components that define a coordinate system.</p><pre class="api-code">#include &lt;Core/Geometry/Matrix3D.h
+// Declare the output arguments.
+Ptr&lt;Point3D&gt; origin;
+Ptr&lt;Vector3D&gt; xAxis;
+Ptr&lt;Vector3D&gt; yAxis;
+Ptr&lt;Vector3D&gt; zAxis;
+void returnValue = matrix3D_var-&gt;
+getAsCoordinateSystem
+(origin, xAxis, yAxis, zAxis);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">origin</td><td class="api-list">Point3D</td><td class="api-list">The output origin point of the coordinate system.</td></tr><tr><td class="api-list">xAxis</td><td class="api-list">Vector3D</td><td class="api-list">The output x axis direction of the coordinate system.</td></tr><tr><td class="api-list">yAxis</td><td class="api-list">Vector3D</td><td class="api-list">The output y axis direction of the coordinate system.</td></tr><tr><td class="api-list">zAxis</td><td class="api-list">Vector3D</td><td class="api-list">The output z axis direction of the coordinate system.</td></tr></table><h3 class="api-member">getCell Method</h3><p class="api">Gets the value of the specified cell in the 4x4 matrix.</p><pre class="api-code">"matrix3D_var" is a variable referencing a
+Matrix3D
+object.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+returnValue = matrix3D_var-&gt;
+getCell
+(row, column);</pre><p class="api">Return Value: double - The cell value at [row][column].</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">row</td><td class="api-list">integer</td><td class="api-list">The index of the row. The first row has in index of 0</td></tr><tr><td class="api-list">column</td><td class="api-list">integer</td><td class="api-list">The index of the column. The first column has an index of 0</td></tr></table><h3 class="api-member">invert Method</h3><p class="api">Inverts this matrix.</p><pre class="api-code">"matrix3D_var" is a variable referencing a
+Matrix3D
+object.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+returnValue = matrix3D_var-&gt;
+invert
+();</pre><p class="api">Return Value: boolean - Returns true if successful.</p><h3 class="api-member">isEqualTo Method</h3><p class="api">Compares this matrix with another matrix and returns True if they're identical.</p><pre class="api-code">"matrix3D_var" is a variable referencing a
+Matrix3D
+object.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+returnValue = matrix3D_var-&gt;
+isEqualTo
+(matrix);</pre><p class="api">Return Value: boolean - Returns true if the matrices are equal.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">matrix</td><td class="api-list">Matrix3D</td><td class="api-list">The matrix to compare this matrix to.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"matrix3D_var" is a variable referencing a Matrix3D object.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+// Get the value of the property.
+boolean propertyValue = matrix3D_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"matrix3D_var" is a variable referencing a Matrix3D object.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+// Get the value of the property.
+string propertyValue = matrix3D_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">setCell Method</h3><p class="api">Sets the specified cell in the 4x4 matrix to the specified value.</p><pre class="api-code">"matrix3D_var" is a variable referencing a
+Matrix3D
+object.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+returnValue = matrix3D_var-&gt;
+setCell
+(row, column, value);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">row</td><td class="api-list">integer</td><td class="api-list">The index of the row. The first row has in index of 0</td></tr><tr><td class="api-list">column</td><td class="api-list">integer</td><td class="api-list">The index of the column. The first column has an index of 0</td></tr><tr><td class="api-list">value</td><td class="api-list">double</td><td class="api-list">The new cell value.</td></tr></table><h3 class="api-member">setToAlignCoordinateSystems Method</h3><p class="api">Sets this matrix to be the matrix that maps from the 'from' coordinate system to the 'to' coordinate system.</p><pre class="api-code">"matrix3D_var" is a variable referencing a
+Matrix3D
+object.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+returnValue = matrix3D_var-&gt;
+setToAlignCoordinateSystems
+(fromOrigin, fromXAxis, fromYAxis, fromZAxis, toOrigin, toXAxis, toYAxis, toZAxis);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">fromOrigin</td><td class="api-list">Point3D</td><td class="api-list">The origin point of the from coordinate system.</td></tr><tr><td class="api-list">fromXAxis</td><td class="api-list">Vector3D</td><td class="api-list">The x axis direction of the from coordinate system.</td></tr><tr><td class="api-list">fromYAxis</td><td class="api-list">Vector3D</td><td class="api-list">The y axis direction of the from coordinate system.</td></tr><tr><td class="api-list">fromZAxis</td><td class="api-list">Vector3D</td><td class="api-list">The z axis direction of the from coordinate system.</td></tr><tr><td class="api-list">toOrigin</td><td class="api-list">Point3D</td><td class="api-list">The origin point of the to coordinate system.</td></tr><tr><td class="api-list">toXAxis</td><td class="api-list">Vector3D</td><td class="api-list">The x axis direction of the to coordinate system.</td></tr><tr><td class="api-list">toYAxis</td><td class="api-list">Vector3D</td><td class="api-list">The y axis direction of the to coordinate system.</td></tr><tr><td class="api-list">toZAxis</td><td class="api-list">Vector3D</td><td class="api-list">The z axis direction of the to coordinate system.</td></tr></table><h3 class="api-member">setToIdentity Method</h3><p class="api">Resets this matrix to an identify matrix.</p><pre class="api-code">"matrix3D_var" is a variable referencing a
+Matrix3D
+object.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+returnValue = matrix3D_var-&gt;
+setToIdentity
+();</pre><p class="api">Return Value: boolean - Returns true if successful.</p><h3 class="api-member">setToRotateTo Method</h3><p class="api">Sets to the matrix of rotation that would align the 'from' vector with the 'to' vector. The optional axis argument may be used when the two vectors are perpendicular and in opposite directions to specify a specific solution, but is otherwise ignored</p><pre class="api-code">"matrix3D_var" is a variable referencing a
+Matrix3D
+object.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+// Uses no optional arguments.
+returnValue = matrix3D_var-&gt;
+setToRotateTo
+(from, to);
+// Uses optional arguments.
+returnValue = matrix3D_var-&gt;
+setToRotateTo
+(from, to, axis);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">from</td><td class="api-list">Vector3D</td><td class="api-list">The vector to rotate from.</td></tr><tr><td class="api-list">to</td><td class="api-list">Vector3D</td><td class="api-list">The vector to rotate to.</td></tr><tr><td class="api-list">axis</td><td class="api-list">Vector3D</td><td class="api-list">The optional axis vector to disambiguate the rotation axis. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">setToRotation Method</h3><p class="api">Sets this matrix to the matrix of rotation by the specified angle, through the specified origin, around the specified axis</p><pre class="api-code">"matrix3D_var" is a variable referencing a
+Matrix3D
+object.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+returnValue = matrix3D_var-&gt;
+setToRotation
+(angle, axis, origin);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">angle</td><td class="api-list">double</td><td class="api-list">The rotation angle in radians.</td></tr><tr><td class="api-list">axis</td><td class="api-list">Vector3D</td><td class="api-list">The axis of rotation.</td></tr><tr><td class="api-list">origin</td><td class="api-list">Point3D</td><td class="api-list">The origin point of the axis of rotation.</td></tr></table><h3 class="api-member">setWithArray Method</h3><p class="api">Sets the contents of the array using a 16 element array.</p><pre class="api-code">"matrix3D_var" is a variable referencing a
+Matrix3D
+object.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+returnValue = matrix3D_var-&gt;
+setWithArray
+(cells);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">cells</td><td class="api-list">double[]</td><td class="api-list">The array of cell values.</td></tr></table><h3 class="api-member">setWithCoordinateSystem Method</h3><p class="api">Sets the matrix based on the components of a coordinate system.</p><pre class="api-code">"matrix3D_var" is a variable referencing a
+Matrix3D
+object.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+returnValue = matrix3D_var-&gt;
+setWithCoordinateSystem
+(origin, xAxis, yAxis, zAxis);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">origin</td><td class="api-list">Point3D</td><td class="api-list">The origin point of the coordinate system.</td></tr><tr><td class="api-list">xAxis</td><td class="api-list">Vector3D</td><td class="api-list">The x axis direction of the coordinate system.</td></tr><tr><td class="api-list">yAxis</td><td class="api-list">Vector3D</td><td class="api-list">The y axis direction of the coordinate system.</td></tr><tr><td class="api-list">zAxis</td><td class="api-list">Vector3D</td><td class="api-list">The z axis direction of the coordinate system.</td></tr></table><h3 class="api-member">transformBy Method</h3><p class="api">Transforms this matrix using the input matrix.</p><pre class="api-code">"matrix3D_var" is a variable referencing a
+Matrix3D
+object.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+returnValue = matrix3D_var-&gt;
+transformBy
+(matrix);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">matrix</td><td class="api-list">Matrix3D</td><td class="api-list">The transformation matrix.</td></tr></table><h3 class="api-member">translation Property</h3><p class="api">Gets and sets the translation component of the matrix.</p><pre class="api-code">"matrix3D_var" is a variable referencing a Matrix3D object.
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+// Get the value of the property.
+Ptr&lt;Vector3D&gt; propertyValue = matrix3D_var-&gt;
+translation
+();
+// Set the value of the property, where value_var is a Vector3D.
+bool returnValue = matrix3D_var-&gt;
+translation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

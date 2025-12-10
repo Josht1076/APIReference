@@ -1,0 +1,232 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/EmbossFeatureInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="06/08/2025" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="EmbossFeatureInput" name="contextid"/>
+<meta content="EmbossFeatureInput Object" name="description"/>
+<meta content="GUID-F6DDB1C8-21EA-4E6F-895C-0369C2008474" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>EmbossFeatureInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">EmbossFeatureInput Object <img alt="Preview" src="../images/TestTubeLarge.png"/></h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/EmbossFeatureInput.h&gt;<p class="api-preview"><img alt="Preview" src="../images/TestTubeSmall.png"/>This functionality is provided as a preview
+				of intended future API capabilities. You are encouraged to use it and report any problems or suggestions using the
+				<a href="https://forums.autodesk.com/t5/fusion-360-api-and-scripts/bd-p/22">Fusion API and Scripts</a> forum.<br/><br/>
+	
+                Because this is a preview of future functionality, there is the possibility that it will change, which will possibly
+		        break any existing programs that use this functionality. Because of that, you should never deliver any programs that use
+		        any preview capabilities. For a distributed program, you should wait until it has moved from preview to released state.
+		    </p>
+<h2 class="api">
+          Description
+        </h2>This class defines the methods and properties that pertain to the definition of an emboss feature.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="EmbossFeatureInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="EmbossFeatureInput_creationOccurrence.htm">creationOccurrence</a></td>
+<td class="api-list">In order for geometry to be transformed correctly, an Occurrence for creation needs to be specified when the emboss feature is created based on geometry (e.g. a profile and/or face(s)) in another component AND (the emboss feature) is not in the root component. The creationOccurrence is analogous to the active occurrence in the UI</td>
+</tr>
+<tr>
+<td class="api-list"><a href="EmbossFeatureInput_depth.htm">depth</a></td>
+<td class="api-list">Gets and sets the ValueInput object that defines the depth of the emboss. A positive value results in the emboss protruding out of the body and the negative value results in the emboss going into the body.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="EmbossFeatureInput_horizontalDistance.htm">horizontalDistance</a></td>
+<td class="api-list">Gets and sets the horizontal offset distance. This defaults to zero.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="EmbossFeatureInput_inputFaces.htm">inputFaces</a></td>
+<td class="api-list">Gets and sets an array of BRepFace objects that define the faces the emboss will be performed on. By default, faces that are tangent to any of the input faces are also used. Use the isTangentChain property of the EmbossFeatureInput object to disable the use of tangent faces. If multiple inputFaces are provided, they must all be on the same body.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="EmbossFeatureInput_isTangentChain.htm">isTangentChain</a></td>
+<td class="api-list">Gets and sets whether any faces that are tangentially connected to any of the input faces will also be used. By default this property is true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="EmbossFeatureInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="EmbossFeatureInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="EmbossFeatureInput_profiles.htm">profiles</a></td>
+<td class="api-list">Gets and sets an array of Profile objects that define the shape of the emboss. The profile argument can be Profile and SketchText objects. When multiple objects are used, all profiles and sketch texts must be co-planar.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="EmbossFeatureInput_rotationAngle.htm">rotationAngle</a></td>
+<td class="api-list">Gets and sets the rotation angle. This defaults to zero.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="EmbossFeatureInput_targetBaseFeature.htm">targetBaseFeature</a></td>
+<td class="api-list">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature.<br><br/> Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="EmbossFeatureInput_verticalDistance.htm">verticalDistance</a></td>
+<td class="api-list">Gets and sets the vertical offset distance. This defaults to zero.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="EmbossFeatures_createInput.htm">EmbossFeatures.createInput</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2025<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(EmbossFeatureInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/EmbossFeatureInput.h&gt;
+returnValue = adsk::fusion::EmbossFeatureInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">creationOccurrence Property</h3><p class="api">In order for geometry to be transformed correctly, an Occurrence for creation needs to be specified when the emboss feature is created based on geometry (e.g. a profile and/or face(s)) in another component AND (the emboss feature) is not in the root component. The creationOccurrence is analogous to the active occurrence in the UI</p><pre class="api-code">"embossFeatureInput_var" is a variable referencing an EmbossFeatureInput object.
+#include &lt;Fusion/Features/EmbossFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = embossFeatureInput_var-&gt;
+creationOccurrence
+();
+// Set the value of the property, where value_var is an Occurrence.
+bool returnValue = embossFeatureInput_var-&gt;
+creationOccurrence
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">depth Property</h3><p class="api">Gets and sets the ValueInput object that defines the depth of the emboss. A positive value results in the emboss protruding out of the body and the negative value results in the emboss going into the body.</p><pre class="api-code">"embossFeatureInput_var" is a variable referencing an EmbossFeatureInput object.
+#include &lt;Fusion/Features/EmbossFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = embossFeatureInput_var-&gt;
+depth
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = embossFeatureInput_var-&gt;
+depth
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">horizontalDistance Property</h3><p class="api">Gets and sets the horizontal offset distance. This defaults to zero.</p><pre class="api-code">"embossFeatureInput_var" is a variable referencing an EmbossFeatureInput object.
+#include &lt;Fusion/Features/EmbossFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = embossFeatureInput_var-&gt;
+horizontalDistance
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = embossFeatureInput_var-&gt;
+horizontalDistance
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">inputFaces Property</h3><p class="api">Gets and sets an array of BRepFace objects that define the faces the emboss will be performed on. By default, faces that are tangent to any of the input faces are also used. Use the isTangentChain property of the EmbossFeatureInput object to disable the use of tangent faces. If multiple inputFaces are provided, they must all be on the same body.</p><pre class="api-code">"embossFeatureInput_var" is a variable referencing an EmbossFeatureInput object.
+#include &lt;Fusion/Features/EmbossFeatureInput.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;BRepFace&gt;&gt; propertyValue = embossFeatureInput_var-&gt;
+inputFaces
+();
+// Set the value of the property, where value_var is a BRepFace.
+bool returnValue = embossFeatureInput_var-&gt;
+inputFaces
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an array of type .</p><h3 class="api-member">isTangentChain Property</h3><p class="api">Gets and sets whether any faces that are tangentially connected to any of the input faces will also be used. By default this property is true.</p><pre class="api-code">"embossFeatureInput_var" is a variable referencing an EmbossFeatureInput object.
+#include &lt;Fusion/Features/EmbossFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = embossFeatureInput_var-&gt;
+isTangentChain
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = embossFeatureInput_var-&gt;
+isTangentChain
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"embossFeatureInput_var" is a variable referencing an EmbossFeatureInput object.
+#include &lt;Fusion/Features/EmbossFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = embossFeatureInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"embossFeatureInput_var" is a variable referencing an EmbossFeatureInput object.
+#include &lt;Fusion/Features/EmbossFeatureInput.h&gt;
+// Get the value of the property.
+string propertyValue = embossFeatureInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">profiles Property</h3><p class="api">Gets and sets an array of Profile objects that define the shape of the emboss. The profile argument can be Profile and SketchText objects. When multiple objects are used, all profiles and sketch texts must be co-planar.</p><pre class="api-code">"embossFeatureInput_var" is a variable referencing an EmbossFeatureInput object.
+#include &lt;Fusion/Features/EmbossFeatureInput.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;Base&gt;&gt; propertyValue = embossFeatureInput_var-&gt;
+profiles
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = embossFeatureInput_var-&gt;
+profiles
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an array of type .</p><h3 class="api-member">rotationAngle Property</h3><p class="api">Gets and sets the rotation angle. This defaults to zero.</p><pre class="api-code">"embossFeatureInput_var" is a variable referencing an EmbossFeatureInput object.
+#include &lt;Fusion/Features/EmbossFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = embossFeatureInput_var-&gt;
+rotationAngle
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = embossFeatureInput_var-&gt;
+rotationAngle
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">targetBaseFeature Property</h3><p class="api">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature. Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</p><pre class="api-code">"embossFeatureInput_var" is a variable referencing an EmbossFeatureInput object.
+#include &lt;Fusion/Features/EmbossFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BaseFeature&gt; propertyValue = embossFeatureInput_var-&gt;
+targetBaseFeature
+();
+// Set the value of the property, where value_var is a BaseFeature.
+bool returnValue = embossFeatureInput_var-&gt;
+targetBaseFeature
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">verticalDistance Property</h3><p class="api">Gets and sets the vertical offset distance. This defaults to zero.</p><pre class="api-code">"embossFeatureInput_var" is a variable referencing an EmbossFeatureInput object.
+#include &lt;Fusion/Features/EmbossFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = embossFeatureInput_var-&gt;
+verticalDistance
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = embossFeatureInput_var-&gt;
+verticalDistance
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

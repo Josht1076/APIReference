@@ -1,0 +1,201 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ConstructionPointInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ConstructionPointInput" name="contextid"/>
+<meta content="ConstructionPointInput Object" name="description"/>
+<meta content="GUID-b3ffae9a-d7d7-48ee-bd66-b1138536767f" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ConstructionPointInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ConstructionPointInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Construction/ConstructionPointInput.h&gt;<h2 class="api">
+          Description
+        </h2>A ConstructionPointInput is a throwaway object used to create a ConstructionPoint The usage pattern is a. create a ConstructionPointInput (ConstructionPoints.CreateInput) b. call one of the member functions to specify how the ConstructionPoint is created c. create the ConstructionPoint (call ConstructionPoints.Add) d. stop referencing the ConstructionPointInput (so it gets deleted).<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPointInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPointInput_setByCenter.htm">setByCenter</a></td>
+<td class="api-list">This input method is for creating a construction point at the center of a spherical face (sphere or torus), circular edge or sketch arc/circle This can result in a parametric or non-parametric construction point depending on whether the parent component is parametric or is a direct edit component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPointInput_setByEdgePlane.htm">setByEdgePlane</a></td>
+<td class="api-list">This input method is for creating a construction point at the intersection of a construction plane, planar face or sketch profile and a linear edge, construction axis or sketch line. This can result in a parametric or non-parametric construction point depending on whether the parent component is parametric or is a direct edit component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPointInput_setByPoint.htm">setByPoint</a></td>
+<td class="api-list">This input method is for creating a construction point on the specified point or vertex. The point can be either a B-Rep vertex, SketchPoint, or a Point3D object.<br><br/> Providing a Point3D object is only valid when working in the direct edit modeling mode. This is not valid when working in the parametric modeling mode and will fail.<br/><br/> Even when providing a B-Rep vertex, or SketchPoint the result will be non-parametric if the parent component is a direct edit component.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPointInput_setByThreePlanes.htm">setByThreePlanes</a></td>
+<td class="api-list">This input method is for creating a construction point at the intersection of the three planes or planar faces. This can result in a parametric or non-parametric construction point depending on whether the parent component is parametric or is a direct edit component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPointInput_setByTwoEdges.htm">setByTwoEdges</a></td>
+<td class="api-list">This input method is for creating a construction point at the intersection of the two linear edges or sketch lines. The edges can be B-Rep edges or sketch lines. This can result in a parametric or non-parametric construction point depending on whether the parent component is parametric or is a direct edit component.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPointInput_creationOccurrence.htm">creationOccurrence</a></td>
+<td class="api-list">In order for geometry to be transformed correctly, an occurrence for creation needs to be specified when the ConstructionPoint is created based on geometry (e.g. a sketch point) in another component AND (the ConstructionPoint) is not in the root component. The CreationOccurrence is analogous to the active occurrence in the UI</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPointInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPointInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPointInput_targetBaseOrFormFeature.htm">targetBaseOrFormFeature</a></td>
+<td class="api-list">When creating a construction point that is owned by a base or form feature, set this property to the base or form feature you want to associate the new construction point with. By default, this is null, meaning it will not be associated with a base or form feature.<br/><br/> Because of a current limitation, if you want to create a construction point associated with a base or form feature, you must set this property AND call the startEdit method of the base or form feature, create the feature, and then call the finishEdit method of the base or form feature. The base or form feature must be in an "edit" state to be able to add any additional items to it.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ConstructionPoints_createInput.htm">ConstructionPoints.createInput</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPointSample_Sample.htm">Construction Point API Sample</a></td>
+<td class="api-list">Demonstrates creating construction point by different ways</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ConstructionPointInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Construction/ConstructionPointInput.h&gt;
+returnValue = adsk::fusion::ConstructionPointInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">creationOccurrence Property</h3><p class="api">In order for geometry to be transformed correctly, an occurrence for creation needs to be specified when the ConstructionPoint is created based on geometry (e.g. a sketch point) in another component AND (the ConstructionPoint) is not in the root component. The CreationOccurrence is analogous to the active occurrence in the UI</p><pre class="api-code">"constructionPointInput_var" is a variable referencing a ConstructionPointInput object.
+#include &lt;Fusion/Construction/ConstructionPointInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = constructionPointInput_var-&gt;
+creationOccurrence
+();
+// Set the value of the property, where value_var is an Occurrence.
+bool returnValue = constructionPointInput_var-&gt;
+creationOccurrence
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"constructionPointInput_var" is a variable referencing a ConstructionPointInput object.
+#include &lt;Fusion/Construction/ConstructionPointInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = constructionPointInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"constructionPointInput_var" is a variable referencing a ConstructionPointInput object.
+#include &lt;Fusion/Construction/ConstructionPointInput.h&gt;
+// Get the value of the property.
+string propertyValue = constructionPointInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">setByCenter Method</h3><p class="api">This input method is for creating a construction point at the center of a spherical face (sphere or torus), circular edge or sketch arc/circle This can result in a parametric or non-parametric construction point depending on whether the parent component is parametric or is a direct edit component.</p><pre class="api-code">"constructionPointInput_var" is a variable referencing a
+ConstructionPointInput
+object.
+#include &lt;Fusion/Construction/ConstructionPointInput.h&gt;
+returnValue = constructionPointInput_var-&gt;
+setByCenter
+(circularEntity);</pre><p class="api">Return Value: boolean - Returns true if the creation of the ConstructionPointInput is successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">circularEntity</td><td class="api-list">Base</td><td class="api-list">A spherical face (sphere or torus), circular edge or sketch arc/circle</td></tr></table><h3 class="api-member">setByEdgePlane Method</h3><p class="api">This input method is for creating a construction point at the intersection of a construction plane, planar face or sketch profile and a linear edge, construction axis or sketch line. This can result in a parametric or non-parametric construction point depending on whether the parent component is parametric or is a direct edit component.</p><pre class="api-code">"constructionPointInput_var" is a variable referencing a
+ConstructionPointInput
+object.
+#include &lt;Fusion/Construction/ConstructionPointInput.h&gt;
+returnValue = constructionPointInput_var-&gt;
+setByEdgePlane
+(edge, plane);</pre><p class="api">Return Value: boolean - Returns true if the creation of the ConstructionPointInput is successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">edge</td><td class="api-list">Base</td><td class="api-list">A linear B-Rep edge, construction axis or sketch line.</td></tr><tr><td class="api-list">plane</td><td class="api-list">Base</td><td class="api-list">A plane, planar B-Rep face or construction plane.</td></tr></table><h3 class="api-member">setByPoint Method</h3><p class="api">This input method is for creating a construction point on the specified point or vertex. The point can be either a B-Rep vertex, SketchPoint, or a Point3D object. Providing a Point3D object is only valid when working in the direct edit modeling mode. This is not valid when working in the parametric modeling mode and will fail. Even when providing a B-Rep vertex, or SketchPoint the result will be non-parametric if the parent component is a direct edit component.</p><pre class="api-code">"constructionPointInput_var" is a variable referencing a
+ConstructionPointInput
+object.
+#include &lt;Fusion/Construction/ConstructionPointInput.h&gt;
+returnValue = constructionPointInput_var-&gt;
+setByPoint
+(point);</pre><p class="api">Return Value: boolean - Returns true if the creation of the ConstructionPointInput is successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">point</td><td class="api-list">Base</td><td class="api-list">A B-Rep vertex, SketchPoint, or Point object</td></tr></table><h3 class="api-member">setByThreePlanes Method</h3><p class="api">This input method is for creating a construction point at the intersection of the three planes or planar faces. This can result in a parametric or non-parametric construction point depending on whether the parent component is parametric or is a direct edit component.</p><pre class="api-code">"constructionPointInput_var" is a variable referencing a
+ConstructionPointInput
+object.
+#include &lt;Fusion/Construction/ConstructionPointInput.h&gt;
+returnValue = constructionPointInput_var-&gt;
+setByThreePlanes
+(planeOne, planeTwo, planeThree);</pre><p class="api">Return Value: boolean - Returns true if the creation of the ConstructionPointInput is successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">planeOne</td><td class="api-list">Base</td><td class="api-list">The first plane or planar face to intersect</td></tr><tr><td class="api-list">planeTwo</td><td class="api-list">Base</td><td class="api-list">The second plane or planar face to intersect</td></tr><tr><td class="api-list">planeThree</td><td class="api-list">Base</td><td class="api-list">The third plane or planar face to intersect</td></tr></table><h3 class="api-member">setByTwoEdges Method</h3><p class="api">This input method is for creating a construction point at the intersection of the two linear edges or sketch lines. The edges can be B-Rep edges or sketch lines. This can result in a parametric or non-parametric construction point depending on whether the parent component is parametric or is a direct edit component.</p><pre class="api-code">"constructionPointInput_var" is a variable referencing a
+ConstructionPointInput
+object.
+#include &lt;Fusion/Construction/ConstructionPointInput.h&gt;
+returnValue = constructionPointInput_var-&gt;
+setByTwoEdges
+(edgeOne, edgeTwo);</pre><p class="api">Return Value: boolean - Returns true if the creation of the ConstructionPointInput is successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">edgeOne</td><td class="api-list">Base</td><td class="api-list">The first B-Rep edge or sketch line</td></tr><tr><td class="api-list">edgeTwo</td><td class="api-list">Base</td><td class="api-list">The second B-Rep edge or sketch line</td></tr></table><h3 class="api-member">targetBaseOrFormFeature Property</h3><p class="api">When creating a construction point that is owned by a base or form feature, set this property to the base or form feature you want to associate the new construction point with. By default, this is null, meaning it will not be associated with a base or form feature. Because of a current limitation, if you want to create a construction point associated with a base or form feature, you must set this property AND call the startEdit method of the base or form feature, create the feature, and then call the finishEdit method of the base or form feature. The base or form feature must be in an "edit" state to be able to add any additional items to it.</p><pre class="api-code">"constructionPointInput_var" is a variable referencing a ConstructionPointInput object.
+#include &lt;Fusion/Construction/ConstructionPointInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = constructionPointInput_var-&gt;
+targetBaseOrFormFeature
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = constructionPointInput_var-&gt;
+targetBaseOrFormFeature
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

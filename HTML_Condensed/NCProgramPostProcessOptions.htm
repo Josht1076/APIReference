@@ -1,0 +1,172 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/NCProgramPostProcessOptions.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="25/04/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="NCProgramPostProcessOptions" name="contextid"/>
+<meta content="NCProgramPostProcessOptions Object" name="description"/>
+<meta content="GUID-854817A3-9B92-4BDB-B5FC-1A45370D6081" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>NCProgramPostProcessOptions Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">NCProgramPostProcessOptions Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/NCProgram/NCProgramPostProcessOptions.h&gt;<h2 class="api">
+          Description
+        </h2>The NCProgramPostProcessOptions provides settings to control the post processing of NC programs. It is needed for the NCPrograms.postProcess method for posting toolpaths and generating CNC files and setup sheets.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="NCProgramPostProcessOptions_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NCProgramPostProcessOptions_create.htm">create</a></td>
+<td class="api-list">Creates a new NCProgramPostProcessOptions object to be used as an input argument by the postProcess() method.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="NCProgramPostProcessOptions_fusionHubExecutionBehavior.htm">fusionHubExecutionBehavior</a></td>
+<td class="api-list">Gets and sets the post process behavior for exporting to Fusion Hub. Uses fusionHubExecutionBehavior_ExportWithRelationship by default.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NCProgramPostProcessOptions_isFailOnToolNumberDuplication.htm">isFailOnToolNumberDuplication</a></td>
+<td class="api-list">Toggles whether the post processing should abort if two tools with the same tool number have been detected. True by default. If true, an exception will be thrown if at least two tools map to the same tool number. If false, the post processor will not perform a tool change if the tool number is the same, which may mean that the wrong tool is used for an operation.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NCProgramPostProcessOptions_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="NCProgramPostProcessOptions_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="NCProgramPostProcessOptions_postProcessExecutionBehavior.htm">postProcessExecutionBehavior</a></td>
+<td class="api-list">Gets and sets the post process behavior with regards to the operations' error or out of date states. Uses PostProcessExecutionBehavior_OmitInvalidAndEmptyOperations by default.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="NCProgramPostProcessOptions_create.htm">NCProgramPostProcessOptions.create</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ManufacturingWorkflowAPISample_Sample.htm">Manufacturing Workflow API Sample</a></td>
+<td class="api-list">Manufacturing Workflow API Sample<p>This sample script starts by creating a simple component which is then used to describe a milling workflow. It creates a setup, a few operations, pick some tools from a Fusion sample tool library using loops and queries and ends up post-processing the operations out using an NC Program.</p></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version May 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(NCProgramPostProcessOptions%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/NCProgram/NCProgramPostProcessOptions.h&gt;
+returnValue = adsk::cam::NCProgramPostProcessOptions::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">create Method</h3><p class="api">Creates a new NCProgramPostProcessOptions object to be used as an input argument by the postProcess() method.</p><pre class="api-code">This is a static method.
+#include &lt;Cam/NCProgram/NCProgramPostProcessOptions.h&gt;
+returnValue = adsk::cam::NCProgramPostProcessOptions::
+create
+();</pre><p class="api">Return Value: NCProgramPostProcessOptions - Returns the newly created NCProgramPostProcessOptions object or null if the creation failed.</p><h3 class="api-member">fusionHubExecutionBehavior Property</h3><p class="api">Gets and sets the post process behavior for exporting to Fusion Hub. Uses fusionHubExecutionBehavior_ExportWithRelationship by default.</p><pre class="api-code">"nCProgramPostProcessOptions_var" is a variable referencing a NCProgramPostProcessOptions object.
+#include &lt;Cam/NCProgram/NCProgramPostProcessOptions.h&gt;
+// Get the value of the property.
+FusionHubExecutionBehaviors propertyValue = nCProgramPostProcessOptions_var-&gt;
+fusionHubExecutionBehavior
+();
+// Set the value of the property, where value_var is a FusionHubExecutionBehaviors.
+bool returnValue = nCProgramPostProcessOptions_var-&gt;
+fusionHubExecutionBehavior
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">isFailOnToolNumberDuplication Property</h3><p class="api">Toggles whether the post processing should abort if two tools with the same tool number have been detected. True by default. If true, an exception will be thrown if at least two tools map to the same tool number. If false, the post processor will not perform a tool change if the tool number is the same, which may mean that the wrong tool is used for an operation.</p><pre class="api-code">"nCProgramPostProcessOptions_var" is a variable referencing a NCProgramPostProcessOptions object.
+#include &lt;Cam/NCProgram/NCProgramPostProcessOptions.h&gt;
+// Get the value of the property.
+boolean propertyValue = nCProgramPostProcessOptions_var-&gt;
+isFailOnToolNumberDuplication
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = nCProgramPostProcessOptions_var-&gt;
+isFailOnToolNumberDuplication
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"nCProgramPostProcessOptions_var" is a variable referencing a NCProgramPostProcessOptions object.
+#include &lt;Cam/NCProgram/NCProgramPostProcessOptions.h&gt;
+// Get the value of the property.
+boolean propertyValue = nCProgramPostProcessOptions_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"nCProgramPostProcessOptions_var" is a variable referencing a NCProgramPostProcessOptions object.
+#include &lt;Cam/NCProgram/NCProgramPostProcessOptions.h&gt;
+// Get the value of the property.
+string propertyValue = nCProgramPostProcessOptions_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">postProcessExecutionBehavior Property</h3><p class="api">Gets and sets the post process behavior with regards to the operations' error or out of date states. Uses PostProcessExecutionBehavior_OmitInvalidAndEmptyOperations by default.</p><pre class="api-code">"nCProgramPostProcessOptions_var" is a variable referencing a NCProgramPostProcessOptions object.
+#include &lt;Cam/NCProgram/NCProgramPostProcessOptions.h&gt;
+// Get the value of the property.
+PostProcessExecutionBehaviors propertyValue = nCProgramPostProcessOptions_var-&gt;
+postProcessExecutionBehavior
+();
+// Set the value of the property, where value_var is a PostProcessExecutionBehaviors.
+bool returnValue = nCProgramPostProcessOptions_var-&gt;
+postProcessExecutionBehavior
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

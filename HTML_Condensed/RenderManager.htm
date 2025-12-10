@@ -1,0 +1,189 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/RenderManager.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="25/04/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="RenderManager" name="contextid"/>
+<meta content="RenderManager Object" name="description"/>
+<meta content="GUID-60A98001-6018-4306-920D-F1E9907ED509" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>RenderManager Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">RenderManager Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Render/RenderManager.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access to the Rendering functionality in Fusion and is accessed from the Design object.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderManager_activateRenderWorkspace.htm">activateRenderWorkspace</a></td>
+<td class="api-list">Activates the Render workspace for this design. If the workspace is already active, nothing happens and it remains active.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderManager_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderManager_inCanvasRendering.htm">inCanvasRendering</a></td>
+<td class="api-list">Provides access to the in-canvas rendering capabilities of Fusion. This uses the active viewport and the user will see the rendering as it takes place.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderManager_isRenderWorkspaceActive.htm">isRenderWorkspaceActive</a></td>
+<td class="api-list">Returns if the Render workspace for this Design is active or not. Returns true if the workspace is active.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderManager_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderManager_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderManager_parentDesign.htm">parentDesign</a></td>
+<td class="api-list">Returns the parent Design this RenderManager was obtained from.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderManager_renderEnvironments.htm">renderEnvironments</a></td>
+<td class="api-list">Provides access to the provided environments and supports specifying a custom environment. This provides access to the same list of environments that you see in the "Environment Library" tab of the "SCENE SETTINGS" dialog.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderManager_rendering.htm">rendering</a></td>
+<td class="api-list">Provides access to the local and cloud rendering capabilities of Fusion. In both cases, the rendering is done in a process external to Fusion, either a local or cloud rendering process.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderManager_sceneSettings.htm">sceneSettings</a></td>
+<td class="api-list">Returns the SceneSettings object that provides access to all of the settings that control how the scene is rendered. This provides equivalent functionality as the "Settings" tab in the "SCENE SETTINGS" dialog.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Design_renderManager.htm">Design.renderManager</a>, <a href="FlatPatternProduct_renderManager.htm">FlatPatternProduct.renderManager</a>, <a href="WorkingModel_renderManager.htm">WorkingModel.renderManager</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderSample_Sample.htm">Rendering Sample</a></td>
+<td class="api-list"><p>Demonstrates using the Rendering capabilities in the API. This starts a series of local renderings to generate a series of frames, where the camera is repositioned and a parameter is modified for each frame to create a dynamic animation. To use the sample, have a design open that contains a parameter named "Length". It can be a user or model parameter. The sample will modify this parameter from a value of 0.1 cm to 15 cm, but you can change these values by editing the values of the paramStartVal and paramEndVal variables on lines 90 and 91 of the sample. It expects a folder named "C:\Temp\RenderSample" to exist, and will fail if it doesn't. The rendered frames will be written to that folder.</p><p>An example rendering is shown below where <a href="../ExtraFiles/RenderSample.f3d">this file</a> was used. The parameter is modifying a move feature which results in changing the shape of an extrusion. The parameter could be driving anything and you could modify the code to edit more than one parameter. The result of this sample is a folder containing all of the rendered frames. You can process these to create an animation. The sample animation was created using GIMP.</p><div align="center"><img align="middle" alt="Render Animation Sample" border="0" src="../images/RenderAnimationSample.gif"/></div><br/></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version May 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(RenderManager%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">activateRenderWorkspace Method</h3><p class="api">Activates the Render workspace for this design. If the workspace is already active, nothing happens and it remains active.</p><pre class="api-code">"renderManager_var" is a variable referencing a
+RenderManager
+object.
+#include &lt;Fusion/Render/RenderManager.h&gt;
+returnValue = renderManager_var-&gt;
+activateRenderWorkspace
+();</pre><p class="api">Return Value: boolean - Returns true if the activation was succesful or if the Render workspace was already active.</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Render/RenderManager.h&gt;
+returnValue = adsk::fusion::RenderManager::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">inCanvasRendering Property</h3><p class="api">Provides access to the in-canvas rendering capabilities of Fusion. This uses the active viewport and the user will see the rendering as it takes place.</p><pre class="api-code">"renderManager_var" is a variable referencing a RenderManager object.
+#include &lt;Fusion/Render/RenderManager.h&gt;
+// Get the value of the property.
+Ptr&lt;InCanvasRendering&gt; propertyValue = renderManager_var-&gt;
+inCanvasRendering
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">isRenderWorkspaceActive Property</h3><p class="api">Returns if the Render workspace for this Design is active or not. Returns true if the workspace is active.</p><pre class="api-code">"renderManager_var" is a variable referencing a RenderManager object.
+#include &lt;Fusion/Render/RenderManager.h&gt;
+// Get the value of the property.
+boolean propertyValue = renderManager_var-&gt;
+isRenderWorkspaceActive
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"renderManager_var" is a variable referencing a RenderManager object.
+#include &lt;Fusion/Render/RenderManager.h&gt;
+// Get the value of the property.
+boolean propertyValue = renderManager_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"renderManager_var" is a variable referencing a RenderManager object.
+#include &lt;Fusion/Render/RenderManager.h&gt;
+// Get the value of the property.
+string propertyValue = renderManager_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentDesign Property</h3><p class="api">Returns the parent Design this RenderManager was obtained from.</p><pre class="api-code">"renderManager_var" is a variable referencing a RenderManager object.
+#include &lt;Fusion/Render/RenderManager.h&gt;
+// Get the value of the property.
+Ptr&lt;Product&gt; propertyValue = renderManager_var-&gt;
+parentDesign
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">renderEnvironments Property</h3><p class="api">Provides access to the provided environments and supports specifying a custom environment. This provides access to the same list of environments that you see in the "Environment Library" tab of the "SCENE SETTINGS" dialog.</p><pre class="api-code">"renderManager_var" is a variable referencing a RenderManager object.
+#include &lt;Fusion/Render/RenderManager.h&gt;
+// Get the value of the property.
+Ptr&lt;RenderEnvironments&gt; propertyValue = renderManager_var-&gt;
+renderEnvironments
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">rendering Property</h3><p class="api">Provides access to the local and cloud rendering capabilities of Fusion. In both cases, the rendering is done in a process external to Fusion, either a local or cloud rendering process.</p><pre class="api-code">"renderManager_var" is a variable referencing a RenderManager object.
+#include &lt;Fusion/Render/RenderManager.h&gt;
+// Get the value of the property.
+Ptr&lt;Rendering&gt; propertyValue = renderManager_var-&gt;
+rendering
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">sceneSettings Property</h3><p class="api">Returns the SceneSettings object that provides access to all of the settings that control how the scene is rendered. This provides equivalent functionality as the "Settings" tab in the "SCENE SETTINGS" dialog.</p><pre class="api-code">"renderManager_var" is a variable referencing a RenderManager object.
+#include &lt;Fusion/Render/RenderManager.h&gt;
+// Get the value of the property.
+Ptr&lt;SceneSettings&gt; propertyValue = renderManager_var-&gt;
+sceneSettings
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

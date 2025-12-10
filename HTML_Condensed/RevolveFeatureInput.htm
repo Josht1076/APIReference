@@ -1,0 +1,274 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/RevolveFeatureInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="RevolveFeatureInput" name="contextid"/>
+<meta content="RevolveFeatureInput Object" name="description"/>
+<meta content="GUID-951b7e6e-d57e-4d74-a7d3-1b382bcd157f" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>RevolveFeatureInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">RevolveFeatureInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/RevolveFeatureInput.h&gt;<h2 class="api">
+          Description
+        </h2>This class defines the methods and properties that pertain to the definition of a revolve feature.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="RevolveFeatureInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RevolveFeatureInput_setAngleExtent.htm">setAngleExtent</a></td>
+<td class="api-list">Defines the extent of the revolution to be at a specified angle. An angle and whether the extent is symmetric or only in one direction is specified. If it's not symmetric a positive or negative angle can be used to control the direction. If symmetric, the angle is the angle on one side so the entire angle of the revolution will be twice the specified angle. Use an angle of 360 deg or 2 pi radians to create a full revolve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RevolveFeatureInput_setOneSideToExtent.htm">setOneSideToExtent</a></td>
+<td class="api-list">Defines the extent of the revolve to be from the sketch or profile plane to the specified "To" face.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RevolveFeatureInput_setTwoSideAngleExtent.htm">setTwoSideAngleExtent</a></td>
+<td class="api-list">Defines the angle of the revolve to be to applied to both sides of the profile at the specified angles.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RevolveFeatureInput_setTwoSideToExtent.htm">setTwoSideToExtent</a></td>
+<td class="api-list">Defines the extents of the revolve to be from the sketch plane to specified faces in both directions. If the matchShape argument is true, the faces to revolve to are extended to fully intersect the revolve.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="RevolveFeatureInput_axis.htm">axis</a></td>
+<td class="api-list">Gets and sets the entity used to define the axis of revolution. The axis can be a sketch line, construction axis, linear edge or a face that defines an axis (cylinder, cone, torus, etc.). If it is not in the same plane as the profile, it is projected onto the profile plane.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RevolveFeatureInput_creationOccurrence.htm">creationOccurrence</a></td>
+<td class="api-list">In order for geometry to be transformed correctly, an Occurrence for creation needs to be specified when the Revolve is created based on geometry (e.g. a profile and/or face(s)) in another component AND (the Revolve) is not in the root component. The CreationOccurrence is analogous to the active occurrence in the UI</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RevolveFeatureInput_isProjectAxis.htm">isProjectAxis</a></td>
+<td class="api-list">Specifies if the axis should be projected on the same plane as the profile sketch plane or not.<br><br/> Setting this to true will use a projected axis, while setting it to false will keep it in its original location. This is initialized to false so the selected axis will be used in the feature.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="RevolveFeatureInput_isSolid.htm">isSolid</a></td>
+<td class="api-list">Specifies if the revolution should be created as a solid or surface. If it's a surface then there aren't any end caps and it's open. This is initialized to true so a solid will be created if it's not changed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RevolveFeatureInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RevolveFeatureInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RevolveFeatureInput_operation.htm">operation</a></td>
+<td class="api-list">Gets and sets the type of operation performed by the revolve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RevolveFeatureInput_participantBodies.htm">participantBodies</a></td>
+<td class="api-list">Gets and sets the list of bodies that will participate in the feature when the operation is a cut or intersection.<br/><br/> If this property has not been set, the default behavior is that all bodies that are intersected by the feature will participate.<br/><br/> This property can return null in the case where the feature has not been fully defined so that possible intersecting bodies can be computed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RevolveFeatureInput_profile.htm">profile</a></td>
+<td class="api-list">Gets and sets the profiles or planar faces used to define the shape of the revolve. This property can return or be set with a single Profile, a single planar face, or an ObjectCollection consisting of multiple profiles and planar faces. When an ObjectCollection is used all of the profiles and faces must be co-planar. This property returns null in the case where the feature is non-parametric.<br/><br/> To create a surface (non-solid) revolution, you can use the createOpenProfile and createBRepEdgeProfile methods of the Component object to create an open profile. The isSolid property of the RevolveFeatureInput property must also be False.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RevolveFeatureInput_targetBaseFeature.htm">targetBaseFeature</a></td>
+<td class="api-list">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature.<br/><br/> Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="RevolveFeatures_createInput.htm">RevolveFeatures.createInput</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SimpleRevolveFeatureSample_Sample.htm">Simple Revolve Feature Sample</a></td>
+<td class="api-list">Creates a new revolve feature, resulting in a new component.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(RevolveFeatureInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">axis Property</h3><p class="api">Gets and sets the entity used to define the axis of revolution. The axis can be a sketch line, construction axis, linear edge or a face that defines an axis (cylinder, cone, torus, etc.). If it is not in the same plane as the profile, it is projected onto the profile plane.</p><pre class="api-code">"revolveFeatureInput_var" is a variable referencing a RevolveFeatureInput object.
+#include &lt;Fusion/Features/RevolveFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = revolveFeatureInput_var-&gt;
+axis
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = revolveFeatureInput_var-&gt;
+axis
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/RevolveFeatureInput.h&gt;
+returnValue = adsk::fusion::RevolveFeatureInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">creationOccurrence Property</h3><p class="api">In order for geometry to be transformed correctly, an Occurrence for creation needs to be specified when the Revolve is created based on geometry (e.g. a profile and/or face(s)) in another component AND (the Revolve) is not in the root component. The CreationOccurrence is analogous to the active occurrence in the UI</p><pre class="api-code">"revolveFeatureInput_var" is a variable referencing a RevolveFeatureInput object.
+#include &lt;Fusion/Features/RevolveFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = revolveFeatureInput_var-&gt;
+creationOccurrence
+();
+// Set the value of the property, where value_var is an Occurrence.
+bool returnValue = revolveFeatureInput_var-&gt;
+creationOccurrence
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">isProjectAxis Property</h3><p class="api">Specifies if the axis should be projected on the same plane as the profile sketch plane or not. Setting this to true will use a projected axis, while setting it to false will keep it in its original location. This is initialized to false so the selected axis will be used in the feature.</p><pre class="api-code">"revolveFeatureInput_var" is a variable referencing a RevolveFeatureInput object.
+#include &lt;Fusion/Features/RevolveFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = revolveFeatureInput_var-&gt;
+isProjectAxis
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = revolveFeatureInput_var-&gt;
+isProjectAxis
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isSolid Property</h3><p class="api">Specifies if the revolution should be created as a solid or surface. If it's a surface then there aren't any end caps and it's open. This is initialized to true so a solid will be created if it's not changed.</p><pre class="api-code">"revolveFeatureInput_var" is a variable referencing a RevolveFeatureInput object.
+#include &lt;Fusion/Features/RevolveFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = revolveFeatureInput_var-&gt;
+isSolid
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = revolveFeatureInput_var-&gt;
+isSolid
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"revolveFeatureInput_var" is a variable referencing a RevolveFeatureInput object.
+#include &lt;Fusion/Features/RevolveFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = revolveFeatureInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"revolveFeatureInput_var" is a variable referencing a RevolveFeatureInput object.
+#include &lt;Fusion/Features/RevolveFeatureInput.h&gt;
+// Get the value of the property.
+string propertyValue = revolveFeatureInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">operation Property</h3><p class="api">Gets and sets the type of operation performed by the revolve.</p><pre class="api-code">"revolveFeatureInput_var" is a variable referencing a RevolveFeatureInput object.
+#include &lt;Fusion/Features/RevolveFeatureInput.h&gt;
+// Get the value of the property.
+FeatureOperations propertyValue = revolveFeatureInput_var-&gt;
+operation
+();
+// Set the value of the property, where value_var is a FeatureOperations.
+bool returnValue = revolveFeatureInput_var-&gt;
+operation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">participantBodies Property</h3><p class="api">Gets and sets the list of bodies that will participate in the feature when the operation is a cut or intersection. If this property has not been set, the default behavior is that all bodies that are intersected by the feature will participate. This property can return null in the case where the feature has not been fully defined so that possible intersecting bodies can be computed.</p><pre class="api-code">"revolveFeatureInput_var" is a variable referencing a RevolveFeatureInput object.
+#include &lt;Fusion/Features/RevolveFeatureInput.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;BRepBody&gt;&gt; propertyValue = revolveFeatureInput_var-&gt;
+participantBodies
+();
+// Set the value of the property, where value_var is a BRepBody.
+bool returnValue = revolveFeatureInput_var-&gt;
+participantBodies
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an array of type .</p><h3 class="api-member">profile Property</h3><p class="api">Gets and sets the profiles or planar faces used to define the shape of the revolve. This property can return or be set with a single Profile, a single planar face, or an ObjectCollection consisting of multiple profiles and planar faces. When an ObjectCollection is used all of the profiles and faces must be co-planar. This property returns null in the case where the feature is non-parametric. To create a surface (non-solid) revolution, you can use the createOpenProfile and createBRepEdgeProfile methods of the Component object to create an open profile. The isSolid property of the RevolveFeatureInput property must also be False.</p><pre class="api-code">"revolveFeatureInput_var" is a variable referencing a RevolveFeatureInput object.
+#include &lt;Fusion/Features/RevolveFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = revolveFeatureInput_var-&gt;
+profile
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = revolveFeatureInput_var-&gt;
+profile
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">setAngleExtent Method</h3><p class="api">Defines the extent of the revolution to be at a specified angle. An angle and whether the extent is symmetric or only in one direction is specified. If it's not symmetric a positive or negative angle can be used to control the direction. If symmetric, the angle is the angle on one side so the entire angle of the revolution will be twice the specified angle. Use an angle of 360 deg or 2 pi radians to create a full revolve.</p><pre class="api-code">"revolveFeatureInput_var" is a variable referencing a
+RevolveFeatureInput
+object.
+#include &lt;Fusion/Features/RevolveFeatureInput.h&gt;
+returnValue = revolveFeatureInput_var-&gt;
+setAngleExtent
+(isSymmetric, angle);</pre><p class="api">Return Value: boolean - Returns true if successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">isSymmetric</td><td class="api-list">boolean</td><td class="api-list">Set to 'true' for a revolve symmetrical about the profile plane</td></tr><tr><td class="api-list">angle</td><td class="api-list">ValueInput</td><td class="api-list">The ValueInput object that defines the angle of the revolution</td></tr></table><h3 class="api-member">setOneSideToExtent Method</h3><p class="api">Defines the extent of the revolve to be from the sketch or profile plane to the specified "To" face.</p><pre class="api-code">"revolveFeatureInput_var" is a variable referencing a
+RevolveFeatureInput
+object.
+#include &lt;Fusion/Features/RevolveFeatureInput.h&gt;
+// Uses no optional arguments.
+returnValue = revolveFeatureInput_var-&gt;
+setOneSideToExtent
+(toEntity);
+// Uses optional arguments.
+returnValue = revolveFeatureInput_var-&gt;
+setOneSideToExtent
+(toEntity, directionHint);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">toEntity</td><td class="api-list">Base</td><td class="api-list">The entity that defines the "to" extent. The valid types of entities can vary depending on the type of feature this is being used with. For a revolve it can be a BRepBody, BRepFace, BRepVertex, ConstructionPlane, or ConstructionPoint.</td></tr><tr><td class="api-list">directionHint</td><td class="api-list">Vector3D</td><td class="api-list">Specifies the direction of the revolve. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">setTwoSideAngleExtent Method</h3><p class="api">Defines the angle of the revolve to be to applied to both sides of the profile at the specified angles.</p><pre class="api-code">"revolveFeatureInput_var" is a variable referencing a
+RevolveFeatureInput
+object.
+#include &lt;Fusion/Features/RevolveFeatureInput.h&gt;
+returnValue = revolveFeatureInput_var-&gt;
+setTwoSideAngleExtent
+(angleOne, angleTwo);</pre><p class="api">Return Value: boolean - Returns true if successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">angleOne</td><td class="api-list">ValueInput</td><td class="api-list">The ValueInput object that defines the angle for the first side of the revolution</td></tr><tr><td class="api-list">angleTwo</td><td class="api-list">ValueInput</td><td class="api-list">The ValueInput object that defines the angle for the second side of the revolution</td></tr></table><h3 class="api-member">setTwoSideToExtent Method</h3><p class="api">Defines the extents of the revolve to be from the sketch plane to specified faces in both directions. If the matchShape argument is true, the faces to revolve to are extended to fully intersect the revolve.</p><pre class="api-code">"revolveFeatureInput_var" is a variable referencing a
+RevolveFeatureInput
+object.
+#include &lt;Fusion/Features/RevolveFeatureInput.h&gt;
+returnValue = revolveFeatureInput_var-&gt;
+setTwoSideToExtent
+(toEntityOne, toEntityTwo);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">toEntityOne</td><td class="api-list">Base</td><td class="api-list">The first entity that defines the "to" extent. The valid types of entities can vary depending on the type of feature this is being used with. For a revolve it can be a BRepBody, BRepFace, BRepVertex, ConstructionPlane, or ConstructionPoint.</td></tr><tr><td class="api-list">toEntityTwo</td><td class="api-list">Base</td><td class="api-list">The second entity that defines the "to" extent. The valid types of entities can vary depending on the type of feature this is being used with. For a revolve it can be a BRepBody, BRepFace, BRepVertex, ConstructionPlane, or ConstructionPoint.</td></tr></table><h3 class="api-member">targetBaseFeature Property</h3><p class="api">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature. Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</p><pre class="api-code">"revolveFeatureInput_var" is a variable referencing a RevolveFeatureInput object.
+#include &lt;Fusion/Features/RevolveFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BaseFeature&gt; propertyValue = revolveFeatureInput_var-&gt;
+targetBaseFeature
+();
+// Set the value of the property, where value_var is a BaseFeature.
+bool returnValue = revolveFeatureInput_var-&gt;
+targetBaseFeature
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

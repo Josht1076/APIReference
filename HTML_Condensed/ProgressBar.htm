@@ -1,0 +1,174 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ProgressBar.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="05/04/2024" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ProgressBar" name="contextid"/>
+<meta content="ProgressBar Object" name="description"/>
+<meta content="GUID-67AE6058-D6DE-4770-B360-AE6E9FACA2B1" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ProgressBar Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ProgressBar Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/UserInterface/ProgressBar.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access to the progress bar.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ProgressBar_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ProgressBar_hide.htm">hide</a></td>
+<td class="api-list">Hides the progress or busy bar. This should be used when the process has completed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ProgressBar_show.htm">show</a></td>
+<td class="api-list">This method displays a message in the progress bar in the lower-right corner of the Fusion window. The progress bar can be used to display a continually updated message indicating the progress of a process. The progress is determined by comparing the current progress value with the minimum and maximum values.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ProgressBar_showBusy.htm">showBusy</a></td>
+<td class="api-list">This method displays a message in the busy bar in the lower-right corner of the Fusion window. The busy bar can be used to display a continually updated message indicating the progress of a process. The busy bar is different from the progress bar, because it does not show a meter indicating the current progress. Instead is shows a continually moving bar to indicate processing without showing the current progress. This is useful in cases where the length of the process is unknown.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ProgressBar_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ProgressBar_message.htm">message</a></td>
+<td class="api-list">Gets and sets the message to display in the progress bar. The following symbols can be used to display values. "%p" is replaced by the percentage completed. "%v" is replaced by the current value. %m is replaced by the total number of steps. For example, the message "Processing section %v of %m." will result in the message "Processing section 1 of 10." to be displayed if the maximum value is 10 and the current value is 1.<br><br/> When a busy bar is displayed, only a simple message is supported and symbols are not supported.<br/><br/> If your process is running in the main thread of Fusion, you will need to call adsk.doEvents to give control back to Fusion, so it can update the UI.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ProgressBar_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ProgressBar_progressValue.htm">progressValue</a></td>
+<td class="api-list">Gets and sets the current progress value. This value determines the progress based on this value relative to the minimum and maximum values specified when the progress bar was created. This will also update the values displayed in the message string.<br/><br/> If your process is running in the main thread of Fusion, you will need to call adsk.doEvents to give control back to Fusion, so it can update the UI.<br/><br/> This value is ignored when a busy bar is displayed.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="UserInterface_progressBar.htm">UserInterface.progressBar</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version May 2024<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ProgressBar%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/UserInterface/ProgressBar.h&gt;
+returnValue = adsk::core::ProgressBar::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">hide Method</h3><p class="api">Hides the progress or busy bar. This should be used when the process has completed.</p><pre class="api-code">"progressBar_var" is a variable referencing a
+ProgressBar
+object.
+#include &lt;Core/UserInterface/ProgressBar.h&gt;
+returnValue = progressBar_var-&gt;
+hide
+();</pre><p class="api">Return Value: boolean - Returns true if successful.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"progressBar_var" is a variable referencing a ProgressBar object.
+#include &lt;Core/UserInterface/ProgressBar.h&gt;
+// Get the value of the property.
+boolean propertyValue = progressBar_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">message Property</h3><p class="api">Gets and sets the message to display in the progress bar. The following symbols can be used to display values. "%p" is replaced by the percentage completed. "%v" is replaced by the current value. %m is replaced by the total number of steps. For example, the message "Processing section %v of %m." will result in the message "Processing section 1 of 10." to be displayed if the maximum value is 10 and the current value is 1. When a busy bar is displayed, only a simple message is supported and symbols are not supported. If your process is running in the main thread of Fusion, you will need to call adsk.doEvents to give control back to Fusion, so it can update the UI.</p><pre class="api-code">"progressBar_var" is a variable referencing a ProgressBar object.
+#include &lt;Core/UserInterface/ProgressBar.h&gt;
+// Get the value of the property.
+string propertyValue = progressBar_var-&gt;
+message
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = progressBar_var-&gt;
+message
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"progressBar_var" is a variable referencing a ProgressBar object.
+#include &lt;Core/UserInterface/ProgressBar.h&gt;
+// Get the value of the property.
+string propertyValue = progressBar_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">progressValue Property</h3><p class="api">Gets and sets the current progress value. This value determines the progress based on this value relative to the minimum and maximum values specified when the progress bar was created. This will also update the values displayed in the message string. If your process is running in the main thread of Fusion, you will need to call adsk.doEvents to give control back to Fusion, so it can update the UI. This value is ignored when a busy bar is displayed.</p><pre class="api-code">"progressBar_var" is a variable referencing a ProgressBar object.
+#include &lt;Core/UserInterface/ProgressBar.h&gt;
+// Get the value of the property.
+integer propertyValue = progressBar_var-&gt;
+progressValue
+();
+// Set the value of the property, where value_var is an integer.
+bool returnValue = progressBar_var-&gt;
+progressValue
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an integer.</p><h3 class="api-member">show Method</h3><p class="api">This method displays a message in the progress bar in the lower-right corner of the Fusion window. The progress bar can be used to display a continually updated message indicating the progress of a process. The progress is determined by comparing the current progress value with the minimum and maximum values.</p><pre class="api-code">"progressBar_var" is a variable referencing a
+ProgressBar
+object.
+#include &lt;Core/UserInterface/ProgressBar.h&gt;
+// Uses no optional arguments.
+returnValue = progressBar_var-&gt;
+show
+(message, minimumValue, maximumValue);
+// Uses optional arguments.
+returnValue = progressBar_var-&gt;
+show
+(message, minimumValue, maximumValue, isModal);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">message</td><td class="api-list">string</td><td class="api-list">Specifies the message that will be displayed in the progress bar. The following symbols can be used to display values. "%p" is replaced by the percentage completed. "%v" is replaced by the current value. "%m" is replaced by the total number of steps. For example, the message "Processing section %v of %m." will result in the message "Processing section 1 of 10." to be displayed if the maximum value is 10 and the current value is 1. An empty string can be specified if you don't want a message and use only the progress meter.</td></tr><tr><td class="api-list">minimumValue</td><td class="api-list">integer</td><td class="api-list">Specifies the minimum value of the progress. This value and the maximum and progress values to compute the current percentage complete. This is the initial progress value when the progress bar is first displayed.</td></tr><tr><td class="api-list">maximumValue</td><td class="api-list">integer</td><td class="api-list">Specifies the maximum value of the progress. This value and the minimum and progress values are used to compute the current percentage completion.</td></tr><tr><td class="api-list">isModal</td><td class="api-list">boolean</td><td class="api-list">Specifies if the progress bar should be modal or not. If modal, the progress bar takes over the UI of Fusion, and the user cannot interact with any of the Fusion user interface. You need to be careful when using a modal dialog to make sure you hide the progress bar when you're finished or have an error condition that causes you to abort because otherwise, the user will need to kill the Fusion process. This is an optional argument whose default value is False.</td></tr></table><h3 class="api-member">showBusy Method</h3><p class="api">This method displays a message in the busy bar in the lower-right corner of the Fusion window. The busy bar can be used to display a continually updated message indicating the progress of a process. The busy bar is different from the progress bar, because it does not show a meter indicating the current progress. Instead is shows a continually moving bar to indicate processing without showing the current progress. This is useful in cases where the length of the process is unknown.</p><pre class="api-code">"progressBar_var" is a variable referencing a
+ProgressBar
+object.
+#include &lt;Core/UserInterface/ProgressBar.h&gt;
+// Uses no optional arguments.
+returnValue = progressBar_var-&gt;
+showBusy
+(message);
+// Uses optional arguments.
+returnValue = progressBar_var-&gt;
+showBusy
+(message, isModal);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">message</td><td class="api-list">string</td><td class="api-list">Specifies the message that will be displayed in the busy bar. An empty string can be specified if you don't want a message and use only the busy meter.</td></tr><tr><td class="api-list">isModal</td><td class="api-list">boolean</td><td class="api-list">Specifies if the busy bar should be modal or not. If modal, the busy bar takes over the UI of Fusion, and the user cannot interact with any of the Fusion user interface. You need to be careful when using a modal dialog to make sure you hide the busy bar when you're finished or have an error condition that causes you to abort because otherwise, the user will need to kill the Fusion process. This is an optional argument whose default value is False.</td></tr></table></body>
+</html>

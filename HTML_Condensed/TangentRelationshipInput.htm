@@ -1,0 +1,134 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/TangentRelationshipInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="09/05/2022" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="TangentRelationshipInput" name="contextid"/>
+<meta content="TangentRelationshipInput Object" name="description"/>
+<meta content="GUID-5E9E3878-6EA5-408A-8936-5947123DFDDA" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>TangentRelationshipInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">TangentRelationshipInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Components/TangentRelationshipInput.h&gt;<h2 class="api">
+          Description
+        </h2>Defines all of the information required to create a new tangent relationship. This object provides equivalent functionality to the Tangent Relationship command dialog in that it gathers the required information to create a tangent relationship.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="TangentRelationshipInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="TangentRelationshipInput_faceOne.htm">faceOne</a></td>
+<td class="api-list">Gets and sets the first BRepFace object that will remain tangent to the set of specified tangent faces.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TangentRelationshipInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TangentRelationshipInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="TangentRelationshipInput_tangentFaces.htm">tangentFaces</a></td>
+<td class="api-list">Gets and sets a single BRepFace object that is part of the body that faceOne will remain tangent to. All of the faces of the body will be used when computing the tangent relationship.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="TangentRelationships_createInput.htm">TangentRelationships.createInput</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version May 2022<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(TangentRelationshipInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Components/TangentRelationshipInput.h&gt;
+returnValue = adsk::fusion::TangentRelationshipInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">faceOne Property</h3><p class="api">Gets and sets the first BRepFace object that will remain tangent to the set of specified tangent faces.</p><pre class="api-code">"tangentRelationshipInput_var" is a variable referencing a TangentRelationshipInput object.
+#include &lt;Fusion/Components/TangentRelationshipInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BRepFace&gt; propertyValue = tangentRelationshipInput_var-&gt;
+faceOne
+();
+// Set the value of the property, where value_var is a BRepFace.
+bool returnValue = tangentRelationshipInput_var-&gt;
+faceOne
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"tangentRelationshipInput_var" is a variable referencing a TangentRelationshipInput object.
+#include &lt;Fusion/Components/TangentRelationshipInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = tangentRelationshipInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"tangentRelationshipInput_var" is a variable referencing a TangentRelationshipInput object.
+#include &lt;Fusion/Components/TangentRelationshipInput.h&gt;
+// Get the value of the property.
+string propertyValue = tangentRelationshipInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">tangentFaces Property</h3><p class="api">Gets and sets a single BRepFace object that is part of the body that faceOne will remain tangent to. All of the faces of the body will be used when computing the tangent relationship.</p><pre class="api-code">"tangentRelationshipInput_var" is a variable referencing a TangentRelationshipInput object.
+#include &lt;Fusion/Components/TangentRelationshipInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = tangentRelationshipInput_var-&gt;
+tangentFaces
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = tangentRelationshipInput_var-&gt;
+tangentFaces
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

@@ -1,0 +1,277 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/PatchFeatureInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="23/6/2016" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="PatchFeatureInput" name="contextid"/>
+<meta content="PatchFeatureInput Object" name="description"/>
+<meta content="GUID-2DF9786A-A0F8-4A66-9123-FAF48210FAB6" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>PatchFeatureInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">PatchFeatureInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/PatchFeatureInput.h&gt;<h2 class="api">
+          Description
+        </h2>This class defines the methods and properties that pertain to the definition of a patch feature.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureInput_getContinuity.htm">getContinuity</a></td>
+<td class="api-list">Gets the continuity used for each edge in the boundary.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureInput_setContinuity.htm">setContinuity</a></td>
+<td class="api-list">Sets the continuity to use for each edge in the boundary. The arrays for the arguments correspond to B-Rep edges in the boundary. You can use the getContinuity method to get the list of edges to know their order. This order applies to the arrays provided for the arguments.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureInput_boundaryCurve.htm">boundaryCurve</a></td>
+<td class="api-list">Gets and sets the input geometry that will be used to define the boundary. This can be a sketch profile, a single sketch curve, a single B-Rep edge, an ObjectCollection, or a Path object.<br><br/> If a single open sketch curve or B-Rep edge is input, Fusion will automatically find connected sketch curves or B-Rep edges to define a closed loop.<br/><br/> If an ObjectCollection is used as input, it must be a set of curves that define a closed shape.<br/><br/> If a Path is used as input, it must define a closed shape.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureInput_continuity.htm">continuity</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Gets and sets the type of surface continuity to use when matching boundary edges to face edges. When a new PatchFeatureInput is created, this is initialized to ConnectedSurfaceContinuityType. This value is ignored when creating a patch for sketch curves.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureInput_creationOccurrence.htm">creationOccurrence</a></td>
+<td class="api-list">For geometry to be transformed correctly, an Occurrence for creation needs to be specified when the Patch feature is created based on geometry (e.g., a profile, edges, faces) in another component AND (the Patch feature) is not in the root component. The CreationOccurrence is analogous to the active occurrence in the UI</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureInput_groupContinuity.htm">groupContinuity</a></td>
+<td class="api-list">Gets and sets the type of surface continuity to use for all edges when the isGroupEdges property is true. The continuity is used to determine how the patch connects to any B-Rep edges in the boundary. It is ignored for any sketch curves in the boundary. The property defaults to ConnectedSurfaceContinuityType. The value of this property is ignored if the isGroupEdges property is false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureInput_groupIsContinuityDirectionFlipped.htm">groupIsContinuityDirectionFlipped</a></td>
+<td class="api-list">Gets and sets the continuity direction for all edges when the isGroupEdges property is true. It is ignored for any sketch curves in the boundary. The property defaults to false. The value of this property is ignored if the isGroupEdges property is false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureInput_groupWeight.htm">groupWeight</a></td>
+<td class="api-list">Gets and sets the weight to use for all edges when the isGroupEdges property is true. It is ignored for any sketch curves in the boundary. The property defaults to 0.5. The value of this property is ignored if the isGroupEdges property is false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureInput_interiorRailsAndPoints.htm">interiorRailsAndPoints</a></td>
+<td class="api-list">Gets and sets any interior curves or points the patch should fit through. Valid entities include object collections of connected curves, paths, sketch curves, sketch points, B-Rep edges, and construction points.<br/><br/> When getting this property, the returned ObjectCollection can contain individual edges, sketch curves, sketch points, construction points, vertices, and ObjectCollection objects that represent a group of the curves and points listed above.<br/><br/> Can be set to null to remove any interior rails and points from the patch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureInput_isGroupEdges.htm">isGroupEdges</a></td>
+<td class="api-list">Gets and sets if the edges in the boundary curve are treated as a group, and they all use the same continuity. If this property is True (which is the default), the continuity property controls the continuity for all edges. If this property is false; the continuity is set for each edge using the setContinuity method.<br/><br/> When this property is set to true, the continuity and weight of the first edge will be used for all edges. When set to false, each edge will initially have the same continuity and weight. This is typically set to false as a side-effect of calling the setContinuity method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureInput_operation.htm">operation</a></td>
+<td class="api-list">Gets and sets the type of operation performed by the patch feature. Only 'NewBodyFeatureOperation' and 'NewComponentFeatureOperation' are valid operations for patch features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureInput_targetBaseFeature.htm">targetBaseFeature</a></td>
+<td class="api-list">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature.<br/><br/> Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="PatchFeatures_createInput.htm">PatchFeatures.createInput</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureSample_Sample.htm">Patch Feature API Sample</a></td>
+<td class="api-list">Demonstrates creating a new patch feature.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version July 2016<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(PatchFeatureInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">boundaryCurve Property</h3><p class="api">Gets and sets the input geometry that will be used to define the boundary. This can be a sketch profile, a single sketch curve, a single B-Rep edge, an ObjectCollection, or a Path object. If a single open sketch curve or B-Rep edge is input, Fusion will automatically find connected sketch curves or B-Rep edges to define a closed loop. If an ObjectCollection is used as input, it must be a set of curves that define a closed shape. If a Path is used as input, it must define a closed shape.</p><pre class="api-code">"patchFeatureInput_var" is a variable referencing a PatchFeatureInput object.
+#include &lt;Fusion/Features/PatchFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = patchFeatureInput_var-&gt;
+boundaryCurve
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = patchFeatureInput_var-&gt;
+boundaryCurve
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/PatchFeatureInput.h&gt;
+returnValue = adsk::fusion::PatchFeatureInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">continuity Property</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Gets and sets the type of surface continuity to use when matching boundary edges to face edges. When a new PatchFeatureInput is created, this is initialized to ConnectedSurfaceContinuityType. This value is ignored when creating a patch for sketch curves.</p><pre class="api-code">"patchFeatureInput_var" is a variable referencing a PatchFeatureInput object.
+#include &lt;Fusion/Features/PatchFeatureInput.h&gt;
+// Get the value of the property.
+SurfaceContinuityTypes propertyValue = patchFeatureInput_var-&gt;
+continuity
+();
+// Set the value of the property, where value_var is a SurfaceContinuityTypes.
+bool returnValue = patchFeatureInput_var-&gt;
+continuity
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">creationOccurrence Property</h3><p class="api">For geometry to be transformed correctly, an Occurrence for creation needs to be specified when the Patch feature is created based on geometry (e.g., a profile, edges, faces) in another component AND (the Patch feature) is not in the root component. The CreationOccurrence is analogous to the active occurrence in the UI</p><pre class="api-code">"patchFeatureInput_var" is a variable referencing a PatchFeatureInput object.
+#include &lt;Fusion/Features/PatchFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = patchFeatureInput_var-&gt;
+creationOccurrence
+();
+// Set the value of the property, where value_var is an Occurrence.
+bool returnValue = patchFeatureInput_var-&gt;
+creationOccurrence
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">getContinuity Method</h3><p class="api">Gets the continuity used for each edge in the boundary.</p><pre class="api-code">#include &lt;Fusion/Features/PatchFeatureInput.h
+// Declare the output arguments.
+BRepEdge[] edges;
+integer[] continuity;
+double[] weight;
+boolean[] isContinuityDirectionFlipped;
+boolean returnValue = patchFeatureInput_var-&gt;
+getContinuity
+(edges, continuity, weight, isContinuityDirectionFlipped);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">edges</td><td class="api-list">BRepEdge[]</td><td class="api-list">Output array containing all of the BRepEdge objects in the boundary.</td></tr><tr><td class="api-list">continuity</td><td class="api-list">integer[]</td><td class="api-list">Output array the same size as the edges array that defines the continuity to apply to the edge in the same index in the edges array. The values are obtained from the SurfaceContinuityTypes enum and passed in as an integers.</td></tr><tr><td class="api-list">weight</td><td class="api-list">double[]</td><td class="api-list">Output array the same size as the edges array that defines the weight applied to the edge in the same index in the edges array. If the continuity of an edge is ConnectedSurfaceContinuityType, the weight value should be ignored.</td></tr><tr><td class="api-list">isContinuityDirectionFlipped</td><td class="api-list">boolean[]</td><td class="api-list">Output array the same size as the edges array that defines which of the two faces the edge connects to is used in computing the continuity direction. If the continuity is ConnectedSurfaceContinuityType or the edge is an open edge and only connected to a single face, the value should be ignored. If false, the face associated with the first co-edge returned by the edge is used.</td></tr></table><h3 class="api-member">groupContinuity Property</h3><p class="api">Gets and sets the type of surface continuity to use for all edges when the isGroupEdges property is true. The continuity is used to determine how the patch connects to any B-Rep edges in the boundary. It is ignored for any sketch curves in the boundary. The property defaults to ConnectedSurfaceContinuityType. The value of this property is ignored if the isGroupEdges property is false.</p><pre class="api-code">"patchFeatureInput_var" is a variable referencing a PatchFeatureInput object.
+#include &lt;Fusion/Features/PatchFeatureInput.h&gt;
+// Get the value of the property.
+SurfaceContinuityTypes propertyValue = patchFeatureInput_var-&gt;
+groupContinuity
+();
+// Set the value of the property, where value_var is a SurfaceContinuityTypes.
+bool returnValue = patchFeatureInput_var-&gt;
+groupContinuity
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">groupIsContinuityDirectionFlipped Property</h3><p class="api">Gets and sets the continuity direction for all edges when the isGroupEdges property is true. It is ignored for any sketch curves in the boundary. The property defaults to false. The value of this property is ignored if the isGroupEdges property is false.</p><pre class="api-code">"patchFeatureInput_var" is a variable referencing a PatchFeatureInput object.
+#include &lt;Fusion/Features/PatchFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = patchFeatureInput_var-&gt;
+groupIsContinuityDirectionFlipped
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = patchFeatureInput_var-&gt;
+groupIsContinuityDirectionFlipped
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">groupWeight Property</h3><p class="api">Gets and sets the weight to use for all edges when the isGroupEdges property is true. It is ignored for any sketch curves in the boundary. The property defaults to 0.5. The value of this property is ignored if the isGroupEdges property is false.</p><pre class="api-code">"patchFeatureInput_var" is a variable referencing a PatchFeatureInput object.
+#include &lt;Fusion/Features/PatchFeatureInput.h&gt;
+// Get the value of the property.
+double propertyValue = patchFeatureInput_var-&gt;
+groupWeight
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = patchFeatureInput_var-&gt;
+groupWeight
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">interiorRailsAndPoints Property</h3><p class="api">Gets and sets any interior curves or points the patch should fit through. Valid entities include object collections of connected curves, paths, sketch curves, sketch points, B-Rep edges, and construction points. When getting this property, the returned ObjectCollection can contain individual edges, sketch curves, sketch points, construction points, vertices, and ObjectCollection objects that represent a group of the curves and points listed above. Can be set to null to remove any interior rails and points from the patch.</p><pre class="api-code">"patchFeatureInput_var" is a variable referencing a PatchFeatureInput object.
+#include &lt;Fusion/Features/PatchFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ObjectCollection&gt; propertyValue = patchFeatureInput_var-&gt;
+interiorRailsAndPoints
+();
+// Set the value of the property, where value_var is an ObjectCollection.
+bool returnValue = patchFeatureInput_var-&gt;
+interiorRailsAndPoints
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">isGroupEdges Property</h3><p class="api">Gets and sets if the edges in the boundary curve are treated as a group, and they all use the same continuity. If this property is True (which is the default), the continuity property controls the continuity for all edges. If this property is false; the continuity is set for each edge using the setContinuity method. When this property is set to true, the continuity and weight of the first edge will be used for all edges. When set to false, each edge will initially have the same continuity and weight. This is typically set to false as a side-effect of calling the setContinuity method.</p><pre class="api-code">"patchFeatureInput_var" is a variable referencing a PatchFeatureInput object.
+#include &lt;Fusion/Features/PatchFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = patchFeatureInput_var-&gt;
+isGroupEdges
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = patchFeatureInput_var-&gt;
+isGroupEdges
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"patchFeatureInput_var" is a variable referencing a PatchFeatureInput object.
+#include &lt;Fusion/Features/PatchFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = patchFeatureInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"patchFeatureInput_var" is a variable referencing a PatchFeatureInput object.
+#include &lt;Fusion/Features/PatchFeatureInput.h&gt;
+// Get the value of the property.
+string propertyValue = patchFeatureInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">operation Property</h3><p class="api">Gets and sets the type of operation performed by the patch feature. Only 'NewBodyFeatureOperation' and 'NewComponentFeatureOperation' are valid operations for patch features.</p><pre class="api-code">"patchFeatureInput_var" is a variable referencing a PatchFeatureInput object.
+#include &lt;Fusion/Features/PatchFeatureInput.h&gt;
+// Get the value of the property.
+FeatureOperations propertyValue = patchFeatureInput_var-&gt;
+operation
+();
+// Set the value of the property, where value_var is a FeatureOperations.
+bool returnValue = patchFeatureInput_var-&gt;
+operation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">setContinuity Method</h3><p class="api">Sets the continuity to use for each edge in the boundary. The arrays for the arguments correspond to B-Rep edges in the boundary. You can use the getContinuity method to get the list of edges to know their order. This order applies to the arrays provided for the arguments.</p><pre class="api-code">"patchFeatureInput_var" is a variable referencing a
+PatchFeatureInput
+object.
+#include &lt;Fusion/Features/PatchFeatureInput.h&gt;
+returnValue = patchFeatureInput_var-&gt;
+setContinuity
+(continuity, weight, isContinuityDirectionFlipped);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">continuity</td><td class="api-list">integer[]</td><td class="api-list">An array whose size of the number of B-Rep edges in the boundary. You can use the getContinuity method to get the list of edges, so you know the number and order of the edges. The continuity array defines the type of continuity to apply to the edge at the same index. The values are obtained from the SurfaceContinuityTypes enum and passed in as an integer.</td></tr><tr><td class="api-list">weight</td><td class="api-list">double[]</td><td class="api-list">An array whose size is the number of B-Rep edges in the boundary. You can use the getContinuity method to get the list of edges, so you know the number and order of the edges. The weight array defines the weight to apply to the edge at the same index. If the continuity of an edge is ConnectedSurfaceContinuityType, the weight value is ignored.</td></tr><tr><td class="api-list">isContinuityDirectionFlipped</td><td class="api-list">boolean[]</td><td class="api-list">An array whose size is the number of B-Rep edges in the boundary. You can use the getContinuity method to get the list of edges, so you know the number and order of the edges. The isContinuityDirectionFlipped array defines which of the two faces the edge connects to and is used in computing the continuity direction. If the continuity is ConnectedSurfaceContinuityType, or the edge is an open edge and only connected to a single face, the value is ignored. If false, the face associated with the first co-edge returned by the edge is used.</td></tr></table><h3 class="api-member">targetBaseFeature Property</h3><p class="api">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature. Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</p><pre class="api-code">"patchFeatureInput_var" is a variable referencing a PatchFeatureInput object.
+#include &lt;Fusion/Features/PatchFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BaseFeature&gt; propertyValue = patchFeatureInput_var-&gt;
+targetBaseFeature
+();
+// Set the value of the property, where value_var is a BaseFeature.
+bool returnValue = patchFeatureInput_var-&gt;
+targetBaseFeature
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

@@ -1,0 +1,165 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ArrangeFeatureInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="17/12/2024" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ArrangeFeatureInput" name="contextid"/>
+<meta content="ArrangeFeatureInput Object" name="description"/>
+<meta content="GUID-DCC4F962-0811-4F73-808B-2FD4ADF7CC72" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ArrangeFeatureInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ArrangeFeatureInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Arrange/ArrangeFeatureInput.h&gt;<h2 class="api">
+          Description
+        </h2>The ArrangeFeatureInput object is the base class for the different types of input objects used to create an arrange feature.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeFeatureInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeFeatureInput_set3DEnvelope.htm">set3DEnvelope</a></td>
+<td class="api-list">Defines a 3D envelope input. Only a single envelope input can exist at time. Calling this method will cause any existing envelope input object to be invalid.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeFeatureInput_setPlaneEnvelope.htm">setPlaneEnvelope</a></td>
+<td class="api-list">Defines an envelope input defined by a plane for the arrange feature. Only a single envelope input can exist at a time. Calling this method will cause any existing envelope object input that has been created for this input to be invalid.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeFeatureInput_setProfileOrFaceEnvelope.htm">setProfileOrFaceEnvelope</a></td>
+<td class="api-list">Defines an envelope defined by one or more profiles or planar faces. Only a single envelope input can exist at time. Calling this method will cause any existing envelope input object to be invalid.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeFeatureInput_arrangeComponents.htm">arrangeComponents</a></td>
+<td class="api-list">Returns the ArrangeComponents object associated with this input. Use this to add and define the components that will be arranged.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeFeatureInput_definition.htm">definition</a></td>
+<td class="api-list">Returns a definition input object that provides access to the information to define an arrange feature. This will return different types of definition inputs depending on the solver type specified when creating the input.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeFeatureInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeFeatureInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeFeatureInput_solverType.htm">solverType</a></td>
+<td class="api-list">Returns the arrange feature solver type defined by this input.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ArrangeFeatures_createInput.htm">ArrangeFeatures.createInput</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2025<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ArrangeFeatureInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">arrangeComponents Property</h3><p class="api">Returns the ArrangeComponents object associated with this input. Use this to add and define the components that will be arranged.</p><pre class="api-code">"arrangeFeatureInput_var" is a variable referencing an ArrangeFeatureInput object.
+#include &lt;Fusion/Arrange/ArrangeFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ArrangeComponents&gt; propertyValue = arrangeFeatureInput_var-&gt;
+arrangeComponents
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Arrange/ArrangeFeatureInput.h&gt;
+returnValue = adsk::fusion::ArrangeFeatureInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">definition Property</h3><p class="api">Returns a definition input object that provides access to the information to define an arrange feature. This will return different types of definition inputs depending on the solver type specified when creating the input.</p><pre class="api-code">"arrangeFeatureInput_var" is a variable referencing an ArrangeFeatureInput object.
+#include &lt;Fusion/Arrange/ArrangeFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ArrangeDefinitionInput&gt; propertyValue = arrangeFeatureInput_var-&gt;
+definition
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"arrangeFeatureInput_var" is a variable referencing an ArrangeFeatureInput object.
+#include &lt;Fusion/Arrange/ArrangeFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = arrangeFeatureInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"arrangeFeatureInput_var" is a variable referencing an ArrangeFeatureInput object.
+#include &lt;Fusion/Arrange/ArrangeFeatureInput.h&gt;
+// Get the value of the property.
+string propertyValue = arrangeFeatureInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">set3DEnvelope Method</h3><p class="api">Defines a 3D envelope input. Only a single envelope input can exist at time. Calling this method will cause any existing envelope input object to be invalid.</p><pre class="api-code">"arrangeFeatureInput_var" is a variable referencing an
+ArrangeFeatureInput
+object.
+#include &lt;Fusion/Arrange/ArrangeFeatureInput.h&gt;
+returnValue = arrangeFeatureInput_var-&gt;
+set3DEnvelope
+(plane, length, width, height);</pre><p class="api">Return Value: Arrange3DEnvelopeInput - Returns the created Arrange3DEnvelopeInput object or null if the creation fails.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">plane</td><td class="api-list">ConstructionPlane</td><td class="api-list">The Construction plane the envelope will be on.</td></tr><tr><td class="api-list">length</td><td class="api-list">ValueInput</td><td class="api-list">The length of the envelope. This is the size of the envelope as measured along the X axis of the specified construction plane. This value will become a parameter when the arrangement is created. If the ValueInput is created using a real number it is in centimeters. If you use a string, it is evaluated the same as a value would be in the command dialog and uses the current document units. For example, if the document units are inch and you specific "0.25" it will result in 1/4 inch clearance. Using a string, you can also specify the units as part of the expression, such as "0.25 in + 2 mm". And you can define equations like "PartSize + 2 mm" where "PartSize" is an existing parameter.</td></tr><tr><td class="api-list">width</td><td class="api-list">ValueInput</td><td class="api-list">The width of the envelope. This is the size of the envelope as measured along the Y axis of the specified construction plane. This value will become a parameter when the arrangement is created. If the ValueInput is created using a real number it is in centimeters. If you use a string, it is evaluated the same as a value would be in the command dialog and uses the current document units. For example, if the document units are inch and you specific "0.25" it will result in 1/4 inch clearance. Using a string, you can also specify the units as part of the expression, such as "0.25 in + 2 mm". And you can define equations like "PartSize + 2 mm" where "PartSize" is an existing parameter.</td></tr><tr><td class="api-list">height</td><td class="api-list">ValueInput</td><td class="api-list">The height of the envelope. This is the size of the envelope as measured along the Z axis of the specified construction plane. This value will become a parameter when the arrangement is created. If the ValueInput is created using a real number it is in centimeters. If you use a string, it is evaluated the same as a value would be in the command dialog and uses the current document units. For example, if the document units are inch and you specific "0.25" it will result in 1/4 inch clearance. Using a string, you can also specify the units as part of the expression, such as "0.25 in + 2 mm". And you can define equations like "PartSize + 2 mm" where "PartSize" is an existing parameter.</td></tr></table><h3 class="api-member">setPlaneEnvelope Method</h3><p class="api">Defines an envelope input defined by a plane for the arrange feature. Only a single envelope input can exist at a time. Calling this method will cause any existing envelope object input that has been created for this input to be invalid.</p><pre class="api-code">"arrangeFeatureInput_var" is a variable referencing an
+ArrangeFeatureInput
+object.
+#include &lt;Fusion/Arrange/ArrangeFeatureInput.h&gt;
+returnValue = arrangeFeatureInput_var-&gt;
+setPlaneEnvelope
+(plane, length, width);</pre><p class="api">Return Value: Arrange2DPlaneEnvelopeInput - Returns the created Arrange2DPlaneEnvelopeInput object or null if the creation fails.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">plane</td><td class="api-list">ConstructionPlane</td><td class="api-list">The Construction plane the envelope will be on.</td></tr><tr><td class="api-list">length</td><td class="api-list">ValueInput</td><td class="api-list">The length of the envelope. This is the size of the envelope as measured along the X axis of the specified construction plane. This value will become a parameter when the arrangement is created. If the ValueInput is created using a real number it is in centimeters. If you use a string, it is evaluated the same as a value would be in the command dialog and uses the current document units. For example, if the document units are inch and you specific "0.25" it will result in 1/4 inch clearance. Using a string, you can also specify the units as part of the expression, such as "0.25 in + 2 mm". And you can define equations like "PartSize + 2 mm" where "PartSize" is an existing parameter.</td></tr><tr><td class="api-list">width</td><td class="api-list">ValueInput</td><td class="api-list">The width of the envelope. This is the size of the envelope as measured along the Y axis of the specified construction plane. This value will become a parameter when the arrangement is created. If the ValueInput is created using a real number it is in centimeters. If you use a string, it is evaluated the same as a value would be in the command dialog and uses the current document units. For example, if the document units are inch and you specific "0.25" it will result in 1/4 inch clearance. Using a string, you can also specify the units as part of the expression, such as "0.25 in + 2 mm". And you can define equations like "PartSize + 2 mm" where "PartSize" is an existing parameter.</td></tr></table><h3 class="api-member">setProfileOrFaceEnvelope Method</h3><p class="api">Defines an envelope defined by one or more profiles or planar faces. Only a single envelope input can exist at time. Calling this method will cause any existing envelope input object to be invalid.</p><pre class="api-code">"arrangeFeatureInput_var" is a variable referencing an
+ArrangeFeatureInput
+object.
+#include &lt;Fusion/Arrange/ArrangeFeatureInput.h&gt;
+returnValue = arrangeFeatureInput_var-&gt;
+setProfileOrFaceEnvelope
+(profilesOrFaces);</pre><p class="api">Return Value: Arrange2DProfileOrFaceEnvelopeInput - Returns the created Arrange2DProfileOrFaceEnvelopeInput object or null if the creation fails.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">profilesOrFaces</td><td class="api-list">Base[]</td><td class="api-list">An array of Profile and planar BRepFace objects that define the shape of the available envelopes.</td></tr></table><h3 class="api-member">solverType Property</h3><p class="api">Returns the arrange feature solver type defined by this input.</p><pre class="api-code">"arrangeFeatureInput_var" is a variable referencing an ArrangeFeatureInput object.
+#include &lt;Fusion/Arrange/ArrangeFeatureInput.h&gt;
+// Get the value of the property.
+ArrangeSolverTypes propertyValue = arrangeFeatureInput_var-&gt;
+solverType
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p></body>
+</html>

@@ -1,0 +1,161 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/MeasureResults.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="28/11/2017" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="MeasureResults" name="contextid"/>
+<meta content="MeasureResults Object" name="description"/>
+<meta content="GUID-0BB9202B-604B-433F-A4DB-058FA83F6DF4" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>MeasureResults Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">MeasureResults Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Application/MeasureResults.h&gt;<h2 class="api">
+          Description
+        </h2>Provides measurement results from the various measurement methods available on the MeasureManager object.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeasureResults_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeasureResults_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeasureResults_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeasureResults_positionOne.htm">positionOne</a></td>
+<td class="api-list">For a distance measurement, this is the point on the first entity where the measurement was made from. For an angle measurement this is one of the three points defining the angle.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeasureResults_positionThree.htm">positionThree</a></td>
+<td class="api-list">This point is only used for angle measurements and is one of the three points defining the angle.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeasureResults_positionTwo.htm">positionTwo</a></td>
+<td class="api-list">For a distance measurement, this is the point on the second entity where the measurement was made to. For an angle measurement this is one of the three points defining the angle.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeasureResults_value.htm">value</a></td>
+<td class="api-list">The measurement value. If the measurement is a distance this value will be in centimeters. If it's an angle then it will be in radians.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="MeasureManager_measureAngle.htm">MeasureManager.measureAngle</a>, <a href="MeasureManager_measureMinimumDistance.htm">MeasureManager.measureMinimumDistance</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeasureSample_Sample.htm">Measure Sample</a></td>
+<td class="api-list">Measure related functions</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version December 2017<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(MeasureResults%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Application/MeasureResults.h&gt;
+returnValue = adsk::core::MeasureResults::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"measureResults_var" is a variable referencing a MeasureResults object.
+#include &lt;Core/Application/MeasureResults.h&gt;
+// Get the value of the property.
+boolean propertyValue = measureResults_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"measureResults_var" is a variable referencing a MeasureResults object.
+#include &lt;Core/Application/MeasureResults.h&gt;
+// Get the value of the property.
+string propertyValue = measureResults_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">positionOne Property</h3><p class="api">For a distance measurement, this is the point on the first entity where the measurement was made from. For an angle measurement this is one of the three points defining the angle.</p><pre class="api-code">"measureResults_var" is a variable referencing a MeasureResults object.
+#include &lt;Core/Application/MeasureResults.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = measureResults_var-&gt;
+positionOne
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">positionThree Property</h3><p class="api">This point is only used for angle measurements and is one of the three points defining the angle.</p><pre class="api-code">"measureResults_var" is a variable referencing a MeasureResults object.
+#include &lt;Core/Application/MeasureResults.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = measureResults_var-&gt;
+positionThree
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">positionTwo Property</h3><p class="api">For a distance measurement, this is the point on the second entity where the measurement was made to. For an angle measurement this is one of the three points defining the angle.</p><pre class="api-code">"measureResults_var" is a variable referencing a MeasureResults object.
+#include &lt;Core/Application/MeasureResults.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = measureResults_var-&gt;
+positionTwo
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">value Property</h3><p class="api">The measurement value. If the measurement is a distance this value will be in centimeters. If it's an angle then it will be in radians.</p><pre class="api-code">"measureResults_var" is a variable referencing a MeasureResults object.
+#include &lt;Core/Application/MeasureResults.h&gt;
+// Get the value of the property.
+double propertyValue = measureResults_var-&gt;
+value
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p></body>
+</html>

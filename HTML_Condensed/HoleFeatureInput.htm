@@ -1,0 +1,383 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/HoleFeatureInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="HoleFeatureInput" name="contextid"/>
+<meta content="HoleFeatureInput Object" name="description"/>
+<meta content="GUID-fb8debe0-8955-4a24-9980-4d4a2669b379" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>HoleFeatureInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">HoleFeatureInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/HoleFeatureInput.h&gt;<h2 class="api">
+          Description
+        </h2>This class defines the methods and properties that pertain to the definition of a hole feature.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_setAllExtent.htm">setAllExtent</a></td>
+<td class="api-list">Defines the extent of the hole to be through-all. The direction can be either positive, negative.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_setDistanceExtent.htm">setDistanceExtent</a></td>
+<td class="api-list">Defines the depth of the hole using a specified distance.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_setLengthAndOffset.htm">setLengthAndOffset</a></td>
+<td class="api-list">Sets the length and offset of the thread of a tapped hole.<br><br/> This method is only used when creating a tapped hole, which means the setToTappedHole method has been called. Otherwise calling this method will fail.<br/><br/> By default the isFullLength property is true which means the thread is the full length of the hole and there is no offset. Calling this method will have the side effect of setting the isFullLength property to false.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_setOneSideToExtent.htm">setOneSideToExtent</a></td>
+<td class="api-list">Sets the extent of the hole to be from the sketch plane to the specified "to" face.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_setPositionAtCenter.htm">setPositionAtCenter</a></td>
+<td class="api-list">Defines the position of the hole at the center of a circular or elliptical edge of the face.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_setPositionByPlaneAndOffsets.htm">setPositionByPlaneAndOffsets</a></td>
+<td class="api-list">Defines the orientation of the hole using a planar face or construction plane. The position of the hole is defined by the distance from one or two edges.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_setPositionByPoint.htm">setPositionByPoint</a></td>
+<td class="api-list">Defines the position of a the hole using a point. The point can be a vertex on the face or it can be a Point3D object to define any location on the face. If a Point3D object is provided it will be projected onto the plane along the planes normal. The orientation of the hole is defined by the planar face or construction plane. If a vertex is used, the position of the hole is associative to that vertex. If a Point3D object is used the position of the hole is not associative.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_setPositionBySketchPoint.htm">setPositionBySketchPoint</a></td>
+<td class="api-list">Defines the position and orientation of the hole using a sketch point.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_setPositionBySketchPoints.htm">setPositionBySketchPoints</a></td>
+<td class="api-list">Defines the position and orientation of the hole using a set of sketch points.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_setPositionOnEdge.htm">setPositionOnEdge</a></td>
+<td class="api-list">Defines the position and orientation of the hole to be on the start, end or center of an edge.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_setToClearanceHole.htm">setToClearanceHole</a></td>
+<td class="api-list">Sets the hole to be a clearance hole of the size specified by the ClearanceHoleInfo object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_setToSimpleHole.htm">setToSimpleHole</a></td>
+<td class="api-list">This property sets the hole's tap to be "simple", which means that it will not have any tap and will be a simple hole. When a new input is created, it defaults to being a simple hole.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_setToTappedHole.htm">setToTappedHole</a></td>
+<td class="api-list">Sets the hole to be a straight or tapered tapped hole of the size specified by the ThreadInfo object.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_creationOccurrence.htm">creationOccurrence</a></td>
+<td class="api-list">In order for geometry to be transformed correctly, an Occurrence for creation needs to be specified when the Hole is created based on geometry (e.g. a face or point) in another component AND (the Hole) is not in the root component. The CreationOccurrence is analogous to the active occurrence in the UI A value of null indicates that everything is in the context of a single component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_holeTapType.htm">holeTapType</a></td>
+<td class="api-list">Returns the current type of tap associated with this hole. When a new HoleFeatureInput is created, this will default to SimpleHoleTapType, which means the hole will not have any tap and will be a simple hole. You can set the tap type by using one of the methods to define the specific tap desired.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_isDefaultDirection.htm">isDefaultDirection</a></td>
+<td class="api-list">Gets or sets if the hole goes in the default direction or is reversed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_isFullLength.htm">isFullLength</a></td>
+<td class="api-list">Gets and sets if this thread is the full length of the hole. It defaults to true.<br/><br/> This property is only used when creating a tapped hole, which means the setToTappedHole method has been called. Otherwise this property is ignored.<br/><br/> The property can only be set to True, which will cause the feature to ignore the values of the threadLength and threadOffset properties. Using the setLengthAndOffset method will have the side effect of setting this property to false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_isModeled.htm">isModeled</a></td>
+<td class="api-list">Gets and sets if the thread is physical or cosmetic thread. A value of true indicates a physical thread. It defaults to false.<br/><br/> This property is only used when creating a tapped hole, which means the setToTappedHole method has been called. Otherwise this property is ignored.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_participantBodies.htm">participantBodies</a></td>
+<td class="api-list">Gets and sets the list of bodies that will participate in the hole.<br/><br/> If this property has not been set, the default behavior is that all bodies that are intersected by the hole will participate.<br/><br/> This property can return null in the case where the feature has not been fully defined so that possible intersecting bodies can be computed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_targetBaseFeature.htm">targetBaseFeature</a></td>
+<td class="api-list">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature.<br/><br/> Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_threadLength.htm">threadLength</a></td>
+<td class="api-list">Gets the thread length when the isFullLength property is False. Returns null when the isFullLength property is true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_threadOffset.htm">threadOffset</a></td>
+<td class="api-list">Gets the thread offset when the isFullLength property is False. Returns null when the isFullLength property is true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureInput_tipAngle.htm">tipAngle</a></td>
+<td class="api-list">Gets the ValueInput object that defines the angle of the tip of the hole. The default is "118.0 deg" but can be modified by setting it using another Value object.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="HoleFeatures_createCounterboreInput.htm">HoleFeatures.createCounterboreInput</a>, <a href="HoleFeatures_createCountersinkInput.htm">HoleFeatures.createCountersinkInput</a>, <a href="HoleFeatures_createSimpleInput.htm">HoleFeatures.createSimpleInput</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleFeatureSample_Sample.htm">Hole Feature API Sample</a></td>
+<td class="api-list">Demonstrates creating a new hole feature.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(HoleFeatureInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+returnValue = adsk::fusion::HoleFeatureInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">creationOccurrence Property</h3><p class="api">In order for geometry to be transformed correctly, an Occurrence for creation needs to be specified when the Hole is created based on geometry (e.g. a face or point) in another component AND (the Hole) is not in the root component. The CreationOccurrence is analogous to the active occurrence in the UI A value of null indicates that everything is in the context of a single component.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a HoleFeatureInput object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = holeFeatureInput_var-&gt;
+creationOccurrence
+();
+// Set the value of the property, where value_var is an Occurrence.
+bool returnValue = holeFeatureInput_var-&gt;
+creationOccurrence
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">holeTapType Property</h3><p class="api">Returns the current type of tap associated with this hole. When a new HoleFeatureInput is created, this will default to SimpleHoleTapType, which means the hole will not have any tap and will be a simple hole. You can set the tap type by using one of the methods to define the specific tap desired.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a HoleFeatureInput object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+// Get the value of the property.
+HoleTapTypes propertyValue = holeFeatureInput_var-&gt;
+holeTapType
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">isDefaultDirection Property</h3><p class="api">Gets or sets if the hole goes in the default direction or is reversed.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a HoleFeatureInput object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = holeFeatureInput_var-&gt;
+isDefaultDirection
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = holeFeatureInput_var-&gt;
+isDefaultDirection
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isFullLength Property</h3><p class="api">Gets and sets if this thread is the full length of the hole. It defaults to true. This property is only used when creating a tapped hole, which means the setToTappedHole method has been called. Otherwise this property is ignored. The property can only be set to True, which will cause the feature to ignore the values of the threadLength and threadOffset properties. Using the setLengthAndOffset method will have the side effect of setting this property to false.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a HoleFeatureInput object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = holeFeatureInput_var-&gt;
+isFullLength
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = holeFeatureInput_var-&gt;
+isFullLength
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isModeled Property</h3><p class="api">Gets and sets if the thread is physical or cosmetic thread. A value of true indicates a physical thread. It defaults to false. This property is only used when creating a tapped hole, which means the setToTappedHole method has been called. Otherwise this property is ignored.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a HoleFeatureInput object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = holeFeatureInput_var-&gt;
+isModeled
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = holeFeatureInput_var-&gt;
+isModeled
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a HoleFeatureInput object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = holeFeatureInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a HoleFeatureInput object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+// Get the value of the property.
+string propertyValue = holeFeatureInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">participantBodies Property</h3><p class="api">Gets and sets the list of bodies that will participate in the hole. If this property has not been set, the default behavior is that all bodies that are intersected by the hole will participate. This property can return null in the case where the feature has not been fully defined so that possible intersecting bodies can be computed.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a HoleFeatureInput object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;BRepBody&gt;&gt; propertyValue = holeFeatureInput_var-&gt;
+participantBodies
+();
+// Set the value of the property, where value_var is a BRepBody.
+bool returnValue = holeFeatureInput_var-&gt;
+participantBodies
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an array of type .</p><h3 class="api-member">setAllExtent Method</h3><p class="api">Defines the extent of the hole to be through-all. The direction can be either positive, negative.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a
+HoleFeatureInput
+object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+returnValue = holeFeatureInput_var-&gt;
+setAllExtent
+(direction);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">direction</td><td class="api-list">ExtentDirections</td><td class="api-list">The direction of the hole relative to the normal of the sketch plane.</td></tr></table><h3 class="api-member">setDistanceExtent Method</h3><p class="api">Defines the depth of the hole using a specified distance.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a
+HoleFeatureInput
+object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+returnValue = holeFeatureInput_var-&gt;
+setDistanceExtent
+(distance);</pre><p class="api">Return Value: boolean - Returns true if setting the extent was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">distance</td><td class="api-list">ValueInput</td><td class="api-list">The depth of the hole. If a real is specified the value is in centimeters. If a string is specified the units are derived from the string. If no units are specified, the default units of the document are used.</td></tr></table><h3 class="api-member">setLengthAndOffset Method</h3><p class="api">Sets the length and offset of the thread of a tapped hole. This method is only used when creating a tapped hole, which means the setToTappedHole method has been called. Otherwise calling this method will fail. By default the isFullLength property is true which means the thread is the full length of the hole and there is no offset. Calling this method will have the side effect of setting the isFullLength property to false.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a
+HoleFeatureInput
+object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+returnValue = holeFeatureInput_var-&gt;
+setLengthAndOffset
+(length, offset);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">length</td><td class="api-list">ValueInput</td><td class="api-list">Sets the length of the thread.</td></tr><tr><td class="api-list">offset</td><td class="api-list">ValueInput</td><td class="api-list">Sets the offset of the thread from the start of the hole. A value of zero is valid for no offset.</td></tr></table><h3 class="api-member">setOneSideToExtent Method</h3><p class="api">Sets the extent of the hole to be from the sketch plane to the specified "to" face.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a
+HoleFeatureInput
+object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+// Uses no optional arguments.
+returnValue = holeFeatureInput_var-&gt;
+setOneSideToExtent
+(toEntity, matchShape);
+// Uses optional arguments.
+returnValue = holeFeatureInput_var-&gt;
+setOneSideToExtent
+(toEntity, matchShape, directionHint);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">toEntity</td><td class="api-list">Base</td><td class="api-list">The entity that defines the "to" extent. The valid types of entities can vary depending on the type of feature this is being used with. For a hole it can be a BRepBody, BRepFace, BRepVertex, ConstructionPlane, or ConstructionPoint.</td></tr><tr><td class="api-list">matchShape</td><td class="api-list">boolean</td><td class="api-list">Indicates if the hole is not contained on the face that the hole should match the shape of the entity as if it extended beyond its current boundaries.</td></tr><tr><td class="api-list">directionHint</td><td class="api-list">Vector3D</td><td class="api-list">Specifies the direction of the hole. This is only used in the case where there are two possible solutions and the hole can hit the toEntity in either direction. Typically there is only a single solution and the direction is determined automatically. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">setPositionAtCenter Method</h3><p class="api">Defines the position of the hole at the center of a circular or elliptical edge of the face.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a
+HoleFeatureInput
+object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+returnValue = holeFeatureInput_var-&gt;
+setPositionAtCenter
+(planarEntity, centerEdge);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">planarEntity</td><td class="api-list">Base</td><td class="api-list">The planar BRepFace or ConstructionPlane object that defines the orientation of the hole. The natural direction of the hole will be opposite the normal of the face or construction plane.</td></tr><tr><td class="api-list">centerEdge</td><td class="api-list">BRepEdge</td><td class="api-list">A circular or elliptical edge whose center point will be the position of the hole.</td></tr></table><h3 class="api-member">setPositionByPlaneAndOffsets Method</h3><p class="api">Defines the orientation of the hole using a planar face or construction plane. The position of the hole is defined by the distance from one or two edges.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a
+HoleFeatureInput
+object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+// Uses no optional arguments.
+returnValue = holeFeatureInput_var-&gt;
+setPositionByPlaneAndOffsets
+(planarEntity, point, edgeOne, offsetOne);
+// Uses optional arguments.
+returnValue = holeFeatureInput_var-&gt;
+setPositionByPlaneAndOffsets
+(planarEntity, point, edgeOne, offsetOne, edgeTwo, offsetTwo);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">planarEntity</td><td class="api-list">Base</td><td class="api-list">The planar BRepFace or ConstructionPlane object that defines the orientation of the hole. The natural direction of the hole will be opposite the normal of the face or construction plane.</td></tr><tr><td class="api-list">point</td><td class="api-list">Point3D</td><td class="api-list">A Point3D object that defines the approximate initial position of the hole. The point will be projected onto the plane. This point should be close to the final position of the hole and is used to determine which solution out of several possible solutions should be chosen for the hole location. This point is defined in the coordinate system of the native entity used for the planarEntity argument. For example, if the planarEntity argument is a proxy to a BRepFace, the point argument must be in the coordinate system of the component of the native face, not the proxy.</td></tr><tr><td class="api-list">edgeOne</td><td class="api-list">BRepEdge</td><td class="api-list">A linear BRepEdge object that the position of the hole will be measured from. The position of the hole will be measured along a perpendicular from this edge.</td></tr><tr><td class="api-list">offsetOne</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the offset distance from edgeOne. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "3 in"). If no units are specified it is interpreted using the current default units for length.</td></tr><tr><td class="api-list">edgeTwo</td><td class="api-list">BRepEdge</td><td class="api-list">You can optionally define a second edge and offset to specify the position of the hole. If you use a second edge it has the same requirements as the edgeOne argument. If you provide a second edge you must also provide the offsetTwo argument. This is an optional argument whose default value is null.</td></tr><tr><td class="api-list">offsetTwo</td><td class="api-list">ValueInput</td><td class="api-list">If edgeTwo is defined, you must provide this argument which is a ValueInput object that defines the offset from the edgeTwo. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "3 in"). If no units are specified it is interpreted using the current default units for length. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">setPositionByPoint Method</h3><p class="api">Defines the position of a the hole using a point. The point can be a vertex on the face or it can be a Point3D object to define any location on the face. If a Point3D object is provided it will be projected onto the plane along the planes normal. The orientation of the hole is defined by the planar face or construction plane. If a vertex is used, the position of the hole is associative to that vertex. If a Point3D object is used the position of the hole is not associative.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a
+HoleFeatureInput
+object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+returnValue = holeFeatureInput_var-&gt;
+setPositionByPoint
+(planarEntity, point);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">planarEntity</td><td class="api-list">Base</td><td class="api-list">The planar BRepFace or ConstructionPlane object that defines the orientation of the hole. The natural direction of the hole will be opposite the normal of the face or construction plane.</td></tr><tr><td class="api-list">point</td><td class="api-list">Base</td><td class="api-list">A Point3D object or vertex that defines the position of the hole. The point will be projected onto the plane along the normal of the plane.</td></tr></table><h3 class="api-member">setPositionBySketchPoint Method</h3><p class="api">Defines the position and orientation of the hole using a sketch point.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a
+HoleFeatureInput
+object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+returnValue = holeFeatureInput_var-&gt;
+setPositionBySketchPoint
+(sketchPoint);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">sketchPoint</td><td class="api-list">SketchPoint</td><td class="api-list">The sketch point that defines the position of the hole. The orientation is inferred from the normal of the point's parent sketch. The natural direction will be opposite the normal of the sketch.</td></tr></table><h3 class="api-member">setPositionBySketchPoints Method</h3><p class="api">Defines the position and orientation of the hole using a set of sketch points.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a
+HoleFeatureInput
+object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+returnValue = holeFeatureInput_var-&gt;
+setPositionBySketchPoints
+(sketchPoints);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">sketchPoints</td><td class="api-list">ObjectCollection</td><td class="api-list">A collection of sketch points that defines the positions of the holes. The orientation is inferred from the normal of the point's parent sketch. The natural direction will be opposite the normal of the sketch. The points can be from multiple sketches but they must all be co-planar.</td></tr></table><h3 class="api-member">setPositionOnEdge Method</h3><p class="api">Defines the position and orientation of the hole to be on the start, end or center of an edge.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a
+HoleFeatureInput
+object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+returnValue = holeFeatureInput_var-&gt;
+setPositionOnEdge
+(planarEntity, edge, position);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">planarEntity</td><td class="api-list">Base</td><td class="api-list">The planar BRepFace or ConstructionPlane object that defines the orientation of the hole and start of the hole. The natural direction of the hole will be opposite the normal of the face or construction plane.</td></tr><tr><td class="api-list">edge</td><td class="api-list">BRepEdge</td><td class="api-list">The edge to position the hole on.</td></tr><tr><td class="api-list">position</td><td class="api-list">HoleEdgePositions</td><td class="api-list">The position along the edge to place the hole.</td></tr></table><h3 class="api-member">setToClearanceHole Method</h3><p class="api">Sets the hole to be a clearance hole of the size specified by the ClearanceHoleInfo object.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a
+HoleFeatureInput
+object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+returnValue = holeFeatureInput_var-&gt;
+setToClearanceHole
+(clearanceHoleInfo);</pre><p class="api">Return Value: boolean - Returns true if setting to a clearance hole was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">clearanceHoleInfo</td><td class="api-list">ClearanceHoleInfo</td><td class="api-list">The ClearanceHoleInfo object that specifies the size of the clearance hole.</td></tr></table><h3 class="api-member">setToSimpleHole Method</h3><p class="api">This property sets the hole's tap to be "simple", which means that it will not have any tap and will be a simple hole. When a new input is created, it defaults to being a simple hole.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a
+HoleFeatureInput
+object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+returnValue = holeFeatureInput_var-&gt;
+setToSimpleHole
+();</pre><p class="api">Return Value: boolean - Returns true if successful.</p><h3 class="api-member">setToTappedHole Method</h3><p class="api">Sets the hole to be a straight or tapered tapped hole of the size specified by the ThreadInfo object.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a
+HoleFeatureInput
+object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+returnValue = holeFeatureInput_var-&gt;
+setToTappedHole
+(threadInfo);</pre><p class="api">Return Value: boolean - Returns true if setting to a tapped hole was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">threadInfo</td><td class="api-list">ThreadInfo</td><td class="api-list">The ThreadInfo object that specifies the thread to use for the tapped hole. Whether it is straight or tapered tap is defined by the input ThreadInfo object.</td></tr></table><h3 class="api-member">targetBaseFeature Property</h3><p class="api">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature. Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a HoleFeatureInput object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BaseFeature&gt; propertyValue = holeFeatureInput_var-&gt;
+targetBaseFeature
+();
+// Set the value of the property, where value_var is a BaseFeature.
+bool returnValue = holeFeatureInput_var-&gt;
+targetBaseFeature
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">threadLength Property</h3><p class="api">Gets the thread length when the isFullLength property is False. Returns null when the isFullLength property is true.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a HoleFeatureInput object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = holeFeatureInput_var-&gt;
+threadLength
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">threadOffset Property</h3><p class="api">Gets the thread offset when the isFullLength property is False. Returns null when the isFullLength property is true.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a HoleFeatureInput object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = holeFeatureInput_var-&gt;
+threadOffset
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">tipAngle Property</h3><p class="api">Gets the ValueInput object that defines the angle of the tip of the hole. The default is "118.0 deg" but can be modified by setting it using another Value object.</p><pre class="api-code">"holeFeatureInput_var" is a variable referencing a HoleFeatureInput object.
+#include &lt;Fusion/Features/HoleFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = holeFeatureInput_var-&gt;
+tipAngle
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = holeFeatureInput_var-&gt;
+tipAngle
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

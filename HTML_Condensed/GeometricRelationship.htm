@@ -1,0 +1,258 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/GeometricRelationship.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="06/06/2025" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="GeometricRelationship" name="contextid"/>
+<meta content="GeometricRelationship Object" name="description"/>
+<meta content="GUID-EA029B6F-0D07-435B-A32C-0D510178BBF7" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>GeometricRelationship Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">GeometricRelationship Object <img alt="Preview" src="../images/TestTubeLarge.png"/></h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Components/GeometricRelationship.h&gt;<p class="api-preview"><img alt="Preview" src="../images/TestTubeSmall.png"/>This functionality is provided as a preview
+				of intended future API capabilities. You are encouraged to use it and report any problems or suggestions using the
+				<a href="https://forums.autodesk.com/t5/fusion-360-api-and-scripts/bd-p/22">Fusion API and Scripts</a> forum.<br/><br/>
+	
+                Because this is a preview of future functionality, there is the possibility that it will change, which will possibly
+		        break any existing programs that use this functionality. Because of that, you should never deliver any programs that use
+		        any preview capabilities. For a distributed program, you should wait until it has moved from preview to released state.
+		    </p>
+<h2 class="api">
+          Description
+        </h2>This object represents a pair of entity inputs that are used when inferring a joint from geometry or for an assembly constraint.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationship_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationship_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">This method deletes this geometric relationship.<br><br> If the isTemporary property is True, it removes it from the input object.<br><br/> If the GeometricRelationship is associated with an existing joint or assembly constraint (the isTemporary property is false), you need to position the timeline marker immediately before the joint or assembly constraint. This can be accomplished using the following code: thisJointOrConstraint.timelineObject.rollTo(True).</br></br></br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationship_redefineOffsetOrAngle.htm">redefineOffsetOrAngle</a></td>
+<td class="api-list">This method redefines an existing geometric relationship by defining if it is a mate or angle and specifying a new value.<br/><br/> If the GeometricRelationship is associated with an existing joint or assembly constraint (the isTemporary property is false), you need to position the timeline marker immediately before the joint or assembly constraint. This can be accomplished using the following code: thisJointOrConstraint.timelineObject.rollTo(True).</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationship_angleReferenceEntity.htm">angleReferenceEntity</a></td>
+<td class="api-list">This property is used to define a third vector when an angle constraint is being defined. This property is ignored for mate constraints.<br/><br/> In some cases, when specifying entityOne and entityTwo for an angle constraint there is more than one solution. When the constraint is solved, entityOne and entityTwo each define a vector. When the reference entity is provided, the vectors need to follow the "right hand rule" with respect to the reference entity. This means the angle between the reference entity and the cross product of entityOne and entityTwo should be between 0 and 90 deg.<br/><br/> The reference entity can be a planar BRepFace or a linear or circular BRepedge.<br/><br/> This property can return and be set to null to indicate there is no reference entity.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationship_entityOne.htm">entityOne</a></td>
+<td class="api-list">Gets and sets the first entity in the relationship. The entity can be a BRepFace, BRepedge, BRepVertex, SketchPoint, SketchCurve, ConstructionPlane, ConstructionAxis, or ConstructionPoint object.<br/><br/> If the GeometricRelationship is associated with an existing joint or assembly constraint (the isTemporary property is false), you need to position the timeline marker immediately before the joint or assembly constraint. This can be accomplished using the following code: thisJointOrConstraint.timelineObject.rollTo(True).</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationship_entityTwo.htm">entityTwo</a></td>
+<td class="api-list">Gets and sets the second entity in the relationship. The entity can be a BRepFace, BRepedge, BRepVertex, SketchPoint, SketchCurve, ConstructionPlane, ConstructionAxis, or ConstructionPoint object.<br/><br/> If the GeometricRelationship is associated with an existing joint or assembly constraint (the isTemporary property is false), you need to position the timeline marker immediately before the joint or assembly constraint. This can be accomplished using the following code: thisJointOrConstraint.timelineObject.rollTo(True).</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationship_isFlipped.htm">isFlipped</a></td>
+<td class="api-list">Gets and sets if the directions of the entities are aligned or opposed. The natural direction is for them to be opposed, and flipping them will align them.<br/><br/> If the GeometricRelationship is associated with an existing joint or assembly constraint (the isTemporary property is false), you need to position the timeline marker immediately before the joint or assembly constraint. This can be accomplished using the following code: thisJointOrConstraint.timelineObject.rollTo(True).</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationship_isMate.htm">isMate</a></td>
+<td class="api-list">Gets and sets if this geometric relationships defines a mate or angle relationship between the two input entities. If true, it is a mate relationship.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationship_isSuppressed.htm">isSuppressed</a></td>
+<td class="api-list">Gets and sets if this relationship is suppressed. This property is only valid when this geometric relationship is associated with an existing AssemblyConstraint. Otherwise, getting the value of this property will always return false, and setting it will be ignored.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationship_isTemporary.htm">isTemporary</a></td>
+<td class="api-list">Specifies if this GeometricRelationship is a child of an input object is being used to create a new Joint or AssemblyConstraint or is being used by an existing Joint or AssemblyConstraint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationship_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationship_name.htm">name</a></td>
+<td class="api-list">Returns the name of the constraint as seen in the browser. This property will only return a name when the geometric relationship is associated with an existing AssemblyConstraint or inferred Joint (the isTemporary property is false). Otherwise, it will return an empty string.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationship_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationship_offsetOrAngle.htm">offsetOrAngle</a></td>
+<td class="api-list">This property is used when the geometric relationship is associated with an existing joint or assembly constraint (the isTemporary property is false). It returns the parameter that controls the offset or angle of this geometric relationship. You can change the value by editing properties on the returned ModelParameter object.<br/><br/> If this geometric relationship is associated with a JointInput object (the isTemporary property is true), this property returns null, and you should use the offsetOrAngleValue property to get and set the value.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationship_offsetOrAngleValue.htm">offsetOrAngleValue</a></td>
+<td class="api-list">This property is used when creating a new joint or assembly constraint and defines the offset or angle associated with this geometric relationship. The value defaults to 0, but can be set with a ValueInput defining a length or angle. It can be either a real value, which will be in centimeters or radians, or a string, which is an expression whose units are length or angle.<br/><br/> If the GeometricRelationship is associated with an existing joint or assembly constraint (the isTemporary property is false), this property will return null and fail if set. To get and set the value in this case you should use the offsetOrAngle property to access the controlling parameter.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricRelationship_parent.htm">parent</a></td>
+<td class="api-list">Returns the parent AssemblyConstraint, Joint, InferredJointInput, or AssemblyConstraintInput object with which this geometric relationship is associated.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="GeometricRelationships_add.htm">GeometricRelationships.add</a>, <a href="GeometricRelationships_item.htm">GeometricRelationships.item</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version July 2025<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(GeometricRelationship%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">angleReferenceEntity Property</h3><p class="api">This property is used to define a third vector when an angle constraint is being defined. This property is ignored for mate constraints. In some cases, when specifying entityOne and entityTwo for an angle constraint there is more than one solution. When the constraint is solved, entityOne and entityTwo each define a vector. When the reference entity is provided, the vectors need to follow the "right hand rule" with respect to the reference entity. This means the angle between the reference entity and the cross product of entityOne and entityTwo should be between 0 and 90 deg. The reference entity can be a planar BRepFace or a linear or circular BRepedge. This property can return and be set to null to indicate there is no reference entity.</p><pre class="api-code">"geometricRelationship_var" is a variable referencing a GeometricRelationship object.
+#include &lt;Fusion/Components/GeometricRelationship.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = geometricRelationship_var-&gt;
+angleReferenceEntity
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = geometricRelationship_var-&gt;
+angleReferenceEntity
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Components/GeometricRelationship.h&gt;
+returnValue = adsk::fusion::GeometricRelationship::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">deleteMe Method</h3><p class="api">This method deletes this geometric relationship. If the isTemporary property is True, it removes it from the input object. If the GeometricRelationship is associated with an existing joint or assembly constraint (the isTemporary property is false), you need to position the timeline marker immediately before the joint or assembly constraint. This can be accomplished using the following code: thisJointOrConstraint.timelineObject.rollTo(True).</p><pre class="api-code">"geometricRelationship_var" is a variable referencing a
+GeometricRelationship
+object.
+#include &lt;Fusion/Components/GeometricRelationship.h&gt;
+returnValue = geometricRelationship_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true if the delete was successful.</p><h3 class="api-member">entityOne Property</h3><p class="api">Gets and sets the first entity in the relationship. The entity can be a BRepFace, BRepedge, BRepVertex, SketchPoint, SketchCurve, ConstructionPlane, ConstructionAxis, or ConstructionPoint object. If the GeometricRelationship is associated with an existing joint or assembly constraint (the isTemporary property is false), you need to position the timeline marker immediately before the joint or assembly constraint. This can be accomplished using the following code: thisJointOrConstraint.timelineObject.rollTo(True).</p><pre class="api-code">"geometricRelationship_var" is a variable referencing a GeometricRelationship object.
+#include &lt;Fusion/Components/GeometricRelationship.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = geometricRelationship_var-&gt;
+entityOne
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = geometricRelationship_var-&gt;
+entityOne
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">entityTwo Property</h3><p class="api">Gets and sets the second entity in the relationship. The entity can be a BRepFace, BRepedge, BRepVertex, SketchPoint, SketchCurve, ConstructionPlane, ConstructionAxis, or ConstructionPoint object. If the GeometricRelationship is associated with an existing joint or assembly constraint (the isTemporary property is false), you need to position the timeline marker immediately before the joint or assembly constraint. This can be accomplished using the following code: thisJointOrConstraint.timelineObject.rollTo(True).</p><pre class="api-code">"geometricRelationship_var" is a variable referencing a GeometricRelationship object.
+#include &lt;Fusion/Components/GeometricRelationship.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = geometricRelationship_var-&gt;
+entityTwo
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = geometricRelationship_var-&gt;
+entityTwo
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">isFlipped Property</h3><p class="api">Gets and sets if the directions of the entities are aligned or opposed. The natural direction is for them to be opposed, and flipping them will align them. If the GeometricRelationship is associated with an existing joint or assembly constraint (the isTemporary property is false), you need to position the timeline marker immediately before the joint or assembly constraint. This can be accomplished using the following code: thisJointOrConstraint.timelineObject.rollTo(True).</p><pre class="api-code">"geometricRelationship_var" is a variable referencing a GeometricRelationship object.
+#include &lt;Fusion/Components/GeometricRelationship.h&gt;
+// Get the value of the property.
+boolean propertyValue = geometricRelationship_var-&gt;
+isFlipped
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = geometricRelationship_var-&gt;
+isFlipped
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isMate Property</h3><p class="api">Gets and sets if this geometric relationships defines a mate or angle relationship between the two input entities. If true, it is a mate relationship.</p><pre class="api-code">"geometricRelationship_var" is a variable referencing a GeometricRelationship object.
+#include &lt;Fusion/Components/GeometricRelationship.h&gt;
+// Get the value of the property.
+boolean propertyValue = geometricRelationship_var-&gt;
+isMate
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isSuppressed Property</h3><p class="api">Gets and sets if this relationship is suppressed. This property is only valid when this geometric relationship is associated with an existing AssemblyConstraint. Otherwise, getting the value of this property will always return false, and setting it will be ignored.</p><pre class="api-code">"geometricRelationship_var" is a variable referencing a GeometricRelationship object.
+#include &lt;Fusion/Components/GeometricRelationship.h&gt;
+// Get the value of the property.
+boolean propertyValue = geometricRelationship_var-&gt;
+isSuppressed
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = geometricRelationship_var-&gt;
+isSuppressed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isTemporary Property</h3><p class="api">Specifies if this GeometricRelationship is a child of an input object is being used to create a new Joint or AssemblyConstraint or is being used by an existing Joint or AssemblyConstraint.</p><pre class="api-code">"geometricRelationship_var" is a variable referencing a GeometricRelationship object.
+#include &lt;Fusion/Components/GeometricRelationship.h&gt;
+// Get the value of the property.
+boolean propertyValue = geometricRelationship_var-&gt;
+isTemporary
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"geometricRelationship_var" is a variable referencing a GeometricRelationship object.
+#include &lt;Fusion/Components/GeometricRelationship.h&gt;
+// Get the value of the property.
+boolean propertyValue = geometricRelationship_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">name Property</h3><p class="api">Returns the name of the constraint as seen in the browser. This property will only return a name when the geometric relationship is associated with an existing AssemblyConstraint or inferred Joint (the isTemporary property is false). Otherwise, it will return an empty string.</p><pre class="api-code">"geometricRelationship_var" is a variable referencing a GeometricRelationship object.
+#include &lt;Fusion/Components/GeometricRelationship.h&gt;
+// Get the value of the property.
+string propertyValue = geometricRelationship_var-&gt;
+name
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"geometricRelationship_var" is a variable referencing a GeometricRelationship object.
+#include &lt;Fusion/Components/GeometricRelationship.h&gt;
+// Get the value of the property.
+string propertyValue = geometricRelationship_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">offsetOrAngle Property</h3><p class="api">This property is used when the geometric relationship is associated with an existing joint or assembly constraint (the isTemporary property is false). It returns the parameter that controls the offset or angle of this geometric relationship. You can change the value by editing properties on the returned ModelParameter object. If this geometric relationship is associated with a JointInput object (the isTemporary property is true), this property returns null, and you should use the offsetOrAngleValue property to get and set the value.</p><pre class="api-code">"geometricRelationship_var" is a variable referencing a GeometricRelationship object.
+#include &lt;Fusion/Components/GeometricRelationship.h&gt;
+// Get the value of the property.
+Ptr&lt;ModelParameter&gt; propertyValue = geometricRelationship_var-&gt;
+offsetOrAngle
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">offsetOrAngleValue Property</h3><p class="api">This property is used when creating a new joint or assembly constraint and defines the offset or angle associated with this geometric relationship. The value defaults to 0, but can be set with a ValueInput defining a length or angle. It can be either a real value, which will be in centimeters or radians, or a string, which is an expression whose units are length or angle. If the GeometricRelationship is associated with an existing joint or assembly constraint (the isTemporary property is false), this property will return null and fail if set. To get and set the value in this case you should use the offsetOrAngle property to access the controlling parameter.</p><pre class="api-code">"geometricRelationship_var" is a variable referencing a GeometricRelationship object.
+#include &lt;Fusion/Components/GeometricRelationship.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = geometricRelationship_var-&gt;
+offsetOrAngleValue
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = geometricRelationship_var-&gt;
+offsetOrAngleValue
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">parent Property</h3><p class="api">Returns the parent AssemblyConstraint, Joint, InferredJointInput, or AssemblyConstraintInput object with which this geometric relationship is associated.</p><pre class="api-code">"geometricRelationship_var" is a variable referencing a GeometricRelationship object.
+#include &lt;Fusion/Components/GeometricRelationship.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = geometricRelationship_var-&gt;
+parent
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">redefineOffsetOrAngle Method</h3><p class="api">This method redefines an existing geometric relationship by defining if it is a mate or angle and specifying a new value. If the GeometricRelationship is associated with an existing joint or assembly constraint (the isTemporary property is false), you need to position the timeline marker immediately before the joint or assembly constraint. This can be accomplished using the following code: thisJointOrConstraint.timelineObject.rollTo(True).</p><pre class="api-code">"geometricRelationship_var" is a variable referencing a
+GeometricRelationship
+object.
+#include &lt;Fusion/Components/GeometricRelationship.h&gt;
+returnValue = geometricRelationship_var-&gt;
+redefineOffsetOrAngle
+(isMate, offsetOrAngleValue);</pre><p class="api">Return Value: boolean - Returns true if the redefinition was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">isMate</td><td class="api-list">boolean</td><td class="api-list">This argument indicates if the geometric relationship defines a mate or an angle. A value of true indicates a mate relationship.</td></tr><tr><td class="api-list">offsetOrAngleValue</td><td class="api-list">ValueInput</td><td class="api-list">This argument specifies the value associated with the geometric relationship. If isMate is true, the value is a length, and if it is a real value, then it is centimeters. If it is a string, it is an expression that must evaluate to a length. If isMate is False, the value is an angle, and if it is a real value, then it is radians. If it is a string, it is an expression that must evaluate to an angle.</td></tr></table></body>
+</html>

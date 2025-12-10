@@ -1,0 +1,308 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/CoilFeatureInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="24/3/2016" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="CoilFeatureInput" name="contextid"/>
+<meta content="CoilFeatureInput Object" name="description"/>
+<meta content="GUID-AD2115D9-90F0-4F5A-AF48-2F0C365B232F" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>CoilFeatureInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">CoilFeatureInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/CoilFeatureInput.h&gt;<h2 class="api">
+          Description
+        </h2>This class defines the methods and properties that pertain to the definition of a coil feature.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_setToHeightAndPitchCoil.htm">setToHeightAndPitchCoil</a></td>
+<td class="api-list">Sets the coil type to HeightAndPitchCoilType.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_setToRevolutionAndHeight.htm">setToRevolutionAndHeight</a></td>
+<td class="api-list">Sets the coil type to RevolutionsAndHeightCoilType.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_setToRevolutionsAndPitch.htm">setToRevolutionsAndPitch</a></td>
+<td class="api-list">Sets the coil type to RevolutionsAndPitchCoilType.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_setToSpiral.htm">setToSpiral</a></td>
+<td class="api-list">Sets the coil type to SpiralCoilType.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_angle.htm">angle</a></td>
+<td class="api-list">Gets the angle. Returns null in the case where the coilType property returns SpiralCoilType.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_basePlane.htm">basePlane</a></td>
+<td class="api-list">Gets and sets the base plane.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_coilSectionPosition.htm">coilSectionPosition</a></td>
+<td class="api-list">Gets the section position of the coil. It defaults to InsideCoilSectionPosition.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_coilSectionType.htm">coilSectionType</a></td>
+<td class="api-list">Gets the section type of the coil. It defaults to CircularCoilSectionType.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_coilType.htm">coilType</a></td>
+<td class="api-list">Gets the type of the coil.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_diameter.htm">diameter</a></td>
+<td class="api-list">Gets and sets the diameter.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_height.htm">height</a></td>
+<td class="api-list">Gets the height. Returns null in the case where the coilType property returns RevolutionsAndPitchCoilType.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_isClockwiseRotation.htm">isClockwiseRotation</a></td>
+<td class="api-list">Gets and sets whether the rotation is clockwise or counter-clockwise. A value of true indicates clockwise rotation. It defaults to true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_isSolid.htm">isSolid</a></td>
+<td class="api-list">Specifies if the coil should be created as a solid or surface. This is initialized to true so a solid will be created if it's not changed. It only can be set to false in non-parametric modeling.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_operation.htm">operation</a></td>
+<td class="api-list">Gets and sets the type of operation performed by the coil.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_pitch.htm">pitch</a></td>
+<td class="api-list">Gets the pitch. Returns null in the case where the coilType property returns RevolutionsAndHeightCoilType or SpiralCoilType.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_revolutions.htm">revolutions</a></td>
+<td class="api-list">Gets the revolutions number. Returns null in the case where the coilType property returns HeightAndPitchCoilType.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_sectionSize.htm">sectionSize</a></td>
+<td class="api-list">Gets and sets the section size.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CoilFeatureInput_targetBaseFeature.htm">targetBaseFeature</a></td>
+<td class="api-list">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature.<br/><br/> Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version March 2016<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(CoilFeatureInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">angle Property</h3><p class="api">Gets the angle. Returns null in the case where the coilType property returns SpiralCoilType.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a CoilFeatureInput object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = coilFeatureInput_var-&gt;
+angle
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">basePlane Property</h3><p class="api">Gets and sets the base plane.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a CoilFeatureInput object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = coilFeatureInput_var-&gt;
+basePlane
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = coilFeatureInput_var-&gt;
+basePlane
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+returnValue = adsk::fusion::CoilFeatureInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">coilSectionPosition Property</h3><p class="api">Gets the section position of the coil. It defaults to InsideCoilSectionPosition.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a CoilFeatureInput object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+// Get the value of the property.
+CoilFeatureSectionPositions propertyValue = coilFeatureInput_var-&gt;
+coilSectionPosition
+();
+// Set the value of the property, where value_var is a CoilFeatureSectionPositions.
+bool returnValue = coilFeatureInput_var-&gt;
+coilSectionPosition
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">coilSectionType Property</h3><p class="api">Gets the section type of the coil. It defaults to CircularCoilSectionType.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a CoilFeatureInput object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+// Get the value of the property.
+CoilFeatureSectionTypes propertyValue = coilFeatureInput_var-&gt;
+coilSectionType
+();
+// Set the value of the property, where value_var is a CoilFeatureSectionTypes.
+bool returnValue = coilFeatureInput_var-&gt;
+coilSectionType
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">coilType Property</h3><p class="api">Gets the type of the coil.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a CoilFeatureInput object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+// Get the value of the property.
+CoilFeatureTypes propertyValue = coilFeatureInput_var-&gt;
+coilType
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">diameter Property</h3><p class="api">Gets and sets the diameter.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a CoilFeatureInput object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = coilFeatureInput_var-&gt;
+diameter
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = coilFeatureInput_var-&gt;
+diameter
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">height Property</h3><p class="api">Gets the height. Returns null in the case where the coilType property returns RevolutionsAndPitchCoilType.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a CoilFeatureInput object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = coilFeatureInput_var-&gt;
+height
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">isClockwiseRotation Property</h3><p class="api">Gets and sets whether the rotation is clockwise or counter-clockwise. A value of true indicates clockwise rotation. It defaults to true.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a CoilFeatureInput object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = coilFeatureInput_var-&gt;
+isClockwiseRotation
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = coilFeatureInput_var-&gt;
+isClockwiseRotation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isSolid Property</h3><p class="api">Specifies if the coil should be created as a solid or surface. This is initialized to true so a solid will be created if it's not changed. It only can be set to false in non-parametric modeling.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a CoilFeatureInput object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = coilFeatureInput_var-&gt;
+isSolid
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = coilFeatureInput_var-&gt;
+isSolid
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a CoilFeatureInput object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = coilFeatureInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a CoilFeatureInput object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+// Get the value of the property.
+string propertyValue = coilFeatureInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">operation Property</h3><p class="api">Gets and sets the type of operation performed by the coil.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a CoilFeatureInput object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+// Get the value of the property.
+FeatureOperations propertyValue = coilFeatureInput_var-&gt;
+operation
+();
+// Set the value of the property, where value_var is a FeatureOperations.
+bool returnValue = coilFeatureInput_var-&gt;
+operation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">pitch Property</h3><p class="api">Gets the pitch. Returns null in the case where the coilType property returns RevolutionsAndHeightCoilType or SpiralCoilType.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a CoilFeatureInput object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = coilFeatureInput_var-&gt;
+pitch
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">revolutions Property</h3><p class="api">Gets the revolutions number. Returns null in the case where the coilType property returns HeightAndPitchCoilType.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a CoilFeatureInput object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = coilFeatureInput_var-&gt;
+revolutions
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">sectionSize Property</h3><p class="api">Gets and sets the section size.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a CoilFeatureInput object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = coilFeatureInput_var-&gt;
+sectionSize
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = coilFeatureInput_var-&gt;
+sectionSize
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">setToHeightAndPitchCoil Method</h3><p class="api">Sets the coil type to HeightAndPitchCoilType.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a
+CoilFeatureInput
+object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+returnValue = coilFeatureInput_var-&gt;
+setToHeightAndPitchCoil
+(height, pitch, angle);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">height</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the height.</td></tr><tr><td class="api-list">pitch</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the pitch.</td></tr><tr><td class="api-list">angle</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines angle.</td></tr></table><h3 class="api-member">setToRevolutionAndHeight Method</h3><p class="api">Sets the coil type to RevolutionsAndHeightCoilType.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a
+CoilFeatureInput
+object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+returnValue = coilFeatureInput_var-&gt;
+setToRevolutionAndHeight
+(revolutions, height, angle);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">revolutions</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the number of revolutions.</td></tr><tr><td class="api-list">height</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the height.</td></tr><tr><td class="api-list">angle</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines angle.</td></tr></table><h3 class="api-member">setToRevolutionsAndPitch Method</h3><p class="api">Sets the coil type to RevolutionsAndPitchCoilType.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a
+CoilFeatureInput
+object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+returnValue = coilFeatureInput_var-&gt;
+setToRevolutionsAndPitch
+(revolutions, pitch, angle);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">revolutions</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the number of revolutions.</td></tr><tr><td class="api-list">pitch</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the pitch.</td></tr><tr><td class="api-list">angle</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines angle.</td></tr></table><h3 class="api-member">setToSpiral Method</h3><p class="api">Sets the coil type to SpiralCoilType.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a
+CoilFeatureInput
+object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+returnValue = coilFeatureInput_var-&gt;
+setToSpiral
+(revolutions, pitch);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">revolutions</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the number of revolutions.</td></tr><tr><td class="api-list">pitch</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the pitch.</td></tr></table><h3 class="api-member">targetBaseFeature Property</h3><p class="api">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature. Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</p><pre class="api-code">"coilFeatureInput_var" is a variable referencing a CoilFeatureInput object.
+#include &lt;Fusion/Features/CoilFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BaseFeature&gt; propertyValue = coilFeatureInput_var-&gt;
+targetBaseFeature
+();
+// Set the value of the property, where value_var is a BaseFeature.
+bool returnValue = coilFeatureInput_var-&gt;
+targetBaseFeature
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

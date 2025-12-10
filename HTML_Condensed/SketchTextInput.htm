@@ -1,0 +1,294 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/SketchTextInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="3/2/2015" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="SketchTextInput" name="contextid"/>
+<meta content="SketchTextInput Object" name="description"/>
+<meta content="GUID-2d5e8e39-8fd9-4c00-b5fb-264e3d4d0615" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>SketchTextInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">SketchTextInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Sketch/SketchTextInput.h&gt;<h2 class="api">
+          Description
+        </h2>The SketchTextInput object is equivalent to the Sketch Text dialog in that it collects all of the input required to create sketch text. Once the properties of the SketchTextInput object have been defined, use the add method to create the sketch text. A SketchTextInput object is created by using the createInput of the SketchTexts object.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_setAsAlongPath.htm">setAsAlongPath</a></td>
+<td class="api-list">Sets this SketchTextInput to define text that follows along a specified path.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_setAsFitOnPath.htm">setAsFitOnPath</a></td>
+<td class="api-list">Sets this SketchTextInput to define text that fits along a specified path. Fitting on a path will space the characters so the text fits along the entire length of the path entity.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_setAsMultiLine.htm">setAsMultiLine</a></td>
+<td class="api-list">Defines the first corner point of the rectangle that will contain the text.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_angle.htm">angle</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Gets and sets the angle of the text relative to the x-axis of the x-y plane of the sketch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_definition.htm">definition</a></td>
+<td class="api-list">Returns the SketchTextDefinition object associated with this input. When the SketchTextInput is first created this property will return null. Once one of the "set" methods have been called, this will return the SketchTextDefinition of the appropriate type and can be used to make any additional changes to the text.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_expression.htm">expression</a></td>
+<td class="api-list">Gets and sets the expression of the parameter that will be created when this SketchText is created. It can be a simple string or it can be an expression that combines text with parameter values. Simple text must be enclosed within single quotes, the same as it is required in the TEXT command dialog.<br><br/> An example of a valid expression is: "'Length: ' + lengthParam" and will result in "Length: 3.0 mm". The expression result can be obtained by using the text property on the created SketchTextInput object.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_fontName.htm">fontName</a></td>
+<td class="api-list">Gets and sets the name of the font to use.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_height.htm">height</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> This property has been retired and replaced by the height2 property.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_height2.htm">height2</a></td>
+<td class="api-list">Gets and sets the ValueInput that defines the height of the text. This value is used to create a parameter that will control the height of the text. It can be a value where it defines the height of the text in centimeters, or it can be a string where it defines the equation of the parameter and must evaluate to a valid length.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_isHorizontalFlip.htm">isHorizontalFlip</a></td>
+<td class="api-list">Gets and sets if the text is flipped horizontally.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_isVerticalFlip.htm">isVerticalFlip</a></td>
+<td class="api-list">Gets and sets if the text is flipped vertically.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_position.htm">position</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Gets and sets the position of the text on the x-y plane of the sketch. The text must lie on the x-y plane so the Z component of the point is ignored and always treated as zero.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_text.htm">text</a></td>
+<td class="api-list">Gets and sets the displayed text. This represents the text that results from evaluating the input formatted text. For example, if the formatted text is "'Length: ' + lengthParam", this property will return "Length: 3.0 in".<br/><br/> Setting this property will overwrite any equation defined by the expression and replace it with simple text. Use the expression property to be able to define a full expression.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_textStyle.htm">textStyle</a></td>
+<td class="api-list">Gets and sets the text style to apply to the entire text. This is a bitwise enum so styles can be combined to apply multiple styles. For example you can apply bold and italic.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="SketchTexts_createInput.htm">SketchTexts.createInput</a>, <a href="SketchTexts_createInput2.htm">SketchTexts.createInput2</a>, <a href="SketchTexts_createInput3.htm">SketchTexts.createInput3</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextSample_Sample.htm">Sketch Text API Sample</a></td>
+<td class="api-list">Demonstrates creating sketch text by creating both mult-line text and text along a curve.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version March 2015<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(SketchTextInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">angle Property</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Gets and sets the angle of the text relative to the x-axis of the x-y plane of the sketch.</p><pre class="api-code">"sketchTextInput_var" is a variable referencing a SketchTextInput object.
+#include &lt;Fusion/Sketch/SketchTextInput.h&gt;
+// Get the value of the property.
+double propertyValue = sketchTextInput_var-&gt;
+angle
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = sketchTextInput_var-&gt;
+angle
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Sketch/SketchTextInput.h&gt;
+returnValue = adsk::fusion::SketchTextInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">definition Property</h3><p class="api">Returns the SketchTextDefinition object associated with this input. When the SketchTextInput is first created this property will return null. Once one of the "set" methods have been called, this will return the SketchTextDefinition of the appropriate type and can be used to make any additional changes to the text.</p><pre class="api-code">"sketchTextInput_var" is a variable referencing a SketchTextInput object.
+#include &lt;Fusion/Sketch/SketchTextInput.h&gt;
+// Get the value of the property.
+Ptr&lt;SketchTextDefinition&gt; propertyValue = sketchTextInput_var-&gt;
+definition
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">expression Property</h3><p class="api">Gets and sets the expression of the parameter that will be created when this SketchText is created. It can be a simple string or it can be an expression that combines text with parameter values. Simple text must be enclosed within single quotes, the same as it is required in the TEXT command dialog. An example of a valid expression is: "'Length: ' + lengthParam" and will result in "Length: 3.0 mm". The expression result can be obtained by using the text property on the created SketchTextInput object.</p><pre class="api-code">"sketchTextInput_var" is a variable referencing a SketchTextInput object.
+#include &lt;Fusion/Sketch/SketchTextInput.h&gt;
+// Get the value of the property.
+string propertyValue = sketchTextInput_var-&gt;
+expression
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = sketchTextInput_var-&gt;
+expression
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">fontName Property</h3><p class="api">Gets and sets the name of the font to use.</p><pre class="api-code">"sketchTextInput_var" is a variable referencing a SketchTextInput object.
+#include &lt;Fusion/Sketch/SketchTextInput.h&gt;
+// Get the value of the property.
+string propertyValue = sketchTextInput_var-&gt;
+fontName
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = sketchTextInput_var-&gt;
+fontName
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">height Property</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. This property has been retired and replaced by the height2 property.</p><pre class="api-code">"sketchTextInput_var" is a variable referencing a SketchTextInput object.
+#include &lt;Fusion/Sketch/SketchTextInput.h&gt;
+// Get the value of the property.
+double propertyValue = sketchTextInput_var-&gt;
+height
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = sketchTextInput_var-&gt;
+height
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">height2 Property</h3><p class="api">Gets and sets the ValueInput that defines the height of the text. This value is used to create a parameter that will control the height of the text. It can be a value where it defines the height of the text in centimeters, or it can be a string where it defines the equation of the parameter and must evaluate to a valid length.</p><pre class="api-code">"sketchTextInput_var" is a variable referencing a SketchTextInput object.
+#include &lt;Fusion/Sketch/SketchTextInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = sketchTextInput_var-&gt;
+height2
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = sketchTextInput_var-&gt;
+height2
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">isHorizontalFlip Property</h3><p class="api">Gets and sets if the text is flipped horizontally.</p><pre class="api-code">"sketchTextInput_var" is a variable referencing a SketchTextInput object.
+#include &lt;Fusion/Sketch/SketchTextInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchTextInput_var-&gt;
+isHorizontalFlip
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sketchTextInput_var-&gt;
+isHorizontalFlip
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"sketchTextInput_var" is a variable referencing a SketchTextInput object.
+#include &lt;Fusion/Sketch/SketchTextInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchTextInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isVerticalFlip Property</h3><p class="api">Gets and sets if the text is flipped vertically.</p><pre class="api-code">"sketchTextInput_var" is a variable referencing a SketchTextInput object.
+#include &lt;Fusion/Sketch/SketchTextInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchTextInput_var-&gt;
+isVerticalFlip
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sketchTextInput_var-&gt;
+isVerticalFlip
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"sketchTextInput_var" is a variable referencing a SketchTextInput object.
+#include &lt;Fusion/Sketch/SketchTextInput.h&gt;
+// Get the value of the property.
+string propertyValue = sketchTextInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">position Property</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Gets and sets the position of the text on the x-y plane of the sketch. The text must lie on the x-y plane so the Z component of the point is ignored and always treated as zero.</p><pre class="api-code">"sketchTextInput_var" is a variable referencing a SketchTextInput object.
+#include &lt;Fusion/Sketch/SketchTextInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = sketchTextInput_var-&gt;
+position
+();
+// Set the value of the property, where value_var is a Point3D.
+bool returnValue = sketchTextInput_var-&gt;
+position
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">setAsAlongPath Method</h3><p class="api">Sets this SketchTextInput to define text that follows along a specified path.</p><pre class="api-code">"sketchTextInput_var" is a variable referencing a
+SketchTextInput
+object.
+#include &lt;Fusion/Sketch/SketchTextInput.h&gt;
+returnValue = sketchTextInput_var-&gt;
+setAsAlongPath
+(path, isAbovePath, horizontalAlignment, characterSpacing);</pre><p class="api">Return Value: boolean - Returns true if the setting the definition was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">path</td><td class="api-list">Base</td><td class="api-list">The entity that defines the path for the text. This can be a SketchCurve or BRepEdge object.</td></tr><tr><td class="api-list">isAbovePath</td><td class="api-list">boolean</td><td class="api-list">Indicates if the text should be positioned above or below the path entity.</td></tr><tr><td class="api-list">horizontalAlignment</td><td class="api-list">HorizontalAlignments</td><td class="api-list">Specifies the horizontal alignment of the text with respect to the path curve.</td></tr><tr><td class="api-list">characterSpacing</td><td class="api-list">double</td><td class="api-list">The percentage change in default spacing between characters.</td></tr></table><h3 class="api-member">setAsFitOnPath Method</h3><p class="api">Sets this SketchTextInput to define text that fits along a specified path. Fitting on a path will space the characters so the text fits along the entire length of the path entity.</p><pre class="api-code">"sketchTextInput_var" is a variable referencing a
+SketchTextInput
+object.
+#include &lt;Fusion/Sketch/SketchTextInput.h&gt;
+returnValue = sketchTextInput_var-&gt;
+setAsFitOnPath
+(path, isAbovePath);</pre><p class="api">Return Value: boolean - Returns true if the setting the definition was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">path</td><td class="api-list">Base</td><td class="api-list">The entity that defines the path for the text. This can be a SketchCurve or BRepEdge object.</td></tr><tr><td class="api-list">isAbovePath</td><td class="api-list">boolean</td><td class="api-list">Indicates if the text should be positioned above or below the path entity.</td></tr></table><h3 class="api-member">setAsFitOnPath Member</h3><h3 class="api-member">setAsMultiLine Method</h3><p class="api">Defines the first corner point of the rectangle that will contain the text.</p><pre class="api-code">"sketchTextInput_var" is a variable referencing a
+SketchTextInput
+object.
+#include &lt;Fusion/Sketch/SketchTextInput.h&gt;
+returnValue = sketchTextInput_var-&gt;
+setAsMultiLine
+(cornerPoint, diagonalPoint, horizontalAlignment, verticalAlignment, characterSpacing);</pre><p class="api">Return Value: boolean - Returns true if the setting the definition was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">cornerPoint</td><td class="api-list">Base</td><td class="api-list">Specifies the location of one of the corner points of the rectangle that will contain the text. This can be a Point3D object, with a Z component of zero, to define any arbitrary location on the X-Y plane of the sketch or it can be an existing SketchPoint that lies on the sketch X-Y plane.</td></tr><tr><td class="api-list">diagonalPoint</td><td class="api-list">Base</td><td class="api-list">Specifies the location of the diagonal point of the rectangle that will contain the text. This point cannot be aligned vertically or horizontally to the corner point but be a diagonal point to define a rectangle. This can be a Point3D object, with a Z component of zero, to define any arbitrary location on the X-Y plane of the sketch or it can be an existing SketchPoint that lies on the sketch X-Y plane and the sketch point will become the opposing corner point.</td></tr><tr><td class="api-list">horizontalAlignment</td><td class="api-list">HorizontalAlignments</td><td class="api-list">Specifies the horizontal alignment of the text with respect to the text rectangle.</td></tr><tr><td class="api-list">verticalAlignment</td><td class="api-list">VerticalAlignments</td><td class="api-list">Specifies the vertical alignment of the text with respect to the text rectangle.</td></tr><tr><td class="api-list">characterSpacing</td><td class="api-list">double</td><td class="api-list">The spacing between the characters. This is an additional spacing to apply that is defined as a percentage of the default spacing. A spacing of 0 indicates no additional spacing. A spacing of 50 indicates to use the default plus 50% of the default.</td></tr></table><h3 class="api-member">setAsMultiLine Member</h3><h3 class="api-member">text Property</h3><p class="api">Gets and sets the displayed text. This represents the text that results from evaluating the input formatted text. For example, if the formatted text is "'Length: ' + lengthParam", this property will return "Length: 3.0 in". Setting this property will overwrite any equation defined by the expression and replace it with simple text. Use the expression property to be able to define a full expression.</p><pre class="api-code">"sketchTextInput_var" is a variable referencing a SketchTextInput object.
+#include &lt;Fusion/Sketch/SketchTextInput.h&gt;
+// Get the value of the property.
+string propertyValue = sketchTextInput_var-&gt;
+text
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = sketchTextInput_var-&gt;
+text
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">textStyle Property</h3><p class="api">Gets and sets the text style to apply to the entire text. This is a bitwise enum so styles can be combined to apply multiple styles. For example you can apply bold and italic.</p><pre class="api-code">"sketchTextInput_var" is a variable referencing a SketchTextInput object.
+#include &lt;Fusion/Sketch/SketchTextInput.h&gt;
+// Get the value of the property.
+TextStyles propertyValue = sketchTextInput_var-&gt;
+textStyle
+();
+// Set the value of the property, where value_var is a TextStyles.
+bool returnValue = sketchTextInput_var-&gt;
+textStyle
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

@@ -1,0 +1,193 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/MultiAxisRetractAndReconfigureSettings.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="06/08/2025" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="MultiAxisRetractAndReconfigureSettings" name="contextid"/>
+<meta content="MultiAxisRetractAndReconfigureSettings Object" name="description"/>
+<meta content="GUID-11E63F8D-2DF2-46D8-8AB4-1CD09745E530" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>MultiAxisRetractAndReconfigureSettings Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">MultiAxisRetractAndReconfigureSettings Object <img alt="Preview" src="../images/TestTubeLarge.png"/></h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/Machine/MultiAxisRetractAndReconfigureSettings.h&gt;<p class="api-preview"><img alt="Preview" src="../images/TestTubeSmall.png"/>This functionality is provided as a preview
+				of intended future API capabilities. You are encouraged to use it and report any problems or suggestions using the
+				<a href="https://forums.autodesk.com/t5/fusion-360-api-and-scripts/bd-p/22">Fusion API and Scripts</a> forum.<br/><br/>
+	
+                Because this is a preview of future functionality, there is the possibility that it will change, which will possibly
+		        break any existing programs that use this functionality. Because of that, you should never deliver any programs that use
+		        any preview capabilities. For a distributed program, you should wait until it has moved from preview to released state.
+		    </p>
+<h2 class="api">
+          Description
+        </h2>Settings for multi-axis retract and reconfigure.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MultiAxisRetractAndReconfigureSettings_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MultiAxisRetractAndReconfigureSettings_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MultiAxisRetractAndReconfigureSettings_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="MultiAxisRetractAndReconfigureSettings_retractPreference.htm">retractPreference</a></td>
+<td class="api-list">The retract preference. See MultiAxisRetractPreference values for more details.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MultiAxisRetractAndReconfigureSettings_rewindPreference.htm">rewindPreference</a></td>
+<td class="api-list">The rewind preferece. See MultiAxisRewindPreference values for more details.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MultiAxisRetractAndReconfigureSettings_safePlungeFeedrate.htm">safePlungeFeedrate</a></td>
+<td class="api-list">The safe plunge feedrate for plunge moves. A plunge rate is the speed at which the tool is driven down into the material when starting a cut. It varies depending on the tool and material. Plunging too fast may damage the tip of the cutter. (cm/min)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MultiAxisRetractAndReconfigureSettings_safeRetractDistance.htm">safeRetractDistance</a></td>
+<td class="api-list">The length of the retract moves along the tool axis, to perform a rewind.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MultiAxisRetractAndReconfigureSettings_safeRetractFeedrate.htm">safeRetractFeedrate</a></td>
+<td class="api-list">The safe retract feedrate for retract moves. (cm/min)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MultiAxisRetractAndReconfigureSettings_stockExpansion.htm">stockExpansion</a></td>
+<td class="api-list">Defines the stock expansion for computing retract moves in rewinds.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="MultiAxisMachineElement_createRetractAndReconfigureSettings.htm">MultiAxisMachineElement.createRetractAndReconfigureSettings</a>, <a href="MultiAxisMachineElement_retractAndReconfigureSettings.htm">MultiAxisMachineElement.retractAndReconfigureSettings</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2025<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(MultiAxisRetractAndReconfigureSettings%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/Machine/MultiAxisRetractAndReconfigureSettings.h&gt;
+returnValue = adsk::cam::MultiAxisRetractAndReconfigureSettings::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"multiAxisRetractAndReconfigureSettings_var" is a variable referencing a MultiAxisRetractAndReconfigureSettings object.
+#include &lt;Cam/Machine/MultiAxisRetractAndReconfigureSettings.h&gt;
+// Get the value of the property.
+boolean propertyValue = multiAxisRetractAndReconfigureSettings_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"multiAxisRetractAndReconfigureSettings_var" is a variable referencing a MultiAxisRetractAndReconfigureSettings object.
+#include &lt;Cam/Machine/MultiAxisRetractAndReconfigureSettings.h&gt;
+// Get the value of the property.
+string propertyValue = multiAxisRetractAndReconfigureSettings_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">retractPreference Property</h3><p class="api">The retract preference. See MultiAxisRetractPreference values for more details.</p><pre class="api-code">"multiAxisRetractAndReconfigureSettings_var" is a variable referencing a MultiAxisRetractAndReconfigureSettings object.
+#include &lt;Cam/Machine/MultiAxisRetractAndReconfigureSettings.h&gt;
+// Get the value of the property.
+MultiAxisRetractPreference propertyValue = multiAxisRetractAndReconfigureSettings_var-&gt;
+retractPreference
+();
+// Set the value of the property, where value_var is a MultiAxisRetractPreference.
+bool returnValue = multiAxisRetractAndReconfigureSettings_var-&gt;
+retractPreference
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">rewindPreference Property</h3><p class="api">The rewind preferece. See MultiAxisRewindPreference values for more details.</p><pre class="api-code">"multiAxisRetractAndReconfigureSettings_var" is a variable referencing a MultiAxisRetractAndReconfigureSettings object.
+#include &lt;Cam/Machine/MultiAxisRetractAndReconfigureSettings.h&gt;
+// Get the value of the property.
+MultiAxisRewindPreference propertyValue = multiAxisRetractAndReconfigureSettings_var-&gt;
+rewindPreference
+();
+// Set the value of the property, where value_var is a MultiAxisRewindPreference.
+bool returnValue = multiAxisRetractAndReconfigureSettings_var-&gt;
+rewindPreference
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">safePlungeFeedrate Property</h3><p class="api">The safe plunge feedrate for plunge moves. A plunge rate is the speed at which the tool is driven down into the material when starting a cut. It varies depending on the tool and material. Plunging too fast may damage the tip of the cutter. (cm/min)</p><pre class="api-code">"multiAxisRetractAndReconfigureSettings_var" is a variable referencing a MultiAxisRetractAndReconfigureSettings object.
+#include &lt;Cam/Machine/MultiAxisRetractAndReconfigureSettings.h&gt;
+// Get the value of the property.
+double propertyValue = multiAxisRetractAndReconfigureSettings_var-&gt;
+safePlungeFeedrate
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = multiAxisRetractAndReconfigureSettings_var-&gt;
+safePlungeFeedrate
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">safeRetractDistance Property</h3><p class="api">The length of the retract moves along the tool axis, to perform a rewind.</p><pre class="api-code">"multiAxisRetractAndReconfigureSettings_var" is a variable referencing a MultiAxisRetractAndReconfigureSettings object.
+#include &lt;Cam/Machine/MultiAxisRetractAndReconfigureSettings.h&gt;
+// Get the value of the property.
+double propertyValue = multiAxisRetractAndReconfigureSettings_var-&gt;
+safeRetractDistance
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = multiAxisRetractAndReconfigureSettings_var-&gt;
+safeRetractDistance
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">safeRetractFeedrate Property</h3><p class="api">The safe retract feedrate for retract moves. (cm/min)</p><pre class="api-code">"multiAxisRetractAndReconfigureSettings_var" is a variable referencing a MultiAxisRetractAndReconfigureSettings object.
+#include &lt;Cam/Machine/MultiAxisRetractAndReconfigureSettings.h&gt;
+// Get the value of the property.
+double propertyValue = multiAxisRetractAndReconfigureSettings_var-&gt;
+safeRetractFeedrate
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = multiAxisRetractAndReconfigureSettings_var-&gt;
+safeRetractFeedrate
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">stockExpansion Property</h3><p class="api">Defines the stock expansion for computing retract moves in rewinds.</p><pre class="api-code">"multiAxisRetractAndReconfigureSettings_var" is a variable referencing a MultiAxisRetractAndReconfigureSettings object.
+#include &lt;Cam/Machine/MultiAxisRetractAndReconfigureSettings.h&gt;
+// Get the value of the property.
+Ptr&lt;Vector3D&gt; propertyValue = multiAxisRetractAndReconfigureSettings_var-&gt;
+stockExpansion
+();
+// Set the value of the property, where value_var is a Vector3D.
+bool returnValue = multiAxisRetractAndReconfigureSettings_var-&gt;
+stockExpansion
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

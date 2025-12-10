@@ -1,0 +1,446 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/MeshBody.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="MeshBody" name="contextid"/>
+<meta content="MeshBody Object" name="description"/>
+<meta content="GUID-96f7fbb8-1faf-4f6a-8079-1129ef336033" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>MeshBody Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">MeshBody Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/MeshBody/MeshBody.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access to a mesh body.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_copy.htm">copy</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Copies the mesh body to the clipboard.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_copyToComponent.htm">copyToComponent</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Creates a copy of this mesh body into the specified target.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_createComponent.htm">createComponent</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Creates a new component and occurrence within the component that currently owns this body. This body is moved into the new component and returned. The newly created component can be obtained by using the parentComponent property of the MeshBody object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_createForAssemblyContext.htm">createForAssemblyContext</a></td>
+<td class="api-list">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence. Fails if this object is not the NativeObject.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_cut.htm">cut</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Cuts the mesh body to the clipboard.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes the mesh body.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_findByTempId.htm">findByTempId</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the face group with the temporary id.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_moveToComponent.htm">moveToComponent</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Moves this mesh body from it's current component into the root component or the component owned by the specified occurrence.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_appearance.htm">appearance</a></td>
+<td class="api-list">Read-write property that gets and sets the current appearance of the body. Setting this property will result in applying an override appearance to the body and the AppearanceSourceType property will return OverrideAppearanceSource. Setting this property to null will remove any override.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_appearanceSourceType.htm">appearanceSourceType</a></td>
+<td class="api-list">Read-write property that gets the source of the appearance for the body. If this returns OverrideAppearanceSource, an override exists on this body. The override can be removed by setting the Appearance property to null.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_area.htm">area</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the area in cm ^ 2.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_assemblyContext.htm">assemblyContext</a></td>
+<td class="api-list">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_attributes.htm">attributes</a></td>
+<td class="api-list">Returns the collection of attributes associated with this mesh body.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_baseOrFormFeature.htm">baseOrFormFeature</a></td>
+<td class="api-list">This property returns the base or form feature that this mesh body is associated with. It returns null in a direct modeling design.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_boundingBox.htm">boundingBox</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the bounding box of this mesh body.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_displayMesh.htm">displayMesh</a></td>
+<td class="api-list">Returns the associated mesh that is used for the display. This will always be triangles and includes any textures.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_displayOverrides.htm">displayOverrides</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Gets the object that allows manipulation of overrides that control how the mesh is displayed in the interactive 3D view.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_entityToken.htm">entityToken</a></td>
+<td class="api-list">Returns a token for the MeshBody object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same mesh body.<br><br/> When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_faceGroups.htm">faceGroups</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns a collection of all of the face groups in the body.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_isClosed.htm">isClosed</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Check to see if the mesh is closed - i.e. contains no edges with only one triangle. Returns true if the mesh is closed, false if not.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_isLightBulbOn.htm">isLightBulbOn</a></td>
+<td class="api-list">Is the light bulb (as displayed in the browser) on. A mesh body will only be visible if the light bulb is switched on. However, the light bulb can be on and the mesh body is still invisible if the light bulb for all bodies or the owning component is off.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_isOriented.htm">isOriented</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Check to see if the mesh is oriented - i.e. every edge has at most two triangles, and those triangles have consistent orientations. Returns true if the mesh is oriented, false if not.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_isSelectable.htm">isSelectable</a></td>
+<td class="api-list">Gets and sets if the mesh body is selectable in the graphics window.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_isVisible.htm">isVisible</a></td>
+<td class="api-list">Gets if the mesh body point is visible.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_material.htm">material</a></td>
+<td class="api-list">Gets and sets the physical material assigned to this mesh body.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_mesh.htm">mesh</a></td>
+<td class="api-list">Returns the original mesh data that was imported. This can include triangles, quads, and polygons.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_name.htm">name</a></td>
+<td class="api-list">Gets and sets the name of the mesh body as displayed in the browser.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_nativeObject.htm">nativeObject</a></td>
+<td class="api-list">The NativeObject is the object outside the context of an assembly and in the context of it's parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_opacity.htm">opacity</a></td>
+<td class="api-list">Gets and sets the opacity override assigned to this body. A value of 1.0 specifies that is it completely opaque and a value of 0.0 specifies that is it completely transparent.<br/><br/> This value is not necessarily related to what the user sees because the opacity is inherited. For example, if you this body is in a component and that component's opacity is set to something other than 1.0, the body will also be shown as slightly transparent even though the opacity property for the body will return 1.0. Because the component that contains the body can be referenced as an occurrence in other components and they can have different opacity settings, it's possible that different instances of the same body can display using different opacity levels. To get the opacity that it is being displayed with use the MeshBody.visibleOpacity property.<br/><br/> This is the API equivalent of the "Opacity Control" command available for the body in the browser.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_orientedMinimumBoundingBox.htm">orientedMinimumBoundingBox</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns an oriented bounding box of the body that is best oriented to tightly fit the body.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_parentComponent.htm">parentComponent</a></td>
+<td class="api-list">Returns the parent Component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_textureMapControl.htm">textureMapControl</a></td>
+<td class="api-list">Returns the TextureMapControl object associated with this body when there is an appearance assigned to the body that has a texture associated with it. If there isn't a texture, this property will return null. If there is a texture, you can use the returned object to query and modify how the texture is applied to the body.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_visibleOpacity.htm">visibleOpacity</a></td>
+<td class="api-list">The user can set an override opacity for components and bodies these opacity overrides combine if children and parent components have overrides. This property returns the actual opacity that is being used to render the body. To set the opacity use the opacity property of the MeshBody object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="MeshBody_volume.htm">volume</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the volume in cm ^ 3. Returns 0 in the case the mesh body is not closed.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="BaseFeature_meshBodies.htm">BaseFeature.meshBodies</a>, <a href="FaceGroup_parentBody.htm">FaceGroup.parentBody</a>, <a href="MeshBodies_addByTriangleMeshData.htm">MeshBodies.addByTriangleMeshData</a>, <a href="MeshBodies_item.htm">MeshBodies.item</a>, <a href="MeshBody_copyToComponent.htm">MeshBody.copyToComponent</a>, <a href="MeshBody_createComponent.htm">MeshBody.createComponent</a>, <a href="MeshBody_createForAssemblyContext.htm">MeshBody.createForAssemblyContext</a>, <a href="MeshBody_moveToComponent.htm">MeshBody.moveToComponent</a>, <a href="MeshBody_nativeObject.htm">MeshBody.nativeObject</a>, <a href="MeshBodyList_item.htm">MeshBodyList.item</a>, <a href="MeshCombineFeature_targetBody.htm">MeshCombineFeature.targetBody</a>, <a href="MeshCombineFeature_toolBodies.htm">MeshCombineFeature.toolBodies</a>, <a href="MeshCombineFeatureInput_targetBody.htm">MeshCombineFeatureInput.targetBody</a>, <a href="MeshCombineFeatureInput_toolBodies.htm">MeshCombineFeatureInput.toolBodies</a>, <a href="MeshConvertFeature_inputBodies.htm">MeshConvertFeature.inputBodies</a>, <a href="MeshConvertFeatureInput_inputBodies.htm">MeshConvertFeatureInput.inputBodies</a>, <a href="MeshRemoveFeature_inputBodies.htm">MeshRemoveFeature.inputBodies</a>, <a href="MeshRemoveFeatureInput_inputBodies.htm">MeshRemoveFeatureInput.inputBodies</a>, <a href="VolumetricModelToMeshFeature_meshBody.htm">VolumetricModelToMeshFeature.meshBody</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(MeshBody%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">appearance Property</h3><p class="api">Read-write property that gets and sets the current appearance of the body. Setting this property will result in applying an override appearance to the body and the AppearanceSourceType property will return OverrideAppearanceSource. Setting this property to null will remove any override.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+Ptr&lt;Appearance&gt; propertyValue = meshBody_var-&gt;
+appearance
+();
+// Set the value of the property, where value_var is an Appearance.
+bool returnValue = meshBody_var-&gt;
+appearance
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">appearanceSourceType Property</h3><p class="api">Read-write property that gets the source of the appearance for the body. If this returns OverrideAppearanceSource, an override exists on this body. The override can be removed by setting the Appearance property to null.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+AppearanceSourceTypes propertyValue = meshBody_var-&gt;
+appearanceSourceType
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">area Property</h3><p class="api">Returns the area in cm ^ 2.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+double propertyValue = meshBody_var-&gt;
+area
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">assemblyContext Property</h3><p class="api">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = meshBody_var-&gt;
+assemblyContext
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">attributes Property</h3><p class="api">Returns the collection of attributes associated with this mesh body.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+Ptr&lt;Attributes&gt; propertyValue = meshBody_var-&gt;
+attributes
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">baseOrFormFeature Property</h3><p class="api">This property returns the base or form feature that this mesh body is associated with. It returns null in a direct modeling design.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = meshBody_var-&gt;
+baseOrFormFeature
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">boundingBox Property</h3><p class="api">Returns the bounding box of this mesh body.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+Ptr&lt;BoundingBox3D&gt; propertyValue = meshBody_var-&gt;
+boundingBox
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+returnValue = adsk::fusion::MeshBody::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">copy Method</h3><p class="api">Copies the mesh body to the clipboard.</p><pre class="api-code">"meshBody_var" is a variable referencing a
+MeshBody
+object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+returnValue = meshBody_var-&gt;
+copy
+();</pre><p class="api">Return Value: boolean - Returns true if the copy was successful.</p><h3 class="api-member">copyToComponent Method</h3><p class="api">Creates a copy of this mesh body into the specified target.</p><pre class="api-code">"meshBody_var" is a variable referencing a
+MeshBody
+object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+returnValue = meshBody_var-&gt;
+copyToComponent
+(target);</pre><p class="api">Return Value: MeshBody - Returns the moved mesh body or null in the case the move failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">target</td><td class="api-list">Base</td><td class="api-list">The target can be either the root component or an occurrence. In the case where an occurrence is specified, the mesh body will be copied into the parent component of the target occurrence and the target occurrence defines the transform of how the mesh body will be copied so that the body maintains it's same position with respect to the assembly.</td></tr></table><h3 class="api-member">createComponent Method</h3><p class="api">Creates a new component and occurrence within the component that currently owns this body. This body is moved into the new component and returned. The newly created component can be obtained by using the parentComponent property of the MeshBody object.</p><pre class="api-code">"meshBody_var" is a variable referencing a
+MeshBody
+object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+returnValue = meshBody_var-&gt;
+createComponent
+();</pre><p class="api">Return Value: MeshBody - Returns the MeshBody in the new component or null in the case the creation failed.</p><h3 class="api-member">createForAssemblyContext Method</h3><p class="api">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence. Fails if this object is not the NativeObject.</p><pre class="api-code">"meshBody_var" is a variable referencing a
+MeshBody
+object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+returnValue = meshBody_var-&gt;
+createForAssemblyContext
+(occurrence);</pre><p class="api">Return Value: MeshBody - Returns the proxy for the occurrence in the context of the specified occurrence. Returns null if it failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">occurrence</td><td class="api-list">Occurrence</td><td class="api-list">The occurrence that represents the context you want to create this proxy in.</td></tr></table><h3 class="api-member">cut Method</h3><p class="api">Cuts the mesh body to the clipboard.</p><pre class="api-code">"meshBody_var" is a variable referencing a
+MeshBody
+object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+returnValue = meshBody_var-&gt;
+cut
+();</pre><p class="api">Return Value: boolean - Returns true if the cut was successful.</p><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes the mesh body.</p><pre class="api-code">"meshBody_var" is a variable referencing a
+MeshBody
+object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+returnValue = meshBody_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true in the case where the selection was successful.</p><h3 class="api-member">displayMesh Property</h3><p class="api">Returns the associated mesh that is used for the display. This will always be triangles and includes any textures.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+Ptr&lt;TriangleMesh&gt; propertyValue = meshBody_var-&gt;
+displayMesh
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">displayOverrides Property</h3><p class="api">Gets the object that allows manipulation of overrides that control how the mesh is displayed in the interactive 3D view.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+Ptr&lt;MeshBodyDisplayOverrides&gt; propertyValue = meshBody_var-&gt;
+displayOverrides
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">entityToken Property</h3><p class="api">Returns a token for the MeshBody object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same mesh body. When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+string propertyValue = meshBody_var-&gt;
+entityToken
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">faceGroups Property</h3><p class="api">Returns a collection of all of the face groups in the body.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+Ptr&lt;FaceGroups&gt; propertyValue = meshBody_var-&gt;
+faceGroups
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">findByTempId Method</h3><p class="api">Returns the face group with the temporary id.</p><pre class="api-code">"meshBody_var" is a variable referencing a
+MeshBody
+object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+returnValue = meshBody_var-&gt;
+findByTempId
+(tempId);</pre><p class="api">Return Value: Base - Returns the face group with the given tempId.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">tempId</td><td class="api-list">integer</td><td class="api-list">The ID of the face group to find.</td></tr></table><h3 class="api-member">isClosed Property</h3><p class="api">Check to see if the mesh is closed - i.e. contains no edges with only one triangle. Returns true if the mesh is closed, false if not.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+boolean propertyValue = meshBody_var-&gt;
+isClosed
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isLightBulbOn Property</h3><p class="api">Is the light bulb (as displayed in the browser) on. A mesh body will only be visible if the light bulb is switched on. However, the light bulb can be on and the mesh body is still invisible if the light bulb for all bodies or the owning component is off.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+boolean propertyValue = meshBody_var-&gt;
+isLightBulbOn
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = meshBody_var-&gt;
+isLightBulbOn
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isOriented Property</h3><p class="api">Check to see if the mesh is oriented - i.e. every edge has at most two triangles, and those triangles have consistent orientations. Returns true if the mesh is oriented, false if not.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+boolean propertyValue = meshBody_var-&gt;
+isOriented
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isSelectable Property</h3><p class="api">Gets and sets if the mesh body is selectable in the graphics window.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+boolean propertyValue = meshBody_var-&gt;
+isSelectable
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = meshBody_var-&gt;
+isSelectable
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+boolean propertyValue = meshBody_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isVisible Property</h3><p class="api">Gets if the mesh body point is visible.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+boolean propertyValue = meshBody_var-&gt;
+isVisible
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">material Property</h3><p class="api">Gets and sets the physical material assigned to this mesh body.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+Ptr&lt;Material&gt; propertyValue = meshBody_var-&gt;
+material
+();
+// Set the value of the property, where value_var is a Material.
+bool returnValue = meshBody_var-&gt;
+material
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">mesh Property</h3><p class="api">Returns the original mesh data that was imported. This can include triangles, quads, and polygons.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+Ptr&lt;PolygonMesh&gt; propertyValue = meshBody_var-&gt;
+mesh
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">moveToComponent Method</h3><p class="api">Moves this mesh body from it's current component into the root component or the component owned by the specified occurrence.</p><pre class="api-code">"meshBody_var" is a variable referencing a
+MeshBody
+object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+returnValue = meshBody_var-&gt;
+moveToComponent
+(target);</pre><p class="api">Return Value: MeshBody - Returns the moved mesh body or null in the case the move failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">target</td><td class="api-list">Base</td><td class="api-list">The target can be either the root component or an occurrence. In the case where an occurrence is specified, the mesh body will be moved into the parent component of the target occurrence and the target occurrence defines the transform of how the mesh body will be copied so that the body maintains it's same position with respect to the assembly.</td></tr></table><h3 class="api-member">name Property</h3><p class="api">Gets and sets the name of the mesh body as displayed in the browser.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+string propertyValue = meshBody_var-&gt;
+name
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = meshBody_var-&gt;
+name
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">nativeObject Property</h3><p class="api">The NativeObject is the object outside the context of an assembly and in the context of it's parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+Ptr&lt;MeshBody&gt; propertyValue = meshBody_var-&gt;
+nativeObject
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+string propertyValue = meshBody_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">opacity Property</h3><p class="api">Gets and sets the opacity override assigned to this body. A value of 1.0 specifies that is it completely opaque and a value of 0.0 specifies that is it completely transparent. This value is not necessarily related to what the user sees because the opacity is inherited. For example, if you this body is in a component and that component's opacity is set to something other than 1.0, the body will also be shown as slightly transparent even though the opacity property for the body will return 1.0. Because the component that contains the body can be referenced as an occurrence in other components and they can have different opacity settings, it's possible that different instances of the same body can display using different opacity levels. To get the opacity that it is being displayed with use the MeshBody.visibleOpacity property. This is the API equivalent of the "Opacity Control" command available for the body in the browser.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+double propertyValue = meshBody_var-&gt;
+opacity
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = meshBody_var-&gt;
+opacity
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">orientedMinimumBoundingBox Property</h3><p class="api">Returns an oriented bounding box of the body that is best oriented to tightly fit the body.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+Ptr&lt;OrientedBoundingBox3D&gt; propertyValue = meshBody_var-&gt;
+orientedMinimumBoundingBox
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">parentComponent Property</h3><p class="api">Returns the parent Component.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+Ptr&lt;Component&gt; propertyValue = meshBody_var-&gt;
+parentComponent
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">textureMapControl Property</h3><p class="api">Returns the TextureMapControl object associated with this body when there is an appearance assigned to the body that has a texture associated with it. If there isn't a texture, this property will return null. If there is a texture, you can use the returned object to query and modify how the texture is applied to the body.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+Ptr&lt;TextureMapControl&gt; propertyValue = meshBody_var-&gt;
+textureMapControl
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">visibleOpacity Property</h3><p class="api">The user can set an override opacity for components and bodies these opacity overrides combine if children and parent components have overrides. This property returns the actual opacity that is being used to render the body. To set the opacity use the opacity property of the MeshBody object.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+double propertyValue = meshBody_var-&gt;
+visibleOpacity
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">volume Property</h3><p class="api">Returns the volume in cm ^ 3. Returns 0 in the case the mesh body is not closed.</p><pre class="api-code">"meshBody_var" is a variable referencing a MeshBody object.
+#include &lt;Fusion/MeshBody/MeshBody.h&gt;
+// Get the value of the property.
+double propertyValue = meshBody_var-&gt;
+volume
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p></body>
+</html>

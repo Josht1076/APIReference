@@ -1,0 +1,210 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ToolLibrary.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="21/02/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ToolLibrary" name="contextid"/>
+<meta content="ToolLibrary Object" name="description"/>
+<meta content="GUID-1C9482B1-CEAA-4D48-83ED-DDA9637372D2" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ToolLibrary Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ToolLibrary Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/Tools/ToolLibrary.h&gt;<h2 class="api">
+          Description
+        </h2>ToolLibrary represents a collection of Tool objects.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolLibrary_add.htm">add</a></td>
+<td class="api-list">Inserts a Tool at the end of the ToolLibrary.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolLibrary_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolLibrary_createEmpty.htm">createEmpty</a></td>
+<td class="api-list">Creates an empty ToolLibrary.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolLibrary_createFromJson.htm">createFromJson</a></td>
+<td class="api-list">Creates a ToolLibrary by given JSON-string. Raises an error if the given JSON is invalid.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolLibrary_createQuery.htm">createQuery</a></td>
+<td class="api-list">Creates a new ToolQuery that is used to query the library for tools matching the query.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolLibrary_item.htm">item</a></td>
+<td class="api-list">Get Tool by index in ToolLibrary.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolLibrary_remove.htm">remove</a></td>
+<td class="api-list">Remove Tool by index from ToolLibrary.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolLibrary_toJson.htm">toJson</a></td>
+<td class="api-list">Generate and return JSON string that contains all tools of that list.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolLibrary_count.htm">count</a></td>
+<td class="api-list">The number of tools in the ToolLibrary.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolLibrary_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolLibrary_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="DocumentToolLibrary_createEmpty.htm">DocumentToolLibrary.createEmpty</a>, <a href="DocumentToolLibrary_createFromJson.htm">DocumentToolLibrary.createFromJson</a>, <a href="ToolLibraries_toolLibraryAtURL.htm">ToolLibraries.toolLibraryAtURL</a>, <a href="ToolLibrary_createEmpty.htm">ToolLibrary.createEmpty</a>, <a href="ToolLibrary_createFromJson.htm">ToolLibrary.createFromJson</a>, <a href="ToolQueryResult_toolLibrary.htm">ToolQueryResult.toolLibrary</a><h2 class="api">
+            Derived Classes
+          </h2><a href="DocumentToolLibrary.htm">DocumentToolLibrary</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="HoleAndPocketRecognition_Sample.htm">Hole and Pocket Recognition API Sample</a></td>
+<td class="api-list"><p>This sample script demonstrates three different methods for feature recognition: one for holes and two for pockets.</p><p>The script starts by creating a simple component which is then used to demonstrate the three methods. After the features are recognised they are coloured and milling and drilling operations are created for each feature.</p><p>RecognizedHoleGroup returns a list of BRepFaces that can be used as selections for the drilling operation. RecognizedPocket also return some BRepFaces but it needs additional processing before the output can be used for creating machining operations.</p><p>The sample script demonstrates a couple of different methods, including finding the pocket BRepFaces and creating sketches from the recognized pockets.</p><p>This script works only if the Manufacturing Extension is active.</p></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ManufacturingWorkflowAPISample_Sample.htm">Manufacturing Workflow API Sample</a></td>
+<td class="api-list">Manufacturing Workflow API Sample<p>This sample script starts by creating a simple component which is then used to describe a milling workflow. It creates a setup, a few operations, pick some tools from a Fusion sample tool library using loops and queries and ends up post-processing the operations out using an NC Program.</p></td>
+</tr>
+<tr>
+<td class="api-list"><a href="Turning_Workflow_API_Sample_Sample.htm">Turning Workflow API Sample</a></td>
+<td class="api-list">Turning Workflow API Sample<p>This sample script starts by opening a simple component which is then used to describe a basic turning workflow. It creates a setup, a few operations, pick some tools from a Fusion sample tool library using loops and queries and ends up post-processing the operations out using an NC Program.</p></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version April 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ToolLibrary%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">add Method</h3><p class="api">Inserts a Tool at the end of the ToolLibrary.</p><pre class="api-code">"toolLibrary_var" is a variable referencing a
+ToolLibrary
+object.
+#include &lt;Cam/Tools/ToolLibrary.h&gt;
+returnValue = toolLibrary_var-&gt;
+add
+(tool);</pre><p class="api">Return Value: boolean - Returns true for successful insertion, false otherwise</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">tool</td><td class="api-list">Tool</td><td class="api-list">The Tool that should be added.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/Tools/ToolLibrary.h&gt;
+returnValue = adsk::cam::ToolLibrary::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">The number of tools in the ToolLibrary.</p><pre class="api-code">"toolLibrary_var" is a variable referencing a ToolLibrary object.
+#include &lt;Cam/Tools/ToolLibrary.h&gt;
+// Get the value of the property.
+uinteger propertyValue = toolLibrary_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">createEmpty Method</h3><p class="api">Creates an empty ToolLibrary.</p><pre class="api-code">This is a static method.
+#include &lt;Cam/Tools/ToolLibrary.h&gt;
+returnValue = adsk::cam::ToolLibrary::
+createEmpty
+();</pre><p class="api">Return Value: ToolLibrary - Returns the newly created ToolLibrary.</p><h3 class="api-member">createFromJson Method</h3><p class="api">Creates a ToolLibrary by given JSON-string. Raises an error if the given JSON is invalid.</p><pre class="api-code">This is a static method.
+#include &lt;Cam/Tools/ToolLibrary.h&gt;
+returnValue = adsk::cam::ToolLibrary::
+createFromJson
+(json);</pre><p class="api">Return Value: ToolLibrary - Returns the newly created ToolLibrary.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">json</td><td class="api-list">string</td><td class="api-list">The JSON contains all tools that should be added to the new ToolLibrary</td></tr></table><h3 class="api-member">createQuery Method</h3><p class="api">Creates a new ToolQuery that is used to query the library for tools matching the query.</p><pre class="api-code">"toolLibrary_var" is a variable referencing a
+ToolLibrary
+object.
+#include &lt;Cam/Tools/ToolLibrary.h&gt;
+returnValue = toolLibrary_var-&gt;
+createQuery
+();</pre><p class="api">Return Value: ToolQuery - Returns a new ToolQuery. The query is predefined by given parameter.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"toolLibrary_var" is a variable referencing a ToolLibrary object.
+#include &lt;Cam/Tools/ToolLibrary.h&gt;
+// Get the value of the property.
+boolean propertyValue = toolLibrary_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Get Tool by index in ToolLibrary.</p><pre class="api-code">"toolLibrary_var" is a variable referencing a
+ToolLibrary
+object.
+#include &lt;Cam/Tools/ToolLibrary.h&gt;
+returnValue = toolLibrary_var-&gt;
+item
+(index);</pre><p class="api">Return Value: Tool - Returns the Tool in the ToolLibrary by given index.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">Index of the Tool in the ToolLibrary.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"toolLibrary_var" is a variable referencing a ToolLibrary object.
+#include &lt;Cam/Tools/ToolLibrary.h&gt;
+// Get the value of the property.
+string propertyValue = toolLibrary_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">remove Method</h3><p class="api">Remove Tool by index from ToolLibrary.</p><pre class="api-code">"toolLibrary_var" is a variable referencing a
+ToolLibrary
+object.
+#include &lt;Cam/Tools/ToolLibrary.h&gt;
+returnValue = toolLibrary_var-&gt;
+remove
+(index);</pre><p class="api">Return Value: boolean - Returns true for successful deletion, false otherwise</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">Index of the Tool in the ToolLibrary that should be removed.</td></tr></table><h3 class="api-member">toJson Method</h3><p class="api">Generate and return JSON string that contains all tools of that list.</p><pre class="api-code">"toolLibrary_var" is a variable referencing a
+ToolLibrary
+object.
+#include &lt;Cam/Tools/ToolLibrary.h&gt;
+returnValue = toolLibrary_var-&gt;
+toJson
+();</pre><p class="api">Return Value: string - Returns JSON string that contains all tools of that list.</p></body>
+</html>

@@ -1,0 +1,209 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/BoundaryFillFeatureInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="22/4/2015" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="BoundaryFillFeatureInput" name="contextid"/>
+<meta content="BoundaryFillFeatureInput Object" name="description"/>
+<meta content="GUID-c7e21e4b-1232-4b97-804f-6d5b63de768c" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>BoundaryFillFeatureInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">BoundaryFillFeatureInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/BoundaryFillFeatureInput.h&gt;<h2 class="api">
+          Description
+        </h2>This class defines the methods and properties that pertain to the definition of a BoundaryFillFeatureInput.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="BoundaryFillFeatureInput_cancel.htm">cancel</a></td>
+<td class="api-list">To determine the possible boundaries and allow you to choose which cells to keep, the boundary fill feature does a partial compute when the input object is created. To do this it starts a boundary fill feature transaction and completes the transaction when you call the add method. If you don't call the add method to finish the transaction it leaves Fusion in a bad state and there will be undo problems and possibly a crash. If you have created a BoundFillFeatureInput object and don't want to finish the feature creation, you need to call the cancel method on the BoundaryFillFeatureInput object to safely abort the current boundary fill transaction.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BoundaryFillFeatureInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="BoundaryFillFeatureInput_bRepCells.htm">bRepCells</a></td>
+<td class="api-list">Returns the collection of the valid cells that have been calculated based on the set of input tools. You use this collection to specify which cells you want included in the output.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BoundaryFillFeatureInput_creationOccurrence.htm">creationOccurrence</a></td>
+<td class="api-list">In order for geometry to be transformed correctly, an Occurrence for creation needs to be specified when the Boundary Fill is created based on geometry (e.g. a profile and/or face(s)) in another component AND (the Boundary Fill) is not in the root component. The CreationOccurrence is analogous to the active occurrence in the UI</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BoundaryFillFeatureInput_isRemoveTools.htm">isRemoveTools</a></td>
+<td class="api-list">Gets and sets whether any BRepBodys that were used as tools should be removed as part of the feature creation.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BoundaryFillFeatureInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BoundaryFillFeatureInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="BoundaryFillFeatureInput_operation.htm">operation</a></td>
+<td class="api-list">Gets and sets the type of operation performed by the boundary fill feature.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BoundaryFillFeatureInput_targetBaseFeature.htm">targetBaseFeature</a></td>
+<td class="api-list">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature.<br/><br/> Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BoundaryFillFeatureInput_tools.htm">tools</a></td>
+<td class="api-list">Gets and sets the collection of one or more construction planes and open or closed BRepBody objects that are used in calculating the possible closed boundaries.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="BoundaryFillFeatures_createInput.htm">BoundaryFillFeatures.createInput</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="BoundaryFillFeatureSample_Sample.htm">Boundary Fill Feature API Sample</a></td>
+<td class="api-list">Demonstrates creating a new boundary fill feature.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version June 2015<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(BoundaryFillFeatureInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">bRepCells Property</h3><p class="api">Returns the collection of the valid cells that have been calculated based on the set of input tools. You use this collection to specify which cells you want included in the output.</p><pre class="api-code">"boundaryFillFeatureInput_var" is a variable referencing a BoundaryFillFeatureInput object.
+#include &lt;Fusion/Features/BoundaryFillFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BRepCells&gt; propertyValue = boundaryFillFeatureInput_var-&gt;
+bRepCells
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">cancel Method</h3><p class="api">To determine the possible boundaries and allow you to choose which cells to keep, the boundary fill feature does a partial compute when the input object is created. To do this it starts a boundary fill feature transaction and completes the transaction when you call the add method. If you don't call the add method to finish the transaction it leaves Fusion in a bad state and there will be undo problems and possibly a crash. If you have created a BoundFillFeatureInput object and don't want to finish the feature creation, you need to call the cancel method on the BoundaryFillFeatureInput object to safely abort the current boundary fill transaction.</p><pre class="api-code">"boundaryFillFeatureInput_var" is a variable referencing a
+BoundaryFillFeatureInput
+object.
+#include &lt;Fusion/Features/BoundaryFillFeatureInput.h&gt;
+returnValue = boundaryFillFeatureInput_var-&gt;
+cancel
+();</pre><p class="api">Return Value: boolean - Returns true if successful.</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/BoundaryFillFeatureInput.h&gt;
+returnValue = adsk::fusion::BoundaryFillFeatureInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">creationOccurrence Property</h3><p class="api">In order for geometry to be transformed correctly, an Occurrence for creation needs to be specified when the Boundary Fill is created based on geometry (e.g. a profile and/or face(s)) in another component AND (the Boundary Fill) is not in the root component. The CreationOccurrence is analogous to the active occurrence in the UI</p><pre class="api-code">"boundaryFillFeatureInput_var" is a variable referencing a BoundaryFillFeatureInput object.
+#include &lt;Fusion/Features/BoundaryFillFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = boundaryFillFeatureInput_var-&gt;
+creationOccurrence
+();
+// Set the value of the property, where value_var is an Occurrence.
+bool returnValue = boundaryFillFeatureInput_var-&gt;
+creationOccurrence
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">isRemoveTools Property</h3><p class="api">Gets and sets whether any BRepBodys that were used as tools should be removed as part of the feature creation.</p><pre class="api-code">"boundaryFillFeatureInput_var" is a variable referencing a BoundaryFillFeatureInput object.
+#include &lt;Fusion/Features/BoundaryFillFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = boundaryFillFeatureInput_var-&gt;
+isRemoveTools
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = boundaryFillFeatureInput_var-&gt;
+isRemoveTools
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"boundaryFillFeatureInput_var" is a variable referencing a BoundaryFillFeatureInput object.
+#include &lt;Fusion/Features/BoundaryFillFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = boundaryFillFeatureInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"boundaryFillFeatureInput_var" is a variable referencing a BoundaryFillFeatureInput object.
+#include &lt;Fusion/Features/BoundaryFillFeatureInput.h&gt;
+// Get the value of the property.
+string propertyValue = boundaryFillFeatureInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">operation Property</h3><p class="api">Gets and sets the type of operation performed by the boundary fill feature.</p><pre class="api-code">"boundaryFillFeatureInput_var" is a variable referencing a BoundaryFillFeatureInput object.
+#include &lt;Fusion/Features/BoundaryFillFeatureInput.h&gt;
+// Get the value of the property.
+FeatureOperations propertyValue = boundaryFillFeatureInput_var-&gt;
+operation
+();
+// Set the value of the property, where value_var is a FeatureOperations.
+bool returnValue = boundaryFillFeatureInput_var-&gt;
+operation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">targetBaseFeature Property</h3><p class="api">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature. Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</p><pre class="api-code">"boundaryFillFeatureInput_var" is a variable referencing a BoundaryFillFeatureInput object.
+#include &lt;Fusion/Features/BoundaryFillFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BaseFeature&gt; propertyValue = boundaryFillFeatureInput_var-&gt;
+targetBaseFeature
+();
+// Set the value of the property, where value_var is a BaseFeature.
+bool returnValue = boundaryFillFeatureInput_var-&gt;
+targetBaseFeature
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">tools Property</h3><p class="api">Gets and sets the collection of one or more construction planes and open or closed BRepBody objects that are used in calculating the possible closed boundaries.</p><pre class="api-code">"boundaryFillFeatureInput_var" is a variable referencing a BoundaryFillFeatureInput object.
+#include &lt;Fusion/Features/BoundaryFillFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ObjectCollection&gt; propertyValue = boundaryFillFeatureInput_var-&gt;
+tools
+();
+// Set the value of the property, where value_var is an ObjectCollection.
+bool returnValue = boundaryFillFeatureInput_var-&gt;
+tools
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p></body>
+</html>

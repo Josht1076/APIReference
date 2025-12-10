@@ -1,0 +1,189 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/TriangleMeshCalculator.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="TriangleMeshCalculator" name="contextid"/>
+<meta content="TriangleMeshCalculator Object" name="description"/>
+<meta content="GUID-ea9d98b8-329a-4b14-8fe3-e6d98458e72c" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>TriangleMeshCalculator Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">TriangleMeshCalculator Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/MeshData/TriangleMeshCalculator.h&gt;<h2 class="api">
+          Description
+        </h2>Used to calculate new meshes for a B-Rep or T-Spline using defined criteria.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMeshCalculator_calculate.htm">calculate</a></td>
+<td class="api-list">Calculates a new triangle mesh based on the current settings.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMeshCalculator_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMeshCalculator_setQuality.htm">setQuality</a></td>
+<td class="api-list">This is a simplified way to set the various settings that control the resulting mesh. When used it automatically adjusts all of the property values appropriately. It does this for the given geometry by computing its bounding box diameter. Then the surface tolerance is calculated as shown below where the meshLOD is the "Level of Detail" and is described in more detail below. The diameter is the bounding box diameter.<br><br/> double nodeApproximateSize = std::pow(2.0, meshLOD); double fracTol = 1.0 / nodeApproximateSize; surfaceTolerance = fracTol * diameter;</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMeshCalculator_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMeshCalculator_maxAspectRatio.htm">maxAspectRatio</a></td>
+<td class="api-list">Specifies the maximum length to height ratio that a triangle can have. This helps to avoid long skinny triangles. A value of 0 (the default) indicates that no maximum aspect ratio is specified.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMeshCalculator_maxNormalDeviation.htm">maxNormalDeviation</a></td>
+<td class="api-list">Specifies the maximum deviation between adjacent vertex normals. This value is the maximum angle allowed between normals and is specified in radians. A value of 0 (the default) indicates that no normal deviation is specified.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMeshCalculator_maxSideLength.htm">maxSideLength</a></td>
+<td class="api-list">Specifies the maximum side of any triangle in the mesh. A value of 0 (the default) indicates that no maximum length is specified. The value is specified in centimeters.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMeshCalculator_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMeshCalculator_parentMeshManager.htm">parentMeshManager</a></td>
+<td class="api-list">Returns the parent MeshManager object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMeshCalculator_surfaceTolerance.htm">surfaceTolerance</a></td>
+<td class="api-list">Specifies the maximum distance that the mesh can deviate from the smooth surface. The value is in centimeters. Smaller values can result in a much greater number of facets being returned and will require more processing time to calculate.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="MeshManager_createMeshCalculator.htm">MeshManager.createMeshCalculator</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(TriangleMeshCalculator%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">calculate Method</h3><p class="api">Calculates a new triangle mesh based on the current settings.</p><pre class="api-code">"triangleMeshCalculator_var" is a variable referencing a
+TriangleMeshCalculator
+object.
+#include &lt;Fusion/MeshData/TriangleMeshCalculator.h&gt;
+returnValue = triangleMeshCalculator_var-&gt;
+calculate
+();</pre><p class="api">Return Value: TriangleMesh - Returns the new TriangleMesh object or null in the case where the calculation failed.</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/MeshData/TriangleMeshCalculator.h&gt;
+returnValue = adsk::fusion::TriangleMeshCalculator::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"triangleMeshCalculator_var" is a variable referencing a TriangleMeshCalculator object.
+#include &lt;Fusion/MeshData/TriangleMeshCalculator.h&gt;
+// Get the value of the property.
+boolean propertyValue = triangleMeshCalculator_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">maxAspectRatio Property</h3><p class="api">Specifies the maximum length to height ratio that a triangle can have. This helps to avoid long skinny triangles. A value of 0 (the default) indicates that no maximum aspect ratio is specified.</p><pre class="api-code">"triangleMeshCalculator_var" is a variable referencing a TriangleMeshCalculator object.
+#include &lt;Fusion/MeshData/TriangleMeshCalculator.h&gt;
+// Get the value of the property.
+double propertyValue = triangleMeshCalculator_var-&gt;
+maxAspectRatio
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = triangleMeshCalculator_var-&gt;
+maxAspectRatio
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">maxNormalDeviation Property</h3><p class="api">Specifies the maximum deviation between adjacent vertex normals. This value is the maximum angle allowed between normals and is specified in radians. A value of 0 (the default) indicates that no normal deviation is specified.</p><pre class="api-code">"triangleMeshCalculator_var" is a variable referencing a TriangleMeshCalculator object.
+#include &lt;Fusion/MeshData/TriangleMeshCalculator.h&gt;
+// Get the value of the property.
+double propertyValue = triangleMeshCalculator_var-&gt;
+maxNormalDeviation
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = triangleMeshCalculator_var-&gt;
+maxNormalDeviation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">maxSideLength Property</h3><p class="api">Specifies the maximum side of any triangle in the mesh. A value of 0 (the default) indicates that no maximum length is specified. The value is specified in centimeters.</p><pre class="api-code">"triangleMeshCalculator_var" is a variable referencing a TriangleMeshCalculator object.
+#include &lt;Fusion/MeshData/TriangleMeshCalculator.h&gt;
+// Get the value of the property.
+double propertyValue = triangleMeshCalculator_var-&gt;
+maxSideLength
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = triangleMeshCalculator_var-&gt;
+maxSideLength
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"triangleMeshCalculator_var" is a variable referencing a TriangleMeshCalculator object.
+#include &lt;Fusion/MeshData/TriangleMeshCalculator.h&gt;
+// Get the value of the property.
+string propertyValue = triangleMeshCalculator_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentMeshManager Property</h3><p class="api">Returns the parent MeshManager object.</p><pre class="api-code">"triangleMeshCalculator_var" is a variable referencing a TriangleMeshCalculator object.
+#include &lt;Fusion/MeshData/TriangleMeshCalculator.h&gt;
+// Get the value of the property.
+Ptr&lt;MeshManager&gt; propertyValue = triangleMeshCalculator_var-&gt;
+parentMeshManager
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">setQuality Method</h3><p class="api">This is a simplified way to set the various settings that control the resulting mesh. When used it automatically adjusts all of the property values appropriately. It does this for the given geometry by computing its bounding box diameter. Then the surface tolerance is calculated as shown below where the meshLOD is the "Level of Detail" and is described in more detail below. The diameter is the bounding box diameter. double nodeApproximateSize = std::pow(2.0, meshLOD); double fracTol = 1.0 / nodeApproximateSize; surfaceTolerance = fracTol * diameter;</p><pre class="api-code">"triangleMeshCalculator_var" is a variable referencing a
+TriangleMeshCalculator
+object.
+#include &lt;Fusion/MeshData/TriangleMeshCalculator.h&gt;
+returnValue = triangleMeshCalculator_var-&gt;
+setQuality
+(triangleMeshQuality);</pre><p class="api">Return Value: boolean - Returns true if setting the quality was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">triangleMeshQuality</td><td class="api-list">TriangleMeshQualityOptions</td><td class="api-list">The mesh quality is specified by using an item from the enum list where the following items result in a corresponding mesh LOD that's used in the equation above. LowQualityTriangleMesh: 8 NormalQualityTriangleMesh: 11 HighQualityTriangleMesh: 13 VeryHighQualityTriangleMesh: 15</td></tr></table><h3 class="api-member">surfaceTolerance Property</h3><p class="api">Specifies the maximum distance that the mesh can deviate from the smooth surface. The value is in centimeters. Smaller values can result in a much greater number of facets being returned and will require more processing time to calculate.</p><pre class="api-code">"triangleMeshCalculator_var" is a variable referencing a TriangleMeshCalculator object.
+#include &lt;Fusion/MeshData/TriangleMeshCalculator.h&gt;
+// Get the value of the property.
+double propertyValue = triangleMeshCalculator_var-&gt;
+surfaceTolerance
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = triangleMeshCalculator_var-&gt;
+surfaceTolerance
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p></body>
+</html>

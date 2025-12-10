@@ -1,0 +1,345 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/Script.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="09/10/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="Script" name="contextid"/>
+<meta content="Script Object" name="description"/>
+<meta content="GUID-6CE79190-488B-40F7-8E2B-44784588E048" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>Script Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">Script Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Application/Script.h&gt;<h2 class="api">
+          Description
+        </h2>Object that represents a script or add-in.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_edit.htm">edit</a></td>
+<td class="api-list">Invokes the default edit behavior for this script or add-in.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_run.htm">run</a></td>
+<td class="api-list">Runs this script or add-in, if it's not already running.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_stop.htm">stop</a></td>
+<td class="api-list">If this script or add-in is running, this method will stop it. The isRunning property can be used to determine if it is running. If the script or add-in is not running and this method is called, there is no effect.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_unlink.htm">unlink</a></td>
+<td class="api-list">Unlinks this script or add-in. This removes it from Fusion's list of linked scripts and add-ins, so it is no longer displayed in the dialog, and if it's an add-in, it will no longer run on startup.<br><br/> This is only valid for a script or add-in that is linked; the sourceLocation property returns LinkedScriptSourceLocation.</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_appStoreURL.htm">appStoreURL</a></td>
+<td class="api-list">For an add-in installed from the Autodesk App Store, this property returns the URL on the store for the page of this app. This property returns an empty string for all scripts and add-ins not installed from the App Store and if there is a problem determining the URL for an App Store app.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_author.htm">author</a></td>
+<td class="api-list">Returns the author information associated with this script or add-in.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_description.htm">description</a></td>
+<td class="api-list">Gets the description of this script or add-in.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_folder.htm">folder</a></td>
+<td class="api-list">Gets the full path of the folder that contains this script or add-in.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_helpFilename.htm">helpFilename</a></td>
+<td class="api-list">Returns the filename of a local html file that serves as the help file for this script or add-in. This filename is defined in the manifest of the script or add-in using the "helpFilename" setting.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_iconFilename.htm">iconFilename</a></td>
+<td class="api-list">Returns the filename of the image file that can be used as the icon for this script or add-in. This filename is defined in the manifest of the script or add-in using the "iconFilename" setting.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_id.htm">id</a></td>
+<td class="api-list">Gets the ID of this script or add-in. This is typically a GUID and is assumed to be unique with respect to all other add-ins.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_isAddIn.htm">isAddIn</a></td>
+<td class="api-list">Gets if this Script object represents a script or an add-in. Returns true if it is an add-in.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_isEditable.htm">isEditable</a></td>
+<td class="api-list">Indicates if this script or add-in is blocked from being edited by the user in the "Scripts and Add-Ins" dialog.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_isFavorite.htm">isFavorite</a></td>
+<td class="api-list">Gets and sets whether this script or add-in is a favorite of the user.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_isInternal.htm">isInternal</a></td>
+<td class="api-list">Indicates if this is an internal script or add-in that is delivered with Fusion. Returns true if it is an internal script or add-in.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_isRunning.htm">isRunning</a></td>
+<td class="api-list">Gets if this script or add-in is currently running.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_isRunOnStartup.htm">isRunOnStartup</a></td>
+<td class="api-list">Gets and sets whether this add-in will automatically run when Fusion is started. This property is only valid when the isAddIn property returns true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_isVisible.htm">isVisible</a></td>
+<td class="api-list">Gets and sets whether the script or add-in is visible within the “Scripts and Add-Ins” dialog. By default, all scripts and add-ins are visible. Setting this to false will cause it to be hidden and unloaded if it is already running. Also, if it’s an add-in set to load on startup, it will no longer be loaded.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_location.htm">location</a></td>
+<td class="api-list">Gets which standard location this script is located.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_manifestContent.htm">manifestContent</a></td>
+<td class="api-list">Gets the full contents of the manifest file associated with this script or add-in. This is particularly useful if you have any custom information defined in the manifest. The manifest file uses JSON to format its content.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_name.htm">name</a></td>
+<td class="api-list">Gets the name of this script or add-in.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_programmingLanguage.htm">programmingLanguage</a></td>
+<td class="api-list">Returns the programming language this script or add-in is written in.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_targetOperatingSystem.htm">targetOperatingSystem</a></td>
+<td class="api-list">Returns the operating systems this script or add-in is available for.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Script_version.htm">version</a></td>
+<td class="api-list">Returns the version information associated with this script or add-in.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Scripts_addExisting.htm">Scripts.addExisting</a>, <a href="Scripts_addNew.htm">Scripts.addNew</a>, <a href="Scripts_item.htm">Scripts.item</a>, <a href="Scripts_itemByPath.htm">Scripts.itemByPath</a>, <a href="Scripts_itemsByName.htm">Scripts.itemsByName</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version October 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(Script%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">appStoreURL Property</h3><p class="api">For an add-in installed from the Autodesk App Store, this property returns the URL on the store for the page of this app. This property returns an empty string for all scripts and add-ins not installed from the App Store and if there is a problem determining the URL for an App Store app.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+string propertyValue = script_var-&gt;
+appStoreURL
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">author Property</h3><p class="api">Returns the author information associated with this script or add-in.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+string propertyValue = script_var-&gt;
+author
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Application/Script.h&gt;
+returnValue = adsk::core::Script::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">description Property</h3><p class="api">Gets the description of this script or add-in.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+string propertyValue = script_var-&gt;
+description
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">edit Method</h3><p class="api">Invokes the default edit behavior for this script or add-in.</p><pre class="api-code">"script_var" is a variable referencing a
+Script
+object.
+#include &lt;Core/Application/Script.h&gt;
+returnValue = script_var-&gt;
+edit
+();</pre><p class="api">Return Value: boolean - Returns true if successful.</p><h3 class="api-member">folder Property</h3><p class="api">Gets the full path of the folder that contains this script or add-in.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+string propertyValue = script_var-&gt;
+folder
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">helpFilename Property</h3><p class="api">Returns the filename of a local html file that serves as the help file for this script or add-in. This filename is defined in the manifest of the script or add-in using the "helpFilename" setting.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+string propertyValue = script_var-&gt;
+helpFilename
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">iconFilename Property</h3><p class="api">Returns the filename of the image file that can be used as the icon for this script or add-in. This filename is defined in the manifest of the script or add-in using the "iconFilename" setting.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+string propertyValue = script_var-&gt;
+iconFilename
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">id Property</h3><p class="api">Gets the ID of this script or add-in. This is typically a GUID and is assumed to be unique with respect to all other add-ins.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+string propertyValue = script_var-&gt;
+id
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">isAddIn Property</h3><p class="api">Gets if this Script object represents a script or an add-in. Returns true if it is an add-in.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+boolean propertyValue = script_var-&gt;
+isAddIn
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isEditable Property</h3><p class="api">Indicates if this script or add-in is blocked from being edited by the user in the "Scripts and Add-Ins" dialog.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+boolean propertyValue = script_var-&gt;
+isEditable
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isFavorite Property</h3><p class="api">Gets and sets whether this script or add-in is a favorite of the user.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+boolean propertyValue = script_var-&gt;
+isFavorite
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = script_var-&gt;
+isFavorite
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isInternal Property</h3><p class="api">Indicates if this is an internal script or add-in that is delivered with Fusion. Returns true if it is an internal script or add-in.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+boolean propertyValue = script_var-&gt;
+isInternal
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isRunning Property</h3><p class="api">Gets if this script or add-in is currently running.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+boolean propertyValue = script_var-&gt;
+isRunning
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isRunOnStartup Property</h3><p class="api">Gets and sets whether this add-in will automatically run when Fusion is started. This property is only valid when the isAddIn property returns true.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+boolean propertyValue = script_var-&gt;
+isRunOnStartup
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = script_var-&gt;
+isRunOnStartup
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+boolean propertyValue = script_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isVisible Property</h3><p class="api">Gets and sets whether the script or add-in is visible within the “Scripts and Add-Ins” dialog. By default, all scripts and add-ins are visible. Setting this to false will cause it to be hidden and unloaded if it is already running. Also, if it’s an add-in set to load on startup, it will no longer be loaded.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+boolean propertyValue = script_var-&gt;
+isVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = script_var-&gt;
+isVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">location Property</h3><p class="api">Gets which standard location this script is located.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+ScriptSourceLocations propertyValue = script_var-&gt;
+location
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">manifestContent Property</h3><p class="api">Gets the full contents of the manifest file associated with this script or add-in. This is particularly useful if you have any custom information defined in the manifest. The manifest file uses JSON to format its content.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+string propertyValue = script_var-&gt;
+manifestContent
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">name Property</h3><p class="api">Gets the name of this script or add-in.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+string propertyValue = script_var-&gt;
+name
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+string propertyValue = script_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">programmingLanguage Property</h3><p class="api">Returns the programming language this script or add-in is written in.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+ProgrammingLanguages propertyValue = script_var-&gt;
+programmingLanguage
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">run Method</h3><p class="api">Runs this script or add-in, if it's not already running.</p><pre class="api-code">"script_var" is a variable referencing a
+Script
+object.
+#include &lt;Core/Application/Script.h&gt;
+// Uses no optional arguments.
+returnValue = script_var-&gt;
+run
+();
+// Uses optional arguments.
+returnValue = script_var-&gt;
+run
+(waitForFinish);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">waitForFinish</td><td class="api-list">boolean</td><td class="api-list">Specifies if call will wait until the script or add-in has finished running. For add-ins, this should always be false, because they typically continue to run for the entire Fusion session. For scripts, there are cases where you might want to set this to true, where you need to wait for the script to finish because you want to do something with whatever it creates. Typically, this should be false, so it starts the script and immediately returns. This is an optional argument whose default value is False.</td></tr></table><h3 class="api-member">stop Method</h3><p class="api">If this script or add-in is running, this method will stop it. The isRunning property can be used to determine if it is running. If the script or add-in is not running and this method is called, there is no effect.</p><pre class="api-code">"script_var" is a variable referencing a
+Script
+object.
+#include &lt;Core/Application/Script.h&gt;
+returnValue = script_var-&gt;
+stop
+();</pre><p class="api">Return Value: boolean - Returns true if successful.</p><h3 class="api-member">targetOperatingSystem Property</h3><p class="api">Returns the operating systems this script or add-in is available for.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+OperatingSystems propertyValue = script_var-&gt;
+targetOperatingSystem
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">unlink Method</h3><p class="api">Unlinks this script or add-in. This removes it from Fusion's list of linked scripts and add-ins, so it is no longer displayed in the dialog, and if it's an add-in, it will no longer run on startup. This is only valid for a script or add-in that is linked; the sourceLocation property returns LinkedScriptSourceLocation.</p><pre class="api-code">"script_var" is a variable referencing a
+Script
+object.
+#include &lt;Core/Application/Script.h&gt;
+returnValue = script_var-&gt;
+unlink
+();</pre><p class="api">Return Value: boolean - Returns true if the unlink was successful.</p><h3 class="api-member">version Property</h3><p class="api">Returns the version information associated with this script or add-in.</p><pre class="api-code">"script_var" is a variable referencing a Script object.
+#include &lt;Core/Application/Script.h&gt;
+// Get the value of the property.
+string propertyValue = script_var-&gt;
+version
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

@@ -1,0 +1,196 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/FilletEdgeSets.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="14/10/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="FilletEdgeSets" name="contextid"/>
+<meta content="FilletEdgeSets Object" name="description"/>
+<meta content="GUID-5ec732db-a631-4b31-ad82-9677596e885d" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>FilletEdgeSets Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">FilletEdgeSets Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/FilletEdgeSets.h&gt;<h2 class="api">
+          Description
+        </h2>Collection that provides access to all of the existing fillet edge sets associated with a fillet feature.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletEdgeSets_addAsymmetricRadiusEdgeSet.htm">addAsymmetricRadiusEdgeSet</a></td>
+<td class="api-list">Adds an asymmetric fillet edge set to the fillet feature.<br><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletEdgeSets_addChordLengthEdgeSet.htm">addChordLengthEdgeSet</a></td>
+<td class="api-list">Adds a set of edges with a chord length to this fillet feature.<br/><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletEdgeSets_addConstantRadiusEdgeSet.htm">addConstantRadiusEdgeSet</a></td>
+<td class="api-list">Adds a set of edges with a constant radius to this fillet feature.<br/><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletEdgeSets_addVariableRadiusEdgeSet.htm">addVariableRadiusEdgeSet</a></td>
+<td class="api-list">Adds a single edge or set of tangent edges along with variable radius information to this fillet feature.<br/><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletEdgeSets_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletEdgeSets_item.htm">item</a></td>
+<td class="api-list">Function that returns the specified fillet edge set using an index into the collection.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletEdgeSets_count.htm">count</a></td>
+<td class="api-list">The number of fillet edge sets in the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletEdgeSets_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletEdgeSets_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="FilletFeature_edgeSets.htm">FilletFeature.edgeSets</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletFeatureEditSample_Sample.htm">Fillet Feature Edit API Sample</a></td>
+<td class="api-list"><p></p>Demonstrates editing a fillet feature.<br/>To successfully run this sample you can use this <a api"="" href="../ExtraFiles/APISampleFilletEdgeSetData.f3d&gt; file&lt;/a&gt; or create a new model with the described fillet feature.&lt;/p&gt;
+	&lt;p&gt;
+	&lt;ol&gt;
+	&lt;li&gt;Create a new model and add a block feature.&lt;/li&gt;
+	&lt;li&gt;Create a single fillet feature that defines three different fillets. The fillets need to be created in a way where they don't interact with one another. The easiest way is to create the fillets only on the vertical edges of the box.
+	&lt;ol&gt;
+	&lt;li&gt;Create a constant radius fillet with a radius that is about 1/4 the size of the box.&lt;/li&gt;
+	&lt;li&gt;Create a chord length fillet whose radius is also about 1/4 the size of the box.&lt;/li&gt;
+	&lt;li&gt;Create a variable radius fillet with one intermediate radius and the radii are about 1/4 the size of the box and less.&lt;/li&gt;
+	&lt;/ol&gt;
+&lt;/ol&gt;
+Running the sample script will modify various settings of each fillet and change the edge each fillet is applied to.
+	&lt;/p&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/Table&gt;
+    &lt;h2 class=">
+            Version
+          
+        Introduced in version November 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(FilletEdgeSets%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+</a></td></tr></table><h2 class="api">Members Detail (C++)</h2><h3 class="api-member">addAsymmetricRadiusEdgeSet Method</h3><p class="api">Adds an asymmetric fillet edge set to the fillet feature. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"filletEdgeSets_var" is a variable referencing a
+FilletEdgeSets
+object.
+#include &lt;Fusion/Features/FilletEdgeSets.h&gt;
+returnValue = filletEdgeSets_var-&gt;
+addAsymmetricRadiusEdgeSet
+(entities, offsetOne, offsetTwo, isTangentChain);</pre><p class="api">Return Value: AsymmetricFilletEdgeSet - Returns the newly created AsymmetricFilletEdgeSet.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">entities</td><td class="api-list">ObjectCollection</td><td class="api-list">An ObjectCollection containing the BRepEdge, BRepFace, and Feature objects to be filleted. If the isTangentChain argument is true additional edges or faces may also get filleted if they are tangentially connected to any of the input edges or faces.</td></tr><tr><td class="api-list">offsetOne</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the offset distance of the fillet in the first direction. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in") or if no units are specified it is interpreted using the current default units for length.</td></tr><tr><td class="api-list">offsetTwo</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the offset distance of the fillet in the second direction. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in") or if no units are specified it is interpreted using the current default units for length.</td></tr><tr><td class="api-list">isTangentChain</td><td class="api-list">boolean</td><td class="api-list">A boolean value for setting whether or not edges or faces that are tangentially connected to the input edges or faces will also be filleted.</td></tr></table><h3 class="api-member">addChordLengthEdgeSet Method</h3><p class="api">Adds a set of edges with a chord length to this fillet feature. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"filletEdgeSets_var" is a variable referencing a
+FilletEdgeSets
+object.
+#include &lt;Fusion/Features/FilletEdgeSets.h&gt;
+returnValue = filletEdgeSets_var-&gt;
+addChordLengthEdgeSet
+(entities, chordLength, isTangentChain);</pre><p class="api">Return Value: ChordLengthFilletEdgeSet - Returns the newly created FilletEdgeSet.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">entities</td><td class="api-list">ObjectCollection</td><td class="api-list">An ObjectCollection containing the BRepEdge, BRepFace, and Feature objects to be filleted. If the isTangentChain argument is true additional edges or faces may also get filleted if they are tangentially connected to any of the input edges or faces.</td></tr><tr><td class="api-list">chordLength</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the chord length of the fillet. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in") or if no units are specified it is interpreted using the current default units for length.</td></tr><tr><td class="api-list">isTangentChain</td><td class="api-list">boolean</td><td class="api-list">A boolean value for setting whether or not edges that are tangentially connected to the input edges (if any) will also be filleted.</td></tr></table><h3 class="api-member">addConstantRadiusEdgeSet Method</h3><p class="api">Adds a set of edges with a constant radius to this fillet feature. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"filletEdgeSets_var" is a variable referencing a
+FilletEdgeSets
+object.
+#include &lt;Fusion/Features/FilletEdgeSets.h&gt;
+returnValue = filletEdgeSets_var-&gt;
+addConstantRadiusEdgeSet
+(entities, radius, isTangentChain);</pre><p class="api">Return Value: ConstantRadiusFilletEdgeSet - Returns the newly created FilletEdgeSet.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">entities</td><td class="api-list">ObjectCollection</td><td class="api-list">An ObjectCollection containing the BRepEdge, BRepFace, and Feature objects to be filleted. If the isTangentChain argument is true additional edges or faces may also get filleted if they are tangentially connected to any of the input edges or faces.</td></tr><tr><td class="api-list">radius</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the radius of the fillet. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in") or if no units are specified it is interpreted using the current default units for length.</td></tr><tr><td class="api-list">isTangentChain</td><td class="api-list">boolean</td><td class="api-list">A boolean value for setting whether or not edges that are tangentially connected to the input edges (if any) will also be filleted.</td></tr></table><h3 class="api-member">addVariableRadiusEdgeSet Method</h3><p class="api">Adds a single edge or set of tangent edges along with variable radius information to this fillet feature. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"filletEdgeSets_var" is a variable referencing a
+FilletEdgeSets
+object.
+#include &lt;Fusion/Features/FilletEdgeSets.h&gt;
+returnValue = filletEdgeSets_var-&gt;
+addVariableRadiusEdgeSet
+(tangentEdges, startRadius, endRadius, positions, radii, isTangentChain);</pre><p class="api">Return Value: VariableRadiusFilletEdgeSet - Returns the newly created FilletEdgeSet.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">tangentEdges</td><td class="api-list">ObjectCollection</td><td class="api-list">An object collection containing a single edge or multiple edges. Multiple edges must be tangentially connected and added to the collection in their connected order. If a single edge is input, you can use the isTangentChain argument to automatically find any tangentially connected edges.</td></tr><tr><td class="api-list">startRadius</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the starting radius of the fillet. If a single edge is being filleted, the start radius is at the start end of the edge. If multiple tangent edges are being filleted the start radius is the open end of the first edge in the collection. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in") or if no units are specified it is interpreted using the current default units for length.</td></tr><tr><td class="api-list">endRadius</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the ending radius of the fillet. If a single edge is being filleted, the end radius is at the end of the edge. If multiple tangent edges are being filleted the end radius is the open end of the last edge in the collection. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in") or if no units are specified it is interpreted using the current default units for length.</td></tr><tr><td class="api-list">positions</td><td class="api-list">ValueInput[]</td><td class="api-list">An array of ValueInput objects that defines the positions of any additional radii along the edge(s). The value must be between 0 and 1 and defines the percentage along the curve where a radius is defined. The value is unitless. This array must have the same number of values as the array passed in for the radii argument.</td></tr><tr><td class="api-list">radii</td><td class="api-list">ValueInput[]</td><td class="api-list">An array of ValueInput objects that define the radii at positions along the edge(s). This array must have the same number of values as the array passed in for the positions argument. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in"). If no units are specified it will be interpreted using the current default units for length.</td></tr><tr><td class="api-list">isTangentChain</td><td class="api-list">boolean</td><td class="api-list">A boolean value for setting whether or not edges that are tangentially connected to the single input edge will also be filleted.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/FilletEdgeSets.h&gt;
+returnValue = adsk::fusion::FilletEdgeSets::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">The number of fillet edge sets in the collection.</p><pre class="api-code">"filletEdgeSets_var" is a variable referencing a FilletEdgeSets object.
+#include &lt;Fusion/Features/FilletEdgeSets.h&gt;
+// Get the value of the property.
+uinteger propertyValue = filletEdgeSets_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"filletEdgeSets_var" is a variable referencing a FilletEdgeSets object.
+#include &lt;Fusion/Features/FilletEdgeSets.h&gt;
+// Get the value of the property.
+boolean propertyValue = filletEdgeSets_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Function that returns the specified fillet edge set using an index into the collection.</p><pre class="api-code">"filletEdgeSets_var" is a variable referencing a
+FilletEdgeSets
+object.
+#include &lt;Fusion/Features/FilletEdgeSets.h&gt;
+returnValue = filletEdgeSets_var-&gt;
+item
+(index);</pre><p class="api">Return Value: FilletEdgeSet - Returns the specified item or null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the item within the collection to return. The first item in the collection has an index of 0.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"filletEdgeSets_var" is a variable referencing a FilletEdgeSets object.
+#include &lt;Fusion/Features/FilletEdgeSets.h&gt;
+// Get the value of the property.
+string propertyValue = filletEdgeSets_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

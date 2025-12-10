@@ -1,0 +1,255 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ConstructionPlaneInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ConstructionPlaneInput" name="contextid"/>
+<meta content="ConstructionPlaneInput Object" name="description"/>
+<meta content="GUID-54946b6f-5ef6-4e0b-8467-51f5f055b53b" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ConstructionPlaneInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ConstructionPlaneInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Construction/ConstructionPlaneInput.h&gt;<h2 class="api">
+          Description
+        </h2>A ConstructionPlaneInput is a throwaway object used to create a ConstructionPlane The usage pattern is: a. create a ConstructionPlaneInput (ConstructionPlanes.CreateInput) b. call one of the member functions to specify how the ConstructionPlane is created c. create the ConstructionPlane (call ConstructionPlanes.Add) d. stop referencing the ConstructionPlaneInput (so it gets deleted).<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPlaneInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPlaneInput_setByAngle.htm">setByAngle</a></td>
+<td class="api-list">This input method is for creating a construction plane through an edge, axis or line at a specified angle. This can result in a parametric or non-parametric construction plane depending on whether the parent component is parametric or is a direct edit component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPlaneInput_setByDistanceOnPath.htm">setByDistanceOnPath</a></td>
+<td class="api-list">This input method is for creating a construction plane normal to, and at specified distance along, a path defined by an edge or sketch profile. This can result in a parametric or non-parametric construction plane depending on whether the parent component is parametric or is a direct edit component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPlaneInput_setByOffset.htm">setByOffset</a></td>
+<td class="api-list">This input method is for creating a construction plane that is offset from a planar face or construction plane at a specified distance. This can result in a parametric or non-parametric construction plane depending on whether the parent component is parametric or is a direct edit component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPlaneInput_setByOffsetThroughPoint.htm">setByOffsetThroughPoint</a></td>
+<td class="api-list">Defines a construction plane that is offset from a planar face or construction plane and whose offset distance is defined by a vertex, sketch point, or construction point where the plane passes through the point.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPlaneInput_setByPlane.htm">setByPlane</a></td>
+<td class="api-list">This input method is for creating a non-parametric construction plane positioned in space as defined by the input Plane object.<br><br/> This method of defining a construction plane is only valid when working in the direct modeling mode. This is not valid when working in the parametric modeling mode and will fail.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPlaneInput_setByTangent.htm">setByTangent</a></td>
+<td class="api-list">This input method is for creating a construction plane tangent to a cylindrical or conical face at a specified point. This can result in a parametric or non-parametric construction plane depending on whether the parent component is parametric or is a direct edit component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPlaneInput_setByTangentAtPoint.htm">setByTangentAtPoint</a></td>
+<td class="api-list">This input method is for creating a construction plane tangent to a face and aligned to a point. This can result in a parametric or non-parametric construction plane depending on whether the parent component is parametric or is a direct edit component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPlaneInput_setByThreePoints.htm">setByThreePoints</a></td>
+<td class="api-list">This input method is for creating a construction plane through three points that define a triangle. This can result in a parametric or non-parametric construction plane depending on whether the parent component is parametric or is a direct edit component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPlaneInput_setByTwoEdges.htm">setByTwoEdges</a></td>
+<td class="api-list">This input method is for creating a construction plane that passes through two coplanar linear entities or axes. Defines a plane by specifying two coplanar linear entities. This can result in a parametric or non-parametric construction plane depending on whether the parent component is parametric or is a direct edit component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPlaneInput_setByTwoPlanes.htm">setByTwoPlanes</a></td>
+<td class="api-list">This input method is for creating a construction plane at the midpoint between two planar faces or construction planes. This can result in a parametric or non-parametric construction plane depending on whether the parent component is parametric or is a direct edit component.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPlaneInput_creationOccurrence.htm">creationOccurrence</a></td>
+<td class="api-list">In order for geometry to be transformed correctly, an Occurrence for creation needs to be specified when the ConstructionPlane is created based on geometry (e.g. a planarEntity) in another component AND (the ConstructionPlane) is not in the root component. The CreationOccurrence is analogous to the active occurrence in the UI</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPlaneInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPlaneInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPlaneInput_targetBaseOrFormFeature.htm">targetBaseOrFormFeature</a></td>
+<td class="api-list">When creating a construction plane that is owned by a base or form feature, set this property to the base or form feature you want to associate the new construction plane with. By default, this is null, meaning it will not be associated with a base or form feature.<br/><br/> Because of a current limitation, if you want to create a construction plane associated with a base or form feature, you must set this property AND call the startEdit method of the base or form feature, create the feature, and then call the finishEdit method of the base or form feature. The base or form feature must be in an "edit" state to be able to add any additional items to it.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ConstructionPlanes_createInput.htm">ConstructionPlanes.createInput</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPlaneSample_Sample.htm">Construction Plane API Sample</a></td>
+<td class="api-list">Demonstrates creating construction plane by different ways.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="LoftFeatureSample_Sample.htm">Loft Feature API Sample</a></td>
+<td class="api-list">Demonstrates creating a new loft feature.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ConstructionPlaneInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Construction/ConstructionPlaneInput.h&gt;
+returnValue = adsk::fusion::ConstructionPlaneInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">creationOccurrence Property</h3><p class="api">In order for geometry to be transformed correctly, an Occurrence for creation needs to be specified when the ConstructionPlane is created based on geometry (e.g. a planarEntity) in another component AND (the ConstructionPlane) is not in the root component. The CreationOccurrence is analogous to the active occurrence in the UI</p><pre class="api-code">"constructionPlaneInput_var" is a variable referencing a ConstructionPlaneInput object.
+#include &lt;Fusion/Construction/ConstructionPlaneInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = constructionPlaneInput_var-&gt;
+creationOccurrence
+();
+// Set the value of the property, where value_var is an Occurrence.
+bool returnValue = constructionPlaneInput_var-&gt;
+creationOccurrence
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"constructionPlaneInput_var" is a variable referencing a ConstructionPlaneInput object.
+#include &lt;Fusion/Construction/ConstructionPlaneInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = constructionPlaneInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"constructionPlaneInput_var" is a variable referencing a ConstructionPlaneInput object.
+#include &lt;Fusion/Construction/ConstructionPlaneInput.h&gt;
+// Get the value of the property.
+string propertyValue = constructionPlaneInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">setByAngle Method</h3><p class="api">This input method is for creating a construction plane through an edge, axis or line at a specified angle. This can result in a parametric or non-parametric construction plane depending on whether the parent component is parametric or is a direct edit component.</p><pre class="api-code">"constructionPlaneInput_var" is a variable referencing a
+ConstructionPlaneInput
+object.
+#include &lt;Fusion/Construction/ConstructionPlaneInput.h&gt;
+returnValue = constructionPlaneInput_var-&gt;
+setByAngle
+(linearEntity, angle, planarEntity);</pre><p class="api">Return Value: boolean - Returns true if the creation of the ConstructionPlaneInput is successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">linearEntity</td><td class="api-list">Base</td><td class="api-list">The axis about which to rotate the plane</td></tr><tr><td class="api-list">angle</td><td class="api-list">ValueInput</td><td class="api-list">The angle at which to create the plane</td></tr><tr><td class="api-list">planarEntity</td><td class="api-list">Base</td><td class="api-list">The planar face or construction plane the angle is measured from.</td></tr></table><h3 class="api-member">setByDistanceOnPath Method</h3><p class="api">This input method is for creating a construction plane normal to, and at specified distance along, a path defined by an edge or sketch profile. This can result in a parametric or non-parametric construction plane depending on whether the parent component is parametric or is a direct edit component.</p><pre class="api-code">"constructionPlaneInput_var" is a variable referencing a
+ConstructionPlaneInput
+object.
+#include &lt;Fusion/Construction/ConstructionPlaneInput.h&gt;
+returnValue = constructionPlaneInput_var-&gt;
+setByDistanceOnPath
+(pathEntity, distance);</pre><p class="api">Return Value: boolean - Returns true if the creation of the ConstructionPlaneInput is successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pathEntity</td><td class="api-list">Base</td><td class="api-list">The path can be an edge, sketch curve, or a path of multiple entities.</td></tr><tr><td class="api-list">distance</td><td class="api-list">ValueInput</td><td class="api-list">The distance is a value from 0 to 1 indicating the position along the path where 0 is at the start and 1 is at the end.</td></tr></table><h3 class="api-member">setByOffset Method</h3><p class="api">This input method is for creating a construction plane that is offset from a planar face or construction plane at a specified distance. This can result in a parametric or non-parametric construction plane depending on whether the parent component is parametric or is a direct edit component.</p><pre class="api-code">"constructionPlaneInput_var" is a variable referencing a
+ConstructionPlaneInput
+object.
+#include &lt;Fusion/Construction/ConstructionPlaneInput.h&gt;
+returnValue = constructionPlaneInput_var-&gt;
+setByOffset
+(planarEntity, offset);</pre><p class="api">Return Value: boolean - Returns true if the creation of the ConstructionPlaneInput is successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">planarEntity</td><td class="api-list">Base</td><td class="api-list">A plane, planar face or construction plane from which to create the offset plane</td></tr><tr><td class="api-list">offset</td><td class="api-list">ValueInput</td><td class="api-list">ValueInput object that specifies the offset distance for the plane</td></tr></table><h3 class="api-member">setByOffsetThroughPoint Method</h3><p class="api">Defines a construction plane that is offset from a planar face or construction plane and whose offset distance is defined by a vertex, sketch point, or construction point where the plane passes through the point.</p><pre class="api-code">"constructionPlaneInput_var" is a variable referencing a
+ConstructionPlaneInput
+object.
+#include &lt;Fusion/Construction/ConstructionPlaneInput.h&gt;
+returnValue = constructionPlaneInput_var-&gt;
+setByOffsetThroughPoint
+(planarEntity, point);</pre><p class="api">Return Value: boolean - Returns true if construction plane definition is successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">planarEntity</td><td class="api-list">Base</td><td class="api-list">A planar BRepFace, ConstructionPlane, or Plane object that the new construction plane will be offset from. A Plane object is only valid in a direct-edit design or a base feature. In that case a non-parametric result is created.</td></tr><tr><td class="api-list">point</td><td class="api-list">Base</td><td class="api-list">A BRepVertex, SketchPoint, ConstructionPoint, or Point3D that defines the offset distance. A Point3D is only valid in a direct-edit design. In that case a non-parametric result is created.</td></tr></table><h3 class="api-member">setByPlane Method</h3><p class="api">This input method is for creating a non-parametric construction plane positioned in space as defined by the input Plane object. This method of defining a construction plane is only valid when working in the direct modeling mode. This is not valid when working in the parametric modeling mode and will fail.</p><pre class="api-code">"constructionPlaneInput_var" is a variable referencing a
+ConstructionPlaneInput
+object.
+#include &lt;Fusion/Construction/ConstructionPlaneInput.h&gt;
+returnValue = constructionPlaneInput_var-&gt;
+setByPlane
+(plane);</pre><p class="api">Return Value: boolean - Returns true if the construction plane definition is successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">plane</td><td class="api-list">Plane</td><td class="api-list">A transient plane object</td></tr></table><h3 class="api-member">setByTangent Method</h3><p class="api">This input method is for creating a construction plane tangent to a cylindrical or conical face at a specified point. This can result in a parametric or non-parametric construction plane depending on whether the parent component is parametric or is a direct edit component.</p><pre class="api-code">"constructionPlaneInput_var" is a variable referencing a
+ConstructionPlaneInput
+object.
+#include &lt;Fusion/Construction/ConstructionPlaneInput.h&gt;
+returnValue = constructionPlaneInput_var-&gt;
+setByTangent
+(tangentFace, angle, planarEntity);</pre><p class="api">Return Value: boolean - Returns true if the creation of the ConstructionPlaneInput is successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">tangentFace</td><td class="api-list">BRepFace</td><td class="api-list">A cylindrical or conical face to create the plane tangent to</td></tr><tr><td class="api-list">angle</td><td class="api-list">ValueInput</td><td class="api-list">The angle relative to the planarEntity input at which to create the tangent plane</td></tr><tr><td class="api-list">planarEntity</td><td class="api-list">Base</td><td class="api-list">The planar face or construction plane the tangent is measured from.</td></tr></table><h3 class="api-member">setByTangentAtPoint Method</h3><p class="api">This input method is for creating a construction plane tangent to a face and aligned to a point. This can result in a parametric or non-parametric construction plane depending on whether the parent component is parametric or is a direct edit component.</p><pre class="api-code">"constructionPlaneInput_var" is a variable referencing a
+ConstructionPlaneInput
+object.
+#include &lt;Fusion/Construction/ConstructionPlaneInput.h&gt;
+returnValue = constructionPlaneInput_var-&gt;
+setByTangentAtPoint
+(tangentFace, pointEntity);</pre><p class="api">Return Value: boolean - Returns true if the creation of the ConstructionPlaneInput is successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">tangentFace</td><td class="api-list">BRepFace</td><td class="api-list">A face to create the plane tangent to</td></tr><tr><td class="api-list">pointEntity</td><td class="api-list">Base</td><td class="api-list">A construction point, sketch point or vertex the tangent plane aligns to. This point need not lie on the tangent face.</td></tr></table><h3 class="api-member">setByThreePoints Method</h3><p class="api">This input method is for creating a construction plane through three points that define a triangle. This can result in a parametric or non-parametric construction plane depending on whether the parent component is parametric or is a direct edit component.</p><pre class="api-code">"constructionPlaneInput_var" is a variable referencing a
+ConstructionPlaneInput
+object.
+#include &lt;Fusion/Construction/ConstructionPlaneInput.h&gt;
+returnValue = constructionPlaneInput_var-&gt;
+setByThreePoints
+(pointEntityOne, pointEntityTwo, pointEntityThree);</pre><p class="api">Return Value: boolean - Returns true if the creation of the ConstructionPlaneInput is successful. This will fail if the points do not form a triangle (no two points can be coincident and all three cannot be colinear).</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pointEntityOne</td><td class="api-list">Base</td><td class="api-list">The first construction point, sketch point or vertex in the triangle</td></tr><tr><td class="api-list">pointEntityTwo</td><td class="api-list">Base</td><td class="api-list">The second construction point, sketch point or vertex in the triangle</td></tr><tr><td class="api-list">pointEntityThree</td><td class="api-list">Base</td><td class="api-list">The third construction point, sketch point or vertex in the triangle</td></tr></table><h3 class="api-member">setByTwoEdges Method</h3><p class="api">This input method is for creating a construction plane that passes through two coplanar linear entities or axes. Defines a plane by specifying two coplanar linear entities. This can result in a parametric or non-parametric construction plane depending on whether the parent component is parametric or is a direct edit component.</p><pre class="api-code">"constructionPlaneInput_var" is a variable referencing a
+ConstructionPlaneInput
+object.
+#include &lt;Fusion/Construction/ConstructionPlaneInput.h&gt;
+returnValue = constructionPlaneInput_var-&gt;
+setByTwoEdges
+(linearEntityOne, linearEntityTwo);</pre><p class="api">Return Value: boolean - Returns true if the creation of the ConstructionPlaneInput is successful. This will fail if the two linear entities are not coplanar.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">linearEntityOne</td><td class="api-list">Base</td><td class="api-list">The first of two coplanar linear entities to define the plane</td></tr><tr><td class="api-list">linearEntityTwo</td><td class="api-list">Base</td><td class="api-list">The second of two coplanar linear entities to define the plane</td></tr></table><h3 class="api-member">setByTwoPlanes Method</h3><p class="api">This input method is for creating a construction plane at the midpoint between two planar faces or construction planes. This can result in a parametric or non-parametric construction plane depending on whether the parent component is parametric or is a direct edit component.</p><pre class="api-code">"constructionPlaneInput_var" is a variable referencing a
+ConstructionPlaneInput
+object.
+#include &lt;Fusion/Construction/ConstructionPlaneInput.h&gt;
+returnValue = constructionPlaneInput_var-&gt;
+setByTwoPlanes
+(planarEntityOne, planarEntityTwo);</pre><p class="api">Return Value: boolean - Returns true if the creation of the ConstructionPlaneInput is successful. This will fail if the two planes are co-planar.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">planarEntityOne</td><td class="api-list">Base</td><td class="api-list">The first planar face or construction plane to create a bisecting plane between</td></tr><tr><td class="api-list">planarEntityTwo</td><td class="api-list">Base</td><td class="api-list">The second planar face or construction plane to create a bisecting plane between</td></tr></table><h3 class="api-member">targetBaseOrFormFeature Property</h3><p class="api">When creating a construction plane that is owned by a base or form feature, set this property to the base or form feature you want to associate the new construction plane with. By default, this is null, meaning it will not be associated with a base or form feature. Because of a current limitation, if you want to create a construction plane associated with a base or form feature, you must set this property AND call the startEdit method of the base or form feature, create the feature, and then call the finishEdit method of the base or form feature. The base or form feature must be in an "edit" state to be able to add any additional items to it.</p><pre class="api-code">"constructionPlaneInput_var" is a variable referencing a ConstructionPlaneInput object.
+#include &lt;Fusion/Construction/ConstructionPlaneInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = constructionPlaneInput_var-&gt;
+targetBaseOrFormFeature
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = constructionPlaneInput_var-&gt;
+targetBaseOrFormFeature
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

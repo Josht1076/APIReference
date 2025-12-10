@@ -1,0 +1,151 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/GraphConnector.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="10/04/2025" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="GraphConnector" name="contextid"/>
+<meta content="GraphConnector Object" name="description"/>
+<meta content="GUID-84492FF5-99FF-43CD-A9E3-DDEAC72FD596" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>GraphConnector Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">GraphConnector Object <img alt="Preview" src="../images/TestTubeLarge.png"/></h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::volume" and the header file is &lt;Volume/Volumetric/GraphConnector.h&gt;<p class="api-preview"><img alt="Preview" src="../images/TestTubeSmall.png"/>This functionality is provided as a preview
+				of intended future API capabilities. You are encouraged to use it and report any problems or suggestions using the
+				<a href="https://forums.autodesk.com/t5/fusion-360-api-and-scripts/bd-p/22">Fusion API and Scripts</a> forum.<br/><br/>
+	
+                Because this is a preview of future functionality, there is the possibility that it will change, which will possibly
+		        break any existing programs that use this functionality. Because of that, you should never deliver any programs that use
+		        any preview capabilities. For a distributed program, you should wait until it has moved from preview to released state.
+		    </p>
+<h2 class="api">
+          Description
+        </h2>A simple read-only structure that represents a connection beween two nodes' pins in the graph.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphConnector_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphConnector_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphConnector_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphConnector_sourceGraphNode.htm">sourceGraphNode</a></td>
+<td class="api-list">The node on the output of which this connector starts.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphConnector_sourcePinIndex.htm">sourcePinIndex</a></td>
+<td class="api-list">The output pin index of the start node.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphConnector_targetGraphNode.htm">targetGraphNode</a></td>
+<td class="api-list">The node on the input of which this connector ends.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GraphConnector_targetPinIndex.htm">targetPinIndex</a></td>
+<td class="api-list">The intput pin index of the end node.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Graph_allGraphConnectors.htm">Graph.allGraphConnectors</a>, <a href="Graph_getNodeInputPinConnector.htm">Graph.getNodeInputPinConnector</a>, <a href="Graph_getNodeOutputPinConnectors.htm">Graph.getNodeOutputPinConnectors</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version May 2025<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(GraphConnector%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Volume/Volumetric/GraphConnector.h&gt;
+returnValue = adsk::volume::GraphConnector::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"graphConnector_var" is a variable referencing a GraphConnector object.
+#include &lt;Volume/Volumetric/GraphConnector.h&gt;
+// Get the value of the property.
+boolean propertyValue = graphConnector_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"graphConnector_var" is a variable referencing a GraphConnector object.
+#include &lt;Volume/Volumetric/GraphConnector.h&gt;
+// Get the value of the property.
+string propertyValue = graphConnector_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">sourceGraphNode Property</h3><p class="api">The node on the output of which this connector starts.</p><pre class="api-code">"graphConnector_var" is a variable referencing a GraphConnector object.
+#include &lt;Volume/Volumetric/GraphConnector.h&gt;
+// Get the value of the property.
+Ptr&lt;GraphNode&gt; propertyValue = graphConnector_var-&gt;
+sourceGraphNode
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">sourcePinIndex Property</h3><p class="api">The output pin index of the start node.</p><pre class="api-code">"graphConnector_var" is a variable referencing a GraphConnector object.
+#include &lt;Volume/Volumetric/GraphConnector.h&gt;
+// Get the value of the property.
+uinteger propertyValue = graphConnector_var-&gt;
+sourcePinIndex
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">targetGraphNode Property</h3><p class="api">The node on the input of which this connector ends.</p><pre class="api-code">"graphConnector_var" is a variable referencing a GraphConnector object.
+#include &lt;Volume/Volumetric/GraphConnector.h&gt;
+// Get the value of the property.
+Ptr&lt;GraphNode&gt; propertyValue = graphConnector_var-&gt;
+targetGraphNode
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">targetPinIndex Property</h3><p class="api">The intput pin index of the end node.</p><pre class="api-code">"graphConnector_var" is a variable referencing a GraphConnector object.
+#include &lt;Volume/Volumetric/GraphConnector.h&gt;
+// Get the value of the property.
+uinteger propertyValue = graphConnector_var-&gt;
+targetPinIndex
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p></body>
+</html>

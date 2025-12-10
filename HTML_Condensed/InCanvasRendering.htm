@@ -1,0 +1,240 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/InCanvasRendering.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="22/08/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="InCanvasRendering" name="contextid"/>
+<meta content="InCanvasRendering Object" name="description"/>
+<meta content="GUID-666FFFE7-077D-4AFD-BBB4-CAD72D82F618" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>InCanvasRendering Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">InCanvasRendering Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Render/InCanvasRendering.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access to the in-canvas rendering capabilities of Fusion. This uses the active viewport and the user will see the rendering as it takes place.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="InCanvasRendering_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InCanvasRendering_saveImage.htm">saveImage</a></td>
+<td class="api-list">Saves the image as it currently exists in the active viewport. To get the best quality, this should be called after the renderComplete event has fired.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InCanvasRendering_start.htm">start</a></td>
+<td class="api-list">Starts the process of in-canvas rendering. There are two modes when doing in-canvas rendering; advanced and fast. This is specified in the API using the isAdvanced property. When using advanced rendering, you can specify the desired quality and the rendering will stop once that quality has been reached. When using fast rendering, the rendering never stops but continues until you stop it.<br><br/> When using the API, it's generally best to use advanced rendering so you can easily control the final quality and get notified by the renderComplete event when it has finished. When using fast rendering, the renderComplete event is not fired and you have to use some other criteria like the number of iterations complete or the time taken to determine when to stop the rendering process.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="InCanvasRendering_stop.htm">stop</a></td>
+<td class="api-list">Stops the current rendering process.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="InCanvasRendering_elapsedTime.htm">elapsedTime</a></td>
+<td class="api-list">Returns the seconds spent on the current render.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InCanvasRendering_isAdvanced.htm">isAdvanced</a></td>
+<td class="api-list">Gets and sets if "Fast" or "Advanced" rendering should be used. If false, "Fast" rendering is used, which uses simplified lighting and materials.<br/><br/> There are two modes when doing in-canvas rendering; advanced and fast. When using advanced rendering, you can specify the desired quality and the rendering will stop once that quality has been reached. When using fast rendering, the rendering never stops but continues until you stop it.<br/><br/> When using the API, it's generally best to use advanced rendering so you can easily control the final quality and get notified by the renderComplete event when it has finished. When using fast rendering, the renderComplete event is not fired, and you have to use some other criteria like the number of iterations complete, or the time taken to determine when to stop the rendering process.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InCanvasRendering_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InCanvasRendering_iterations.htm">iterations</a></td>
+<td class="api-list">Returns the current number of iterations the renderer has completed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InCanvasRendering_limitResolution.htm">limitResolution</a></td>
+<td class="api-list">Sets the percentage of the full resolution to render the image. Valid values are between 20 and 100 inclusive. 100 is full resolution (100%).</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InCanvasRendering_lockView.htm">lockView</a></td>
+<td class="api-list">Gets and sets if the view should be locked during the in-canvas render. This prohibits the user from interacting with the view, which will cause the rendering to restart.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InCanvasRendering_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+</table>
+<h2 class="api">
+            Events
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="InCanvasRendering_renderComplete.htm">renderComplete</a></td>
+<td class="api-list">The RenderEvent event fires when the rendering has reached the quality that was specified when the rendering started. This event is only fired when using advanced rendering (the isAdvanced property is True). To save the finished rendering, use the saveImage method.<br/><br/> You can add or remove event handlers from the RenderEvent.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="RenderManager_inCanvasRendering.htm">RenderManager.inCanvasRendering</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(InCanvasRendering%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Render/InCanvasRendering.h&gt;
+returnValue = adsk::fusion::InCanvasRendering::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">elapsedTime Property</h3><p class="api">Returns the seconds spent on the current render.</p><pre class="api-code">"inCanvasRendering_var" is a variable referencing an InCanvasRendering object.
+#include &lt;Fusion/Render/InCanvasRendering.h&gt;
+// Get the value of the property.
+integer propertyValue = inCanvasRendering_var-&gt;
+elapsedTime
+();</pre><p class="api">Property Value: This is a read only property whose value is an integer.</p><h3 class="api-member">isAdvanced Property</h3><p class="api">Gets and sets if "Fast" or "Advanced" rendering should be used. If false, "Fast" rendering is used, which uses simplified lighting and materials. There are two modes when doing in-canvas rendering; advanced and fast. When using advanced rendering, you can specify the desired quality and the rendering will stop once that quality has been reached. When using fast rendering, the rendering never stops but continues until you stop it. When using the API, it's generally best to use advanced rendering so you can easily control the final quality and get notified by the renderComplete event when it has finished. When using fast rendering, the renderComplete event is not fired, and you have to use some other criteria like the number of iterations complete, or the time taken to determine when to stop the rendering process.</p><pre class="api-code">"inCanvasRendering_var" is a variable referencing an InCanvasRendering object.
+#include &lt;Fusion/Render/InCanvasRendering.h&gt;
+// Get the value of the property.
+boolean propertyValue = inCanvasRendering_var-&gt;
+isAdvanced
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = inCanvasRendering_var-&gt;
+isAdvanced
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"inCanvasRendering_var" is a variable referencing an InCanvasRendering object.
+#include &lt;Fusion/Render/InCanvasRendering.h&gt;
+// Get the value of the property.
+boolean propertyValue = inCanvasRendering_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">iterations Property</h3><p class="api">Returns the current number of iterations the renderer has completed.</p><pre class="api-code">"inCanvasRendering_var" is a variable referencing an InCanvasRendering object.
+#include &lt;Fusion/Render/InCanvasRendering.h&gt;
+// Get the value of the property.
+integer propertyValue = inCanvasRendering_var-&gt;
+iterations
+();</pre><p class="api">Property Value: This is a read only property whose value is an integer.</p><h3 class="api-member">limitResolution Property</h3><p class="api">Sets the percentage of the full resolution to render the image. Valid values are between 20 and 100 inclusive. 100 is full resolution (100%).</p><pre class="api-code">"inCanvasRendering_var" is a variable referencing an InCanvasRendering object.
+#include &lt;Fusion/Render/InCanvasRendering.h&gt;
+// Get the value of the property.
+double propertyValue = inCanvasRendering_var-&gt;
+limitResolution
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = inCanvasRendering_var-&gt;
+limitResolution
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">lockView Property</h3><p class="api">Gets and sets if the view should be locked during the in-canvas render. This prohibits the user from interacting with the view, which will cause the rendering to restart.</p><pre class="api-code">"inCanvasRendering_var" is a variable referencing an InCanvasRendering object.
+#include &lt;Fusion/Render/InCanvasRendering.h&gt;
+// Get the value of the property.
+boolean propertyValue = inCanvasRendering_var-&gt;
+lockView
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = inCanvasRendering_var-&gt;
+lockView
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"inCanvasRendering_var" is a variable referencing an InCanvasRendering object.
+#include &lt;Fusion/Render/InCanvasRendering.h&gt;
+// Get the value of the property.
+string propertyValue = inCanvasRendering_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">renderComplete Member</h3><p class="api">The RenderEvent event fires when the rendering has reached the quality that was specified when the rendering started. This event is only fired when using advanced rendering (the isAdvanced property is True). To save the finished rendering, use the saveImage method. You can add or remove event handlers from the RenderEvent.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Fusion/Render/InCanvasRendering.h&gt;
+#include &lt;Fusion/Render/RenderEvent.h&gt;
+#include &lt;Fusion/Render/RenderEventHandler.h&gt;
+#include &lt;Fusion/Render/RenderEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the renderComplete event.
+class MyRenderCompleteEventHandler : public adsk::fusion::RenderEventHandler
+{
+public:
+void notify(const Ptr&lt;RenderEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyRenderCompleteEventHandler event handler.");
+}
+} _renderComplete;
+--------- Connect the handler to the event. ---------
+// "inCanvasRendering_var" is a variable referencing an
+InCanvasRendering
+object.
+// Connect the handler function to the event.
+Ptr&lt;RenderEvent&gt; renderCompleteEvent = inCanvasRendering_var-&gt;
+renderComplete
+();
+if (!renderCompleteEvent)
+return;
+bool isOk = renderCompleteEvent-&gt;add(&amp;_renderComplete);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">saveImage Method</h3><p class="api">Saves the image as it currently exists in the active viewport. To get the best quality, this should be called after the renderComplete event has fired.</p><pre class="api-code">"inCanvasRendering_var" is a variable referencing an
+InCanvasRendering
+object.
+#include &lt;Fusion/Render/InCanvasRendering.h&gt;
+returnValue = inCanvasRendering_var-&gt;
+saveImage
+(filename);</pre><p class="api">Return Value: boolean - Returns true if the save was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">filename</td><td class="api-list">string</td><td class="api-list">The filename to save the image to. This must be the full path. The file extension can be .png, .jpg, .jpeg, or .tiff and the file will be saved as that type. The size of the image is dependent on the size of the viewport and the current specified aspect ratio.</td></tr></table><h3 class="api-member">start Method</h3><p class="api">Starts the process of in-canvas rendering. There are two modes when doing in-canvas rendering; advanced and fast. This is specified in the API using the isAdvanced property. When using advanced rendering, you can specify the desired quality and the rendering will stop once that quality has been reached. When using fast rendering, the rendering never stops but continues until you stop it. When using the API, it's generally best to use advanced rendering so you can easily control the final quality and get notified by the renderComplete event when it has finished. When using fast rendering, the renderComplete event is not fired and you have to use some other criteria like the number of iterations complete or the time taken to determine when to stop the rendering process.</p><pre class="api-code">"inCanvasRendering_var" is a variable referencing an
+InCanvasRendering
+object.
+#include &lt;Fusion/Render/InCanvasRendering.h&gt;
+returnValue = inCanvasRendering_var-&gt;
+start
+(renderQuality);</pre><p class="api">Return Value: boolean - Returns true if the rendering was successfully started.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">renderQuality</td><td class="api-list">double</td><td class="api-list">Specifies the desired quality of the rendering. The quality is specified using a value between 0 and 1, where 0.75 is the equivalent of "Excellent" and 1.0 is the same as "Final" in the user interface. This is ignored when using fast rendering (the isAdvanced property is False).</td></tr></table><h3 class="api-member">stop Method</h3><p class="api">Stops the current rendering process.</p><pre class="api-code">"inCanvasRendering_var" is a variable referencing an
+InCanvasRendering
+object.
+#include &lt;Fusion/Render/InCanvasRendering.h&gt;
+returnValue = inCanvasRendering_var-&gt;
+stop
+();</pre><p class="api">Return Value: boolean - Returns true if successful.</p></body>
+</html>

@@ -1,0 +1,164 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/CAMTemplateOperations.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="03/03/2025" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="CAMTemplateOperations" name="contextid"/>
+<meta content="CAMTemplateOperations Object" name="description"/>
+<meta content="GUID-EE48DC51-7FA5-4E17-8D1F-F08704A37E8D" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>CAMTemplateOperations Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">CAMTemplateOperations Object <img alt="Preview" src="../images/TestTubeLarge.png"/></h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/CAMTemplate/CAMTemplateOperations.h&gt;<p class="api-preview"><img alt="Preview" src="../images/TestTubeSmall.png"/>This functionality is provided as a preview
+				of intended future API capabilities. You are encouraged to use it and report any problems or suggestions using the
+				<a href="https://forums.autodesk.com/t5/fusion-360-api-and-scripts/bd-p/22">Fusion API and Scripts</a> forum.<br/><br/>
+	
+                Because this is a preview of future functionality, there is the possibility that it will change, which will possibly
+		        break any existing programs that use this functionality. Because of that, you should never deliver any programs that use
+		        any preview capabilities. For a distributed program, you should wait until it has moved from preview to released state.
+		    </p>
+<h2 class="api">
+          Description
+        </h2>A list of CAMTemplateOperationInput.<br><br> These are stored 'by value' -- get() returns a copy of the element at the given index, and set() will overwrite the element at the given index with a copy of the given element.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAMTemplateOperations_add.htm">add</a></td>
+<td class="api-list">Add an item to the list.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAMTemplateOperations_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAMTemplateOperations_get.htm">get</a></td>
+<td class="api-list">Return a copy of an element.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAMTemplateOperations_makeInput.htm">makeInput</a></td>
+<td class="api-list">Make a CAMTemplateOperationInput of the given strategy type which is compatible with add() and set().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAMTemplateOperations_set.htm">set</a></td>
+<td class="api-list">Set the element at the given index.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAMTemplateOperations_count.htm">count</a></td>
+<td class="api-list">The number of items in the list.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAMTemplateOperations_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAMTemplateOperations_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CAMTemplate_operations.htm">CAMTemplate.operations</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version March 2025<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(CAMTemplateOperations%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+</br></br><h2 class="api">Members Detail (C++)</h2><h3 class="api-member">add Method</h3><p class="api">Add an item to the list.</p><pre class="api-code">"cAMTemplateOperations_var" is a variable referencing a
+CAMTemplateOperations
+object.
+#include &lt;Cam/CAMTemplate/CAMTemplateOperations.h&gt;
+returnValue = cAMTemplateOperations_var-&gt;
+add
+(input);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">input</td><td class="api-list">CAMTemplateOperationInput</td><td class="api-list">This element will be copied to the end of the list. Must come from get() or makeInput().</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/CAMTemplate/CAMTemplateOperations.h&gt;
+returnValue = adsk::cam::CAMTemplateOperations::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">The number of items in the list.</p><pre class="api-code">"cAMTemplateOperations_var" is a variable referencing a CAMTemplateOperations object.
+#include &lt;Cam/CAMTemplate/CAMTemplateOperations.h&gt;
+// Get the value of the property.
+integer propertyValue = cAMTemplateOperations_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is an integer.</p><h3 class="api-member">get Method</h3><p class="api">Return a copy of an element.</p><pre class="api-code">"cAMTemplateOperations_var" is a variable referencing a
+CAMTemplateOperations
+object.
+#include &lt;Cam/CAMTemplate/CAMTemplateOperations.h&gt;
+returnValue = cAMTemplateOperations_var-&gt;
+get
+(operationIndex);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">operationIndex</td><td class="api-list">integer</td><td class="api-list">Index of the element to copy.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"cAMTemplateOperations_var" is a variable referencing a CAMTemplateOperations object.
+#include &lt;Cam/CAMTemplate/CAMTemplateOperations.h&gt;
+// Get the value of the property.
+boolean propertyValue = cAMTemplateOperations_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">makeInput Method</h3><p class="api">Make a CAMTemplateOperationInput of the given strategy type which is compatible with add() and set().</p><pre class="api-code">"cAMTemplateOperations_var" is a variable referencing a
+CAMTemplateOperations
+object.
+#include &lt;Cam/CAMTemplate/CAMTemplateOperations.h&gt;
+returnValue = cAMTemplateOperations_var-&gt;
+makeInput
+(strategyType);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">strategyType</td><td class="api-list">string</td><td class="api-list"></td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"cAMTemplateOperations_var" is a variable referencing a CAMTemplateOperations object.
+#include &lt;Cam/CAMTemplate/CAMTemplateOperations.h&gt;
+// Get the value of the property.
+string propertyValue = cAMTemplateOperations_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">set Method</h3><p class="api">Set the element at the given index.</p><pre class="api-code">"cAMTemplateOperations_var" is a variable referencing a
+CAMTemplateOperations
+object.
+#include &lt;Cam/CAMTemplate/CAMTemplateOperations.h&gt;
+returnValue = cAMTemplateOperations_var-&gt;
+set
+(operationIndex, input);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">operationIndex</td><td class="api-list">integer</td><td class="api-list">Index of the element to overwrite</td></tr><tr><td class="api-list">input</td><td class="api-list">CAMTemplateOperationInput</td><td class="api-list">The element will be overwritten with a copy of this element. Must come from get() or makeInput().</td></tr></table></body>
+</html>

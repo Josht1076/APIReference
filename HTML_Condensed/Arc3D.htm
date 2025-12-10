@@ -1,0 +1,310 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/Arc3D.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="Arc3D" name="contextid"/>
+<meta content="Arc3D Object" name="description"/>
+<meta content="GUID-43846581-56f8-437d-8fb8-46c7183d2cbe" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>Arc3D Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">Arc3D Object
+			</h1>
+              Derived from: <a href="Curve3D.htm">Curve3D</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Geometry/Arc3D.h&gt;<h2 class="api">
+          Description
+        </h2>Transient 3D arc. A transient arc is not displayed or saved in a document. Transient 3D arcs are used as a wrapper to work with raw 3D arc information. They are created statically using one of the create methods of the Arc3D class.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_copy.htm">copy</a></td>
+<td class="api-list">Creates and returns an independent copy of this Arc3D object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_createByCenter.htm">createByCenter</a></td>
+<td class="api-list">Creates a transient 3D arc object by specifying a center point and radius.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_createByThreePoints.htm">createByThreePoints</a></td>
+<td class="api-list">Creates a transient 3D arc by specifying 3 points. A transient arc is not displayed or saved in a document. Transient arcs are used as a wrapper to work with raw 3D arc information.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_getData.htm">getData</a></td>
+<td class="api-list">Gets all of the data defining the arc.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_set.htm">set</a></td>
+<td class="api-list">Sets all of the data defining the arc.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_setAxes.htm">setAxes</a></td>
+<td class="api-list">Sets the normal and reference vectors of the arc.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_transformBy.htm">transformBy</a></td>
+<td class="api-list">Transforms this curve in 3D space.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_asNurbsCurve.htm">asNurbsCurve</a></td>
+<td class="api-list">Returns a NURBS curve that is geometrically identical to the arc.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_center.htm">center</a></td>
+<td class="api-list">Gets and sets the center position of the arc.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_curveType.htm">curveType</a></td>
+<td class="api-list">Returns the type of geometry this curve represents.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_endAngle.htm">endAngle</a></td>
+<td class="api-list">Gets and sets the end angle of the arc in radians. This angle is measured from the reference vector using the right hand rule around the normal vector.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_endPoint.htm">endPoint</a></td>
+<td class="api-list">Gets the end point of the arc.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_evaluator.htm">evaluator</a></td>
+<td class="api-list">Returns an evaluator object that lets you perform additional evaluations on the curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_normal.htm">normal</a></td>
+<td class="api-list">Gets the normal of the arc.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_radius.htm">radius</a></td>
+<td class="api-list">Gets and sets the radius of the arc.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_referenceVector.htm">referenceVector</a></td>
+<td class="api-list">Gets the reference vector of the arc.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_startAngle.htm">startAngle</a></td>
+<td class="api-list">Gets and sets the start angle of the arc in radians. This angle is measured from the reference vector using the right hand rule around the normal vector.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Arc3D_startPoint.htm">startPoint</a></td>
+<td class="api-list">Gets the start point of the arc.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Arc3D_copy.htm">Arc3D.copy</a>, <a href="Arc3D_createByCenter.htm">Arc3D.createByCenter</a>, <a href="Arc3D_createByThreePoints.htm">Arc3D.createByThreePoints</a>, <a href="SketchArc_geometry.htm">SketchArc.geometry</a>, <a href="SketchArc_worldGeometry.htm">SketchArc.worldGeometry</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="GetCircleAndArcDataFromEdge_Sample.htm">Get Circle and Arc Data from Edge API Sample</a></td>
+<td class="api-list">Display the arc and circle geometric information from a selected circular edge.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(Arc3D%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">asNurbsCurve Property</h3><p class="api">Returns a NURBS curve that is geometrically identical to the arc.</p><pre class="api-code">"arc3D_var" is a variable referencing an Arc3D object.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+// Get the value of the property.
+Ptr&lt;NurbsCurve3D&gt; propertyValue = arc3D_var-&gt;
+asNurbsCurve
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">center Property</h3><p class="api">Gets and sets the center position of the arc.</p><pre class="api-code">"arc3D_var" is a variable referencing an Arc3D object.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = arc3D_var-&gt;
+center
+();
+// Set the value of the property, where value_var is a Point3D.
+bool returnValue = arc3D_var-&gt;
+center
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+returnValue = adsk::core::Arc3D::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">copy Method</h3><p class="api">Creates and returns an independent copy of this Arc3D object.</p><pre class="api-code">"arc3D_var" is a variable referencing an
+Arc3D
+object.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+returnValue = arc3D_var-&gt;
+copy
+();</pre><p class="api">Return Value: Arc3D - Returns a new Arc3D object that is a copy of this Arc3D object.</p><h3 class="api-member">createByCenter Method</h3><p class="api">Creates a transient 3D arc object by specifying a center point and radius.</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+returnValue = adsk::core::Arc3D::
+createByCenter
+(center, normal, referenceVector, radius, startAngle, endAngle);</pre><p class="api">Return Value: Arc3D - Returns the newly created arc or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">center</td><td class="api-list">Point3D</td><td class="api-list">The center point of the arc.</td></tr><tr><td class="api-list">normal</td><td class="api-list">Vector3D</td><td class="api-list">The normal vector of the arc. The plane perpendicular to this normal at the center point is the plane of the arc.</td></tr><tr><td class="api-list">referenceVector</td><td class="api-list">Vector3D</td><td class="api-list">A reference vector from which the start and end angles are measured from. This vector must be perpendicular to the normal vector.</td></tr><tr><td class="api-list">radius</td><td class="api-list">double</td><td class="api-list">The radius of the arc.</td></tr><tr><td class="api-list">startAngle</td><td class="api-list">double</td><td class="api-list">The start angle in radians. This angle is measured from the reference vector using the right hand rule around the normal vector.</td></tr><tr><td class="api-list">endAngle</td><td class="api-list">double</td><td class="api-list">The end angle in radians. This angle is measured from the reference vector using the right hand rule around the normal vector.</td></tr></table><h3 class="api-member">createByThreePoints Method</h3><p class="api">Creates a transient 3D arc by specifying 3 points. A transient arc is not displayed or saved in a document. Transient arcs are used as a wrapper to work with raw 3D arc information.</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+returnValue = adsk::core::Arc3D::
+createByThreePoints
+(pointOne, pointTwo, pointThree);</pre><p class="api">Return Value: Arc3D - Returns the newly created arc or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pointOne</td><td class="api-list">Point3D</td><td class="api-list">The start point of the arc.</td></tr><tr><td class="api-list">pointTwo</td><td class="api-list">Point3D</td><td class="api-list">A point along the arc. This point must not be coincident with the first or third points. This point must not lie on the line between the first and third points.</td></tr><tr><td class="api-list">pointThree</td><td class="api-list">Point3D</td><td class="api-list">The end point of the arc. This point must not be coincident with the first or second points.</td></tr></table><h3 class="api-member">curveType Property</h3><p class="api">Returns the type of geometry this curve represents.</p><pre class="api-code">"arc3D_var" is a variable referencing an Arc3D object.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+// Get the value of the property.
+Curve3DTypes propertyValue = arc3D_var-&gt;
+curveType
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">endAngle Property</h3><p class="api">Gets and sets the end angle of the arc in radians. This angle is measured from the reference vector using the right hand rule around the normal vector.</p><pre class="api-code">"arc3D_var" is a variable referencing an Arc3D object.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+// Get the value of the property.
+double propertyValue = arc3D_var-&gt;
+endAngle
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = arc3D_var-&gt;
+endAngle
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">endPoint Property</h3><p class="api">Gets the end point of the arc.</p><pre class="api-code">"arc3D_var" is a variable referencing an Arc3D object.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = arc3D_var-&gt;
+endPoint
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">evaluator Property</h3><p class="api">Returns an evaluator object that lets you perform additional evaluations on the curve.</p><pre class="api-code">"arc3D_var" is a variable referencing an Arc3D object.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+// Get the value of the property.
+Ptr&lt;CurveEvaluator3D&gt; propertyValue = arc3D_var-&gt;
+evaluator
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">getData Method</h3><p class="api">Gets all of the data defining the arc.</p><pre class="api-code">#include &lt;Core/Geometry/Arc3D.h
+// Declare the output arguments.
+Ptr&lt;Point3D&gt; center;
+Ptr&lt;Vector3D&gt; normal;
+Ptr&lt;Vector3D&gt; referenceVector;
+double radius;
+double startAngle;
+double endAngle;
+boolean returnValue = arc3D_var-&gt;
+getData
+(center, normal, referenceVector, radius, startAngle, endAngle);</pre><p class="api">Return Value: boolean - Returns true if successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">center</td><td class="api-list">Point3D</td><td class="api-list">The output center point of the arc.</td></tr><tr><td class="api-list">normal</td><td class="api-list">Vector3D</td><td class="api-list">The output normal vector.</td></tr><tr><td class="api-list">referenceVector</td><td class="api-list">Vector3D</td><td class="api-list">The output reference vector.</td></tr><tr><td class="api-list">radius</td><td class="api-list">double</td><td class="api-list">The output radius of the arc.</td></tr><tr><td class="api-list">startAngle</td><td class="api-list">double</td><td class="api-list">The output start angle in radians. This angle is measured from the reference vector using the right hand rule around the normal vector.</td></tr><tr><td class="api-list">endAngle</td><td class="api-list">double</td><td class="api-list">The output end angle in radians. This angle is measured from the reference vector using the right hand rule around the normal vector.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"arc3D_var" is a variable referencing an Arc3D object.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+// Get the value of the property.
+boolean propertyValue = arc3D_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">normal Property</h3><p class="api">Gets the normal of the arc.</p><pre class="api-code">"arc3D_var" is a variable referencing an Arc3D object.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+// Get the value of the property.
+Ptr&lt;Vector3D&gt; propertyValue = arc3D_var-&gt;
+normal
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"arc3D_var" is a variable referencing an Arc3D object.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+// Get the value of the property.
+string propertyValue = arc3D_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">radius Property</h3><p class="api">Gets and sets the radius of the arc.</p><pre class="api-code">"arc3D_var" is a variable referencing an Arc3D object.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+// Get the value of the property.
+double propertyValue = arc3D_var-&gt;
+radius
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = arc3D_var-&gt;
+radius
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">referenceVector Property</h3><p class="api">Gets the reference vector of the arc.</p><pre class="api-code">"arc3D_var" is a variable referencing an Arc3D object.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+// Get the value of the property.
+Ptr&lt;Vector3D&gt; propertyValue = arc3D_var-&gt;
+referenceVector
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">set Method</h3><p class="api">Sets all of the data defining the arc.</p><pre class="api-code">"arc3D_var" is a variable referencing an
+Arc3D
+object.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+returnValue = arc3D_var-&gt;
+set
+(center, normal, referenceVector, radius, startAngle, endAngle);</pre><p class="api">Return Value: boolean - Returns true if successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">center</td><td class="api-list">Point3D</td><td class="api-list">The center point of the arc.</td></tr><tr><td class="api-list">normal</td><td class="api-list">Vector3D</td><td class="api-list">The normal vector of the arc. The plane perpendicular to this normal at the center point is the plane of the arc.</td></tr><tr><td class="api-list">referenceVector</td><td class="api-list">Vector3D</td><td class="api-list">A reference vector from which the start and end angles are measured from. This vector must be perpendicular to the normal vector.</td></tr><tr><td class="api-list">radius</td><td class="api-list">double</td><td class="api-list">The radius of the arc.</td></tr><tr><td class="api-list">startAngle</td><td class="api-list">double</td><td class="api-list">The start angle in radians. This angle is measured from the reference vector using the right hand rule around the normal vector.</td></tr><tr><td class="api-list">endAngle</td><td class="api-list">double</td><td class="api-list">The end angle in radians. This angle is measured from the reference vector using the right hand rule around the normal vector.</td></tr></table><h3 class="api-member">setAxes Method</h3><p class="api">Sets the normal and reference vectors of the arc.</p><pre class="api-code">"arc3D_var" is a variable referencing an
+Arc3D
+object.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+returnValue = arc3D_var-&gt;
+setAxes
+(normal, referenceVector);</pre><p class="api">Return Value: boolean - Returns true if successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">normal</td><td class="api-list">Vector3D</td><td class="api-list">The new normal vector.</td></tr><tr><td class="api-list">referenceVector</td><td class="api-list">Vector3D</td><td class="api-list">The new reference vector from which the start and end angles are measured from. The reference vector must be perpendicular to the normal vector.</td></tr></table><h3 class="api-member">startAngle Property</h3><p class="api">Gets and sets the start angle of the arc in radians. This angle is measured from the reference vector using the right hand rule around the normal vector.</p><pre class="api-code">"arc3D_var" is a variable referencing an Arc3D object.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+// Get the value of the property.
+double propertyValue = arc3D_var-&gt;
+startAngle
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = arc3D_var-&gt;
+startAngle
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">startPoint Property</h3><p class="api">Gets the start point of the arc.</p><pre class="api-code">"arc3D_var" is a variable referencing an Arc3D object.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = arc3D_var-&gt;
+startPoint
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">transformBy Method</h3><p class="api">Transforms this curve in 3D space.</p><pre class="api-code">"arc3D_var" is a variable referencing an
+Arc3D
+object.
+#include &lt;Core/Geometry/Arc3D.h&gt;
+returnValue = arc3D_var-&gt;
+transformBy
+(matrix);</pre><p class="api">Return Value: boolean - Return true if the transform was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">matrix</td><td class="api-list">Matrix3D</td><td class="api-list">A 3D matrix that defines the transform to apply to the curve.</td></tr></table></body>
+</html>

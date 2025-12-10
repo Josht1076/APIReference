@@ -1,0 +1,291 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/CAM3MFExportOptions.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="11/11/2021" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="CAM3MFExportOptions" name="contextid"/>
+<meta content="CAM3MFExportOptions Object" name="description"/>
+<meta content="GUID-D5ED8674-A8C0-4480-96A4-64D0D2EA6AE3" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>CAM3MFExportOptions Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">CAM3MFExportOptions Object
+			</h1>
+              Derived from: <a href="CAMExportOptions.htm">CAMExportOptions</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/CAM/CAM3MFExportOptions.h&gt;<h2 class="api">
+          Description
+        </h2>3MF export option. Available with all additive machines except Formlabs. Expects a setup as its export object.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAM3MFExportOptions_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAM3MFExportOptions_areSimulationSurrogatesSplit.htm">areSimulationSurrogatesSplit</a></td>
+<td class="api-list">Flag toggling if surrogate supports used in the simulation should be split. This option might not be available for all machine types. The default value is false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAM3MFExportOptions_areSimulationThickeningStructuresKept.htm">areSimulationThickeningStructuresKept</a></td>
+<td class="api-list">Flag toggling if thickening structures used for simulation should be kept. This option might not be available for all machine types. The default value is false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAM3MFExportOptions_areSupportsIncluded.htm">areSupportsIncluded</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Flag toggling if support information should be included in the exported file. Includes both support structures marked as open or closed support as well as meta data used in Netfabb. This option might not be available for all machine types. The default value is false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAM3MFExportOptions_error.htm">error</a></td>
+<td class="api-list">Gets the last encountered error message. When the CAMExportManager's executeWithExportFuture() method is used, this method only returns errors encoutered when setting up the export. Errors thrown afterwards can be retrieved via the CAMExportFuture object. When the CAMExportManager's execute() method is used, any error can be retrieved using this property.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAM3MFExportOptions_exportObject.htm">exportObject</a></td>
+<td class="api-list">The export object we want to export. Depending on the actual export option, this might be geometry, an operation or a setup.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAM3MFExportOptions_fullFilename.htm">fullFilename</a></td>
+<td class="api-list">The file we want to export to. Needs to contain a valid path, as no intermediate folders are created.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAM3MFExportOptions_isMachineInformationIncluded.htm">isMachineInformationIncluded</a></td>
+<td class="api-list">Flag toggling if machine information should be included in the exported file. The machine information is only compatible with Netfabb. This option might not be available for all machine types. The default value is false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAM3MFExportOptions_isProcessSimulationDataIncluded.htm">isProcessSimulationDataIncluded</a></td>
+<td class="api-list">Flag toggling if simulation information should be included in the exported file. This option might not be available for all machine types. The default value is false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAM3MFExportOptions_isSimulationPostProcessingIncluded.htm">isSimulationPostProcessingIncluded</a></td>
+<td class="api-list">Flag toggling if post processing of the simulation should be included. This option might not be available for all machine types. The default value is false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAM3MFExportOptions_isThumbnailSupported.htm">isThumbnailSupported</a></td>
+<td class="api-list">Method to check if the exporter implementation supports thumbnail</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAM3MFExportOptions_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAM3MFExportOptions_isVolumetricDataIncluded.htm">isVolumetricDataIncluded</a></td>
+<td class="api-list">Flag toggling if volumetric data should be included in the exported file. The flag is only evaluated if the user has bought the product design extension. The default value is false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAM3MFExportOptions_metadata.htm">metadata</a></td>
+<td class="api-list">Class for setting the meta data options with in the 3mf export</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAM3MFExportOptions_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAM3MFExportOptions_supportInclusion.htm">supportInclusion</a></td>
+<td class="api-list">Flag setting if support information should be included in the exported file. Includes both support structures marked as open or closed support as well as meta data used in Netfabb. This option might not be available for all machine types. The default value is NotIncluded.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAM3MFExportOptions_thumbnailPath.htm">thumbnailPath</a></td>
+<td class="api-list">Path to the thumbnail for the buildfile</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAM3MFExportOptions_volumetricDataResolution.htm">volumetricDataResolution</a></td>
+<td class="api-list">Integer value representing the resolution of the volumetric data. The value is only evaluated if the user has bought the product design extension. The default value is 128.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CAMExportManager_create3MFOptions.htm">CAMExportManager.create3MFOptions</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version November 2021<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(CAM3MFExportOptions%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">areSimulationSurrogatesSplit Property</h3><p class="api">Flag toggling if surrogate supports used in the simulation should be split. This option might not be available for all machine types. The default value is false.</p><pre class="api-code">"cAM3MFExportOptions_var" is a variable referencing a CAM3MFExportOptions object.
+#include &lt;Cam/CAM/CAM3MFExportOptions.h&gt;
+// Get the value of the property.
+boolean propertyValue = cAM3MFExportOptions_var-&gt;
+areSimulationSurrogatesSplit
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = cAM3MFExportOptions_var-&gt;
+areSimulationSurrogatesSplit
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">areSimulationThickeningStructuresKept Property</h3><p class="api">Flag toggling if thickening structures used for simulation should be kept. This option might not be available for all machine types. The default value is false.</p><pre class="api-code">"cAM3MFExportOptions_var" is a variable referencing a CAM3MFExportOptions object.
+#include &lt;Cam/CAM/CAM3MFExportOptions.h&gt;
+// Get the value of the property.
+boolean propertyValue = cAM3MFExportOptions_var-&gt;
+areSimulationThickeningStructuresKept
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = cAM3MFExportOptions_var-&gt;
+areSimulationThickeningStructuresKept
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">areSupportsIncluded Property</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Flag toggling if support information should be included in the exported file. Includes both support structures marked as open or closed support as well as meta data used in Netfabb. This option might not be available for all machine types. The default value is false.</p><pre class="api-code">"cAM3MFExportOptions_var" is a variable referencing a CAM3MFExportOptions object.
+#include &lt;Cam/CAM/CAM3MFExportOptions.h&gt;
+// Get the value of the property.
+boolean propertyValue = cAM3MFExportOptions_var-&gt;
+areSupportsIncluded
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = cAM3MFExportOptions_var-&gt;
+areSupportsIncluded
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/CAM/CAM3MFExportOptions.h&gt;
+returnValue = adsk::cam::CAM3MFExportOptions::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">error Property</h3><p class="api">Gets the last encountered error message. When the CAMExportManager's executeWithExportFuture() method is used, this method only returns errors encoutered when setting up the export. Errors thrown afterwards can be retrieved via the CAMExportFuture object. When the CAMExportManager's execute() method is used, any error can be retrieved using this property.</p><pre class="api-code">"cAM3MFExportOptions_var" is a variable referencing a CAM3MFExportOptions object.
+#include &lt;Cam/CAM/CAM3MFExportOptions.h&gt;
+// Get the value of the property.
+string propertyValue = cAM3MFExportOptions_var-&gt;
+error
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">exportObject Property</h3><p class="api">The export object we want to export. Depending on the actual export option, this might be geometry, an operation or a setup.</p><pre class="api-code">"cAM3MFExportOptions_var" is a variable referencing a CAM3MFExportOptions object.
+#include &lt;Cam/CAM/CAM3MFExportOptions.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = cAM3MFExportOptions_var-&gt;
+exportObject
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = cAM3MFExportOptions_var-&gt;
+exportObject
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">fullFilename Property</h3><p class="api">The file we want to export to. Needs to contain a valid path, as no intermediate folders are created.</p><pre class="api-code">"cAM3MFExportOptions_var" is a variable referencing a CAM3MFExportOptions object.
+#include &lt;Cam/CAM/CAM3MFExportOptions.h&gt;
+// Get the value of the property.
+string propertyValue = cAM3MFExportOptions_var-&gt;
+fullFilename
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = cAM3MFExportOptions_var-&gt;
+fullFilename
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">isMachineInformationIncluded Property</h3><p class="api">Flag toggling if machine information should be included in the exported file. The machine information is only compatible with Netfabb. This option might not be available for all machine types. The default value is false.</p><pre class="api-code">"cAM3MFExportOptions_var" is a variable referencing a CAM3MFExportOptions object.
+#include &lt;Cam/CAM/CAM3MFExportOptions.h&gt;
+// Get the value of the property.
+boolean propertyValue = cAM3MFExportOptions_var-&gt;
+isMachineInformationIncluded
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = cAM3MFExportOptions_var-&gt;
+isMachineInformationIncluded
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isProcessSimulationDataIncluded Property</h3><p class="api">Flag toggling if simulation information should be included in the exported file. This option might not be available for all machine types. The default value is false.</p><pre class="api-code">"cAM3MFExportOptions_var" is a variable referencing a CAM3MFExportOptions object.
+#include &lt;Cam/CAM/CAM3MFExportOptions.h&gt;
+// Get the value of the property.
+boolean propertyValue = cAM3MFExportOptions_var-&gt;
+isProcessSimulationDataIncluded
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = cAM3MFExportOptions_var-&gt;
+isProcessSimulationDataIncluded
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isSimulationPostProcessingIncluded Property</h3><p class="api">Flag toggling if post processing of the simulation should be included. This option might not be available for all machine types. The default value is false.</p><pre class="api-code">"cAM3MFExportOptions_var" is a variable referencing a CAM3MFExportOptions object.
+#include &lt;Cam/CAM/CAM3MFExportOptions.h&gt;
+// Get the value of the property.
+boolean propertyValue = cAM3MFExportOptions_var-&gt;
+isSimulationPostProcessingIncluded
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = cAM3MFExportOptions_var-&gt;
+isSimulationPostProcessingIncluded
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isThumbnailSupported Property</h3><p class="api">Method to check if the exporter implementation supports thumbnail</p><pre class="api-code">"cAM3MFExportOptions_var" is a variable referencing a CAM3MFExportOptions object.
+#include &lt;Cam/CAM/CAM3MFExportOptions.h&gt;
+// Get the value of the property.
+boolean propertyValue = cAM3MFExportOptions_var-&gt;
+isThumbnailSupported
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"cAM3MFExportOptions_var" is a variable referencing a CAM3MFExportOptions object.
+#include &lt;Cam/CAM/CAM3MFExportOptions.h&gt;
+// Get the value of the property.
+boolean propertyValue = cAM3MFExportOptions_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isVolumetricDataIncluded Property</h3><p class="api">Flag toggling if volumetric data should be included in the exported file. The flag is only evaluated if the user has bought the product design extension. The default value is false.</p><pre class="api-code">"cAM3MFExportOptions_var" is a variable referencing a CAM3MFExportOptions object.
+#include &lt;Cam/CAM/CAM3MFExportOptions.h&gt;
+// Get the value of the property.
+boolean propertyValue = cAM3MFExportOptions_var-&gt;
+isVolumetricDataIncluded
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = cAM3MFExportOptions_var-&gt;
+isVolumetricDataIncluded
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">metadata Property</h3><p class="api">Class for setting the meta data options with in the 3mf export</p><pre class="api-code">"cAM3MFExportOptions_var" is a variable referencing a CAM3MFExportOptions object.
+#include &lt;Cam/CAM/CAM3MFExportOptions.h&gt;
+// Get the value of the property.
+Ptr&lt;CAM3MFExportMetadataOptions&gt; propertyValue = cAM3MFExportOptions_var-&gt;
+metadata
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"cAM3MFExportOptions_var" is a variable referencing a CAM3MFExportOptions object.
+#include &lt;Cam/CAM/CAM3MFExportOptions.h&gt;
+// Get the value of the property.
+string propertyValue = cAM3MFExportOptions_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">supportInclusion Property</h3><p class="api">Flag setting if support information should be included in the exported file. Includes both support structures marked as open or closed support as well as meta data used in Netfabb. This option might not be available for all machine types. The default value is NotIncluded.</p><pre class="api-code">"cAM3MFExportOptions_var" is a variable referencing a CAM3MFExportOptions object.
+#include &lt;Cam/CAM/CAM3MFExportOptions.h&gt;
+// Get the value of the property.
+CAM3MFSupportInclusionType propertyValue = cAM3MFExportOptions_var-&gt;
+supportInclusion
+();
+// Set the value of the property, where value_var is a CAM3MFSupportInclusionType.
+bool returnValue = cAM3MFExportOptions_var-&gt;
+supportInclusion
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">thumbnailPath Property</h3><p class="api">Path to the thumbnail for the buildfile</p><pre class="api-code">"cAM3MFExportOptions_var" is a variable referencing a CAM3MFExportOptions object.
+#include &lt;Cam/CAM/CAM3MFExportOptions.h&gt;
+// Get the value of the property.
+string propertyValue = cAM3MFExportOptions_var-&gt;
+thumbnailPath
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = cAM3MFExportOptions_var-&gt;
+thumbnailPath
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">volumetricDataResolution Property</h3><p class="api">Integer value representing the resolution of the volumetric data. The value is only evaluated if the user has bought the product design extension. The default value is 128.</p><pre class="api-code">"cAM3MFExportOptions_var" is a variable referencing a CAM3MFExportOptions object.
+#include &lt;Cam/CAM/CAM3MFExportOptions.h&gt;
+// Get the value of the property.
+integer propertyValue = cAM3MFExportOptions_var-&gt;
+volumetricDataResolution
+();
+// Set the value of the property, where value_var is an integer.
+bool returnValue = cAM3MFExportOptions_var-&gt;
+volumetricDataResolution
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an integer.</p></body>
+</html>

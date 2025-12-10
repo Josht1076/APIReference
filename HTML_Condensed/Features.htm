@@ -1,0 +1,839 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/Features.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="Features" name="contextid"/>
+<meta content="Features Object" name="description"/>
+<meta content="GUID-7bfd8596-4584-48b6-8b9b-1ea63e304d34" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>Features Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">Features Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/Features.h&gt;<h2 class="api">
+          Description
+        </h2>The features collection which provides access to all existing features. This collection provides direct access to all features regardless of type. It also provides access to type specific collections where you can get features of a specific type and also create new features of that type.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_createPath.htm">createPath</a></td>
+<td class="api-list">Method that creates a Path used to define the shape of a Sweep feature. A Path is a contiguous set of curves that can be a combination of sketch curves and model edges.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_item.htm">item</a></td>
+<td class="api-list">Function that returns the specified feature using an index into the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_itemByName.htm">itemByName</a></td>
+<td class="api-list">Function that returns the specified feature using the name of the feature.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_arrangeFeatures.htm">arrangeFeatures</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the collection that provides access to the Arrange features within the component and supports the creation of new Arrange features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_baseFeatures.htm">baseFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the existing base features and supports the creation of new base features. A base feature represents a body that is non-parametric.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_bossFeatures.htm">bossFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the boss features within the component and supports the creation of new boss features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_boundaryFillFeatures.htm">boundaryFillFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the Boundary Fill features within the component and supports the creation of new Boundary Fill features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_boxFeatures.htm">boxFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the existing box features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_chamferFeatures.htm">chamferFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the chamfer features within the component and supports the creation of new chamfer features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_circularPatternFeatures.htm">circularPatternFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the circular pattern features within the component and supports the creation of new circular pattern features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_coilFeatures.htm">coilFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the Coil Primitive features within the component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_combineFeatures.htm">combineFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the combine features within the component and supports the creation of new combine features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_copyPasteBodies.htm">copyPasteBodies</a></td>
+<td class="api-list">Returns the collection that provides access to the existing copy-paste features and supports the creation of new copy-paste features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_count.htm">count</a></td>
+<td class="api-list">Returns the number of features in the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_customFeatures.htm">customFeatures</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the collection that provides access to the custom features within the component and supports the creation of new custom features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_cutPasteBodies.htm">cutPasteBodies</a></td>
+<td class="api-list">Returns the collection that provides access to the existing cut-paste features and supports the creation of new cut-paste features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_cylinderFeatures.htm">cylinderFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the existing cylinder features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_deleteFaceFeatures.htm">deleteFaceFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the existing Delete Face features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_draftFeatures.htm">draftFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the draft features within the component and supports the creation of new draft features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_embossFeatures.htm">embossFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the emboss features within the component and supports the creation of new emboss features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_extendFeatures.htm">extendFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the Extend features within the component and supports the creation of new Extend features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_extrudeFeatures.htm">extrudeFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the extrude features within the component and supports the creation of new extrude features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_filletFeatures.htm">filletFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the fillet features within the component and supports the creation of new fillet features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_flangeFeatures.htm">flangeFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the existing flange features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_formFeatures.htm">formFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the existing form features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_hemFeatures.htm">hemFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the existing Hem features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_holeFeatures.htm">holeFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the hole features within the component and supports the creation of new hole features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_loftFeatures.htm">loftFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the existing loft features and supports the creation of new loft features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_mergeFacesFeatures.htm">mergeFacesFeatures</a></td>
+<td class="api-list">Returns the collection object that supports the ability to merge faces. Merging faces is currently limited to a Direct Modeling design or a body in a base feature. The result of merging faces is a direct B-Rep modification, and the change is not represented as a feature in the browser.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_meshCombineFaceGroupsFeatures.htm">meshCombineFaceGroupsFeatures</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the collection that provides access to the mesh combine face groups features within the component and supports the creation of new mesh combine face groups features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_meshCombineFeatures.htm">meshCombineFeatures</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the collection that provides access to the mesh combine features within the component and supports the creation of new mesh combine features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_meshConvertFeatures.htm">meshConvertFeatures</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the collection that provides access to the mesh convert features within the component and supports the creation of new mesh convert features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_meshGenerateFaceGroupsFeatures.htm">meshGenerateFaceGroupsFeatures</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the collection that provides access to the mesh generate facegroup features within the component and supports the creation of new mesh generate facegroup features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_meshReduceFeatures.htm">meshReduceFeatures</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the collection that provides access to the mesh reduce features within the component and supports the creation of new mesh reduce features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_meshRemeshFeatures.htm">meshRemeshFeatures</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the collection that provides access to the mesh remesh features within the component and supports the creation of new mesh remesh features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_meshRemoveFeatures.htm">meshRemoveFeatures</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the collection that provides access to the mesh remove features within the component and supports the creation of new mesh remove features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_meshRepairFeatures.htm">meshRepairFeatures</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the collection that provides access to the mesh repair features within the component and supports the creation of new mesh repair features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_meshReverseNormalFeatures.htm">meshReverseNormalFeatures</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the collection that provides access to the mesh reverse normal features within the component and supports the creation of new mesh reverse normal features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_meshSeparateFeatures.htm">meshSeparateFeatures</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the collection that provides access to the mesh separate features within the component and supports the creation of new mesh separate features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_meshShellFeatures.htm">meshShellFeatures</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the collection that provides access to the mesh shell features within the component and supports the creation of new mesh shell features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_meshSmoothFeatures.htm">meshSmoothFeatures</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the collection that provides access to the mesh smooth features within the component and supports the creation of new mesh smooth features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_mirrorFeatures.htm">mirrorFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the mirror features within the component and supports the creation of new mirror features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_moveFeatures.htm">moveFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the Move features within the component and supports the creation of new Move features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_offsetFacesFeatures.htm">offsetFacesFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the existing Offset Face features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_offsetFeatures.htm">offsetFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the Offset features within the component and supports the creation of new Offset features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_patchFeatures.htm">patchFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the Patch features within the component and supports the creation of new Patch features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_pathPatternFeatures.htm">pathPatternFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the path pattern features within the component and supports the creation of new path pattern features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_pipeFeatures.htm">pipeFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the existing pipe features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_rectangularPatternFeatures.htm">rectangularPatternFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the rectangular pattern features within the component and supports the creation of new rectangular pattern features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_refoldFeatures.htm">refoldFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the existing refold features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_removeFeatures.htm">removeFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the Remove features within the component and supports the creation of new Remove features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_replaceFaceFeatures.htm">replaceFaceFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the replaceFace features within the component and supports the creation of new replaceFace features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_reverseNormalFeatures.htm">reverseNormalFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the Reverse Normal features within the component and supports the creation of new Reverse Normal features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_revolveFeatures.htm">revolveFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the revolve features within the component and supports the creation of new revolved features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_ribFeatures.htm">ribFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the existing rib features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_ripFeatures.htm">ripFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the existing Rip features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_ruledSurfaceFeatures.htm">ruledSurfaceFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the Ruled Surface features within the component and supports the creation of new Ruled Surface features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_ruleFilletFeatures.htm">ruleFilletFeatures</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Returns the collection that provides access to the existing rule fillet features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_scaleFeatures.htm">scaleFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the scale features within the component and supports the creation of new scale features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_shellFeatures.htm">shellFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the shell features within the component and supports the creation of new shell features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_silhouetteSplitFeatures.htm">silhouetteSplitFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the Parting Line Split features within the component and supports the creation of new Parting Line Split features</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_sphereFeatures.htm">sphereFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the existing sphere features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_splitBodyFeatures.htm">splitBodyFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the SplitBody features within the component and supports the creation of new SplitBody features</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_splitFaceFeatures.htm">splitFaceFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the SplitFace features within the component and supports the creation of new SplitFace features</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_stitchFeatures.htm">stitchFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the Stitch features within the component and supports the creation of new Stitch features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_surfaceDeleteFaceFeatures.htm">surfaceDeleteFaceFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the existing Surface Delete Face features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_sweepFeatures.htm">sweepFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the sweep features within the component and supports the creation of new sweep features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_tessellateFeatures.htm">tessellateFeatures</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the collection that provides access to the tessellate features within the component and supports the creation of new tessellate features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_thickenFeatures.htm">thickenFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the Thicken features within the component and supports the creation of new Thicken features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_threadFeatures.htm">threadFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the thread features within the component and supports the creation of new thread features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_torusFeatures.htm">torusFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the existing torus features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_trimFeatures.htm">trimFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the Trim features within the component and supports the creation of new Trim features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_unfoldFeatures.htm">unfoldFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the existing unfold features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_unstitchFeatures.htm">unstitchFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the Unstitch features within the component and supports the creation of new Unstitch features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_untrimFeatures.htm">untrimFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the Untrim features within the component and supports the creation of new Untrim features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_volumetricCustomFeatures.htm">volumetricCustomFeatures</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the collection that provides access to volumetric custom features within the component and supports the creation of new volumetric custom features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_volumetricModelToMeshFeatures.htm">volumetricModelToMeshFeatures</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Returns the collection that provides access to the Volumetric Model to Mesh features within the component and supports the creation of new Volumetric Model to Mesh features.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Features_webFeatures.htm">webFeatures</a></td>
+<td class="api-list">Returns the collection that provides access to the existing web features.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Component_features.htm">Component.features</a>, <a href="FlatPatternComponent_features.htm">FlatPatternComponent.features</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="LoftFeatureSample_Sample.htm">Loft Feature API Sample</a></td>
+<td class="api-list">Demonstrates creating a new loft feature.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureSample_Sample.htm">Patch Feature API Sample</a></td>
+<td class="api-list">Demonstrates creating a new patch feature.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(Features%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">arrangeFeatures Property</h3><p class="api">Returns the collection that provides access to the Arrange features within the component and supports the creation of new Arrange features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;ArrangeFeatures&gt; propertyValue = features_var-&gt;
+arrangeFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">baseFeatures Property</h3><p class="api">Returns the collection that provides access to the existing base features and supports the creation of new base features. A base feature represents a body that is non-parametric.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;BaseFeatures&gt; propertyValue = features_var-&gt;
+baseFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">bossFeatures Property</h3><p class="api">Returns the collection that provides access to the boss features within the component and supports the creation of new boss features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;BossFeatures&gt; propertyValue = features_var-&gt;
+bossFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">boundaryFillFeatures Property</h3><p class="api">Returns the collection that provides access to the Boundary Fill features within the component and supports the creation of new Boundary Fill features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;BoundaryFillFeatures&gt; propertyValue = features_var-&gt;
+boundaryFillFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">boxFeatures Property</h3><p class="api">Returns the collection that provides access to the existing box features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;BoxFeatures&gt; propertyValue = features_var-&gt;
+boxFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">chamferFeatures Property</h3><p class="api">Returns the collection that provides access to the chamfer features within the component and supports the creation of new chamfer features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;ChamferFeatures&gt; propertyValue = features_var-&gt;
+chamferFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">circularPatternFeatures Property</h3><p class="api">Returns the collection that provides access to the circular pattern features within the component and supports the creation of new circular pattern features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;CircularPatternFeatures&gt; propertyValue = features_var-&gt;
+circularPatternFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/Features.h&gt;
+returnValue = adsk::fusion::Features::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">coilFeatures Property</h3><p class="api">Returns the collection that provides access to the Coil Primitive features within the component.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;CoilFeatures&gt; propertyValue = features_var-&gt;
+coilFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">combineFeatures Property</h3><p class="api">Returns the collection that provides access to the combine features within the component and supports the creation of new combine features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;CombineFeatures&gt; propertyValue = features_var-&gt;
+combineFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">copyPasteBodies Property</h3><p class="api">Returns the collection that provides access to the existing copy-paste features and supports the creation of new copy-paste features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;CopyPasteBodies&gt; propertyValue = features_var-&gt;
+copyPasteBodies
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">count Property</h3><p class="api">Returns the number of features in the collection.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+uinteger propertyValue = features_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">createPath Method</h3><p class="api">Method that creates a Path used to define the shape of a Sweep feature. A Path is a contiguous set of curves that can be a combination of sketch curves and model edges.</p><pre class="api-code">"features_var" is a variable referencing a
+Features
+object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Uses no optional arguments.
+returnValue = features_var-&gt;
+createPath
+(curve);
+// Uses optional arguments.
+returnValue = features_var-&gt;
+createPath
+(curve, isChain);</pre><p class="api">Return Value: Path - Returns the newly created Path.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">curve</td><td class="api-list">Base</td><td class="api-list">A SketchCurve or an ObjectCollection containing multiple sketch entities and/or BRepEdge objects. If a single sketch curve or edge is input the isChain argument is checked to determine if connected curves (they do not need to be tangent) should be automatically found. If multiple curves are provided the isChain argument is always treated as false so you must provide all of the curves in the object collection that you want included in the path. The provided curves must all connect together in a single path. The input curves can be from multiple sketches and bodies and they need to geometrically connect for a valid path to be created.</td></tr><tr><td class="api-list">isChain</td><td class="api-list">boolean</td><td class="api-list">Optional argument, that defaults to true. If this argument is set to true, all curves and edges that are end point connected to the single input curve will be found and used to create the path. This argument is only used when the first argument is a single SketchCurve/BRepEdge object. This is an optional argument whose default value is True.</td></tr></table><h3 class="api-member">customFeatures Property</h3><p class="api">Returns the collection that provides access to the custom features within the component and supports the creation of new custom features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;CustomFeatures&gt; propertyValue = features_var-&gt;
+customFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">cutPasteBodies Property</h3><p class="api">Returns the collection that provides access to the existing cut-paste features and supports the creation of new cut-paste features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;CutPasteBodies&gt; propertyValue = features_var-&gt;
+cutPasteBodies
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">cylinderFeatures Property</h3><p class="api">Returns the collection that provides access to the existing cylinder features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;CylinderFeatures&gt; propertyValue = features_var-&gt;
+cylinderFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">deleteFaceFeatures Property</h3><p class="api">Returns the collection that provides access to the existing Delete Face features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;DeleteFaceFeatures&gt; propertyValue = features_var-&gt;
+deleteFaceFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">draftFeatures Property</h3><p class="api">Returns the collection that provides access to the draft features within the component and supports the creation of new draft features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;DraftFeatures&gt; propertyValue = features_var-&gt;
+draftFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">embossFeatures Property</h3><p class="api">Returns the collection that provides access to the emboss features within the component and supports the creation of new emboss features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;EmbossFeatures&gt; propertyValue = features_var-&gt;
+embossFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">extendFeatures Property</h3><p class="api">Returns the collection that provides access to the Extend features within the component and supports the creation of new Extend features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;ExtendFeatures&gt; propertyValue = features_var-&gt;
+extendFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">extrudeFeatures Property</h3><p class="api">Returns the collection that provides access to the extrude features within the component and supports the creation of new extrude features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;ExtrudeFeatures&gt; propertyValue = features_var-&gt;
+extrudeFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">filletFeatures Property</h3><p class="api">Returns the collection that provides access to the fillet features within the component and supports the creation of new fillet features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;FilletFeatures&gt; propertyValue = features_var-&gt;
+filletFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">flangeFeatures Property</h3><p class="api">Returns the collection that provides access to the existing flange features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;FlangeFeatures&gt; propertyValue = features_var-&gt;
+flangeFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">formFeatures Property</h3><p class="api">Returns the collection that provides access to the existing form features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;FormFeatures&gt; propertyValue = features_var-&gt;
+formFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">hemFeatures Property</h3><p class="api">Returns the collection that provides access to the existing Hem features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;HemFeatures&gt; propertyValue = features_var-&gt;
+hemFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">holeFeatures Property</h3><p class="api">Returns the collection that provides access to the hole features within the component and supports the creation of new hole features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;HoleFeatures&gt; propertyValue = features_var-&gt;
+holeFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+boolean propertyValue = features_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Function that returns the specified feature using an index into the collection.</p><pre class="api-code">"features_var" is a variable referencing a
+Features
+object.
+#include &lt;Fusion/Features/Features.h&gt;
+returnValue = features_var-&gt;
+item
+(index);</pre><p class="api">Return Value: Feature - Returns the specified item or null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the item within the collection to return. The first item in the collection has an index of 0.</td></tr></table><h3 class="api-member">itemByName Method</h3><p class="api">Function that returns the specified feature using the name of the feature.</p><pre class="api-code">"features_var" is a variable referencing a
+Features
+object.
+#include &lt;Fusion/Features/Features.h&gt;
+returnValue = features_var-&gt;
+itemByName
+(name);</pre><p class="api">Return Value: Feature - Returns the specified item or null if a feature matching the name was not found.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">name</td><td class="api-list">string</td><td class="api-list">The name of the feature within the collection to return. This is the same name seen in the timeline.</td></tr></table><h3 class="api-member">loftFeatures Property</h3><p class="api">Returns the collection that provides access to the existing loft features and supports the creation of new loft features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;LoftFeatures&gt; propertyValue = features_var-&gt;
+loftFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">mergeFacesFeatures Property</h3><p class="api">Returns the collection object that supports the ability to merge faces. Merging faces is currently limited to a Direct Modeling design or a body in a base feature. The result of merging faces is a direct B-Rep modification, and the change is not represented as a feature in the browser.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;MergeFacesFeatures&gt; propertyValue = features_var-&gt;
+mergeFacesFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">meshCombineFaceGroupsFeatures Property</h3><p class="api">Returns the collection that provides access to the mesh combine face groups features within the component and supports the creation of new mesh combine face groups features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;MeshCombineFaceGroupsFeatures&gt; propertyValue = features_var-&gt;
+meshCombineFaceGroupsFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">meshCombineFeatures Property</h3><p class="api">Returns the collection that provides access to the mesh combine features within the component and supports the creation of new mesh combine features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;MeshCombineFeatures&gt; propertyValue = features_var-&gt;
+meshCombineFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">meshConvertFeatures Property</h3><p class="api">Returns the collection that provides access to the mesh convert features within the component and supports the creation of new mesh convert features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;MeshConvertFeatures&gt; propertyValue = features_var-&gt;
+meshConvertFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">meshGenerateFaceGroupsFeatures Property</h3><p class="api">Returns the collection that provides access to the mesh generate facegroup features within the component and supports the creation of new mesh generate facegroup features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;MeshGenerateFaceGroupsFeatures&gt; propertyValue = features_var-&gt;
+meshGenerateFaceGroupsFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">meshReduceFeatures Property</h3><p class="api">Returns the collection that provides access to the mesh reduce features within the component and supports the creation of new mesh reduce features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;MeshReduceFeatures&gt; propertyValue = features_var-&gt;
+meshReduceFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">meshRemeshFeatures Property</h3><p class="api">Returns the collection that provides access to the mesh remesh features within the component and supports the creation of new mesh remesh features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;MeshRemeshFeatures&gt; propertyValue = features_var-&gt;
+meshRemeshFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">meshRemoveFeatures Property</h3><p class="api">Returns the collection that provides access to the mesh remove features within the component and supports the creation of new mesh remove features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;MeshRemoveFeatures&gt; propertyValue = features_var-&gt;
+meshRemoveFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">meshRepairFeatures Property</h3><p class="api">Returns the collection that provides access to the mesh repair features within the component and supports the creation of new mesh repair features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;MeshRepairFeatures&gt; propertyValue = features_var-&gt;
+meshRepairFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">meshReverseNormalFeatures Property</h3><p class="api">Returns the collection that provides access to the mesh reverse normal features within the component and supports the creation of new mesh reverse normal features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;MeshReverseNormalFeatures&gt; propertyValue = features_var-&gt;
+meshReverseNormalFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">meshSeparateFeatures Property</h3><p class="api">Returns the collection that provides access to the mesh separate features within the component and supports the creation of new mesh separate features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;MeshSeparateFeatures&gt; propertyValue = features_var-&gt;
+meshSeparateFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">meshShellFeatures Property</h3><p class="api">Returns the collection that provides access to the mesh shell features within the component and supports the creation of new mesh shell features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;MeshShellFeatures&gt; propertyValue = features_var-&gt;
+meshShellFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">meshSmoothFeatures Property</h3><p class="api">Returns the collection that provides access to the mesh smooth features within the component and supports the creation of new mesh smooth features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;MeshSmoothFeatures&gt; propertyValue = features_var-&gt;
+meshSmoothFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">mirrorFeatures Property</h3><p class="api">Returns the collection that provides access to the mirror features within the component and supports the creation of new mirror features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;MirrorFeatures&gt; propertyValue = features_var-&gt;
+mirrorFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">moveFeatures Property</h3><p class="api">Returns the collection that provides access to the Move features within the component and supports the creation of new Move features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;MoveFeatures&gt; propertyValue = features_var-&gt;
+moveFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+string propertyValue = features_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">offsetFacesFeatures Property</h3><p class="api">Returns the collection that provides access to the existing Offset Face features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;OffsetFacesFeatures&gt; propertyValue = features_var-&gt;
+offsetFacesFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">offsetFeatures Property</h3><p class="api">Returns the collection that provides access to the Offset features within the component and supports the creation of new Offset features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;OffsetFeatures&gt; propertyValue = features_var-&gt;
+offsetFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">patchFeatures Property</h3><p class="api">Returns the collection that provides access to the Patch features within the component and supports the creation of new Patch features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;PatchFeatures&gt; propertyValue = features_var-&gt;
+patchFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">pathPatternFeatures Property</h3><p class="api">Returns the collection that provides access to the path pattern features within the component and supports the creation of new path pattern features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;PathPatternFeatures&gt; propertyValue = features_var-&gt;
+pathPatternFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">pipeFeatures Property</h3><p class="api">Returns the collection that provides access to the existing pipe features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;PipeFeatures&gt; propertyValue = features_var-&gt;
+pipeFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">rectangularPatternFeatures Property</h3><p class="api">Returns the collection that provides access to the rectangular pattern features within the component and supports the creation of new rectangular pattern features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;RectangularPatternFeatures&gt; propertyValue = features_var-&gt;
+rectangularPatternFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">refoldFeatures Property</h3><p class="api">Returns the collection that provides access to the existing refold features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;RefoldFeatures&gt; propertyValue = features_var-&gt;
+refoldFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">removeFeatures Property</h3><p class="api">Returns the collection that provides access to the Remove features within the component and supports the creation of new Remove features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;RemoveFeatures&gt; propertyValue = features_var-&gt;
+removeFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">replaceFaceFeatures Property</h3><p class="api">Returns the collection that provides access to the replaceFace features within the component and supports the creation of new replaceFace features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;ReplaceFaceFeatures&gt; propertyValue = features_var-&gt;
+replaceFaceFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">reverseNormalFeatures Property</h3><p class="api">Returns the collection that provides access to the Reverse Normal features within the component and supports the creation of new Reverse Normal features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;ReverseNormalFeatures&gt; propertyValue = features_var-&gt;
+reverseNormalFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">revolveFeatures Property</h3><p class="api">Returns the collection that provides access to the revolve features within the component and supports the creation of new revolved features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;RevolveFeatures&gt; propertyValue = features_var-&gt;
+revolveFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">ribFeatures Property</h3><p class="api">Returns the collection that provides access to the existing rib features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;RibFeatures&gt; propertyValue = features_var-&gt;
+ribFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">ripFeatures Property</h3><p class="api">Returns the collection that provides access to the existing Rip features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;RipFeatures&gt; propertyValue = features_var-&gt;
+ripFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">ruledSurfaceFeatures Property</h3><p class="api">Returns the collection that provides access to the Ruled Surface features within the component and supports the creation of new Ruled Surface features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;RuledSurfaceFeatures&gt; propertyValue = features_var-&gt;
+ruledSurfaceFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">ruleFilletFeatures Property</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Returns the collection that provides access to the existing rule fillet features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;RuleFilletFeatures&gt; propertyValue = features_var-&gt;
+ruleFilletFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">scaleFeatures Property</h3><p class="api">Returns the collection that provides access to the scale features within the component and supports the creation of new scale features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;ScaleFeatures&gt; propertyValue = features_var-&gt;
+scaleFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">shellFeatures Property</h3><p class="api">Returns the collection that provides access to the shell features within the component and supports the creation of new shell features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;ShellFeatures&gt; propertyValue = features_var-&gt;
+shellFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">silhouetteSplitFeatures Property</h3><p class="api">Returns the collection that provides access to the Parting Line Split features within the component and supports the creation of new Parting Line Split features</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;SilhouetteSplitFeatures&gt; propertyValue = features_var-&gt;
+silhouetteSplitFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">sphereFeatures Property</h3><p class="api">Returns the collection that provides access to the existing sphere features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;SphereFeatures&gt; propertyValue = features_var-&gt;
+sphereFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">splitBodyFeatures Property</h3><p class="api">Returns the collection that provides access to the SplitBody features within the component and supports the creation of new SplitBody features</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;SplitBodyFeatures&gt; propertyValue = features_var-&gt;
+splitBodyFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">splitFaceFeatures Property</h3><p class="api">Returns the collection that provides access to the SplitFace features within the component and supports the creation of new SplitFace features</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;SplitFaceFeatures&gt; propertyValue = features_var-&gt;
+splitFaceFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">stitchFeatures Property</h3><p class="api">Returns the collection that provides access to the Stitch features within the component and supports the creation of new Stitch features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;StitchFeatures&gt; propertyValue = features_var-&gt;
+stitchFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">surfaceDeleteFaceFeatures Property</h3><p class="api">Returns the collection that provides access to the existing Surface Delete Face features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;SurfaceDeleteFaceFeatures&gt; propertyValue = features_var-&gt;
+surfaceDeleteFaceFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">sweepFeatures Property</h3><p class="api">Returns the collection that provides access to the sweep features within the component and supports the creation of new sweep features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;SweepFeatures&gt; propertyValue = features_var-&gt;
+sweepFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">tessellateFeatures Property</h3><p class="api">Returns the collection that provides access to the tessellate features within the component and supports the creation of new tessellate features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;TessellateFeatures&gt; propertyValue = features_var-&gt;
+tessellateFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">thickenFeatures Property</h3><p class="api">Returns the collection that provides access to the Thicken features within the component and supports the creation of new Thicken features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;ThickenFeatures&gt; propertyValue = features_var-&gt;
+thickenFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">threadFeatures Property</h3><p class="api">Returns the collection that provides access to the thread features within the component and supports the creation of new thread features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;ThreadFeatures&gt; propertyValue = features_var-&gt;
+threadFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">torusFeatures Property</h3><p class="api">Returns the collection that provides access to the existing torus features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;TorusFeatures&gt; propertyValue = features_var-&gt;
+torusFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">trimFeatures Property</h3><p class="api">Returns the collection that provides access to the Trim features within the component and supports the creation of new Trim features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;TrimFeatures&gt; propertyValue = features_var-&gt;
+trimFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">unfoldFeatures Property</h3><p class="api">Returns the collection that provides access to the existing unfold features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;UnfoldFeatures&gt; propertyValue = features_var-&gt;
+unfoldFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">unstitchFeatures Property</h3><p class="api">Returns the collection that provides access to the Unstitch features within the component and supports the creation of new Unstitch features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;UnstitchFeatures&gt; propertyValue = features_var-&gt;
+unstitchFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">untrimFeatures Property</h3><p class="api">Returns the collection that provides access to the Untrim features within the component and supports the creation of new Untrim features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;UntrimFeatures&gt; propertyValue = features_var-&gt;
+untrimFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">volumetricCustomFeatures Property</h3><p class="api">Returns the collection that provides access to volumetric custom features within the component and supports the creation of new volumetric custom features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;VolumetricCustomFeatures&gt; propertyValue = features_var-&gt;
+volumetricCustomFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">volumetricModelToMeshFeatures Property</h3><p class="api">Returns the collection that provides access to the Volumetric Model to Mesh features within the component and supports the creation of new Volumetric Model to Mesh features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;VolumetricModelToMeshFeatures&gt; propertyValue = features_var-&gt;
+volumetricModelToMeshFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">webFeatures Property</h3><p class="api">Returns the collection that provides access to the existing web features.</p><pre class="api-code">"features_var" is a variable referencing a Features object.
+#include &lt;Fusion/Features/Features.h&gt;
+// Get the value of the property.
+Ptr&lt;WebFeatures&gt; propertyValue = features_var-&gt;
+webFeatures
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

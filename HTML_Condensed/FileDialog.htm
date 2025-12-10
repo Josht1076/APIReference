@@ -1,0 +1,241 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/FileDialog.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="FileDialog" name="contextid"/>
+<meta content="FileDialog Object" name="description"/>
+<meta content="GUID-69478fef-f96f-4e7c-b5af-766301072042" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>FileDialog Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">FileDialog Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/UserInterface/FileDialog.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access to a file dialog. A file dialog can be used to prompt the user for file names to open or save to.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="FileDialog_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FileDialog_showOpen.htm">showOpen</a></td>
+<td class="api-list">Displays a modal open dialog, allowing the user to select one or more files. The return value can be used to determine if the dialog was canceled without selecting a file. The Filename and Filenames properties can be used to get the selected files.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FileDialog_showSave.htm">showSave</a></td>
+<td class="api-list">Displays a modal save dialog, allowing the user to specify a file. The return value can be used to determine if the dialog was canceled without selecting a file. The Filename and Filenames properties can be used to get the selected files.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="FileDialog_filename.htm">filename</a></td>
+<td class="api-list">Gets the filename specified by the user in the dialog. This property is used after the ShowOpen or ShowSave methods have been called to retrieve the filename specified by the user. The file name includes both the file path and the extension.<br><br/> If ShowOpen was used and IsMultiSelectEnabled is true, then this property will only display the first filename selected and the Filenames property should be used instead to retrieved the full list. Is ShowSave was used, then only a single file name is ever returned.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="FileDialog_filenames.htm">filenames</a></td>
+<td class="api-list">Gets the filenames specified by the user in the dialog. This property is used after the ShowOpen or ShowSave methods have been called to retrieve the filenames specified by the user. Each file name includes both the file path and the extension.<br/><br/> If ShowOpen is used and IsMultiSelectEnabled is true, the user is able to select more than one file. This property returns all of the files that were selected. If ShowSave is used or IsMultiSelectEnabled is false then this array will contain the single file name.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FileDialog_filter.htm">filter</a></td>
+<td class="api-list">Gets or sets the current file name filter string, which determines the choices that appear in the "Save as file type" or "Files of type" box in the dialog box.<br/><br/> For each filtering option, the filter string contains a description of the filter and the filter pattern as specified in parentheses and separated by semi-colons. Multiple filters are separated by a double semi-colon. These are illustrated below.<br/><br/> The following is an example of a filter string:<br/><br/> Text files (*.txt);;All files (*.*)<br/><br/> You can add several filter patterns to a filter by separating the file types with semicolons, for example:<br/><br/> Image Files (*.BMP;*.JPG;*.GIF);;All files (*.*)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FileDialog_filterIndex.htm">filterIndex</a></td>
+<td class="api-list">Gets or sets the index of the filter currently selected in the file dialog box. Use the FilterIndex property to set which filtering option is shown first to the user. You can also use the value of FilterIndex after showing the file dialog to perform special file operations depending upon the filter chosen. The first item in the filter list is index 0.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FileDialog_initialDirectory.htm">initialDirectory</a></td>
+<td class="api-list">Gets or sets the initial directory displayed by the file dialog box.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FileDialog_initialFilename.htm">initialFilename</a></td>
+<td class="api-list">Gets or sets the initial filename displayed when the dialog is first displayed. When a new FileDialog object is created this defaults to an empty string so no initial filename is specified.<br/><br/> If the showOpen option is used, the file must already exist in the directory specified by the initialDirectory property. If it doesn't exist, the initial filename will not be used.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FileDialog_isMultiSelectEnabled.htm">isMultiSelectEnabled</a></td>
+<td class="api-list">Gets or sets a value indicating whether the dialog box allows multiple files to be selected.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FileDialog_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FileDialog_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FileDialog_title.htm">title</a></td>
+<td class="api-list">Gets or sets the title displayed on the dialog.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="UserInterface_createFileDialog.htm">UserInterface.createFileDialog</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="WriteUserInterfaceToFile_Sample.htm">Write user interface to a file API Sample</a></td>
+<td class="api-list">Writes out the full structure of the Fusion user interface. This information is useful when editing the user-interface, as discussed in the usre manual topic <a href="UserInterface_UM.htm">User-Interface Customization with Fusion's API</a></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(FileDialog%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/UserInterface/FileDialog.h&gt;
+returnValue = adsk::core::FileDialog::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">filename Property</h3><p class="api">Gets the filename specified by the user in the dialog. This property is used after the ShowOpen or ShowSave methods have been called to retrieve the filename specified by the user. The file name includes both the file path and the extension. If ShowOpen was used and IsMultiSelectEnabled is true, then this property will only display the first filename selected and the Filenames property should be used instead to retrieved the full list. Is ShowSave was used, then only a single file name is ever returned.</p><pre class="api-code">"fileDialog_var" is a variable referencing a FileDialog object.
+#include &lt;Core/UserInterface/FileDialog.h&gt;
+// Get the value of the property.
+string propertyValue = fileDialog_var-&gt;
+filename
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">filenames Property</h3><p class="api">Gets the filenames specified by the user in the dialog. This property is used after the ShowOpen or ShowSave methods have been called to retrieve the filenames specified by the user. Each file name includes both the file path and the extension. If ShowOpen is used and IsMultiSelectEnabled is true, the user is able to select more than one file. This property returns all of the files that were selected. If ShowSave is used or IsMultiSelectEnabled is false then this array will contain the single file name.</p><pre class="api-code">"fileDialog_var" is a variable referencing a FileDialog object.
+#include &lt;Core/UserInterface/FileDialog.h&gt;
+// Get the value of the property.
+std::vector&lt;string&gt; propertyValue = fileDialog_var-&gt;
+filenames
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type string.</p><h3 class="api-member">filter Property</h3><p class="api">Gets or sets the current file name filter string, which determines the choices that appear in the "Save as file type" or "Files of type" box in the dialog box. For each filtering option, the filter string contains a description of the filter and the filter pattern as specified in parentheses and separated by semi-colons. Multiple filters are separated by a double semi-colon. These are illustrated below. The following is an example of a filter string: Text files (*.txt);;All files (*.*) You can add several filter patterns to a filter by separating the file types with semicolons, for example: Image Files (*.BMP;*.JPG;*.GIF);;All files (*.*)</p><pre class="api-code">"fileDialog_var" is a variable referencing a FileDialog object.
+#include &lt;Core/UserInterface/FileDialog.h&gt;
+// Get the value of the property.
+string propertyValue = fileDialog_var-&gt;
+filter
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = fileDialog_var-&gt;
+filter
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">filterIndex Property</h3><p class="api">Gets or sets the index of the filter currently selected in the file dialog box. Use the FilterIndex property to set which filtering option is shown first to the user. You can also use the value of FilterIndex after showing the file dialog to perform special file operations depending upon the filter chosen. The first item in the filter list is index 0.</p><pre class="api-code">"fileDialog_var" is a variable referencing a FileDialog object.
+#include &lt;Core/UserInterface/FileDialog.h&gt;
+// Get the value of the property.
+integer propertyValue = fileDialog_var-&gt;
+filterIndex
+();
+// Set the value of the property, where value_var is an integer.
+bool returnValue = fileDialog_var-&gt;
+filterIndex
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an integer.</p><h3 class="api-member">initialDirectory Property</h3><p class="api">Gets or sets the initial directory displayed by the file dialog box.</p><pre class="api-code">"fileDialog_var" is a variable referencing a FileDialog object.
+#include &lt;Core/UserInterface/FileDialog.h&gt;
+// Get the value of the property.
+string propertyValue = fileDialog_var-&gt;
+initialDirectory
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = fileDialog_var-&gt;
+initialDirectory
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">initialFilename Property</h3><p class="api">Gets or sets the initial filename displayed when the dialog is first displayed. When a new FileDialog object is created this defaults to an empty string so no initial filename is specified. If the showOpen option is used, the file must already exist in the directory specified by the initialDirectory property. If it doesn't exist, the initial filename will not be used.</p><pre class="api-code">"fileDialog_var" is a variable referencing a FileDialog object.
+#include &lt;Core/UserInterface/FileDialog.h&gt;
+// Get the value of the property.
+string propertyValue = fileDialog_var-&gt;
+initialFilename
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = fileDialog_var-&gt;
+initialFilename
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">isMultiSelectEnabled Property</h3><p class="api">Gets or sets a value indicating whether the dialog box allows multiple files to be selected.</p><pre class="api-code">"fileDialog_var" is a variable referencing a FileDialog object.
+#include &lt;Core/UserInterface/FileDialog.h&gt;
+// Get the value of the property.
+boolean propertyValue = fileDialog_var-&gt;
+isMultiSelectEnabled
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = fileDialog_var-&gt;
+isMultiSelectEnabled
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"fileDialog_var" is a variable referencing a FileDialog object.
+#include &lt;Core/UserInterface/FileDialog.h&gt;
+// Get the value of the property.
+boolean propertyValue = fileDialog_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"fileDialog_var" is a variable referencing a FileDialog object.
+#include &lt;Core/UserInterface/FileDialog.h&gt;
+// Get the value of the property.
+string propertyValue = fileDialog_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">showOpen Method</h3><p class="api">Displays a modal open dialog, allowing the user to select one or more files. The return value can be used to determine if the dialog was canceled without selecting a file. The Filename and Filenames properties can be used to get the selected files.</p><pre class="api-code">"fileDialog_var" is a variable referencing a
+FileDialog
+object.
+#include &lt;Core/UserInterface/FileDialog.h&gt;
+returnValue = fileDialog_var-&gt;
+showOpen
+();</pre><p class="api">Return Value: DialogResults - Returns an enum value indicating which button was clicked on the dialog.</p><h3 class="api-member">showSave Method</h3><p class="api">Displays a modal save dialog, allowing the user to specify a file. The return value can be used to determine if the dialog was canceled without selecting a file. The Filename and Filenames properties can be used to get the selected files.</p><pre class="api-code">"fileDialog_var" is a variable referencing a
+FileDialog
+object.
+#include &lt;Core/UserInterface/FileDialog.h&gt;
+returnValue = fileDialog_var-&gt;
+showSave
+();</pre><p class="api">Return Value: DialogResults - Returns an enum value indicating which button was clicked on the dialog.</p><h3 class="api-member">title Property</h3><p class="api">Gets or sets the title displayed on the dialog.</p><pre class="api-code">"fileDialog_var" is a variable referencing a FileDialog object.
+#include &lt;Core/UserInterface/FileDialog.h&gt;
+// Get the value of the property.
+string propertyValue = fileDialog_var-&gt;
+title
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = fileDialog_var-&gt;
+title
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p></body>
+</html>

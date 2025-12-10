@@ -1,0 +1,147 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/DataFiles.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="13/1/2015" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="DataFiles" name="contextid"/>
+<meta content="DataFiles Object" name="description"/>
+<meta content="GUID-965e4bbe-d1d9-4c58-a312-250286cec9a6" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>DataFiles Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">DataFiles Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Dashboard/DataFiles.h&gt;<h2 class="api">
+          Description
+        </h2>Returns the items within a folder. This includes everything in a folder except for other folders.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="DataFiles_asArray.htm">asArray</a></td>
+<td class="api-list">Get the current list of all files.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DataFiles_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DataFiles_item.htm">item</a></td>
+<td class="api-list">Returns the specified data file.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DataFiles_itemById.htm">itemById</a></td>
+<td class="api-list">Returns the file specified using the ID or version ID of the file.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="DataFiles_count.htm">count</a></td>
+<td class="api-list">The number of data items in this collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DataFiles_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="DataFiles_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="DataFile_childReferences.htm">DataFile.childReferences</a>, <a href="DataFile_parentReferences.htm">DataFile.parentReferences</a>, <a href="DataFile_versions.htm">DataFile.versions</a>, <a href="DataFolder_dataFiles.htm">DataFolder.dataFiles</a>, <a href="DesignDataFile_childReferences.htm">DesignDataFile.childReferences</a>, <a href="DesignDataFile_parentReferences.htm">DesignDataFile.parentReferences</a>, <a href="DesignDataFile_versions.htm">DesignDataFile.versions</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2015<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(DataFiles%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">asArray Method</h3><p class="api">Get the current list of all files.</p><pre class="api-code">"dataFiles_var" is a variable referencing a
+DataFiles
+object.
+#include &lt;Core/Dashboard/DataFiles.h&gt;
+returnValue = dataFiles_var-&gt;
+asArray
+();</pre><p class="api">Return Value: DataFile [] - Returns the current list of all files.</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Dashboard/DataFiles.h&gt;
+returnValue = adsk::core::DataFiles::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">The number of data items in this collection.</p><pre class="api-code">"dataFiles_var" is a variable referencing a DataFiles object.
+#include &lt;Core/Dashboard/DataFiles.h&gt;
+// Get the value of the property.
+uinteger propertyValue = dataFiles_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"dataFiles_var" is a variable referencing a DataFiles object.
+#include &lt;Core/Dashboard/DataFiles.h&gt;
+// Get the value of the property.
+boolean propertyValue = dataFiles_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Returns the specified data file.</p><pre class="api-code">"dataFiles_var" is a variable referencing a
+DataFiles
+object.
+#include &lt;Core/Dashboard/DataFiles.h&gt;
+returnValue = dataFiles_var-&gt;
+item
+(index);</pre><p class="api">Return Value: DataFile - Returns the specified file or null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the file to return. The first file in the list has an index of 0.</td></tr></table><h3 class="api-member">itemById Method</h3><p class="api">Returns the file specified using the ID or version ID of the file.</p><pre class="api-code">"dataFiles_var" is a variable referencing a
+DataFiles
+object.
+#include &lt;Core/Dashboard/DataFiles.h&gt;
+returnValue = dataFiles_var-&gt;
+itemById
+(id);</pre><p class="api">Return Value: DataFile - Returns the file or null if a file with the specified ID is not found.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">id</td><td class="api-list">string</td><td class="api-list">The ID or version ID of the file to return. This is the same ID used by the APS Data Management API.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"dataFiles_var" is a variable referencing a DataFiles object.
+#include &lt;Core/Dashboard/DataFiles.h&gt;
+// Get the value of the property.
+string propertyValue = dataFiles_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

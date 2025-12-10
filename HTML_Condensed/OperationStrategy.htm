@@ -1,0 +1,259 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/OperationStrategy.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="21/02/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="OperationStrategy" name="contextid"/>
+<meta content="OperationStrategy Object" name="description"/>
+<meta content="GUID-24F84420-3F11-46D4-BA31-95252A70097B" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>OperationStrategy Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">OperationStrategy Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/Operations/OperationStrategy.h&gt;<h2 class="api">
+          Description
+        </h2>The OperationStrategy contains information about a strategy such as its name, title and description.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="OperationStrategy_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OperationStrategy_createFromString.htm">createFromString</a></td>
+<td class="api-list">Create an OperationStrategy for a given name.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="OperationStrategy_description.htm">description</a></td>
+<td class="api-list">Get the localized description of the strategy.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OperationStrategy_is2DStrategy.htm">is2DStrategy</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Gets whether given OperationStrategy is a 2D strategy.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OperationStrategy_is3DStrategy.htm">is3DStrategy</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Gets whether given OperationStrategy is a 3D strategy.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OperationStrategy_isAdditiveStrategy.htm">isAdditiveStrategy</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Gets whether given OperationStrategy is an additive strategy.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OperationStrategy_isCuttingStrategy.htm">isCuttingStrategy</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Gets whether given OperationStrategy is a cutting strategy.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OperationStrategy_isDrillingStrategy.htm">isDrillingStrategy</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Gets whether given OperationStrategy is a drilling strategy.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OperationStrategy_isFinishingStrategy.htm">isFinishingStrategy</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Gets whether given OperationStrategy is a finishing strategy.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OperationStrategy_isGenerationAllowed.htm">isGenerationAllowed</a></td>
+<td class="api-list">Returns true if the strategy is allowed to be generated due to licensing and enabled preview features. Some strategies also require Active machining extension to be generated. Returns false otherwise.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OperationStrategy_isMillingStrategy.htm">isMillingStrategy</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Gets whether given OperationStrategy is a milling strategy.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OperationStrategy_isRotaryStrategy.htm">isRotaryStrategy</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Gets whether given OperationStrategy is a rotary strategy.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OperationStrategy_isSupportStrategy.htm">isSupportStrategy</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Gets whether given OperationStrategy is an additive support strategy.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OperationStrategy_isTurningStrategy.htm">isTurningStrategy</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Gets whether given OperationStrategy is a turning strategy.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OperationStrategy_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OperationStrategy_name.htm">name</a></td>
+<td class="api-list">Get the name of the strategy. This is equivalent to the Operation's strategy property. Use as strategy parameter when creating a OperationInput.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="OperationStrategy_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="OperationStrategy_title.htm">title</a></td>
+<td class="api-list">Get the localized title of the strategy.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Operations_compatibleStrategies.htm">Operations.compatibleStrategies</a>, <a href="OperationStrategy_createFromString.htm">OperationStrategy.createFromString</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ManufacturingWorkflowAPISample_Sample.htm">Manufacturing Workflow API Sample</a></td>
+<td class="api-list">Manufacturing Workflow API Sample<p>This sample script starts by creating a simple component which is then used to describe a milling workflow. It creates a setup, a few operations, pick some tools from a Fusion sample tool library using loops and queries and ends up post-processing the operations out using an NC Program.</p></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version April 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(OperationStrategy%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/Operations/OperationStrategy.h&gt;
+returnValue = adsk::cam::OperationStrategy::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">createFromString Method</h3><p class="api">Create an OperationStrategy for a given name.</p><pre class="api-code">This is a static method.
+#include &lt;Cam/Operations/OperationStrategy.h&gt;
+returnValue = adsk::cam::OperationStrategy::
+createFromString
+(name);</pre><p class="api">Return Value: OperationStrategy - Returns the OperationStrategy for given strategy name.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">name</td><td class="api-list">string</td><td class="api-list">The name of the strategy. Throws an error if the strategy name is unknown.</td></tr></table><h3 class="api-member">description Property</h3><p class="api">Get the localized description of the strategy.</p><pre class="api-code">"operationStrategy_var" is a variable referencing an OperationStrategy object.
+#include &lt;Cam/Operations/OperationStrategy.h&gt;
+// Get the value of the property.
+string propertyValue = operationStrategy_var-&gt;
+description
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">is2DStrategy Property</h3><p class="api">Gets whether given OperationStrategy is a 2D strategy.</p><pre class="api-code">"operationStrategy_var" is a variable referencing an OperationStrategy object.
+#include &lt;Cam/Operations/OperationStrategy.h&gt;
+// Get the value of the property.
+boolean propertyValue = operationStrategy_var-&gt;
+is2DStrategy
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">is3DStrategy Property</h3><p class="api">Gets whether given OperationStrategy is a 3D strategy.</p><pre class="api-code">"operationStrategy_var" is a variable referencing an OperationStrategy object.
+#include &lt;Cam/Operations/OperationStrategy.h&gt;
+// Get the value of the property.
+boolean propertyValue = operationStrategy_var-&gt;
+is3DStrategy
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isAdditiveStrategy Property</h3><p class="api">Gets whether given OperationStrategy is an additive strategy.</p><pre class="api-code">"operationStrategy_var" is a variable referencing an OperationStrategy object.
+#include &lt;Cam/Operations/OperationStrategy.h&gt;
+// Get the value of the property.
+boolean propertyValue = operationStrategy_var-&gt;
+isAdditiveStrategy
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isCuttingStrategy Property</h3><p class="api">Gets whether given OperationStrategy is a cutting strategy.</p><pre class="api-code">"operationStrategy_var" is a variable referencing an OperationStrategy object.
+#include &lt;Cam/Operations/OperationStrategy.h&gt;
+// Get the value of the property.
+boolean propertyValue = operationStrategy_var-&gt;
+isCuttingStrategy
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isDrillingStrategy Property</h3><p class="api">Gets whether given OperationStrategy is a drilling strategy.</p><pre class="api-code">"operationStrategy_var" is a variable referencing an OperationStrategy object.
+#include &lt;Cam/Operations/OperationStrategy.h&gt;
+// Get the value of the property.
+boolean propertyValue = operationStrategy_var-&gt;
+isDrillingStrategy
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isFinishingStrategy Property</h3><p class="api">Gets whether given OperationStrategy is a finishing strategy.</p><pre class="api-code">"operationStrategy_var" is a variable referencing an OperationStrategy object.
+#include &lt;Cam/Operations/OperationStrategy.h&gt;
+// Get the value of the property.
+boolean propertyValue = operationStrategy_var-&gt;
+isFinishingStrategy
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isGenerationAllowed Property</h3><p class="api">Returns true if the strategy is allowed to be generated due to licensing and enabled preview features. Some strategies also require Active machining extension to be generated. Returns false otherwise.</p><pre class="api-code">"operationStrategy_var" is a variable referencing an OperationStrategy object.
+#include &lt;Cam/Operations/OperationStrategy.h&gt;
+// Get the value of the property.
+boolean propertyValue = operationStrategy_var-&gt;
+isGenerationAllowed
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isMillingStrategy Property</h3><p class="api">Gets whether given OperationStrategy is a milling strategy.</p><pre class="api-code">"operationStrategy_var" is a variable referencing an OperationStrategy object.
+#include &lt;Cam/Operations/OperationStrategy.h&gt;
+// Get the value of the property.
+boolean propertyValue = operationStrategy_var-&gt;
+isMillingStrategy
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isRotaryStrategy Property</h3><p class="api">Gets whether given OperationStrategy is a rotary strategy.</p><pre class="api-code">"operationStrategy_var" is a variable referencing an OperationStrategy object.
+#include &lt;Cam/Operations/OperationStrategy.h&gt;
+// Get the value of the property.
+boolean propertyValue = operationStrategy_var-&gt;
+isRotaryStrategy
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isSupportStrategy Property</h3><p class="api">Gets whether given OperationStrategy is an additive support strategy.</p><pre class="api-code">"operationStrategy_var" is a variable referencing an OperationStrategy object.
+#include &lt;Cam/Operations/OperationStrategy.h&gt;
+// Get the value of the property.
+boolean propertyValue = operationStrategy_var-&gt;
+isSupportStrategy
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isTurningStrategy Property</h3><p class="api">Gets whether given OperationStrategy is a turning strategy.</p><pre class="api-code">"operationStrategy_var" is a variable referencing an OperationStrategy object.
+#include &lt;Cam/Operations/OperationStrategy.h&gt;
+// Get the value of the property.
+boolean propertyValue = operationStrategy_var-&gt;
+isTurningStrategy
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"operationStrategy_var" is a variable referencing an OperationStrategy object.
+#include &lt;Cam/Operations/OperationStrategy.h&gt;
+// Get the value of the property.
+boolean propertyValue = operationStrategy_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">name Property</h3><p class="api">Get the name of the strategy. This is equivalent to the Operation's strategy property. Use as strategy parameter when creating a OperationInput.</p><pre class="api-code">"operationStrategy_var" is a variable referencing an OperationStrategy object.
+#include &lt;Cam/Operations/OperationStrategy.h&gt;
+// Get the value of the property.
+string propertyValue = operationStrategy_var-&gt;
+name
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"operationStrategy_var" is a variable referencing an OperationStrategy object.
+#include &lt;Cam/Operations/OperationStrategy.h&gt;
+// Get the value of the property.
+string propertyValue = operationStrategy_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">title Property</h3><p class="api">Get the localized title of the strategy.</p><pre class="api-code">"operationStrategy_var" is a variable referencing an OperationStrategy object.
+#include &lt;Cam/Operations/OperationStrategy.h&gt;
+// Get the value of the property.
+string propertyValue = operationStrategy_var-&gt;
+title
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

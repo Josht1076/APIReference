@@ -1,0 +1,245 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/BRepLump.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="BRepLump" name="contextid"/>
+<meta content="BRepLump Object" name="description"/>
+<meta content="GUID-a02c60d5-daf2-4327-a2fe-6e1b767e8c7a" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>BRepLump Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">BRepLump Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/BRep/BRepLump.h&gt;<h2 class="api">
+          Description
+        </h2>Represents an entirely connected set of entities. A BRepBody consists of BRepLumps.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="BRepLump_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BRepLump_createForAssemblyContext.htm">createForAssemblyContext</a></td>
+<td class="api-list">Returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BRepLump_pointContainment.htm">pointContainment</a></td>
+<td class="api-list">Determines the relationship of the input point with respect to this lump.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="BRepLump_area.htm">area</a></td>
+<td class="api-list">Returns the area in cm ^ 2.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BRepLump_assemblyContext.htm">assemblyContext</a></td>
+<td class="api-list">Returns the assembly context that is directly referencing this object in an assembly. This is only valid in the case where this BRepLump object is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly. but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BRepLump_body.htm">body</a></td>
+<td class="api-list">Returns the immediate owner BRepBody of the lump</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BRepLump_boundingBox.htm">boundingBox</a></td>
+<td class="api-list">Returns the bounding box of the lump</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BRepLump_edges.htm">edges</a></td>
+<td class="api-list">Returns the BRepEdges owned by the lump</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BRepLump_entityToken.htm">entityToken</a></td>
+<td class="api-list">Returns a token for the BRepLump object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same lump.<br><br/> When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.<br/><br/> This is only valid for lump that exist in the design, (the isTemporary property is false).</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="BRepLump_faces.htm">faces</a></td>
+<td class="api-list">Returns the BRepFaces owned by the lump</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BRepLump_isClosed.htm">isClosed</a></td>
+<td class="api-list">Returns true of the lump is closed</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BRepLump_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BRepLump_meshManager.htm">meshManager</a></td>
+<td class="api-list">Returns the mesh manager object for this lump.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BRepLump_nativeObject.htm">nativeObject</a></td>
+<td class="api-list">The NativeObject is the object outside the context of an assembly. Returns null in the case where this object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BRepLump_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BRepLump_shells.htm">shells</a></td>
+<td class="api-list">Returns the BRepShells owned by the lump</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BRepLump_vertices.htm">vertices</a></td>
+<td class="api-list">Returns the BRepVertices owned by the lump</td>
+</tr>
+<tr>
+<td class="api-list"><a href="BRepLump_volume.htm">volume</a></td>
+<td class="api-list">Returns the volume in cm ^ 3. Returns 0 in the case the lump is not solid.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="BRepLump_createForAssemblyContext.htm">BRepLump.createForAssemblyContext</a>, <a href="BRepLump_nativeObject.htm">BRepLump.nativeObject</a>, <a href="BRepLumps_item.htm">BRepLumps.item</a>, <a href="BRepShell_lump.htm">BRepShell.lump</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(BRepLump%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">area Property</h3><p class="api">Returns the area in cm ^ 2.</p><pre class="api-code">"bRepLump_var" is a variable referencing a BRepLump object.
+#include &lt;Fusion/BRep/BRepLump.h&gt;
+// Get the value of the property.
+double propertyValue = bRepLump_var-&gt;
+area
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">assemblyContext Property</h3><p class="api">Returns the assembly context that is directly referencing this object in an assembly. This is only valid in the case where this BRepLump object is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly. but is already the native object.</p><pre class="api-code">"bRepLump_var" is a variable referencing a BRepLump object.
+#include &lt;Fusion/BRep/BRepLump.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = bRepLump_var-&gt;
+assemblyContext
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">body Property</h3><p class="api">Returns the immediate owner BRepBody of the lump</p><pre class="api-code">"bRepLump_var" is a variable referencing a BRepLump object.
+#include &lt;Fusion/BRep/BRepLump.h&gt;
+// Get the value of the property.
+Ptr&lt;BRepBody&gt; propertyValue = bRepLump_var-&gt;
+body
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">boundingBox Property</h3><p class="api">Returns the bounding box of the lump</p><pre class="api-code">"bRepLump_var" is a variable referencing a BRepLump object.
+#include &lt;Fusion/BRep/BRepLump.h&gt;
+// Get the value of the property.
+Ptr&lt;BoundingBox3D&gt; propertyValue = bRepLump_var-&gt;
+boundingBox
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/BRep/BRepLump.h&gt;
+returnValue = adsk::fusion::BRepLump::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">createForAssemblyContext Method</h3><p class="api">Returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</p><pre class="api-code">"bRepLump_var" is a variable referencing a
+BRepLump
+object.
+#include &lt;Fusion/BRep/BRepLump.h&gt;
+returnValue = bRepLump_var-&gt;
+createForAssemblyContext
+(occurrence);</pre><p class="api">Return Value: BRepLump - Returns the new BrepLump proxy or null if this isn't the NativeObject.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">occurrence</td><td class="api-list">Occurrence</td><td class="api-list">The occurrence that defines the context for the created proxy.</td></tr></table><h3 class="api-member">edges Property</h3><p class="api">Returns the BRepEdges owned by the lump</p><pre class="api-code">"bRepLump_var" is a variable referencing a BRepLump object.
+#include &lt;Fusion/BRep/BRepLump.h&gt;
+// Get the value of the property.
+Ptr&lt;BRepEdges&gt; propertyValue = bRepLump_var-&gt;
+edges
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">entityToken Property</h3><p class="api">Returns a token for the BRepLump object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same lump. When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them. This is only valid for lump that exist in the design, (the isTemporary property is false).</p><pre class="api-code">"bRepLump_var" is a variable referencing a BRepLump object.
+#include &lt;Fusion/BRep/BRepLump.h&gt;
+// Get the value of the property.
+string propertyValue = bRepLump_var-&gt;
+entityToken
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">faces Property</h3><p class="api">Returns the BRepFaces owned by the lump</p><pre class="api-code">"bRepLump_var" is a variable referencing a BRepLump object.
+#include &lt;Fusion/BRep/BRepLump.h&gt;
+// Get the value of the property.
+Ptr&lt;BRepFaces&gt; propertyValue = bRepLump_var-&gt;
+faces
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">isClosed Property</h3><p class="api">Returns true of the lump is closed</p><pre class="api-code">"bRepLump_var" is a variable referencing a BRepLump object.
+#include &lt;Fusion/BRep/BRepLump.h&gt;
+// Get the value of the property.
+boolean propertyValue = bRepLump_var-&gt;
+isClosed
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"bRepLump_var" is a variable referencing a BRepLump object.
+#include &lt;Fusion/BRep/BRepLump.h&gt;
+// Get the value of the property.
+boolean propertyValue = bRepLump_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">meshManager Property</h3><p class="api">Returns the mesh manager object for this lump.</p><pre class="api-code">"bRepLump_var" is a variable referencing a BRepLump object.
+#include &lt;Fusion/BRep/BRepLump.h&gt;
+// Get the value of the property.
+Ptr&lt;MeshManager&gt; propertyValue = bRepLump_var-&gt;
+meshManager
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">nativeObject Property</h3><p class="api">The NativeObject is the object outside the context of an assembly. Returns null in the case where this object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"bRepLump_var" is a variable referencing a BRepLump object.
+#include &lt;Fusion/BRep/BRepLump.h&gt;
+// Get the value of the property.
+Ptr&lt;BRepLump&gt; propertyValue = bRepLump_var-&gt;
+nativeObject
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"bRepLump_var" is a variable referencing a BRepLump object.
+#include &lt;Fusion/BRep/BRepLump.h&gt;
+// Get the value of the property.
+string propertyValue = bRepLump_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">pointContainment Method</h3><p class="api">Determines the relationship of the input point with respect to this lump.</p><pre class="api-code">"bRepLump_var" is a variable referencing a
+BRepLump
+object.
+#include &lt;Fusion/BRep/BRepLump.h&gt;
+returnValue = bRepLump_var-&gt;
+pointContainment
+(point);</pre><p class="api">Return Value: PointContainment - Returns a value from the PointContainment enum indicating the relationship of the input point to the lump.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">point</td><td class="api-list">Point3D</td><td class="api-list">The point to do the containment check for.</td></tr></table><h3 class="api-member">shells Property</h3><p class="api">Returns the BRepShells owned by the lump</p><pre class="api-code">"bRepLump_var" is a variable referencing a BRepLump object.
+#include &lt;Fusion/BRep/BRepLump.h&gt;
+// Get the value of the property.
+Ptr&lt;BRepShells&gt; propertyValue = bRepLump_var-&gt;
+shells
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">vertices Property</h3><p class="api">Returns the BRepVertices owned by the lump</p><pre class="api-code">"bRepLump_var" is a variable referencing a BRepLump object.
+#include &lt;Fusion/BRep/BRepLump.h&gt;
+// Get the value of the property.
+Ptr&lt;BRepVertices&gt; propertyValue = bRepLump_var-&gt;
+vertices
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">volume Property</h3><p class="api">Returns the volume in cm ^ 3. Returns 0 in the case the lump is not solid.</p><pre class="api-code">"bRepLump_var" is a variable referencing a BRepLump object.
+#include &lt;Fusion/BRep/BRepLump.h&gt;
+// Get the value of the property.
+double propertyValue = bRepLump_var-&gt;
+volume
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p></body>
+</html>

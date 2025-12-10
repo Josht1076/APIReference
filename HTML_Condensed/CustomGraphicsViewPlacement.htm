@@ -1,0 +1,155 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/CustomGraphicsViewPlacement.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="18/09/2017" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="CustomGraphicsViewPlacement" name="contextid"/>
+<meta content="CustomGraphicsViewPlacement Object" name="description"/>
+<meta content="GUID-C3F47A39-3D3E-492A-A80B-0733E26460F4" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>CustomGraphicsViewPlacement Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">CustomGraphicsViewPlacement Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Graphics/CustomGraphicsViewPlacement.h&gt;<h2 class="api">
+          Description
+        </h2>Positions custom graphics relative to one of the four corners of the view. Graphics positioned this way will always appear on top of the model graphics. This is typically used to display legends are small interactive tools.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsViewPlacement_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsViewPlacement_create.htm">create</a></td>
+<td class="api-list">Creates a new CustomGraphicsViewPlacement object that can be used when setting the viewPlacement property of a custom graphics entity to specify the billboarding behavior.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsViewPlacement_anchorPoint.htm">anchorPoint</a></td>
+<td class="api-list">Gets and sets the position within the defined graphics that serves as the anchor. This is the location on the graphics that is positioned at the specified view point.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsViewPlacement_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsViewPlacement_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsViewPlacement_viewCorner.htm">viewCorner</a></td>
+<td class="api-list">Gets and sets which corner the graphics are positioned relative to.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsViewPlacement_viewPoint.htm">viewPoint</a></td>
+<td class="api-list">A 2D point in the view that defines the position of the graphics. This is relative to the corner and is in pixels. The x and y directions vary for each of the corners. These directions are only used to position the 2D point and do not affect the standard coordinate system the graphics were drawn in.<br/><br/> upperLeftViewCorner - The x direction is to the right and y is down.<br/><br/> upperRightViewCorner - The x direction is to the left and y is down.<br/><br/> lowerLeftViewCorner - The x direction is to the right and y is up.<br/><br/> lowerRightViewCorner - The x direction is to the left and y is up.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CustomGraphicsBRepBody_viewPlacement.htm">CustomGraphicsBRepBody.viewPlacement</a>, <a href="CustomGraphicsCurve_viewPlacement.htm">CustomGraphicsCurve.viewPlacement</a>, <a href="CustomGraphicsEntity_viewPlacement.htm">CustomGraphicsEntity.viewPlacement</a>, <a href="CustomGraphicsGroup_viewPlacement.htm">CustomGraphicsGroup.viewPlacement</a>, <a href="CustomGraphicsLines_viewPlacement.htm">CustomGraphicsLines.viewPlacement</a>, <a href="CustomGraphicsMesh_viewPlacement.htm">CustomGraphicsMesh.viewPlacement</a>, <a href="CustomGraphicsPointSet_viewPlacement.htm">CustomGraphicsPointSet.viewPlacement</a>, <a href="CustomGraphicsText_viewPlacement.htm">CustomGraphicsText.viewPlacement</a>, <a href="CustomGraphicsViewPlacement_create.htm">CustomGraphicsViewPlacement.create</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2017<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(CustomGraphicsViewPlacement%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">anchorPoint Property</h3><p class="api">Gets and sets the position within the defined graphics that serves as the anchor. This is the location on the graphics that is positioned at the specified view point.</p><pre class="api-code">"customGraphicsViewPlacement_var" is a variable referencing a CustomGraphicsViewPlacement object.
+#include &lt;Fusion/Graphics/CustomGraphicsViewPlacement.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = customGraphicsViewPlacement_var-&gt;
+anchorPoint
+();
+// Set the value of the property, where value_var is a Point3D.
+bool returnValue = customGraphicsViewPlacement_var-&gt;
+anchorPoint
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Graphics/CustomGraphicsViewPlacement.h&gt;
+returnValue = adsk::fusion::CustomGraphicsViewPlacement::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">create Method</h3><p class="api">Creates a new CustomGraphicsViewPlacement object that can be used when setting the viewPlacement property of a custom graphics entity to specify the billboarding behavior.</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Graphics/CustomGraphicsViewPlacement.h&gt;
+returnValue = adsk::fusion::CustomGraphicsViewPlacement::
+create
+(anchorPoint, viewCorner, viewPoint);</pre><p class="api">Return Value: CustomGraphicsViewPlacement - Returns the newly created CustomGraphicsViewPlacement object or null in the case of failure. This can then be assigned to any custom graphics entity using its viewPlacement property.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">anchorPoint</td><td class="api-list">Point3D</td><td class="api-list">The position within the defined graphics that will serve as the anchor. This is the location on the graphics that will be positioned at the specified view point.</td></tr><tr><td class="api-list">viewCorner</td><td class="api-list">ViewCorners</td><td class="api-list">Defines which of the four corners of the view the graphics are drawn relative to.</td></tr><tr><td class="api-list">viewPoint</td><td class="api-list">Point2D</td><td class="api-list">A 2D point in the view that defines the position of the graphics. This is relative to the corner and is in pixels. The x and y directions vary for each of the corners. These directions are only used to position the 2D point and do not affect the standard coordinate system the graphics were drawn in. upperLeftViewCorner - The x direction is to the right and y is down. upperRightViewCorner - The x direction is to the left and y is down. lowerLeftViewCorner - The x direction is to the right and y is up. lowerRightViewCorner - The x direction is to the left and y is up.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"customGraphicsViewPlacement_var" is a variable referencing a CustomGraphicsViewPlacement object.
+#include &lt;Fusion/Graphics/CustomGraphicsViewPlacement.h&gt;
+// Get the value of the property.
+boolean propertyValue = customGraphicsViewPlacement_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"customGraphicsViewPlacement_var" is a variable referencing a CustomGraphicsViewPlacement object.
+#include &lt;Fusion/Graphics/CustomGraphicsViewPlacement.h&gt;
+// Get the value of the property.
+string propertyValue = customGraphicsViewPlacement_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">viewCorner Property</h3><p class="api">Gets and sets which corner the graphics are positioned relative to.</p><pre class="api-code">"customGraphicsViewPlacement_var" is a variable referencing a CustomGraphicsViewPlacement object.
+#include &lt;Fusion/Graphics/CustomGraphicsViewPlacement.h&gt;
+// Get the value of the property.
+ViewCorners propertyValue = customGraphicsViewPlacement_var-&gt;
+viewCorner
+();
+// Set the value of the property, where value_var is a ViewCorners.
+bool returnValue = customGraphicsViewPlacement_var-&gt;
+viewCorner
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">viewPoint Property</h3><p class="api">A 2D point in the view that defines the position of the graphics. This is relative to the corner and is in pixels. The x and y directions vary for each of the corners. These directions are only used to position the 2D point and do not affect the standard coordinate system the graphics were drawn in. upperLeftViewCorner - The x direction is to the right and y is down. upperRightViewCorner - The x direction is to the left and y is down. lowerLeftViewCorner - The x direction is to the right and y is up. lowerRightViewCorner - The x direction is to the left and y is up.</p><pre class="api-code">"customGraphicsViewPlacement_var" is a variable referencing a CustomGraphicsViewPlacement object.
+#include &lt;Fusion/Graphics/CustomGraphicsViewPlacement.h&gt;
+// Get the value of the property.
+Ptr&lt;Point2D&gt; propertyValue = customGraphicsViewPlacement_var-&gt;
+viewPoint
+();
+// Set the value of the property, where value_var is a Point2D.
+bool returnValue = customGraphicsViewPlacement_var-&gt;
+viewPoint
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

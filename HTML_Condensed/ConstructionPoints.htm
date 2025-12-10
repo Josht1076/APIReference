@@ -1,0 +1,188 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ConstructionPoints.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ConstructionPoints" name="contextid"/>
+<meta content="ConstructionPoints Object" name="description"/>
+<meta content="GUID-31ddb2ae-0231-4094-8fdf-3c69da39de37" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ConstructionPoints Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ConstructionPoints Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Construction/ConstructionPoints.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access to the construction points within a component and provides methods to create new construction points.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPoints_add.htm">add</a></td>
+<td class="api-list">Creates a new construction point.<br><br/> If the ConstructionPointInput was defined using the setByPoint method using a Point3D object then the add will only work in the direct modeling mode and will fail in the parametric modeling mode.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPoints_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPoints_createInput.htm">createInput</a></td>
+<td class="api-list">Create a ConstructionPointInput object that is in turn used to create a ConstructionPoint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPoints_item.htm">item</a></td>
+<td class="api-list">Function that returns the specified construction point using an index into the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPoints_itemByName.htm">itemByName</a></td>
+<td class="api-list">Returns the specified construction point using the name of the construction point as it is displayed in the browser.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPoints_component.htm">component</a></td>
+<td class="api-list">The component that owns this collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPoints_count.htm">count</a></td>
+<td class="api-list">The number of construction points in the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPoints_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPoints_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="BaseComponent_constructionPoints.htm">BaseComponent.constructionPoints</a>, <a href="Component_constructionPoints.htm">Component.constructionPoints</a>, <a href="FlatPatternComponent_constructionPoints.htm">FlatPatternComponent.constructionPoints</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionPointSample_Sample.htm">Construction Point API Sample</a></td>
+<td class="api-list">Demonstrates creating construction point by different ways</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ConstructionPoints%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">add Method</h3><p class="api">Creates a new construction point. If the ConstructionPointInput was defined using the setByPoint method using a Point3D object then the add will only work in the direct modeling mode and will fail in the parametric modeling mode.</p><pre class="api-code">"constructionPoints_var" is a variable referencing a
+ConstructionPoints
+object.
+#include &lt;Fusion/Construction/ConstructionPoints.h&gt;
+returnValue = constructionPoints_var-&gt;
+add
+(input);</pre><p class="api">Return Value: ConstructionPoint - Returns the newly created construction point or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">input</td><td class="api-list">ConstructionPointInput</td><td class="api-list">A ConstructionPointInput object</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Construction/ConstructionPoints.h&gt;
+returnValue = adsk::fusion::ConstructionPoints::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">component Property</h3><p class="api">The component that owns this collection.</p><pre class="api-code">"constructionPoints_var" is a variable referencing a ConstructionPoints object.
+#include &lt;Fusion/Construction/ConstructionPoints.h&gt;
+// Get the value of the property.
+Ptr&lt;Component&gt; propertyValue = constructionPoints_var-&gt;
+component
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">count Property</h3><p class="api">The number of construction points in the collection.</p><pre class="api-code">"constructionPoints_var" is a variable referencing a ConstructionPoints object.
+#include &lt;Fusion/Construction/ConstructionPoints.h&gt;
+// Get the value of the property.
+uinteger propertyValue = constructionPoints_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">createInput Method</h3><p class="api">Create a ConstructionPointInput object that is in turn used to create a ConstructionPoint.</p><pre class="api-code">"constructionPoints_var" is a variable referencing a
+ConstructionPoints
+object.
+#include &lt;Fusion/Construction/ConstructionPoints.h&gt;
+// Uses no optional arguments.
+returnValue = constructionPoints_var-&gt;
+createInput
+();
+// Uses optional arguments.
+returnValue = constructionPoints_var-&gt;
+createInput
+(occurrenceForCreation);</pre><p class="api">Return Value: ConstructionPointInput - Returns a ConstructionPointInput object</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">occurrenceForCreation</td><td class="api-list">Occurrence</td><td class="api-list">A creation occurrence is needed if the input is in another component AND the construction point is not in the root component. The occurrenceForCreation is analogous to the active occurrence in the UI. This is an optional argument whose default value is null.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"constructionPoints_var" is a variable referencing a ConstructionPoints object.
+#include &lt;Fusion/Construction/ConstructionPoints.h&gt;
+// Get the value of the property.
+boolean propertyValue = constructionPoints_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Function that returns the specified construction point using an index into the collection.</p><pre class="api-code">"constructionPoints_var" is a variable referencing a
+ConstructionPoints
+object.
+#include &lt;Fusion/Construction/ConstructionPoints.h&gt;
+returnValue = constructionPoints_var-&gt;
+item
+(index);</pre><p class="api">Return Value: ConstructionPoint - Returns the specified item or null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the item within the collection to return. The first item in the collection has an index of 0.</td></tr></table><h3 class="api-member">itemByName Method</h3><p class="api">Returns the specified construction point using the name of the construction point as it is displayed in the browser.</p><pre class="api-code">"constructionPoints_var" is a variable referencing a
+ConstructionPoints
+object.
+#include &lt;Fusion/Construction/ConstructionPoints.h&gt;
+returnValue = constructionPoints_var-&gt;
+itemByName
+(name);</pre><p class="api">Return Value: ConstructionPoint - Returns the specified item or null if an invalid name was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">name</td><td class="api-list">string</td><td class="api-list">The name of the construction point as it is displayed in the browser.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"constructionPoints_var" is a variable referencing a ConstructionPoints object.
+#include &lt;Fusion/Construction/ConstructionPoints.h&gt;
+// Get the value of the property.
+string propertyValue = constructionPoints_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

@@ -1,0 +1,199 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/CommandDefinitions.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="CommandDefinitions" name="contextid"/>
+<meta content="CommandDefinitions Object" name="description"/>
+<meta content="GUID-d34065c0-b5b8-46f9-bd4c-36adfcdfda83" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>CommandDefinitions Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">CommandDefinitions Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/UserInterface/CommandDefinitions.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access to all of the available command definitions. This is all those created via the API but also includes the command definitions defined by Fusion for the native commands.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinitions_addButtonDefinition.htm">addButtonDefinition</a></td>
+<td class="api-list">Creates a new command definition that can be used to create a button control and handle the response when the button is clicked.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinitions_addCheckBoxDefinition.htm">addCheckBoxDefinition</a></td>
+<td class="api-list">Creates a new command definition that can be used to create a single check box control and handle the response when the check box is clicked.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinitions_addListDefinition.htm">addListDefinition</a></td>
+<td class="api-list">Creates a new command definition that can be used to create a list of check boxes, radio buttons, or text with an icon within a pop-up.<br><br/> When the list is of check boxes any combinations of items in the list can be checked. The drop-down also remains displayed allowing the user to check and uncheck multiple items however a CommandCreated event is fired for every change.<br/><br/> When the list is of radio buttons or a list of text items, only one item in the list can be selected at a time. When an item is selected the drop-down is immediately dismissed.<br/><br/> The items in the list and their initial state are defined using functionality on the associated ListControlDefinition, which is accessible through the returned CommandDefinition.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinitions_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinitions_item.htm">item</a></td>
+<td class="api-list">Returns the CommandDefinition at the specified index.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinitions_itemById.htm">itemById</a></td>
+<td class="api-list">Returns the CommandDefinition that has the specified ID.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinitions_count.htm">count</a></td>
+<td class="api-list">Gets the number of command definitions.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinitions_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandDefinitions_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="UserInterface_commandDefinitions.htm">UserInterface.commandDefinitions</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandInputsSample_Sample.htm">Command Inputs API Sample</a></td>
+<td class="api-list"><p>Creates a command dialog that demonstrates all of the available command inputs.</p>
+<p>To use the sample, create a new Python or C++ script and copy and paste this code, replacing the default code.  You also need to unpack this zip file which contains a <a href="../ExtraFiles/CommandInputsResources.zip">resource folder</a> into the same folder where the source code file (.py or .cpp) is.</p></td>
+</tr>
+<tr>
+<td class="api-list"><a href="UICustomizationSample_Sample.htm">Customizing the UI using the API Sample</a></td>
+<td class="api-list">Demonstrates how to work with tabs, panels, and command in the user interface. The full source for <a href="../ExtraFiles/UICustomizationSampleCPP.zip">C++</a> and <a href="../ExtraFiles/UICustomizationSamplePython.zip">Python</a> samples can be downloaded. This is especially useful for getting the resource files.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(CommandDefinitions%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">addButtonDefinition Method</h3><p class="api">Creates a new command definition that can be used to create a button control and handle the response when the button is clicked.</p><pre class="api-code">"commandDefinitions_var" is a variable referencing a
+CommandDefinitions
+object.
+#include &lt;Core/UserInterface/CommandDefinitions.h&gt;
+// Uses no optional arguments.
+returnValue = commandDefinitions_var-&gt;
+addButtonDefinition
+(id, name, tooltip);
+// Uses optional arguments.
+returnValue = commandDefinitions_var-&gt;
+addButtonDefinition
+(id, name, tooltip, resourceFolder);</pre><p class="api">Return Value: CommandDefinition - Returns the created CommandDefinition object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">id</td><td class="api-list">string</td><td class="api-list">The unique identifier for this command definition. It must be unique with respect to all other command definitions and is limited to the following set of characters, [A-Z][a-z][0-9] and _.</td></tr><tr><td class="api-list">name</td><td class="api-list">string</td><td class="api-list">The name displayed in the UI for the associated button control.</td></tr><tr><td class="api-list">tooltip</td><td class="api-list">string</td><td class="api-list">The full description of the command as seen in the extended tooltip in the user interface. Using the returned CommandDefinition you can also optionally set the toolClipFilename property to show an image the extended tooltip. The width of all tooltips is limited to 300 pixels. Word wrapping is enabled, so Fusion will automatically break the line and flow your text to the next line. However, if you include a long word that exceeds 300 pixels, it doesn't wrap and the right portion will be clipped. This is common when displaying paths or URL's. If a single word is longer than 300 pixels there are a couple of options to avoid the clipping. The first option is to insert one or more zero width space characters within the word to define where the word should be broken. The UNICODE character '\u200b' defines a zero width space. This is not displayed is only used to designate a possible break point. The second option is to shorten the word by removing a section. For example, if the word is a full path to a file and a portion of the path is common you can remove that portion and replace it with the ellipsis character to indicate there is some missing text. There is a single UNICODE character you can use the ellipsis. It is '\u2026'.</td></tr><tr><td class="api-list">resourceFolder</td><td class="api-list">string</td><td class="api-list">This argument defines the resource folder that contains the images used for the icon. Icons can be defined using either PNG or SVG files. More information about icons can be found in the user manual topic User Interface Customization . This is an optional argument and if not provided a default icon will be used. This is an optional argument whose default value is "".</td></tr></table><h3 class="api-member">addCheckBoxDefinition Method</h3><p class="api">Creates a new command definition that can be used to create a single check box control and handle the response when the check box is clicked.</p><pre class="api-code">"commandDefinitions_var" is a variable referencing a
+CommandDefinitions
+object.
+#include &lt;Core/UserInterface/CommandDefinitions.h&gt;
+returnValue = commandDefinitions_var-&gt;
+addCheckBoxDefinition
+(id, name, tooltip, isChecked);</pre><p class="api">Return Value: CommandDefinition - Returns the created CommandDefinition object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">id</td><td class="api-list">string</td><td class="api-list">The unique identifier for this command definition. It must be unique with respect to all other command definitions and is limited to the following set of characters, [A-Z][a-z][0-9] and _.</td></tr><tr><td class="api-list">name</td><td class="api-list">string</td><td class="api-list">The name displayed in the UI for the associated check box control.</td></tr><tr><td class="api-list">tooltip</td><td class="api-list">string</td><td class="api-list">The full description of the command as seen in the extended tooltip in the user interface. Using the returned CommandDefinition you can also optionally set the toolClipFilename property to show an image the extended tooltip. The width of all tooltips is limited to 300 pixels. Word wrapping is enabled, so Fusion will automatically break the line and flow your text to the next line. However, if you include a long word that exceeds 300 pixels, it doesn't wrap and the right portion will be clipped. This is common when displaying paths or URL's. If a single word is longer than 300 pixels there are a couple of options to avoid the clipping. The first option is to insert one or more zero width space characters within the word to define where the word should be broken. The UNICODE character '\u200b' defines a zero width space. This is not displayed is only used to designate a possible break point. The second option is to shorten the word by removing a section. For example, if the word is a full path to a file and a portion of the path is common you can remove that portion and replace it with the ellipsis character to indicate there is some missing text. There is a single UNICODE character you can use the ellipsis. It is '\u2026'.</td></tr><tr><td class="api-list">isChecked</td><td class="api-list">boolean</td><td class="api-list">Indicates if the initial state of the check box.</td></tr></table><h3 class="api-member">addListDefinition Method</h3><p class="api">Creates a new command definition that can be used to create a list of check boxes, radio buttons, or text with an icon within a pop-up. When the list is of check boxes any combinations of items in the list can be checked. The drop-down also remains displayed allowing the user to check and uncheck multiple items however a CommandCreated event is fired for every change. When the list is of radio buttons or a list of text items, only one item in the list can be selected at a time. When an item is selected the drop-down is immediately dismissed. The items in the list and their initial state are defined using functionality on the associated ListControlDefinition, which is accessible through the returned CommandDefinition.</p><pre class="api-code">"commandDefinitions_var" is a variable referencing a
+CommandDefinitions
+object.
+#include &lt;Core/UserInterface/CommandDefinitions.h&gt;
+// Uses no optional arguments.
+returnValue = commandDefinitions_var-&gt;
+addListDefinition
+(id, name, listControlDisplayType);
+// Uses optional arguments.
+returnValue = commandDefinitions_var-&gt;
+addListDefinition
+(id, name, listControlDisplayType, resourceFolder);</pre><p class="api">Return Value: CommandDefinition - Returns the created CommandDefinition object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">id</td><td class="api-list">string</td><td class="api-list">The unique identifier for this command definition. It must be unique with respect to all other command definitions and is limited to the following set of characters, [A-Z][a-z][0-9] and _.</td></tr><tr><td class="api-list">name</td><td class="api-list">string</td><td class="api-list">The name displayed in the UI for the associated selected check box list control.</td></tr><tr><td class="api-list">listControlDisplayType</td><td class="api-list">ListControlDisplayTypes</td><td class="api-list">Specifies the type of controls to be displayed within the list.</td></tr><tr><td class="api-list">resourceFolder</td><td class="api-list">string</td><td class="api-list">This argument defines the resource folder that contains the images used as the icon for items in the list. Icons can be defined using either PNG or SVG files. More information about icons can be found in the user manual topic User Interface Customization . This is an optional argument whose default value is "".</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/UserInterface/CommandDefinitions.h&gt;
+returnValue = adsk::core::CommandDefinitions::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">Gets the number of command definitions.</p><pre class="api-code">"commandDefinitions_var" is a variable referencing a CommandDefinitions object.
+#include &lt;Core/UserInterface/CommandDefinitions.h&gt;
+// Get the value of the property.
+uinteger propertyValue = commandDefinitions_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"commandDefinitions_var" is a variable referencing a CommandDefinitions object.
+#include &lt;Core/UserInterface/CommandDefinitions.h&gt;
+// Get the value of the property.
+boolean propertyValue = commandDefinitions_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Returns the CommandDefinition at the specified index.</p><pre class="api-code">"commandDefinitions_var" is a variable referencing a
+CommandDefinitions
+object.
+#include &lt;Core/UserInterface/CommandDefinitions.h&gt;
+returnValue = commandDefinitions_var-&gt;
+item
+(index);</pre><p class="api">Return Value: CommandDefinition - Returns the CommandDefinition at the specified index or null if an invalid index is specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the command definition within the collection to return. The first item in the collection has in index of 0.</td></tr></table><h3 class="api-member">itemById Method</h3><p class="api">Returns the CommandDefinition that has the specified ID.</p><pre class="api-code">"commandDefinitions_var" is a variable referencing a
+CommandDefinitions
+object.
+#include &lt;Core/UserInterface/CommandDefinitions.h&gt;
+returnValue = commandDefinitions_var-&gt;
+itemById
+(id);</pre><p class="api">Return Value: CommandDefinition - Returns the CommandDefinition with the specified ID or null if there isn't a command definition with that ID.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">id</td><td class="api-list">string</td><td class="api-list">The ID of the command definition to return.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"commandDefinitions_var" is a variable referencing a CommandDefinitions object.
+#include &lt;Core/UserInterface/CommandDefinitions.h&gt;
+// Get the value of the property.
+string propertyValue = commandDefinitions_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

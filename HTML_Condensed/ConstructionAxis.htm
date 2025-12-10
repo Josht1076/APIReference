@@ -1,0 +1,310 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ConstructionAxis.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ConstructionAxis" name="contextid"/>
+<meta content="ConstructionAxis Object" name="description"/>
+<meta content="GUID-ae6c0cf2-2de7-4c57-9a98-0362d80f2b30" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ConstructionAxis Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ConstructionAxis Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Construction/ConstructionAxis.h&gt;<h2 class="api">
+          Description
+        </h2>ConstructionAxis Object<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_createForAssemblyContext.htm">createForAssemblyContext</a></td>
+<td class="api-list">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes the construction axis.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_assemblyContext.htm">assemblyContext</a></td>
+<td class="api-list">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_attributes.htm">attributes</a></td>
+<td class="api-list">Returns the collection of attributes associated with this construction axis.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_baseFeature.htm">baseFeature</a></td>
+<td class="api-list">If this construction axis is associated with a base feature, this property will return that base feature. If it's not associated with a base feature, this property will return null.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_component.htm">component</a></td>
+<td class="api-list">Returns the component this construction plane belongs to.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_definition.htm">definition</a></td>
+<td class="api-list">Returns the construction axis definition object which provides access to the information defining the construction axis.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_entityToken.htm">entityToken</a></td>
+<td class="api-list">Returns a token for the ConstructionAxis object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same construction axis.<br><br/> When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_errorOrWarningMessage.htm">errorOrWarningMessage</a></td>
+<td class="api-list">Returns the error or warning message in the case where the healthState property returns either WarningFeatureHealthState or ErrorFeatureHealthState. Otherwise this property returns an empty string.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_geometry.htm">geometry</a></td>
+<td class="api-list">Returns an infinite line that represents the position and orientation of the construction axis. This geometry is defined in the AssemblyContext of this ConstructionAxis.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_healthState.htm">healthState</a></td>
+<td class="api-list">Returns the current health state of this construction axis.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_isDeletable.htm">isDeletable</a></td>
+<td class="api-list">Indicates if this construction axis can be deleted. Base construction axes can not be deleted.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_isLightBulbOn.htm">isLightBulbOn</a></td>
+<td class="api-list">Indicates if the light bulb (as displayed in the browser) is on. A construction axis will only be visible if it's light bulb, and that of it's containing folder and parent component/s are also on.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_isParametric.htm">isParametric</a></td>
+<td class="api-list">Indicates if this construction axis is parametric or not.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_isVisible.htm">isVisible</a></td>
+<td class="api-list">Gets if the construction plane is visible. This property is affected by the AssemblyContext of the construction axis.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_name.htm">name</a></td>
+<td class="api-list">The name of the construction axis as it is shown in the browser.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_nativeObject.htm">nativeObject</a></td>
+<td class="api-list">The NativeObject is the object outside the context of an assembly and in the context of it's parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_parent.htm">parent</a></td>
+<td class="api-list">Returns the parent component or base feature. If both the design and the construction axis are parametric, the parent will be a component. If the design is parametric and the construction axis is not, the parent will be a base feature. If the design is not parametric the parent will be a component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxis_timelineObject.htm">timelineObject</a></td>
+<td class="api-list">Returns the timeline object associated with this construction axis.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="BaseFeature_constructionAxes.htm">BaseFeature.constructionAxes</a>, <a href="Component_xConstructionAxis.htm">Component.xConstructionAxis</a>, <a href="Component_yConstructionAxis.htm">Component.yConstructionAxis</a>, <a href="Component_zConstructionAxis.htm">Component.zConstructionAxis</a>, <a href="ConstructionAxes_add.htm">ConstructionAxes.add</a>, <a href="ConstructionAxes_item.htm">ConstructionAxes.item</a>, <a href="ConstructionAxes_itemByName.htm">ConstructionAxes.itemByName</a>, <a href="ConstructionAxis_createForAssemblyContext.htm">ConstructionAxis.createForAssemblyContext</a>, <a href="ConstructionAxis_nativeObject.htm">ConstructionAxis.nativeObject</a>, <a href="ConstructionAxisByLineDefinition_parentConstructionAxis.htm">ConstructionAxisByLineDefinition.parentConstructionAxis</a>, <a href="ConstructionAxisCircularFaceDefinition_parentConstructionAxis.htm">ConstructionAxisCircularFaceDefinition.parentConstructionAxis</a>, <a href="ConstructionAxisDefinition_parentConstructionAxis.htm">ConstructionAxisDefinition.parentConstructionAxis</a>, <a href="ConstructionAxisEdgeDefinition_parentConstructionAxis.htm">ConstructionAxisEdgeDefinition.parentConstructionAxis</a>, <a href="ConstructionAxisNormalToFaceAtPointDefinition_parentConstructionAxis.htm">ConstructionAxisNormalToFaceAtPointDefinition.parentConstructionAxis</a>, <a href="ConstructionAxisPerpendicularAtPointDefinition_parentConstructionAxis.htm">ConstructionAxisPerpendicularAtPointDefinition.parentConstructionAxis</a>, <a href="ConstructionAxisTwoPlaneDefinition_parentConstructionAxis.htm">ConstructionAxisTwoPlaneDefinition.parentConstructionAxis</a>, <a href="ConstructionAxisTwoPointDefinition_parentConstructionAxis.htm">ConstructionAxisTwoPointDefinition.parentConstructionAxis</a>, <a href="FlatPatternComponent_xConstructionAxis.htm">FlatPatternComponent.xConstructionAxis</a>, <a href="FlatPatternComponent_yConstructionAxis.htm">FlatPatternComponent.yConstructionAxis</a>, <a href="FlatPatternComponent_zConstructionAxis.htm">FlatPatternComponent.zConstructionAxis</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConstructionAxisSample_Sample.htm">Construction Axis API Sample</a></td>
+<td class="api-list">Demonstrates creating construction axis in various ways.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CreateSetupsFromHoleRecognition_Sample.htm">Create Setups From Hole Recognition API Sample</a></td>
+<td class="api-list"><p>This sample script demonstrates how to create a correctly oriented setup using Hole Recognition functionality.</p><p>The Fusion Manufacturing Extension is required for Hole Recognition.</p><p>The script starts by opening a sample model from the CAM Samples folder via its URN. The model comprises a 3 way coupling containing holes in various orientations and mounted on a fixture. A reference setup is created for the model using a simple stock mode and offsets. The Hole Recognition feature of the Fusion Manufacturing Extension creates 5 hole groups containing 11 holes between them. For each unique hole group vector captured, a new setup is created and its orientation transformed to match the vector.</p></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ConstructionAxis%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">assemblyContext Property</h3><p class="api">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = constructionAxis_var-&gt;
+assemblyContext
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">attributes Property</h3><p class="api">Returns the collection of attributes associated with this construction axis.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+Ptr&lt;Attributes&gt; propertyValue = constructionAxis_var-&gt;
+attributes
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">baseFeature Property</h3><p class="api">If this construction axis is associated with a base feature, this property will return that base feature. If it's not associated with a base feature, this property will return null.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+Ptr&lt;BaseFeature&gt; propertyValue = constructionAxis_var-&gt;
+baseFeature
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+returnValue = adsk::fusion::ConstructionAxis::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">component Property</h3><p class="api">Returns the component this construction plane belongs to.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+Ptr&lt;Component&gt; propertyValue = constructionAxis_var-&gt;
+component
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">createForAssemblyContext Method</h3><p class="api">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a
+ConstructionAxis
+object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+returnValue = constructionAxis_var-&gt;
+createForAssemblyContext
+(occurrence);</pre><p class="api">Return Value: ConstructionAxis - Returns the proxy object or null if this isn't the NativeObject.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">occurrence</td><td class="api-list">Occurrence</td><td class="api-list">The occurrence that defines the context to create the proxy in.</td></tr></table><h3 class="api-member">definition Property</h3><p class="api">Returns the construction axis definition object which provides access to the information defining the construction axis.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+Ptr&lt;ConstructionAxisDefinition&gt; propertyValue = constructionAxis_var-&gt;
+definition
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes the construction axis.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a
+ConstructionAxis
+object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+returnValue = constructionAxis_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns a bool indicating if the delete was successful or not.</p><h3 class="api-member">entityToken Property</h3><p class="api">Returns a token for the ConstructionAxis object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same construction axis. When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+string propertyValue = constructionAxis_var-&gt;
+entityToken
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">errorOrWarningMessage Property</h3><p class="api">Returns the error or warning message in the case where the healthState property returns either WarningFeatureHealthState or ErrorFeatureHealthState. Otherwise this property returns an empty string.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+string propertyValue = constructionAxis_var-&gt;
+errorOrWarningMessage
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">geometry Property</h3><p class="api">Returns an infinite line that represents the position and orientation of the construction axis. This geometry is defined in the AssemblyContext of this ConstructionAxis.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+Ptr&lt;InfiniteLine3D&gt; propertyValue = constructionAxis_var-&gt;
+geometry
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">healthState Property</h3><p class="api">Returns the current health state of this construction axis.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+FeatureHealthStates propertyValue = constructionAxis_var-&gt;
+healthState
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">isDeletable Property</h3><p class="api">Indicates if this construction axis can be deleted. Base construction axes can not be deleted.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+boolean propertyValue = constructionAxis_var-&gt;
+isDeletable
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isLightBulbOn Property</h3><p class="api">Indicates if the light bulb (as displayed in the browser) is on. A construction axis will only be visible if it's light bulb, and that of it's containing folder and parent component/s are also on.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+boolean propertyValue = constructionAxis_var-&gt;
+isLightBulbOn
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = constructionAxis_var-&gt;
+isLightBulbOn
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isParametric Property</h3><p class="api">Indicates if this construction axis is parametric or not.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+boolean propertyValue = constructionAxis_var-&gt;
+isParametric
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+boolean propertyValue = constructionAxis_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isVisible Property</h3><p class="api">Gets if the construction plane is visible. This property is affected by the AssemblyContext of the construction axis.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+boolean propertyValue = constructionAxis_var-&gt;
+isVisible
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">name Property</h3><p class="api">The name of the construction axis as it is shown in the browser.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+string propertyValue = constructionAxis_var-&gt;
+name
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = constructionAxis_var-&gt;
+name
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">nativeObject Property</h3><p class="api">The NativeObject is the object outside the context of an assembly and in the context of it's parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+Ptr&lt;ConstructionAxis&gt; propertyValue = constructionAxis_var-&gt;
+nativeObject
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+string propertyValue = constructionAxis_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parent Property</h3><p class="api">Returns the parent component or base feature. If both the design and the construction axis are parametric, the parent will be a component. If the design is parametric and the construction axis is not, the parent will be a base feature. If the design is not parametric the parent will be a component.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = constructionAxis_var-&gt;
+parent
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">timelineObject Property</h3><p class="api">Returns the timeline object associated with this construction axis.</p><pre class="api-code">"constructionAxis_var" is a variable referencing a ConstructionAxis object.
+#include &lt;Fusion/Construction/ConstructionAxis.h&gt;
+// Get the value of the property.
+Ptr&lt;TimelineObject&gt; propertyValue = constructionAxis_var-&gt;
+timelineObject
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

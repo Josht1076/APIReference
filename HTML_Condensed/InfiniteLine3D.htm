@@ -1,0 +1,230 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/InfiniteLine3D.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="InfiniteLine3D" name="contextid"/>
+<meta content="InfiniteLine3D Object" name="description"/>
+<meta content="GUID-fa75390c-8a5d-4b56-b562-7e3538cb9dbc" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>InfiniteLine3D Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">InfiniteLine3D Object
+			</h1>
+              Derived from: <a href="Curve3D.htm">Curve3D</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Geometry/InfiniteLine3D.h&gt;<h2 class="api">
+          Description
+        </h2>Transient 3D infinite line. An infinite line is defined by a position and direction in space and has no start or end points. They are created statically using the create method of the InfiniteLine3D class.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="InfiniteLine3D_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InfiniteLine3D_copy.htm">copy</a></td>
+<td class="api-list">Creates and returns a copy of this line object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InfiniteLine3D_create.htm">create</a></td>
+<td class="api-list">Creates a transient 3D infinite line.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InfiniteLine3D_getData.htm">getData</a></td>
+<td class="api-list">Gets all of the data defining the infinite line.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InfiniteLine3D_intersectWithCurve.htm">intersectWithCurve</a></td>
+<td class="api-list">Intersect this line with a curve to get the intersection point(s).</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InfiniteLine3D_intersectWithSurface.htm">intersectWithSurface</a></td>
+<td class="api-list">Intersect this line with a surface to get the intersection point(s).</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InfiniteLine3D_isColinearTo.htm">isColinearTo</a></td>
+<td class="api-list">Compare this line with another to check for collinearity.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InfiniteLine3D_set.htm">set</a></td>
+<td class="api-list">Sets all of the data defining the infinite line.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InfiniteLine3D_transformBy.htm">transformBy</a></td>
+<td class="api-list">Transforms this curve in 3D space.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="InfiniteLine3D_curveType.htm">curveType</a></td>
+<td class="api-list">Returns the type of geometry this curve represents.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InfiniteLine3D_direction.htm">direction</a></td>
+<td class="api-list">Gets and sets the direction of the line.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InfiniteLine3D_evaluator.htm">evaluator</a></td>
+<td class="api-list">Returns an evaluator object that lets you perform additional evaluations on the curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InfiniteLine3D_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="InfiniteLine3D_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="InfiniteLine3D_origin.htm">origin</a></td>
+<td class="api-list">Gets and sets the origin point of the line.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ConstructionAxis_geometry.htm">ConstructionAxis.geometry</a>, <a href="ConstructionAxisByLineDefinition_axis.htm">ConstructionAxisByLineDefinition.axis</a>, <a href="InfiniteLine3D_copy.htm">InfiniteLine3D.copy</a>, <a href="InfiniteLine3D_create.htm">InfiniteLine3D.create</a>, <a href="Line3D_asInfiniteLine.htm">Line3D.asInfiniteLine</a>, <a href="Plane_intersectWithPlane.htm">Plane.intersectWithPlane</a>, <a href="RotaryMachineAxis_rotationAxis.htm">RotaryMachineAxis.rotationAxis</a>, <a href="RotaryMachineAxisInput_rotationAxis.htm">RotaryMachineAxisInput.rotationAxis</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(InfiniteLine3D%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/InfiniteLine3D.h&gt;
+returnValue = adsk::core::InfiniteLine3D::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">copy Method</h3><p class="api">Creates and returns a copy of this line object.</p><pre class="api-code">"infiniteLine3D_var" is a variable referencing an
+InfiniteLine3D
+object.
+#include &lt;Core/Geometry/InfiniteLine3D.h&gt;
+returnValue = infiniteLine3D_var-&gt;
+copy
+();</pre><p class="api">Return Value: InfiniteLine3D - Returns an independent copy of this line object.</p><h3 class="api-member">create Method</h3><p class="api">Creates a transient 3D infinite line.</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/InfiniteLine3D.h&gt;
+returnValue = adsk::core::InfiniteLine3D::
+create
+(origin, direction);</pre><p class="api">Return Value: InfiniteLine3D - Returns the new InfiniteLine3D object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">origin</td><td class="api-list">Point3D</td><td class="api-list">The origin point of the line.</td></tr><tr><td class="api-list">direction</td><td class="api-list">Vector3D</td><td class="api-list">The direction of the line.</td></tr></table><h3 class="api-member">curveType Property</h3><p class="api">Returns the type of geometry this curve represents.</p><pre class="api-code">"infiniteLine3D_var" is a variable referencing an InfiniteLine3D object.
+#include &lt;Core/Geometry/InfiniteLine3D.h&gt;
+// Get the value of the property.
+Curve3DTypes propertyValue = infiniteLine3D_var-&gt;
+curveType
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">direction Property</h3><p class="api">Gets and sets the direction of the line.</p><pre class="api-code">"infiniteLine3D_var" is a variable referencing an InfiniteLine3D object.
+#include &lt;Core/Geometry/InfiniteLine3D.h&gt;
+// Get the value of the property.
+Ptr&lt;Vector3D&gt; propertyValue = infiniteLine3D_var-&gt;
+direction
+();
+// Set the value of the property, where value_var is a Vector3D.
+bool returnValue = infiniteLine3D_var-&gt;
+direction
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">evaluator Property</h3><p class="api">Returns an evaluator object that lets you perform additional evaluations on the curve.</p><pre class="api-code">"infiniteLine3D_var" is a variable referencing an InfiniteLine3D object.
+#include &lt;Core/Geometry/InfiniteLine3D.h&gt;
+// Get the value of the property.
+Ptr&lt;CurveEvaluator3D&gt; propertyValue = infiniteLine3D_var-&gt;
+evaluator
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">getData Method</h3><p class="api">Gets all of the data defining the infinite line.</p><pre class="api-code">#include &lt;Core/Geometry/InfiniteLine3D.h
+// Declare the output arguments.
+Ptr&lt;Point3D&gt; origin;
+Ptr&lt;Vector3D&gt; direction;
+boolean returnValue = infiniteLine3D_var-&gt;
+getData
+(origin, direction);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">origin</td><td class="api-list">Point3D</td><td class="api-list">The output origin point of the line.</td></tr><tr><td class="api-list">direction</td><td class="api-list">Vector3D</td><td class="api-list">The output direction of the line.</td></tr></table><h3 class="api-member">intersectWithCurve Method</h3><p class="api">Intersect this line with a curve to get the intersection point(s).</p><pre class="api-code">"infiniteLine3D_var" is a variable referencing an
+InfiniteLine3D
+object.
+#include &lt;Core/Geometry/InfiniteLine3D.h&gt;
+returnValue = infiniteLine3D_var-&gt;
+intersectWithCurve
+(curve);</pre><p class="api">Return Value: ObjectCollection - Returns a collection of the intersection points.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">curve</td><td class="api-list">Curve3D</td><td class="api-list">The intersecting curve. The curve can be a Line3D, InfininteLine3D, Circle3D, Arc3D, EllipticalArc3D, Ellipse3D, or NurbsCurve3D.</td></tr></table><h3 class="api-member">intersectWithSurface Method</h3><p class="api">Intersect this line with a surface to get the intersection point(s).</p><pre class="api-code">"infiniteLine3D_var" is a variable referencing an
+InfiniteLine3D
+object.
+#include &lt;Core/Geometry/InfiniteLine3D.h&gt;
+returnValue = infiniteLine3D_var-&gt;
+intersectWithSurface
+(surface);</pre><p class="api">Return Value: ObjectCollection - Returns a collection of the intersection points.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">surface</td><td class="api-list">Surface</td><td class="api-list">The intersecting surface. The surface can be a Plane, Cone, Cylinder, EllipticalCone, EllipticalCylinder, Sphere, Torus, or a NurbsSurface.</td></tr></table><h3 class="api-member">isColinearTo Method</h3><p class="api">Compare this line with another to check for collinearity.</p><pre class="api-code">"infiniteLine3D_var" is a variable referencing an
+InfiniteLine3D
+object.
+#include &lt;Core/Geometry/InfiniteLine3D.h&gt;
+returnValue = infiniteLine3D_var-&gt;
+isColinearTo
+(line);</pre><p class="api">Return Value: boolean - Returns true if the two lines are collinear.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">line</td><td class="api-list">InfiniteLine3D</td><td class="api-list">The line to compare with for collinearity.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"infiniteLine3D_var" is a variable referencing an InfiniteLine3D object.
+#include &lt;Core/Geometry/InfiniteLine3D.h&gt;
+// Get the value of the property.
+boolean propertyValue = infiniteLine3D_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"infiniteLine3D_var" is a variable referencing an InfiniteLine3D object.
+#include &lt;Core/Geometry/InfiniteLine3D.h&gt;
+// Get the value of the property.
+string propertyValue = infiniteLine3D_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">origin Property</h3><p class="api">Gets and sets the origin point of the line.</p><pre class="api-code">"infiniteLine3D_var" is a variable referencing an InfiniteLine3D object.
+#include &lt;Core/Geometry/InfiniteLine3D.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = infiniteLine3D_var-&gt;
+origin
+();
+// Set the value of the property, where value_var is a Point3D.
+bool returnValue = infiniteLine3D_var-&gt;
+origin
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">set Method</h3><p class="api">Sets all of the data defining the infinite line.</p><pre class="api-code">"infiniteLine3D_var" is a variable referencing an
+InfiniteLine3D
+object.
+#include &lt;Core/Geometry/InfiniteLine3D.h&gt;
+returnValue = infiniteLine3D_var-&gt;
+set
+(origin, direction);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">origin</td><td class="api-list">Point3D</td><td class="api-list">The origin point of the line.</td></tr><tr><td class="api-list">direction</td><td class="api-list">Vector3D</td><td class="api-list">The direction of the line.</td></tr></table><h3 class="api-member">transformBy Method</h3><p class="api">Transforms this curve in 3D space.</p><pre class="api-code">"infiniteLine3D_var" is a variable referencing an
+InfiniteLine3D
+object.
+#include &lt;Core/Geometry/InfiniteLine3D.h&gt;
+returnValue = infiniteLine3D_var-&gt;
+transformBy
+(matrix);</pre><p class="api">Return Value: boolean - Return true if the transform was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">matrix</td><td class="api-list">Matrix3D</td><td class="api-list">A 3D matrix that defines the transform to apply to the curve.</td></tr></table></body>
+</html>

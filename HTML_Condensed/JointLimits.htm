@@ -1,0 +1,223 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/JointLimits.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="16/7/2015" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="JointLimits" name="contextid"/>
+<meta content="JointLimits Object" name="description"/>
+<meta content="GUID-e3fb19a1-d7ef-4b34-a6f5-76a907d6a774" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>JointLimits Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">JointLimits Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Components/JointLimits.h&gt;<h2 class="api">
+          Description
+        </h2>Used to define limits for the range of motion of a joint.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointLimits_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointLimits_isMaximumValueEnabled.htm">isMaximumValueEnabled</a></td>
+<td class="api-list">Gets and sets whether the maximum joint limit is enabled or not.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointLimits_isMinimumValueEnabled.htm">isMinimumValueEnabled</a></td>
+<td class="api-list">Gets and sets whether the minimum joint limit is enabled or not.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointLimits_isRestValueEnabled.htm">isRestValueEnabled</a></td>
+<td class="api-list">Gets and sets whether the resting joint value is enabled or not.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointLimits_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointLimits_maximumValue.htm">maximumValue</a></td>
+<td class="api-list">The maximum value of the value. This is in either centimeters or radians depending on if the joint value this is associated with defines a distance or an angle.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointLimits_minimumValue.htm">minimumValue</a></td>
+<td class="api-list">The minimum value of the value. This is in either centimeters or radians depending on if the joint value this is associated with defines a distance or an angle.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointLimits_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointLimits_restValue.htm">restValue</a></td>
+<td class="api-list">The resting state value. This is in either centimeters or radians depending on if the joint value this is associated with defines a distance or an angle.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="BallJointMotion_pitchLimits.htm">BallJointMotion.pitchLimits</a>, <a href="BallJointMotion_rollLimits.htm">BallJointMotion.rollLimits</a>, <a href="BallJointMotion_yawLimits.htm">BallJointMotion.yawLimits</a>, <a href="CylindricalJointMotion_rotationLimits.htm">CylindricalJointMotion.rotationLimits</a>, <a href="CylindricalJointMotion_slideLimits.htm">CylindricalJointMotion.slideLimits</a>, <a href="PinSlotJointMotion_rotationLimits.htm">PinSlotJointMotion.rotationLimits</a>, <a href="PinSlotJointMotion_slideLimits.htm">PinSlotJointMotion.slideLimits</a>, <a href="PlanarJointMotion_primarySlideLimits.htm">PlanarJointMotion.primarySlideLimits</a>, <a href="PlanarJointMotion_rotationLimits.htm">PlanarJointMotion.rotationLimits</a>, <a href="PlanarJointMotion_secondarySlideLimits.htm">PlanarJointMotion.secondarySlideLimits</a>, <a href="RevoluteJointMotion_rotationLimits.htm">RevoluteJointMotion.rotationLimits</a>, <a href="SliderJointMotion_slideLimits.htm">SliderJointMotion.slideLimits</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="BallJointMotionSample_Sample.htm">BallJointMotion API Sample</a></td>
+<td class="api-list">Demonstrates creating a joint with ball joint motion</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CylindricalJointMotionSample_Sample.htm">CylindricalJointMotion API Sample</a></td>
+<td class="api-list">Demonstrates creating a joint with cylindrical joint motion.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PinSlotJointMotionSample_Sample.htm">Pin Slot Joint Motion API Sample</a></td>
+<td class="api-list">Demonstrates creating a joint with pin slot joint motion</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PlanarJointMotionSample_Sample.htm">Planar Joint Motion API Sample</a></td>
+<td class="api-list">Demonstrates creating a joint with planar joint motion</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RevoluteJointMotionSample_Sample.htm">RevoluteJointMotion API Sample</a></td>
+<td class="api-list">Demonstrates creating a joint with revolute joint motion.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SliderJointMotionSample_Sample.htm">SliderJointMotion API Sample</a></td>
+<td class="api-list">Demonstrates creating a joint with slider joint motion.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version July 2015<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(JointLimits%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Components/JointLimits.h&gt;
+returnValue = adsk::fusion::JointLimits::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">isMaximumValueEnabled Property</h3><p class="api">Gets and sets whether the maximum joint limit is enabled or not.</p><pre class="api-code">"jointLimits_var" is a variable referencing a JointLimits object.
+#include &lt;Fusion/Components/JointLimits.h&gt;
+// Get the value of the property.
+boolean propertyValue = jointLimits_var-&gt;
+isMaximumValueEnabled
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = jointLimits_var-&gt;
+isMaximumValueEnabled
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isMinimumValueEnabled Property</h3><p class="api">Gets and sets whether the minimum joint limit is enabled or not.</p><pre class="api-code">"jointLimits_var" is a variable referencing a JointLimits object.
+#include &lt;Fusion/Components/JointLimits.h&gt;
+// Get the value of the property.
+boolean propertyValue = jointLimits_var-&gt;
+isMinimumValueEnabled
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = jointLimits_var-&gt;
+isMinimumValueEnabled
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isRestValueEnabled Property</h3><p class="api">Gets and sets whether the resting joint value is enabled or not.</p><pre class="api-code">"jointLimits_var" is a variable referencing a JointLimits object.
+#include &lt;Fusion/Components/JointLimits.h&gt;
+// Get the value of the property.
+boolean propertyValue = jointLimits_var-&gt;
+isRestValueEnabled
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = jointLimits_var-&gt;
+isRestValueEnabled
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"jointLimits_var" is a variable referencing a JointLimits object.
+#include &lt;Fusion/Components/JointLimits.h&gt;
+// Get the value of the property.
+boolean propertyValue = jointLimits_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">maximumValue Property</h3><p class="api">The maximum value of the value. This is in either centimeters or radians depending on if the joint value this is associated with defines a distance or an angle.</p><pre class="api-code">"jointLimits_var" is a variable referencing a JointLimits object.
+#include &lt;Fusion/Components/JointLimits.h&gt;
+// Get the value of the property.
+double propertyValue = jointLimits_var-&gt;
+maximumValue
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = jointLimits_var-&gt;
+maximumValue
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">minimumValue Property</h3><p class="api">The minimum value of the value. This is in either centimeters or radians depending on if the joint value this is associated with defines a distance or an angle.</p><pre class="api-code">"jointLimits_var" is a variable referencing a JointLimits object.
+#include &lt;Fusion/Components/JointLimits.h&gt;
+// Get the value of the property.
+double propertyValue = jointLimits_var-&gt;
+minimumValue
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = jointLimits_var-&gt;
+minimumValue
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"jointLimits_var" is a variable referencing a JointLimits object.
+#include &lt;Fusion/Components/JointLimits.h&gt;
+// Get the value of the property.
+string propertyValue = jointLimits_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">restValue Property</h3><p class="api">The resting state value. This is in either centimeters or radians depending on if the joint value this is associated with defines a distance or an angle.</p><pre class="api-code">"jointLimits_var" is a variable referencing a JointLimits object.
+#include &lt;Fusion/Components/JointLimits.h&gt;
+// Get the value of the property.
+double propertyValue = jointLimits_var-&gt;
+restValue
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = jointLimits_var-&gt;
+restValue
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p></body>
+</html>

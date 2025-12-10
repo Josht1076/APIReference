@@ -1,0 +1,283 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ArrangeSelection.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="04/03/2024" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ArrangeSelection" name="contextid"/>
+<meta content="ArrangeSelection Object" name="description"/>
+<meta content="GUID-8FF2ED24-6078-4BD2-973B-98F91F29348F" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ArrangeSelection Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ArrangeSelection Object
+			</h1>
+              Derived from: <a href="GeometrySelection.htm">GeometrySelection</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;<h2 class="api">
+          Description
+        </h2>Class for arrange selections. Provides access to the selected geometry and its properties.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeSelection_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeSelection_customQuantity.htm">customQuantity</a></td>
+<td class="api-list">Gets and sets the custom quantity. This function is not available in Fusion for Personal Use. Throws an exception when calling this function in Fusion for Personal Use. The default value for this property is 1. Note: If customQuantity is called, isUsingCustomQuantity will be set to true automatically.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeSelection_customRotationX.htm">customRotationX</a></td>
+<td class="api-list">Gets and sets the rotation increments (in degrees) for the x-axis. This function is not available in Fusion for Personal Use. Throws an exception when calling this function in Fusion for Personal Use. To enable any rotation the parameter "arrange_rotation_group" of the operation must be set to true. To disable x-axis rotation for this selection, customRotationX must be set to 0. The default value for this property is 45 degrees. Note: If customRotationX is called, isUsingCustomRotationX will be set to true automatically.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeSelection_customRotationY.htm">customRotationY</a></td>
+<td class="api-list">Gets and sets the rotation increments (in degrees) for the y-axis. This function is not available in Fusion for Personal Use. Throws an exception when calling this function in Fusion for Personal Use. To enable any rotation the parameter "arrange_rotation_group" of the operation must be set to true. To disable y-axis rotation for this selection, customRotationY must be set to 0. The default value for this property is 45 degrees. Note: If customRotationY is called, isUsingCustomRotationY will be set to true automatically.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeSelection_customRotationZ.htm">customRotationZ</a></td>
+<td class="api-list">Gets and sets the rotation increments (in degrees) for the z-axis. This function is not available in Fusion for Personal Use. Throws an exception when calling this function in Fusion for Personal Use. To enable any rotation the parameter "arrange_rotation_group" of the operation must be set to true. To disable z-axis rotation for this selection, customRotationZ must be set to 0. The default value for this property is 45 degrees. Note: If customRotationZ is called, isUsingCustomRotationZ will be set to true automatically.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeSelection_error.htm">error</a></td>
+<td class="api-list">Gets the last warning string encountered after the selection was applied to a parent.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeSelection_hasError.htm">hasError</a></td>
+<td class="api-list">Gets if errors were encountered when applying the selection to a a parent.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeSelection_hasWarning.htm">hasWarning</a></td>
+<td class="api-list">Gets if warnings were encountered when applying the selection to a parent.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeSelection_inputGeometry.htm">inputGeometry</a></td>
+<td class="api-list">Gets and sets the value of the input geometry. If the value originates from a component instead of an occurrence, or an occurrence outside of the CAM environment, then the subpath is checked against the CAM model tree. For some child classes, this may be the same as the value property, but might also consist of fewer elements. Valid elements depend on the capabilities of the derived class. An exception is thrown if the matching fails or the given entity does not match the expected type.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeSelection_isUsingCustomQuantity.htm">isUsingCustomQuantity</a></td>
+<td class="api-list">Gets and sets if custom quantity is used for this element. This function is not available in Fusion for Personal Use. Throws an exception when calling this function in Fusion for Personal Use. If isUsingCustomQuantity is false, the global quantity of the operation's parameter "arrange_global_quantity" is used. The default value for this property false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeSelection_isUsingCustomRotationX.htm">isUsingCustomRotationX</a></td>
+<td class="api-list">Gets and sets if custom rotation is used for the x-axis. This function is not available in Fusion for Personal Use. Throws an exception when calling this function in Fusion for Personal Use. To enable any rotation the parameter "arrange_rotation_group" of the operation must be set to true. If isUsingCustomRotationX is false, the rotation of the operation's parameter "arrange_rotation_x" is used. The default value for this property false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeSelection_isUsingCustomRotationY.htm">isUsingCustomRotationY</a></td>
+<td class="api-list">Gets and sets if custom rotation is used for the y-axis. This function is not available in Fusion for Personal Use. Throws an exception when calling this function in Fusion for Personal Use. To enable any rotation the parameter "arrange_rotation_group" of the operation must be set to true. If isUsingCustomRotationY is false, the rotation of the operation's parameter "arrange_rotation_y" is used. The default value for this property false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeSelection_isUsingCustomRotationZ.htm">isUsingCustomRotationZ</a></td>
+<td class="api-list">Gets and sets if custom rotation is used for the z-axis. This function is not available in Fusion for Personal Use. Throws an exception when calling this function in Fusion for Personal Use. To enable any rotation the parameter "arrange_rotation_group" of the operation must be set to true. If isUsingCustomRotationZ is false, the rotation of the operation's parameter "arrange_rotation_z" is used. The default value for this property true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeSelection_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeSelection_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeSelection_priorityType.htm">priorityType</a></td>
+<td class="api-list">Gets and sets the priority value for each element in the selection list. This function is not available in Fusion for Personal Use. Throws an exception when calling this function in Fusion for Personal Use. The default value for this property is MediumArrangePriorityType.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeSelection_value.htm">value</a></td>
+<td class="api-list">Returns the resulting value of the selection. In general, this returns the input selection, but child classes can override the return value if needed. Refer to the child classes comments for further details. The collection may contain duplicates. For OperationInputs, the return value may not be the same as for Operations, as additional geometry selected by child classes is not evaluated for OperationInputs.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ArrangeSelection_warning.htm">warning</a></td>
+<td class="api-list">Gets the last warning string encountered after the selection was applied to a parent.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ArrangeSelections_createNewArrangeSelection.htm">ArrangeSelections.createNewArrangeSelection</a>, <a href="ArrangeSelections_item.htm">ArrangeSelections.item</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version March 2024<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ArrangeSelection%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;
+returnValue = adsk::cam::ArrangeSelection::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">customQuantity Property</h3><p class="api">Gets and sets the custom quantity. This function is not available in Fusion for Personal Use. Throws an exception when calling this function in Fusion for Personal Use. The default value for this property is 1. Note: If customQuantity is called, isUsingCustomQuantity will be set to true automatically.</p><pre class="api-code">"arrangeSelection_var" is a variable referencing an ArrangeSelection object.
+#include &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;
+// Get the value of the property.
+uinteger propertyValue = arrangeSelection_var-&gt;
+customQuantity
+();
+// Set the value of the property, where value_var is a uinteger.
+bool returnValue = arrangeSelection_var-&gt;
+customQuantity
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a uinteger.</p><h3 class="api-member">customRotationX Property</h3><p class="api">Gets and sets the rotation increments (in degrees) for the x-axis. This function is not available in Fusion for Personal Use. Throws an exception when calling this function in Fusion for Personal Use. To enable any rotation the parameter "arrange_rotation_group" of the operation must be set to true. To disable x-axis rotation for this selection, customRotationX must be set to 0. The default value for this property is 45 degrees. Note: If customRotationX is called, isUsingCustomRotationX will be set to true automatically.</p><pre class="api-code">"arrangeSelection_var" is a variable referencing an ArrangeSelection object.
+#include &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;
+// Get the value of the property.
+double propertyValue = arrangeSelection_var-&gt;
+customRotationX
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = arrangeSelection_var-&gt;
+customRotationX
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">customRotationY Property</h3><p class="api">Gets and sets the rotation increments (in degrees) for the y-axis. This function is not available in Fusion for Personal Use. Throws an exception when calling this function in Fusion for Personal Use. To enable any rotation the parameter "arrange_rotation_group" of the operation must be set to true. To disable y-axis rotation for this selection, customRotationY must be set to 0. The default value for this property is 45 degrees. Note: If customRotationY is called, isUsingCustomRotationY will be set to true automatically.</p><pre class="api-code">"arrangeSelection_var" is a variable referencing an ArrangeSelection object.
+#include &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;
+// Get the value of the property.
+double propertyValue = arrangeSelection_var-&gt;
+customRotationY
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = arrangeSelection_var-&gt;
+customRotationY
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">customRotationZ Property</h3><p class="api">Gets and sets the rotation increments (in degrees) for the z-axis. This function is not available in Fusion for Personal Use. Throws an exception when calling this function in Fusion for Personal Use. To enable any rotation the parameter "arrange_rotation_group" of the operation must be set to true. To disable z-axis rotation for this selection, customRotationZ must be set to 0. The default value for this property is 45 degrees. Note: If customRotationZ is called, isUsingCustomRotationZ will be set to true automatically.</p><pre class="api-code">"arrangeSelection_var" is a variable referencing an ArrangeSelection object.
+#include &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;
+// Get the value of the property.
+double propertyValue = arrangeSelection_var-&gt;
+customRotationZ
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = arrangeSelection_var-&gt;
+customRotationZ
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">error Property</h3><p class="api">Gets the last warning string encountered after the selection was applied to a parent.</p><pre class="api-code">"arrangeSelection_var" is a variable referencing an ArrangeSelection object.
+#include &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;
+// Get the value of the property.
+string propertyValue = arrangeSelection_var-&gt;
+error
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">hasError Property</h3><p class="api">Gets if errors were encountered when applying the selection to a a parent.</p><pre class="api-code">"arrangeSelection_var" is a variable referencing an ArrangeSelection object.
+#include &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;
+// Get the value of the property.
+boolean propertyValue = arrangeSelection_var-&gt;
+hasError
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">hasWarning Property</h3><p class="api">Gets if warnings were encountered when applying the selection to a parent.</p><pre class="api-code">"arrangeSelection_var" is a variable referencing an ArrangeSelection object.
+#include &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;
+// Get the value of the property.
+boolean propertyValue = arrangeSelection_var-&gt;
+hasWarning
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">inputGeometry Property</h3><p class="api">Gets and sets the value of the input geometry. If the value originates from a component instead of an occurrence, or an occurrence outside of the CAM environment, then the subpath is checked against the CAM model tree. For some child classes, this may be the same as the value property, but might also consist of fewer elements. Valid elements depend on the capabilities of the derived class. An exception is thrown if the matching fails or the given entity does not match the expected type.</p><pre class="api-code">"arrangeSelection_var" is a variable referencing an ArrangeSelection object.
+#include &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = arrangeSelection_var-&gt;
+inputGeometry
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = arrangeSelection_var-&gt;
+inputGeometry
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">isUsingCustomQuantity Property</h3><p class="api">Gets and sets if custom quantity is used for this element. This function is not available in Fusion for Personal Use. Throws an exception when calling this function in Fusion for Personal Use. If isUsingCustomQuantity is false, the global quantity of the operation's parameter "arrange_global_quantity" is used. The default value for this property false.</p><pre class="api-code">"arrangeSelection_var" is a variable referencing an ArrangeSelection object.
+#include &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;
+// Get the value of the property.
+boolean propertyValue = arrangeSelection_var-&gt;
+isUsingCustomQuantity
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = arrangeSelection_var-&gt;
+isUsingCustomQuantity
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isUsingCustomRotationX Property</h3><p class="api">Gets and sets if custom rotation is used for the x-axis. This function is not available in Fusion for Personal Use. Throws an exception when calling this function in Fusion for Personal Use. To enable any rotation the parameter "arrange_rotation_group" of the operation must be set to true. If isUsingCustomRotationX is false, the rotation of the operation's parameter "arrange_rotation_x" is used. The default value for this property false.</p><pre class="api-code">"arrangeSelection_var" is a variable referencing an ArrangeSelection object.
+#include &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;
+// Get the value of the property.
+boolean propertyValue = arrangeSelection_var-&gt;
+isUsingCustomRotationX
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = arrangeSelection_var-&gt;
+isUsingCustomRotationX
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isUsingCustomRotationY Property</h3><p class="api">Gets and sets if custom rotation is used for the y-axis. This function is not available in Fusion for Personal Use. Throws an exception when calling this function in Fusion for Personal Use. To enable any rotation the parameter "arrange_rotation_group" of the operation must be set to true. If isUsingCustomRotationY is false, the rotation of the operation's parameter "arrange_rotation_y" is used. The default value for this property false.</p><pre class="api-code">"arrangeSelection_var" is a variable referencing an ArrangeSelection object.
+#include &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;
+// Get the value of the property.
+boolean propertyValue = arrangeSelection_var-&gt;
+isUsingCustomRotationY
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = arrangeSelection_var-&gt;
+isUsingCustomRotationY
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isUsingCustomRotationZ Property</h3><p class="api">Gets and sets if custom rotation is used for the z-axis. This function is not available in Fusion for Personal Use. Throws an exception when calling this function in Fusion for Personal Use. To enable any rotation the parameter "arrange_rotation_group" of the operation must be set to true. If isUsingCustomRotationZ is false, the rotation of the operation's parameter "arrange_rotation_z" is used. The default value for this property true.</p><pre class="api-code">"arrangeSelection_var" is a variable referencing an ArrangeSelection object.
+#include &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;
+// Get the value of the property.
+boolean propertyValue = arrangeSelection_var-&gt;
+isUsingCustomRotationZ
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = arrangeSelection_var-&gt;
+isUsingCustomRotationZ
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"arrangeSelection_var" is a variable referencing an ArrangeSelection object.
+#include &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;
+// Get the value of the property.
+boolean propertyValue = arrangeSelection_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"arrangeSelection_var" is a variable referencing an ArrangeSelection object.
+#include &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;
+// Get the value of the property.
+string propertyValue = arrangeSelection_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">priorityType Property</h3><p class="api">Gets and sets the priority value for each element in the selection list. This function is not available in Fusion for Personal Use. Throws an exception when calling this function in Fusion for Personal Use. The default value for this property is MediumArrangePriorityType.</p><pre class="api-code">"arrangeSelection_var" is a variable referencing an ArrangeSelection object.
+#include &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;
+// Get the value of the property.
+ArrangePriorityTypes propertyValue = arrangeSelection_var-&gt;
+priorityType
+();
+// Set the value of the property, where value_var is an ArrangePriorityTypes.
+bool returnValue = arrangeSelection_var-&gt;
+priorityType
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">value Property</h3><p class="api">Returns the resulting value of the selection. In general, this returns the input selection, but child classes can override the return value if needed. Refer to the child classes comments for further details. The collection may contain duplicates. For OperationInputs, the return value may not be the same as for Operations, as additional geometry selected by child classes is not evaluated for OperationInputs.</p><pre class="api-code">"arrangeSelection_var" is a variable referencing an ArrangeSelection object.
+#include &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;Base&gt;&gt; propertyValue = arrangeSelection_var-&gt;
+value
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type .</p><h3 class="api-member">warning Property</h3><p class="api">Gets the last warning string encountered after the selection was applied to a parent.</p><pre class="api-code">"arrangeSelection_var" is a variable referencing an ArrangeSelection object.
+#include &lt;Cam/GeometrySelections/ArrangeSelection.h&gt;
+// Get the value of the property.
+string propertyValue = arrangeSelection_var-&gt;
+warning
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

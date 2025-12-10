@@ -1,0 +1,187 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/CAMAdditiveBuildExportOptions.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="09/10/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="CAMAdditiveBuildExportOptions" name="contextid"/>
+<meta content="CAMAdditiveBuildExportOptions Object" name="description"/>
+<meta content="GUID-738DDCC0-7E7C-4B5B-9425-A46E1A90D255" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>CAMAdditiveBuildExportOptions Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">CAMAdditiveBuildExportOptions Object
+			</h1>
+              Derived from: <a href="CAMExportOptions.htm">CAMExportOptions</a> Object
+            <br/>Defined in namespace "adsk::cam" and the header file is &lt;Cam/CAM/CAMAdditiveBuildExportOptions.h&gt;<h2 class="api">
+          Description
+        </h2>Additive buildfile export option. Available with all additive machines except for FFF and DED based machines. Currently picks the first export filter from the print setting's export filter list.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAMAdditiveBuildExportOptions_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAMAdditiveBuildExportOptions_error.htm">error</a></td>
+<td class="api-list">Gets the last encountered error message. When the CAMExportManager's executeWithExportFuture() method is used, this method only returns errors encoutered when setting up the export. Errors thrown afterwards can be retrieved via the CAMExportFuture object. When the CAMExportManager's execute() method is used, any error can be retrieved using this property.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAMAdditiveBuildExportOptions_exportFilters.htm">exportFilters</a></td>
+<td class="api-list">Gets a list of available export filters from the setup's print setting. The export object must be set before using this function.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAMAdditiveBuildExportOptions_exportObject.htm">exportObject</a></td>
+<td class="api-list">The export object we want to export. Depending on the actual export option, this might be geometry, an operation or a setup.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAMAdditiveBuildExportOptions_fullFilename.htm">fullFilename</a></td>
+<td class="api-list">The file we want to export to. Needs to contain a valid path, as no intermediate folders are created.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAMAdditiveBuildExportOptions_isThumbnailSupported.htm">isThumbnailSupported</a></td>
+<td class="api-list">Method to check if the exporter implementation supports thumbnail</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAMAdditiveBuildExportOptions_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAMAdditiveBuildExportOptions_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAMAdditiveBuildExportOptions_selectedExportFilterId.htm">selectedExportFilterId</a></td>
+<td class="api-list">Gets and sets the export filter to be used for the export. By default, this is the first entry in the print setting's filter list.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CAMAdditiveBuildExportOptions_thumbnailPath.htm">thumbnailPath</a></td>
+<td class="api-list">Path to the thumbnail for the buildfile</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CAMExportManager_createCAMAdditiveBuildExportOptions.htm">CAMExportManager.createCAMAdditiveBuildExportOptions</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version October 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(CAMAdditiveBuildExportOptions%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Cam/CAM/CAMAdditiveBuildExportOptions.h&gt;
+returnValue = adsk::cam::CAMAdditiveBuildExportOptions::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">error Property</h3><p class="api">Gets the last encountered error message. When the CAMExportManager's executeWithExportFuture() method is used, this method only returns errors encoutered when setting up the export. Errors thrown afterwards can be retrieved via the CAMExportFuture object. When the CAMExportManager's execute() method is used, any error can be retrieved using this property.</p><pre class="api-code">"cAMAdditiveBuildExportOptions_var" is a variable referencing a CAMAdditiveBuildExportOptions object.
+#include &lt;Cam/CAM/CAMAdditiveBuildExportOptions.h&gt;
+// Get the value of the property.
+string propertyValue = cAMAdditiveBuildExportOptions_var-&gt;
+error
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">exportFilters Property</h3><p class="api">Gets a list of available export filters from the setup's print setting. The export object must be set before using this function.</p><pre class="api-code">"cAMAdditiveBuildExportOptions_var" is a variable referencing a CAMAdditiveBuildExportOptions object.
+#include &lt;Cam/CAM/CAMAdditiveBuildExportOptions.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;CAMAdditiveBuildExportFilter&gt;&gt; propertyValue = cAMAdditiveBuildExportOptions_var-&gt;
+exportFilters
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type .</p><h3 class="api-member">exportObject Property</h3><p class="api">The export object we want to export. Depending on the actual export option, this might be geometry, an operation or a setup.</p><pre class="api-code">"cAMAdditiveBuildExportOptions_var" is a variable referencing a CAMAdditiveBuildExportOptions object.
+#include &lt;Cam/CAM/CAMAdditiveBuildExportOptions.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = cAMAdditiveBuildExportOptions_var-&gt;
+exportObject
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = cAMAdditiveBuildExportOptions_var-&gt;
+exportObject
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">fullFilename Property</h3><p class="api">The file we want to export to. Needs to contain a valid path, as no intermediate folders are created.</p><pre class="api-code">"cAMAdditiveBuildExportOptions_var" is a variable referencing a CAMAdditiveBuildExportOptions object.
+#include &lt;Cam/CAM/CAMAdditiveBuildExportOptions.h&gt;
+// Get the value of the property.
+string propertyValue = cAMAdditiveBuildExportOptions_var-&gt;
+fullFilename
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = cAMAdditiveBuildExportOptions_var-&gt;
+fullFilename
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">isThumbnailSupported Property</h3><p class="api">Method to check if the exporter implementation supports thumbnail</p><pre class="api-code">"cAMAdditiveBuildExportOptions_var" is a variable referencing a CAMAdditiveBuildExportOptions object.
+#include &lt;Cam/CAM/CAMAdditiveBuildExportOptions.h&gt;
+// Get the value of the property.
+boolean propertyValue = cAMAdditiveBuildExportOptions_var-&gt;
+isThumbnailSupported
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"cAMAdditiveBuildExportOptions_var" is a variable referencing a CAMAdditiveBuildExportOptions object.
+#include &lt;Cam/CAM/CAMAdditiveBuildExportOptions.h&gt;
+// Get the value of the property.
+boolean propertyValue = cAMAdditiveBuildExportOptions_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"cAMAdditiveBuildExportOptions_var" is a variable referencing a CAMAdditiveBuildExportOptions object.
+#include &lt;Cam/CAM/CAMAdditiveBuildExportOptions.h&gt;
+// Get the value of the property.
+string propertyValue = cAMAdditiveBuildExportOptions_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">selectedExportFilterId Property</h3><p class="api">Gets and sets the export filter to be used for the export. By default, this is the first entry in the print setting's filter list.</p><pre class="api-code">"cAMAdditiveBuildExportOptions_var" is a variable referencing a CAMAdditiveBuildExportOptions object.
+#include &lt;Cam/CAM/CAMAdditiveBuildExportOptions.h&gt;
+// Get the value of the property.
+string propertyValue = cAMAdditiveBuildExportOptions_var-&gt;
+selectedExportFilterId
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = cAMAdditiveBuildExportOptions_var-&gt;
+selectedExportFilterId
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">thumbnailPath Property</h3><p class="api">Path to the thumbnail for the buildfile</p><pre class="api-code">"cAMAdditiveBuildExportOptions_var" is a variable referencing a CAMAdditiveBuildExportOptions object.
+#include &lt;Cam/CAM/CAMAdditiveBuildExportOptions.h&gt;
+// Get the value of the property.
+string propertyValue = cAMAdditiveBuildExportOptions_var-&gt;
+thumbnailPath
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = cAMAdditiveBuildExportOptions_var-&gt;
+thumbnailPath
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p></body>
+</html>

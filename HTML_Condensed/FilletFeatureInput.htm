@@ -1,0 +1,216 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/FilletFeatureInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="14/10/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="FilletFeatureInput" name="contextid"/>
+<meta content="FilletFeatureInput Object" name="description"/>
+<meta content="GUID-84ba7ad1-03b7-45f2-b12c-a7f1b1a6e283" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>FilletFeatureInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">FilletFeatureInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/FilletFeatureInput.h&gt;<h2 class="api">
+          Description
+        </h2>This class defines the methods and properties that pertain to the definition of a fillet feature.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletFeatureInput_addChordLengthEdgeSet.htm">addChordLengthEdgeSet</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Adds a set of edges with a chord length to this input.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletFeatureInput_addConstantRadiusEdgeSet.htm">addConstantRadiusEdgeSet</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Adds a set of edges with a constant radius to this input.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletFeatureInput_addVariableRadiusEdgeSet.htm">addVariableRadiusEdgeSet</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Adds a single edge or set of tangent edges along with variable radius information to this input.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletFeatureInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletFeatureInput_edgeSetInputs.htm">edgeSetInputs</a></td>
+<td class="api-list">Gets the FilletEdgeSetInputs object that provides support to create the various types of edge sets that will be used to create the fillet.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletFeatureInput_isG2.htm">isG2</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Gets and sets if the fillet uses the G2 (curvature-continuity) surface quality option.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletFeatureInput_isRollingBallCorner.htm">isRollingBallCorner</a></td>
+<td class="api-list">Gets and sets if a rolling ball or setback solution is to be used in any corners. For an asymmetric fillet only a setback solution is supported, so any asymmetric edge sets will ignore this setting and will always be a setback corner.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletFeatureInput_isTangentChain.htm">isTangentChain</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Gets and sets if any edges that are tangentially connected to any of filleted edges will also be included in the fillet.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletFeatureInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletFeatureInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletFeatureInput_targetBaseFeature.htm">targetBaseFeature</a></td>
+<td class="api-list">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature.<br/><br/> Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="FilletFeatures_createInput.htm">FilletFeatures.createInput</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletFeatureSample_Sample.htm">Fillet Feature API Sample</a></td>
+<td class="api-list">Demonstrates creating fillets using the various types of fillets. Create a new design and add a box that is at least 2 cm on each side. The script creates a constant radius, variable radius and chord length fillets. After creating each one, it deletes it and then creates the next. To see any of the fillets that were deleted, undo to get the fillet back.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version November 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(FilletFeatureInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">addChordLengthEdgeSet Method</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Adds a set of edges with a chord length to this input.</p><pre class="api-code">"filletFeatureInput_var" is a variable referencing a
+FilletFeatureInput
+object.
+#include &lt;Fusion/Features/FilletFeatureInput.h&gt;
+returnValue = filletFeatureInput_var-&gt;
+addChordLengthEdgeSet
+(edges, chordLength, isTangentChain);</pre><p class="api">Return Value: boolean - Returns true if the set of edges was successfully added to the FilletFeatureInput.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">edges</td><td class="api-list">ObjectCollection</td><td class="api-list">An ObjectCollection containing the edges to be filleted. If the isTangentChain argument is true additional edges may also get filleted if they are tangentially connected to any of the input edges.</td></tr><tr><td class="api-list">chordLength</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the chord length of the fillet. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in") or if no units are specified it is interpreted using the current default units for length.</td></tr><tr><td class="api-list">isTangentChain</td><td class="api-list">boolean</td><td class="api-list">A boolean value for setting whether or not edges that are tangentially connected to the input edges or faces will also be filleted.</td></tr></table><h3 class="api-member">addConstantRadiusEdgeSet Method</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Adds a set of edges with a constant radius to this input.</p><pre class="api-code">"filletFeatureInput_var" is a variable referencing a
+FilletFeatureInput
+object.
+#include &lt;Fusion/Features/FilletFeatureInput.h&gt;
+returnValue = filletFeatureInput_var-&gt;
+addConstantRadiusEdgeSet
+(edges, radius, isTangentChain);</pre><p class="api">Return Value: boolean - Returns true if the set of edges was successfully added to the FilletFeatureInput.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">edges</td><td class="api-list">ObjectCollection</td><td class="api-list">An ObjectCollection containing the edges to be filleted. If the isTangentChain argument is true additional edges may also get filleted if they are tangentially connected to any of the input edges.</td></tr><tr><td class="api-list">radius</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the radius of the fillet. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in") or if no units are specified it is interpreted using the current default units for length.</td></tr><tr><td class="api-list">isTangentChain</td><td class="api-list">boolean</td><td class="api-list">A boolean value for setting whether or not edges that are tangentially connected to the input edges will also be filleted.</td></tr></table><h3 class="api-member">addVariableRadiusEdgeSet Method</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Adds a single edge or set of tangent edges along with variable radius information to this input.</p><pre class="api-code">"filletFeatureInput_var" is a variable referencing a
+FilletFeatureInput
+object.
+#include &lt;Fusion/Features/FilletFeatureInput.h&gt;
+returnValue = filletFeatureInput_var-&gt;
+addVariableRadiusEdgeSet
+(tangentEdges, startRadius, endRadius, positions, radii);</pre><p class="api">Return Value: boolean - Returns true if the edge set was successfully added to the FilletFeatureInput.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">tangentEdges</td><td class="api-list">ObjectCollection</td><td class="api-list">An object collection containing a single edge or multiple edges. Multiple edges must be tangentially connected and added to the collection in order.</td></tr><tr><td class="api-list">startRadius</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the starting radius of the fillet. If a single edge is being filleted, the start radius is at the start end of the edge. If multiple tangent edges are being filleted the start radius is the open end of the first edge in the collection. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in") or if no units are specified it is interpreted using the current default units for length.</td></tr><tr><td class="api-list">endRadius</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the ending radius of the fillet. If a single edge is being filleted, the end radius is at the end of the edge. If multiple tangent edges are being filleted the end radius is the open end of the last edge in the collection. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in") or if no units are specified it is interpreted using the current default units for length.</td></tr><tr><td class="api-list">positions</td><td class="api-list">ValueInput[]</td><td class="api-list">An array of ValueInput objects that defines the positions of any additional radii along the edge(s). The value must be between 0 and 1 and defines the percentage along the curve where a radius is defined. The value is unitless. This array must have the same number of values as the array passed in for the radii argument.</td></tr><tr><td class="api-list">radii</td><td class="api-list">ValueInput[]</td><td class="api-list">An array of ValueInput objects that define the radii at positions along the edge(s). This array must have the same number of values as the array passed in for the positions argument. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in"). If no units are specified it will be interpreted using the current default units for length.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/FilletFeatureInput.h&gt;
+returnValue = adsk::fusion::FilletFeatureInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">edgeSetInputs Property</h3><p class="api">Gets the FilletEdgeSetInputs object that provides support to create the various types of edge sets that will be used to create the fillet.</p><pre class="api-code">"filletFeatureInput_var" is a variable referencing a FilletFeatureInput object.
+#include &lt;Fusion/Features/FilletFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;FilletEdgeSetInputs&gt; propertyValue = filletFeatureInput_var-&gt;
+edgeSetInputs
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">isG2 Property</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Gets and sets if the fillet uses the G2 (curvature-continuity) surface quality option.</p><pre class="api-code">"filletFeatureInput_var" is a variable referencing a FilletFeatureInput object.
+#include &lt;Fusion/Features/FilletFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = filletFeatureInput_var-&gt;
+isG2
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = filletFeatureInput_var-&gt;
+isG2
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isRollingBallCorner Property</h3><p class="api">Gets and sets if a rolling ball or setback solution is to be used in any corners. For an asymmetric fillet only a setback solution is supported, so any asymmetric edge sets will ignore this setting and will always be a setback corner.</p><pre class="api-code">"filletFeatureInput_var" is a variable referencing a FilletFeatureInput object.
+#include &lt;Fusion/Features/FilletFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = filletFeatureInput_var-&gt;
+isRollingBallCorner
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = filletFeatureInput_var-&gt;
+isRollingBallCorner
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isTangentChain Property</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Gets and sets if any edges that are tangentially connected to any of filleted edges will also be included in the fillet.</p><pre class="api-code">"filletFeatureInput_var" is a variable referencing a FilletFeatureInput object.
+#include &lt;Fusion/Features/FilletFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = filletFeatureInput_var-&gt;
+isTangentChain
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = filletFeatureInput_var-&gt;
+isTangentChain
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"filletFeatureInput_var" is a variable referencing a FilletFeatureInput object.
+#include &lt;Fusion/Features/FilletFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = filletFeatureInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"filletFeatureInput_var" is a variable referencing a FilletFeatureInput object.
+#include &lt;Fusion/Features/FilletFeatureInput.h&gt;
+// Get the value of the property.
+string propertyValue = filletFeatureInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">targetBaseFeature Property</h3><p class="api">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature. Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</p><pre class="api-code">"filletFeatureInput_var" is a variable referencing a FilletFeatureInput object.
+#include &lt;Fusion/Features/FilletFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BaseFeature&gt; propertyValue = filletFeatureInput_var-&gt;
+targetBaseFeature
+();
+// Set the value of the property, where value_var is a BaseFeature.
+bool returnValue = filletFeatureInput_var-&gt;
+targetBaseFeature
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

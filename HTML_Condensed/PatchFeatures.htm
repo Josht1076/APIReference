@@ -1,0 +1,174 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/PatchFeatures.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="10/9/2015" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="PatchFeatures" name="contextid"/>
+<meta content="PatchFeatures Object" name="description"/>
+<meta content="GUID-110F4701-53D7-4BC8-B2BE-7A7C18983D09" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>PatchFeatures Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">PatchFeatures Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/PatchFeatures.h&gt;<h2 class="api">
+          Description
+        </h2>Collection that provides access to all of the existing Patch features in a component and supports the ability to create new Patch features.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatures_add.htm">add</a></td>
+<td class="api-list">Creates a new patch feature.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatures_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatures_createInput.htm">createInput</a></td>
+<td class="api-list">Creates a PatchFeatureInput object. Use properties and methods on the returned PatchFeatureInput object to set other settings. The PatchFeatureInput object is used as input to the add method to create the patch feature.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatures_item.htm">item</a></td>
+<td class="api-list">Function that returns the specified patch feature using an index into the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatures_itemByName.htm">itemByName</a></td>
+<td class="api-list">Function that returns the specified patch feature using the name of the feature.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatures_count.htm">count</a></td>
+<td class="api-list">The number of Patch features in the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatures_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatures_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Features_patchFeatures.htm">Features.patchFeatures</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureSample_Sample.htm">Patch Feature API Sample</a></td>
+<td class="api-list">Demonstrates creating a new patch feature.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2015<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(PatchFeatures%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">add Method</h3><p class="api">Creates a new patch feature.</p><pre class="api-code">"patchFeatures_var" is a variable referencing a
+PatchFeatures
+object.
+#include &lt;Fusion/Features/PatchFeatures.h&gt;
+returnValue = patchFeatures_var-&gt;
+add
+(input);</pre><p class="api">Return Value: PatchFeature - Returns the newly created PatchFeature object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">input</td><td class="api-list">PatchFeatureInput</td><td class="api-list">A PatchFeatureInput object that defines the desired patch feature. Use the createInput method to create a new PatchFeatureInput object and then use methods on it (the PatchFeatureInput object) to define the patch feature.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/PatchFeatures.h&gt;
+returnValue = adsk::fusion::PatchFeatures::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">The number of Patch features in the collection.</p><pre class="api-code">"patchFeatures_var" is a variable referencing a PatchFeatures object.
+#include &lt;Fusion/Features/PatchFeatures.h&gt;
+// Get the value of the property.
+uinteger propertyValue = patchFeatures_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">createInput Method</h3><p class="api">Creates a PatchFeatureInput object. Use properties and methods on the returned PatchFeatureInput object to set other settings. The PatchFeatureInput object is used as input to the add method to create the patch feature.</p><pre class="api-code">"patchFeatures_var" is a variable referencing a
+PatchFeatures
+object.
+#include &lt;Fusion/Features/PatchFeatures.h&gt;
+returnValue = patchFeatures_var-&gt;
+createInput
+(boundaryCurve, operation);</pre><p class="api">Return Value: PatchFeatureInput - Returns the newly created PatchFeatureInput object or null if the creation fails.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">boundaryCurve</td><td class="api-list">Base</td><td class="api-list">Defines the input geometry that will be used to define the boundary. This can be a sketch profile, a single sketch curve, a single B-Rep edge, an ObjectCollection, or a Path object. If a single sketch curve or B-Rep edge is an input that is not closed; Fusion will automatically find connected sketch curves or B-Rep edges to define a closed loop. If an ObjectCollection is an input, it must be a set of curves that define a closed shape. If a Path is an input, it must define a closed shape.</td></tr><tr><td class="api-list">operation</td><td class="api-list">FeatureOperations</td><td class="api-list">The feature operation to perform. Only 'NewBodyFeatureOperation' and 'NewComponentFeatureOperation' are valid operations for patch features.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"patchFeatures_var" is a variable referencing a PatchFeatures object.
+#include &lt;Fusion/Features/PatchFeatures.h&gt;
+// Get the value of the property.
+boolean propertyValue = patchFeatures_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Function that returns the specified patch feature using an index into the collection.</p><pre class="api-code">"patchFeatures_var" is a variable referencing a
+PatchFeatures
+object.
+#include &lt;Fusion/Features/PatchFeatures.h&gt;
+returnValue = patchFeatures_var-&gt;
+item
+(index);</pre><p class="api">Return Value: PatchFeature - Returns the specified item or null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the item within the collection to return. The first item in the collection has an index of 0.</td></tr></table><h3 class="api-member">itemByName Method</h3><p class="api">Function that returns the specified patch feature using the name of the feature.</p><pre class="api-code">"patchFeatures_var" is a variable referencing a
+PatchFeatures
+object.
+#include &lt;Fusion/Features/PatchFeatures.h&gt;
+returnValue = patchFeatures_var-&gt;
+itemByName
+(name);</pre><p class="api">Return Value: PatchFeature - Returns the specified item or null if the specified name was not found.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">name</td><td class="api-list">string</td><td class="api-list">The name of the feature within the collection to return. This is the name seen in the timeline.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"patchFeatures_var" is a variable referencing a PatchFeatures object.
+#include &lt;Fusion/Features/PatchFeatures.h&gt;
+// Get the value of the property.
+string propertyValue = patchFeatures_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

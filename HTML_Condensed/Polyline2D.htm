@@ -1,0 +1,183 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/Polyline2D.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="09/08/2024" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="Polyline2D" name="contextid"/>
+<meta content="Polyline2D Object" name="description"/>
+<meta content="GUID-56550A88-BF1D-41AC-903C-28EB279B2F57" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>Polyline2D Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">Polyline2D Object
+			</h1>
+              Derived from: <a href="Curve2D.htm">Curve2D</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Geometry/Polyline2D.h&gt;<h2 class="api">
+          Description
+        </h2>Represents a single curve composed of a series of connected lines in 2D space.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Polyline2D_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Polyline2D_create.htm">create</a></td>
+<td class="api-list">Creates a transient 2D polyline using an array of Point2D objects that defines the position of the polyline vertices.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Polyline2D_createByArray.htm">createByArray</a></td>
+<td class="api-list">Creates a transient 2D polyline using an array of floating point values that specify the X, Y coordinates for each point.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Polyline2D_transformBy.htm">transformBy</a></td>
+<td class="api-list">Transforms this curve in 2D space.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Polyline2D_asNurbsCurve.htm">asNurbsCurve</a></td>
+<td class="api-list">Returns a NURBS curve that is geometrically identical to the polyline.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Polyline2D_curveType.htm">curveType</a></td>
+<td class="api-list">Returns the type of geometry this curve represents.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Polyline2D_evaluator.htm">evaluator</a></td>
+<td class="api-list">Returns an evaluator object that lets you perform additional evaluations on the curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Polyline2D_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Polyline2D_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="Polyline2D_pointCount.htm">pointCount</a></td>
+<td class="api-list">Returns the number of points defining the polyline.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Polyline2D_points.htm">points</a></td>
+<td class="api-list">Gets and sets the points that define the coordinates of the polyline.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Polyline2D_create.htm">Polyline2D.create</a>, <a href="Polyline2D_createByArray.htm">Polyline2D.createByArray</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2024<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(Polyline2D%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">asNurbsCurve Property</h3><p class="api">Returns a NURBS curve that is geometrically identical to the polyline.</p><pre class="api-code">"polyline2D_var" is a variable referencing a Polyline2D object.
+#include &lt;Core/Geometry/Polyline2D.h&gt;
+// Get the value of the property.
+Ptr&lt;NurbsCurve2D&gt; propertyValue = polyline2D_var-&gt;
+asNurbsCurve
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/Polyline2D.h&gt;
+returnValue = adsk::core::Polyline2D::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">create Method</h3><p class="api">Creates a transient 2D polyline using an array of Point2D objects that defines the position of the polyline vertices.</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/Polyline2D.h&gt;
+returnValue = adsk::core::Polyline2D::
+create
+(points);</pre><p class="api">Return Value: Polyline2D - Returns the created Polyline2D object.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">points</td><td class="api-list">Point2D[]</td><td class="api-list">An array of Point2D objects that define the coordinates of the curve.</td></tr></table><h3 class="api-member">createByArray Method</h3><p class="api">Creates a transient 2D polyline using an array of floating point values that specify the X, Y coordinates for each point.</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/Polyline2D.h&gt;
+returnValue = adsk::core::Polyline2D::
+createByArray
+(pointCoordinates);</pre><p class="api">Return Value: Polyline2D - Returns the created Polyline2D object.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pointCoordinates</td><td class="api-list">double[]</td><td class="api-list">An array of floating point values that define the X, Y coordinates of each point in the polyline.</td></tr></table><h3 class="api-member">curveType Property</h3><p class="api">Returns the type of geometry this curve represents.</p><pre class="api-code">"polyline2D_var" is a variable referencing a Polyline2D object.
+#include &lt;Core/Geometry/Polyline2D.h&gt;
+// Get the value of the property.
+Curve2DTypes propertyValue = polyline2D_var-&gt;
+curveType
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">evaluator Property</h3><p class="api">Returns an evaluator object that lets you perform additional evaluations on the curve.</p><pre class="api-code">"polyline2D_var" is a variable referencing a Polyline2D object.
+#include &lt;Core/Geometry/Polyline2D.h&gt;
+// Get the value of the property.
+Ptr&lt;CurveEvaluator2D&gt; propertyValue = polyline2D_var-&gt;
+evaluator
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"polyline2D_var" is a variable referencing a Polyline2D object.
+#include &lt;Core/Geometry/Polyline2D.h&gt;
+// Get the value of the property.
+boolean propertyValue = polyline2D_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"polyline2D_var" is a variable referencing a Polyline2D object.
+#include &lt;Core/Geometry/Polyline2D.h&gt;
+// Get the value of the property.
+string propertyValue = polyline2D_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">pointCount Property</h3><p class="api">Returns the number of points defining the polyline.</p><pre class="api-code">"polyline2D_var" is a variable referencing a Polyline2D object.
+#include &lt;Core/Geometry/Polyline2D.h&gt;
+// Get the value of the property.
+integer propertyValue = polyline2D_var-&gt;
+pointCount
+();</pre><p class="api">Property Value: This is a read only property whose value is an integer.</p><h3 class="api-member">points Property</h3><p class="api">Gets and sets the points that define the coordinates of the polyline.</p><pre class="api-code">"polyline2D_var" is a variable referencing a Polyline2D object.
+#include &lt;Core/Geometry/Polyline2D.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;Point2D&gt;&gt; propertyValue = polyline2D_var-&gt;
+points
+();
+// Set the value of the property, where value_var is a Point2D.
+bool returnValue = polyline2D_var-&gt;
+points
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an array of type .</p><h3 class="api-member">transformBy Method</h3><p class="api">Transforms this curve in 2D space.</p><pre class="api-code">"polyline2D_var" is a variable referencing a
+Polyline2D
+object.
+#include &lt;Core/Geometry/Polyline2D.h&gt;
+returnValue = polyline2D_var-&gt;
+transformBy
+(matrix);</pre><p class="api">Return Value: boolean - Return true if the transform was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">matrix</td><td class="api-list">Matrix2D</td><td class="api-list">A 2D matrix that defines the transform to apply to the curve.</td></tr></table></body>
+</html>

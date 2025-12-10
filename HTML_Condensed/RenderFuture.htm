@@ -1,0 +1,170 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/RenderFuture.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="25/04/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="RenderFuture" name="contextid"/>
+<meta content="RenderFuture Object" name="description"/>
+<meta content="GUID-EE6AB493-C121-462E-B6A7-11DCF18CB3A1" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>RenderFuture Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">RenderFuture Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Render/RenderFuture.h&gt;<h2 class="api">
+          Description
+        </h2>Used to check the state of a local or in canvas rendering.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderFuture_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderFuture_filename.htm">filename</a></td>
+<td class="api-list">The filename that the finished rendering will be saved to. If being saved to the cloud, this is the name Fusion will use for the completed rendering.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderFuture_imageHeight.htm">imageHeight</a></td>
+<td class="api-list">Returns the height of the image. The height was specified when the rendering was started.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderFuture_imageWidth.htm">imageWidth</a></td>
+<td class="api-list">Returns the width of the image. The width was specified when the rendering was started.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderFuture_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderFuture_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderFuture_progress.htm">progress</a></td>
+<td class="api-list">Returns the progress of this rendering expressed as a percentage where 0.0 is no progress and 1.0 is complete.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderFuture_renderState.htm">renderState</a></td>
+<td class="api-list">Returns the current state of the rendering.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Rendering_startLocalRender.htm">Rendering.startLocalRender</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="RenderSample_Sample.htm">Rendering Sample</a></td>
+<td class="api-list"><p>Demonstrates using the Rendering capabilities in the API. This starts a series of local renderings to generate a series of frames, where the camera is repositioned and a parameter is modified for each frame to create a dynamic animation. To use the sample, have a design open that contains a parameter named "Length". It can be a user or model parameter. The sample will modify this parameter from a value of 0.1 cm to 15 cm, but you can change these values by editing the values of the paramStartVal and paramEndVal variables on lines 90 and 91 of the sample. It expects a folder named "C:\Temp\RenderSample" to exist, and will fail if it doesn't. The rendered frames will be written to that folder.</p><p>An example rendering is shown below where <a href="../ExtraFiles/RenderSample.f3d">this file</a> was used. The parameter is modifying a move feature which results in changing the shape of an extrusion. The parameter could be driving anything and you could modify the code to edit more than one parameter. The result of this sample is a folder containing all of the rendered frames. You can process these to create an animation. The sample animation was created using GIMP.</p><div align="center"><img align="middle" alt="Render Animation Sample" border="0" src="../images/RenderAnimationSample.gif"/></div><br/></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version May 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(RenderFuture%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Render/RenderFuture.h&gt;
+returnValue = adsk::fusion::RenderFuture::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">filename Property</h3><p class="api">The filename that the finished rendering will be saved to. If being saved to the cloud, this is the name Fusion will use for the completed rendering.</p><pre class="api-code">"renderFuture_var" is a variable referencing a RenderFuture object.
+#include &lt;Fusion/Render/RenderFuture.h&gt;
+// Get the value of the property.
+string propertyValue = renderFuture_var-&gt;
+filename
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">imageHeight Property</h3><p class="api">Returns the height of the image. The height was specified when the rendering was started.</p><pre class="api-code">"renderFuture_var" is a variable referencing a RenderFuture object.
+#include &lt;Fusion/Render/RenderFuture.h&gt;
+// Get the value of the property.
+integer propertyValue = renderFuture_var-&gt;
+imageHeight
+();</pre><p class="api">Property Value: This is a read only property whose value is an integer.</p><h3 class="api-member">imageWidth Property</h3><p class="api">Returns the width of the image. The width was specified when the rendering was started.</p><pre class="api-code">"renderFuture_var" is a variable referencing a RenderFuture object.
+#include &lt;Fusion/Render/RenderFuture.h&gt;
+// Get the value of the property.
+integer propertyValue = renderFuture_var-&gt;
+imageWidth
+();</pre><p class="api">Property Value: This is a read only property whose value is an integer.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"renderFuture_var" is a variable referencing a RenderFuture object.
+#include &lt;Fusion/Render/RenderFuture.h&gt;
+// Get the value of the property.
+boolean propertyValue = renderFuture_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"renderFuture_var" is a variable referencing a RenderFuture object.
+#include &lt;Fusion/Render/RenderFuture.h&gt;
+// Get the value of the property.
+string propertyValue = renderFuture_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">progress Property</h3><p class="api">Returns the progress of this rendering expressed as a percentage where 0.0 is no progress and 1.0 is complete.</p><pre class="api-code">"renderFuture_var" is a variable referencing a RenderFuture object.
+#include &lt;Fusion/Render/RenderFuture.h&gt;
+// Get the value of the property.
+double propertyValue = renderFuture_var-&gt;
+progress
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">renderState Property</h3><p class="api">Returns the current state of the rendering.</p><pre class="api-code">"renderFuture_var" is a variable referencing a RenderFuture object.
+#include &lt;Fusion/Render/RenderFuture.h&gt;
+// Get the value of the property.
+LocalRenderStates propertyValue = renderFuture_var-&gt;
+renderState
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

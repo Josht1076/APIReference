@@ -1,0 +1,418 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/GeometricConstraints.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="GeometricConstraints" name="contextid"/>
+<meta content="GeometricConstraints Object" name="description"/>
+<meta content="GUID-52c4f765-43c8-4d81-a1a8-5151dc02c03c" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>GeometricConstraints Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">GeometricConstraints Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Sketch/GeometricConstraints.h&gt;<h2 class="api">
+          Description
+        </h2>A collection of all of the geometric constraints in a sketch. This object also supports the methods to create new geometric constraints.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addCircularPattern.htm">addCircularPattern</a></td>
+<td class="api-list">Creates a new circular pattern in the sketch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addCoincident.htm">addCoincident</a></td>
+<td class="api-list">Creates a new coincident constraint between two entities. The first argument is a sketch point. The second argument is a sketch curve or point.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addCoincidentToSurface.htm">addCoincidentToSurface</a></td>
+<td class="api-list">Creates a new coincident constraint between the sketch point and surface. This forces the point to lie on the surface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addCollinear.htm">addCollinear</a></td>
+<td class="api-list">Creates a new collinear constraint between two lines.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addConcentric.htm">addConcentric</a></td>
+<td class="api-list">Creates a new concentric constraint between two circles, arcs, ellipses, or elliptical arcs.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addEqual.htm">addEqual</a></td>
+<td class="api-list">Creates a new equal constraint between two lines, or between arcs and circles.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addHorizontal.htm">addHorizontal</a></td>
+<td class="api-list">Creates a new horizontal constraint on a line.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addHorizontalPoints.htm">addHorizontalPoints</a></td>
+<td class="api-list">Creates a new horizontal constraint between two points.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addLineOnPlanarSurface.htm">addLineOnPlanarSurface</a></td>
+<td class="api-list">Creates a new constraint that forces the sketch line to lie on a planar surface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addLineParallelToPlanarSurface.htm">addLineParallelToPlanarSurface</a></td>
+<td class="api-list">Creates a new parallel constraint between a sketch line and a planar surface that will constrain the line to lie on a plane parallel to the specified surface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addMidPoint.htm">addMidPoint</a></td>
+<td class="api-list">Creates a new midpoint constraint between a point and a curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addOffset.htm">addOffset</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Creates an offset constraint, which results in creating a new set of curves that are an offset of the input curves. The returned offset constraint provides access to the created curves and the parameter controlling the offset.<br><br/> The offset direction is implied by the flow direction of the provided curves. For example, if two connected lines are offset, the flow direction is from line 1 to line 2. A positive offset value creates the offset curve to the "right" of the lines and a negative offset goes to the "left". Left and right are evaluated with respect to the geometry. If you are standing on line 1 looking towards line 2 your left and right are the offset left and right. For closed single curves like circles and ellipses their flow direction is always counterclockwise so a positive offset is always to the outsides.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addOffset2.htm">addOffset2</a></td>
+<td class="api-list">Creates an offset constraint, which results in creating a new set of curves that are an offset of the input curves. The returned offset constraint object provides access to the created curves and the parameter controlling the offset.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addParallel.htm">addParallel</a></td>
+<td class="api-list">Creates a new parallel constraint between two lines.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addPerpendicular.htm">addPerpendicular</a></td>
+<td class="api-list">Creates a new perpendicular constraint between two lines.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addPerpendicularToSurface.htm">addPerpendicularToSurface</a></td>
+<td class="api-list">Creates a new perpendicular constraint that forces the sketch curve to be perpendicular to the specified surface. Line and spline curves are supported.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addPolygon.htm">addPolygon</a></td>
+<td class="api-list">Creates a polygon constraint on existing lines in the sketch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addRectangularPattern.htm">addRectangularPattern</a></td>
+<td class="api-list">Creates a new rectangular pattern in the sketch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addSmooth.htm">addSmooth</a></td>
+<td class="api-list">Creates a new smooth constraint between two curves. One of the curves must be a spline. The other curve can be a spline or any other type of curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addSymmetry.htm">addSymmetry</a></td>
+<td class="api-list">Creates a new symmetry constraint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addTangent.htm">addTangent</a></td>
+<td class="api-list">Creates a new tangent constraint between two curves.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addTwoSidesOffset.htm">addTwoSidesOffset</a></td>
+<td class="api-list">Creates two offset constraints, which results in creating two new sets of curves that are an offset of the input curves on each side of the original set of curves. The returned offset constraint objects provide access to the created curves and the parameters controlling the offsets.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addVertical.htm">addVertical</a></td>
+<td class="api-list">Creates a new vertical constraint on a line.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addVerticalPoints.htm">addVerticalPoints</a></td>
+<td class="api-list">Creates a new vertical constraint between two points.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_createCircularPatternInput.htm">createCircularPatternInput</a></td>
+<td class="api-list">Creates a CircularPatternConstraintInput object. Use properties and methods on this object to define the circular pattern you want to create and then use the Add method, passing in the CircularPatternConstraintInput object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_createOffsetInput.htm">createOffsetInput</a></td>
+<td class="api-list">Creates an OffsetConstraintInput object. Use properties and methods on this object to define the offset you want to create and then use the addOffset2 method, passing in the OffsetConstraintInput object, to create the offset.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_createRectangularPatternInput.htm">createRectangularPatternInput</a></td>
+<td class="api-list">Creates a new RectangularPatternConstraintInput object. Use this object to define the various settings associated with a rectangular pattern in a sketch. Once the pattern is defined you can call the addRectangularPattern method and pass in the input object to create the sketch rectangular pattern.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_item.htm">item</a></td>
+<td class="api-list">Function that returns the specified sketch constraint using an index into the collection.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_count.htm">count</a></td>
+<td class="api-list">Returns the number of constraints in the sketch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Sketch_geometricConstraints.htm">Sketch.geometricConstraints</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CreateSketchLines_Sample.htm">API Sample that demonstrates creating sketch lines in various ways.</a></td>
+<td class="api-list">Demonstrates several ways to create sketch lines, including as the result of creating a rectangle.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="GeometricConstraints_addConcentric_Sample.htm">GeometricConstraints.addConcentric</a></td>
+<td class="api-list">Demonstrates the GeometricConstraints.addConcentric method.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(GeometricConstraints%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">addCircularPattern Method</h3><p class="api">Creates a new circular pattern in the sketch.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addCircularPattern
+(input);</pre><p class="api">Return Value: CircularPatternConstraint - Returns the newly created CircularPatternConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">input</td><td class="api-list">CircularPatternConstraintInput</td><td class="api-list">A CircularPatternConstraintInput object that defines the desired circular pattern. Use the createCircularPatternInput method to create a new CircularPatternConstraintInput object and then use methods on it to define the circular pattern.</td></tr></table><h3 class="api-member">addCoincident Method</h3><p class="api">Creates a new coincident constraint between two entities. The first argument is a sketch point. The second argument is a sketch curve or point.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addCoincident
+(point, entity);</pre><p class="api">Return Value: CoincidentConstraint - Returns the newly created CoincidentConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">point</td><td class="api-list">SketchPoint</td><td class="api-list">The SketchPoint that will be made coincident.</td></tr><tr><td class="api-list">entity</td><td class="api-list">SketchEntity</td><td class="api-list">The SketchPoint or sketch curve that the point will be made coincident to.</td></tr></table><h3 class="api-member">addCoincidentToSurface Method</h3><p class="api">Creates a new coincident constraint between the sketch point and surface. This forces the point to lie on the surface.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addCoincidentToSurface
+(point, surface);</pre><p class="api">Return Value: CoincidentToSurfaceConstraint - Returns the newly created CoincidentToSurfaceConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">point</td><td class="api-list">SketchPoint</td><td class="api-list">The SketchPoint to constrain to the surface.</td></tr><tr><td class="api-list">surface</td><td class="api-list">Base</td><td class="api-list">The BRepFace or ConstructionPlane the point will be coincident to.</td></tr></table><h3 class="api-member">addCoincident Member</h3><h3 class="api-member">addCollinear Method</h3><p class="api">Creates a new collinear constraint between two lines.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addCollinear
+(lineOne, lineTwo);</pre><p class="api">Return Value: CollinearConstraint - Returns the newly created CollinearConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">lineOne</td><td class="api-list">SketchLine</td><td class="api-list">The first line to create the constraint on.</td></tr><tr><td class="api-list">lineTwo</td><td class="api-list">SketchLine</td><td class="api-list">The second line to create the constraint on.</td></tr></table><h3 class="api-member">addCollinear Member</h3><h3 class="api-member">addConcentric Method</h3><p class="api">Creates a new concentric constraint between two circles, arcs, ellipses, or elliptical arcs.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addConcentric
+(entityOne, entityTwo);</pre><p class="api">Return Value: ConcentricConstraint - Returns the newly created ConcentricConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">entityOne</td><td class="api-list">SketchCurve</td><td class="api-list">The first circle, arc, ellipse or elliptical arc.</td></tr><tr><td class="api-list">entityTwo</td><td class="api-list">SketchCurve</td><td class="api-list">The second circle, arc, ellipse or elliptical arc.</td></tr></table><h3 class="api-member">addConcentric Member</h3><h3 class="api-member">addEqual Method</h3><p class="api">Creates a new equal constraint between two lines, or between arcs and circles.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addEqual
+(curveOne, curveTwo);</pre><p class="api">Return Value: EqualConstraint - Returns the newly created EqualConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">curveOne</td><td class="api-list">SketchCurve</td><td class="api-list">The first line, arc, or circle.</td></tr><tr><td class="api-list">curveTwo</td><td class="api-list">SketchCurve</td><td class="api-list">The second line, arc, or circle.</td></tr></table><h3 class="api-member">addEqual Member</h3><h3 class="api-member">addHorizontal Method</h3><p class="api">Creates a new horizontal constraint on a line.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addHorizontal
+(line);</pre><p class="api">Return Value: HorizontalConstraint - Returns the newly created HorizontalConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">line</td><td class="api-list">SketchLine</td><td class="api-list">The line to constrain horizontally.</td></tr></table><h3 class="api-member">addHorizontalPoints Method</h3><p class="api">Creates a new horizontal constraint between two points.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addHorizontalPoints
+(pointOne, pointTwo);</pre><p class="api">Return Value: HorizontalPointsConstraint - Returns the newly created HorizontalPointsConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pointOne</td><td class="api-list">SketchPoint</td><td class="api-list">The first SketchPoint to constrain horizontally.</td></tr><tr><td class="api-list">pointTwo</td><td class="api-list">SketchPoint</td><td class="api-list">The second SketchPoint to constrain horizontally.</td></tr></table><h3 class="api-member">addLineOnPlanarSurface Method</h3><p class="api">Creates a new constraint that forces the sketch line to lie on a planar surface.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addLineOnPlanarSurface
+(line, planarSurface);</pre><p class="api">Return Value: LineOnPlanarSurfaceConstraint - Returns the newly created LineOnPlanarSurfaceConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">line</td><td class="api-list">SketchLine</td><td class="api-list">The SketchLine to constrain to the surface.</td></tr><tr><td class="api-list">planarSurface</td><td class="api-list">Base</td><td class="api-list">The planar BRepFace or CosntructionPlane the sketch line will lie on.</td></tr></table><h3 class="api-member">addLineParallelToPlanarSurface Method</h3><p class="api">Creates a new parallel constraint between a sketch line and a planar surface that will constrain the line to lie on a plane parallel to the specified surface.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addLineParallelToPlanarSurface
+(line, planarSurface);</pre><p class="api">Return Value: LineParallelToPlanarSurfaceConstraint - Returns the newly created LineParallelToPlanarSurfaceConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">line</td><td class="api-list">SketchLine</td><td class="api-list">The SketchLine to constrain to the surface.</td></tr><tr><td class="api-list">planarSurface</td><td class="api-list">Base</td><td class="api-list">The planar BRepFace or CosntructionPlane the sketch line will be parallel to.</td></tr></table><h3 class="api-member">addMidPoint Method</h3><p class="api">Creates a new midpoint constraint between a point and a curve.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addMidPoint
+(point, midPointCurve);</pre><p class="api">Return Value: MidPointConstraint - Returns the newly created MidPointConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">point</td><td class="api-list">SketchPoint</td><td class="api-list">The point to constrain to the midpoint of a curve.</td></tr><tr><td class="api-list">midPointCurve</td><td class="api-list">SketchCurve</td><td class="api-list">The curve that defines the midpoint to constraint to.</td></tr></table><h3 class="api-member">addOffset Method</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Creates an offset constraint, which results in creating a new set of curves that are an offset of the input curves. The returned offset constraint provides access to the created curves and the parameter controlling the offset. The offset direction is implied by the flow direction of the provided curves. For example, if two connected lines are offset, the flow direction is from line 1 to line 2. A positive offset value creates the offset curve to the "right" of the lines and a negative offset goes to the "left". Left and right are evaluated with respect to the geometry. If you are standing on line 1 looking towards line 2 your left and right are the offset left and right. For closed single curves like circles and ellipses their flow direction is always counterclockwise so a positive offset is always to the outsides.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addOffset
+(curves, offset, basePoint);</pre><p class="api">Return Value: OffsetConstraint - The created OffsetConstraint. You can use properties on the constraint to get information about the offset.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">curves</td><td class="api-list">SketchCurve[]</td><td class="api-list">A set of end connected curves. The Sketch.FindConnectedCurves method is a convenient way to get this set of curves.</td></tr><tr><td class="api-list">offset</td><td class="api-list">ValueInput</td><td class="api-list">The value that defines the offset. This is a ValueInput object so it can be a float value to define the offset in centimeters or it can be a string defining an expression that will be used by the dimension that controls the offset.</td></tr><tr><td class="api-list">basePoint</td><td class="api-list">Point3D</td><td class="api-list">The location on one of the curves where the offset dimension will be created.</td></tr></table><h3 class="api-member">addOffset2 Method</h3><p class="api">Creates an offset constraint, which results in creating a new set of curves that are an offset of the input curves. The returned offset constraint object provides access to the created curves and the parameter controlling the offset.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addOffset2
+(input);</pre><p class="api">Return Value: OffsetConstraint - Returns the newly created OffsetConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">input</td><td class="api-list">OffsetConstraintInput</td><td class="api-list">The OffsetConstraintInput object that defines the offset to create.</td></tr></table><h3 class="api-member">addParallel Method</h3><p class="api">Creates a new parallel constraint between two lines.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addParallel
+(lineOne, lineTwo);</pre><p class="api">Return Value: ParallelConstraint - Returns the newly created ParallelConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">lineOne</td><td class="api-list">SketchLine</td><td class="api-list">The first SketchLine.</td></tr><tr><td class="api-list">lineTwo</td><td class="api-list">SketchLine</td><td class="api-list">The second SketchLine.</td></tr></table><h3 class="api-member">addParallel Member</h3><h3 class="api-member">addPerpendicular Method</h3><p class="api">Creates a new perpendicular constraint between two lines.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addPerpendicular
+(lineOne, lineTwo);</pre><p class="api">Return Value: PerpendicularConstraint - Returns the newly created PerpendicularConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">lineOne</td><td class="api-list">SketchLine</td><td class="api-list">The first SketchLine.</td></tr><tr><td class="api-list">lineTwo</td><td class="api-list">SketchLine</td><td class="api-list">The second SketchLine.</td></tr></table><h3 class="api-member">addPerpendicularToSurface Method</h3><p class="api">Creates a new perpendicular constraint that forces the sketch curve to be perpendicular to the specified surface. Line and spline curves are supported.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addPerpendicularToSurface
+(curve, surface);</pre><p class="api">Return Value: PerpendicularToSurfaceConstraint - Returns the newly created PerpendicularToSurfaceConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">curve</td><td class="api-list">SketchCurve</td><td class="api-list">The SketchCurve to constrain to the surface.</td></tr><tr><td class="api-list">surface</td><td class="api-list">Base</td><td class="api-list">The BRepFace or ConstructionPlane the line will be perpendicular to.</td></tr></table><h3 class="api-member">addPerpendicular Member</h3><h3 class="api-member">addPolygon Method</h3><p class="api">Creates a polygon constraint on existing lines in the sketch.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addPolygon
+(lines);</pre><p class="api">Return Value: PolygonConstraint - Returns the created PolygonConstraint or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">lines</td><td class="api-list">SketchLine[]</td><td class="api-list">An array of existing SketchLine objects in this sketch that define a valid polygon. They must be the same length, connect at their endpoints, have the same angle between them, and define a closed shape. The order of the lines within the array does not matter.</td></tr></table><h3 class="api-member">addRectangularPattern Method</h3><p class="api">Creates a new rectangular pattern in the sketch.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addRectangularPattern
+(input);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">input</td><td class="api-list">RectangularPatternConstraintInput</td><td class="api-list">A RectangularPatternConstraintInput object that defines all of inputs required to create the desired rectangular pattern. Use the createRectangularPatternInput method to create the input object.</td></tr></table><h3 class="api-member">addSmooth Method</h3><p class="api">Creates a new smooth constraint between two curves. One of the curves must be a spline. The other curve can be a spline or any other type of curve.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addSmooth
+(curveOne, curveTwo);</pre><p class="api">Return Value: SmoothConstraint - Returns the newly created SmoothConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">curveOne</td><td class="api-list">SketchCurve</td><td class="api-list">The first curve to be constrained to be smooth to the second curve.</td></tr><tr><td class="api-list">curveTwo</td><td class="api-list">SketchCurve</td><td class="api-list">The second curve to be constrained to be smooth to the first curve.</td></tr></table><h3 class="api-member">addSmooth Member</h3><h3 class="api-member">addSymmetry Method</h3><p class="api">Creates a new symmetry constraint.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addSymmetry
+(entityOne, entityTwo, symmetryLine);</pre><p class="api">Return Value: SymmetryConstraint - Returns the newly created SymmetryConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">entityOne</td><td class="api-list">SketchEntity</td><td class="api-list">The first sketch entity to be symmetric.</td></tr><tr><td class="api-list">entityTwo</td><td class="api-list">SketchEntity</td><td class="api-list">The second sketch entity to be symmetric. It must be the same type as the first entity.</td></tr><tr><td class="api-list">symmetryLine</td><td class="api-list">SketchLine</td><td class="api-list">The SketchLine that defines the axis of symmetry.</td></tr></table><h3 class="api-member">addSymmetry Member</h3><h3 class="api-member">addTangent Method</h3><p class="api">Creates a new tangent constraint between two curves.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addTangent
+(curveOne, curveTwo);</pre><p class="api">Return Value: TangentConstraint - Returns the newly created TangentConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">curveOne</td><td class="api-list">SketchCurve</td><td class="api-list">The first curve to be tangent.</td></tr><tr><td class="api-list">curveTwo</td><td class="api-list">SketchCurve</td><td class="api-list">The second curve to be tangent.</td></tr></table><h3 class="api-member">addTangent Member</h3><h3 class="api-member">addTwoSidesOffset Method</h3><p class="api">Creates two offset constraints, which results in creating two new sets of curves that are an offset of the input curves on each side of the original set of curves. The returned offset constraint objects provide access to the created curves and the parameters controlling the offsets.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addTwoSidesOffset
+(input, linkOffsets);</pre><p class="api">Return Value: OffsetConstraint [] - Returns an array containing the two OffsetConstraint objects or errors if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">input</td><td class="api-list">OffsetConstraintInput</td><td class="api-list">The OffsetConstraintInput object that defines the offset to create. The same definition applies to both offsets that are created.</td></tr><tr><td class="api-list">linkOffsets</td><td class="api-list">boolean</td><td class="api-list">Defines if the parameter driving the offset of the second side should reference the parameter of the first side. This sets up the parameters so if the first side is edited, the second side will automatically update using the same value. A value of true will create the linked parameter.</td></tr></table><h3 class="api-member">addVertical Method</h3><p class="api">Creates a new vertical constraint on a line.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addVertical
+(line);</pre><p class="api">Return Value: VerticalConstraint - Returns the newly created VerticalConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">line</td><td class="api-list">SketchLine</td><td class="api-list">The line to constrain vertically.</td></tr></table><h3 class="api-member">addVerticalPoints Method</h3><p class="api">Creates a new vertical constraint between two points.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+addVerticalPoints
+(pointOne, pointTwo);</pre><p class="api">Return Value: VerticalPointsConstraint - Returns the newly created VerticalPointsConstraint object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pointOne</td><td class="api-list">SketchPoint</td><td class="api-list">The first SketchPoint to constrain vertically.</td></tr><tr><td class="api-list">pointTwo</td><td class="api-list">SketchPoint</td><td class="api-list">The second SketchPoint to constrain vertically.</td></tr></table><h3 class="api-member">addVertical Member</h3><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = adsk::fusion::GeometricConstraints::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">Returns the number of constraints in the sketch.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a GeometricConstraints object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+// Get the value of the property.
+uinteger propertyValue = geometricConstraints_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">createCircularPatternInput Method</h3><p class="api">Creates a CircularPatternConstraintInput object. Use properties and methods on this object to define the circular pattern you want to create and then use the Add method, passing in the CircularPatternConstraintInput object.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+createCircularPatternInput
+(inputEntities, centerPoint);</pre><p class="api">Return Value: CircularPatternConstraintInput - Returns the newly created CircularPatternConstraintInput object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">inputEntities</td><td class="api-list">SketchEntity[]</td><td class="api-list">An array of sketch entities to be patterned. All of the entities must be from the current sketch.</td></tr><tr><td class="api-list">centerPoint</td><td class="api-list">SketchPoint</td><td class="api-list">A SketchPoint from the same sketch that defines the center of the pattern.</td></tr></table><h3 class="api-member">createOffsetInput Method</h3><p class="api">Creates an OffsetConstraintInput object. Use properties and methods on this object to define the offset you want to create and then use the addOffset2 method, passing in the OffsetConstraintInput object, to create the offset.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+createOffsetInput
+(curves, offset);</pre><p class="api">Return Value: OffsetConstraintInput - Returns an OffsetConstraintInput object or null in the case of invalid input.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">curves</td><td class="api-list">SketchCurve[]</td><td class="api-list">A set of end connected curves. The Sketch.FindConnectedCurves method is a convenient way to get this set of curves.</td></tr><tr><td class="api-list">offset</td><td class="api-list">ValueInput</td><td class="api-list">The value that defines the offset. This is a ValueInput object so it can be a float value to define the offset in centimeters or it can be a string defining an expression that will be used by the parameter controlling the offset. A positive offset value creates the offset curve to the "right" and a negative offset value goes to the "left". The flow direction of the provided curves implies the offset direction. For example, if two connected lines are offset, the flow direction is from line 1 to line 2. Left and right are evaluated relative to the input geometry. If you are standing on line 1 and looking towards line 2, the offset's left side is on your left, and the right side is to your right. Closed single curves like circles and ellipses always have a counterclockwise flow, so a positive offset is always to the outside. For closed splines, the positive direction is based on the spline's parameterization.</td></tr></table><h3 class="api-member">createRectangularPatternInput Method</h3><p class="api">Creates a new RectangularPatternConstraintInput object. Use this object to define the various settings associated with a rectangular pattern in a sketch. Once the pattern is defined you can call the addRectangularPattern method and pass in the input object to create the sketch rectangular pattern.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+createRectangularPatternInput
+(entities, distanceType);</pre><p class="api">Return Value: RectangularPatternConstraintInput - Returns the created RectangularPatternsConstraintInput object or null in the case of failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">entities</td><td class="api-list">SketchEntity[]</td><td class="api-list">An array of sketch entities to pattern. These can be sketch points and curves.</td></tr><tr><td class="api-list">distanceType</td><td class="api-list">PatternDistanceType</td><td class="api-list">Specifies if the distances defined for the pattern define the overall size of the pattern or the distance between the rows and columns.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a GeometricConstraints object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+// Get the value of the property.
+boolean propertyValue = geometricConstraints_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Function that returns the specified sketch constraint using an index into the collection.</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a
+GeometricConstraints
+object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+returnValue = geometricConstraints_var-&gt;
+item
+(index);</pre><p class="api">Return Value: GeometricConstraint - Returns the specified item or null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the item within the collection to return. The first item in the collection has an index of 0.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"geometricConstraints_var" is a variable referencing a GeometricConstraints object.
+#include &lt;Fusion/Sketch/GeometricConstraints.h&gt;
+// Get the value of the property.
+string propertyValue = geometricConstraints_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

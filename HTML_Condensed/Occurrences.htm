@@ -1,0 +1,223 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/Occurrences.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="Occurrences" name="contextid"/>
+<meta content="Occurrences Object" name="description"/>
+<meta content="GUID-de30e05e-32d6-4829-b491-4278d6ec06f0" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>Occurrences Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">Occurrences Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Components/Occurrences.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access to occurrences within a component and provides methods to create new occurrences.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Occurrences_addByInsert.htm">addByInsert</a></td>
+<td class="api-list">Method that inserts an existing file.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Occurrences_addExistingComponent.htm">addExistingComponent</a></td>
+<td class="api-list">Method that creates a new occurrence using an existing component. This is the equivalent of copying and pasting an occurrence in the user interface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Occurrences_addFromConfiguration.htm">addFromConfiguration</a></td>
+<td class="api-list">Method that inserts a configuration from a configured design. The insert will fail if the configured design being used is not from the same project as the file it is being inserted into.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Occurrences_addNewComponent.htm">addNewComponent</a></td>
+<td class="api-list">Method that creates a new component and an occurrence that references it.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Occurrences_addNewComponentCopy.htm">addNewComponentCopy</a></td>
+<td class="api-list">Method that creates a new occurrence by creating a new component that is a copy of an existing component. This is the equivalent of copying and using the "Paste New" command in the user interface. This is different from the addExistingComponent in that it's not a new instance to the existing component but a new component is created that has it's own definition (sketches, features, etc.) and a new occurrence instance is created to reference this new component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Occurrences_asArray.htm">asArray</a></td>
+<td class="api-list">Get the current list of all occurrences. The occurrences are returned in the same order as they appear in the browser.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Occurrences_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Occurrences_item.htm">item</a></td>
+<td class="api-list">Function that returns the specified occurrence using an index into the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Occurrences_itemByName.htm">itemByName</a></td>
+<td class="api-list">Returns the specified occurrence using the name of the occurrence.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Occurrences_asList.htm">asList</a></td>
+<td class="api-list">Returns the contents of this collection as an OccurrencesList object. This is useful when writing a function that traverses an assembly.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Occurrences_count.htm">count</a></td>
+<td class="api-list">Returns the number of occurrences in the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Occurrences_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Occurrences_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="BaseComponent_occurrences.htm">BaseComponent.occurrences</a>, <a href="Component_occurrences.htm">Component.occurrences</a>, <a href="FlatPatternComponent_occurrences.htm">FlatPatternComponent.occurrences</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="AssemblyTraversalUsingRecursion_Sample.htm">Assembly traversal using recursion API Sample</a></td>
+<td class="api-list">Traverses the entire structure of the currently open assemlby using a recursive function and displays the result in a message box. This will match the occurrence structure seen in the browser.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(Occurrences%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">addByInsert Method</h3><p class="api">Method that inserts an existing file.</p><pre class="api-code">"occurrences_var" is a variable referencing an
+Occurrences
+object.
+#include &lt;Fusion/Components/Occurrences.h&gt;
+returnValue = occurrences_var-&gt;
+addByInsert
+(dataFile, transform, isReferencedComponent);</pre><p class="api">Return Value: Occurrence - Returns the newly created occurrence or null if the insert failed. Insert will fail if the dataFile being inserted is not from the same project as the document  it is being inserted into while isReferencedComponent is True.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">dataFile</td><td class="api-list">DataFile</td><td class="api-list">The dataFile to insert.</td></tr><tr><td class="api-list">transform</td><td class="api-list">Matrix3D</td><td class="api-list">A transform that defines the location for the new occurrence.</td></tr><tr><td class="api-list">isReferencedComponent</td><td class="api-list">boolean</td><td class="api-list">Indicates if the insert is to be an external reference or embedded within this document. This method will fail if the dataFile being inserted is not from the same project as the document it is being inserted into while isReferencedComponent is True.</td></tr></table><h3 class="api-member">addExistingComponent Method</h3><p class="api">Method that creates a new occurrence using an existing component. This is the equivalent of copying and pasting an occurrence in the user interface.</p><pre class="api-code">"occurrences_var" is a variable referencing an
+Occurrences
+object.
+#include &lt;Fusion/Components/Occurrences.h&gt;
+returnValue = occurrences_var-&gt;
+addExistingComponent
+(component, transform);</pre><p class="api">Return Value: Occurrence - Returns the newly created occurrence or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">component</td><td class="api-list">Component</td><td class="api-list">The existing component to create a new occurrence of.</td></tr><tr><td class="api-list">transform</td><td class="api-list">Matrix3D</td><td class="api-list">A transform that defines the location for the new occurrence</td></tr></table><h3 class="api-member">addFromConfiguration Method</h3><p class="api">Method that inserts a configuration from a configured design. The insert will fail if the configured design being used is not from the same project as the file it is being inserted into.</p><pre class="api-code">"occurrences_var" is a variable referencing an
+Occurrences
+object.
+#include &lt;Fusion/Components/Occurrences.h&gt;
+returnValue = occurrences_var-&gt;
+addFromConfiguration
+(configurationRow, transform);</pre><p class="api">Return Value: Occurrence - Returns the newly created occurrence or null if the add failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">configurationRow</td><td class="api-list">ConfigurationRow</td><td class="api-list">The row that specifies which configuration to use.</td></tr><tr><td class="api-list">transform</td><td class="api-list">Matrix3D</td><td class="api-list">A transform that defines the location for the new occurrence.</td></tr></table><h3 class="api-member">addNewComponent Method</h3><p class="api">Method that creates a new component and an occurrence that references it.</p><pre class="api-code">"occurrences_var" is a variable referencing an
+Occurrences
+object.
+#include &lt;Fusion/Components/Occurrences.h&gt;
+returnValue = occurrences_var-&gt;
+addNewComponent
+(transform);</pre><p class="api">Return Value: Occurrence - Returns the newly created occurrence or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">transform</td><td class="api-list">Matrix3D</td><td class="api-list">A transform that defines the location for the new occurrence.</td></tr></table><h3 class="api-member">addNewComponentCopy Method</h3><p class="api">Method that creates a new occurrence by creating a new component that is a copy of an existing component. This is the equivalent of copying and using the "Paste New" command in the user interface. This is different from the addExistingComponent in that it's not a new instance to the existing component but a new component is created that has it's own definition (sketches, features, etc.) and a new occurrence instance is created to reference this new component.</p><pre class="api-code">"occurrences_var" is a variable referencing an
+Occurrences
+object.
+#include &lt;Fusion/Components/Occurrences.h&gt;
+returnValue = occurrences_var-&gt;
+addNewComponentCopy
+(component, transform);</pre><p class="api">Return Value: Occurrence - Returns the newly created occurrence or null if the creation failed. The newly created component can be obtained by using the component property of the returned Occurrence.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">component</td><td class="api-list">Component</td><td class="api-list">The existing component to create a copy of.</td></tr><tr><td class="api-list">transform</td><td class="api-list">Matrix3D</td><td class="api-list">A transform that defines the location for the new occurrence</td></tr></table><h3 class="api-member">asArray Method</h3><p class="api">Get the current list of all occurrences. The occurrences are returned in the same order as they appear in the browser.</p><pre class="api-code">"occurrences_var" is a variable referencing an
+Occurrences
+object.
+#include &lt;Fusion/Components/Occurrences.h&gt;
+returnValue = occurrences_var-&gt;
+asArray
+();</pre><p class="api">Return Value: Occurrence [] - Returns the current list of all occurrences.</p><h3 class="api-member">asList Property</h3><p class="api">Returns the contents of this collection as an OccurrencesList object. This is useful when writing a function that traverses an assembly.</p><pre class="api-code">"occurrences_var" is a variable referencing an Occurrences object.
+#include &lt;Fusion/Components/Occurrences.h&gt;
+// Get the value of the property.
+Ptr&lt;OccurrenceList&gt; propertyValue = occurrences_var-&gt;
+asList
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Components/Occurrences.h&gt;
+returnValue = adsk::fusion::Occurrences::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">Returns the number of occurrences in the collection.</p><pre class="api-code">"occurrences_var" is a variable referencing an Occurrences object.
+#include &lt;Fusion/Components/Occurrences.h&gt;
+// Get the value of the property.
+uinteger propertyValue = occurrences_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"occurrences_var" is a variable referencing an Occurrences object.
+#include &lt;Fusion/Components/Occurrences.h&gt;
+// Get the value of the property.
+boolean propertyValue = occurrences_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Function that returns the specified occurrence using an index into the collection.</p><pre class="api-code">"occurrences_var" is a variable referencing an
+Occurrences
+object.
+#include &lt;Fusion/Components/Occurrences.h&gt;
+returnValue = occurrences_var-&gt;
+item
+(index);</pre><p class="api">Return Value: Occurrence - Returns the specified item or null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the item within the collection to return. The first item in the collection has an index of 0.</td></tr></table><h3 class="api-member">itemByName Method</h3><p class="api">Returns the specified occurrence using the name of the occurrence.</p><pre class="api-code">"occurrences_var" is a variable referencing an
+Occurrences
+object.
+#include &lt;Fusion/Components/Occurrences.h&gt;
+returnValue = occurrences_var-&gt;
+itemByName
+(name);</pre><p class="api">Return Value: Occurrence - Returns the occurrence or null if an invalid name was specified</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">name</td><td class="api-list">string</td><td class="api-list">The name of the occurrence to return.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"occurrences_var" is a variable referencing an Occurrences object.
+#include &lt;Fusion/Components/Occurrences.h&gt;
+// Get the value of the property.
+string propertyValue = occurrences_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

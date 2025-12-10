@@ -1,0 +1,199 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/CustomGraphicsBasicMaterialColorEffect.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="18/09/2017" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="CustomGraphicsBasicMaterialColorEffect" name="contextid"/>
+<meta content="CustomGraphicsBasicMaterialColorEffect Object" name="description"/>
+<meta content="GUID-1F2240DE-7130-4C57-9375-31A2F87A2604" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>CustomGraphicsBasicMaterialColorEffect Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">CustomGraphicsBasicMaterialColorEffect Object
+			</h1>
+              Derived from: <a href="CustomGraphicsColorEffect.htm">CustomGraphicsColorEffect</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Graphics/CustomGraphicsBasicMaterialColorEffect.h&gt;<h2 class="api">
+          Description
+        </h2>One of the types of color effects that can be applied to a custom graphics entity. With this type of effect, basic Phong shading and lighting techniques are used so give the entity a 3-dimensional appearance.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsBasicMaterialColorEffect_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsBasicMaterialColorEffect_create.htm">create</a></td>
+<td class="api-list">Statically creates a new basic CustomGraphicsBasicMaterialColorEffect object. This can be used to color custom graphics entities. With this type of effect you define the basic Phong shading properties so that the entity can be rendered with basic shading and lighting effects applied so that it appears 3-dimensional.<br><br/> If only the emissive color is provided, the API will automatically create values for the other colors to render the object as a single color.</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsBasicMaterialColorEffect_ambientColor.htm">ambientColor</a></td>
+<td class="api-list">Gets and sets the ambientColor associated with this CustomGraphicsBasicMaterialColorEffect object. The ambient color is the color of the light anywhere there's not a specific light source.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsBasicMaterialColorEffect_diffuseColor.htm">diffuseColor</a></td>
+<td class="api-list">Gets and sets the diffuseColor associated with this CustomGraphicsBasicMaterialColorEffect object. The diffuse color is the color of reflected light as it scatters off of a rough surface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsBasicMaterialColorEffect_emissiveColor.htm">emissiveColor</a></td>
+<td class="api-list">Gets and sets the emissiveColor associated with this CustomGraphicsBasicMaterialColorEffect object. The emissive color is the primary color of the entity</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsBasicMaterialColorEffect_glossiness.htm">glossiness</a></td>
+<td class="api-list">Gets and sets the glossiness associated with this CustomGraphicsBasicMaterialColorEffect object. The glossiness determines the size of highlights, and thus the apparent shininess of the material. A value of 0.0 will result in very large highlights like you would see with a rough surface. A maximum value of 128.0 will result in very small highlight as from a smooth surface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsBasicMaterialColorEffect_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsBasicMaterialColorEffect_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsBasicMaterialColorEffect_opacity.htm">opacity</a></td>
+<td class="api-list">Gets and sets the opacity associated with this CustomGraphicsBasicMaterialColorEffect object. A value of 1.0 is completely opaque and 0.0 is completely transparent.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CustomGraphicsBasicMaterialColorEffect_specularColor.htm">specularColor</a></td>
+<td class="api-list">Gets and sets the specularColor associated with this CustomGraphicsBasicMaterialColorEffect object. The specular color is the color of reflected light (highlights) as it is reflected off of a shiny surface. This is commonly white or a lighter shade of the emissive color.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CustomGraphicsBasicMaterialColorEffect_create.htm">CustomGraphicsBasicMaterialColorEffect.create</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2017<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(CustomGraphicsBasicMaterialColorEffect%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">ambientColor Property</h3><p class="api">Gets and sets the ambientColor associated with this CustomGraphicsBasicMaterialColorEffect object. The ambient color is the color of the light anywhere there's not a specific light source.</p><pre class="api-code">"customGraphicsBasicMaterialColorEffect_var" is a variable referencing a CustomGraphicsBasicMaterialColorEffect object.
+#include &lt;Fusion/Graphics/CustomGraphicsBasicMaterialColorEffect.h&gt;
+// Get the value of the property.
+Ptr&lt;Color&gt; propertyValue = customGraphicsBasicMaterialColorEffect_var-&gt;
+ambientColor
+();
+// Set the value of the property, where value_var is a Color.
+bool returnValue = customGraphicsBasicMaterialColorEffect_var-&gt;
+ambientColor
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Graphics/CustomGraphicsBasicMaterialColorEffect.h&gt;
+returnValue = adsk::fusion::CustomGraphicsBasicMaterialColorEffect::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">create Method</h3><p class="api">Statically creates a new basic CustomGraphicsBasicMaterialColorEffect object. This can be used to color custom graphics entities. With this type of effect you define the basic Phong shading properties so that the entity can be rendered with basic shading and lighting effects applied so that it appears 3-dimensional. If only the emissive color is provided, the API will automatically create values for the other colors to render the object as a single color.</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Graphics/CustomGraphicsBasicMaterialColorEffect.h&gt;
+// Uses no optional arguments.
+returnValue = adsk::fusion::CustomGraphicsBasicMaterialColorEffect::
+create
+(diffuseColor);
+// Uses optional arguments.
+returnValue = adsk::fusion::CustomGraphicsBasicMaterialColorEffect::
+create
+(diffuseColor, ambientColor, specularColor, emissiveColor, glossiness, opacity);</pre><p class="api">Return Value: CustomGraphicsBasicMaterialColorEffect - Returns the created CustomGraphicsBasicMaterialColorEffect or null in case of a failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">diffuseColor</td><td class="api-list">Color</td><td class="api-list">The diffuse color is the color of reflected light as it scatters off of a rough surface and is the primary color of the entity. This color is always required.</td></tr><tr><td class="api-list">ambientColor</td><td class="api-list">Color</td><td class="api-list">The ambient color is the color of the light anywhere there's not a specific light source. If not specified the same color as the diffuse color is used. This is an optional argument whose default value is null.</td></tr><tr><td class="api-list">specularColor</td><td class="api-list">Color</td><td class="api-list">The specular color is the color of reflected light (highlights) as it is reflected off of a shiny surface. This is commonly white or a lighter shade of the diffuse color. If not specified, white is used. This is an optional argument whose default value is null.</td></tr><tr><td class="api-list">emissiveColor</td><td class="api-list">Color</td><td class="api-list">The emissive color is the color of light that entity emits, such as in a light bulb. If not specified, black for no emissive light is used. This is an optional argument whose default value is null.</td></tr><tr><td class="api-list">glossiness</td><td class="api-list">double</td><td class="api-list">This specifies how glossy the entity is. The glossiness determines the size of highlights, and thus the apparent shininess of the material. A value of 0.0 will result in very large highlights like you would see with a rough surface. A maximum value of 128.0 will result in very small highlight as from a smooth surface. This is an optional argument whose default value is 5.0.</td></tr><tr><td class="api-list">opacity</td><td class="api-list">double</td><td class="api-list">Specifies the opacity of the entity where a value of 1.0 is completely opaque and 0.0 is completely transparent. This is an optional argument whose default value is 1.0.</td></tr></table><h3 class="api-member">diffuseColor Property</h3><p class="api">Gets and sets the diffuseColor associated with this CustomGraphicsBasicMaterialColorEffect object. The diffuse color is the color of reflected light as it scatters off of a rough surface.</p><pre class="api-code">"customGraphicsBasicMaterialColorEffect_var" is a variable referencing a CustomGraphicsBasicMaterialColorEffect object.
+#include &lt;Fusion/Graphics/CustomGraphicsBasicMaterialColorEffect.h&gt;
+// Get the value of the property.
+Ptr&lt;Color&gt; propertyValue = customGraphicsBasicMaterialColorEffect_var-&gt;
+diffuseColor
+();
+// Set the value of the property, where value_var is a Color.
+bool returnValue = customGraphicsBasicMaterialColorEffect_var-&gt;
+diffuseColor
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">emissiveColor Property</h3><p class="api">Gets and sets the emissiveColor associated with this CustomGraphicsBasicMaterialColorEffect object. The emissive color is the primary color of the entity</p><pre class="api-code">"customGraphicsBasicMaterialColorEffect_var" is a variable referencing a CustomGraphicsBasicMaterialColorEffect object.
+#include &lt;Fusion/Graphics/CustomGraphicsBasicMaterialColorEffect.h&gt;
+// Get the value of the property.
+Ptr&lt;Color&gt; propertyValue = customGraphicsBasicMaterialColorEffect_var-&gt;
+emissiveColor
+();
+// Set the value of the property, where value_var is a Color.
+bool returnValue = customGraphicsBasicMaterialColorEffect_var-&gt;
+emissiveColor
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">glossiness Property</h3><p class="api">Gets and sets the glossiness associated with this CustomGraphicsBasicMaterialColorEffect object. The glossiness determines the size of highlights, and thus the apparent shininess of the material. A value of 0.0 will result in very large highlights like you would see with a rough surface. A maximum value of 128.0 will result in very small highlight as from a smooth surface.</p><pre class="api-code">"customGraphicsBasicMaterialColorEffect_var" is a variable referencing a CustomGraphicsBasicMaterialColorEffect object.
+#include &lt;Fusion/Graphics/CustomGraphicsBasicMaterialColorEffect.h&gt;
+// Get the value of the property.
+double propertyValue = customGraphicsBasicMaterialColorEffect_var-&gt;
+glossiness
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = customGraphicsBasicMaterialColorEffect_var-&gt;
+glossiness
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"customGraphicsBasicMaterialColorEffect_var" is a variable referencing a CustomGraphicsBasicMaterialColorEffect object.
+#include &lt;Fusion/Graphics/CustomGraphicsBasicMaterialColorEffect.h&gt;
+// Get the value of the property.
+boolean propertyValue = customGraphicsBasicMaterialColorEffect_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"customGraphicsBasicMaterialColorEffect_var" is a variable referencing a CustomGraphicsBasicMaterialColorEffect object.
+#include &lt;Fusion/Graphics/CustomGraphicsBasicMaterialColorEffect.h&gt;
+// Get the value of the property.
+string propertyValue = customGraphicsBasicMaterialColorEffect_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">opacity Property</h3><p class="api">Gets and sets the opacity associated with this CustomGraphicsBasicMaterialColorEffect object. A value of 1.0 is completely opaque and 0.0 is completely transparent.</p><pre class="api-code">"customGraphicsBasicMaterialColorEffect_var" is a variable referencing a CustomGraphicsBasicMaterialColorEffect object.
+#include &lt;Fusion/Graphics/CustomGraphicsBasicMaterialColorEffect.h&gt;
+// Get the value of the property.
+double propertyValue = customGraphicsBasicMaterialColorEffect_var-&gt;
+opacity
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = customGraphicsBasicMaterialColorEffect_var-&gt;
+opacity
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">specularColor Property</h3><p class="api">Gets and sets the specularColor associated with this CustomGraphicsBasicMaterialColorEffect object. The specular color is the color of reflected light (highlights) as it is reflected off of a shiny surface. This is commonly white or a lighter shade of the emissive color.</p><pre class="api-code">"customGraphicsBasicMaterialColorEffect_var" is a variable referencing a CustomGraphicsBasicMaterialColorEffect object.
+#include &lt;Fusion/Graphics/CustomGraphicsBasicMaterialColorEffect.h&gt;
+// Get the value of the property.
+Ptr&lt;Color&gt; propertyValue = customGraphicsBasicMaterialColorEffect_var-&gt;
+specularColor
+();
+// Set the value of the property, where value_var is a Color.
+bool returnValue = customGraphicsBasicMaterialColorEffect_var-&gt;
+specularColor
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

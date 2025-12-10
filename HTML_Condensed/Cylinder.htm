@@ -1,0 +1,214 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/Cylinder.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="Cylinder" name="contextid"/>
+<meta content="Cylinder Object" name="description"/>
+<meta content="GUID-f2096bd5-e842-4dcc-b9c4-e1c3859c5973" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>Cylinder Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">Cylinder Object
+			</h1>
+              Derived from: <a href="Surface.htm">Surface</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Geometry/Cylinder.h&gt;<h2 class="api">
+          Description
+        </h2>Transient cylinder. A transient cylinder is not displayed or saved in a document. A transient cylinder is but is used as a wrapper to work with raw cylinder information. A transient cylinder has no boundaries and is infinite in length. They are created statically using the create method of the Cylinder class.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Cylinder_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Cylinder_copy.htm">copy</a></td>
+<td class="api-list">Creates and returns an independent copy of this Cylinder object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Cylinder_create.htm">create</a></td>
+<td class="api-list">Creates a transient cylinder object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Cylinder_getData.htm">getData</a></td>
+<td class="api-list">Gets the data that defines the cylinder.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Cylinder_set.htm">set</a></td>
+<td class="api-list">Sets the data that defines the cylinder.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Cylinder_transformBy.htm">transformBy</a></td>
+<td class="api-list">Updates this surface by transforming it with a given input matrix.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Cylinder_axis.htm">axis</a></td>
+<td class="api-list">The center axis (along the length) of the cylinder that defines its normal direction.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Cylinder_evaluator.htm">evaluator</a></td>
+<td class="api-list">Returns the surface evaluator.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Cylinder_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Cylinder_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="Cylinder_origin.htm">origin</a></td>
+<td class="api-list">The origin point (center) of the base of the cylinder.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Cylinder_radius.htm">radius</a></td>
+<td class="api-list">The radius of the cylinder.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Cylinder_surfaceType.htm">surfaceType</a></td>
+<td class="api-list">Returns the surface type.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Cylinder_copy.htm">Cylinder.copy</a>, <a href="Cylinder_create.htm">Cylinder.create</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(Cylinder%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">axis Property</h3><p class="api">The center axis (along the length) of the cylinder that defines its normal direction.</p><pre class="api-code">"cylinder_var" is a variable referencing a Cylinder object.
+#include &lt;Core/Geometry/Cylinder.h&gt;
+// Get the value of the property.
+Ptr&lt;Vector3D&gt; propertyValue = cylinder_var-&gt;
+axis
+();
+// Set the value of the property, where value_var is a Vector3D.
+bool returnValue = cylinder_var-&gt;
+axis
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/Cylinder.h&gt;
+returnValue = adsk::core::Cylinder::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">copy Method</h3><p class="api">Creates and returns an independent copy of this Cylinder object.</p><pre class="api-code">"cylinder_var" is a variable referencing a
+Cylinder
+object.
+#include &lt;Core/Geometry/Cylinder.h&gt;
+returnValue = cylinder_var-&gt;
+copy
+();</pre><p class="api">Return Value: Cylinder - Returns a new Cylinder object that is a copy of this Cylinder object.</p><h3 class="api-member">create Method</h3><p class="api">Creates a transient cylinder object.</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/Cylinder.h&gt;
+returnValue = adsk::core::Cylinder::
+create
+(origin, axis, radius);</pre><p class="api">Return Value: Cylinder - Returns the new Cylinder object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">origin</td><td class="api-list">Point3D</td><td class="api-list">The origin point (center) of the base of the cylinder.</td></tr><tr><td class="api-list">axis</td><td class="api-list">Vector3D</td><td class="api-list">The center axis (along the length) of the cylinder that defines its normal direction.</td></tr><tr><td class="api-list">radius</td><td class="api-list">double</td><td class="api-list">The radius of the cylinder.</td></tr></table><h3 class="api-member">evaluator Property</h3><p class="api">Returns the surface evaluator.</p><pre class="api-code">"cylinder_var" is a variable referencing a Cylinder object.
+#include &lt;Core/Geometry/Cylinder.h&gt;
+// Get the value of the property.
+Ptr&lt;SurfaceEvaluator&gt; propertyValue = cylinder_var-&gt;
+evaluator
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">getData Method</h3><p class="api">Gets the data that defines the cylinder.</p><pre class="api-code">#include &lt;Core/Geometry/Cylinder.h
+// Declare the output arguments.
+Ptr&lt;Point3D&gt; origin;
+Ptr&lt;Vector3D&gt; axis;
+double radius;
+boolean returnValue = cylinder_var-&gt;
+getData
+(origin, axis, radius);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">origin</td><td class="api-list">Point3D</td><td class="api-list">The output origin point (center) of the base of the cylinder.</td></tr><tr><td class="api-list">axis</td><td class="api-list">Vector3D</td><td class="api-list">The output center axis (along the length) of the cylinder that defines its normal direction.</td></tr><tr><td class="api-list">radius</td><td class="api-list">double</td><td class="api-list">The output radius of the cylinder.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"cylinder_var" is a variable referencing a Cylinder object.
+#include &lt;Core/Geometry/Cylinder.h&gt;
+// Get the value of the property.
+boolean propertyValue = cylinder_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"cylinder_var" is a variable referencing a Cylinder object.
+#include &lt;Core/Geometry/Cylinder.h&gt;
+// Get the value of the property.
+string propertyValue = cylinder_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">origin Property</h3><p class="api">The origin point (center) of the base of the cylinder.</p><pre class="api-code">"cylinder_var" is a variable referencing a Cylinder object.
+#include &lt;Core/Geometry/Cylinder.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = cylinder_var-&gt;
+origin
+();
+// Set the value of the property, where value_var is a Point3D.
+bool returnValue = cylinder_var-&gt;
+origin
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">radius Property</h3><p class="api">The radius of the cylinder.</p><pre class="api-code">"cylinder_var" is a variable referencing a Cylinder object.
+#include &lt;Core/Geometry/Cylinder.h&gt;
+// Get the value of the property.
+double propertyValue = cylinder_var-&gt;
+radius
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = cylinder_var-&gt;
+radius
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">set Method</h3><p class="api">Sets the data that defines the cylinder.</p><pre class="api-code">"cylinder_var" is a variable referencing a
+Cylinder
+object.
+#include &lt;Core/Geometry/Cylinder.h&gt;
+returnValue = cylinder_var-&gt;
+set
+(origin, axis, radius);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">origin</td><td class="api-list">Point3D</td><td class="api-list">The origin point (center) of the base of the cylinder.</td></tr><tr><td class="api-list">axis</td><td class="api-list">Vector3D</td><td class="api-list">The center axis (along the length) of the cylinder that defines its normal direction.</td></tr><tr><td class="api-list">radius</td><td class="api-list">double</td><td class="api-list">The radius of the cylinder.</td></tr></table><h3 class="api-member">surfaceType Property</h3><p class="api">Returns the surface type.</p><pre class="api-code">"cylinder_var" is a variable referencing a Cylinder object.
+#include &lt;Core/Geometry/Cylinder.h&gt;
+// Get the value of the property.
+SurfaceTypes propertyValue = cylinder_var-&gt;
+surfaceType
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">transformBy Method</h3><p class="api">Updates this surface by transforming it with a given input matrix.</p><pre class="api-code">"cylinder_var" is a variable referencing a
+Cylinder
+object.
+#include &lt;Core/Geometry/Cylinder.h&gt;
+returnValue = cylinder_var-&gt;
+transformBy
+(matrix);</pre><p class="api">Return Value: boolean - Returns true if the transform was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">matrix</td><td class="api-list">Matrix3D</td><td class="api-list">A 3D matrix that defines the transform to apply to the surface.</td></tr></table></body>
+</html>

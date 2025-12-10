@@ -1,0 +1,1241 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/Command.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="Command" name="contextid"/>
+<meta content="Command Object" name="description"/>
+<meta content="GUID-0550963a-ff63-4183-b0a7-a1bf0c99f821" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>Command Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">Command Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/UserInterface/Command.h&gt;<h2 class="api">
+          Description
+        </h2>The Command class contains all of the functionality needed by a command to gather various command input from a user, provide previews, and create the final result which is also encapsulated within a transaction so it can be undone.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_beginStep.htm">beginStep</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Begin a transacted step within the command's transaction. If the all of the command inputs are valid, this will trigger the execute event for the current step.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_doExecute.htm">doExecute</a></td>
+<td class="api-list">Causes the execution of this command which results in the execute event being fired. This is the same effect as the user clicking the "OK" button in the command dialog and is most useful when there is no command dialog (no command inputs where created) and the isAutoExecute property has been set to False. This allows you to execute the command through code.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_doExecutePreview.htm">doExecutePreview</a></td>
+<td class="api-list">Causes the executePreview event of this command to be fired. This is most useful when there is no command dialog (no command inputs where created) and the isAutoExecute property has been set to False. This allows you to force the preview to be generated instead of relying on changing command inputs.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_getCursor.htm">getCursor</a></td>
+<td class="api-list">Gets the custom cursor information currently being used.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_setCursor.htm">setCursor</a></td>
+<td class="api-list">Specifies the cursor to display at the mouse.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_setDialogInitialSize.htm">setDialogInitialSize</a></td>
+<td class="api-list">Sets the initial size of the dialog when it is first displayed. If this is not set, Fusion will use a default size for the dialog.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_setDialogMinimumSize.htm">setDialogMinimumSize</a></td>
+<td class="api-list">Sets the minimum size for the dialog when resized to by the user. If this is not set, a default minimum size is used.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_setDialogSize.htm">setDialogSize</a></td>
+<td class="api-list">Sets the size of the dialog and overrides any size. This can be used when the command is created or anytime while the command is running. If the height is zero, the dialog will be sized to fit the command inputs currently displayed.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_cancelButtonText.htm">cancelButtonText</a></td>
+<td class="api-list">Gets and sets the text displayed on the Cancel button. The value of this property is ignored if the isCancelButtonVisible property is false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_commandInputs.htm">commandInputs</a></td>
+<td class="api-list">Gets the associated CommandInputs object which provides the ability to create new command inputs and provides access to any existing inputs that have already been created for this command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_editingFeature.htm">editingFeature</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Sets the editing feature for this command. The timeline will be rolled to the editing feature on activate and will the current position will be restored on deactivate.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_hasDistinctSelectionSets.htm">hasDistinctSelectionSets</a></td>
+<td class="api-list"><img alt="Preview" src="../images/TestTubeSmall.png"/>Determines if this selection input shares a common selection set with the other selection inputs of this command or its own unique selection set. The default is False, which means each selection input will have its own selection set. This means that the items in this selection set are only shown as selected when this selection input is active. As a result, other selection inputs associated with this command can select those same entities.<br><br/> If this is True, then all selection inputs share a selection set, which means that when entities are selected by any of the selection inputs of this command, they will remain selected regardless of which command input is active. This has the side effect that once an entity is selected, it cannot be selected again by another selection input.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_helpFile.htm">helpFile</a></td>
+<td class="api-list">Gets and sets the associated HTML help file for this command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_isAutoExecute.htm">isAutoExecute</a></td>
+<td class="api-list">Gets and sets whether this command will automatically execute if no command inputs have been defined. If any command inputs have been created, the value of this property is ignored and the command dialog will be displayed and the command will execute when the user clicks 'OK'. if no command inputs have been defined and this is set to False, then the command will not execute but will remain running.<br/><br/> The default value for this property is true so that the command will execute if no command inputs have been defined.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_isExecutedWhenPreEmpted.htm">isExecutedWhenPreEmpted</a></td>
+<td class="api-list">Specifies what the behavior will be when a command is preempted by the user executing another command. If true (the default), and all of the current inputs are valid, the command will be executed just the same as if the user clicked the OK button. If false, the command is terminated.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_isOKButtonVisible.htm">isOKButtonVisible</a></td>
+<td class="api-list">Specifies if the OK button is visible or not. If set to false then the OK button is removed and the "CANCEL" button text changes to "CLOSE". You can override the default button text using the cancelButtonText property.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_isPositionDependent.htm">isPositionDependent</a></td>
+<td class="api-list">When working in a parametric design in Fusion and you move any occurrences, those move operations are pending and aren't captured until you use the "Capture Position" command from the POSITION panel or use the "Revert" command from the same panel to move them all back to their original positions. If the design is in a pending situation and you run a command like "Create Sketch", a dialog appears asking if you want to capture the current position or not before continuing. This is because the creation of a sketch can be dependent on the current positions of occurrences in the design. Other commands, like "Fillet", depend directly on model geometry and do not rely on occurrence positions so running the Fillet command does not display the dialog and does not affect the pending state of the occurrences.<br/><br/> This property allows you to specify if your command is dependent on the current position of occurrences or not. One good way to know if your command is dependent or not is to run the commands in the UI that are equivalent to the API functions you're using and see if the dialog that prompts to save or abort appears. If it does, then you know your command is dependent on occurrence positions.<br/><br/> If this property is true, then the dialog will appear if there are any pending moved occurrences. The user can choose whether to capture the current changes or abort them, and then your command will continue.<br/><br/> If you set this property to false, (which is the default), then even if there are pending changes, the occurrences are left in their current positions and your command will run.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_isRepeatable.htm">isRepeatable</a></td>
+<td class="api-list">Gets and Sets if this command is repeatable using the 'Repeat Last Command' option from the Fusion marking menu.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_okButtonText.htm">okButtonText</a></td>
+<td class="api-list">Gets and sets the text displayed on the OK button. When the OK and Cancel buttons are displayed, this text defaults to "OK". If the Cancel button is not displayed the text defaults to "CLOSE".</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_parentCommandDefinition.htm">parentCommandDefinition</a></td>
+<td class="api-list">Gets the parent CommandDefinition object.</td>
+</tr>
+</table>
+<h2 class="api">
+            Events
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_activate.htm">activate</a></td>
+<td class="api-list">Gets an event that is fired when the command is first activated or re-activated after being suspended.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_deactivate.htm">deactivate</a></td>
+<td class="api-list">Gets an event that is fired when the command is deactivated. The command still exists and could still be activated again.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_destroy.htm">destroy</a></td>
+<td class="api-list">Gets an event that is fired when the command is destroyed. The command is destroyed and can be cleaned up.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_execute.htm">execute</a></td>
+<td class="api-list">Gets an event that is fired when the command has completed gathering the required input and now needs to perform whatever action the command does.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_executePreview.htm">executePreview</a></td>
+<td class="api-list">Gets an event that is fired when the command has completed gathering the required input and now needs to perform a preview.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_incomingFromHTML.htm">incomingFromHTML</a></td>
+<td class="api-list">This event is fired when the JavaScript associated with the HTML displayed in a BrowserCommandInput calls the adsk.fusionSendData function and when the JavaScript responds to the sendInfoToHTML call. The HTMLEventArgs provided by the event indicates which BrowserCommandInput triggered the event.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_inputChanged.htm">inputChanged</a></td>
+<td class="api-list">Gets an event that is fired whenever an input value is changed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_keyDown.htm">keyDown</a></td>
+<td class="api-list">Gets an event that is fired when a key on the keyboard is pressed down.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_keyUp.htm">keyUp</a></td>
+<td class="api-list">Gets an event that is fired when a key on the keyboard goes up.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_mouseClick.htm">mouseClick</a></td>
+<td class="api-list">Gets an event that is fired when the mouse is clicked, (a button is pressed and released).</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_mouseDoubleClick.htm">mouseDoubleClick</a></td>
+<td class="api-list">Gets an event that is fired when the mouse is double-clicked, (clicked twice within the time specified by a system setting.)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_mouseDown.htm">mouseDown</a></td>
+<td class="api-list">Gets an event that is fired when a mouse button is pressed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_mouseDrag.htm">mouseDrag</a></td>
+<td class="api-list">Gets an event that is fired when the mouse is in drag mode, (being moved while a button is pressed).</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_mouseDragBegin.htm">mouseDragBegin</a></td>
+<td class="api-list">Gets an event that is fired when a mouse drag starts, (the mouse is pressed and moved).</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_mouseDragEnd.htm">mouseDragEnd</a></td>
+<td class="api-list">Gets an event that is fired when the mouse button is released after a drag.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_mouseMove.htm">mouseMove</a></td>
+<td class="api-list">Gets an event that is fired when the mouse is moved.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_mouseUp.htm">mouseUp</a></td>
+<td class="api-list">Gets an event that is fired when a mouse button is released.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_mouseWheel.htm">mouseWheel</a></td>
+<td class="api-list">Gets an event that is fired when the mouse wheel is rotated.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_navigatingURL.htm">navigatingURL</a></td>
+<td class="api-list">This event is fired when a navigation event occurs on the page displayed within a BrowserCommandInput. This allows the add-in to determine how this navigation should be handled by the browser. The NavigationEventArgs provided by the event indicates which BrowserCommandInput triggered the event.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_preSelect.htm">preSelect</a></td>
+<td class="api-list">This event is used to be able to participate in the selection process in a dynamic way. When a user is selecting geometry, they move the mouse over the model and if the entity the mouse is currently over is valid for selection it will highlight indicating that it can be selected. This process of determining what is available for selection and highlighting it is referred to as the "preselect" behavior.<br/><br/> You use functions on the SelectionCommandInput object to define what types of entities are selectable and in many cases this coarse level of specification is all that's needed, but in other cases you may need more control over the selection. For example, you might want to allow the user to selection construction planes and planar faces, which can easily be controlled by defining those as valid entities for selection in the SelectionCommandInput object. But if you only want to allow the user to select planes that are parallel then you need some dynamic control over the selection, which can be done using the preSelect event.<br/><br/> In the example of selecting parallel planes, you would still set the valid selection types for the SelectionCommandInput to allow selection of construction planes and planar faces. This will limit the selection to only planes but any plane can still be selected. You'll also need to connect to the preSelect event for the command. As the user moves the mouse over any construction plane or planar face, the preSelect event will fire for the plane the mouse is current over. If no planes have yet been selected, then you allow the user to select this plane. If one or more planes have already selected, then in the preSelect event you'll check to see if the plane the mouse is over is parallel to the first plane already selected. If it is then you allow it to be selected. If it isn't parallel then you set the isSelectable property of the provided SelectEventArgs object to False so that it won't pre-highlight and won't be selectable.<br/><br/> The entity and mouse position on the entity can be obtained through the Selection object returned through the selection property of the SelectionEventArgs object provided through the event.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_preSelectEnd.htm">preSelectEnd</a></td>
+<td class="api-list">This event fires when the moused is moved away from an entity that was in a pre-select state. If your add-in has done something in reaction to the preSelect event, like draw some custom graphics, this event provides the notification to clean up whatever you've done that's associated with the current pre-select.<br/><br/> The entity and mouse position on the entity can be obtained through the Selection object returned through the selection property of the SelectionEventArgs object provided through the event.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_preSelectMouseMove.htm">preSelectMouseMove</a></td>
+<td class="api-list">This event fires continually while the mouse is moved over an entity that is valid for selected.<br/><br/> The entity and mouse position on the entity can be obtained through the Selection object returned through the selection property of the SelectionEventArgs object provided through the event.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_preSelectStart.htm">preSelectStart</a></td>
+<td class="api-list">As the mouse moves over entities in the graphics window, entities valid for selection are highlighted. Before an entity is highlighted, Fusion determines if it is a valid selectable entity using the selection filter defined on the SelectionCommandInput and the preSelect event of the command. The preSelectStart event fires when the mouse first moves over an entity valid for selection. You can obtain the entity and mouse position from the Selection object returned by the selection property of the SelectionEventArgs object provided through the event.<br/><br/> Some related events are the preSelectMouseMove event, which fires as the mouse moves across the entity, and the preSelectEnd event, which fires when the mouse moves off the entity.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_select.htm">select</a></td>
+<td class="api-list">This even fires when the user selects an entity. This is different from the preselect where an entity is shown as being available for selection as the mouse passes over the entity. This is the actual selection where the user has clicked the mouse on the entity.<br/><br/> The entity and mouse position on the entity can be obtained through the Selection object returned through the selection property of the SelectionEventArgs object provided through the event.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_selectionEvent.htm">selectionEvent</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Provides a notification when the mouse passes over an entity allowing you to determine if the entity should be available for selection or not.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_unselect.htm">unselect</a></td>
+<td class="api-list">This even fires when the user unselects an entity by clicking the mouse again on selected entity or canceling previous selection.<br/><br/> The entity and mouse position on the entity can be obtained through the Selection object returned through the selection property of the SelectionEventArgs object provided through the event.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Command_validateInputs.htm">validateInputs</a></td>
+<td class="api-list">Gets an event that is fired to allow you to check if the current state of the inputs are valid for execution.<br/><br/> The timing of this event is indeterminate and not always tied to the editing of an input. There are cases where this isn't fired when an input is edited. This happens when an input is able to validate its content on its own. For example, if you enter an invalid value for a ValueCommandInput, it can evaluate this on its own, and as a result, the validate inputs event is not fired. Fusion will sometimes fire this event at other random times that are not tied to the edit of an input.<br/><br/> If you want to be notified when an input changes, you should use the input changed event instead.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="AngleValueCommandInput_parentCommand.htm">AngleValueCommandInput.parentCommand</a>, <a href="BoolValueCommandInput_parentCommand.htm">BoolValueCommandInput.parentCommand</a>, <a href="BrowserCommandInput_parentCommand.htm">BrowserCommandInput.parentCommand</a>, <a href="ButtonRowCommandInput_parentCommand.htm">ButtonRowCommandInput.parentCommand</a>, <a href="CommandCreatedEventArgs_command.htm">CommandCreatedEventArgs.command</a>, <a href="CommandEventArgs_command.htm">CommandEventArgs.command</a>, <a href="CommandInput_parentCommand.htm">CommandInput.parentCommand</a>, <a href="CommandInputs_command.htm">CommandInputs.command</a>, <a href="DirectionCommandInput_parentCommand.htm">DirectionCommandInput.parentCommand</a>, <a href="DistanceValueCommandInput_parentCommand.htm">DistanceValueCommandInput.parentCommand</a>, <a href="DropDownCommandInput_parentCommand.htm">DropDownCommandInput.parentCommand</a>, <a href="FloatSliderCommandInput_parentCommand.htm">FloatSliderCommandInput.parentCommand</a>, <a href="FloatSpinnerCommandInput_parentCommand.htm">FloatSpinnerCommandInput.parentCommand</a>, <a href="GroupCommandInput_parentCommand.htm">GroupCommandInput.parentCommand</a>, <a href="ImageCommandInput_parentCommand.htm">ImageCommandInput.parentCommand</a>, <a href="IntegerSliderCommandInput_parentCommand.htm">IntegerSliderCommandInput.parentCommand</a>, <a href="IntegerSpinnerCommandInput_parentCommand.htm">IntegerSpinnerCommandInput.parentCommand</a>, <a href="RadioButtonGroupCommandInput_parentCommand.htm">RadioButtonGroupCommandInput.parentCommand</a>, <a href="SelectionCommandInput_parentCommand.htm">SelectionCommandInput.parentCommand</a>, <a href="SeparatorCommandInput_parentCommand.htm">SeparatorCommandInput.parentCommand</a>, <a href="SliderCommandInput_parentCommand.htm">SliderCommandInput.parentCommand</a>, <a href="StringValueCommandInput_parentCommand.htm">StringValueCommandInput.parentCommand</a>, <a href="TabCommandInput_parentCommand.htm">TabCommandInput.parentCommand</a>, <a href="TableCommandInput_parentCommand.htm">TableCommandInput.parentCommand</a>, <a href="TextBoxCommandInput_parentCommand.htm">TextBoxCommandInput.parentCommand</a>, <a href="TriadCommandInput_parentCommand.htm">TriadCommandInput.parentCommand</a>, <a href="ValueCommandInput_parentCommand.htm">ValueCommandInput.parentCommand</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandInputsSample_Sample.htm">Command Inputs API Sample</a></td>
+<td class="api-list"><p>Creates a command dialog that demonstrates all of the available command inputs.</p>
+<p>To use the sample, create a new Python or C++ script and copy and paste this code, replacing the default code.  You also need to unpack this zip file which contains a <a href="../ExtraFiles/CommandInputsResources.zip">resource folder</a> into the same folder where the source code file (.py or .cpp) is.</p></td>
+</tr>
+<tr>
+<td class="api-list"><a href="UICustomizationSample_Sample.htm">Customizing the UI using the API Sample</a></td>
+<td class="api-list">Demonstrates how to work with tabs, panels, and command in the user interface. The full source for <a href="../ExtraFiles/UICustomizationSampleCPP.zip">C++</a> and <a href="../ExtraFiles/UICustomizationSamplePython.zip">Python</a> samples can be downloaded. This is especially useful for getting the resource files.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(Command%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">activate Member</h3><p class="api">Gets an event that is fired when the command is first activated or re-activated after being suspended.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/CommandEvent.h&gt;
+#include &lt;Core/UserInterface/CommandEventHandler.h&gt;
+#include &lt;Core/UserInterface/CommandEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the activate event.
+class MyActivateEventHandler : public adsk::core::CommandEventHandler
+{
+public:
+void notify(const Ptr&lt;CommandEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyActivateEventHandler event handler.");
+}
+} _activate;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;CommandEvent&gt; activateEvent = command_var-&gt;
+activate
+();
+if (!activateEvent)
+return;
+bool isOk = activateEvent-&gt;add(&amp;_activate);
+if (!isOk)
+return;</pre><p class="api">Return Value: CommandEvent - Returns a CommandEvent object that is used to connect and release from the event.</p><h3 class="api-member">beginStep Method</h3><p class="api">Begin a transacted step within the command's transaction. If the all of the command inputs are valid, this will trigger the execute event for the current step.</p><pre class="api-code">"command_var" is a variable referencing a
+Command
+object.
+#include &lt;Core/UserInterface/Command.h&gt;
+// Uses no optional arguments.
+returnValue = command_var-&gt;
+beginStep
+();
+// Uses optional arguments.
+returnValue = command_var-&gt;
+beginStep
+(makeExistingStepNonUndoable);</pre><p class="api">Return Value: boolean - Returns true if beginning the step was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">makeExistingStepNonUndoable</td><td class="api-list">boolean</td><td class="api-list">If true the current step will not be undo-able. This is an optional argument whose default value is False.</td></tr></table><h3 class="api-member">cancelButtonText Property</h3><p class="api">Gets and sets the text displayed on the Cancel button. The value of this property is ignored if the isCancelButtonVisible property is false.</p><pre class="api-code">"command_var" is a variable referencing a Command object.
+#include &lt;Core/UserInterface/Command.h&gt;
+// Get the value of the property.
+string propertyValue = command_var-&gt;
+cancelButtonText
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = command_var-&gt;
+cancelButtonText
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/UserInterface/Command.h&gt;
+returnValue = adsk::core::Command::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">commandInputs Property</h3><p class="api">Gets the associated CommandInputs object which provides the ability to create new command inputs and provides access to any existing inputs that have already been created for this command.</p><pre class="api-code">"command_var" is a variable referencing a Command object.
+#include &lt;Core/UserInterface/Command.h&gt;
+// Get the value of the property.
+Ptr&lt;CommandInputs&gt; propertyValue = command_var-&gt;
+commandInputs
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">deactivate Member</h3><p class="api">Gets an event that is fired when the command is deactivated. The command still exists and could still be activated again.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/CommandEvent.h&gt;
+#include &lt;Core/UserInterface/CommandEventHandler.h&gt;
+#include &lt;Core/UserInterface/CommandEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the deactivate event.
+class MyDeactivateEventHandler : public adsk::core::CommandEventHandler
+{
+public:
+void notify(const Ptr&lt;CommandEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyDeactivateEventHandler event handler.");
+}
+} _deactivate;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;CommandEvent&gt; deactivateEvent = command_var-&gt;
+deactivate
+();
+if (!deactivateEvent)
+return;
+bool isOk = deactivateEvent-&gt;add(&amp;_deactivate);
+if (!isOk)
+return;</pre><p class="api">Return Value: CommandEvent - Returns a CommandEvent object that is used to connect and release from the event.</p><h3 class="api-member">destroy Member</h3><p class="api">Gets an event that is fired when the command is destroyed. The command is destroyed and can be cleaned up.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/CommandEvent.h&gt;
+#include &lt;Core/UserInterface/CommandEventHandler.h&gt;
+#include &lt;Core/UserInterface/CommandEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the destroy event.
+class MyDestroyEventHandler : public adsk::core::CommandEventHandler
+{
+public:
+void notify(const Ptr&lt;CommandEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyDestroyEventHandler event handler.");
+}
+} _destroy;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;CommandEvent&gt; destroyEvent = command_var-&gt;
+destroy
+();
+if (!destroyEvent)
+return;
+bool isOk = destroyEvent-&gt;add(&amp;_destroy);
+if (!isOk)
+return;</pre><p class="api">Return Value: CommandEvent - Returns a CommandEvent object that is used to connect and release from the event.</p><h3 class="api-member">doExecute Method</h3><p class="api">Causes the execution of this command which results in the execute event being fired. This is the same effect as the user clicking the "OK" button in the command dialog and is most useful when there is no command dialog (no command inputs where created) and the isAutoExecute property has been set to False. This allows you to execute the command through code.</p><pre class="api-code">"command_var" is a variable referencing a
+Command
+object.
+#include &lt;Core/UserInterface/Command.h&gt;
+returnValue = command_var-&gt;
+doExecute
+(terminate);</pre><p class="api">Return Value: boolean - Returns true if the execution of the command was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">terminate</td><td class="api-list">boolean</td><td class="api-list">In the case where there isn't a command dialog you can also use the terminate argument to specify if the command should terminate after execution or continue running. This is similar to the sketch line command where each line placement results in the creation of an undo-able line but the command continues to run to allow additional lines to be placed.</td></tr></table><h3 class="api-member">doExecutePreview Method</h3><p class="api">Causes the executePreview event of this command to be fired. This is most useful when there is no command dialog (no command inputs where created) and the isAutoExecute property has been set to False. This allows you to force the preview to be generated instead of relying on changing command inputs.</p><pre class="api-code">"command_var" is a variable referencing a
+Command
+object.
+#include &lt;Core/UserInterface/Command.h&gt;
+returnValue = command_var-&gt;
+doExecutePreview
+();</pre><p class="api">Return Value: boolean - Returns true if the execute Preview event was successfully fired..</p><h3 class="api-member">editingFeature Property</h3><p class="api">Sets the editing feature for this command. The timeline will be rolled to the editing feature on activate and will the current position will be restored on deactivate.</p><pre class="api-code">"command_var" is a variable referencing a Command object.
+#include &lt;Core/UserInterface/Command.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = command_var-&gt;
+editingFeature
+();
+// Set the value of the property, where value_var is a Base.
+bool returnValue = command_var-&gt;
+editingFeature
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">execute Member</h3><p class="api">Gets an event that is fired when the command has completed gathering the required input and now needs to perform whatever action the command does.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/CommandEvent.h&gt;
+#include &lt;Core/UserInterface/CommandEventHandler.h&gt;
+#include &lt;Core/UserInterface/CommandEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the execute event.
+class MyExecuteEventHandler : public adsk::core::CommandEventHandler
+{
+public:
+void notify(const Ptr&lt;CommandEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyExecuteEventHandler event handler.");
+}
+} _execute;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;CommandEvent&gt; executeEvent = command_var-&gt;
+execute
+();
+if (!executeEvent)
+return;
+bool isOk = executeEvent-&gt;add(&amp;_execute);
+if (!isOk)
+return;</pre><p class="api">Return Value: CommandEvent - Returns a CommandEvent object that is used to connect and release from the event.</p><h3 class="api-member">executePreview Member</h3><p class="api">Gets an event that is fired when the command has completed gathering the required input and now needs to perform a preview.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/CommandEvent.h&gt;
+#include &lt;Core/UserInterface/CommandEventHandler.h&gt;
+#include &lt;Core/UserInterface/CommandEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the executePreview event.
+class MyExecutePreviewEventHandler : public adsk::core::CommandEventHandler
+{
+public:
+void notify(const Ptr&lt;CommandEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyExecutePreviewEventHandler event handler.");
+}
+} _executePreview;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;CommandEvent&gt; executePreviewEvent = command_var-&gt;
+executePreview
+();
+if (!executePreviewEvent)
+return;
+bool isOk = executePreviewEvent-&gt;add(&amp;_executePreview);
+if (!isOk)
+return;</pre><p class="api">Return Value: CommandEvent - Returns a CommandEvent object that is used to connect and release from the event.</p><h3 class="api-member">getCursor Method</h3><p class="api">Gets the custom cursor information currently being used.</p><pre class="api-code">#include &lt;Core/UserInterface/Command.h
+// Declare the output arguments.
+string cursorImage;
+integer xHotSpot;
+integer yHotSpot;
+boolean returnValue = command_var-&gt;
+getCursor
+(cursorImage, xHotSpot, yHotSpot);</pre><p class="api">Return Value: boolean - Returns true if getting the cursor information was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">cursorImage</td><td class="api-list">string</td><td class="api-list">The full path to the png image that is being displayed as the cursor.</td></tr><tr><td class="api-list">xHotSpot</td><td class="api-list">integer</td><td class="api-list">Gets the position of the x pixel within the image that is the "hot" spot or the point that is used as the mouse point. A value of zero indicates the left of the image.</td></tr><tr><td class="api-list">yHotSpot</td><td class="api-list">integer</td><td class="api-list">Gets the position of the y pixel within the image that is the "hot" spot or the point that is used as the mouse point. A value of zero indicates the top of the image.</td></tr></table><h3 class="api-member">hasDistinctSelectionSets Property</h3><p class="api">Determines if this selection input shares a common selection set with the other selection inputs of this command or its own unique selection set. The default is False, which means each selection input will have its own selection set. This means that the items in this selection set are only shown as selected when this selection input is active. As a result, other selection inputs associated with this command can select those same entities. If this is True, then all selection inputs share a selection set, which means that when entities are selected by any of the selection inputs of this command, they will remain selected regardless of which command input is active. This has the side effect that once an entity is selected, it cannot be selected again by another selection input.</p><pre class="api-code">"command_var" is a variable referencing a Command object.
+#include &lt;Core/UserInterface/Command.h&gt;
+// Get the value of the property.
+boolean propertyValue = command_var-&gt;
+hasDistinctSelectionSets
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = command_var-&gt;
+hasDistinctSelectionSets
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">helpFile Property</h3><p class="api">Gets and sets the associated HTML help file for this command.</p><pre class="api-code">"command_var" is a variable referencing a Command object.
+#include &lt;Core/UserInterface/Command.h&gt;
+// Get the value of the property.
+string propertyValue = command_var-&gt;
+helpFile
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = command_var-&gt;
+helpFile
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">incomingFromHTML Member</h3><p class="api">This event is fired when the JavaScript associated with the HTML displayed in a BrowserCommandInput calls the adsk.fusionSendData function and when the JavaScript responds to the sendInfoToHTML call. The HTMLEventArgs provided by the event indicates which BrowserCommandInput triggered the event.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/HTMLEvent.h&gt;
+#include &lt;Core/UserInterface/HTMLEventHandler.h&gt;
+#include &lt;Core/UserInterface/HTMLEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the incomingFromHTML event.
+class MyIncomingFromHTMLEventHandler : public adsk::core::HTMLEventHandler
+{
+public:
+void notify(const Ptr&lt;HTMLEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyIncomingFromHTMLEventHandler event handler.");
+}
+} _incomingFromHTML;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;HTMLEvent&gt; incomingFromHTMLEvent = command_var-&gt;
+incomingFromHTML
+();
+if (!incomingFromHTMLEvent)
+return;
+bool isOk = incomingFromHTMLEvent-&gt;add(&amp;_incomingFromHTML);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">inputChanged Member</h3><p class="api">Gets an event that is fired whenever an input value is changed.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/InputChangedEvent.h&gt;
+#include &lt;Core/UserInterface/InputChangedEventHandler.h&gt;
+#include &lt;Core/UserInterface/InputChangedEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the inputChanged event.
+class MyInputChangedEventHandler : public adsk::core::InputChangedEventHandler
+{
+public:
+void notify(const Ptr&lt;InputChangedEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyInputChangedEventHandler event handler.");
+}
+} _inputChanged;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;InputChangedEvent&gt; inputChangedEvent = command_var-&gt;
+inputChanged
+();
+if (!inputChangedEvent)
+return;
+bool isOk = inputChangedEvent-&gt;add(&amp;_inputChanged);
+if (!isOk)
+return;</pre><p class="api">Return Value: InputChangedEvent - Returns an InputChangedEvent object that is used to connect and release from the event.</p><h3 class="api-member">isAutoExecute Property</h3><p class="api">Gets and sets whether this command will automatically execute if no command inputs have been defined. If any command inputs have been created, the value of this property is ignored and the command dialog will be displayed and the command will execute when the user clicks 'OK'. if no command inputs have been defined and this is set to False, then the command will not execute but will remain running. The default value for this property is true so that the command will execute if no command inputs have been defined.</p><pre class="api-code">"command_var" is a variable referencing a Command object.
+#include &lt;Core/UserInterface/Command.h&gt;
+// Get the value of the property.
+boolean propertyValue = command_var-&gt;
+isAutoExecute
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = command_var-&gt;
+isAutoExecute
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isExecutedWhenPreEmpted Property</h3><p class="api">Specifies what the behavior will be when a command is preempted by the user executing another command. If true (the default), and all of the current inputs are valid, the command will be executed just the same as if the user clicked the OK button. If false, the command is terminated.</p><pre class="api-code">"command_var" is a variable referencing a Command object.
+#include &lt;Core/UserInterface/Command.h&gt;
+// Get the value of the property.
+boolean propertyValue = command_var-&gt;
+isExecutedWhenPreEmpted
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = command_var-&gt;
+isExecutedWhenPreEmpted
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isOKButtonVisible Property</h3><p class="api">Specifies if the OK button is visible or not. If set to false then the OK button is removed and the "CANCEL" button text changes to "CLOSE". You can override the default button text using the cancelButtonText property.</p><pre class="api-code">"command_var" is a variable referencing a Command object.
+#include &lt;Core/UserInterface/Command.h&gt;
+// Get the value of the property.
+boolean propertyValue = command_var-&gt;
+isOKButtonVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = command_var-&gt;
+isOKButtonVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isPositionDependent Property</h3><p class="api">When working in a parametric design in Fusion and you move any occurrences, those move operations are pending and aren't captured until you use the "Capture Position" command from the POSITION panel or use the "Revert" command from the same panel to move them all back to their original positions. If the design is in a pending situation and you run a command like "Create Sketch", a dialog appears asking if you want to capture the current position or not before continuing. This is because the creation of a sketch can be dependent on the current positions of occurrences in the design. Other commands, like "Fillet", depend directly on model geometry and do not rely on occurrence positions so running the Fillet command does not display the dialog and does not affect the pending state of the occurrences. This property allows you to specify if your command is dependent on the current position of occurrences or not. One good way to know if your command is dependent or not is to run the commands in the UI that are equivalent to the API functions you're using and see if the dialog that prompts to save or abort appears. If it does, then you know your command is dependent on occurrence positions. If this property is true, then the dialog will appear if there are any pending moved occurrences. The user can choose whether to capture the current changes or abort them, and then your command will continue. If you set this property to false, (which is the default), then even if there are pending changes, the occurrences are left in their current positions and your command will run.</p><pre class="api-code">"command_var" is a variable referencing a Command object.
+#include &lt;Core/UserInterface/Command.h&gt;
+// Get the value of the property.
+boolean propertyValue = command_var-&gt;
+isPositionDependent
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = command_var-&gt;
+isPositionDependent
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isRepeatable Property</h3><p class="api">Gets and Sets if this command is repeatable using the 'Repeat Last Command' option from the Fusion marking menu.</p><pre class="api-code">"command_var" is a variable referencing a Command object.
+#include &lt;Core/UserInterface/Command.h&gt;
+// Get the value of the property.
+boolean propertyValue = command_var-&gt;
+isRepeatable
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = command_var-&gt;
+isRepeatable
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"command_var" is a variable referencing a Command object.
+#include &lt;Core/UserInterface/Command.h&gt;
+// Get the value of the property.
+boolean propertyValue = command_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">keyDown Member</h3><p class="api">Gets an event that is fired when a key on the keyboard is pressed down.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/KeyboardEvent.h&gt;
+#include &lt;Core/UserInterface/KeyboardEventHandler.h&gt;
+#include &lt;Core/UserInterface/KeyboardEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the keyDown event.
+class MyKeyDownEventHandler : public adsk::core::KeyboardEventHandler
+{
+public:
+void notify(const Ptr&lt;KeyboardEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyKeyDownEventHandler event handler.");
+}
+} _keyDown;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;KeyboardEvent&gt; keyDownEvent = command_var-&gt;
+keyDown
+();
+if (!keyDownEvent)
+return;
+bool isOk = keyDownEvent-&gt;add(&amp;_keyDown);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">keyUp Member</h3><p class="api">Gets an event that is fired when a key on the keyboard goes up.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/KeyboardEvent.h&gt;
+#include &lt;Core/UserInterface/KeyboardEventHandler.h&gt;
+#include &lt;Core/UserInterface/KeyboardEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the keyUp event.
+class MyKeyUpEventHandler : public adsk::core::KeyboardEventHandler
+{
+public:
+void notify(const Ptr&lt;KeyboardEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyKeyUpEventHandler event handler.");
+}
+} _keyUp;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;KeyboardEvent&gt; keyUpEvent = command_var-&gt;
+keyUp
+();
+if (!keyUpEvent)
+return;
+bool isOk = keyUpEvent-&gt;add(&amp;_keyUp);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">mouseClick Member</h3><p class="api">Gets an event that is fired when the mouse is clicked, (a button is pressed and released).</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/MouseEvent.h&gt;
+#include &lt;Core/UserInterface/MouseEventHandler.h&gt;
+#include &lt;Core/UserInterface/MouseEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the mouseClick event.
+class MyMouseClickEventHandler : public adsk::core::MouseEventHandler
+{
+public:
+void notify(const Ptr&lt;MouseEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyMouseClickEventHandler event handler.");
+}
+} _mouseClick;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;MouseEvent&gt; mouseClickEvent = command_var-&gt;
+mouseClick
+();
+if (!mouseClickEvent)
+return;
+bool isOk = mouseClickEvent-&gt;add(&amp;_mouseClick);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">mouseDoubleClick Member</h3><p class="api">Gets an event that is fired when the mouse is double-clicked, (clicked twice within the time specified by a system setting.)</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/MouseEvent.h&gt;
+#include &lt;Core/UserInterface/MouseEventHandler.h&gt;
+#include &lt;Core/UserInterface/MouseEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the mouseDoubleClick event.
+class MyMouseDoubleClickEventHandler : public adsk::core::MouseEventHandler
+{
+public:
+void notify(const Ptr&lt;MouseEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyMouseDoubleClickEventHandler event handler.");
+}
+} _mouseDoubleClick;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;MouseEvent&gt; mouseDoubleClickEvent = command_var-&gt;
+mouseDoubleClick
+();
+if (!mouseDoubleClickEvent)
+return;
+bool isOk = mouseDoubleClickEvent-&gt;add(&amp;_mouseDoubleClick);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">mouseDown Member</h3><p class="api">Gets an event that is fired when a mouse button is pressed.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/MouseEvent.h&gt;
+#include &lt;Core/UserInterface/MouseEventHandler.h&gt;
+#include &lt;Core/UserInterface/MouseEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the mouseDown event.
+class MyMouseDownEventHandler : public adsk::core::MouseEventHandler
+{
+public:
+void notify(const Ptr&lt;MouseEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyMouseDownEventHandler event handler.");
+}
+} _mouseDown;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;MouseEvent&gt; mouseDownEvent = command_var-&gt;
+mouseDown
+();
+if (!mouseDownEvent)
+return;
+bool isOk = mouseDownEvent-&gt;add(&amp;_mouseDown);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">mouseDrag Member</h3><p class="api">Gets an event that is fired when the mouse is in drag mode, (being moved while a button is pressed).</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/MouseEvent.h&gt;
+#include &lt;Core/UserInterface/MouseEventHandler.h&gt;
+#include &lt;Core/UserInterface/MouseEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the mouseDrag event.
+class MyMouseDragEventHandler : public adsk::core::MouseEventHandler
+{
+public:
+void notify(const Ptr&lt;MouseEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyMouseDragEventHandler event handler.");
+}
+} _mouseDrag;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;MouseEvent&gt; mouseDragEvent = command_var-&gt;
+mouseDrag
+();
+if (!mouseDragEvent)
+return;
+bool isOk = mouseDragEvent-&gt;add(&amp;_mouseDrag);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">mouseDragBegin Member</h3><p class="api">Gets an event that is fired when a mouse drag starts, (the mouse is pressed and moved).</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/MouseEvent.h&gt;
+#include &lt;Core/UserInterface/MouseEventHandler.h&gt;
+#include &lt;Core/UserInterface/MouseEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the mouseDragBegin event.
+class MyMouseDragBeginEventHandler : public adsk::core::MouseEventHandler
+{
+public:
+void notify(const Ptr&lt;MouseEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyMouseDragBeginEventHandler event handler.");
+}
+} _mouseDragBegin;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;MouseEvent&gt; mouseDragBeginEvent = command_var-&gt;
+mouseDragBegin
+();
+if (!mouseDragBeginEvent)
+return;
+bool isOk = mouseDragBeginEvent-&gt;add(&amp;_mouseDragBegin);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">mouseDragEnd Member</h3><p class="api">Gets an event that is fired when the mouse button is released after a drag.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/MouseEvent.h&gt;
+#include &lt;Core/UserInterface/MouseEventHandler.h&gt;
+#include &lt;Core/UserInterface/MouseEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the mouseDragEnd event.
+class MyMouseDragEndEventHandler : public adsk::core::MouseEventHandler
+{
+public:
+void notify(const Ptr&lt;MouseEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyMouseDragEndEventHandler event handler.");
+}
+} _mouseDragEnd;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;MouseEvent&gt; mouseDragEndEvent = command_var-&gt;
+mouseDragEnd
+();
+if (!mouseDragEndEvent)
+return;
+bool isOk = mouseDragEndEvent-&gt;add(&amp;_mouseDragEnd);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">mouseMove Member</h3><p class="api">Gets an event that is fired when the mouse is moved.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/MouseEvent.h&gt;
+#include &lt;Core/UserInterface/MouseEventHandler.h&gt;
+#include &lt;Core/UserInterface/MouseEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the mouseMove event.
+class MyMouseMoveEventHandler : public adsk::core::MouseEventHandler
+{
+public:
+void notify(const Ptr&lt;MouseEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyMouseMoveEventHandler event handler.");
+}
+} _mouseMove;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;MouseEvent&gt; mouseMoveEvent = command_var-&gt;
+mouseMove
+();
+if (!mouseMoveEvent)
+return;
+bool isOk = mouseMoveEvent-&gt;add(&amp;_mouseMove);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">mouseUp Member</h3><p class="api">Gets an event that is fired when a mouse button is released.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/MouseEvent.h&gt;
+#include &lt;Core/UserInterface/MouseEventHandler.h&gt;
+#include &lt;Core/UserInterface/MouseEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the mouseUp event.
+class MyMouseUpEventHandler : public adsk::core::MouseEventHandler
+{
+public:
+void notify(const Ptr&lt;MouseEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyMouseUpEventHandler event handler.");
+}
+} _mouseUp;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;MouseEvent&gt; mouseUpEvent = command_var-&gt;
+mouseUp
+();
+if (!mouseUpEvent)
+return;
+bool isOk = mouseUpEvent-&gt;add(&amp;_mouseUp);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">mouseWheel Member</h3><p class="api">Gets an event that is fired when the mouse wheel is rotated.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/MouseEvent.h&gt;
+#include &lt;Core/UserInterface/MouseEventHandler.h&gt;
+#include &lt;Core/UserInterface/MouseEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the mouseWheel event.
+class MyMouseWheelEventHandler : public adsk::core::MouseEventHandler
+{
+public:
+void notify(const Ptr&lt;MouseEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyMouseWheelEventHandler event handler.");
+}
+} _mouseWheel;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;MouseEvent&gt; mouseWheelEvent = command_var-&gt;
+mouseWheel
+();
+if (!mouseWheelEvent)
+return;
+bool isOk = mouseWheelEvent-&gt;add(&amp;_mouseWheel);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">navigatingURL Member</h3><p class="api">This event is fired when a navigation event occurs on the page displayed within a BrowserCommandInput. This allows the add-in to determine how this navigation should be handled by the browser. The NavigationEventArgs provided by the event indicates which BrowserCommandInput triggered the event.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/NavigationEvent.h&gt;
+#include &lt;Core/UserInterface/NavigationEventHandler.h&gt;
+#include &lt;Core/UserInterface/NavigationEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the navigatingURL event.
+class MyNavigatingURLEventHandler : public adsk::core::NavigationEventHandler
+{
+public:
+void notify(const Ptr&lt;NavigationEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyNavigatingURLEventHandler event handler.");
+}
+} _navigatingURL;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;NavigationEvent&gt; navigatingURLEvent = command_var-&gt;
+navigatingURL
+();
+if (!navigatingURLEvent)
+return;
+bool isOk = navigatingURLEvent-&gt;add(&amp;_navigatingURL);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"command_var" is a variable referencing a Command object.
+#include &lt;Core/UserInterface/Command.h&gt;
+// Get the value of the property.
+string propertyValue = command_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">okButtonText Property</h3><p class="api">Gets and sets the text displayed on the OK button. When the OK and Cancel buttons are displayed, this text defaults to "OK". If the Cancel button is not displayed the text defaults to "CLOSE".</p><pre class="api-code">"command_var" is a variable referencing a Command object.
+#include &lt;Core/UserInterface/Command.h&gt;
+// Get the value of the property.
+string propertyValue = command_var-&gt;
+okButtonText
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = command_var-&gt;
+okButtonText
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">parentCommandDefinition Property</h3><p class="api">Gets the parent CommandDefinition object.</p><pre class="api-code">"command_var" is a variable referencing a Command object.
+#include &lt;Core/UserInterface/Command.h&gt;
+// Get the value of the property.
+Ptr&lt;CommandDefinition&gt; propertyValue = command_var-&gt;
+parentCommandDefinition
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">preSelect Member</h3><p class="api">This event is used to be able to participate in the selection process in a dynamic way. When a user is selecting geometry, they move the mouse over the model and if the entity the mouse is currently over is valid for selection it will highlight indicating that it can be selected. This process of determining what is available for selection and highlighting it is referred to as the "preselect" behavior. You use functions on the SelectionCommandInput object to define what types of entities are selectable and in many cases this coarse level of specification is all that's needed, but in other cases you may need more control over the selection. For example, you might want to allow the user to selection construction planes and planar faces, which can easily be controlled by defining those as valid entities for selection in the SelectionCommandInput object. But if you only want to allow the user to select planes that are parallel then you need some dynamic control over the selection, which can be done using the preSelect event. In the example of selecting parallel planes, you would still set the valid selection types for the SelectionCommandInput to allow selection of construction planes and planar faces. This will limit the selection to only planes but any plane can still be selected. You'll also need to connect to the preSelect event for the command. As the user moves the mouse over any construction plane or planar face, the preSelect event will fire for the plane the mouse is current over. If no planes have yet been selected, then you allow the user to select this plane. If one or more planes have already selected, then in the preSelect event you'll check to see if the plane the mouse is over is parallel to the first plane already selected. If it is then you allow it to be selected. If it isn't parallel then you set the isSelectable property of the provided SelectEventArgs object to False so that it won't pre-highlight and won't be selectable. The entity and mouse position on the entity can be obtained through the Selection object returned through the selection property of the SelectionEventArgs object provided through the event.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/SelectionEvent.h&gt;
+#include &lt;Core/UserInterface/SelectionEventHandler.h&gt;
+#include &lt;Core/UserInterface/SelectionEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the preSelect event.
+class MyPreSelectEventHandler : public adsk::core::SelectionEventHandler
+{
+public:
+void notify(const Ptr&lt;SelectionEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyPreSelectEventHandler event handler.");
+}
+} _preSelect;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;SelectionEvent&gt; preSelectEvent = command_var-&gt;
+preSelect
+();
+if (!preSelectEvent)
+return;
+bool isOk = preSelectEvent-&gt;add(&amp;_preSelect);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">preSelectEnd Member</h3><p class="api">This event fires when the moused is moved away from an entity that was in a pre-select state. If your add-in has done something in reaction to the preSelect event, like draw some custom graphics, this event provides the notification to clean up whatever you've done that's associated with the current pre-select. The entity and mouse position on the entity can be obtained through the Selection object returned through the selection property of the SelectionEventArgs object provided through the event.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/SelectionEvent.h&gt;
+#include &lt;Core/UserInterface/SelectionEventHandler.h&gt;
+#include &lt;Core/UserInterface/SelectionEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the preSelectEnd event.
+class MyPreSelectEndEventHandler : public adsk::core::SelectionEventHandler
+{
+public:
+void notify(const Ptr&lt;SelectionEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyPreSelectEndEventHandler event handler.");
+}
+} _preSelectEnd;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;SelectionEvent&gt; preSelectEndEvent = command_var-&gt;
+preSelectEnd
+();
+if (!preSelectEndEvent)
+return;
+bool isOk = preSelectEndEvent-&gt;add(&amp;_preSelectEnd);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">preSelectMouseMove Member</h3><p class="api">This event fires continually while the mouse is moved over an entity that is valid for selected. The entity and mouse position on the entity can be obtained through the Selection object returned through the selection property of the SelectionEventArgs object provided through the event.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/SelectionEvent.h&gt;
+#include &lt;Core/UserInterface/SelectionEventHandler.h&gt;
+#include &lt;Core/UserInterface/SelectionEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the preSelectMouseMove event.
+class MyPreSelectMouseMoveEventHandler : public adsk::core::SelectionEventHandler
+{
+public:
+void notify(const Ptr&lt;SelectionEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyPreSelectMouseMoveEventHandler event handler.");
+}
+} _preSelectMouseMove;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;SelectionEvent&gt; preSelectMouseMoveEvent = command_var-&gt;
+preSelectMouseMove
+();
+if (!preSelectMouseMoveEvent)
+return;
+bool isOk = preSelectMouseMoveEvent-&gt;add(&amp;_preSelectMouseMove);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">preSelectStart Member</h3><p class="api">As the mouse moves over entities in the graphics window, entities valid for selection are highlighted. Before an entity is highlighted, Fusion determines if it is a valid selectable entity using the selection filter defined on the SelectionCommandInput and the preSelect event of the command. The preSelectStart event fires when the mouse first moves over an entity valid for selection. You can obtain the entity and mouse position from the Selection object returned by the selection property of the SelectionEventArgs object provided through the event. Some related events are the preSelectMouseMove event, which fires as the mouse moves across the entity, and the preSelectEnd event, which fires when the mouse moves off the entity.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/SelectionEvent.h&gt;
+#include &lt;Core/UserInterface/SelectionEventHandler.h&gt;
+#include &lt;Core/UserInterface/SelectionEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the preSelectStart event.
+class MyPreSelectStartEventHandler : public adsk::core::SelectionEventHandler
+{
+public:
+void notify(const Ptr&lt;SelectionEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyPreSelectStartEventHandler event handler.");
+}
+} _preSelectStart;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;SelectionEvent&gt; preSelectStartEvent = command_var-&gt;
+preSelectStart
+();
+if (!preSelectStartEvent)
+return;
+bool isOk = preSelectStartEvent-&gt;add(&amp;_preSelectStart);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">select Member</h3><p class="api">This even fires when the user selects an entity. This is different from the preselect where an entity is shown as being available for selection as the mouse passes over the entity. This is the actual selection where the user has clicked the mouse on the entity. The entity and mouse position on the entity can be obtained through the Selection object returned through the selection property of the SelectionEventArgs object provided through the event.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/SelectionEvent.h&gt;
+#include &lt;Core/UserInterface/SelectionEventHandler.h&gt;
+#include &lt;Core/UserInterface/SelectionEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the select event.
+class MySelectEventHandler : public adsk::core::SelectionEventHandler
+{
+public:
+void notify(const Ptr&lt;SelectionEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MySelectEventHandler event handler.");
+}
+} _select;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;SelectionEvent&gt; selectEvent = command_var-&gt;
+select
+();
+if (!selectEvent)
+return;
+bool isOk = selectEvent-&gt;add(&amp;_select);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">selectionEvent Member</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Provides a notification when the mouse passes over an entity allowing you to determine if the entity should be available for selection or not.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/SelectionEvent.h&gt;
+#include &lt;Core/UserInterface/SelectionEventHandler.h&gt;
+#include &lt;Core/UserInterface/SelectionEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the selectionEvent event.
+class MySelectionEventEventHandler : public adsk::core::SelectionEventHandler
+{
+public:
+void notify(const Ptr&lt;SelectionEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MySelectionEventEventHandler event handler.");
+}
+} _selectionEvent;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;SelectionEvent&gt; selectionEventEvent = command_var-&gt;
+selectionEvent
+();
+if (!selectionEventEvent)
+return;
+bool isOk = selectionEventEvent-&gt;add(&amp;_selectionEvent);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">setCursor Method</h3><p class="api">Specifies the cursor to display at the mouse.</p><pre class="api-code">"command_var" is a variable referencing a
+Command
+object.
+#include &lt;Core/UserInterface/Command.h&gt;
+returnValue = command_var-&gt;
+setCursor
+(cursorImage, xHotSpot, yHotSpot);</pre><p class="api">Return Value: boolean - Returns true if setting the cursor was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">cursorImage</td><td class="api-list">string</td><td class="api-list">The path to the PNG image to display as the cursor. This can either be a relative path from the py, dll, or dylib file of the full path. Specifying an empty string will set the cursor back to the default cursor.</td></tr><tr><td class="api-list">xHotSpot</td><td class="api-list">integer</td><td class="api-list">Specifies the position of the x pixel within the image that is the "hot" spot or the point that is used as the mouse point. A value of zero indicates the far left of the image. If an empty string is used as the cursorImage, this value is ignored.</td></tr><tr><td class="api-list">yHotSpot</td><td class="api-list">integer</td><td class="api-list">Specifies the position of the y pixel within the image that is the "hot" spot or the point that is used as the mouse point. A value of zero indicates the top of the image. If an empty string is used as the cursorImage, this value is ignored.</td></tr></table><h3 class="api-member">setDialogInitialSize Method</h3><p class="api">Sets the initial size of the dialog when it is first displayed. If this is not set, Fusion will use a default size for the dialog.</p><pre class="api-code">"command_var" is a variable referencing a
+Command
+object.
+#include &lt;Core/UserInterface/Command.h&gt;
+returnValue = command_var-&gt;
+setDialogInitialSize
+(width, height);</pre><p class="api">Return Value: boolean - Returns true if the default size was successfully set.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">width</td><td class="api-list">integer</td><td class="api-list">The width of the dialog in pixels.</td></tr><tr><td class="api-list">height</td><td class="api-list">integer</td><td class="api-list">The height of the dialog in pixels.</td></tr></table><h3 class="api-member">setDialogMinimumSize Method</h3><p class="api">Sets the minimum size for the dialog when resized to by the user. If this is not set, a default minimum size is used.</p><pre class="api-code">"command_var" is a variable referencing a
+Command
+object.
+#include &lt;Core/UserInterface/Command.h&gt;
+returnValue = command_var-&gt;
+setDialogMinimumSize
+(width, height);</pre><p class="api">Return Value: boolean - Returns true if the minimum size was successfully set.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">width</td><td class="api-list">integer</td><td class="api-list">The minimum width of the dialog in pixels.</td></tr><tr><td class="api-list">height</td><td class="api-list">integer</td><td class="api-list">The minimum height of the dialog in pixels.</td></tr></table><h3 class="api-member">setDialogSize Method</h3><p class="api">Sets the size of the dialog and overrides any size. This can be used when the command is created or anytime while the command is running. If the height is zero, the dialog will be sized to fit the command inputs currently displayed.</p><pre class="api-code">"command_var" is a variable referencing a
+Command
+object.
+#include &lt;Core/UserInterface/Command.h&gt;
+returnValue = command_var-&gt;
+setDialogSize
+(width, height);</pre><p class="api">Return Value: boolean - Returns true if size was successfully set.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">width</td><td class="api-list">integer</td><td class="api-list">The width of the dialog in pixels.</td></tr><tr><td class="api-list">height</td><td class="api-list">integer</td><td class="api-list">The height of the dialog in pixels. If zero, the dialog will be sized to fit the command inputs currently displayed.</td></tr></table><h3 class="api-member">unselect Member</h3><p class="api">This even fires when the user unselects an entity by clicking the mouse again on selected entity or canceling previous selection. The entity and mouse position on the entity can be obtained through the Selection object returned through the selection property of the SelectionEventArgs object provided through the event.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/SelectionEvent.h&gt;
+#include &lt;Core/UserInterface/SelectionEventHandler.h&gt;
+#include &lt;Core/UserInterface/SelectionEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the unselect event.
+class MyUnselectEventHandler : public adsk::core::SelectionEventHandler
+{
+public:
+void notify(const Ptr&lt;SelectionEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyUnselectEventHandler event handler.");
+}
+} _unselect;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;SelectionEvent&gt; unselectEvent = command_var-&gt;
+unselect
+();
+if (!unselectEvent)
+return;
+bool isOk = unselectEvent-&gt;add(&amp;_unselect);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p><h3 class="api-member">validateInputs Member</h3><p class="api">Gets an event that is fired to allow you to check if the current state of the inputs are valid for execution. The timing of this event is indeterminate and not always tied to the editing of an input. There are cases where this isn't fired when an input is edited. This happens when an input is able to validate its content on its own. For example, if you enter an invalid value for a ValueCommandInput, it can evaluate this on its own, and as a result, the validate inputs event is not fired. Fusion will sometimes fire this event at other random times that are not tied to the edit of an input. If you want to be notified when an input changes, you should use the input changed event instead.</p><pre class="api-code">--------- Required include files. ---------
+#include &lt;Core/UserInterface/Command.h&gt;
+#include &lt;Core/UserInterface/ValidateInputsEvent.h&gt;
+#include &lt;Core/UserInterface/ValidateInputsEventHandler.h&gt;
+#include &lt;Core/UserInterface/ValidateInputsEventArgs.h&gt;
+--------- Event handler class definition and global declaration. ---------
+// Event handler for the validateInputs event.
+class MyValidateInputsEventHandler : public adsk::core::ValidateInputsEventHandler
+{
+public:
+void notify(const Ptr&lt;ValidateInputsEventArgs&gt;&amp; eventArgs) override
+{
+// Code to react to the event.
+ui-&gt;messageBox("In MyValidateInputsEventHandler event handler.");
+}
+} _validateInputs;
+--------- Connect the handler to the event. ---------
+// "command_var" is a variable referencing a
+Command
+object.
+// Connect the handler function to the event.
+Ptr&lt;ValidateInputsEvent&gt; validateInputsEvent = command_var-&gt;
+validateInputs
+();
+if (!validateInputsEvent)
+return;
+bool isOk = validateInputsEvent-&gt;add(&amp;_validateInputs);
+if (!isOk)
+return;</pre><p class="api">Property Value: This is an event property that returns a .</p></body>
+</html>

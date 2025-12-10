@@ -1,0 +1,251 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ObjectVisibility.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="22/09/2025" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ObjectVisibility" name="contextid"/>
+<meta content="ObjectVisibility Object" name="description"/>
+<meta content="GUID-8BD7DE7B-4551-4EB0-83F6-7D61F16DF648" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ObjectVisibility Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ObjectVisibility Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Fusion/ObjectVisibility.h&gt;<h2 class="api">
+          Description
+        </h2>An object that provides control over which objects are displayed in the graphics window. This is the equivalent of the "Object Visibility" settings in the Display Settings drop-down in the navigation toolbar at the bottom of the Fusion graphics window.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ObjectVisibility_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ObjectVisibility_isAllObjectsVisible.htm">isAllObjectsVisible</a></td>
+<td class="api-list">Sets if all objects are visible or hidden. When setting this property it will set the value of all other properties of this object to true or false. When getting this property, if it is true, then all other properties are true. If false, one or more other properties are false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ObjectVisibility_isJointOriginAxesVisible.htm">isJointOriginAxesVisible</a></td>
+<td class="api-list">Gets and sets if the axes lines shown in the glyphs for joint origins in all components, local or referenced by this design, are visible in the graphics window.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ObjectVisibility_isJointOriginsVisible.htm">isJointOriginsVisible</a></td>
+<td class="api-list">Gets and sets if the glyphs for joint origins in all components, local or referenced by this design, are visible in the graphics window.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ObjectVisibility_isJointsVisible.htm">isJointsVisible</a></td>
+<td class="api-list">Gets and sets if the glyphs for joints in all components, local or referenced by this design, are visible.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ObjectVisibility_isOriginAxesVisible.htm">isOriginAxesVisible</a></td>
+<td class="api-list">Gets and sets if the origin construction axes of all components, local or referenced by this design, are visible in the graphics window.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ObjectVisibility_isOriginPlanesVisible.htm">isOriginPlanesVisible</a></td>
+<td class="api-list">Gets and sets if the origin construction planes of all components, local or referenced by this design, are visible in the graphics window.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ObjectVisibility_isOriginPointsVisible.htm">isOriginPointsVisible</a></td>
+<td class="api-list">Gets and sets if the origin construction points of all components, local or referenced by this design, are visible in the graphics window.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ObjectVisibility_isSketchesVisible.htm">isSketchesVisible</a></td>
+<td class="api-list">Gets and sets if the sketches in all components, local or referenced by this design, are visible in the graphics window.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ObjectVisibility_isUserWorkAxesVisible.htm">isUserWorkAxesVisible</a></td>
+<td class="api-list">Gets and sets if the user created construction axes of all components, local or referenced by this design, are visible in the graphics window.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ObjectVisibility_isUserWorkPlanesVisible.htm">isUserWorkPlanesVisible</a></td>
+<td class="api-list">Gets and sets if the user created construction planes of all components, local or referenced by this design, are visible in the graphics window.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ObjectVisibility_isUserWorkPointsVisible.htm">isUserWorkPointsVisible</a></td>
+<td class="api-list">Gets and sets if the user created construction points of all components, local or referenced by this design, are visible in the graphics window.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ObjectVisibility_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ObjectVisibility_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Design_objectVisibility.htm">Design.objectVisibility</a>, <a href="FlatPatternProduct_objectVisibility.htm">FlatPatternProduct.objectVisibility</a>, <a href="WorkingModel_objectVisibility.htm">WorkingModel.objectVisibility</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version November 2025<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ObjectVisibility%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Fusion/ObjectVisibility.h&gt;
+returnValue = adsk::fusion::ObjectVisibility::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">isAllObjectsVisible Property</h3><p class="api">Sets if all objects are visible or hidden. When setting this property it will set the value of all other properties of this object to true or false. When getting this property, if it is true, then all other properties are true. If false, one or more other properties are false.</p><pre class="api-code">"objectVisibility_var" is a variable referencing an ObjectVisibility object.
+#include &lt;Fusion/Fusion/ObjectVisibility.h&gt;
+// Get the value of the property.
+boolean propertyValue = objectVisibility_var-&gt;
+isAllObjectsVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = objectVisibility_var-&gt;
+isAllObjectsVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isJointOriginAxesVisible Property</h3><p class="api">Gets and sets if the axes lines shown in the glyphs for joint origins in all components, local or referenced by this design, are visible in the graphics window.</p><pre class="api-code">"objectVisibility_var" is a variable referencing an ObjectVisibility object.
+#include &lt;Fusion/Fusion/ObjectVisibility.h&gt;
+// Get the value of the property.
+boolean propertyValue = objectVisibility_var-&gt;
+isJointOriginAxesVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = objectVisibility_var-&gt;
+isJointOriginAxesVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isJointOriginsVisible Property</h3><p class="api">Gets and sets if the glyphs for joint origins in all components, local or referenced by this design, are visible in the graphics window.</p><pre class="api-code">"objectVisibility_var" is a variable referencing an ObjectVisibility object.
+#include &lt;Fusion/Fusion/ObjectVisibility.h&gt;
+// Get the value of the property.
+boolean propertyValue = objectVisibility_var-&gt;
+isJointOriginsVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = objectVisibility_var-&gt;
+isJointOriginsVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isJointsVisible Property</h3><p class="api">Gets and sets if the glyphs for joints in all components, local or referenced by this design, are visible.</p><pre class="api-code">"objectVisibility_var" is a variable referencing an ObjectVisibility object.
+#include &lt;Fusion/Fusion/ObjectVisibility.h&gt;
+// Get the value of the property.
+boolean propertyValue = objectVisibility_var-&gt;
+isJointsVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = objectVisibility_var-&gt;
+isJointsVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isOriginAxesVisible Property</h3><p class="api">Gets and sets if the origin construction axes of all components, local or referenced by this design, are visible in the graphics window.</p><pre class="api-code">"objectVisibility_var" is a variable referencing an ObjectVisibility object.
+#include &lt;Fusion/Fusion/ObjectVisibility.h&gt;
+// Get the value of the property.
+boolean propertyValue = objectVisibility_var-&gt;
+isOriginAxesVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = objectVisibility_var-&gt;
+isOriginAxesVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isOriginPlanesVisible Property</h3><p class="api">Gets and sets if the origin construction planes of all components, local or referenced by this design, are visible in the graphics window.</p><pre class="api-code">"objectVisibility_var" is a variable referencing an ObjectVisibility object.
+#include &lt;Fusion/Fusion/ObjectVisibility.h&gt;
+// Get the value of the property.
+boolean propertyValue = objectVisibility_var-&gt;
+isOriginPlanesVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = objectVisibility_var-&gt;
+isOriginPlanesVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isOriginPointsVisible Property</h3><p class="api">Gets and sets if the origin construction points of all components, local or referenced by this design, are visible in the graphics window.</p><pre class="api-code">"objectVisibility_var" is a variable referencing an ObjectVisibility object.
+#include &lt;Fusion/Fusion/ObjectVisibility.h&gt;
+// Get the value of the property.
+boolean propertyValue = objectVisibility_var-&gt;
+isOriginPointsVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = objectVisibility_var-&gt;
+isOriginPointsVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isSketchesVisible Property</h3><p class="api">Gets and sets if the sketches in all components, local or referenced by this design, are visible in the graphics window.</p><pre class="api-code">"objectVisibility_var" is a variable referencing an ObjectVisibility object.
+#include &lt;Fusion/Fusion/ObjectVisibility.h&gt;
+// Get the value of the property.
+boolean propertyValue = objectVisibility_var-&gt;
+isSketchesVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = objectVisibility_var-&gt;
+isSketchesVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isUserWorkAxesVisible Property</h3><p class="api">Gets and sets if the user created construction axes of all components, local or referenced by this design, are visible in the graphics window.</p><pre class="api-code">"objectVisibility_var" is a variable referencing an ObjectVisibility object.
+#include &lt;Fusion/Fusion/ObjectVisibility.h&gt;
+// Get the value of the property.
+boolean propertyValue = objectVisibility_var-&gt;
+isUserWorkAxesVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = objectVisibility_var-&gt;
+isUserWorkAxesVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isUserWorkPlanesVisible Property</h3><p class="api">Gets and sets if the user created construction planes of all components, local or referenced by this design, are visible in the graphics window.</p><pre class="api-code">"objectVisibility_var" is a variable referencing an ObjectVisibility object.
+#include &lt;Fusion/Fusion/ObjectVisibility.h&gt;
+// Get the value of the property.
+boolean propertyValue = objectVisibility_var-&gt;
+isUserWorkPlanesVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = objectVisibility_var-&gt;
+isUserWorkPlanesVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isUserWorkPointsVisible Property</h3><p class="api">Gets and sets if the user created construction points of all components, local or referenced by this design, are visible in the graphics window.</p><pre class="api-code">"objectVisibility_var" is a variable referencing an ObjectVisibility object.
+#include &lt;Fusion/Fusion/ObjectVisibility.h&gt;
+// Get the value of the property.
+boolean propertyValue = objectVisibility_var-&gt;
+isUserWorkPointsVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = objectVisibility_var-&gt;
+isUserWorkPointsVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"objectVisibility_var" is a variable referencing an ObjectVisibility object.
+#include &lt;Fusion/Fusion/ObjectVisibility.h&gt;
+// Get the value of the property.
+boolean propertyValue = objectVisibility_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"objectVisibility_var" is a variable referencing an ObjectVisibility object.
+#include &lt;Fusion/Fusion/ObjectVisibility.h&gt;
+// Get the value of the property.
+string propertyValue = objectVisibility_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

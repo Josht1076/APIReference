@@ -1,0 +1,203 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/UserParameters.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="UserParameters" name="contextid"/>
+<meta content="UserParameters Object" name="description"/>
+<meta content="GUID-b20ca304-13b8-442b-83cf-4acc51ff710f" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>UserParameters Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">UserParameters Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Fusion/UserParameters.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access to the User Parameters within a design and provides methods to create new user parameters.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="UserParameters_add.htm">add</a></td>
+<td class="api-list">Adds a new user parameter to the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UserParameters_asArray.htm">asArray</a></td>
+<td class="api-list">Returns the user parameters in the design as an array.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UserParameters_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UserParameters_exportUserParameters.htm">exportUserParameters</a></td>
+<td class="api-list">Function that exports a list of user parameters to a csv file.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UserParameters_importUserParameters.htm">importUserParameters</a></td>
+<td class="api-list">Function that imports a list of user parameters from a csv file.<br><br/> The format of the csv file is as follows: It must have at least two rows - Header followed by a row of parameter. It must be encoded in UTF8 format. It must contain at least six columns - name, unit, expression, value, comment, and favorite where favorite is either true or false. The columns must only have a comma delimiter. Any locale will work but no thousands. expression column support double quotes. comment can either be single line or multi line. If multi line, it must be in double quotes.<br/><br/> Here is an example of a csv file with two rows Name,Unit,Expression,Value,Comments,Favorite p1,mm,32 mm,32,the first parameter,FALSE<br/><br/> The function exportUserParameters could be used to see what a csv file looks like.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="UserParameters_item.htm">item</a></td>
+<td class="api-list">Function that returns the specified User Parameter using an index into the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UserParameters_itemByName.htm">itemByName</a></td>
+<td class="api-list">Function that returns the specified User Parameter using the name of the parameter as it is displayed in the parameters dialog.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="UserParameters_count.htm">count</a></td>
+<td class="api-list">Returns the number of parameters in the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UserParameters_design.htm">design</a></td>
+<td class="api-list">Returns the design that owns the user parameters collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UserParameters_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="UserParameters_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Design_userParameters.htm">Design.userParameters</a>, <a href="FlatPatternProduct_userParameters.htm">FlatPatternProduct.userParameters</a>, <a href="UserParameter_userParameters.htm">UserParameter.userParameters</a>, <a href="WorkingModel_userParameters.htm">WorkingModel.userParameters</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SetParametersFromACsvFileAndExportToSTEP_Sample.htm">Set parameters from a csv file and export to STEP</a></td>
+<td class="api-list">Reads data from a .csv file and sets user parameters in the model and then exports the model to STEP. When setting parameters be aware that this sample is setting user parameters. It's also possible to set model parameters but that's not demonstrated here. Also when accessing parameters, it is case sensitive so the names you use in your program much exactly match the names in the model.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(UserParameters%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">add Method</h3><p class="api">Adds a new user parameter to the collection.</p><pre class="api-code">"userParameters_var" is a variable referencing a
+UserParameters
+object.
+#include &lt;Fusion/Fusion/UserParameters.h&gt;
+returnValue = userParameters_var-&gt;
+add
+(name, value, units, comment);</pre><p class="api">Return Value: UserParameter - Returns the newly created UserParameter or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">name</td><td class="api-list">string</td><td class="api-list">The name of the parameter. This is the name shown in the parameters dialog</td></tr><tr><td class="api-list">value</td><td class="api-list">ValueInput</td><td class="api-list">ValueInput object that specifies the value of the parameter. If the ValueInput was created using a real, the value will be interpreted using the internal unit for the unit type specified by the "units" argument. For example, if the ValueInput was created using the real value 5 and the input to the "units" argument is any valid length unit, the value will be interpreted as 5 centimeters since centimeters is the internal unit for lengths. If the "units" argument is a valid angle unit the value will be interpreted as 5 radians. If the ValueInput was created using a string, the string is used as-is for the expression of the parameter. For value parameters, this means if there are units as part of the string, it must evaluate to the same unit type as that specified by the "units" argument and if no units are specified it will use the current default units specified for the current document. For example, if the ValueInput was created with the string "5 in", then the "units" argument must define any valid length so they are compatible. If the ValueInput was created with the string "5", any unit type can be used and the result will be 5 of that unit. If the "units" argument is "Text" then a text parameter will be created using the value provided as the expression. When using a ValueInput created using a string, it's the same as creating a parameter in the user-interface. You can specify any valid expression, i.e. "5", "5 in", "5 in / 2", "5 + Length", etc. and you can choose from many different types of units. The only requirement is that the units must match in type. For example, they must both be lengths, or they must both be angles. When creating a Boolean parameter, you should use the createByBoolean method of the ValueInput object.</td></tr><tr><td class="api-list">units</td><td class="api-list">string</td><td class="api-list">The units to use for the value of the parameter. The use of any of the measurement units will result in the creation of a numeric parameter. The units specified must match the units specified (if any) in the ValueInput object. To create a parameter with no units, you can specify an empty string as the units, which will also create a numeric parameter. To create a text parameter, use "Text" as the unit type.</td></tr><tr><td class="api-list">comment</td><td class="api-list">string</td><td class="api-list">The comment to display in the parameters dialog. Specify an empty string ("") for no comment</td></tr></table><h3 class="api-member">asArray Method</h3><p class="api">Returns the user parameters in the design as an array.</p><pre class="api-code">"userParameters_var" is a variable referencing a
+UserParameters
+object.
+#include &lt;Fusion/Fusion/UserParameters.h&gt;
+returnValue = userParameters_var-&gt;
+asArray
+();</pre><p class="api">Return Value: UserParameter [] - Returns an array of the user parameters in the design.</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Fusion/UserParameters.h&gt;
+returnValue = adsk::fusion::UserParameters::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">Returns the number of parameters in the collection.</p><pre class="api-code">"userParameters_var" is a variable referencing a UserParameters object.
+#include &lt;Fusion/Fusion/UserParameters.h&gt;
+// Get the value of the property.
+uinteger propertyValue = userParameters_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">design Property</h3><p class="api">Returns the design that owns the user parameters collection.</p><pre class="api-code">"userParameters_var" is a variable referencing a UserParameters object.
+#include &lt;Fusion/Fusion/UserParameters.h&gt;
+// Get the value of the property.
+Ptr&lt;Design&gt; propertyValue = userParameters_var-&gt;
+design
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">exportUserParameters Method</h3><p class="api">Function that exports a list of user parameters to a csv file.</p><pre class="api-code">"userParameters_var" is a variable referencing a
+UserParameters
+object.
+#include &lt;Fusion/Fusion/UserParameters.h&gt;
+returnValue = userParameters_var-&gt;
+exportUserParameters
+(userParameterArray, filename);</pre><p class="api">Return Value: boolean - Returns whether the export was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">userParameterArray</td><td class="api-list">UserParameter[]</td><td class="api-list">The array of user parameters to export.</td></tr><tr><td class="api-list">filename</td><td class="api-list">string</td><td class="api-list">The full filename (path and file) of the file to write the parameters to.</td></tr></table><h3 class="api-member">importUserParameters Method</h3><p class="api">Function that imports a list of user parameters from a csv file. The format of the csv file is as follows: It must have at least two rows - Header followed by a row of parameter. It must be encoded in UTF8 format. It must contain at least six columns - name, unit, expression, value, comment, and favorite where favorite is either true or false. The columns must only have a comma delimiter. Any locale will work but no thousands. expression column support double quotes. comment can either be single line or multi line. If multi line, it must be in double quotes. Here is an example of a csv file with two rows Name,Unit,Expression,Value,Comments,Favorite p1,mm,32 mm,32,the first parameter,FALSE The function exportUserParameters could be used to see what a csv file looks like.</p><pre class="api-code">"userParameters_var" is a variable referencing a
+UserParameters
+object.
+#include &lt;Fusion/Fusion/UserParameters.h&gt;
+returnValue = userParameters_var-&gt;
+importUserParameters
+(filename);</pre><p class="api">Return Value: boolean - Returns whether the import was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">filename</td><td class="api-list">string</td><td class="api-list">The full filename (path and file) of the file to read the parameters from.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"userParameters_var" is a variable referencing a UserParameters object.
+#include &lt;Fusion/Fusion/UserParameters.h&gt;
+// Get the value of the property.
+boolean propertyValue = userParameters_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Function that returns the specified User Parameter using an index into the collection.</p><pre class="api-code">"userParameters_var" is a variable referencing a
+UserParameters
+object.
+#include &lt;Fusion/Fusion/UserParameters.h&gt;
+returnValue = userParameters_var-&gt;
+item
+(index);</pre><p class="api">Return Value: UserParameter - Returns the specified item or null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the item within the collection to return. The first item in the collection has an index of 0.</td></tr></table><h3 class="api-member">itemByName Method</h3><p class="api">Function that returns the specified User Parameter using the name of the parameter as it is displayed in the parameters dialog.</p><pre class="api-code">"userParameters_var" is a variable referencing a
+UserParameters
+object.
+#include &lt;Fusion/Fusion/UserParameters.h&gt;
+returnValue = userParameters_var-&gt;
+itemByName
+(name);</pre><p class="api">Return Value: UserParameter - Returns the specified item or null if an invalid name was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">name</td><td class="api-list">string</td><td class="api-list">The name of the User Parameter as it is displayed in the parameters dialog</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"userParameters_var" is a variable referencing a UserParameters object.
+#include &lt;Fusion/Fusion/UserParameters.h&gt;
+// Get the value of the property.
+string propertyValue = userParameters_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

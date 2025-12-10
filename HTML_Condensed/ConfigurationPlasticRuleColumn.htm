@@ -1,0 +1,206 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ConfigurationPlasticRuleColumn.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="27/12/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ConfigurationPlasticRuleColumn" name="contextid"/>
+<meta content="ConfigurationPlasticRuleColumn Object" name="description"/>
+<meta content="GUID-6BA71A6D-B38B-49C8-BA46-10BCE4DBE9D9" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ConfigurationPlasticRuleColumn Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ConfigurationPlasticRuleColumn Object
+			</h1>
+              Derived from: <a href="ConfigurationColumn.htm">ConfigurationColumn</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Configurations/ConfigurationPlasticRuleColumn.h&gt;<h2 class="api">
+          Description
+        </h2>Represents a plastic rule column in a configuration table. This defines the plastic rule to use for a specific component.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationPlasticRuleColumn_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationPlasticRuleColumn_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes this column from the table. Property columns cannot be deleted. If the table was obtained from a DataFile, this method will fail.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationPlasticRuleColumn_getCell.htm">getCell</a></td>
+<td class="api-list">Gets the cell in this column at the specified row. The first row has an index of 0 and does not include the header row.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationPlasticRuleColumn_getCellByRowId.htm">getCellByRowId</a></td>
+<td class="api-list">Gets the cell in this column at the row specified by its ID.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationPlasticRuleColumn_getCellByRowName.htm">getCellByRowName</a></td>
+<td class="api-list">Gets the cell in this column at the row specified by its name.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationPlasticRuleColumn_component.htm">component</a></td>
+<td class="api-list">Returns the Component being modified by this column. This property returns null when the table being queried was obtained from a DataFile object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationPlasticRuleColumn_id.htm">id</a></td>
+<td class="api-list">The id of the column. This is constant and cannot be changed by the user.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationPlasticRuleColumn_index.htm">index</a></td>
+<td class="api-list">The index position of this column within the table. The first column is at index 0 and does not include the "Name" column.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationPlasticRuleColumn_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationPlasticRuleColumn_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationPlasticRuleColumn_parentPlasticRuleTable.htm">parentPlasticRuleTable</a></td>
+<td class="api-list">Returns the parent plastic rule table this column is in.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationPlasticRuleColumn_rowCount.htm">rowCount</a></td>
+<td class="api-list">Returns the number of rows in this column.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ConfigurationPlasticRuleColumn_title.htm">title</a></td>
+<td class="api-list">The title of this column. In a top table, this can only be edited for suppression, visibility, parameter, and theme table columns. It behaves as read-only for all other types. In a theme table, the title of all the columns can be modified except for the column that represents the root component for materials and appearances.<br/><br/> If the table was obtained from a DataFile, this property behaves as read-only for all the columns.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ConfigurationPlasticRuleCell_parentColumn.htm">ConfigurationPlasticRuleCell.parentColumn</a>, <a href="ConfigurationPlasticRuleColumns_add.htm">ConfigurationPlasticRuleColumns.add</a>, <a href="ConfigurationPlasticRuleColumns_item.htm">ConfigurationPlasticRuleColumns.item</a>, <a href="ConfigurationPlasticRuleColumns_itemById.htm">ConfigurationPlasticRuleColumns.itemById</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2024<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ConfigurationPlasticRuleColumn%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Configurations/ConfigurationPlasticRuleColumn.h&gt;
+returnValue = adsk::fusion::ConfigurationPlasticRuleColumn::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">component Property</h3><p class="api">Returns the Component being modified by this column. This property returns null when the table being queried was obtained from a DataFile object.</p><pre class="api-code">"configurationPlasticRuleColumn_var" is a variable referencing a ConfigurationPlasticRuleColumn object.
+#include &lt;Fusion/Configurations/ConfigurationPlasticRuleColumn.h&gt;
+// Get the value of the property.
+Ptr&lt;Component&gt; propertyValue = configurationPlasticRuleColumn_var-&gt;
+component
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes this column from the table. Property columns cannot be deleted. If the table was obtained from a DataFile, this method will fail.</p><pre class="api-code">"configurationPlasticRuleColumn_var" is a variable referencing a
+ConfigurationPlasticRuleColumn
+object.
+#include &lt;Fusion/Configurations/ConfigurationPlasticRuleColumn.h&gt;
+returnValue = configurationPlasticRuleColumn_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true if the deletion was successful.</p><h3 class="api-member">getCell Method</h3><p class="api">Gets the cell in this column at the specified row. The first row has an index of 0 and does not include the header row.</p><pre class="api-code">"configurationPlasticRuleColumn_var" is a variable referencing a
+ConfigurationPlasticRuleColumn
+object.
+#include &lt;Fusion/Configurations/ConfigurationPlasticRuleColumn.h&gt;
+returnValue = configurationPlasticRuleColumn_var-&gt;
+getCell
+(rowIndex);</pre><p class="api">Return Value: ConfigurationPlasticRuleCell - Returns the specified cell if successful and null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">rowIndex</td><td class="api-list">uinteger</td><td class="api-list">The index of the row to return the cell for. The first row has an index of 0.</td></tr></table><h3 class="api-member">getCellByRowId Method</h3><p class="api">Gets the cell in this column at the row specified by its ID.</p><pre class="api-code">"configurationPlasticRuleColumn_var" is a variable referencing a
+ConfigurationPlasticRuleColumn
+object.
+#include &lt;Fusion/Configurations/ConfigurationPlasticRuleColumn.h&gt;
+returnValue = configurationPlasticRuleColumn_var-&gt;
+getCellByRowId
+(rowId);</pre><p class="api">Return Value: ConfigurationPlasticRuleCell - Returns the specified cell if successful and null if the id is not found.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">rowId</td><td class="api-list">string</td><td class="api-list">The ID of the row to return the cell for.</td></tr></table><h3 class="api-member">getCellByRowName Method</h3><p class="api">Gets the cell in this column at the row specified by its name.</p><pre class="api-code">"configurationPlasticRuleColumn_var" is a variable referencing a
+ConfigurationPlasticRuleColumn
+object.
+#include &lt;Fusion/Configurations/ConfigurationPlasticRuleColumn.h&gt;
+returnValue = configurationPlasticRuleColumn_var-&gt;
+getCellByRowName
+(rowName);</pre><p class="api">Return Value: ConfigurationPlasticRuleCell - Returns the specified cell if successful and null if the name is not found.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">rowName</td><td class="api-list">string</td><td class="api-list">The name of the row to return the cell for.</td></tr></table><h3 class="api-member">id Property</h3><p class="api">The id of the column. This is constant and cannot be changed by the user.</p><pre class="api-code">"configurationPlasticRuleColumn_var" is a variable referencing a ConfigurationPlasticRuleColumn object.
+#include &lt;Fusion/Configurations/ConfigurationPlasticRuleColumn.h&gt;
+// Get the value of the property.
+string propertyValue = configurationPlasticRuleColumn_var-&gt;
+id
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">index Property</h3><p class="api">The index position of this column within the table. The first column is at index 0 and does not include the "Name" column.</p><pre class="api-code">"configurationPlasticRuleColumn_var" is a variable referencing a ConfigurationPlasticRuleColumn object.
+#include &lt;Fusion/Configurations/ConfigurationPlasticRuleColumn.h&gt;
+// Get the value of the property.
+uinteger propertyValue = configurationPlasticRuleColumn_var-&gt;
+index
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"configurationPlasticRuleColumn_var" is a variable referencing a ConfigurationPlasticRuleColumn object.
+#include &lt;Fusion/Configurations/ConfigurationPlasticRuleColumn.h&gt;
+// Get the value of the property.
+boolean propertyValue = configurationPlasticRuleColumn_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"configurationPlasticRuleColumn_var" is a variable referencing a ConfigurationPlasticRuleColumn object.
+#include &lt;Fusion/Configurations/ConfigurationPlasticRuleColumn.h&gt;
+// Get the value of the property.
+string propertyValue = configurationPlasticRuleColumn_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentPlasticRuleTable Property</h3><p class="api">Returns the parent plastic rule table this column is in.</p><pre class="api-code">"configurationPlasticRuleColumn_var" is a variable referencing a ConfigurationPlasticRuleColumn object.
+#include &lt;Fusion/Configurations/ConfigurationPlasticRuleColumn.h&gt;
+// Get the value of the property.
+Ptr&lt;ConfigurationPlasticRuleTable&gt; propertyValue = configurationPlasticRuleColumn_var-&gt;
+parentPlasticRuleTable
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">rowCount Property</h3><p class="api">Returns the number of rows in this column.</p><pre class="api-code">"configurationPlasticRuleColumn_var" is a variable referencing a ConfigurationPlasticRuleColumn object.
+#include &lt;Fusion/Configurations/ConfigurationPlasticRuleColumn.h&gt;
+// Get the value of the property.
+uinteger propertyValue = configurationPlasticRuleColumn_var-&gt;
+rowCount
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">title Property</h3><p class="api">The title of this column. In a top table, this can only be edited for suppression, visibility, parameter, and theme table columns. It behaves as read-only for all other types. In a theme table, the title of all the columns can be modified except for the column that represents the root component for materials and appearances. If the table was obtained from a DataFile, this property behaves as read-only for all the columns.</p><pre class="api-code">"configurationPlasticRuleColumn_var" is a variable referencing a ConfigurationPlasticRuleColumn object.
+#include &lt;Fusion/Configurations/ConfigurationPlasticRuleColumn.h&gt;
+// Get the value of the property.
+string propertyValue = configurationPlasticRuleColumn_var-&gt;
+title
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = configurationPlasticRuleColumn_var-&gt;
+title
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p></body>
+</html>
