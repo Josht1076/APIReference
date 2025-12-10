@@ -1,0 +1,384 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/SceneSettings.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="25/04/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="SceneSettings" name="contextid"/>
+<meta content="SceneSettings Object" name="description"/>
+<meta content="GUID-1DDEAD33-24AF-409C-8568-20589DA2E114" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>SceneSettings Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">SceneSettings Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Render/SceneSettings.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access to all the settings that control how the scene is rendered.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_restoreDefaults.htm">restoreDefaults</a></td>
+<td class="api-list">Changes all of the scene settings to the default values.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_saveAsDefaults.htm">saveAsDefaults</a></td>
+<td class="api-list">Saves all of the scene settings as the default settings for this Design.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_aspectRatio.htm">aspectRatio</a></td>
+<td class="api-list">Gets and sets the aspect ratio of the rendered image. This is not the resolution, but only the aspect ratio. To define a custom aspect ratio set this property to CustomRenderAspectRatio and use the aspectRatioHeight and aspectRatioWidth properties to define any aspect ratio.<br><br/> This is used for in-canvas render to allow you to use a different aspect ratio than what is implicitly defined by the size of the active viewport.<br/><br/> If this is set to CustomRenderAspectRatio, use the aspectRatioHeight and aspectRatioWidth to define the aspect ratio.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_aspectRatioHeight.htm">aspectRatioHeight</a></td>
+<td class="api-list">Gets and sets the height of the aspect ratio of the rendered image. This is not the resolution, but only the aspect ratio. For example specifying the width and height of 4:3 is equivalent to setting 20:15. It's only the ratio of the numbers that matters.<br/><br/> The resolution is determined by the screen resolution when rendering in-canvas or is specified when rendering locally or using the cloud. When setting this property the aspectRatio property is automatically set to CustomRenderAspectRatio.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_aspectRatioWidth.htm">aspectRatioWidth</a></td>
+<td class="api-list">Gets and sets the width of the aspect ratio of the rendered image. This is not the resolution, but only the aspect ratio. For example specifying the width and height of 4:3 is equivalent to setting 20:15. It's only the ratio of the numbers that matters.<br/><br/> The resolution is determined by the screen resolution when rendering in-canvas or is specified when rendering locally or using the cloud. When setting this property the aspectRatio property is automatically set to CustomRenderAspectRatio.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_backgroundEnvironment.htm">backgroundEnvironment</a></td>
+<td class="api-list">Gets and sets the environment to use for the background. The available environments can be accessed through the RenderManager.renderEnvironments property.<br/><br/> Getting this property is only valid when the backgroundType property returns EnvironmentRenderSceneBackgroundType. Setting this property will automatically set the background type to EnvironmentRenderSceneBackgroundType.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_backgroundSolidColor.htm">backgroundSolidColor</a></td>
+<td class="api-list">Gets and sets the background color. When this property is set, it defines the background to be a solid color. The opacity component of the color is ignored.<br/><br/> Getting this property is only valid when the backgroundType property returns SolidColorRenderSceneBackgroundType. Setting this property will automatically set the background type to SolidColorRenderSceneBackgroundType.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_backgroundType.htm">backgroundType</a></td>
+<td class="api-list">Specifies the current type of background being used to render the scene. To change the background type use either the backgroundEnvironment or the backgroundSolidColor to set the environment or color.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_brightness.htm">brightness</a></td>
+<td class="api-list">Gets and sets the brightness or luminance of the scene. This must be a value between 0 and 100,000 and is in lux units.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_cameraExposure.htm">cameraExposure</a></td>
+<td class="api-list">Gets and sets if the exposure of the camera as specified using the "Exposure Value" (EV). Valid values are between -15.0 and 25.0, inclusive.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_cameraFocalLength.htm">cameraFocalLength</a></td>
+<td class="api-list">Gets and sets the focal length of the camera, specified in millimeters. Changing the perspective angle of the camera associated with the active viewport will also change the focal length. Focal length and perspective angle are two different ways to control the same setting.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_cameraType.htm">cameraType</a></td>
+<td class="api-list">Gets and sets the type of camera to use when rendering the scene.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_centerOfFocus.htm">centerOfFocus</a></td>
+<td class="api-list">When the isDepthofFieldEnabled property is true, this point is used as the center of focus. All objects that are the same distance from the camera as this point will be in focus. Any geometry that is closer or further away from the camera than this point will appear more out of focus.<br/><br/> Setting this property has the side effect of setting the isDepthOfField property to true. If the isDepthOfFieldEnabled property is false, the value of this property is ignored.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_depthOfFieldBlur.htm">depthOfFieldBlur</a></td>
+<td class="api-list">Specify the amount of blur to apply to objects outside the center of focus. This must be a value between 0.001 and 2.000 inclusive. The depth of field is defined by using the centerOfFocus property to set the depth where the model is in focus.<br/><br/> Setting this property has the side effect of setting the isDepthOfField property to true. If the isDepthOfFieldEnabled property is false, the value of this property is ignored.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_groundOffset.htm">groundOffset</a></td>
+<td class="api-list">Gets and sets the distance of the ground from the bottom of the model. A value of 0 is at the bottom of the model and a positive value moves the plane up and negative down. The value is in centimeters.<br/><br/> If the isGroundFlattened property is true, and a texture is being applied to the ground, the groundPosition property can be used to change both the offset and location of the texture on the ground. The lightAngle property controls the orientation of the texture.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_groundPosition.htm">groundPosition</a></td>
+<td class="api-list">Gets and sets the origin of the projection of the environment onto the textured ground plane. This lets you position the environment relative to the model. This is only used when the isGroundFlattened property is true.<br/><br/> If the isGroundFlattened property is true, and a texture is being applied to the ground, the groundPosition property can be used to change both the offset and location of the texture on the ground. The lightAngle property controls the orientation of the texture.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_groundRoughness.htm">groundRoughness</a></td>
+<td class="api-list">Gets and sets the roughness of the ground which controls the sharpness of the reflection. This is only used when the isGroundReflections property is true. This is a value between 0 and 1, where 0 is smooth and 1 is rough.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_isDepthOfFieldEnabled.htm">isDepthOfFieldEnabled</a></td>
+<td class="api-list">Gets and sets if the depth of field option is enabled. When setting this to true, use the centerOfFocus and depthOfFieldBlur properties to specify how the depth of field is defined.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_isGroundDisplayed.htm">isGroundDisplayed</a></td>
+<td class="api-list">Gets and sets if the ground plane is displayed. The plane allows shadows on the ground and reflections if the isGroundReflections property is true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_isGroundFlattened.htm">isGroundFlattened</a></td>
+<td class="api-list">Gets and sets if the ground plane is "textured" where the environment image is mapped as a texture.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_isGroundReflections.htm">isGroundReflections</a></td>
+<td class="api-list">Gets and sets if objects are reflected on the ground plane.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_lightAngle.htm">lightAngle</a></td>
+<td class="api-list">Specifies the rotation of the lighting. The angle is specified in Radians.<br/><br/> When the isGroundFlattened property is true, this also controls the angle of the texture that is applied to the ground. When the background is an environment, this controls the rotation of the environment relative to the model.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SceneSettings_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="RenderManager_sceneSettings.htm">RenderManager.sceneSettings</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version May 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(SceneSettings%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">aspectRatio Property</h3><p class="api">Gets and sets the aspect ratio of the rendered image. This is not the resolution, but only the aspect ratio. To define a custom aspect ratio set this property to CustomRenderAspectRatio and use the aspectRatioHeight and aspectRatioWidth properties to define any aspect ratio. This is used for in-canvas render to allow you to use a different aspect ratio than what is implicitly defined by the size of the active viewport. If this is set to CustomRenderAspectRatio, use the aspectRatioHeight and aspectRatioWidth to define the aspect ratio.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+RenderAspectRatios propertyValue = sceneSettings_var-&gt;
+aspectRatio
+();
+// Set the value of the property, where value_var is a RenderAspectRatios.
+bool returnValue = sceneSettings_var-&gt;
+aspectRatio
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">aspectRatioHeight Property</h3><p class="api">Gets and sets the height of the aspect ratio of the rendered image. This is not the resolution, but only the aspect ratio. For example specifying the width and height of 4:3 is equivalent to setting 20:15. It's only the ratio of the numbers that matters. The resolution is determined by the screen resolution when rendering in-canvas or is specified when rendering locally or using the cloud. When setting this property the aspectRatio property is automatically set to CustomRenderAspectRatio.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+integer propertyValue = sceneSettings_var-&gt;
+aspectRatioHeight
+();
+// Set the value of the property, where value_var is an integer.
+bool returnValue = sceneSettings_var-&gt;
+aspectRatioHeight
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an integer.</p><h3 class="api-member">aspectRatioWidth Property</h3><p class="api">Gets and sets the width of the aspect ratio of the rendered image. This is not the resolution, but only the aspect ratio. For example specifying the width and height of 4:3 is equivalent to setting 20:15. It's only the ratio of the numbers that matters. The resolution is determined by the screen resolution when rendering in-canvas or is specified when rendering locally or using the cloud. When setting this property the aspectRatio property is automatically set to CustomRenderAspectRatio.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+integer propertyValue = sceneSettings_var-&gt;
+aspectRatioWidth
+();
+// Set the value of the property, where value_var is an integer.
+bool returnValue = sceneSettings_var-&gt;
+aspectRatioWidth
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an integer.</p><h3 class="api-member">backgroundEnvironment Property</h3><p class="api">Gets and sets the environment to use for the background. The available environments can be accessed through the RenderManager.renderEnvironments property. Getting this property is only valid when the backgroundType property returns EnvironmentRenderSceneBackgroundType. Setting this property will automatically set the background type to EnvironmentRenderSceneBackgroundType.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+Ptr&lt;RenderEnvironment&gt; propertyValue = sceneSettings_var-&gt;
+backgroundEnvironment
+();
+// Set the value of the property, where value_var is a RenderEnvironment.
+bool returnValue = sceneSettings_var-&gt;
+backgroundEnvironment
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">backgroundSolidColor Property</h3><p class="api">Gets and sets the background color. When this property is set, it defines the background to be a solid color. The opacity component of the color is ignored. Getting this property is only valid when the backgroundType property returns SolidColorRenderSceneBackgroundType. Setting this property will automatically set the background type to SolidColorRenderSceneBackgroundType.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+Ptr&lt;Color&gt; propertyValue = sceneSettings_var-&gt;
+backgroundSolidColor
+();
+// Set the value of the property, where value_var is a Color.
+bool returnValue = sceneSettings_var-&gt;
+backgroundSolidColor
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">backgroundType Property</h3><p class="api">Specifies the current type of background being used to render the scene. To change the background type use either the backgroundEnvironment or the backgroundSolidColor to set the environment or color.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+RenderSceneBackgroundTypes propertyValue = sceneSettings_var-&gt;
+backgroundType
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">brightness Property</h3><p class="api">Gets and sets the brightness or luminance of the scene. This must be a value between 0 and 100,000 and is in lux units.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+double propertyValue = sceneSettings_var-&gt;
+brightness
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = sceneSettings_var-&gt;
+brightness
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">cameraExposure Property</h3><p class="api">Gets and sets if the exposure of the camera as specified using the "Exposure Value" (EV). Valid values are between -15.0 and 25.0, inclusive.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+double propertyValue = sceneSettings_var-&gt;
+cameraExposure
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = sceneSettings_var-&gt;
+cameraExposure
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">cameraFocalLength Property</h3><p class="api">Gets and sets the focal length of the camera, specified in millimeters. Changing the perspective angle of the camera associated with the active viewport will also change the focal length. Focal length and perspective angle are two different ways to control the same setting.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+double propertyValue = sceneSettings_var-&gt;
+cameraFocalLength
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = sceneSettings_var-&gt;
+cameraFocalLength
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">cameraType Property</h3><p class="api">Gets and sets the type of camera to use when rendering the scene.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+CameraTypes propertyValue = sceneSettings_var-&gt;
+cameraType
+();
+// Set the value of the property, where value_var is a CameraTypes.
+bool returnValue = sceneSettings_var-&gt;
+cameraType
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">centerOfFocus Property</h3><p class="api">When the isDepthofFieldEnabled property is true, this point is used as the center of focus. All objects that are the same distance from the camera as this point will be in focus. Any geometry that is closer or further away from the camera than this point will appear more out of focus. Setting this property has the side effect of setting the isDepthOfField property to true. If the isDepthOfFieldEnabled property is false, the value of this property is ignored.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = sceneSettings_var-&gt;
+centerOfFocus
+();
+// Set the value of the property, where value_var is a Point3D.
+bool returnValue = sceneSettings_var-&gt;
+centerOfFocus
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+returnValue = adsk::fusion::SceneSettings::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">depthOfFieldBlur Property</h3><p class="api">Specify the amount of blur to apply to objects outside the center of focus. This must be a value between 0.001 and 2.000 inclusive. The depth of field is defined by using the centerOfFocus property to set the depth where the model is in focus. Setting this property has the side effect of setting the isDepthOfField property to true. If the isDepthOfFieldEnabled property is false, the value of this property is ignored.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+double propertyValue = sceneSettings_var-&gt;
+depthOfFieldBlur
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = sceneSettings_var-&gt;
+depthOfFieldBlur
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">groundOffset Property</h3><p class="api">Gets and sets the distance of the ground from the bottom of the model. A value of 0 is at the bottom of the model and a positive value moves the plane up and negative down. The value is in centimeters. If the isGroundFlattened property is true, and a texture is being applied to the ground, the groundPosition property can be used to change both the offset and location of the texture on the ground. The lightAngle property controls the orientation of the texture.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+double propertyValue = sceneSettings_var-&gt;
+groundOffset
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = sceneSettings_var-&gt;
+groundOffset
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">groundPosition Property</h3><p class="api">Gets and sets the origin of the projection of the environment onto the textured ground plane. This lets you position the environment relative to the model. This is only used when the isGroundFlattened property is true. If the isGroundFlattened property is true, and a texture is being applied to the ground, the groundPosition property can be used to change both the offset and location of the texture on the ground. The lightAngle property controls the orientation of the texture.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = sceneSettings_var-&gt;
+groundPosition
+();
+// Set the value of the property, where value_var is a Point3D.
+bool returnValue = sceneSettings_var-&gt;
+groundPosition
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">groundRoughness Property</h3><p class="api">Gets and sets the roughness of the ground which controls the sharpness of the reflection. This is only used when the isGroundReflections property is true. This is a value between 0 and 1, where 0 is smooth and 1 is rough.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+double propertyValue = sceneSettings_var-&gt;
+groundRoughness
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = sceneSettings_var-&gt;
+groundRoughness
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">isDepthOfFieldEnabled Property</h3><p class="api">Gets and sets if the depth of field option is enabled. When setting this to true, use the centerOfFocus and depthOfFieldBlur properties to specify how the depth of field is defined.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+boolean propertyValue = sceneSettings_var-&gt;
+isDepthOfFieldEnabled
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sceneSettings_var-&gt;
+isDepthOfFieldEnabled
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isGroundDisplayed Property</h3><p class="api">Gets and sets if the ground plane is displayed. The plane allows shadows on the ground and reflections if the isGroundReflections property is true.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+boolean propertyValue = sceneSettings_var-&gt;
+isGroundDisplayed
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sceneSettings_var-&gt;
+isGroundDisplayed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isGroundFlattened Property</h3><p class="api">Gets and sets if the ground plane is "textured" where the environment image is mapped as a texture.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+boolean propertyValue = sceneSettings_var-&gt;
+isGroundFlattened
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sceneSettings_var-&gt;
+isGroundFlattened
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isGroundReflections Property</h3><p class="api">Gets and sets if objects are reflected on the ground plane.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+boolean propertyValue = sceneSettings_var-&gt;
+isGroundReflections
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sceneSettings_var-&gt;
+isGroundReflections
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+boolean propertyValue = sceneSettings_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">lightAngle Property</h3><p class="api">Specifies the rotation of the lighting. The angle is specified in Radians. When the isGroundFlattened property is true, this also controls the angle of the texture that is applied to the ground. When the background is an environment, this controls the rotation of the environment relative to the model.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+double propertyValue = sceneSettings_var-&gt;
+lightAngle
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = sceneSettings_var-&gt;
+lightAngle
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"sceneSettings_var" is a variable referencing a SceneSettings object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+// Get the value of the property.
+string propertyValue = sceneSettings_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">restoreDefaults Method</h3><p class="api">Changes all of the scene settings to the default values.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a
+SceneSettings
+object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+returnValue = sceneSettings_var-&gt;
+restoreDefaults
+();</pre><p class="api">Return Value: boolean - Returns true if setting to the default settings was successful.</p><h3 class="api-member">saveAsDefaults Method</h3><p class="api">Saves all of the scene settings as the default settings for this Design.</p><pre class="api-code">"sceneSettings_var" is a variable referencing a
+SceneSettings
+object.
+#include &lt;Fusion/Render/SceneSettings.h&gt;
+returnValue = sceneSettings_var-&gt;
+saveAsDefaults
+();</pre><p class="api">Return Value: boolean - Returns true if saving the defaults was successful.</p></body>
+</html>

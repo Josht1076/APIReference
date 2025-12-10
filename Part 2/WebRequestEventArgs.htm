@@ -1,0 +1,173 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/WebRequestEventArgs.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="20/5/2016" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="WebRequestEventArgs" name="contextid"/>
+<meta content="WebRequestEventArgs Object" name="description"/>
+<meta content="GUID-1B50372E-2F5A-4372-A531-EF1879FD5187" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>WebRequestEventArgs Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">WebRequestEventArgs Object
+			</h1>
+              Derived from: <a href="EventArgs.htm">EventArgs</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Application/WebRequestEventArgs.h&gt;<h2 class="api">
+          Description
+        </h2>The WebRequestEventArgs provides information associated with a web request event. These are events fired as a result of a Fusion protocol handler being invoked from a web page. Note that some properties are not available on every event.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="WebRequestEventArgs_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="WebRequestEventArgs_file.htm">file</a></td>
+<td class="api-list">Returns the value specified as the "file" parameter in the URL.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="WebRequestEventArgs_firingEvent.htm">firingEvent</a></td>
+<td class="api-list">The event that the firing is in response to.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="WebRequestEventArgs_id.htm">id</a></td>
+<td class="api-list">Returns the value specified as the "id" parameter in the URL. This will be decoded. It can be an empty string if the "id" parameter was not specified in the URL.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="WebRequestEventArgs_isCanceled.htm">isCanceled</a></td>
+<td class="api-list">Used during the insertingFromURL and openingFromURL events to get or set if the insert or open should be allowed to continue. This defaults to false, which will allow the operation to continue as normal. This property should be ignored for all events besides the insertingFromURL and openingFromURL events.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="WebRequestEventArgs_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="WebRequestEventArgs_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="WebRequestEventArgs_occurrenceOrDocument.htm">occurrenceOrDocument</a></td>
+<td class="api-list">Used during the insertedFromURL or openedFromURL events and returns the Document (openedFromURL) or Occurrence (insertedFromURL) that was just created.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="WebRequestEventArgs_privateInfo.htm">privateInfo</a></td>
+<td class="api-list">Returns the value specified as the "privateInfo" parameter in the URL. This will be decoded and can be an empty string if the "privateInfo" parameter was not specified in the URL.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="WebRequestEventArgs_properties.htm">properties</a></td>
+<td class="api-list">Returns the value specified as the "properties" parameter in the URL. This will be decoded and should be in JSON format if it was properly provided by the web page. It can be an empty string if the "properties" parameter was not specified in the URL.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version May 2016<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(WebRequestEventArgs%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Application/WebRequestEventArgs.h&gt;
+returnValue = adsk::core::WebRequestEventArgs::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">file Property</h3><p class="api">Returns the value specified as the "file" parameter in the URL.</p><pre class="api-code">"webRequestEventArgs_var" is a variable referencing a WebRequestEventArgs object.
+#include &lt;Core/Application/WebRequestEventArgs.h&gt;
+// Get the value of the property.
+string propertyValue = webRequestEventArgs_var-&gt;
+file
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">firingEvent Property</h3><p class="api">The event that the firing is in response to.</p><pre class="api-code">"webRequestEventArgs_var" is a variable referencing a WebRequestEventArgs object.
+#include &lt;Core/Application/WebRequestEventArgs.h&gt;
+// Get the value of the property.
+Ptr&lt;Event&gt; propertyValue = webRequestEventArgs_var-&gt;
+firingEvent
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">id Property</h3><p class="api">Returns the value specified as the "id" parameter in the URL. This will be decoded. It can be an empty string if the "id" parameter was not specified in the URL.</p><pre class="api-code">"webRequestEventArgs_var" is a variable referencing a WebRequestEventArgs object.
+#include &lt;Core/Application/WebRequestEventArgs.h&gt;
+// Get the value of the property.
+string propertyValue = webRequestEventArgs_var-&gt;
+id
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">isCanceled Property</h3><p class="api">Used during the insertingFromURL and openingFromURL events to get or set if the insert or open should be allowed to continue. This defaults to false, which will allow the operation to continue as normal. This property should be ignored for all events besides the insertingFromURL and openingFromURL events.</p><pre class="api-code">"webRequestEventArgs_var" is a variable referencing a WebRequestEventArgs object.
+#include &lt;Core/Application/WebRequestEventArgs.h&gt;
+// Get the value of the property.
+boolean propertyValue = webRequestEventArgs_var-&gt;
+isCanceled
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = webRequestEventArgs_var-&gt;
+isCanceled
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"webRequestEventArgs_var" is a variable referencing a WebRequestEventArgs object.
+#include &lt;Core/Application/WebRequestEventArgs.h&gt;
+// Get the value of the property.
+boolean propertyValue = webRequestEventArgs_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"webRequestEventArgs_var" is a variable referencing a WebRequestEventArgs object.
+#include &lt;Core/Application/WebRequestEventArgs.h&gt;
+// Get the value of the property.
+string propertyValue = webRequestEventArgs_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">occurrenceOrDocument Property</h3><p class="api">Used during the insertedFromURL or openedFromURL events and returns the Document (openedFromURL) or Occurrence (insertedFromURL) that was just created.</p><pre class="api-code">"webRequestEventArgs_var" is a variable referencing a WebRequestEventArgs object.
+#include &lt;Core/Application/WebRequestEventArgs.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = webRequestEventArgs_var-&gt;
+occurrenceOrDocument
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">privateInfo Property</h3><p class="api">Returns the value specified as the "privateInfo" parameter in the URL. This will be decoded and can be an empty string if the "privateInfo" parameter was not specified in the URL.</p><pre class="api-code">"webRequestEventArgs_var" is a variable referencing a WebRequestEventArgs object.
+#include &lt;Core/Application/WebRequestEventArgs.h&gt;
+// Get the value of the property.
+string propertyValue = webRequestEventArgs_var-&gt;
+privateInfo
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">properties Property</h3><p class="api">Returns the value specified as the "properties" parameter in the URL. This will be decoded and should be in JSON format if it was properly provided by the web page. It can be an empty string if the "properties" parameter was not specified in the URL.</p><pre class="api-code">"webRequestEventArgs_var" is a variable referencing a WebRequestEventArgs object.
+#include &lt;Core/Application/WebRequestEventArgs.h&gt;
+// Get the value of the property.
+string propertyValue = webRequestEventArgs_var-&gt;
+properties
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

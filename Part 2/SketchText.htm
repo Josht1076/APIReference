@@ -1,0 +1,477 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/SketchText.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="3/2/2015" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="SketchText" name="contextid"/>
+<meta content="SketchText Object" name="description"/>
+<meta content="GUID-265d4bb3-2e68-4edf-bd57-bb4d4204beb0" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>SketchText Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">SketchText Object
+			</h1>
+              Derived from: <a href="SketchEntity.htm">SketchEntity</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Sketch/SketchText.h&gt;<h2 class="api">
+          Description
+        </h2>Text in a sketch.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_asCurves.htm">asCurves</a></td>
+<td class="api-list">Returns the underlying curves that define the outline of the text. Calling this does not affect the SketchText and does not create any new sketch geometry but returns the geometrical definition of the sketch outline.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_createForAssemblyContext.htm">createForAssemblyContext</a></td>
+<td class="api-list">Creates a proxy object for the SketchText object that represents the SketchText object in the context of an assembly. The context is defined by the input occurrence.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes the entity from the sketch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_explode.htm">explode</a></td>
+<td class="api-list">Explodes the SketchText into a set of curves. The original SketchText is deleted as a result of calling this.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_redefineAsAlongPath.htm">redefineAsAlongPath</a></td>
+<td class="api-list">Sets this SketchTextInput to define text that follows along a specified path.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_redefineAsFitOnPath.htm">redefineAsFitOnPath</a></td>
+<td class="api-list">Sets this SketchTextInput to define text that fits along a specified path. Fitting on a path will space the characters so the text fits along the entire length of the path entity.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_angle.htm">angle</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Gets and sets the angle of the text relative to the x-axis of the x-y plane of the sketch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_assemblyContext.htm">assemblyContext</a></td>
+<td class="api-list">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_attributes.htm">attributes</a></td>
+<td class="api-list">Returns the collection of attributes associated with this face.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_boundaryLines.htm">boundaryLines</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Returns the four sketch lines that define the boundary of the sketch text. By adding constraints to these lines you can associatively control the size, position and angle of the sketch text.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_boundingBox.htm">boundingBox</a></td>
+<td class="api-list">Returns the bounding box of the entity in sketch space.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_definition.htm">definition</a></td>
+<td class="api-list">Gets the definition that is currently used to specify how the sketch text is defined.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_entityToken.htm">entityToken</a></td>
+<td class="api-list">Returns a token for the SketchEntity object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same sketch entity.<br><br/> When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_fontName.htm">fontName</a></td>
+<td class="api-list">Gets and sets the name of the font to use.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_geometricConstraints.htm">geometricConstraints</a></td>
+<td class="api-list">Returns the sketch constraints that are attached to this curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_height.htm">height</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> This property has been retired and you should instead use the heightParameter property to access the parameter controlling the text height and use its properties to get and set the height.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_heightParameter.htm">heightParameter</a></td>
+<td class="api-list">Returns the model parameter that was created when the sketch text was created that controls the height of the sketch text. To edit the height, you can use the expression and value properties of the returned ModelParameter object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_is2D.htm">is2D</a></td>
+<td class="api-list">Indicates if this curve lies entirely on the sketch x-y plane.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_isDeletable.htm">isDeletable</a></td>
+<td class="api-list">Indicates if this sketch entity can be deleted. There are cases, especially with sketch points where another entity is dependent on an entity so deleting it is not allowed. For example, you can't delete the center point of circle by itself but deleting the circle will delete the point. The same is true for the end points of a line.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_isFixed.htm">isFixed</a></td>
+<td class="api-list">Indicates if this geometry is "fixed".</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_isFullyConstrained.htm">isFullyConstrained</a></td>
+<td class="api-list">Indicates if this sketch entity is fully constrained.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_isHorizontalFlip.htm">isHorizontalFlip</a></td>
+<td class="api-list">Gets and sets if the text is flipped horizontally.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_isLinked.htm">isLinked</a></td>
+<td class="api-list">Indicates if this sketch entity was created by a projection, inclusion, or driven by an API script. If this returns true, then the entity is presented to the user as not editable and with a 'break link' command available.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_isReference.htm">isReference</a></td>
+<td class="api-list">Indicates if this geometry is a reference. Changing this property from true to false removes the reference. This property can not be set to true if it is already false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_isVerticalFlip.htm">isVerticalFlip</a></td>
+<td class="api-list">Gets and sets if the text is flipped vertically.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_isVisible.htm">isVisible</a></td>
+<td class="api-list">When a sketch is created, geometry is sometimes automatically added to the sketch. For example a sketch point that references the origin point is always included and if a face was selected to create the sketch on, geometry from the face is also included. This automatically created geometry behaves in a special way in that it is invisible but is available for selection and it also participates in profile calculations. It's not possible to make them visible but they can be deleted and they can be used for any other standard sketch operation.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_nativeObject.htm">nativeObject</a></td>
+<td class="api-list">The NativeObject is the object outside the context of an assembly and in the context of it's parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_parentSketch.htm">parentSketch</a></td>
+<td class="api-list">Returns the parent sketch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_position.htm">position</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Gets and sets the position of the text on the x-y plane of the sketch. The text must lie on the x-y plane so the Z component of the point is ignored and always treated as zero.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_referencedEntity.htm">referencedEntity</a></td>
+<td class="api-list">Returns the referenced entity in the case where IsReference is true. However, this property can also return null when IsReference is true in the case where the reference is not parametric.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_sketchDimensions.htm">sketchDimensions</a></td>
+<td class="api-list">Returns the sketch dimensions that are attached to this curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_text.htm">text</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> This property has been retired and you should now use the textValue and expression properties of the Parameter object associated with this SketchText, which you can obtain by using the SketchText.textParameter property.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_textParameter.htm">textParameter</a></td>
+<td class="api-list">Returns the model parameter that was created when the sketch text was created that controls the contents of the sketch text. To edit the text, you can use the expression and textValue properties of the returned ModelParameter object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchText_textStyle.htm">textStyle</a></td>
+<td class="api-list">Gets and sets the text style to apply to the entire text. This is a bitwise enum so styles can be combined to apply multiple styles. For example you can apply bold and underline.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="AlongPathTextDefinition_parentSketchText.htm">AlongPathTextDefinition.parentSketchText</a>, <a href="FitOnPathTextDefintion_parentSketchText.htm">FitOnPathTextDefintion.parentSketchText</a>, <a href="MultiLineTextDefinition_parentSketchText.htm">MultiLineTextDefinition.parentSketchText</a>, <a href="SketchText_createForAssemblyContext.htm">SketchText.createForAssemblyContext</a>, <a href="SketchText_nativeObject.htm">SketchText.nativeObject</a>, <a href="SketchTextDefinition_parentSketchText.htm">SketchTextDefinition.parentSketchText</a>, <a href="SketchTexts_add.htm">SketchTexts.add</a>, <a href="SketchTexts_item.htm">SketchTexts.item</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextSample_Sample.htm">Sketch Text API Sample</a></td>
+<td class="api-list">Demonstrates creating sketch text by creating both mult-line text and text along a curve.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version March 2015<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(SketchText%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">angle Property</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Gets and sets the angle of the text relative to the x-axis of the x-y plane of the sketch.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+double propertyValue = sketchText_var-&gt;
+angle
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = sketchText_var-&gt;
+angle
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">asCurves Method</h3><p class="api">Returns the underlying curves that define the outline of the text. Calling this does not affect the SketchText and does not create any new sketch geometry but returns the geometrical definition of the sketch outline.</p><pre class="api-code">"sketchText_var" is a variable referencing a
+SketchText
+object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+returnValue = sketchText_var-&gt;
+asCurves
+();</pre><p class="api">Return Value: Curve3D [] - Returns an array of transient curves that represent the outline of the text.</p><h3 class="api-member">assemblyContext Property</h3><p class="api">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = sketchText_var-&gt;
+assemblyContext
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">attributes Property</h3><p class="api">Returns the collection of attributes associated with this face.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+Ptr&lt;Attributes&gt; propertyValue = sketchText_var-&gt;
+attributes
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">boundaryLines Property</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Returns the four sketch lines that define the boundary of the sketch text. By adding constraints to these lines you can associatively control the size, position and angle of the sketch text.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+Ptr&lt;SketchLineList&gt; propertyValue = sketchText_var-&gt;
+boundaryLines
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">boundingBox Property</h3><p class="api">Returns the bounding box of the entity in sketch space.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+Ptr&lt;BoundingBox3D&gt; propertyValue = sketchText_var-&gt;
+boundingBox
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+returnValue = adsk::fusion::SketchText::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">createForAssemblyContext Method</h3><p class="api">Creates a proxy object for the SketchText object that represents the SketchText object in the context of an assembly. The context is defined by the input occurrence.</p><pre class="api-code">"sketchText_var" is a variable referencing a
+SketchText
+object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+returnValue = sketchText_var-&gt;
+createForAssemblyContext
+(occurrence);</pre><p class="api">Return Value: SketchText - Returns the proxy object or null if this isn't the NativeObject.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">occurrence</td><td class="api-list">Occurrence</td><td class="api-list">The occurrence that defines the context to create the proxy in.</td></tr></table><h3 class="api-member">definition Property</h3><p class="api">Gets the definition that is currently used to specify how the sketch text is defined.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+Ptr&lt;SketchTextDefinition&gt; propertyValue = sketchText_var-&gt;
+definition
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes the entity from the sketch.</p><pre class="api-code">"sketchText_var" is a variable referencing a
+SketchText
+object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+returnValue = sketchText_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true is the delete was successful.</p><h3 class="api-member">entityToken Property</h3><p class="api">Returns a token for the SketchEntity object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same sketch entity. When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+string propertyValue = sketchText_var-&gt;
+entityToken
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">explode Method</h3><p class="api">Explodes the SketchText into a set of curves. The original SketchText is deleted as a result of calling this.</p><pre class="api-code">"sketchText_var" is a variable referencing a
+SketchText
+object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+returnValue = sketchText_var-&gt;
+explode
+();</pre><p class="api">Return Value: SketchCurve [] - Returns an array of the sketch curves that were created that represent the text.</p><h3 class="api-member">fontName Property</h3><p class="api">Gets and sets the name of the font to use.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+string propertyValue = sketchText_var-&gt;
+fontName
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = sketchText_var-&gt;
+fontName
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">geometricConstraints Property</h3><p class="api">Returns the sketch constraints that are attached to this curve.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+Ptr&lt;GeometricConstraintList&gt; propertyValue = sketchText_var-&gt;
+geometricConstraints
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">height Property</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. This property has been retired and you should instead use the heightParameter property to access the parameter controlling the text height and use its properties to get and set the height.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+double propertyValue = sketchText_var-&gt;
+height
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = sketchText_var-&gt;
+height
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">heightParameter Property</h3><p class="api">Returns the model parameter that was created when the sketch text was created that controls the height of the sketch text. To edit the height, you can use the expression and value properties of the returned ModelParameter object.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+Ptr&lt;ModelParameter&gt; propertyValue = sketchText_var-&gt;
+heightParameter
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">is2D Property</h3><p class="api">Indicates if this curve lies entirely on the sketch x-y plane.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchText_var-&gt;
+is2D
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isDeletable Property</h3><p class="api">Indicates if this sketch entity can be deleted. There are cases, especially with sketch points where another entity is dependent on an entity so deleting it is not allowed. For example, you can't delete the center point of circle by itself but deleting the circle will delete the point. The same is true for the end points of a line.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchText_var-&gt;
+isDeletable
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isFixed Property</h3><p class="api">Indicates if this geometry is "fixed".</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchText_var-&gt;
+isFixed
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sketchText_var-&gt;
+isFixed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isFullyConstrained Property</h3><p class="api">Indicates if this sketch entity is fully constrained.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchText_var-&gt;
+isFullyConstrained
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isHorizontalFlip Property</h3><p class="api">Gets and sets if the text is flipped horizontally.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchText_var-&gt;
+isHorizontalFlip
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sketchText_var-&gt;
+isHorizontalFlip
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isLinked Property</h3><p class="api">Indicates if this sketch entity was created by a projection, inclusion, or driven by an API script. If this returns true, then the entity is presented to the user as not editable and with a 'break link' command available.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchText_var-&gt;
+isLinked
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isReference Property</h3><p class="api">Indicates if this geometry is a reference. Changing this property from true to false removes the reference. This property can not be set to true if it is already false.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchText_var-&gt;
+isReference
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sketchText_var-&gt;
+isReference
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchText_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isVerticalFlip Property</h3><p class="api">Gets and sets if the text is flipped vertically.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchText_var-&gt;
+isVerticalFlip
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sketchText_var-&gt;
+isVerticalFlip
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isVisible Property</h3><p class="api">When a sketch is created, geometry is sometimes automatically added to the sketch. For example a sketch point that references the origin point is always included and if a face was selected to create the sketch on, geometry from the face is also included. This automatically created geometry behaves in a special way in that it is invisible but is available for selection and it also participates in profile calculations. It's not possible to make them visible but they can be deleted and they can be used for any other standard sketch operation.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchText_var-&gt;
+isVisible
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">nativeObject Property</h3><p class="api">The NativeObject is the object outside the context of an assembly and in the context of it's parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+Ptr&lt;SketchText&gt; propertyValue = sketchText_var-&gt;
+nativeObject
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+string propertyValue = sketchText_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentSketch Property</h3><p class="api">Returns the parent sketch.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+Ptr&lt;Sketch&gt; propertyValue = sketchText_var-&gt;
+parentSketch
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">position Property</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Gets and sets the position of the text on the x-y plane of the sketch. The text must lie on the x-y plane so the Z component of the point is ignored and always treated as zero.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = sketchText_var-&gt;
+position
+();
+// Set the value of the property, where value_var is a Point3D.
+bool returnValue = sketchText_var-&gt;
+position
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">redefineAsAlongPath Method</h3><p class="api">Sets this SketchTextInput to define text that follows along a specified path.</p><pre class="api-code">"sketchText_var" is a variable referencing a
+SketchText
+object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+returnValue = sketchText_var-&gt;
+redefineAsAlongPath
+(path, isAbovePath, horizontalAlignment, characterSpacing);</pre><p class="api">Return Value: boolean - Returns true if the setting the definition was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">path</td><td class="api-list">Base</td><td class="api-list">The entity that defines the path for the text. This can be a SketchCurve or BRepEdge object.</td></tr><tr><td class="api-list">isAbovePath</td><td class="api-list">boolean</td><td class="api-list">Indicates if the text should be positioned above or below the path entity.</td></tr><tr><td class="api-list">horizontalAlignment</td><td class="api-list">HorizontalAlignments</td><td class="api-list">Specifies the horizontal alignment of the text with respect to the path curve.</td></tr><tr><td class="api-list">characterSpacing</td><td class="api-list">double</td><td class="api-list">The spacing between the characters. This is an additional spacing to apply that is defined as a percentage of the default spacing. A spacing of 0 indicates no additional spacing. A spacing of 50 indicates to use the default plus 50% of the default.</td></tr></table><h3 class="api-member">redefineAsFitOnPath Method</h3><p class="api">Sets this SketchTextInput to define text that fits along a specified path. Fitting on a path will space the characters so the text fits along the entire length of the path entity.</p><pre class="api-code">"sketchText_var" is a variable referencing a
+SketchText
+object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+returnValue = sketchText_var-&gt;
+redefineAsFitOnPath
+(path, isAbovePath);</pre><p class="api">Return Value: boolean - Returns true if the setting the definition was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">path</td><td class="api-list">Base</td><td class="api-list">The entity that defines the path for the text. This can be a SketchCurve or BRepEdge object.</td></tr><tr><td class="api-list">isAbovePath</td><td class="api-list">boolean</td><td class="api-list">Indicates if the text should be positioned above or below the path entity.</td></tr></table><h3 class="api-member">referencedEntity Property</h3><p class="api">Returns the referenced entity in the case where IsReference is true. However, this property can also return null when IsReference is true in the case where the reference is not parametric.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = sketchText_var-&gt;
+referencedEntity
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">sketchDimensions Property</h3><p class="api">Returns the sketch dimensions that are attached to this curve.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+Ptr&lt;SketchDimensionList&gt; propertyValue = sketchText_var-&gt;
+sketchDimensions
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">text Property</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. This property has been retired and you should now use the textValue and expression properties of the Parameter object associated with this SketchText, which you can obtain by using the SketchText.textParameter property.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+string propertyValue = sketchText_var-&gt;
+text
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = sketchText_var-&gt;
+text
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">textParameter Property</h3><p class="api">Returns the model parameter that was created when the sketch text was created that controls the contents of the sketch text. To edit the text, you can use the expression and textValue properties of the returned ModelParameter object.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+Ptr&lt;ModelParameter&gt; propertyValue = sketchText_var-&gt;
+textParameter
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">textStyle Property</h3><p class="api">Gets and sets the text style to apply to the entire text. This is a bitwise enum so styles can be combined to apply multiple styles. For example you can apply bold and underline.</p><pre class="api-code">"sketchText_var" is a variable referencing a SketchText object.
+#include &lt;Fusion/Sketch/SketchText.h&gt;
+// Get the value of the property.
+TextStyles propertyValue = sketchText_var-&gt;
+textStyle
+();
+// Set the value of the property, where value_var is a TextStyles.
+bool returnValue = sketchText_var-&gt;
+textStyle
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

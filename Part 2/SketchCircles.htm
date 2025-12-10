@@ -1,0 +1,234 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/SketchCircles.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="SketchCircles" name="contextid"/>
+<meta content="SketchCircles Object" name="description"/>
+<meta content="GUID-15d12c6c-e604-488a-8f62-8fa1547c653c" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>SketchCircles Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">SketchCircles Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Sketch/SketchCircles.h&gt;<h2 class="api">
+          Description
+        </h2>The collection of circles in a sketch. This provides access to the existing circles and supports the methods to create new circles.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCircles_addByCenterRadius.htm">addByCenterRadius</a></td>
+<td class="api-list">Creates a sketch circle that is always parallel to the x-y plane of the sketch and is centered at the specified point.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCircles_addByThreePoints.htm">addByThreePoints</a></td>
+<td class="api-list">Creates a sketch circle that passes through the three points. The three points must lie on the x-y plane of the sketch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCircles_addByThreeTangents.htm">addByThreeTangents</a></td>
+<td class="api-list">Creates a sketch circle that is tangent to the three input lines. The three lines must lie on the x-y plane of the sketch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCircles_addByTwoPoints.htm">addByTwoPoints</a></td>
+<td class="api-list">Creates a sketch circle where the circle passes through the two points and the distance between the two points is the diameter of the circle.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCircles_addByTwoTangents.htm">addByTwoTangents</a></td>
+<td class="api-list">Creates a sketch circle that is tangent to the two input lines. The two lines must lie on the x-y plane of the sketch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCircles_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCircles_item.htm">item</a></td>
+<td class="api-list">Function that returns the specified sketch circle using an index into the collection.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCircles_count.htm">count</a></td>
+<td class="api-list">Returns the number of circles in the sketch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCircles_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCircles_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="SketchCurves_sketchCircles.htm">SketchCurves.sketchCircles</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CircleByCenterRadius_Sample.htm">Create circle by center and radius API Sample</a></td>
+<td class="api-list">Demonstrates creating a sketch circle by the center and radius.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CreateCcircleBy3Tangents_Sample.htm">Create Circle By 3 Tangents API Sample</a></td>
+<td class="api-list">Creates three lines and then draws a circle that is tangent to the lines. It then creates tangent constraints to maintain that relationship.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="LoftFeatureSample_Sample.htm">Loft Feature API Sample</a></td>
+<td class="api-list">Demonstrates creating a new loft feature.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="PatchFeatureSample_Sample.htm">Patch Feature API Sample</a></td>
+<td class="api-list">Demonstrates creating a new patch feature.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SimpleExtrusionSample_Sample.htm">Simple Extrusion Sample</a></td>
+<td class="api-list">Creates a new extrusion feature, resulting in a new component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SimpleRevolveFeatureSample_Sample.htm">Simple Revolve Feature Sample</a></td>
+<td class="api-list">Creates a new revolve feature, resulting in a new component.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCircles_addByCenterRadius_Sample.htm">SketchCircles.addByCenterRadius</a></td>
+<td class="api-list">Demonstrates the SketchCircles.addByCenterRadius method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCircles_addByThreePoints_Sample.htm">SketchCircles.addByThreePoints</a></td>
+<td class="api-list">Demonstrates the SketchCircles.addByThreePoints method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCircles_addByThreeTangents_Sample.htm">SketchCircles.addByThreeTangents</a></td>
+<td class="api-list">Demonstrates the SketchCircles.addByThreeTangets method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCircles_addByTwoPoints_Sample.htm">SketchCircles.addByTwoPoints</a></td>
+<td class="api-list">Demonstrates the SketchCircles.addByTwoPoints method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchCircles_addByTwoTangents_Sample.htm">SketchCircles.addByTwoTangents</a></td>
+<td class="api-list">Demonstrates the SketchCircles.addByTwoTangets method.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(SketchCircles%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">addByCenterRadius Method</h3><p class="api">Creates a sketch circle that is always parallel to the x-y plane of the sketch and is centered at the specified point.</p><pre class="api-code">"sketchCircles_var" is a variable referencing a
+SketchCircles
+object.
+#include &lt;Fusion/Sketch/SketchCircles.h&gt;
+returnValue = sketchCircles_var-&gt;
+addByCenterRadius
+(centerPoint, radius);</pre><p class="api">Return Value: SketchCircle - Returns the newly created SketchCircle object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">centerPoint</td><td class="api-list">Base</td><td class="api-list">The center point of the circle. It can be an existing SketchPoint or a Point3D object.</td></tr><tr><td class="api-list">radius</td><td class="api-list">double</td><td class="api-list">The radius of the circle in centimeters.</td></tr></table><h3 class="api-member">addByCenterRadius Member</h3><h3 class="api-member">addByThreePoints Method</h3><p class="api">Creates a sketch circle that passes through the three points. The three points must lie on the x-y plane of the sketch.</p><pre class="api-code">"sketchCircles_var" is a variable referencing a
+SketchCircles
+object.
+#include &lt;Fusion/Sketch/SketchCircles.h&gt;
+returnValue = sketchCircles_var-&gt;
+addByThreePoints
+(pointOne, pointTwo, pointThree);</pre><p class="api">Return Value: SketchCircle - Returns the newly created SketchCircle object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pointOne</td><td class="api-list">Point3D</td><td class="api-list">The first point that the circle will pass through. The z component must be zero.</td></tr><tr><td class="api-list">pointTwo</td><td class="api-list">Point3D</td><td class="api-list">The second point that the circle will pass through. The z component must be zero.</td></tr><tr><td class="api-list">pointThree</td><td class="api-list">Point3D</td><td class="api-list">The third point that the circle will pass through. The z component must be zero.</td></tr></table><h3 class="api-member">addByThreePoints Member</h3><h3 class="api-member">addByThreeTangents Method</h3><p class="api">Creates a sketch circle that is tangent to the three input lines. The three lines must lie on the x-y plane of the sketch.</p><pre class="api-code">"sketchCircles_var" is a variable referencing a
+SketchCircles
+object.
+#include &lt;Fusion/Sketch/SketchCircles.h&gt;
+returnValue = sketchCircles_var-&gt;
+addByThreeTangents
+(tangentOne, tangentTwo, tangentThree, hintPoint);</pre><p class="api">Return Value: SketchCircle - Returns the newly created SketchCircle object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">tangentOne</td><td class="api-list">SketchLine</td><td class="api-list">The first line that the circle will be tangent to. The line must lie on the x-y plane of the sketch and cannot be parallel to the second or third line.</td></tr><tr><td class="api-list">tangentTwo</td><td class="api-list">SketchLine</td><td class="api-list">The second line that the circle will be tangent to. The line must lie on the x-y plane of the sketch and cannot be parallel to the first or third line.</td></tr><tr><td class="api-list">tangentThree</td><td class="api-list">SketchLine</td><td class="api-list">The third line that the circle will be tangent to. The line must lie on the x-y plane of the sketch and cannot be parallel to the first or second line.</td></tr><tr><td class="api-list">hintPoint</td><td class="api-list">Point3D</td><td class="api-list">A point that specifies which of the possible multiple solutions to use when creating the circle. If you consider the three input lines to be infinite there are many possible solutions when creating a circle that is tangent to all three lines. The hint point is a point anywhere within the area defined by the three lines where the circle is to be created.</td></tr></table><h3 class="api-member">addByThreeTangents Member</h3><h3 class="api-member">addByTwoPoints Method</h3><p class="api">Creates a sketch circle where the circle passes through the two points and the distance between the two points is the diameter of the circle.</p><pre class="api-code">"sketchCircles_var" is a variable referencing a
+SketchCircles
+object.
+#include &lt;Fusion/Sketch/SketchCircles.h&gt;
+returnValue = sketchCircles_var-&gt;
+addByTwoPoints
+(pointOne, pointTwo);</pre><p class="api">Return Value: SketchCircle - Returns the newly created SketchCircle object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pointOne</td><td class="api-list">Point3D</td><td class="api-list">A Point3D object that defines a point is sketch space and lies on the x-y plane of the sketch.</td></tr><tr><td class="api-list">pointTwo</td><td class="api-list">Point3D</td><td class="api-list">A Point3D object that defines a point is sketch space and lies on the x-y plane of the sketch.</td></tr></table><h3 class="api-member">addByTwoPoints Member</h3><h3 class="api-member">addByTwoTangents Method</h3><p class="api">Creates a sketch circle that is tangent to the two input lines. The two lines must lie on the x-y plane of the sketch.</p><pre class="api-code">"sketchCircles_var" is a variable referencing a
+SketchCircles
+object.
+#include &lt;Fusion/Sketch/SketchCircles.h&gt;
+returnValue = sketchCircles_var-&gt;
+addByTwoTangents
+(tangentOne, tangentTwo, radius, hintPoint);</pre><p class="api">Return Value: SketchCircle - Returns the newly created SketchCircle object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">tangentOne</td><td class="api-list">SketchLine</td><td class="api-list">The first line that the circle will be tangent to. The line must lie on the x-y plane of the sketch.</td></tr><tr><td class="api-list">tangentTwo</td><td class="api-list">SketchLine</td><td class="api-list">The second line that the circle will be tangent to. The line must lie on the x-y plane of the sketch and cannot be parallel to the first line.</td></tr><tr><td class="api-list">radius</td><td class="api-list">double</td><td class="api-list">The radius of the circle in centimeters.</td></tr><tr><td class="api-list">hintPoint</td><td class="api-list">Point3D</td><td class="api-list">A point that specifies which of the possible four solutions to use when creating the circle. If you consider the two input lines to be infinite they create four quadrants which results in four possible solutions for the creation of the circle. The hint point is a point anywhere within the quadrant where you want the circle created.</td></tr></table><h3 class="api-member">addByTwoTangents Member</h3><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Sketch/SketchCircles.h&gt;
+returnValue = adsk::fusion::SketchCircles::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">Returns the number of circles in the sketch.</p><pre class="api-code">"sketchCircles_var" is a variable referencing a SketchCircles object.
+#include &lt;Fusion/Sketch/SketchCircles.h&gt;
+// Get the value of the property.
+uinteger propertyValue = sketchCircles_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"sketchCircles_var" is a variable referencing a SketchCircles object.
+#include &lt;Fusion/Sketch/SketchCircles.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchCircles_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Function that returns the specified sketch circle using an index into the collection.</p><pre class="api-code">"sketchCircles_var" is a variable referencing a
+SketchCircles
+object.
+#include &lt;Fusion/Sketch/SketchCircles.h&gt;
+returnValue = sketchCircles_var-&gt;
+item
+(index);</pre><p class="api">Return Value: SketchCircle - Returns the specified item or null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the item within the collection to return. The first item in the collection has an index of 0.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"sketchCircles_var" is a variable referencing a SketchCircles object.
+#include &lt;Fusion/Sketch/SketchCircles.h&gt;
+// Get the value of the property.
+string propertyValue = sketchCircles_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

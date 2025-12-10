@@ -1,0 +1,166 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/SharedLink.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="05/04/2024" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="SharedLink" name="contextid"/>
+<meta content="SharedLink Object" name="description"/>
+<meta content="GUID-701DB12C-9DFB-4FF5-804B-96E5F37634DD" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>SharedLink Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">SharedLink Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Dashboard/SharedLink.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access to the URL that can be used to share this DataFile with others. This object also provides access to the various settings that control the link's behavior.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SharedLink_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SharedLink_setPassword.htm">setPassword</a></td>
+<td class="api-list">Sets the password to access the web page to view the file. Setting a password makes using the password required to access the page. The password takes effect immediately for anyone using the URL. To turn off the password requirement, set the isPasswordRequired property to false.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SharedLink_isDownloadAllowed.htm">isDownloadAllowed</a></td>
+<td class="api-list">Specifies if the user with the shared link can download the file or only view it. Changing this setting changes the behavior of the existing link. When a DataFile is shared, and a link is created, this defaults to true, allowing anyone with the link to download the file.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SharedLink_isPasswordRequired.htm">isPasswordRequired</a></td>
+<td class="api-list">Gets if a password is required to access the file's web page using the link URL. This property can be set to false to turn off the password requirement. It cannot be set to true. To enable a password, use the setPassword method, which sets the password and has the side effect of setting this property to true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SharedLink_isShared.htm">isShared</a></td>
+<td class="api-list">Gets and sets if a shared link should be made available for this DataFile. This property defaults to false for a new DataFile. Setting it to true will allow the URL for the file to be obtained. Setting it to false will restrict access to the URL and block access for anyone currently using it. In other words, this is a dynamic setting and doesn't just control getting the link URL.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SharedLink_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SharedLink_linkURL.htm">linkURL</a></td>
+<td class="api-list">Returns the URL of the shared link. Returns an empty string in the case where isShared is False.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SharedLink_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="DataFile_sharedLink.htm">DataFile.sharedLink</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version May 2024<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(SharedLink%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Dashboard/SharedLink.h&gt;
+returnValue = adsk::core::SharedLink::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">isDownloadAllowed Property</h3><p class="api">Specifies if the user with the shared link can download the file or only view it. Changing this setting changes the behavior of the existing link. When a DataFile is shared, and a link is created, this defaults to true, allowing anyone with the link to download the file.</p><pre class="api-code">"sharedLink_var" is a variable referencing a SharedLink object.
+#include &lt;Core/Dashboard/SharedLink.h&gt;
+// Get the value of the property.
+boolean propertyValue = sharedLink_var-&gt;
+isDownloadAllowed
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sharedLink_var-&gt;
+isDownloadAllowed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isPasswordRequired Property</h3><p class="api">Gets if a password is required to access the file's web page using the link URL. This property can be set to false to turn off the password requirement. It cannot be set to true. To enable a password, use the setPassword method, which sets the password and has the side effect of setting this property to true.</p><pre class="api-code">"sharedLink_var" is a variable referencing a SharedLink object.
+#include &lt;Core/Dashboard/SharedLink.h&gt;
+// Get the value of the property.
+boolean propertyValue = sharedLink_var-&gt;
+isPasswordRequired
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sharedLink_var-&gt;
+isPasswordRequired
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isShared Property</h3><p class="api">Gets and sets if a shared link should be made available for this DataFile. This property defaults to false for a new DataFile. Setting it to true will allow the URL for the file to be obtained. Setting it to false will restrict access to the URL and block access for anyone currently using it. In other words, this is a dynamic setting and doesn't just control getting the link URL.</p><pre class="api-code">"sharedLink_var" is a variable referencing a SharedLink object.
+#include &lt;Core/Dashboard/SharedLink.h&gt;
+// Get the value of the property.
+boolean propertyValue = sharedLink_var-&gt;
+isShared
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sharedLink_var-&gt;
+isShared
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"sharedLink_var" is a variable referencing a SharedLink object.
+#include &lt;Core/Dashboard/SharedLink.h&gt;
+// Get the value of the property.
+boolean propertyValue = sharedLink_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">linkURL Property</h3><p class="api">Returns the URL of the shared link. Returns an empty string in the case where isShared is False.</p><pre class="api-code">"sharedLink_var" is a variable referencing a SharedLink object.
+#include &lt;Core/Dashboard/SharedLink.h&gt;
+// Get the value of the property.
+string propertyValue = sharedLink_var-&gt;
+linkURL
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"sharedLink_var" is a variable referencing a SharedLink object.
+#include &lt;Core/Dashboard/SharedLink.h&gt;
+// Get the value of the property.
+string propertyValue = sharedLink_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">setPassword Method</h3><p class="api">Sets the password to access the web page to view the file. Setting a password makes using the password required to access the page. The password takes effect immediately for anyone using the URL. To turn off the password requirement, set the isPasswordRequired property to false.</p><pre class="api-code">"sharedLink_var" is a variable referencing a
+SharedLink
+object.
+#include &lt;Core/Dashboard/SharedLink.h&gt;
+returnValue = sharedLink_var-&gt;
+setPassword
+(password);</pre><p class="api">Return Value: boolean - Returns true if setting the password was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">password</td><td class="api-list">string</td><td class="api-list">The password to use.</td></tr></table></body>
+</html>

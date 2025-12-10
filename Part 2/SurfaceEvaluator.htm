@@ -1,0 +1,360 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/SurfaceEvaluator.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="SurfaceEvaluator" name="contextid"/>
+<meta content="SurfaceEvaluator Object" name="description"/>
+<meta content="GUID-31dad9b2-ee1d-4216-8100-09ea44f9967a" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>SurfaceEvaluator Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">SurfaceEvaluator Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Geometry/SurfaceEvaluator.h&gt;<h2 class="api">
+          Description
+        </h2>Surface evaluator that is obtained from a transient surface and allows you to perform various evaluations on the surface.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getCurvature.htm">getCurvature</a></td>
+<td class="api-list">Get the curvature values at a parameter positions on the surface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getCurvatures.htm">getCurvatures</a></td>
+<td class="api-list">Get the curvature values at a number of parameter positions on the surface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getFirstDerivative.htm">getFirstDerivative</a></td>
+<td class="api-list">Get the first derivative of the surface at the specified parameter position.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getFirstDerivatives.htm">getFirstDerivatives</a></td>
+<td class="api-list">Get the first derivatives of the surface at the specified parameter positions.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getIsoCurve.htm">getIsoCurve</a></td>
+<td class="api-list">Gets (by extraction) a curve that follows a constant u or v parameter along the surface. The curve will have the same properties as the surface in the direction of the extraction. For example, when a curve is extracted from the periodic direction of a surface, the extracted curve will also be periodic. The type of curve returned is dependent on the shape the surface.<br><br/> Getting an iso curve is limited to a SurfaceEvaluator that is obtained from a BRepFace. It will fail when the SurfaceEvaluator is obtained from a geometry object (Plane, Sphere, Torus, Cylinder, Cone, EllipticalCone, EllipticalCylinder, or NurbsSurface).</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getModelCurveFromParametricCurve.htm">getModelCurveFromParametricCurve</a></td>
+<td class="api-list">Creates the 3D equivalent curve in model space, of a 2D curve defined in the parametric space of the surface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getNormalAtParameter.htm">getNormalAtParameter</a></td>
+<td class="api-list">Gets the surface normal at a parameter position on the surface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getNormalAtPoint.htm">getNormalAtPoint</a></td>
+<td class="api-list">Gets the surface normal at a point on the surface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getNormalsAtParameters.htm">getNormalsAtParameters</a></td>
+<td class="api-list">Gets the surface normal at a number of parameter positions on the surface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getNormalsAtPoints.htm">getNormalsAtPoints</a></td>
+<td class="api-list">Gets the surface normal at a number of positions on the surface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getParamAnomaly.htm">getParamAnomaly</a></td>
+<td class="api-list">Gets details about anomalies in parameter space of the surface. This includes information about periodic intervals, singularities, or unbounded parameter ranges.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getParameterAtPoint.htm">getParameterAtPoint</a></td>
+<td class="api-list">Get the parameter position that correspond to a point on the surface. For reliable results, the point should lie on the surface within model tolerance. If the point does not lie on the surface, the parameter of the nearest point on the surface will generally be returned.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getParametersAtPoints.htm">getParametersAtPoints</a></td>
+<td class="api-list">Get the parameter positions that correspond to a set of points on the surface. For reliable results, the points should lie on the surface within model tolerance. If the points do not lie on the surface, the parameter of the nearest point on the surface will generally be returned.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getPointAtParameter.htm">getPointAtParameter</a></td>
+<td class="api-list">Get the point on the surface that correspond to evaluating a parameter position on the surface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getPointsAtParameters.htm">getPointsAtParameters</a></td>
+<td class="api-list">Get the points on the surface that correspond to evaluating a set of parameter positions on the surface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getSecondDerivative.htm">getSecondDerivative</a></td>
+<td class="api-list">Get the second derivative of the surface at the specified parameter position.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getSecondDerivatives.htm">getSecondDerivatives</a></td>
+<td class="api-list">Get the second derivatives of the surface at the specified parameter positions.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getThirdDerivative.htm">getThirdDerivative</a></td>
+<td class="api-list">Get the third derivative of the surface at the specified parameter position.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_getThirdDerivatives.htm">getThirdDerivatives</a></td>
+<td class="api-list">Get the third derivatives of the surface at the specified parameter positions.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_isParameterOnFace.htm">isParameterOnFace</a></td>
+<td class="api-list">Determines if the specified parameter position lies within the surface. When the SurfaceEvaluator is obtained from a BRepFace object, this will respect the boundaries of the face and return true when point is on the visible portion of the surface. When obtained from surface geometry it returns true if the point is within the parametric range of surface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_parametricRange.htm">parametricRange</a></td>
+<td class="api-list">Returns the parametric range of the surface. If the surface is periodic in a direction, the range is set to the principle period's range. If the surface is only upper bounded in a direction, the lower bound is set to -double-max. If the surface is only lower bounded in a direction, the upper bound is set to double-max. If the surface is unbounded in a direction, the lower bound and upper bound of the range will both be zero.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_area.htm">area</a></td>
+<td class="api-list">Returns the area of the surface. This is typically used when the SurfaceEvaluator is associated with a BRepFace object where it is always valid. This can fail in the case where the SurfaceEvaluator is associated with one of the geometry classes, (Plane, Cylinder, Cone, EllipticalCone, or EllipticalCylinder object), because these surfaces are unbounded. A BRepFace, even one of these shapes, is bounded by its edges and has a well-defined area.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_isClosedInU.htm">isClosedInU</a></td>
+<td class="api-list">Returns if the surface is closed (forms a loop) in the U direction</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_isClosedInV.htm">isClosedInV</a></td>
+<td class="api-list">Returns if the surface is closed (forms a loop) in the V direction</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SurfaceEvaluator_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="BRepFace_evaluator.htm">BRepFace.evaluator</a>, <a href="Cone_evaluator.htm">Cone.evaluator</a>, <a href="Cylinder_evaluator.htm">Cylinder.evaluator</a>, <a href="EllipticalCone_evaluator.htm">EllipticalCone.evaluator</a>, <a href="EllipticalCylinder_evaluator.htm">EllipticalCylinder.evaluator</a>, <a href="NurbsSurface_evaluator.htm">NurbsSurface.evaluator</a>, <a href="Plane_evaluator.htm">Plane.evaluator</a>, <a href="Sphere_evaluator.htm">Sphere.evaluator</a>, <a href="Surface_evaluator.htm">Surface.evaluator</a>, <a href="Torus_evaluator.htm">Torus.evaluator</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(SurfaceEvaluator%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">area Property</h3><p class="api">Returns the area of the surface. This is typically used when the SurfaceEvaluator is associated with a BRepFace object where it is always valid. This can fail in the case where the SurfaceEvaluator is associated with one of the geometry classes, (Plane, Cylinder, Cone, EllipticalCone, or EllipticalCylinder object), because these surfaces are unbounded. A BRepFace, even one of these shapes, is bounded by its edges and has a well-defined area.</p><pre class="api-code">"surfaceEvaluator_var" is a variable referencing a SurfaceEvaluator object.
+#include &lt;Core/Geometry/SurfaceEvaluator.h&gt;
+// Get the value of the property.
+double propertyValue = surfaceEvaluator_var-&gt;
+area
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/SurfaceEvaluator.h&gt;
+returnValue = adsk::core::SurfaceEvaluator::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">getCurvature Method</h3><p class="api">Get the curvature values at a parameter positions on the surface.</p><pre class="api-code">#include &lt;Core/Geometry/SurfaceEvaluator.h
+// Declare the output arguments.
+Ptr&lt;Point2D&gt; parameter;
+Ptr&lt;Vector3D&gt; maxTangent;
+double maxCurvature;
+double minCurvature;
+boolean returnValue = surfaceEvaluator_var-&gt;
+getCurvature
+(parameter, maxTangent, maxCurvature, minCurvature);</pre><p class="api">Return Value: boolean - Returns true if the curvature was successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameter</td><td class="api-list">Point2D</td><td class="api-list">The parameter positions to return curvature information at.</td></tr><tr><td class="api-list">maxTangent</td><td class="api-list">Vector3D</td><td class="api-list">The output directions of maximum curvature at the position on the surface.</td></tr><tr><td class="api-list">maxCurvature</td><td class="api-list">double</td><td class="api-list">The output magnitude of the maximum curvature at the position on the surface.</td></tr><tr><td class="api-list">minCurvature</td><td class="api-list">double</td><td class="api-list">The output magnitude of the minimum curvature at the position on the surface. The minimum curvature direction is perpendicular to the maximum curvature tangent directions.</td></tr></table><h3 class="api-member">getCurvatures Method</h3><p class="api">Get the curvature values at a number of parameter positions on the surface.</p><pre class="api-code">#include &lt;Core/Geometry/SurfaceEvaluator.h
+// Declare the output arguments.
+Point2D[] parameters;
+Vector3D[] maxTangents;
+double[] maxCurvatures;
+double[] minCurvatures;
+boolean returnValue = surfaceEvaluator_var-&gt;
+getCurvatures
+(parameters, maxTangents, maxCurvatures, minCurvatures);</pre><p class="api">Return Value: boolean - Returns true if the curvatures were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameters</td><td class="api-list">Point2D[]</td><td class="api-list">The array of parameter positions to return curvature information at. Each parameter position must be with the range of the parameter extents as verified by isParameterOnFace.</td></tr><tr><td class="api-list">maxTangents</td><td class="api-list">Vector3D[]</td><td class="api-list">The output array of directions of maximum curvature at each position on the surface. The length of this array will be the same as the length of the parameters array provided.</td></tr><tr><td class="api-list">maxCurvatures</td><td class="api-list">double[]</td><td class="api-list">The output array of the magnitude of the maximum curvature at each position on the surface. The length of this array will be the same as the length of the parameters array provided.</td></tr><tr><td class="api-list">minCurvatures</td><td class="api-list">double[]</td><td class="api-list">The output array of the magnitude of the minimum curvature at each position on the surface. The minimum curvature direction is perpendicular to the maximum curvature tangent directions. The length of this array will be the same as the length of the parameters array provided.</td></tr></table><h3 class="api-member">getFirstDerivative Method</h3><p class="api">Get the first derivative of the surface at the specified parameter position.</p><pre class="api-code">#include &lt;Core/Geometry/SurfaceEvaluator.h
+// Declare the output arguments.
+Ptr&lt;Point2D&gt; parameter;
+Ptr&lt;Vector3D&gt; partialU;
+Ptr&lt;Vector3D&gt; partialV;
+boolean returnValue = surfaceEvaluator_var-&gt;
+getFirstDerivative
+(parameter, partialU, partialV);</pre><p class="api">Return Value: boolean - Returns true if the first derivative was successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameter</td><td class="api-list">Point2D</td><td class="api-list">The parameter positions to get the surface first derivative at. The parameter position must be within the range of the parameter extents as verified by isParameterOnFace.</td></tr><tr><td class="api-list">partialU</td><td class="api-list">Vector3D</td><td class="api-list">The output first derivative U partial vector at the parameter position specified.</td></tr><tr><td class="api-list">partialV</td><td class="api-list">Vector3D</td><td class="api-list">The output first derivative V partial vector at the parameter position specified.</td></tr></table><h3 class="api-member">getFirstDerivatives Method</h3><p class="api">Get the first derivatives of the surface at the specified parameter positions.</p><pre class="api-code">#include &lt;Core/Geometry/SurfaceEvaluator.h
+// Declare the output arguments.
+Point2D[] parameters;
+Vector3D[] partialsU;
+Vector3D[] partialsV;
+boolean returnValue = surfaceEvaluator_var-&gt;
+getFirstDerivatives
+(parameters, partialsU, partialsV);</pre><p class="api">Return Value: boolean - Returns true if the first derivatives were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameters</td><td class="api-list">Point2D[]</td><td class="api-list">The array of parameter positions to get the surface first derivative at. Each parameter position must be within the range of the parameter extents as verified by isParameterOnFace.</td></tr><tr><td class="api-list">partialsU</td><td class="api-list">Vector3D[]</td><td class="api-list">The output array of first derivative U partial vectors at each parameter position specified. The length of this array is equal to the length of the parameters array specified.</td></tr><tr><td class="api-list">partialsV</td><td class="api-list">Vector3D[]</td><td class="api-list">The output array of first derivative V partial vectors at each parameter position specified. The length of this array is equal to the length of the parameters array specified.</td></tr></table><h3 class="api-member">getIsoCurve Method</h3><p class="api">Gets (by extraction) a curve that follows a constant u or v parameter along the surface. The curve will have the same properties as the surface in the direction of the extraction. For example, when a curve is extracted from the periodic direction of a surface, the extracted curve will also be periodic. The type of curve returned is dependent on the shape the surface. Getting an iso curve is limited to a SurfaceEvaluator that is obtained from a BRepFace. It will fail when the SurfaceEvaluator is obtained from a geometry object (Plane, Sphere, Torus, Cylinder, Cone, EllipticalCone, EllipticalCylinder, or NurbsSurface).</p><pre class="api-code">"surfaceEvaluator_var" is a variable referencing a
+SurfaceEvaluator
+object.
+#include &lt;Core/Geometry/SurfaceEvaluator.h&gt;
+returnValue = surfaceEvaluator_var-&gt;
+getIsoCurve
+(parameter, isUDirection);</pre><p class="api">Return Value: ObjectCollection - Returns an ObjectCollection that contains one or more curves. Multiple curves are returned when the SurfaceEvaluator is obtained from a Face and the curve cuts across internal boundaries. The resulting curves are trimmed to the boundaries of the Face. When the SurfaceEvaluator is obtained from a geometry object, a single curve is returned because there are no boundaries to trim the curve. The type of curve(s) returned is dependent on the shape of the surface.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameter</td><td class="api-list">double</td><td class="api-list">The parameter at which to extract the curve</td></tr><tr><td class="api-list">isUDirection</td><td class="api-list">boolean</td><td class="api-list">A bool that indicates whether to extract the curve from the U or V direction</td></tr></table><h3 class="api-member">getModelCurveFromParametricCurve Method</h3><p class="api">Creates the 3D equivalent curve in model space, of a 2D curve defined in the parametric space of the surface.</p><pre class="api-code">"surfaceEvaluator_var" is a variable referencing a
+SurfaceEvaluator
+object.
+#include &lt;Core/Geometry/SurfaceEvaluator.h&gt;
+returnValue = surfaceEvaluator_var-&gt;
+getModelCurveFromParametricCurve
+(parametricCurve);</pre><p class="api">Return Value: ObjectCollection - Returns an ObjectCollection containing one or more curves.  When the SufaceEvaluatior is obtained from a face, and the curve cuts across internal  boundaries of the face, multiple curves are returned. The returned curves are trimmed  to the boundaries of the face.  If the SurfaceEvaluator is obtained from a geometry object, a single curve returned  because there are no boundaries with which to trim the curve.  The type of curve(s) returned depends on the shape of the input curve and surface.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parametricCurve</td><td class="api-list">Curve2D</td><td class="api-list">The parameter space curve to map into this surface's parameter space.</td></tr></table><h3 class="api-member">getNormalAtParameter Method</h3><p class="api">Gets the surface normal at a parameter position on the surface.</p><pre class="api-code">#include &lt;Core/Geometry/SurfaceEvaluator.h
+// Declare the output arguments.
+Ptr&lt;Point2D&gt; parameter;
+Ptr&lt;Vector3D&gt; normal;
+boolean returnValue = surfaceEvaluator_var-&gt;
+getNormalAtParameter
+(parameter, normal);</pre><p class="api">Return Value: boolean - Returns true if the normal was successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameter</td><td class="api-list">Point2D</td><td class="api-list">The parameter position to return the normal at. The parameter position must be with the range of the parameter extents as verified by isParameterOnFace.</td></tr><tr><td class="api-list">normal</td><td class="api-list">Vector3D</td><td class="api-list">The output normal for the parameter position on the surface.</td></tr></table><h3 class="api-member">getNormalAtPoint Method</h3><p class="api">Gets the surface normal at a point on the surface.</p><pre class="api-code">#include &lt;Core/Geometry/SurfaceEvaluator.h
+// Declare the output arguments.
+Ptr&lt;Point3D&gt; point;
+Ptr&lt;Vector3D&gt; normal;
+boolean returnValue = surfaceEvaluator_var-&gt;
+getNormalAtPoint
+(point, normal);</pre><p class="api">Return Value: boolean - Returns true if the normal was successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">point</td><td class="api-list">Point3D</td><td class="api-list">The point to return the normal at. For reliable results the point should lie on the surface.</td></tr><tr><td class="api-list">normal</td><td class="api-list">Vector3D</td><td class="api-list">The output normal for the point on the surface.</td></tr></table><h3 class="api-member">getNormalsAtParameters Method</h3><p class="api">Gets the surface normal at a number of parameter positions on the surface.</p><pre class="api-code">#include &lt;Core/Geometry/SurfaceEvaluator.h
+// Declare the output arguments.
+Point2D[] parameters;
+Vector3D[] normals;
+boolean returnValue = surfaceEvaluator_var-&gt;
+getNormalsAtParameters
+(parameters, normals);</pre><p class="api">Return Value: boolean - Returns true if the normals were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameters</td><td class="api-list">Point2D[]</td><td class="api-list">The array of parameter positions to return the normal at. Each parameter position must be with the range of the parameter extents as verified by isParameterOnFace.</td></tr><tr><td class="api-list">normals</td><td class="api-list">Vector3D[]</td><td class="api-list">The output array of normals for each parameter position on the surface. The length of this array will be the same as the length of the parameters array provided.</td></tr></table><h3 class="api-member">getNormalsAtPoints Method</h3><p class="api">Gets the surface normal at a number of positions on the surface.</p><pre class="api-code">#include &lt;Core/Geometry/SurfaceEvaluator.h
+// Declare the output arguments.
+Point3D[] points;
+Vector3D[] normals;
+boolean returnValue = surfaceEvaluator_var-&gt;
+getNormalsAtPoints
+(points, normals);</pre><p class="api">Return Value: boolean - Returns true if the normals were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">points</td><td class="api-list">Point3D[]</td><td class="api-list">The array of points to return the normal at. For reliable results each point should lie on the surface.</td></tr><tr><td class="api-list">normals</td><td class="api-list">Vector3D[]</td><td class="api-list">The output array of normals for each point on the surface. The length of this array will be the same as the length of the points array provided.</td></tr></table><h3 class="api-member">getParamAnomaly Method</h3><p class="api">Gets details about anomalies in parameter space of the surface. This includes information about periodic intervals, singularities, or unbounded parameter ranges.</p><pre class="api-code">#include &lt;Core/Geometry/SurfaceEvaluator.h
+// Declare the output arguments.
+double[] periodicityU;
+double[] periodicityV;
+double[] singularitiesU;
+double[] singularitiesV;
+boolean[] unboundedParameters;
+boolean returnValue = surfaceEvaluator_var-&gt;
+getParamAnomaly
+(periodicityU, periodicityV, singularitiesU, singularitiesV, unboundedParameters);</pre><p class="api">Return Value: boolean - Returns true if the parameter anomalies were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">periodicityU</td><td class="api-list">double[]</td><td class="api-list">The output array with information about the period of the surface in U. periodicityU[0] will contain the period of the surface in U. If periodicityU[0] is 0, the surface is not periodic in U. If the surface is periodic in U, peridocityU[1] will contain the parameter value at the start of the principle period.</td></tr><tr><td class="api-list">periodicityV</td><td class="api-list">double[]</td><td class="api-list">The output array with information about the period of the surface in V. periodicityV[0] will contain the period of the surface in V. If periodicityV[0] is 0, the surface is not periodic in V. If the surface is periodic in V, peridocityV[1] will contain the parameter value at the start of the principle period.</td></tr><tr><td class="api-list">singularitiesU</td><td class="api-list">double[]</td><td class="api-list">The output array parameter values of singularities in U. If this array is empty, there are no singularities in U.</td></tr><tr><td class="api-list">singularitiesV</td><td class="api-list">double[]</td><td class="api-list">The output array parameter values of singularities in V. If this array is empty, there are no singularities in V.</td></tr><tr><td class="api-list">unboundedParameters</td><td class="api-list">boolean[]</td><td class="api-list">The output array that indicates if the parameter range is unbounded in U or V. unboundedParameters[0] will be true if U is unbounded. unboundedParameters[1] will be true if V is unbounded.</td></tr></table><h3 class="api-member">getParameterAtPoint Method</h3><p class="api">Get the parameter position that correspond to a point on the surface. For reliable results, the point should lie on the surface within model tolerance. If the point does not lie on the surface, the parameter of the nearest point on the surface will generally be returned.</p><pre class="api-code">#include &lt;Core/Geometry/SurfaceEvaluator.h
+// Declare the output arguments.
+Ptr&lt;Point3D&gt; point;
+Ptr&lt;Point2D&gt; parameter;
+boolean returnValue = surfaceEvaluator_var-&gt;
+getParameterAtPoint
+(point, parameter);</pre><p class="api">Return Value: boolean - Returns true of the parameter was successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">point</td><td class="api-list">Point3D</td><td class="api-list">The point to get the curve parameter value at.</td></tr><tr><td class="api-list">parameter</td><td class="api-list">Point2D</td><td class="api-list">The output parameter position corresponding to the point.</td></tr></table><h3 class="api-member">getParametersAtPoints Method</h3><p class="api">Get the parameter positions that correspond to a set of points on the surface. For reliable results, the points should lie on the surface within model tolerance. If the points do not lie on the surface, the parameter of the nearest point on the surface will generally be returned.</p><pre class="api-code">#include &lt;Core/Geometry/SurfaceEvaluator.h
+// Declare the output arguments.
+Point3D[] points;
+Point2D[] parameters;
+boolean returnValue = surfaceEvaluator_var-&gt;
+getParametersAtPoints
+(points, parameters);</pre><p class="api">Return Value: boolean - Returns true if the parameters were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">points</td><td class="api-list">Point3D[]</td><td class="api-list">An array of points to get the surface parameter values at.</td></tr><tr><td class="api-list">parameters</td><td class="api-list">Point2D[]</td><td class="api-list">The output array of parameter positions corresponding to the set of points. The length of this array will be equal to the length of the points array specified.</td></tr></table><h3 class="api-member">getPointAtParameter Method</h3><p class="api">Get the point on the surface that correspond to evaluating a parameter position on the surface.</p><pre class="api-code">#include &lt;Core/Geometry/SurfaceEvaluator.h
+// Declare the output arguments.
+Ptr&lt;Point2D&gt; parameter;
+Ptr&lt;Point3D&gt; point;
+boolean returnValue = surfaceEvaluator_var-&gt;
+getPointAtParameter
+(parameter, point);</pre><p class="api">Return Value: boolean - Returns true if the point was successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameter</td><td class="api-list">Point2D</td><td class="api-list">The parameter positions to evaluate the surface position at. The parameter position must be within the range of the parameter extents as verified by isParameterOnFace.</td></tr><tr><td class="api-list">point</td><td class="api-list">Point3D</td><td class="api-list">The output point corresponding to evaluating the curve at that parameter position.</td></tr></table><h3 class="api-member">getPointsAtParameters Method</h3><p class="api">Get the points on the surface that correspond to evaluating a set of parameter positions on the surface.</p><pre class="api-code">#include &lt;Core/Geometry/SurfaceEvaluator.h
+// Declare the output arguments.
+Point2D[] parameters;
+Point3D[] points;
+boolean returnValue = surfaceEvaluator_var-&gt;
+getPointsAtParameters
+(parameters, points);</pre><p class="api">Return Value: boolean - Returns true if the points were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameters</td><td class="api-list">Point2D[]</td><td class="api-list">The array of parameter positions to evaluate the surface position at. Each parameter position must be within the range of the parameter extents as verified by isParameterOnFace.</td></tr><tr><td class="api-list">points</td><td class="api-list">Point3D[]</td><td class="api-list">The output array of points corresponding to evaluating the curve at that parameter position. The length of this array will be equal to the length of the parameters array specified.</td></tr></table><h3 class="api-member">getSecondDerivative Method</h3><p class="api">Get the second derivative of the surface at the specified parameter position.</p><pre class="api-code">#include &lt;Core/Geometry/SurfaceEvaluator.h
+// Declare the output arguments.
+Ptr&lt;Point2D&gt; parameter;
+Ptr&lt;Vector3D&gt; partialUU;
+Ptr&lt;Vector3D&gt; partialUV;
+Ptr&lt;Vector3D&gt; partialVV;
+boolean returnValue = surfaceEvaluator_var-&gt;
+getSecondDerivative
+(parameter, partialUU, partialUV, partialVV);</pre><p class="api">Return Value: boolean - Returns true if the second derivative was successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameter</td><td class="api-list">Point2D</td><td class="api-list">The parameter position to get the surface second derivative at. The parameter position must be within the range of the parameter extents as verified by isParameterOnFace.</td></tr><tr><td class="api-list">partialUU</td><td class="api-list">Vector3D</td><td class="api-list">The output second derivative UU partial vector at each parameter position specified.</td></tr><tr><td class="api-list">partialUV</td><td class="api-list">Vector3D</td><td class="api-list">The output second derivative UV mixed partial vector at each parameter position specified.</td></tr><tr><td class="api-list">partialVV</td><td class="api-list">Vector3D</td><td class="api-list">The output second derivative VV partial vector at each parameter position specified.</td></tr></table><h3 class="api-member">getSecondDerivatives Method</h3><p class="api">Get the second derivatives of the surface at the specified parameter positions.</p><pre class="api-code">#include &lt;Core/Geometry/SurfaceEvaluator.h
+// Declare the output arguments.
+Point2D[] parameters;
+Vector3D[] partialsUU;
+Vector3D[] partialsUV;
+Vector3D[] partialsVV;
+boolean returnValue = surfaceEvaluator_var-&gt;
+getSecondDerivatives
+(parameters, partialsUU, partialsUV, partialsVV);</pre><p class="api">Return Value: boolean - Returns true if the second derivatives were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameters</td><td class="api-list">Point2D[]</td><td class="api-list">The array of parameter positions to get the surface second derivative at. Each parameter position must be within the range of the parameter extents as verified by isParameterOnFace.</td></tr><tr><td class="api-list">partialsUU</td><td class="api-list">Vector3D[]</td><td class="api-list">The output array of second derivative UU partial vectors at each parameter position specified. The length of this array is equal to the length of the parameters array specified.</td></tr><tr><td class="api-list">partialsUV</td><td class="api-list">Vector3D[]</td><td class="api-list">The output array of second derivative UV mixed partial vectors at each parameter position specified. The length of this array is equal to the length of the parameters array specified.</td></tr><tr><td class="api-list">partialsVV</td><td class="api-list">Vector3D[]</td><td class="api-list">The output array of second derivative VV partial vectors at each parameter position specified. The length of this array is equal to the length of the parameters array specified.</td></tr></table><h3 class="api-member">getThirdDerivative Method</h3><p class="api">Get the third derivative of the surface at the specified parameter position.</p><pre class="api-code">#include &lt;Core/Geometry/SurfaceEvaluator.h
+// Declare the output arguments.
+Ptr&lt;Point2D&gt; parameter;
+Ptr&lt;Vector3D&gt; partialUUU;
+Ptr&lt;Vector3D&gt; partialVVV;
+boolean returnValue = surfaceEvaluator_var-&gt;
+getThirdDerivative
+(parameter, partialUUU, partialVVV);</pre><p class="api">Return Value: boolean - Returns true if the third derivative was successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameter</td><td class="api-list">Point2D</td><td class="api-list">The parameter position to get the surface third derivative at. The parameter position must be within the range of the parameter extents as verified by isParameterOnFace.</td></tr><tr><td class="api-list">partialUUU</td><td class="api-list">Vector3D</td><td class="api-list">The output third derivative UUU partial vector at each parameter position specified.</td></tr><tr><td class="api-list">partialVVV</td><td class="api-list">Vector3D</td><td class="api-list">The output third derivative VVV partial vector at each parameter position specified.</td></tr></table><h3 class="api-member">getThirdDerivatives Method</h3><p class="api">Get the third derivatives of the surface at the specified parameter positions.</p><pre class="api-code">#include &lt;Core/Geometry/SurfaceEvaluator.h
+// Declare the output arguments.
+Point2D[] parameters;
+Vector3D[] partialsUUU;
+Vector3D[] partialsVVV;
+boolean returnValue = surfaceEvaluator_var-&gt;
+getThirdDerivatives
+(parameters, partialsUUU, partialsVVV);</pre><p class="api">Return Value: boolean - Returns true if the third derivatives were successfully returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameters</td><td class="api-list">Point2D[]</td><td class="api-list">The array of parameter positions to get the surface third derivative at. Each parameter position must be within the range of the parameter extents as verified by isParameterOnFace.</td></tr><tr><td class="api-list">partialsUUU</td><td class="api-list">Vector3D[]</td><td class="api-list">The output array of third derivative UUU partial vectors at each parameter position specified. The length of this array is equal to the length of the parameters array specified.</td></tr><tr><td class="api-list">partialsVVV</td><td class="api-list">Vector3D[]</td><td class="api-list">The output array of third derivative VVV partial vectors at each parameter position specified. The length of this array is equal to the length of the parameters array specified.</td></tr></table><h3 class="api-member">isClosedInU Property</h3><p class="api">Returns if the surface is closed (forms a loop) in the U direction</p><pre class="api-code">"surfaceEvaluator_var" is a variable referencing a SurfaceEvaluator object.
+#include &lt;Core/Geometry/SurfaceEvaluator.h&gt;
+// Get the value of the property.
+boolean propertyValue = surfaceEvaluator_var-&gt;
+isClosedInU
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isClosedInV Property</h3><p class="api">Returns if the surface is closed (forms a loop) in the V direction</p><pre class="api-code">"surfaceEvaluator_var" is a variable referencing a SurfaceEvaluator object.
+#include &lt;Core/Geometry/SurfaceEvaluator.h&gt;
+// Get the value of the property.
+boolean propertyValue = surfaceEvaluator_var-&gt;
+isClosedInV
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isParameterOnFace Method</h3><p class="api">Determines if the specified parameter position lies within the surface. When the SurfaceEvaluator is obtained from a BRepFace object, this will respect the boundaries of the face and return true when point is on the visible portion of the surface. When obtained from surface geometry it returns true if the point is within the parametric range of surface.</p><pre class="api-code">"surfaceEvaluator_var" is a variable referencing a
+SurfaceEvaluator
+object.
+#include &lt;Core/Geometry/SurfaceEvaluator.h&gt;
+returnValue = surfaceEvaluator_var-&gt;
+isParameterOnFace
+(parameter);</pre><p class="api">Return Value: boolean - Returns true if the parameter position lies within the surface.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameter</td><td class="api-list">Point2D</td><td class="api-list">The parameter position to test.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"surfaceEvaluator_var" is a variable referencing a SurfaceEvaluator object.
+#include &lt;Core/Geometry/SurfaceEvaluator.h&gt;
+// Get the value of the property.
+boolean propertyValue = surfaceEvaluator_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"surfaceEvaluator_var" is a variable referencing a SurfaceEvaluator object.
+#include &lt;Core/Geometry/SurfaceEvaluator.h&gt;
+// Get the value of the property.
+string propertyValue = surfaceEvaluator_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parametricRange Method</h3><p class="api">Returns the parametric range of the surface. If the surface is periodic in a direction, the range is set to the principle period's range. If the surface is only upper bounded in a direction, the lower bound is set to -double-max. If the surface is only lower bounded in a direction, the upper bound is set to double-max. If the surface is unbounded in a direction, the lower bound and upper bound of the range will both be zero.</p><pre class="api-code">"surfaceEvaluator_var" is a variable referencing a
+SurfaceEvaluator
+object.
+#include &lt;Core/Geometry/SurfaceEvaluator.h&gt;
+returnValue = surfaceEvaluator_var-&gt;
+parametricRange
+();</pre><p class="api">Return Value: BoundingBox2D - Returns the bounding box with the parameter extents, with the X value being the U range, and the Y value being the V range.</p></body>
+</html>

@@ -1,0 +1,219 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/TessellateFeatureInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="17/12/2024" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="TessellateFeatureInput" name="contextid"/>
+<meta content="TessellateFeatureInput Object" name="description"/>
+<meta content="GUID-E2A50472-279D-4F2D-9A70-657CB3A06421" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>TessellateFeatureInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">TessellateFeatureInput Object <img alt="Preview" src="../images/TestTubeLarge.png"/></h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/MeshBody/TessellateFeatureInput.h&gt;<p class="api-preview"><img alt="Preview" src="../images/TestTubeSmall.png"/>This functionality is provided as a preview
+				of intended future API capabilities. You are encouraged to use it and report any problems or suggestions using the
+				<a href="https://forums.autodesk.com/t5/fusion-360-api-and-scripts/bd-p/22">Fusion API and Scripts</a> forum.<br/><br/>
+	
+                Because this is a preview of future functionality, there is the possibility that it will change, which will possibly
+		        break any existing programs that use this functionality. Because of that, you should never deliver any programs that use
+		        any preview capabilities. For a distributed program, you should wait until it has moved from preview to released state.
+		    </p>
+<h2 class="api">
+          Description
+        </h2>This class defines the methods and properties that pertain to the definition of a tessellate feature.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="TessellateFeatureInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="TessellateFeatureInput_aspectRatio.htm">aspectRatio</a></td>
+<td class="api-list">Specify ratio between the height and width of each face on the mesh body. Only valid if tessellateRefinementType is CustomTessellateRefinementType.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TessellateFeatureInput_createQuads.htm">createQuads</a></td>
+<td class="api-list">Creates quad faces on the mesh body where possible.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TessellateFeatureInput_inputBodies.htm">inputBodies</a></td>
+<td class="api-list">Gets and sets the input list of BReb bodies.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TessellateFeatureInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TessellateFeatureInput_maximumEdgeLength.htm">maximumEdgeLength</a></td>
+<td class="api-list">Specify maximum length of any face edge on the mesh body. Only valid if tessellateRefinementType is CustomTessellateRefinementType.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TessellateFeatureInput_normalDeviation.htm">normalDeviation</a></td>
+<td class="api-list">Specify maximum angle between the normal vectors of each face on the mesh body. Only valid if tessellateRefinementType is CustomTessellateRefinementType.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TessellateFeatureInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="TessellateFeatureInput_surfaceDeviation.htm">surfaceDeviation</a></td>
+<td class="api-list">Specify maximum distance between the surface of the original body and the surface of the mesh body. Only valid if tessellateRefinementType is CustomTessellateRefinementType.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TessellateFeatureInput_targetBaseFeature.htm">targetBaseFeature</a></td>
+<td class="api-list">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature.<br><br/> Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="TessellateFeatureInput_tessellateRefinementType.htm">tessellateRefinementType</a></td>
+<td class="api-list">Gets and sets the type of refinement, default value is MediumTessellateRefinementType.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="TessellateFeatures_createInput.htm">TessellateFeatures.createInput</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2025<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(TessellateFeatureInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">aspectRatio Property</h3><p class="api">Specify ratio between the height and width of each face on the mesh body. Only valid if tessellateRefinementType is CustomTessellateRefinementType.</p><pre class="api-code">"tessellateFeatureInput_var" is a variable referencing a TessellateFeatureInput object.
+#include &lt;Fusion/MeshBody/TessellateFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = tessellateFeatureInput_var-&gt;
+aspectRatio
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = tessellateFeatureInput_var-&gt;
+aspectRatio
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/MeshBody/TessellateFeatureInput.h&gt;
+returnValue = adsk::fusion::TessellateFeatureInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">createQuads Property</h3><p class="api">Creates quad faces on the mesh body where possible.</p><pre class="api-code">"tessellateFeatureInput_var" is a variable referencing a TessellateFeatureInput object.
+#include &lt;Fusion/MeshBody/TessellateFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = tessellateFeatureInput_var-&gt;
+createQuads
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = tessellateFeatureInput_var-&gt;
+createQuads
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">inputBodies Property</h3><p class="api">Gets and sets the input list of BReb bodies.</p><pre class="api-code">"tessellateFeatureInput_var" is a variable referencing a TessellateFeatureInput object.
+#include &lt;Fusion/MeshBody/TessellateFeatureInput.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;BRepBody&gt;&gt; propertyValue = tessellateFeatureInput_var-&gt;
+inputBodies
+();
+// Set the value of the property, where value_var is a BRepBody.
+bool returnValue = tessellateFeatureInput_var-&gt;
+inputBodies
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an array of type .</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"tessellateFeatureInput_var" is a variable referencing a TessellateFeatureInput object.
+#include &lt;Fusion/MeshBody/TessellateFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = tessellateFeatureInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">maximumEdgeLength Property</h3><p class="api">Specify maximum length of any face edge on the mesh body. Only valid if tessellateRefinementType is CustomTessellateRefinementType.</p><pre class="api-code">"tessellateFeatureInput_var" is a variable referencing a TessellateFeatureInput object.
+#include &lt;Fusion/MeshBody/TessellateFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = tessellateFeatureInput_var-&gt;
+maximumEdgeLength
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = tessellateFeatureInput_var-&gt;
+maximumEdgeLength
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">normalDeviation Property</h3><p class="api">Specify maximum angle between the normal vectors of each face on the mesh body. Only valid if tessellateRefinementType is CustomTessellateRefinementType.</p><pre class="api-code">"tessellateFeatureInput_var" is a variable referencing a TessellateFeatureInput object.
+#include &lt;Fusion/MeshBody/TessellateFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = tessellateFeatureInput_var-&gt;
+normalDeviation
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = tessellateFeatureInput_var-&gt;
+normalDeviation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"tessellateFeatureInput_var" is a variable referencing a TessellateFeatureInput object.
+#include &lt;Fusion/MeshBody/TessellateFeatureInput.h&gt;
+// Get the value of the property.
+string propertyValue = tessellateFeatureInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">surfaceDeviation Property</h3><p class="api">Specify maximum distance between the surface of the original body and the surface of the mesh body. Only valid if tessellateRefinementType is CustomTessellateRefinementType.</p><pre class="api-code">"tessellateFeatureInput_var" is a variable referencing a TessellateFeatureInput object.
+#include &lt;Fusion/MeshBody/TessellateFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = tessellateFeatureInput_var-&gt;
+surfaceDeviation
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = tessellateFeatureInput_var-&gt;
+surfaceDeviation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">targetBaseFeature Property</h3><p class="api">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature. Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</p><pre class="api-code">"tessellateFeatureInput_var" is a variable referencing a TessellateFeatureInput object.
+#include &lt;Fusion/MeshBody/TessellateFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BaseFeature&gt; propertyValue = tessellateFeatureInput_var-&gt;
+targetBaseFeature
+();
+// Set the value of the property, where value_var is a BaseFeature.
+bool returnValue = tessellateFeatureInput_var-&gt;
+targetBaseFeature
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">tessellateRefinementType Property</h3><p class="api">Gets and sets the type of refinement, default value is MediumTessellateRefinementType.</p><pre class="api-code">"tessellateFeatureInput_var" is a variable referencing a TessellateFeatureInput object.
+#include &lt;Fusion/MeshBody/TessellateFeatureInput.h&gt;
+// Get the value of the property.
+TessellateRefinementTypes propertyValue = tessellateFeatureInput_var-&gt;
+tessellateRefinementType
+();
+// Set the value of the property, where value_var is a TessellateRefinementTypes.
+bool returnValue = tessellateFeatureInput_var-&gt;
+tessellateRefinementType
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

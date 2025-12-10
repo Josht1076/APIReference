@@ -1,0 +1,225 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/TriangleMesh.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="TriangleMesh" name="contextid"/>
+<meta content="TriangleMesh Object" name="description"/>
+<meta content="GUID-d5d12829-8431-4588-9c7f-045fa6cd611c" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>TriangleMesh Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">TriangleMesh Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/MeshData/TriangleMesh.h&gt;<h2 class="api">
+          Description
+        </h2>The TriangleMesh object represents all of the data defining a triangular mesh.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMesh_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMesh_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMesh_nodeCoordinates.htm">nodeCoordinates</a></td>
+<td class="api-list">Returns the node coordinates as an array of Point3D objects.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMesh_nodeCoordinatesAsDouble.htm">nodeCoordinatesAsDouble</a></td>
+<td class="api-list">Returns the node coordinates as an array of doubles where they are the x, y, z components of each coordinate.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMesh_nodeCoordinatesAsFloat.htm">nodeCoordinatesAsFloat</a></td>
+<td class="api-list">Returns the node coordinates as an array of floats where they are the x, y, z components of each coordinate.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMesh_nodeCount.htm">nodeCount</a></td>
+<td class="api-list">Returns the total number of nodes in the mesh.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMesh_nodeIndices.htm">nodeIndices</a></td>
+<td class="api-list">Returns an array of indices that define which nodes are used for each triangle. This is used to look-up the coordinates in the NodeCoordinates array to get the three coordinates of each triangle.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMesh_normalVectors.htm">normalVectors</a></td>
+<td class="api-list">Returns the normal vectors of the mesh where there is a normal vector at each node. The normals are returned as an array of Vector3D objects.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMesh_normalVectorsAsDouble.htm">normalVectorsAsDouble</a></td>
+<td class="api-list">Returns the normal vectors of the mesh where there is a normal vector at each node. The normals are returned as an array of doubles where they are the x, y, z components of each vector.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMesh_normalVectorsAsFloat.htm">normalVectorsAsFloat</a></td>
+<td class="api-list">Returns the normal vectors of the mesh where there is a normal vector at each node. The normals are returned as an array of floats where they are the x, y, z components of each vector.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMesh_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMesh_surfaceTolerance.htm">surfaceTolerance</a></td>
+<td class="api-list">Returns the surface tolerance that was used to generate this mesh. This is most useful when using display meshes that have already been calculated.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMesh_textureCoordinates.htm">textureCoordinates</a></td>
+<td class="api-list">Returns the texture coordinates used when mapping a texture to this face. The coordinates are returned as an array of Point2D objects where the x and y properties of the point are u and v coordinates as defined in parametric space. There is a texture coordinate for each vertex in the face mesh.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMesh_textureCoordinatesAsDouble.htm">textureCoordinatesAsDouble</a></td>
+<td class="api-list">Returns the texture coordinates used when mapping a texture to this face. The coordinates are returned as an array of doubles where they are the u and v components of each coordinate as defined in parametric space. There is a texture coordinate for each vertex in the face mesh.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMesh_textureCoordinatesAsFloat.htm">textureCoordinatesAsFloat</a></td>
+<td class="api-list">Returns the texture coordinates used when mapping a texture to this face. The coordinates are returned as an array of floats where they are the u and v components of each coordinate as defined in parametric space. There is a texture coordinate for each vertex in the face mesh.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriangleMesh_triangleCount.htm">triangleCount</a></td>
+<td class="api-list">Returns the number of triangles in the mesh.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="MeshBody_displayMesh.htm">MeshBody.displayMesh</a>, <a href="TriangleMeshCalculator_calculate.htm">TriangleMeshCalculator.calculate</a>, <a href="TriangleMeshList_bestMesh.htm">TriangleMeshList.bestMesh</a>, <a href="TriangleMeshList_item.htm">TriangleMeshList.item</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(TriangleMesh%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/MeshData/TriangleMesh.h&gt;
+returnValue = adsk::fusion::TriangleMesh::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"triangleMesh_var" is a variable referencing a TriangleMesh object.
+#include &lt;Fusion/MeshData/TriangleMesh.h&gt;
+// Get the value of the property.
+boolean propertyValue = triangleMesh_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">nodeCoordinates Property</h3><p class="api">Returns the node coordinates as an array of Point3D objects.</p><pre class="api-code">"triangleMesh_var" is a variable referencing a TriangleMesh object.
+#include &lt;Fusion/MeshData/TriangleMesh.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;Point3D&gt;&gt; propertyValue = triangleMesh_var-&gt;
+nodeCoordinates
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type .</p><h3 class="api-member">nodeCoordinatesAsDouble Property</h3><p class="api">Returns the node coordinates as an array of doubles where they are the x, y, z components of each coordinate.</p><pre class="api-code">"triangleMesh_var" is a variable referencing a TriangleMesh object.
+#include &lt;Fusion/MeshData/TriangleMesh.h&gt;
+// Get the value of the property.
+std::vector&lt;double&gt; propertyValue = triangleMesh_var-&gt;
+nodeCoordinatesAsDouble
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type double.</p><h3 class="api-member">nodeCoordinatesAsFloat Property</h3><p class="api">Returns the node coordinates as an array of floats where they are the x, y, z components of each coordinate.</p><pre class="api-code">"triangleMesh_var" is a variable referencing a TriangleMesh object.
+#include &lt;Fusion/MeshData/TriangleMesh.h&gt;
+// Get the value of the property.
+std::vector&lt;float&gt; propertyValue = triangleMesh_var-&gt;
+nodeCoordinatesAsFloat
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type float.</p><h3 class="api-member">nodeCount Property</h3><p class="api">Returns the total number of nodes in the mesh.</p><pre class="api-code">"triangleMesh_var" is a variable referencing a TriangleMesh object.
+#include &lt;Fusion/MeshData/TriangleMesh.h&gt;
+// Get the value of the property.
+integer propertyValue = triangleMesh_var-&gt;
+nodeCount
+();</pre><p class="api">Property Value: This is a read only property whose value is an integer.</p><h3 class="api-member">nodeIndices Property</h3><p class="api">Returns an array of indices that define which nodes are used for each triangle. This is used to look-up the coordinates in the NodeCoordinates array to get the three coordinates of each triangle.</p><pre class="api-code">"triangleMesh_var" is a variable referencing a TriangleMesh object.
+#include &lt;Fusion/MeshData/TriangleMesh.h&gt;
+// Get the value of the property.
+std::vector&lt;integer&gt; propertyValue = triangleMesh_var-&gt;
+nodeIndices
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type integer.</p><h3 class="api-member">normalVectors Property</h3><p class="api">Returns the normal vectors of the mesh where there is a normal vector at each node. The normals are returned as an array of Vector3D objects.</p><pre class="api-code">"triangleMesh_var" is a variable referencing a TriangleMesh object.
+#include &lt;Fusion/MeshData/TriangleMesh.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;Vector3D&gt;&gt; propertyValue = triangleMesh_var-&gt;
+normalVectors
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type .</p><h3 class="api-member">normalVectorsAsDouble Property</h3><p class="api">Returns the normal vectors of the mesh where there is a normal vector at each node. The normals are returned as an array of doubles where they are the x, y, z components of each vector.</p><pre class="api-code">"triangleMesh_var" is a variable referencing a TriangleMesh object.
+#include &lt;Fusion/MeshData/TriangleMesh.h&gt;
+// Get the value of the property.
+std::vector&lt;double&gt; propertyValue = triangleMesh_var-&gt;
+normalVectorsAsDouble
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type double.</p><h3 class="api-member">normalVectorsAsFloat Property</h3><p class="api">Returns the normal vectors of the mesh where there is a normal vector at each node. The normals are returned as an array of floats where they are the x, y, z components of each vector.</p><pre class="api-code">"triangleMesh_var" is a variable referencing a TriangleMesh object.
+#include &lt;Fusion/MeshData/TriangleMesh.h&gt;
+// Get the value of the property.
+std::vector&lt;float&gt; propertyValue = triangleMesh_var-&gt;
+normalVectorsAsFloat
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type float.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"triangleMesh_var" is a variable referencing a TriangleMesh object.
+#include &lt;Fusion/MeshData/TriangleMesh.h&gt;
+// Get the value of the property.
+string propertyValue = triangleMesh_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">surfaceTolerance Property</h3><p class="api">Returns the surface tolerance that was used to generate this mesh. This is most useful when using display meshes that have already been calculated.</p><pre class="api-code">"triangleMesh_var" is a variable referencing a TriangleMesh object.
+#include &lt;Fusion/MeshData/TriangleMesh.h&gt;
+// Get the value of the property.
+double propertyValue = triangleMesh_var-&gt;
+surfaceTolerance
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">textureCoordinates Property</h3><p class="api">Returns the texture coordinates used when mapping a texture to this face. The coordinates are returned as an array of Point2D objects where the x and y properties of the point are u and v coordinates as defined in parametric space. There is a texture coordinate for each vertex in the face mesh.</p><pre class="api-code">"triangleMesh_var" is a variable referencing a TriangleMesh object.
+#include &lt;Fusion/MeshData/TriangleMesh.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;Point2D&gt;&gt; propertyValue = triangleMesh_var-&gt;
+textureCoordinates
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type .</p><h3 class="api-member">textureCoordinatesAsDouble Property</h3><p class="api">Returns the texture coordinates used when mapping a texture to this face. The coordinates are returned as an array of doubles where they are the u and v components of each coordinate as defined in parametric space. There is a texture coordinate for each vertex in the face mesh.</p><pre class="api-code">"triangleMesh_var" is a variable referencing a TriangleMesh object.
+#include &lt;Fusion/MeshData/TriangleMesh.h&gt;
+// Get the value of the property.
+std::vector&lt;double&gt; propertyValue = triangleMesh_var-&gt;
+textureCoordinatesAsDouble
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type double.</p><h3 class="api-member">textureCoordinatesAsFloat Property</h3><p class="api">Returns the texture coordinates used when mapping a texture to this face. The coordinates are returned as an array of floats where they are the u and v components of each coordinate as defined in parametric space. There is a texture coordinate for each vertex in the face mesh.</p><pre class="api-code">"triangleMesh_var" is a variable referencing a TriangleMesh object.
+#include &lt;Fusion/MeshData/TriangleMesh.h&gt;
+// Get the value of the property.
+std::vector&lt;float&gt; propertyValue = triangleMesh_var-&gt;
+textureCoordinatesAsFloat
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type float.</p><h3 class="api-member">triangleCount Property</h3><p class="api">Returns the number of triangles in the mesh.</p><pre class="api-code">"triangleMesh_var" is a variable referencing a TriangleMesh object.
+#include &lt;Fusion/MeshData/TriangleMesh.h&gt;
+// Get the value of the property.
+integer propertyValue = triangleMesh_var-&gt;
+triangleCount
+();</pre><p class="api">Property Value: This is a read only property whose value is an integer.</p></body>
+</html>

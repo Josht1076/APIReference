@@ -1,0 +1,220 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/VolumetricSampler.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="10/04/2025" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="VolumetricSampler" name="contextid"/>
+<meta content="VolumetricSampler Object" name="description"/>
+<meta content="GUID-7DA9BCAC-C535-469D-8702-608A2FA0D08B" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>VolumetricSampler Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">VolumetricSampler Object <img alt="Preview" src="../images/TestTubeLarge.png"/></h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::volume" and the header file is &lt;Volume/Volumetric/VolumetricSampler.h&gt;<p class="api-preview"><img alt="Preview" src="../images/TestTubeSmall.png"/>This functionality is provided as a preview
+				of intended future API capabilities. You are encouraged to use it and report any problems or suggestions using the
+				<a href="https://forums.autodesk.com/t5/fusion-360-api-and-scripts/bd-p/22">Fusion API and Scripts</a> forum.<br/><br/>
+	
+                Because this is a preview of future functionality, there is the possibility that it will change, which will possibly
+		        break any existing programs that use this functionality. Because of that, you should never deliver any programs that use
+		        any preview capabilities. For a distributed program, you should wait until it has moved from preview to released state.
+		    </p>
+<h2 class="api">
+          Description
+        </h2>The VolumetricSampler object which is used for controled sampling of the volumetric model.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="VolumetricSampler_addSamplePoints.htm">addSamplePoints</a></td>
+<td class="api-list">Appends sample points to the existing sample points to be used for sampling the volumetric model.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VolumetricSampler_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VolumetricSampler_clearSamplePoints.htm">clearSamplePoints</a></td>
+<td class="api-list">Clears the sample points that have been set for sampling the volumetric model.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VolumetricSampler_evaluate.htm">evaluate</a></td>
+<td class="api-list">Evaluates the volumetric model at the previously set sample points for the given node and returns the results.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VolumetricSampler_evaluateColor.htm">evaluateColor</a></td>
+<td class="api-list">Evaluates the color of the model at the previously set sample points and returns the results.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VolumetricSampler_evaluateDensity.htm">evaluateDensity</a></td>
+<td class="api-list">Evaluates the density of the model at the previously set sample points and returns the results. This value is what is used to determine the level set of the model.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VolumetricSampler_evaluateLevelSet.htm">evaluateLevelSet</a></td>
+<td class="api-list">Evaluates the level set function of the model at the previously set sample points and returns the results.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VolumetricSampler_samplePointCount.htm">samplePointCount</a></td>
+<td class="api-list">Gets the number of sample points that will be used for sampling the volumetric model.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VolumetricSampler_setBoundingBoxSampling.htm">setBoundingBoxSampling</a></td>
+<td class="api-list">Calculates and sets the sample points to be used for sampling the volumetric model for a given resolution throughout the bounding box provided. This will override any previously set sample points.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VolumetricSampler_setPlaneSampling.htm">setPlaneSampling</a></td>
+<td class="api-list">Calculates and sets the sample points to be used for sampling the volumetric model for a given resolution, plane and primary axis. The points will be distributed in a grid pattern on the plane, starting at the plane origin and extend in the primary axis and secodary axis for the axis size arguments. The secondary axis is calculated from the cross product of the plane normal and the primary axis. This will override any previously set sample points.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VolumetricSampler_setSamplePoints.htm">setSamplePoints</a></td>
+<td class="api-list">Sets sample points to be used for sampling the volumetric model.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="VolumetricSampler_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VolumetricSampler_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="VolumetricModel_createSampler.htm">VolumetricModel.createSampler</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version May 2025<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(VolumetricSampler%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">addSamplePoints Method</h3><p class="api">Appends sample points to the existing sample points to be used for sampling the volumetric model.</p><pre class="api-code">"volumetricSampler_var" is a variable referencing a
+VolumetricSampler
+object.
+#include &lt;Volume/Volumetric/VolumetricSampler.h&gt;
+returnValue = volumetricSampler_var-&gt;
+addSamplePoints
+(samplePoints);</pre><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">samplePoints</td><td class="api-list">Point3D[]</td><td class="api-list">The sample points to be added to the sampler.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Volume/Volumetric/VolumetricSampler.h&gt;
+returnValue = adsk::volume::VolumetricSampler::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">clearSamplePoints Method</h3><p class="api">Clears the sample points that have been set for sampling the volumetric model.</p><pre class="api-code">"volumetricSampler_var" is a variable referencing a
+VolumetricSampler
+object.
+#include &lt;Volume/Volumetric/VolumetricSampler.h&gt;
+returnValue = volumetricSampler_var-&gt;
+clearSamplePoints
+();</pre><p class="api">Return Value: boolean - True if the sample points were successfully cleared.</p><h3 class="api-member">evaluate Method</h3><p class="api">Evaluates the volumetric model at the previously set sample points for the given node and returns the results.</p><pre class="api-code">"volumetricSampler_var" is a variable referencing a
+VolumetricSampler
+object.
+#include &lt;Volume/Volumetric/VolumetricSampler.h&gt;
+// Uses no optional arguments.
+returnValue = volumetricSampler_var-&gt;
+evaluate
+(graphNode);
+// Uses optional arguments.
+returnValue = volumetricSampler_var-&gt;
+evaluate
+(graphNode, isOutput, index);</pre><p class="api">Return Value: VolumetricSample [] - An array of VolumetricSample objects that contain the results of sampling the volumetric model.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">graphNode</td><td class="api-list">GraphNode</td><td class="api-list">The graph node to evaluate at the sample points.</td></tr><tr><td class="api-list">isOutput</td><td class="api-list">boolean</td><td class="api-list">Optional argument that controls the sampling. If set to true samples an output pin, if set to false samples an input pin. Default is True. This is an optional argument whose default value is True.</td></tr><tr><td class="api-list">index</td><td class="api-list">integer</td><td class="api-list">Optional argument that controls the index of the pin to sample. Default is 0 which is the first pin. This is an optional argument whose default value is 0.</td></tr></table><h3 class="api-member">evaluateColor Method</h3><p class="api">Evaluates the color of the model at the previously set sample points and returns the results.</p><pre class="api-code">"volumetricSampler_var" is a variable referencing a
+VolumetricSampler
+object.
+#include &lt;Volume/Volumetric/VolumetricSampler.h&gt;
+returnValue = volumetricSampler_var-&gt;
+evaluateColor
+();</pre><p class="api">Return Value: VolumetricColorSample [] - An array of VolumetricColorSample objects that contain the results of sampling the volumetric model.</p><h3 class="api-member">evaluateDensity Method</h3><p class="api">Evaluates the density of the model at the previously set sample points and returns the results. This value is what is used to determine the level set of the model.</p><pre class="api-code">"volumetricSampler_var" is a variable referencing a
+VolumetricSampler
+object.
+#include &lt;Volume/Volumetric/VolumetricSampler.h&gt;
+returnValue = volumetricSampler_var-&gt;
+evaluateDensity
+();</pre><p class="api">Return Value: VolumetricScalarSample [] - An array of VolumetricScalarSample objects that contain the results of sampling the volumetric model.</p><h3 class="api-member">evaluateLevelSet Method</h3><p class="api">Evaluates the level set function of the model at the previously set sample points and returns the results.</p><pre class="api-code">"volumetricSampler_var" is a variable referencing a
+VolumetricSampler
+object.
+#include &lt;Volume/Volumetric/VolumetricSampler.h&gt;
+returnValue = volumetricSampler_var-&gt;
+evaluateLevelSet
+();</pre><p class="api">Return Value: VolumetricScalarSample [] - An array of VolumetricScalarSample objectst that contain the results of sampling the volumetric model.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"volumetricSampler_var" is a variable referencing a VolumetricSampler object.
+#include &lt;Volume/Volumetric/VolumetricSampler.h&gt;
+// Get the value of the property.
+boolean propertyValue = volumetricSampler_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"volumetricSampler_var" is a variable referencing a VolumetricSampler object.
+#include &lt;Volume/Volumetric/VolumetricSampler.h&gt;
+// Get the value of the property.
+string propertyValue = volumetricSampler_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">samplePointCount Method</h3><p class="api">Gets the number of sample points that will be used for sampling the volumetric model.</p><pre class="api-code">"volumetricSampler_var" is a variable referencing a
+VolumetricSampler
+object.
+#include &lt;Volume/Volumetric/VolumetricSampler.h&gt;
+returnValue = volumetricSampler_var-&gt;
+samplePointCount
+();</pre><p class="api">Return Value: uinteger - The number of sample points that will be used for sampling the volumetric model.</p><h3 class="api-member">setBoundingBoxSampling Method</h3><p class="api">Calculates and sets the sample points to be used for sampling the volumetric model for a given resolution throughout the bounding box provided. This will override any previously set sample points.</p><pre class="api-code">"volumetricSampler_var" is a variable referencing a
+VolumetricSampler
+object.
+#include &lt;Volume/Volumetric/VolumetricSampler.h&gt;
+returnValue = volumetricSampler_var-&gt;
+setBoundingBoxSampling
+(elementSize, boundingBox3d);</pre><p class="api">Return Value: boolean - True if the sample points were set successfully.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">elementSize</td><td class="api-list">double</td><td class="api-list">The approximate spacing between sample points. The units used for the element size are centimeters.</td></tr><tr><td class="api-list">boundingBox3d</td><td class="api-list">BoundingBox3D</td><td class="api-list">The bounding box in which the sample points will be distributed.</td></tr></table><h3 class="api-member">setPlaneSampling Method</h3><p class="api">Calculates and sets the sample points to be used for sampling the volumetric model for a given resolution, plane and primary axis. The points will be distributed in a grid pattern on the plane, starting at the plane origin and extend in the primary axis and secodary axis for the axis size arguments. The secondary axis is calculated from the cross product of the plane normal and the primary axis. This will override any previously set sample points.</p><pre class="api-code">"volumetricSampler_var" is a variable referencing a
+VolumetricSampler
+object.
+#include &lt;Volume/Volumetric/VolumetricSampler.h&gt;
+returnValue = volumetricSampler_var-&gt;
+setPlaneSampling
+(elementSize, plane, primaryAxis, primaryAxisSize, secondaryAxisSize);</pre><p class="api">Return Value: boolean - True if the sample points were set successfully.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">elementSize</td><td class="api-list">double</td><td class="api-list">The approximate spacing between sample points. The units used for the element size are centimeters.</td></tr><tr><td class="api-list">plane</td><td class="api-list">Plane</td><td class="api-list">The plane on which the points will be distributed.</td></tr><tr><td class="api-list">primaryAxis</td><td class="api-list">Vector3D</td><td class="api-list">The primary axis of the plane. This vector should be on the plane. The secondary axis of the plane is calculated as the cross-product of the plane normal and the primary axis</td></tr><tr><td class="api-list">primaryAxisSize</td><td class="api-list">double</td><td class="api-list">The size of the plane in the primary axis direction.</td></tr><tr><td class="api-list">secondaryAxisSize</td><td class="api-list">double</td><td class="api-list">The size of the plane in the secondary axis direction.</td></tr></table><h3 class="api-member">setSamplePoints Method</h3><p class="api">Sets sample points to be used for sampling the volumetric model.</p><pre class="api-code">"volumetricSampler_var" is a variable referencing a
+VolumetricSampler
+object.
+#include &lt;Volume/Volumetric/VolumetricSampler.h&gt;
+returnValue = volumetricSampler_var-&gt;
+setSamplePoints
+(samplePoints);</pre><p class="api">Return Value: boolean - True if the sample points were set successfully.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">samplePoints</td><td class="api-list">Point3D[]</td><td class="api-list">The sample points to be used for sampling the volumetric model.</td></tr></table></body>
+</html>

@@ -1,0 +1,799 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/TemporaryBRepManager.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="28/11/2017" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="TemporaryBRepManager" name="contextid"/>
+<meta content="TemporaryBRepManager Object" name="description"/>
+<meta content="GUID-2CA08FA9-8C23-4449-87C4-1CCBA87941C1" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>TemporaryBRepManager Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">TemporaryBRepManager Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/BRep/TemporaryBRepManager.h&gt;<h2 class="api">
+          Description
+        </h2>A utility object that provides functionality to create and manipulate B-Rep data outside the context of a document. The provides direct access to the modeling core without the overhead of parametrics, persistence, transactions, or graphics. It also provides a way of directly defining and creating B-Rep data.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_booleanOperation.htm">booleanOperation</a></td>
+<td class="api-list">Performs the specified Boolean operation between the two input bodies. The input bodies need not be solid but can be faces that are combined or trimmed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_copy.htm">copy</a></td>
+<td class="api-list">Creates a temporary copy of the input BRepBody, BRepFace, or BRepEdge object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_createBox.htm">createBox</a></td>
+<td class="api-list">Creates a new temporary solid box BRepBody object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_createCylinderOrCone.htm">createCylinderOrCone</a></td>
+<td class="api-list">Creates a temporary solid cylinder or cone BRepBody object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_createEllipticalCylinderOrCone.htm">createEllipticalCylinderOrCone</a></td>
+<td class="api-list">Creates a temporary elliptical solid cylinder or cone BrepBody object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_createFaceFromPlanarWires.htm">createFaceFromPlanarWires</a></td>
+<td class="api-list">Creates a body from multiple wires that all lie within the same plane. Multiple wires are used when creating a plane with interior holes. One wire defines the outer shape and the other wires define the interior loops of the created face.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_createFromFile.htm">createFromFile</a></td>
+<td class="api-list">Creates new BRepBody objects based on the contents of the specified file.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_createHelixWire.htm">createHelixWire</a></td>
+<td class="api-list">Creates a B-Rep body that contains a wire with a single edge that represents a helical curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_createProjectedBodyOutline.htm">createProjectedBodyOutline</a></td>
+<td class="api-list">Computes the approximate outline of a body. The outline is the loops formed from projecting the non-occluded silhouette curves of the body onto a plane. The outline is returned as a temporary BRepBody consisting of planar BRepFace objects whose boundaries form the outline.<br><br/> The computed outline can be an approximation i.e. not precise. This is to make it useful in cases where robustness is more important than precision. For most cases, a precise analytical result is computed, but in some cases, the silhouette of a curved surface may be approximated by a series of straight lines. Even though it's an approximation you can control the tolerance of the approximation. A tighter tolerance will result in a longer compute time.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_createRuledSurface.htm">createRuledSurface</a></td>
+<td class="api-list">Creates a new body by creating a ruled surface between the two input wire bodies.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_createSilhouetteCurves.htm">createSilhouetteCurves</a></td>
+<td class="api-list">Calculates the silhouette curve geometry for a given face as viewed from a given direction.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_createSphere.htm">createSphere</a></td>
+<td class="api-list">Creates a temporary spherical BRepBody object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_createTorus.htm">createTorus</a></td>
+<td class="api-list">Creates a temporary toroidal BRepBody object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_createWireFromCurves.htm">createWireFromCurves</a></td>
+<td class="api-list">Give an array of curve geometry objects, this method creates a new wire body.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_deleteFaces.htm">deleteFaces</a></td>
+<td class="api-list">Deletes one or more faces from a temporary BRepBody. The body that will be modified is determined by getting the parent body of the input faces.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_exportToFile.htm">exportToFile</a></td>
+<td class="api-list">Exports the input bodies to the specified file.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_get.htm">get</a></td>
+<td class="api-list">Gets the TempoaryBRepManager object. This object provides access to functionality to create an manipulate temporary B-Rep data outside the context of a document.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_imprintOverlapBodies.htm">imprintOverlapBodies</a></td>
+<td class="api-list">Method that finds regions of faces on two bodies which overlap and creates new bodies where the faces are split at the edges of the overlaps. This does not modify the original bodies but creates new temporary bodies that contain the imprints.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_planeIntersection.htm">planeIntersection</a></td>
+<td class="api-list">Calculates the intersection between the input body and plane and creates a wire body that represents the intersection curves.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_transform.htm">transform</a></td>
+<td class="api-list">Transforms the input body using the specified transformation matrix.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="TemporaryBRepManager_get.htm">TemporaryBRepManager.get</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="TemporaryBRepManager_Sample.htm">TemporaryBRepManager API Sample</a></td>
+<td class="api-list">TemporaryBRepManager related functions</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version December 2017<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(TemporaryBRepManager%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">booleanOperation Method</h3><p class="api">Performs the specified Boolean operation between the two input bodies. The input bodies need not be solid but can be faces that are combined or trimmed.</p><pre class="api-code">"temporaryBRepManager_var" is a variable referencing a
+TemporaryBRepManager
+object.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+returnValue = temporaryBRepManager_var-&gt;
+booleanOperation
+(targetBody, toolBody, booleanType);</pre><p class="api">Return Value: boolean - Returns true if the operation was successful. If successful, the target body is modified as a result of the  Boolean operation. Because of this the targetBody must always be a temporary BRepBody. The toolbody is not  modified. This is analogous to a machining operation where you have the target that is being machined and  the tool that removes material.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">targetBody</td><td class="api-list">BRepBody</td><td class="api-list">The target body that will be modified as a result of the Boolean operation.</td></tr><tr><td class="api-list">toolBody</td><td class="api-list">BRepBody</td><td class="api-list">The tool body that will be used to operate on the target body.</td></tr><tr><td class="api-list">booleanType</td><td class="api-list">BooleanTypes</td><td class="api-list">The type of Boolean operation to perform.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+returnValue = adsk::fusion::TemporaryBRepManager::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">copy Method</h3><p class="api">Creates a temporary copy of the input BRepBody, BRepFace, or BRepEdge object.</p><pre class="api-code">"temporaryBRepManager_var" is a variable referencing a
+TemporaryBRepManager
+object.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+returnValue = temporaryBRepManager_var-&gt;
+copy
+(bRepEntity);</pre><p class="api">Return Value: BRepBody - Returns a BRepBody that contains the result. If a BRepBody is input the copy is of the entire body. If a BRepFace is input, then the result is a BRepBody that  contains a single face. If a BRepLoop is input then the result is a BRepBody that contains a wire where each edge in the loop will have a corresponding edge in the wire. If a BRepEdge is input then the result is a BRepBody that contains a wire that contains  the single edge.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">bRepEntity</td><td class="api-list">Base</td><td class="api-list">The BRepBody, BRepFace, BRepLoop, or BRepEdge to create a copy of. This can be a parametric B-Rep entity or a temporary B-Rep entity.</td></tr></table><h3 class="api-member">createBox Method</h3><p class="api">Creates a new temporary solid box BRepBody object.</p><pre class="api-code">"temporaryBRepManager_var" is a variable referencing a
+TemporaryBRepManager
+object.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+returnValue = temporaryBRepManager_var-&gt;
+createBox
+(box);</pre><p class="api">Return Value: BRepBody - Returns the newly created temporary BRepBody object or null in the case of failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">box</td><td class="api-list">OrientedBoundingBox3D</td><td class="api-list">The OrientedBoundingBox3D object that defines the position, orientation, and size of the box to crate.</td></tr></table><h3 class="api-member">createCylinderOrCone Method</h3><p class="api">Creates a temporary solid cylinder or cone BRepBody object.</p><pre class="api-code">"temporaryBRepManager_var" is a variable referencing a
+TemporaryBRepManager
+object.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+returnValue = temporaryBRepManager_var-&gt;
+createCylinderOrCone
+(pointOne, pointOneRadius, pointTwo, pointTwoRadius);</pre><p class="api">Return Value: BRepBody - Returns the newly created temporary BRepBody object or null in the case of failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pointOne</td><td class="api-list">Point3D</td><td class="api-list">A point at one end of the cylinder or cone.</td></tr><tr><td class="api-list">pointOneRadius</td><td class="api-list">double</td><td class="api-list">The radius of the cylinder or cone at the point one end, in centimeters.</td></tr><tr><td class="api-list">pointTwo</td><td class="api-list">Point3D</td><td class="api-list">A point at the opposite end of the cylinder or cone.</td></tr><tr><td class="api-list">pointTwoRadius</td><td class="api-list">double</td><td class="api-list">The radius of the cylinder or cone at the point two end, in centimeters. For a cylinder the pointTwoRadius should be equal to the pointOneRadius.</td></tr></table><h3 class="api-member">createEllipticalCylinderOrCone Method</h3><p class="api">Creates a temporary elliptical solid cylinder or cone BrepBody object.</p><pre class="api-code">"temporaryBRepManager_var" is a variable referencing a
+TemporaryBRepManager
+object.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+returnValue = temporaryBRepManager_var-&gt;
+createEllipticalCylinderOrCone
+(pointOne, pointOneMajorRadius, pointOneMinorRadius, pointTwo, pointTwoMajorRadius, majorAxisDirection);</pre><p class="api">Return Value: BRepBody - Returns the newly created temporary BRepBody object or null in the case of failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">pointOne</td><td class="api-list">Point3D</td><td class="api-list">A point at one end of the cylinder or cone.</td></tr><tr><td class="api-list">pointOneMajorRadius</td><td class="api-list">double</td><td class="api-list">The major radius of the cylinder or cone at the point one end, in centimeters.</td></tr><tr><td class="api-list">pointOneMinorRadius</td><td class="api-list">double</td><td class="api-list">The minor radius of the cylinder or cone at the point one end, in centimeters.</td></tr><tr><td class="api-list">pointTwo</td><td class="api-list">Point3D</td><td class="api-list">A point at the opposite end of the cone.</td></tr><tr><td class="api-list">pointTwoMajorRadius</td><td class="api-list">double</td><td class="api-list">The major radius of the cylinder or cone at the point two end, in centimeters. The minor radius is automatically determined using the point one ratio of the minor and major radii.</td></tr><tr><td class="api-list">majorAxisDirection</td><td class="api-list">Vector3D</td><td class="api-list">A Vector3D object that defines the direction of the major axis.</td></tr></table><h3 class="api-member">createFaceFromPlanarWires Method</h3><p class="api">Creates a body from multiple wires that all lie within the same plane. Multiple wires are used when creating a plane with interior holes. One wire defines the outer shape and the other wires define the interior loops of the created face.</p><pre class="api-code">"temporaryBRepManager_var" is a variable referencing a
+TemporaryBRepManager
+object.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+returnValue = temporaryBRepManager_var-&gt;
+createFaceFromPlanarWires
+(wireBodies);</pre><p class="api">Return Value: BRepBody - Returns a BRepBody containing the created BRepFace object or null in the case of failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">wireBodies</td><td class="api-list">BRepBody[]</td><td class="api-list">An array of bodies that contain planar wires. Each wire must be closed, they should not overlap, and they should all lie on the same plane.</td></tr></table><h3 class="api-member">createFromFile Method</h3><p class="api">Creates new BRepBody objects based on the contents of the specified file.</p><pre class="api-code">"temporaryBRepManager_var" is a variable referencing a
+TemporaryBRepManager
+object.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+returnValue = temporaryBRepManager_var-&gt;
+createFromFile
+(filename);</pre><p class="api">Return Value: BRepBodies - A BRepBodies collection object is returned which can contain multiple BRepBody objects. null is returned in the case where it was unable to read the file.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">filename</td><td class="api-list">string</td><td class="api-list">The full path and name of the file to read in. This can be a SMT, SMB, SAT, or SAB file.</td></tr></table><h3 class="api-member">createHelixWire Method</h3><p class="api">Creates a B-Rep body that contains a wire with a single edge that represents a helical curve.</p><pre class="api-code">"temporaryBRepManager_var" is a variable referencing a
+TemporaryBRepManager
+object.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+returnValue = temporaryBRepManager_var-&gt;
+createHelixWire
+(axisPoint, axisVector, startPoint, pitch, turns, taperAngle);</pre><p class="api">Return Value: BRepBody - Returns a temporary BRepBody object that contains a wire body that is the shape of the specified helix. Return null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">axisPoint</td><td class="api-list">Point3D</td><td class="api-list">A Point3D object that defines a point along the axis of the helix.</td></tr><tr><td class="api-list">axisVector</td><td class="api-list">Vector3D</td><td class="api-list">A Vector3D object that defines the direction of the axis of the helix.</td></tr><tr><td class="api-list">startPoint</td><td class="api-list">Point3D</td><td class="api-list">A Point3D that defines the start point of the helix. This is a point on the helix and defines the starting point of the helix. The distance of this point to the axis defines the starting radius of the helix.</td></tr><tr><td class="api-list">pitch</td><td class="api-list">double</td><td class="api-list">The pitch of the helix, or the distance between each of the turns, in centimeters.</td></tr><tr><td class="api-list">turns</td><td class="api-list">double</td><td class="api-list">The number of turns of the helix.</td></tr><tr><td class="api-list">taperAngle</td><td class="api-list">double</td><td class="api-list">The taper angle of the helix in radians.</td></tr></table><h3 class="api-member">createProjectedBodyOutline Method</h3><p class="api">Computes the approximate outline of a body. The outline is the loops formed from projecting the non-occluded silhouette curves of the body onto a plane. The outline is returned as a temporary BRepBody consisting of planar BRepFace objects whose boundaries form the outline. The computed outline can be an approximation i.e. not precise. This is to make it useful in cases where robustness is more important than precision. For most cases, a precise analytical result is computed, but in some cases, the silhouette of a curved surface may be approximated by a series of straight lines. Even though it's an approximation you can control the tolerance of the approximation. A tighter tolerance will result in a longer compute time.</p><pre class="api-code">#include &lt;Fusion/BRep/TemporaryBRepManager.h
+// Declare the output arguments.
+Ptr&lt;BRepBody&gt; body;
+Ptr&lt;Plane&gt; projectionPlane;
+double tolerance;
+boolean containsApproximation;
+Ptr&lt;BRepBody&gt; returnValue = temporaryBRepManager_var-&gt;
+createProjectedBodyOutline
+(body, projectionPlane, tolerance, containsApproximation);</pre><p class="api">Return Value: BRepBody - Returns a BRepBody object consisting of planar BRepFace objects whose boundaries define the body's outline.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">body</td><td class="api-list">BRepBody</td><td class="api-list">Input BRepBody object to calculate the projected outline for.</td></tr><tr><td class="api-list">projectionPlane</td><td class="api-list">Plane</td><td class="api-list">Input Plane object that defines the position and orientation of the plane to project the body onto. The resulting body will lie on this plane.</td></tr><tr><td class="api-list">tolerance</td><td class="api-list">double</td><td class="api-list">Input value that specifies the tolerance in centimeters to use when approximating smooth surfaces with line segments. A negative tolerance uses the default value which is 0.001 times the length of the diagonal of the bounding box of the input body. A positive tolerance must be greater than the point tolerance (0.000001).</td></tr><tr><td class="api-list">containsApproximation</td><td class="api-list">boolean</td><td class="api-list">Output value that indicates if the result contains any silhouette curves that are an approximation of the true silhouette.</td></tr></table><h3 class="api-member">createRuledSurface Method</h3><p class="api">Creates a new body by creating a ruled surface between the two input wire bodies.</p><pre class="api-code">"temporaryBRepManager_var" is a variable referencing a
+TemporaryBRepManager
+object.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+returnValue = temporaryBRepManager_var-&gt;
+createRuledSurface
+(sectionOne, sectionTwo);</pre><p class="api">Return Value: BRepBody - Returns the created ruled surface as a BRepBody object.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">sectionOne</td><td class="api-list">BRepWire</td><td class="api-list">BRepWire that defines the shape of the first section.</td></tr><tr><td class="api-list">sectionTwo</td><td class="api-list">BRepWire</td><td class="api-list">BRepWire that defines the shape of the second section.</td></tr></table><h3 class="api-member">createSilhouetteCurves Method</h3><p class="api">Calculates the silhouette curve geometry for a given face as viewed from a given direction.</p><pre class="api-code">"temporaryBRepManager_var" is a variable referencing a
+TemporaryBRepManager
+object.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+returnValue = temporaryBRepManager_var-&gt;
+createSilhouetteCurves
+(face, viewDirection, returnCoincidentSilhouettes);</pre><p class="api">Return Value: BRepBody - Returns a SurfaceBody object that will contain one or more BRepWire objects that represent the silhouette curve(s).  This method can return null in the case where there is not a silhouette curve for the specified face.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">face</td><td class="api-list">BRepFace</td><td class="api-list">Input BRepFace object to calculate the silhouette curve for.</td></tr><tr><td class="api-list">viewDirection</td><td class="api-list">Vector3D</td><td class="api-list">Input Vector3D object that defines the view direction to calculate the silhouette curve relative to. The silhouette curve(s) will lie along the path where the face normal is perpendicular to the view direction.</td></tr><tr><td class="api-list">returnCoincidentSilhouettes</td><td class="api-list">boolean</td><td class="api-list">Input Boolean that specifies if silhouette curves that are coincident to the edges of the face should be returned or not. If true, these curves will be returned.</td></tr></table><h3 class="api-member">createSphere Method</h3><p class="api">Creates a temporary spherical BRepBody object.</p><pre class="api-code">"temporaryBRepManager_var" is a variable referencing a
+TemporaryBRepManager
+object.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+returnValue = temporaryBRepManager_var-&gt;
+createSphere
+(center, radius);</pre><p class="api">Return Value: BRepBody - Returns the newly created temporary BRepBody object or null in the case of failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">center</td><td class="api-list">Point3D</td><td class="api-list">The center point of the sphere.</td></tr><tr><td class="api-list">radius</td><td class="api-list">double</td><td class="api-list">The radius of the sphere in centimeters.</td></tr></table><h3 class="api-member">createTorus Method</h3><p class="api">Creates a temporary toroidal BRepBody object.</p><pre class="api-code">"temporaryBRepManager_var" is a variable referencing a
+TemporaryBRepManager
+object.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+returnValue = temporaryBRepManager_var-&gt;
+createTorus
+(center, axis, majorRadius, minorRadius);</pre><p class="api">Return Value: BRepBody - Returns the newly created temporary BRepBody object or null in the case of failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">center</td><td class="api-list">Point3D</td><td class="api-list">The center point of the torus.</td></tr><tr><td class="api-list">axis</td><td class="api-list">Vector3D</td><td class="api-list">The axis of the torus.</td></tr><tr><td class="api-list">majorRadius</td><td class="api-list">double</td><td class="api-list">The radius, in centimeters, of the major radius of the torus. If the torus was created by sweeping a circle around another circle this would be the radius of the path circle.</td></tr><tr><td class="api-list">minorRadius</td><td class="api-list">double</td><td class="api-list">The radius, in centimeters, of the minor radius of the torus. If the torus was created by sweeping a circle around another circle this would be the radius of the profile circle.</td></tr></table><h3 class="api-member">createWireFromCurves Method</h3><p class="api">Give an array of curve geometry objects, this method creates a new wire body.</p><pre class="api-code">#include &lt;Fusion/BRep/TemporaryBRepManager.h
+// Uses no optional arguments.
+// Declare the output arguments.
+Curve3D[] curves;
+BRepEdge[] edgeMap;
+Ptr&lt;BRepBody&gt; returnValue = temporaryBRepManager_var-&gt;
+createWireFromCurves
+(curves, edgeMap);
+// Uses optional arguments.
+// Declare the output arguments.
+boolean allowSelfIntersections;
+// Call the function.
+Ptr&lt;TemporaryBRepManager&gt; returnValue = temporaryBRepManager_var-&gt;
+createWireFromCurves
+(curves, edgeMap, allowSelfIntersections);</pre><p class="api">Return Value: BRepBody - Returns the B-Rep body containing the created wire or null in the case of failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">curves</td><td class="api-list">Curve3D[]</td><td class="api-list">An array containing the input Curve3D objects. These can be Arc3D, Circle3D, Ellipse3D, EllipticalArc3D or Line3D objects.</td></tr><tr><td class="api-list">edgeMap</td><td class="api-list">BRepEdge[]</td><td class="api-list">An array of edges in the returned body. The order that the edges are in this collection is the same order as the original corresponding Curve3D object is in the input curves array. This allows you to map between the original input curve and created edge.</td></tr><tr><td class="api-list">allowSelfIntersections</td><td class="api-list">boolean</td><td class="api-list">Specifies if you want to allow self-intersection in the input curves or not. This is an optional argument whose default value is False.</td></tr></table><h3 class="api-member">deleteFaces Method</h3><p class="api">Deletes one or more faces from a temporary BRepBody. The body that will be modified is determined by getting the parent body of the input faces.</p><pre class="api-code">"temporaryBRepManager_var" is a variable referencing a
+TemporaryBRepManager
+object.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+returnValue = temporaryBRepManager_var-&gt;
+deleteFaces
+(faces, deleteSpecifiedFaces);</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">faces</td><td class="api-list">BRepFace[]</td><td class="api-list">An array of BRepFace objects to delete. If more than one face is provided, all of the faces must exist within the same body.</td></tr><tr><td class="api-list">deleteSpecifiedFaces</td><td class="api-list">boolean</td><td class="api-list">This allows you to either delete the faces that were input or to keep those faces and delete all the other faces in the body.</td></tr></table><h3 class="api-member">exportToFile Method</h3><p class="api">Exports the input bodies to the specified file.</p><pre class="api-code">"temporaryBRepManager_var" is a variable referencing a
+TemporaryBRepManager
+object.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+returnValue = temporaryBRepManager_var-&gt;
+exportToFile
+(bodies, filename);</pre><p class="api">Return Value: boolean - Returns true if the export was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">bodies</td><td class="api-list">BRepBody[]</td><td class="api-list">An array of BRepBody objects that you want to export.</td></tr><tr><td class="api-list">filename</td><td class="api-list">string</td><td class="api-list">The filename to write the BRepBody objects to. The type of file to create is inferred from the extension of the file. The valid extensions are ".sat" and ".smt".</td></tr></table><h3 class="api-member">get Method</h3><p class="api">Gets the TempoaryBRepManager object. This object provides access to functionality to create an manipulate temporary B-Rep data outside the context of a document.</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+returnValue = adsk::fusion::TemporaryBRepManager::
+get
+();</pre><p class="api">Return Value: TemporaryBRepManager - Returns the TemporaryBRepManager object.</p><h3 class="api-member">imprintOverlapBodies Method</h3><p class="api">Method that finds regions of faces on two bodies which overlap and creates new bodies where the faces are split at the edges of the overlaps. This does not modify the original bodies but creates new temporary bodies that contain the imprints.</p><pre class="api-code">#include &lt;Fusion/BRep/TemporaryBRepManager.h
+// Uses no optional arguments.
+// Declare the output arguments.
+Ptr&lt;BRepBody&gt; bodyOne;
+Ptr&lt;BRepBody&gt; bodyTwo;
+boolean imprintCoincidentEdges;
+Ptr&lt;BRepBody&gt; resultBodyOne;
+Ptr&lt;BRepBody&gt; resultBodyTwo;
+BRepFace[] bodyOneOverlappingFaces;
+BRepFace[] bodyTwoOverlappingFaces;
+BRepEdge[] bodyOneOverlappingEdges;
+BRepEdge[] bodyTwoOverlappingEdges;
+boolean returnValue = temporaryBRepManager_var-&gt;
+imprintOverlapBodies
+(bodyOne, bodyTwo, imprintCoincidentEdges, resultBodyOne, resultBodyTwo, bodyOneOverlappingFaces, bodyTwoOverlappingFaces, bodyOneOverlappingEdges, bodyTwoOverlappingEdges);
+// Uses optional arguments.
+// Declare the output arguments.
+double tolerance;
+// Call the function.
+Ptr&lt;TemporaryBRepManager&gt; returnValue = temporaryBRepManager_var-&gt;
+imprintOverlapBodies
+(bodyOne, bodyTwo, imprintCoincidentEdges, resultBodyOne, resultBodyTwo, bodyOneOverlappingFaces, bodyTwoOverlappingFaces, bodyOneOverlappingEdges, bodyTwoOverlappingEdges, tolerance);</pre><p class="api">Return Value: boolean - Returns true if the imprint calculation was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">bodyOne</td><td class="api-list">BRepBody</td><td class="api-list">Input BRepBody that will participate in the imprint operation. This body can be either a parametric or temporary body.</td></tr><tr><td class="api-list">bodyTwo</td><td class="api-list">BRepBody</td><td class="api-list">Input BRepBody that will participate in the imprint operation. This body can be either a parametric or temporary body.</td></tr><tr><td class="api-list">imprintCoincidentEdges</td><td class="api-list">boolean</td><td class="api-list">Input Boolean that indicates if overlapping edges should be included in the result. The picture below shows an example of when this argument will make a difference. The two bodies have overlapping faces and there is also an overlapping edge. If this argument is true, then the edge shown in red below will be included in the output as an overlapping edge. If False it will not be included and only the edges of the overlapping faces will be in the overlapping faces collections.</td></tr><tr><td class="api-list">resultBodyOne</td><td class="api-list">BRepBody</td><td class="api-list">Output temporary BRepBody that contains the imprinted body that corresponds to the body provided through the bodyOne argument.</td></tr><tr><td class="api-list">resultBodyTwo</td><td class="api-list">BRepBody</td><td class="api-list">Output temporary BRepBody that contains the imprinted body that corresponds to the body provided through the bodyTwo argument.</td></tr><tr><td class="api-list">bodyOneOverlappingFaces</td><td class="api-list">BRepFace[]</td><td class="api-list">Output array of BRepFace objects that represent the overlapping faces that are part of resultBodyOne. Faces at the same index within the collection returned here and that returned by the bodyTwoOverlappingFaces are overlapping.</td></tr><tr><td class="api-list">bodyTwoOverlappingFaces</td><td class="api-list">BRepFace[]</td><td class="api-list">Output array of BRepFace objects that represent the overlapping faces that are part of resultBodyTwo. Faces at the same index within the collection returned here and that returned by the bodyOneOverlappingFaces are overlapping.</td></tr><tr><td class="api-list">bodyOneOverlappingEdges</td><td class="api-list">BRepEdge[]</td><td class="api-list">Output array of BRepEdge objects that represent the overlapping edges that are part of resultBodyOne. Edges at the same index within the collection returned here and that returned by the bodyTwoOverlappingEdges are overlapping.</td></tr><tr><td class="api-list">bodyTwoOverlappingEdges</td><td class="api-list">BRepEdge[]</td><td class="api-list">Output array of BRepEdge objects that represent the overlapping edges that are part of resultBodyTwo. Edges at the same index within the collection returned here and that returned by the bodyOneOverlappingEdges are overlapping.</td></tr><tr><td class="api-list">tolerance</td><td class="api-list">double</td><td class="api-list">Optional Input double that specifies the tolerance, in centimeters, to use when comparing the bodies. If not specified, or a value of zero is specified, the internal modeling tolerance will be used. This is an optional argument whose default value is 0.0.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"temporaryBRepManager_var" is a variable referencing a TemporaryBRepManager object.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+// Get the value of the property.
+boolean propertyValue = temporaryBRepManager_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"temporaryBRepManager_var" is a variable referencing a TemporaryBRepManager object.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+// Get the value of the property.
+string propertyValue = temporaryBRepManager_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">planeIntersection Method</h3><p class="api">Calculates the intersection between the input body and plane and creates a wire body that represents the intersection curves.</p><pre class="api-code">"temporaryBRepManager_var" is a variable referencing a
+TemporaryBRepManager
+object.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+returnValue = temporaryBRepManager_var-&gt;
+planeIntersection
+(body, plane);</pre><p class="api">Return Value: BRepBody - Returns a BRepBody that contains a wire body that represents the intersection.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">body</td><td class="api-list">BRepBody</td><td class="api-list">The BRepBody to intersection.</td></tr><tr><td class="api-list">plane</td><td class="api-list">Plane</td><td class="api-list">The geometry Plane to intersect with the body.</td></tr></table><h3 class="api-member">TemporaryBRepManager Member</h3><pre class="api-code">Copy Code
+#include &lt;Core/Application/Application.h&gt;
+#include &lt;Core/UserInterface/UserInterface.h&gt;
+#include &lt;Core/Application/Document.h&gt;
+#include &lt;Core/Application/Documents.h&gt;
+#include &lt;Fusion/Components/Component.h&gt;
+#include &lt;Fusion/Fusion/Design.h&gt;
+#include &lt;Fusion/BRep/BRepBodies.h&gt;
+#include &lt;Fusion/BRep/BRepBody.h&gt;
+#include &lt;Fusion/BRep/BRepWires.h&gt;
+#include &lt;Fusion/BRep/BRepWire.h&gt;
+#include &lt;Fusion/BRep/BRepFaces.h&gt;
+#include &lt;Fusion/BRep/BRepFace.h&gt;
+#include &lt;Fusion/BRep/BRepEdges.h&gt;
+#include &lt;Fusion/BRep/BRepEdge.h&gt;
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+#include &lt;Core/Geometry/Point3D.h&gt;
+#include &lt;Core/Geometry/Vector3D.h&gt;
+#include &lt;Core/Geometry/OrientedBoundingBox3D.h&gt;
+#include &lt;Core/Geometry/Plane.h&gt;
+#include &lt;Core/Geometry/Matrix3D.h&gt;
+#include &lt;Core/Geometry/Circle3D.h&gt;
+#include &lt;Core/Geometry/Curve3D.h&gt;
+#include &lt;Fusion/Graphics/CustomGraphicsGroups.h&gt;
+#include &lt;Fusion/Graphics/CustomGraphicsGroup.h&gt;
+
+
+using namespace adsk::core;
+using namespace adsk::fusion;
+
+Ptr&lt;Application&gt; app;
+Ptr&lt;UserInterface&gt; ui;
+
+std::string getDllPath();
+
+Ptr&lt;BRepBody&gt; CreateBox()
+{
+// Get TemporaryBRepManager
+Ptr&lt;TemporaryBRepManager&gt; tempBRepMgr = TemporaryBRepManager::get();
+    if (!tempBRepMgr)
+        return nullptr;
+
+    Ptr&lt;Point3D&gt; centerPoint = Point3D::create(0.0, 10.0, 0.0);
+    Ptr&lt;Vector3D&gt; lengthDir = Vector3D::create(1.0, 0.0, 0.0);
+    Ptr&lt;Vector3D&gt; widthDir = Vector3D::create(0.0, 1.0, 0.0);
+
+    Ptr&lt;OrientedBoundingBox3D&gt; orientedBoundingBox3D =
+        OrientedBoundingBox3D::create(centerPoint, lengthDir, widthDir, 5.0, 6.0, 2.0);
+// Create box
+Ptr&lt;BRepBody&gt; box = tempBRepMgr-&gt;createBox(orientedBoundingBox3D);
+
+    return box;
+}
+
+Ptr&lt;BRepBody&gt; CreateCylinderOrCone(double radius1, double radius2)
+{
+// Get TemporaryBRepManager
+Ptr&lt;TemporaryBRepManager&gt; tempBRepMgr = TemporaryBRepManager::get();
+    if (!tempBRepMgr)
+        return nullptr;
+
+    Ptr&lt;Point3D&gt; point1 = Point3D::create(3.0, 3.0, 3.0);
+    Ptr&lt;Point3D&gt; point2 = Point3D::create(-3.0, -3.0, -3.0);
+// Create Cylinder Or Cone
+Ptr&lt;BRepBody&gt; cylinderOrCone = tempBRepMgr-&gt;createCylinderOrCone(point1, radius1, point2, radius2);
+
+    return cylinderOrCone;
+}
+
+Ptr&lt;BRepBody&gt; CreateEllipticalCylinderOrCone(double majorRadius1, double minorRadius1, double majorRadius2)
+{
+// Get TemporaryBRepManager
+Ptr&lt;TemporaryBRepManager&gt; tempBRepMgr = TemporaryBRepManager::get();
+    if (!tempBRepMgr)
+        return nullptr;
+
+    Ptr&lt;Point3D&gt; pointOne = Point3D::create(8.0, 3.0, 0.0);
+    Ptr&lt;Point3D&gt; pointTwo = Point3D::create(8.0, -3.0, -3.0);
+    Ptr&lt;Vector3D&gt; majorAxisDirection = Vector3D::create(1.0, 1.0, 1.0);
+// Create EllipticalCylinder Or Cone
+Ptr&lt;BRepBody&gt; ellipicalCylinderOrCone = tempBRepMgr-&gt;createEllipticalCylinderOrCone(
+        pointOne, majorRadius1, minorRadius1, pointTwo, majorRadius2, majorAxisDirection);
+    return ellipicalCylinderOrCone;
+}
+
+Ptr&lt;BRepBody&gt; CreateSphere(double radius)
+{
+// Get TemporaryBRepManager
+Ptr&lt;TemporaryBRepManager&gt; tempBRepMgr = TemporaryBRepManager::get();
+    if (!tempBRepMgr)
+        return nullptr;
+
+    Ptr&lt;Point3D&gt; sphereCenter = Point3D::create(0.0, 8.0, 8.0);
+// Create sphere
+Ptr&lt;BRepBody&gt; sphere = tempBRepMgr-&gt;createSphere(sphereCenter, radius);
+
+    return sphere;
+}
+
+Ptr&lt;BRepBody&gt; CreateTorus(double majorRadius, double minorRadius)
+{
+// Get TemporaryBRepManager
+Ptr&lt;TemporaryBRepManager&gt; tempBRepMgr = TemporaryBRepManager::get();
+    if (!tempBRepMgr)
+        return nullptr;
+
+    Ptr&lt;Vector3D&gt; axis = Vector3D::create(0.0, 0.0, 10.0);
+    Ptr&lt;Point3D&gt; torusCenter = Point3D::create(0.0, 2.0, 8.0);
+// Create torus
+Ptr&lt;BRepBody&gt; torus = tempBRepMgr-&gt;createTorus(torusCenter, axis, majorRadius, minorRadius);
+
+    return torus;
+}
+
+Ptr&lt;BRepBody&gt; PlaneIntersection(const Ptr&lt;BRepBody&gt;&amp; body)
+{
+// Get TemporaryBRepManager
+Ptr&lt;TemporaryBRepManager&gt; tempBRepMgr = TemporaryBRepManager::get();
+    if (!tempBRepMgr)
+        return nullptr;
+
+    Ptr&lt;Point3D&gt; planeOrigin = Point3D::create(0.0, 0.0, 0.0);
+    Ptr&lt;Vector3D&gt; planeNormal = Vector3D::create(0.0, 0.0, 1.0);
+    Ptr&lt;Plane&gt; plane = Plane::create(planeOrigin, planeNormal);
+// creates a brep body by the intersection between the input body and plane
+Ptr&lt;BRepBody&gt; intersectionBody = tempBRepMgr-&gt;planeIntersection(body, plane);
+
+    return intersectionBody;
+}
+
+bool TransformBody(const Ptr&lt;BRepBody&gt;&amp; body)
+{
+    bool isSuccess = false;
+// Get TemporaryBRepManager
+Ptr&lt;TemporaryBRepManager&gt; tempBRepMgr = TemporaryBRepManager::get();
+    if (!tempBRepMgr)
+        return isSuccess;
+
+    Ptr&lt;Matrix3D&gt; transform = Matrix3D::create();
+    Ptr&lt;Vector3D&gt; translation = Vector3D::create(0.0, 0.0, -5.0);
+    isSuccess = transform-&gt;translation(translation);
+    if (!isSuccess)
+        return isSuccess;
+// Transforms the brep body using the specified transformation matrix
+isSuccess = tempBRepMgr-&gt;transform(body, transform);
+    return isSuccess;
+}
+
+Ptr&lt;BRepWire&gt; GetWireFromBody(const Ptr&lt;BRepBody&gt;&amp; body, size_t index)
+{
+    Ptr&lt;BRepWires&gt; brepWires = body-&gt;wires();
+    if (!brepWires)
+        return nullptr;
+
+    Ptr&lt;BRepWire&gt; brepWire = brepWires-&gt;item(index);
+
+    return brepWire;
+}
+
+bool DeleteFacesOnBody(const Ptr&lt;BRepBody&gt;&amp; body, const std::vector&lt;size_t&gt;&amp; indexes, bool isDeleteSpecifiedFaces)
+{
+    bool isSuccess = false;
+// Get TemporaryBRepManager
+Ptr&lt;TemporaryBRepManager&gt; tempBRepMgr = TemporaryBRepManager::get();
+    if (!tempBRepMgr)
+        return isSuccess;
+
+    Ptr&lt;BRepFaces&gt; faces = body-&gt;faces();
+    if (!faces)
+        return isSuccess;
+
+    std::vector&lt;Ptr&lt;BRepFace&gt;&gt; brepFaces;
+    for each (size_t index in indexes)
+    {
+        Ptr&lt;BRepFace&gt; face = faces-&gt;item(index);
+        if (!face)
+            return isSuccess;
+
+        brepFaces.push_back(face);
+    }
+// Delete faces on body
+isSuccess = tempBRepMgr-&gt;deleteFaces(brepFaces, isDeleteSpecifiedFaces);
+    return isSuccess;
+}
+
+Ptr&lt;BRepBody&gt; CreateSilhouette(const Ptr&lt;BRepFace&gt;&amp; face)
+{
+// Get TemporaryBRepManager
+Ptr&lt;TemporaryBRepManager&gt; tempBRepMgr = TemporaryBRepManager::get();
+    if (!tempBRepMgr)
+        return nullptr;
+
+    Ptr&lt;Vector3D&gt; viewDirection = Vector3D::create(0.0, 0.0, 1.0);
+// Create silhouette body
+Ptr&lt;BRepBody&gt; silhouetteBody = tempBRepMgr-&gt;createSilhouetteCurves(face, viewDirection, true);
+
+    return silhouetteBody;
+}
+
+Ptr&lt;BRepBody&gt; CreateWireFromCurves(std::vector&lt;Ptr&lt;BRepEdge&gt;&gt;&amp; edgeMap)
+{
+// Get TemporaryBRepManager
+Ptr&lt;TemporaryBRepManager&gt; tempBRepMgr = TemporaryBRepManager::get();
+    if (!tempBRepMgr)
+        return nullptr;
+
+    Ptr&lt;Point3D&gt; center = Point3D::create(10.0, 0.0, 5.0);
+    Ptr&lt;Vector3D&gt; normal = Vector3D::create(0.0, 0.0, 1.0);
+    Ptr&lt;Circle3D&gt; circle1 = Circle3D::createByCenter(center, normal, 3.0);
+    Ptr&lt;Circle3D&gt; circle2 = Circle3D::createByCenter(center, normal, 2.0);
+
+    std::vector&lt;Ptr&lt;Curve3D&gt;&gt; curves;
+    curves.push_back(circle1);
+    curves.push_back(circle2);
+// Create wire from curves
+Ptr&lt;BRepBody&gt; wireBody = tempBRepMgr-&gt;createWireFromCurves(curves, edgeMap);
+
+    return wireBody;
+}
+
+Ptr&lt;BRepBody&gt; CreateHelixBody()
+{
+// Get TemporaryBRepManager
+Ptr&lt;TemporaryBRepManager&gt; tempBRepMgr = TemporaryBRepManager::get();
+    if (!tempBRepMgr)
+        return nullptr;
+
+    Ptr&lt;Point3D&gt; axisPoint = Point3D::create(10.0, 10.0, 10.0);
+    Ptr&lt;Vector3D&gt; axisVector = Vector3D::create(0.0, 1.0, 0.0);
+    Ptr&lt;Point3D&gt; startPoint = Point3D::create(8.0, 2.0, 10.0);
+    double pitch = 1.0;
+    double turns = 10.0;
+    double taperAngle = 0.3;
+// Create helix body
+Ptr&lt;BRepBody&gt; helixBody = tempBRepMgr-&gt;createHelixWire(axisPoint, axisVector, startPoint, pitch, turns, taperAngle);
+    return helixBody;
+}
+
+extern "C" XI_EXPORT bool run(const char* context)
+{
+    app = Application::get();
+    if (!app)
+        return false;
+
+    ui = app-&gt;userInterface();
+    if (!ui)
+        return false;
+// Create a new document
+Ptr&lt;Documents&gt; docs = app-&gt;documents();
+    if (!docs)
+        return false;
+
+    Ptr&lt;Document&gt; doc = docs-&gt;add(DocumentTypes::FusionDesignDocumentType);
+    if (!doc)
+        return false;
+
+    Ptr&lt;Design&gt; design = app-&gt;activeProduct();
+    if (!design)
+        return false;
+// Set the design is a direct modelling design
+design-&gt;designType(adsk::fusion::DirectDesignType);
+// Get the root component of active design
+Ptr&lt;Component&gt; rootComp = design-&gt;rootComponent();
+    if (!rootComp)
+        return false;
+// Get bodies in root component
+Ptr&lt;BRepBodies&gt; bodies = rootComp-&gt;bRepBodies();
+    if (!bodies)
+        return false;
+// Get TemporaryBRepManager
+Ptr&lt;TemporaryBRepManager&gt; tempBRepMgr = TemporaryBRepManager::get();
+    if (!tempBRepMgr)
+        return false;
+// Create a temporary solid box
+Ptr&lt;BRepBody&gt; box = CreateBox();
+    if (!box)
+        return false;
+// Check the temporary box property
+bool isTemporary = box-&gt;isTemporary();
+// Creates a temporary solid cylinder and cone BRepBody
+Ptr&lt;BRepBody&gt; cylinder = CreateCylinderOrCone(3.0, 3.0);
+    if (!cylinder)
+        return false;
+
+    Ptr&lt;BRepBody&gt; cone = CreateCylinderOrCone(2.0, 4.0);
+    if (!cone)
+        return false;
+// Creates a temporary elliptical solid cylinder and cone BrepBody
+Ptr&lt;BRepBody&gt; ellipicalCylinder = CreateEllipticalCylinderOrCone(4.0, 2.0, 4.0);
+    if (!ellipicalCylinder)
+        return false;
+
+    Ptr&lt;BRepBody&gt; ellipicalCone = CreateEllipticalCylinderOrCone(3.0, 2.0, 4.5);
+    if (!ellipicalCone)
+        return false;
+// Creates a temporary spherical BRepBody
+Ptr&lt;BRepBody&gt; sphere = CreateSphere(3.0);
+    if (!sphere)
+        return false;
+// Creates a temporary toroidal BRepBody
+Ptr&lt;BRepBody&gt; torus = CreateTorus(2.0, 1.0);
+    if (!torus)
+        return false;
+// creates a brep body by the intersection between the input body and plane
+Ptr&lt;BRepBody&gt; intersectionBody = PlaneIntersection(box);
+    if (!intersectionBody)
+        return false;
+// Creates a temporary copy of the input BRepBody
+Ptr&lt;BRepBody&gt; copiedBody = tempBRepMgr-&gt;copy(intersectionBody);
+    if (!copiedBody)
+        return false;
+// Transforms the brep body using the specified transformation matrix
+bool isSuccess = TransformBody(copiedBody);
+    if (!isSuccess)
+        return false;
+// Transforms the brep body using the specified transformation matrix
+isSuccess = TransformBody(copiedBody);
+    if (!isSuccess)
+        return false;
+// Get brep wires
+Ptr&lt;BRepWire&gt; brepWire = GetWireFromBody(intersectionBody, 0);
+    if (!brepWire)
+        return false;
+    Ptr&lt;BRepWire&gt; copiedWire = GetWireFromBody(copiedBody, 0);
+    if (!copiedWire)
+        return false;
+//  Creates a new body by creating a ruled surface between the two input wire bodies.
+Ptr&lt;BRepBody&gt; surfaceBody = tempBRepMgr-&gt;createRuledSurface(brepWire, copiedWire);
+    if (!surfaceBody)
+        return false;
+// Performs the specified Boolean operation between the two input bodies
+isSuccess = tempBRepMgr-&gt;booleanOperation(cylinder, cone, BooleanTypes::IntersectionBooleanType);
+    if (!isSuccess)
+        return false;
+
+    isSuccess = tempBRepMgr-&gt;booleanOperation(ellipicalCylinder, ellipicalCone, BooleanTypes::UnionBooleanType);
+    if (!isSuccess)
+        return false;
+// Delete face from a temporary BRepBody
+std::vector&lt;size_t&gt; indexes;
+    indexes.push_back(0);
+    indexes.push_back(2);
+    isSuccess = DeleteFacesOnBody(ellipicalCylinder, indexes, true);
+    if (!isSuccess)
+        return false;
+// Calculates the silhouette curve geometry for a given face as viewed from a given direction.
+Ptr&lt;BRepFaces&gt; faces = torus-&gt;faces();
+    if (!faces)
+        return false;
+
+    Ptr&lt;BRepFace&gt; face = faces-&gt;item(0);
+    if (!face)
+        return false;
+
+    Ptr&lt;BRepBody&gt; silhouetteBody = CreateSilhouette(face);
+    if (!silhouetteBody)
+        return false;
+// Create wire from curves
+std::vector&lt;Ptr&lt;BRepEdge&gt;&gt; edgeMap;
+    Ptr&lt;BRepBody&gt; wireBody = CreateWireFromCurves(edgeMap);
+    if (!wireBody)
+        return false;
+// Creates a body from multiple wires that all lie within the same plane
+std::vector&lt;Ptr&lt;BRepBody&gt;&gt; wireBodies;
+    wireBodies.push_back(wireBody);
+    Ptr&lt;BRepBody&gt; planerBody = tempBRepMgr-&gt;createFaceFromPlanarWires(wireBodies);
+    if (!planerBody)
+        return false;
+// Create helix wire body
+Ptr&lt;BRepBody&gt; helixBody = CreateHelixBody();
+    if (!helixBody)
+        return false;
+// Display the helix edges
+Ptr&lt;CustomGraphicsGroups&gt; groups = rootComp-&gt;customGraphicsGroups();
+    if (!groups)
+        return false;
+
+    Ptr&lt;CustomGraphicsGroup&gt; group = groups-&gt;add();
+    if (!group)
+        return false;
+
+    Ptr&lt;BRepEdges&gt; edges = helixBody-&gt;edges();
+
+    for each (Ptr&lt;BRepEdge&gt; edge in edges)
+    {
+        Ptr&lt;Curve3D&gt; curve = edge-&gt;geometry();
+        if (!curve)
+            return false;
+
+        group-&gt;addCurve(curve);
+    }
+// Add the temprary bodies to direct modeling design, then the temprary bodies will be displayed
+bodies-&gt;add(box);
+    bodies-&gt;add(cylinder);
+    bodies-&gt;add(cone);
+    bodies-&gt;add(ellipicalCylinder);
+    bodies-&gt;add(ellipicalCone);
+    bodies-&gt;add(sphere);
+    bodies-&gt;add(torus);
+    bodies-&gt;add(intersectionBody);
+    bodies-&gt;add(surfaceBody);
+    bodies-&gt;add(silhouetteBody);
+    bodies-&gt;add(planerBody);
+// Exports the input bodies to the specified file.
+std::vector&lt;Ptr&lt;BRepBody&gt;&gt; brepBodies;
+    brepBodies.push_back(box);
+    brepBodies.push_back(surfaceBody);
+
+    std::string dllPath = getDllPath();
+    std::string exportPath = dllPath + "/" + "sampleFile.smt";
+
+    isSuccess = tempBRepMgr-&gt;exportToFile(brepBodies, exportPath);
+    if (!isSuccess)
+        return false;
+// Creates new BRepBody objects based on the contents of the specified file
+std::string filePath = dllPath + "/" + "sampleFile.smt";
+    Ptr&lt;BRepBodies&gt; newBodies = tempBRepMgr-&gt;createFromFile(filePath);
+    if (!newBodies)
+        return false;
+
+    return true;
+}
+
+std::string getDllPath()
+{
+#if defined(_WINDOWS) || defined(_WIN32) || defined(_WIN64)
+    HMODULE hModule = NULL;
+    if (!GetModuleHandleExA(
+            GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT,
+            (LPCSTR)&amp;getDllPath,
+            &amp;hModule))
+        return "";
+
+    char winTempPath[2048];
+    ::GetModuleFileNameA(hModule, winTempPath, 2048);
+
+    std::string strPath = winTempPath;
+    size_t stPos = strPath.rfind('\\');
+    return strPath.substr(0, stPos);
+#else
+    Dl_info info;
+    dladdr((void*)getDllPath, &amp;info);
+
+    std::string strPath = info.dli_fname;
+    int stPos = (int)strPath.rfind('/');
+    if (stPos != -1)
+        return strPath.substr(0, stPos);
+    else
+        return "";
+    ;
+#endif
+}</pre><h3 class="api-member">transform Method</h3><p class="api">Transforms the input body using the specified transformation matrix.</p><pre class="api-code">"temporaryBRepManager_var" is a variable referencing a
+TemporaryBRepManager
+object.
+#include &lt;Fusion/BRep/TemporaryBRepManager.h&gt;
+returnValue = temporaryBRepManager_var-&gt;
+transform
+(body, transform);</pre><p class="api">Return Value: boolean - Returns true if the specified transform was successfully applied to the body.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">body</td><td class="api-list">BRepBody</td><td class="api-list">The BRepBody object to transform.</td></tr><tr><td class="api-list">transform</td><td class="api-list">Matrix3D</td><td class="api-list">The transformation matrix that defines the transform to apply to the body.</td></tr></table></body>
+</html>

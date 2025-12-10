@@ -1,0 +1,158 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/Workspaces.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="Workspaces" name="contextid"/>
+<meta content="Workspaces Object" name="description"/>
+<meta content="GUID-75ac7274-735c-4a61-af57-1d837c4df217" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>Workspaces Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">Workspaces Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/UserInterface/Workspaces.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access to all of the existing workspaces.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Workspaces_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Workspaces_item.htm">item</a></td>
+<td class="api-list">Returns the specified work space using an index into the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Workspaces_itemById.htm">itemById</a></td>
+<td class="api-list">Returns the Workspace of the specified ID.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Workspaces_count.htm">count</a></td>
+<td class="api-list">Gets the number of workspaces in the collection.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Workspaces_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Workspaces_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="UserInterface_workspaces.htm">UserInterface.workspaces</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="UICustomizationSample_Sample.htm">Customizing the UI using the API Sample</a></td>
+<td class="api-list">Demonstrates how to work with tabs, panels, and command in the user interface. The full source for <a href="../ExtraFiles/UICustomizationSampleCPP.zip">C++</a> and <a href="../ExtraFiles/UICustomizationSamplePython.zip">Python</a> samples can be downloaded. This is especially useful for getting the resource files.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="WriteUserInterfaceToFile_Sample.htm">Write user interface to a file API Sample</a></td>
+<td class="api-list">Writes out the full structure of the Fusion user interface. This information is useful when editing the user-interface, as discussed in the usre manual topic <a href="UserInterface_UM.htm">User-Interface Customization with Fusion's API</a></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(Workspaces%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/UserInterface/Workspaces.h&gt;
+returnValue = adsk::core::Workspaces::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">Gets the number of workspaces in the collection.</p><pre class="api-code">"workspaces_var" is a variable referencing a Workspaces object.
+#include &lt;Core/UserInterface/Workspaces.h&gt;
+// Get the value of the property.
+uinteger propertyValue = workspaces_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"workspaces_var" is a variable referencing a Workspaces object.
+#include &lt;Core/UserInterface/Workspaces.h&gt;
+// Get the value of the property.
+boolean propertyValue = workspaces_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Returns the specified work space using an index into the collection.</p><pre class="api-code">"workspaces_var" is a variable referencing a
+Workspaces
+object.
+#include &lt;Core/UserInterface/Workspaces.h&gt;
+returnValue = workspaces_var-&gt;
+item
+(index);</pre><p class="api">Return Value: Workspace - Returns the specified item or null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the item within the collection to return. The first item in the collection has an index of 0.</td></tr></table><h3 class="api-member">itemById Method</h3><p class="api">Returns the Workspace of the specified ID.</p><pre class="api-code">"workspaces_var" is a variable referencing a
+Workspaces
+object.
+#include &lt;Core/UserInterface/Workspaces.h&gt;
+returnValue = workspaces_var-&gt;
+itemById
+(id);</pre><p class="api">Return Value: Workspace - Returns the specified workspace or null in the case where there isn't a workspace with the specified ID.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">id</td><td class="api-list">string</td><td class="api-list">The ID of the workspace to get.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"workspaces_var" is a variable referencing a Workspaces object.
+#include &lt;Core/UserInterface/Workspaces.h&gt;
+// Get the value of the property.
+string propertyValue = workspaces_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

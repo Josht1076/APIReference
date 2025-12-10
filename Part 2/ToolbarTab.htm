@@ -1,0 +1,248 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ToolbarTab.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="23/07/2019" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ToolbarTab" name="contextid"/>
+<meta content="ToolbarTab Object" name="description"/>
+<meta content="GUID-7AF58337-178C-467C-831F-285B0FB02D56" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ToolbarTab Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ToolbarTab Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/UserInterface/ToolbarTab.h&gt;<h2 class="api">
+          Description
+        </h2>Toolbar tabs are the tabs shown in the command toolbar.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolbarTab_activate.htm">activate</a></td>
+<td class="api-list">Activate this toolbar tab.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolbarTab_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolbarTab_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes this tab. Fusion native tabs cannot be deleted. Use the isNative property to determine if this is a native or API created tab.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolbarTab_move.htm">move</a></td>
+<td class="api-list">Move this tab to a different position in the Toolbar in the user interface.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolbarTab_id.htm">id</a></td>
+<td class="api-list">Gets The unique, language independent, ID of this tab.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolbarTab_index.htm">index</a></td>
+<td class="api-list">Gets the position this tab is in within the toolbar. The first tab is at position 0. This value is with respect to the complete list of tabs so this value could be outside of the expected range if you have a collection of tabs associated with a workspace, which is a subset of the entire list of tabs.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolbarTab_isActive.htm">isActive</a></td>
+<td class="api-list">Gets if this toolbar tab is currently active - i.e. displayed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolbarTab_isNative.htm">isNative</a></td>
+<td class="api-list">Gets if this tab is native to Fusion or was created via the API.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolbarTab_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolbarTab_isVisible.htm">isVisible</a></td>
+<td class="api-list">Gets or sets whether this tab is currently being displayed in the user interface. By default, a tab is made visible if it is associated with the active workspace and hidden otherwise. Setting it here will override that default behavior.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolbarTab_name.htm">name</a></td>
+<td class="api-list">Gets or sets the name of the tab as seen in the user interface.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolbarTab_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolbarTab_parentUserInterface.htm">parentUserInterface</a></td>
+<td class="api-list">Gets the parent UserInterface object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolbarTab_productType.htm">productType</a></td>
+<td class="api-list">Returns the name of the product this toolbar tab is associated with.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ToolbarTab_toolbarPanels.htm">toolbarPanels</a></td>
+<td class="api-list">Gets the collection containing the panels associated with this tab. It's through this collection that you can add new toolbar panels.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ToolbarTabList_item.htm">ToolbarTabList.item</a>, <a href="ToolbarTabList_itemById.htm">ToolbarTabList.itemById</a>, <a href="ToolbarTabs_add.htm">ToolbarTabs.add</a>, <a href="ToolbarTabs_item.htm">ToolbarTabs.item</a>, <a href="ToolbarTabs_itemById.htm">ToolbarTabs.itemById</a>, <a href="UserInterface_activeToolbarTab.htm">UserInterface.activeToolbarTab</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="UICustomizationSample_Sample.htm">Customizing the UI using the API Sample</a></td>
+<td class="api-list">Demonstrates how to work with tabs, panels, and command in the user interface. The full source for <a href="../ExtraFiles/UICustomizationSampleCPP.zip">C++</a> and <a href="../ExtraFiles/UICustomizationSamplePython.zip">Python</a> samples can be downloaded. This is especially useful for getting the resource files.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="WriteUserInterfaceToFile_Sample.htm">Write user interface to a file API Sample</a></td>
+<td class="api-list">Writes out the full structure of the Fusion user interface. This information is useful when editing the user-interface, as discussed in the usre manual topic <a href="UserInterface_UM.htm">User-Interface Customization with Fusion's API</a></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2019<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ToolbarTab%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">activate Method</h3><p class="api">Activate this toolbar tab.</p><pre class="api-code">"toolbarTab_var" is a variable referencing a
+ToolbarTab
+object.
+#include &lt;Core/UserInterface/ToolbarTab.h&gt;
+returnValue = toolbarTab_var-&gt;
+activate
+();</pre><p class="api">Return Value: boolean - Boolean return that indicates if the activation was successful or not.</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/UserInterface/ToolbarTab.h&gt;
+returnValue = adsk::core::ToolbarTab::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes this tab. Fusion native tabs cannot be deleted. Use the isNative property to determine if this is a native or API created tab.</p><pre class="api-code">"toolbarTab_var" is a variable referencing a
+ToolbarTab
+object.
+#include &lt;Core/UserInterface/ToolbarTab.h&gt;
+returnValue = toolbarTab_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true if the delete was successful.</p><h3 class="api-member">id Property</h3><p class="api">Gets The unique, language independent, ID of this tab.</p><pre class="api-code">"toolbarTab_var" is a variable referencing a ToolbarTab object.
+#include &lt;Core/UserInterface/ToolbarTab.h&gt;
+// Get the value of the property.
+string propertyValue = toolbarTab_var-&gt;
+id
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">index Property</h3><p class="api">Gets the position this tab is in within the toolbar. The first tab is at position 0. This value is with respect to the complete list of tabs so this value could be outside of the expected range if you have a collection of tabs associated with a workspace, which is a subset of the entire list of tabs.</p><pre class="api-code">"toolbarTab_var" is a variable referencing a ToolbarTab object.
+#include &lt;Core/UserInterface/ToolbarTab.h&gt;
+// Get the value of the property.
+uinteger propertyValue = toolbarTab_var-&gt;
+index
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">isActive Property</h3><p class="api">Gets if this toolbar tab is currently active - i.e. displayed.</p><pre class="api-code">"toolbarTab_var" is a variable referencing a ToolbarTab object.
+#include &lt;Core/UserInterface/ToolbarTab.h&gt;
+// Get the value of the property.
+boolean propertyValue = toolbarTab_var-&gt;
+isActive
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isNative Property</h3><p class="api">Gets if this tab is native to Fusion or was created via the API.</p><pre class="api-code">"toolbarTab_var" is a variable referencing a ToolbarTab object.
+#include &lt;Core/UserInterface/ToolbarTab.h&gt;
+// Get the value of the property.
+boolean propertyValue = toolbarTab_var-&gt;
+isNative
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"toolbarTab_var" is a variable referencing a ToolbarTab object.
+#include &lt;Core/UserInterface/ToolbarTab.h&gt;
+// Get the value of the property.
+boolean propertyValue = toolbarTab_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isVisible Property</h3><p class="api">Gets or sets whether this tab is currently being displayed in the user interface. By default, a tab is made visible if it is associated with the active workspace and hidden otherwise. Setting it here will override that default behavior.</p><pre class="api-code">"toolbarTab_var" is a variable referencing a ToolbarTab object.
+#include &lt;Core/UserInterface/ToolbarTab.h&gt;
+// Get the value of the property.
+boolean propertyValue = toolbarTab_var-&gt;
+isVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = toolbarTab_var-&gt;
+isVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">move Method</h3><p class="api">Move this tab to a different position in the Toolbar in the user interface.</p><pre class="api-code">"toolbarTab_var" is a variable referencing a
+ToolbarTab
+object.
+#include &lt;Core/UserInterface/ToolbarTab.h&gt;
+returnValue = toolbarTab_var-&gt;
+move
+(positionId, isBefore);</pre><p class="api">Return Value: boolean - Returns true if it was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">positionId</td><td class="api-list">string</td><td class="api-list">The ID of another ToolbarTab in the same Toolbar that is used to position this tab. This tab will be positioned either directly before or after it.</td></tr><tr><td class="api-list">isBefore</td><td class="api-list">boolean</td><td class="api-list">If true, then this tab will be positioned directly before the tab indicated by positionID. If false, then this tab will be positioned after it.</td></tr></table><h3 class="api-member">name Property</h3><p class="api">Gets or sets the name of the tab as seen in the user interface.</p><pre class="api-code">"toolbarTab_var" is a variable referencing a ToolbarTab object.
+#include &lt;Core/UserInterface/ToolbarTab.h&gt;
+// Get the value of the property.
+string propertyValue = toolbarTab_var-&gt;
+name
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = toolbarTab_var-&gt;
+name
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"toolbarTab_var" is a variable referencing a ToolbarTab object.
+#include &lt;Core/UserInterface/ToolbarTab.h&gt;
+// Get the value of the property.
+string propertyValue = toolbarTab_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentUserInterface Property</h3><p class="api">Gets the parent UserInterface object.</p><pre class="api-code">"toolbarTab_var" is a variable referencing a ToolbarTab object.
+#include &lt;Core/UserInterface/ToolbarTab.h&gt;
+// Get the value of the property.
+Ptr&lt;UserInterface&gt; propertyValue = toolbarTab_var-&gt;
+parentUserInterface
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">productType Property</h3><p class="api">Returns the name of the product this toolbar tab is associated with.</p><pre class="api-code">"toolbarTab_var" is a variable referencing a ToolbarTab object.
+#include &lt;Core/UserInterface/ToolbarTab.h&gt;
+// Get the value of the property.
+string propertyValue = toolbarTab_var-&gt;
+productType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">toolbarPanels Property</h3><p class="api">Gets the collection containing the panels associated with this tab. It's through this collection that you can add new toolbar panels.</p><pre class="api-code">"toolbarTab_var" is a variable referencing a ToolbarTab object.
+#include &lt;Core/UserInterface/ToolbarTab.h&gt;
+// Get the value of the property.
+Ptr&lt;ToolbarPanels&gt; propertyValue = toolbarTab_var-&gt;
+toolbarPanels
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

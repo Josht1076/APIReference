@@ -1,0 +1,365 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/Viewport.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="Viewport" name="contextid"/>
+<meta content="Viewport Object" name="description"/>
+<meta content="GUID-717295a3-3d16-4c03-80ba-1df008c867e0" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>Viewport Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">Viewport Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Application/Viewport.h&gt;<h2 class="api">
+          Description
+        </h2>A viewport within Fusion. A viewport is the window where the model is displayed.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_fit.htm">fit</a></td>
+<td class="api-list">Forces a camera change so that all of the graphics are visible in the viewport.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_goHome.htm">goHome</a></td>
+<td class="api-list">Sets the camera of the viewport to the defined "home" position.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_modelToViewSpace.htm">modelToViewSpace</a></td>
+<td class="api-list">A specified point in model space returns the equivalent point in view space.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_refresh.htm">refresh</a></td>
+<td class="api-list">Forces the view to refresh. It is sometimes useful to force a refresh to be able to see edits that have been made using the API.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_resetFront.htm">resetFront</a></td>
+<td class="api-list">Resets the front view to be the default front view orientation.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_saveAsImageFile.htm">saveAsImageFile</a></td>
+<td class="api-list">Saves the current view to the specified image file. The view is re-rendered to the specified size and not just scaled from the existing view. This allows you to generate higher resolution images than you could do with just a screen capture.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_saveAsImageFileWithOptions.htm">saveAsImageFileWithOptions</a></td>
+<td class="api-list">Saves the current view to the specified image file. The view is re-rendered to the specified size and not just scaled from the existing view. This allows you to generate higher resolution images than you could do with just a screen capture.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_screenToView.htm">screenToView</a></td>
+<td class="api-list">Converts a 2D screen point into the equivalent viewport coordinate.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_setCurrentAsFront.htm">setCurrentAsFront</a></td>
+<td class="api-list">Sets the "front" view to be the current view orientation.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_setCurrentAsHome.htm">setCurrentAsHome</a></td>
+<td class="api-list">Sets the "home" view to be the current view orientation.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_setCurrentAsTop.htm">setCurrentAsTop</a></td>
+<td class="api-list">Sets the "top" view to be the current view orientation.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_viewToModelSpace.htm">viewToModelSpace</a></td>
+<td class="api-list">A specified point in view space returns the equivalent point in model space. Because view space is 2D and model space is 3D, the depth of the point is returned is somewhat arbitrary along the eye to target point direction.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_viewToScreen.htm">viewToScreen</a></td>
+<td class="api-list">Converts a 2D viewPort point into the equivalent screen coordinate.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_camera.htm">camera</a></td>
+<td class="api-list">Gets and sets the camera associated with the view. The camera returned is a copy of the current camera settings of the view. Editing the properties of the camera will have no affect on the viewport until the camera is assigned back to the viewport.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_frontEyeDirection.htm">frontEyeDirection</a></td>
+<td class="api-list">Returns the direction of the front view as defined by the view cube. This vector defines the direction from the eye to the target for the front view.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_frontUpDirection.htm">frontUpDirection</a></td>
+<td class="api-list">Returns the up direction of the front view as defined by the view cube.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_height.htm">height</a></td>
+<td class="api-list">Returns the height of the viewport in pixels.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_isFullScreen.htm">isFullScreen</a></td>
+<td class="api-list">Gets and sets if the view is in full screen mode.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_modelToViewSpaceTransform.htm">modelToViewSpaceTransform</a></td>
+<td class="api-list">Returns a transformation matrix that defines the transform from model to viewport space.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_parentDocument.htm">parentDocument</a></td>
+<td class="api-list">Returns the parent document of this viewport.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_visualStyle.htm">visualStyle</a></td>
+<td class="api-list">Gets and sets the current visual style being used.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Viewport_width.htm">width</a></td>
+<td class="api-list">Returns the width of the viewport in pixels.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Application_activeViewport.htm">Application.activeViewport</a>, <a href="CameraEventArgs_viewport.htm">CameraEventArgs.viewport</a>, <a href="MouseEventArgs_viewport.htm">MouseEventArgs.viewport</a>, <a href="RenderEventArgs_viewport.htm">RenderEventArgs.viewport</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="AsBuiltJointSample_Sample.htm">As-Built Joint Sample</a></td>
+<td class="api-list">Demonstrates creating a new As-Built Joint.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="CreateAnimation_Sample.htm">Create Animation API Sample</a></td>
+<td class="api-list">Creates a series of images of a design where a parameter is being changed. The series of images can be used to create an animation using other software. To run this sample, have a part open that contains a parameter named "Length". The parameter should be able to be successfully modified from 10 to 15 centimeters. Run the sample and choose or create a directory for the output. After running you should have a folder full of images that are snapshots of each parameter value.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="JointOriginSample_Sample.htm">Joint Origin Sample</a></td>
+<td class="api-list">Demonstrates creating a new Joint Origin.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="RigidGroupSample_Sample.htm">Rigid Group API Sample</a></td>
+<td class="api-list">Demonstrates creating a new Rigid Group.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(Viewport%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">camera Property</h3><p class="api">Gets and sets the camera associated with the view. The camera returned is a copy of the current camera settings of the view. Editing the properties of the camera will have no affect on the viewport until the camera is assigned back to the viewport.</p><pre class="api-code">"viewport_var" is a variable referencing a Viewport object.
+#include &lt;Core/Application/Viewport.h&gt;
+// Get the value of the property.
+Ptr&lt;Camera&gt; propertyValue = viewport_var-&gt;
+camera
+();
+// Set the value of the property, where value_var is a Camera.
+bool returnValue = viewport_var-&gt;
+camera
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Application/Viewport.h&gt;
+returnValue = adsk::core::Viewport::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">fit Method</h3><p class="api">Forces a camera change so that all of the graphics are visible in the viewport.</p><pre class="api-code">"viewport_var" is a variable referencing a
+Viewport
+object.
+#include &lt;Core/Application/Viewport.h&gt;
+returnValue = viewport_var-&gt;
+fit
+();</pre><p class="api">Return Value: boolean - Returns true if the fit was successful.</p><h3 class="api-member">frontEyeDirection Property</h3><p class="api">Returns the direction of the front view as defined by the view cube. This vector defines the direction from the eye to the target for the front view.</p><pre class="api-code">"viewport_var" is a variable referencing a Viewport object.
+#include &lt;Core/Application/Viewport.h&gt;
+// Get the value of the property.
+Ptr&lt;Vector3D&gt; propertyValue = viewport_var-&gt;
+frontEyeDirection
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">frontUpDirection Property</h3><p class="api">Returns the up direction of the front view as defined by the view cube.</p><pre class="api-code">"viewport_var" is a variable referencing a Viewport object.
+#include &lt;Core/Application/Viewport.h&gt;
+// Get the value of the property.
+Ptr&lt;Vector3D&gt; propertyValue = viewport_var-&gt;
+frontUpDirection
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">goHome Method</h3><p class="api">Sets the camera of the viewport to the defined "home" position.</p><pre class="api-code">"viewport_var" is a variable referencing a
+Viewport
+object.
+#include &lt;Core/Application/Viewport.h&gt;
+// Uses no optional arguments.
+returnValue = viewport_var-&gt;
+goHome
+();
+// Uses optional arguments.
+returnValue = viewport_var-&gt;
+goHome
+(transition);</pre><p class="api">Return Value: boolean - Returns true if setting the view orientation was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">transition</td><td class="api-list">boolean</td><td class="api-list">If this is true it will do a smooth transition from the current camera position to the home position. If false, the view will jump to the home position with no intermediate steps. This is an optional argument whose default value is True.</td></tr></table><h3 class="api-member">height Property</h3><p class="api">Returns the height of the viewport in pixels.</p><pre class="api-code">"viewport_var" is a variable referencing a Viewport object.
+#include &lt;Core/Application/Viewport.h&gt;
+// Get the value of the property.
+integer propertyValue = viewport_var-&gt;
+height
+();</pre><p class="api">Property Value: This is a read only property whose value is an integer.</p><h3 class="api-member">isFullScreen Property</h3><p class="api">Gets and sets if the view is in full screen mode.</p><pre class="api-code">"viewport_var" is a variable referencing a Viewport object.
+#include &lt;Core/Application/Viewport.h&gt;
+// Get the value of the property.
+boolean propertyValue = viewport_var-&gt;
+isFullScreen
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = viewport_var-&gt;
+isFullScreen
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"viewport_var" is a variable referencing a Viewport object.
+#include &lt;Core/Application/Viewport.h&gt;
+// Get the value of the property.
+boolean propertyValue = viewport_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">modelToViewSpace Method</h3><p class="api">A specified point in model space returns the equivalent point in view space.</p><pre class="api-code">"viewport_var" is a variable referencing a
+Viewport
+object.
+#include &lt;Core/Application/Viewport.h&gt;
+returnValue = viewport_var-&gt;
+modelToViewSpace
+(modelCoordinate);</pre><p class="api">Return Value: Point2D - Returns the equivalent point in view space.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">modelCoordinate</td><td class="api-list">Point3D</td><td class="api-list">A coordinate in model space.</td></tr></table><h3 class="api-member">modelToViewSpaceTransform Property</h3><p class="api">Returns a transformation matrix that defines the transform from model to viewport space.</p><pre class="api-code">"viewport_var" is a variable referencing a Viewport object.
+#include &lt;Core/Application/Viewport.h&gt;
+// Get the value of the property.
+Ptr&lt;Matrix3D&gt; propertyValue = viewport_var-&gt;
+modelToViewSpaceTransform
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"viewport_var" is a variable referencing a Viewport object.
+#include &lt;Core/Application/Viewport.h&gt;
+// Get the value of the property.
+string propertyValue = viewport_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentDocument Property</h3><p class="api">Returns the parent document of this viewport.</p><pre class="api-code">"viewport_var" is a variable referencing a Viewport object.
+#include &lt;Core/Application/Viewport.h&gt;
+// Get the value of the property.
+Ptr&lt;Document&gt; propertyValue = viewport_var-&gt;
+parentDocument
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">refresh Method</h3><p class="api">Forces the view to refresh. It is sometimes useful to force a refresh to be able to see edits that have been made using the API.</p><pre class="api-code">"viewport_var" is a variable referencing a
+Viewport
+object.
+#include &lt;Core/Application/Viewport.h&gt;
+returnValue = viewport_var-&gt;
+refresh
+();</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><h3 class="api-member">resetFront Method</h3><p class="api">Resets the front view to be the default front view orientation.</p><pre class="api-code">"viewport_var" is a variable referencing a
+Viewport
+object.
+#include &lt;Core/Application/Viewport.h&gt;
+returnValue = viewport_var-&gt;
+resetFront
+();</pre><p class="api">Return Value: boolean - Returns true if resetting to front was successful.</p><h3 class="api-member">saveAsImageFile Method</h3><p class="api">Saves the current view to the specified image file. The view is re-rendered to the specified size and not just scaled from the existing view. This allows you to generate higher resolution images than you could do with just a screen capture.</p><pre class="api-code">"viewport_var" is a variable referencing a
+Viewport
+object.
+#include &lt;Core/Application/Viewport.h&gt;
+returnValue = viewport_var-&gt;
+saveAsImageFile
+(filename, width, height);</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">filename</td><td class="api-list">string</td><td class="api-list">The full filename, including the path, of the image file. The type of image file to be created is inferred from the extension of the filename.</td></tr><tr><td class="api-list">width</td><td class="api-list">integer</td><td class="api-list">The width in pixels of the output image. A value of zero indicates that the current width of the viewport is to be used.</td></tr><tr><td class="api-list">height</td><td class="api-list">integer</td><td class="api-list">The height in pixels of the output image. A value of zero indicates that the current height of the viewport is to be used.</td></tr></table><h3 class="api-member">saveAsImageFileWithOptions Method</h3><p class="api">Saves the current view to the specified image file. The view is re-rendered to the specified size and not just scaled from the existing view. This allows you to generate higher resolution images than you could do with just a screen capture.</p><pre class="api-code">"viewport_var" is a variable referencing a
+Viewport
+object.
+#include &lt;Core/Application/Viewport.h&gt;
+returnValue = viewport_var-&gt;
+saveAsImageFileWithOptions
+(options);</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">options</td><td class="api-list">SaveImageFileOptions</td><td class="api-list">A SaveImageFileOptions object that defines the various options that define how the image should be created. The SaveImageFileOptions can be created by using the static create method on the SaveImageFileOptions class.</td></tr></table><h3 class="api-member">screenToView Method</h3><p class="api">Converts a 2D screen point into the equivalent viewport coordinate.</p><pre class="api-code">"viewport_var" is a variable referencing a
+Viewport
+object.
+#include &lt;Core/Application/Viewport.h&gt;
+returnValue = viewport_var-&gt;
+screenToView
+(screenCoordinate);</pre><p class="api">Return Value: Point2D - Returns the equivalent point in the viewport. This can return null in the case where the input screen point does not lie within the viewport.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">screenCoordinate</td><td class="api-list">Point2D</td><td class="api-list">A 2D coordinate in screen space. (0,0) indicates the upper-left corner of the entire screen.</td></tr></table><h3 class="api-member">setCurrentAsFront Method</h3><p class="api">Sets the "front" view to be the current view orientation.</p><pre class="api-code">"viewport_var" is a variable referencing a
+Viewport
+object.
+#include &lt;Core/Application/Viewport.h&gt;
+returnValue = viewport_var-&gt;
+setCurrentAsFront
+();</pre><p class="api">Return Value: boolean - Returns true if setting the view orientation was successful.</p><h3 class="api-member">setCurrentAsHome Method</h3><p class="api">Sets the "home" view to be the current view orientation.</p><pre class="api-code">"viewport_var" is a variable referencing a
+Viewport
+object.
+#include &lt;Core/Application/Viewport.h&gt;
+returnValue = viewport_var-&gt;
+setCurrentAsHome
+(isFitToView);</pre><p class="api">Return Value: boolean - Returns true if setting the view orientation was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">isFitToView</td><td class="api-list">boolean</td><td class="api-list">Specifies if when the view goes "home" if the view should be fit to the model or not. True indicates the view will be fit to the model.</td></tr></table><h3 class="api-member">setCurrentAsTop Method</h3><p class="api">Sets the "top" view to be the current view orientation.</p><pre class="api-code">"viewport_var" is a variable referencing a
+Viewport
+object.
+#include &lt;Core/Application/Viewport.h&gt;
+returnValue = viewport_var-&gt;
+setCurrentAsTop
+();</pre><p class="api">Return Value: boolean - Returns true if setting the view orientation was successful.</p><h3 class="api-member">viewToModelSpace Method</h3><p class="api">A specified point in view space returns the equivalent point in model space. Because view space is 2D and model space is 3D, the depth of the point is returned is somewhat arbitrary along the eye to target point direction.</p><pre class="api-code">"viewport_var" is a variable referencing a
+Viewport
+object.
+#include &lt;Core/Application/Viewport.h&gt;
+returnValue = viewport_var-&gt;
+viewToModelSpace
+(viewCoordinate);</pre><p class="api">Return Value: Point3D - Returns the equivalent point in model space.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">viewCoordinate</td><td class="api-list">Point2D</td><td class="api-list">A coordinate in view space.</td></tr></table><h3 class="api-member">viewToScreen Method</h3><p class="api">Converts a 2D viewPort point into the equivalent screen coordinate.</p><pre class="api-code">"viewport_var" is a variable referencing a
+Viewport
+object.
+#include &lt;Core/Application/Viewport.h&gt;
+returnValue = viewport_var-&gt;
+viewToScreen
+(viewCoordinate);</pre><p class="api">Return Value: Point2D - Returns the equivalent point in the screen. This can return null in the case where the input point is outside the bounds of the screen, which also means it's outside any viewport.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">viewCoordinate</td><td class="api-list">Point2D</td><td class="api-list">A 2D coordinate in the viewport. (0,0) indicates the upper-left corner of the viewport.</td></tr></table><h3 class="api-member">visualStyle Property</h3><p class="api">Gets and sets the current visual style being used.</p><pre class="api-code">"viewport_var" is a variable referencing a Viewport object.
+#include &lt;Core/Application/Viewport.h&gt;
+// Get the value of the property.
+VisualStyles propertyValue = viewport_var-&gt;
+visualStyle
+();
+// Set the value of the property, where value_var is a VisualStyles.
+bool returnValue = viewport_var-&gt;
+visualStyle
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">width Property</h3><p class="api">Returns the width of the viewport in pixels.</p><pre class="api-code">"viewport_var" is a variable referencing a Viewport object.
+#include &lt;Core/Application/Viewport.h&gt;
+// Get the value of the property.
+integer propertyValue = viewport_var-&gt;
+width
+();</pre><p class="api">Property Value: This is a read only property whose value is an integer.</p></body>
+</html>

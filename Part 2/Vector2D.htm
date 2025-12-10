@@ -1,0 +1,296 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/Vector2D.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="Vector2D" name="contextid"/>
+<meta content="Vector2D Object" name="description"/>
+<meta content="GUID-f84bbea9-6fe5-46ad-8ed5-0f17f99f90af" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>Vector2D Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">Vector2D Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/Geometry/Vector2D.h&gt;<h2 class="api">
+          Description
+        </h2>Transient 2D vector. This object is a wrapper for 2D vector data and is used to pass vector data in and out of the API. They are created statically using the create method of the Vector2D class.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_add.htm">add</a></td>
+<td class="api-list">Add a vector to this vector.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_angleTo.htm">angleTo</a></td>
+<td class="api-list">Gets the angle between this vector and another vector.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_asArray.htm">asArray</a></td>
+<td class="api-list">Returns the vector values as an array [x, y].</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_asPoint.htm">asPoint</a></td>
+<td class="api-list">Return a point with the same x and y values as this vector.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_copy.htm">copy</a></td>
+<td class="api-list">Creates and returns an independent copy of this Vector2D object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_create.htm">create</a></td>
+<td class="api-list">Creates a 2D vector object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_dotProduct.htm">dotProduct</a></td>
+<td class="api-list">Calculates the Dot Product of this vector and an input vector.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_isEqualTo.htm">isEqualTo</a></td>
+<td class="api-list">Compare this vector with another to check for equality.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_isParallelTo.htm">isParallelTo</a></td>
+<td class="api-list">Compare this vector with another to check for parallelism.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_isPerpendicularTo.htm">isPerpendicularTo</a></td>
+<td class="api-list">Compare this vector with another to check for perpendicularity.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_normalize.htm">normalize</a></td>
+<td class="api-list">Normalizes the vector. Normalization makes the vector length equal to one. The vector should not be zero length.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_scaleBy.htm">scaleBy</a></td>
+<td class="api-list">Scales the vector by specifying a scaling factor.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_setWithArray.htm">setWithArray</a></td>
+<td class="api-list">Sets the definition of the vector by specifying an array containing the x and y coordinates.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_subtract.htm">subtract</a></td>
+<td class="api-list">Subtract a vector from this vector.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_transformBy.htm">transformBy</a></td>
+<td class="api-list">Transforms the vector by specifying a 2D transformation matrix.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_length.htm">length</a></td>
+<td class="api-list">Gets the length of the vector.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_x.htm">x</a></td>
+<td class="api-list">Gets and sets the X coordinate of the vector.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="Vector2D_y.htm">y</a></td>
+<td class="api-list">Gets and sets the Y coordinate of the vector.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CurveEvaluator2D_getCurvature.htm">CurveEvaluator2D.getCurvature</a>, <a href="CurveEvaluator2D_getFirstDerivative.htm">CurveEvaluator2D.getFirstDerivative</a>, <a href="CurveEvaluator2D_getSecondDerivative.htm">CurveEvaluator2D.getSecondDerivative</a>, <a href="CurveEvaluator2D_getTangent.htm">CurveEvaluator2D.getTangent</a>, <a href="CurveEvaluator2D_getThirdDerivative.htm">CurveEvaluator2D.getThirdDerivative</a>, <a href="Ellipse2D_getData.htm">Ellipse2D.getData</a>, <a href="Ellipse2D_majorAxis.htm">Ellipse2D.majorAxis</a>, <a href="EllipticalArc2D_getData.htm">EllipticalArc2D.getData</a>, <a href="EllipticalArc2D_majorAxis.htm">EllipticalArc2D.majorAxis</a>, <a href="Matrix2D_getAsCoordinateSystem.htm">Matrix2D.getAsCoordinateSystem</a>, <a href="Point2D_asVector.htm">Point2D.asVector</a>, <a href="Point2D_vectorTo.htm">Point2D.vectorTo</a>, <a href="Vector2D_copy.htm">Vector2D.copy</a>, <a href="Vector2D_create.htm">Vector2D.create</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(Vector2D%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">add Method</h3><p class="api">Add a vector to this vector.</p><pre class="api-code">"vector2D_var" is a variable referencing a
+Vector2D
+object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+returnValue = vector2D_var-&gt;
+add
+(vector);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">vector</td><td class="api-list">Vector2D</td><td class="api-list">The vector to add to this vector.</td></tr></table><h3 class="api-member">angleTo Method</h3><p class="api">Gets the angle between this vector and another vector.</p><pre class="api-code">"vector2D_var" is a variable referencing a
+Vector2D
+object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+returnValue = vector2D_var-&gt;
+angleTo
+(vector);</pre><p class="api">Return Value: double - Returns the angle in radians.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">vector</td><td class="api-list">Vector2D</td><td class="api-list">The vector to measure the angle to.</td></tr></table><h3 class="api-member">asArray Method</h3><p class="api">Returns the vector values as an array [x, y].</p><pre class="api-code">"vector2D_var" is a variable referencing a
+Vector2D
+object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+returnValue = vector2D_var-&gt;
+asArray
+();</pre><p class="api">Return Value: double[] - Returns an array of the vector's values [x, y].</p><h3 class="api-member">asPoint Method</h3><p class="api">Return a point with the same x and y values as this vector.</p><pre class="api-code">"vector2D_var" is a variable referencing a
+Vector2D
+object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+returnValue = vector2D_var-&gt;
+asPoint
+();</pre><p class="api">Return Value: Point2D - Returns the new point.</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+returnValue = adsk::core::Vector2D::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">copy Method</h3><p class="api">Creates and returns an independent copy of this Vector2D object.</p><pre class="api-code">"vector2D_var" is a variable referencing a
+Vector2D
+object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+returnValue = vector2D_var-&gt;
+copy
+();</pre><p class="api">Return Value: Vector2D - Returns a new Vector2D object that is a copy of this Vector2D object.</p><h3 class="api-member">create Method</h3><p class="api">Creates a 2D vector object.</p><pre class="api-code">This is a static method.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+// Uses no optional arguments.
+returnValue = adsk::core::Vector2D::
+create
+();
+// Uses optional arguments.
+returnValue = adsk::core::Vector2D::
+create
+(x, y);</pre><p class="api">Return Value: Vector2D - Returns the new Vector2D object or null if the creation failed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">x</td><td class="api-list">double</td><td class="api-list">The x coordinate of the vector. This is an optional argument whose default value is 0.0.</td></tr><tr><td class="api-list">y</td><td class="api-list">double</td><td class="api-list">The y coordinate of the vector. This is an optional argument whose default value is 0.0.</td></tr></table><h3 class="api-member">dotProduct Method</h3><p class="api">Calculates the Dot Product of this vector and an input vector.</p><pre class="api-code">"vector2D_var" is a variable referencing a
+Vector2D
+object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+returnValue = vector2D_var-&gt;
+dotProduct
+(vector);</pre><p class="api">Return Value: double - Returns the dot product of the two vectors.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">vector</td><td class="api-list">Vector2D</td><td class="api-list">The vector to use in the dot product calculation.</td></tr></table><h3 class="api-member">isEqualTo Method</h3><p class="api">Compare this vector with another to check for equality.</p><pre class="api-code">"vector2D_var" is a variable referencing a
+Vector2D
+object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+returnValue = vector2D_var-&gt;
+isEqualTo
+(vector);</pre><p class="api">Return Value: boolean - Returns true if the vectors are equal.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">vector</td><td class="api-list">Vector2D</td><td class="api-list">The vector to compare with for equality.</td></tr></table><h3 class="api-member">isParallelTo Method</h3><p class="api">Compare this vector with another to check for parallelism.</p><pre class="api-code">"vector2D_var" is a variable referencing a
+Vector2D
+object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+returnValue = vector2D_var-&gt;
+isParallelTo
+(vector);</pre><p class="api">Return Value: boolean - Returns true if the vectors are parallel.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">vector</td><td class="api-list">Vector2D</td><td class="api-list">The vector to compare with for parallelism.</td></tr></table><h3 class="api-member">isPerpendicularTo Method</h3><p class="api">Compare this vector with another to check for perpendicularity.</p><pre class="api-code">"vector2D_var" is a variable referencing a
+Vector2D
+object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+returnValue = vector2D_var-&gt;
+isPerpendicularTo
+(vector);</pre><p class="api">Return Value: boolean - Returns true if the vectors are perpendicular.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">vector</td><td class="api-list">Vector2D</td><td class="api-list">The vector to compare with for perpendicularity.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"vector2D_var" is a variable referencing a Vector2D object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+// Get the value of the property.
+boolean propertyValue = vector2D_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">length Property</h3><p class="api">Gets the length of the vector.</p><pre class="api-code">"vector2D_var" is a variable referencing a Vector2D object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+// Get the value of the property.
+double propertyValue = vector2D_var-&gt;
+length
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">normalize Method</h3><p class="api">Normalizes the vector. Normalization makes the vector length equal to one. The vector should not be zero length.</p><pre class="api-code">"vector2D_var" is a variable referencing a
+Vector2D
+object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+returnValue = vector2D_var-&gt;
+normalize
+();</pre><p class="api">Return Value: boolean - Returns true if successful.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"vector2D_var" is a variable referencing a Vector2D object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+// Get the value of the property.
+string propertyValue = vector2D_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">scaleBy Method</h3><p class="api">Scales the vector by specifying a scaling factor.</p><pre class="api-code">"vector2D_var" is a variable referencing a
+Vector2D
+object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+returnValue = vector2D_var-&gt;
+scaleBy
+(scale);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">scale</td><td class="api-list">double</td><td class="api-list">The scale factor to multiple the vector by (i.e. 1.5).</td></tr></table><h3 class="api-member">setWithArray Method</h3><p class="api">Sets the definition of the vector by specifying an array containing the x and y coordinates.</p><pre class="api-code">"vector2D_var" is a variable referencing a
+Vector2D
+object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+returnValue = vector2D_var-&gt;
+setWithArray
+(coordinates);</pre><p class="api">Return Value: boolean - Returns true if successful</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">coordinates</td><td class="api-list">double[]</td><td class="api-list">An array that specifies the values for the x and y coordinates of the vector.</td></tr></table><h3 class="api-member">subtract Method</h3><p class="api">Subtract a vector from this vector.</p><pre class="api-code">"vector2D_var" is a variable referencing a
+Vector2D
+object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+returnValue = vector2D_var-&gt;
+subtract
+(vector);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">vector</td><td class="api-list">Vector2D</td><td class="api-list">The vector to subtract from this vector.</td></tr></table><h3 class="api-member">transformBy Method</h3><p class="api">Transforms the vector by specifying a 2D transformation matrix.</p><pre class="api-code">"vector2D_var" is a variable referencing a
+Vector2D
+object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+returnValue = vector2D_var-&gt;
+transformBy
+(matrix);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">matrix</td><td class="api-list">Matrix2D</td><td class="api-list">The Matrix2D object that defines the transformation.</td></tr></table><h3 class="api-member">x Property</h3><p class="api">Gets and sets the X coordinate of the vector.</p><pre class="api-code">"vector2D_var" is a variable referencing a Vector2D object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+// Get the value of the property.
+double propertyValue = vector2D_var-&gt;
+x
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = vector2D_var-&gt;
+x
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">y Property</h3><p class="api">Gets and sets the Y coordinate of the vector.</p><pre class="api-code">"vector2D_var" is a variable referencing a Vector2D object.
+#include &lt;Core/Geometry/Vector2D.h&gt;
+// Get the value of the property.
+double propertyValue = vector2D_var-&gt;
+y
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = vector2D_var-&gt;
+y
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p></body>
+</html>

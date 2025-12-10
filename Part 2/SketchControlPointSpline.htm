@@ -1,0 +1,472 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/SketchControlPointSpline.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="30/06/2022" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="SketchControlPointSpline" name="contextid"/>
+<meta content="SketchControlPointSpline Object" name="description"/>
+<meta content="GUID-0DCEF2AA-45AF-4A65-B2F8-00EAADC6343D" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>SketchControlPointSpline Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">SketchControlPointSpline Object
+			</h1>
+              Derived from: <a href="SketchCurve.htm">SketchCurve</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;<h2 class="api">
+          Description
+        </h2>A control point spline in a sketch.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_addControlPoint.htm">addControlPoint</a></td>
+<td class="api-list">Adds an additional control point to the control point spline. Inserting a new control point does not change the shape of the curve, but the control frame will be re-computed and the control points will be adjusted to maintain the current shape.<br><br/> This method will fail in the case where the control frame is not displayed. You can check for this by using the is isControlFrameDisplayed.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_breakCurve.htm">breakCurve</a></td>
+<td class="api-list">Breaks a curve into two or three pieces by finding intersections of this curve with all other curves in the sketch and splitting this curve at the nearest intersections to a specified point on the curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_createForAssemblyContext.htm">createForAssemblyContext</a></td>
+<td class="api-list">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes the entity from the sketch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_extend.htm">extend</a></td>
+<td class="api-list">Extend a curve by specifying a point that determines the end of the curve to extend</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_intersections.htm">intersections</a></td>
+<td class="api-list">Get the curves that intersect this curve along with the intersection points (Point3D)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_split.htm">split</a></td>
+<td class="api-list">Split a curve at a position specified along the curve</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_trim.htm">trim</a></td>
+<td class="api-list">Trim a curve by specifying a point that determines the segment of the curve to trim away</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_assemblyContext.htm">assemblyContext</a></td>
+<td class="api-list">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_attributes.htm">attributes</a></td>
+<td class="api-list">Returns the collection of attributes associated with this face.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_boundingBox.htm">boundingBox</a></td>
+<td class="api-list">Returns the bounding box of the entity in sketch space.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_controlFrameLines.htm">controlFrameLines</a></td>
+<td class="api-list">Returns the sketch lines that represent the control frame of the spline. The lines are in sequential order starting with the line that connects to the starting control point to the end.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_controlPoints.htm">controlPoints</a></td>
+<td class="api-list">Returns the set of sketch points that the control frame of the spline fits through. The points include the start and end points and are returned in the same order as the spline fits through them where the first point in the list is the start point and the last point is the end point. Editing the position of these sketch points will result in editing the spline.<br/><br/> Deleting one of the sketch points will remove that point from the control frame and the curve will be recomputed.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_degree.htm">degree</a></td>
+<td class="api-list">Gets and sets the degree of the spline.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_endSketchPoint.htm">endSketchPoint</a></td>
+<td class="api-list">The sketch point at the end of the spline. If the curve is closed the start and end sketch points will be the same.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_entityToken.htm">entityToken</a></td>
+<td class="api-list">Returns a token for the SketchEntity object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same sketch entity.<br/><br/> When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_evaluator.htm">evaluator</a></td>
+<td class="api-list">Returns an evaluator object that lets you perform evaluations on the precise geometry of the curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_geometricConstraints.htm">geometricConstraints</a></td>
+<td class="api-list">Returns the sketch constraints that are attached to this curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_geometry.htm">geometry</a></td>
+<td class="api-list">Returns the transient geometry of the curve which provides geometric information about the curve. The returned geometry is always in sketch space. Use the worldGeometry property to get it in the model's design space.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_is2D.htm">is2D</a></td>
+<td class="api-list">Indicates if this curve lies entirely on the sketch x-y plane.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_isConstruction.htm">isConstruction</a></td>
+<td class="api-list">Gets and sets whether this curve is construction geometry.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_isControlFrameDisplayed.htm">isControlFrameDisplayed</a></td>
+<td class="api-list">Gets and sets if the control frame of the curve is currently displayed. Using this property is useful to be able to determine if the controlPoints and controlFrameLines properties will return useful information or not and if the addControlPoint method will succeed or not.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_isDeletable.htm">isDeletable</a></td>
+<td class="api-list">Indicates if this sketch entity can be deleted. There are cases, especially with sketch points where another entity is dependent on an entity so deleting it is not allowed. For example, you can't delete the center point of circle by itself but deleting the circle will delete the point. The same is true for the end points of a line.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_isFixed.htm">isFixed</a></td>
+<td class="api-list">Indicates if this geometry is "fixed".</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_isFullyConstrained.htm">isFullyConstrained</a></td>
+<td class="api-list">Indicates if this sketch entity is fully constrained.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_isLinked.htm">isLinked</a></td>
+<td class="api-list">Indicates if this sketch entity was created by a projection, inclusion, or driven by an API script. If this returns true, then the entity is presented to the user as not editable and with a 'break link' command available.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_isReference.htm">isReference</a></td>
+<td class="api-list">Indicates if this geometry is a reference. Changing this property from true to false removes the reference. This property can not be set to true if it is already false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_isVisible.htm">isVisible</a></td>
+<td class="api-list">When a sketch is created, geometry is sometimes automatically added to the sketch. For example a sketch point that references the origin point is always included and if a face was selected to create the sketch on, geometry from the face is also included. This automatically created geometry behaves in a special way in that it is invisible but is available for selection and it also participates in profile calculations. It's not possible to make them visible but they can be deleted and they can be used for any other standard sketch operation.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_length.htm">length</a></td>
+<td class="api-list">Returns the length of the curve in centimeters.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_nativeObject.htm">nativeObject</a></td>
+<td class="api-list">The NativeObject is the object outside the context of an assembly and in the context of it's parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_parentSketch.htm">parentSketch</a></td>
+<td class="api-list">Returns the parent sketch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_referencedEntity.htm">referencedEntity</a></td>
+<td class="api-list">Returns the referenced entity in the case where IsReference is true. However, this property can also return null when IsReference is true in the case where the reference is not parametric.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_sketchDimensions.htm">sketchDimensions</a></td>
+<td class="api-list">Returns the sketch dimensions that are attached to this curve.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_startSketchPoint.htm">startSketchPoint</a></td>
+<td class="api-list">The sketch point at the start of the spline. If the curve is closed the start and end sketch points will be the same.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchControlPointSpline_worldGeometry.htm">worldGeometry</a></td>
+<td class="api-list">Returns a NurbsCurve3D object that is the equivalent of this sketch curve but is in the space of the parent component rather than in sketch space.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="SketchControlPointSpline_createForAssemblyContext.htm">SketchControlPointSpline.createForAssemblyContext</a>, <a href="SketchControlPointSpline_nativeObject.htm">SketchControlPointSpline.nativeObject</a>, <a href="SketchControlPointSplines_add.htm">SketchControlPointSplines.add</a>, <a href="SketchControlPointSplines_item.htm">SketchControlPointSplines.item</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version July 2022<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(SketchControlPointSpline%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">addControlPoint Method</h3><p class="api">Adds an additional control point to the control point spline. Inserting a new control point does not change the shape of the curve, but the control frame will be re-computed and the control points will be adjusted to maintain the current shape. This method will fail in the case where the control frame is not displayed. You can check for this by using the is isControlFrameDisplayed.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a
+SketchControlPointSpline
+object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+returnValue = sketchControlPointSpline_var-&gt;
+addControlPoint
+(parameter);</pre><p class="api">Return Value: boolean - Returns true if adding the control point was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">parameter</td><td class="api-list">double</td><td class="api-list">The parameter position that defines where to insert the new control point. The parameter value must be within the parametric range of the curve. This can be determined by using the getParameterExtents method of the CurveEvaluator3D returned by the evaluator property.</td></tr></table><h3 class="api-member">assemblyContext Property</h3><p class="api">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = sketchControlPointSpline_var-&gt;
+assemblyContext
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">attributes Property</h3><p class="api">Returns the collection of attributes associated with this face.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+Ptr&lt;Attributes&gt; propertyValue = sketchControlPointSpline_var-&gt;
+attributes
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">boundingBox Property</h3><p class="api">Returns the bounding box of the entity in sketch space.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+Ptr&lt;BoundingBox3D&gt; propertyValue = sketchControlPointSpline_var-&gt;
+boundingBox
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">breakCurve Method</h3><p class="api">Breaks a curve into two or three pieces by finding intersections of this curve with all other curves in the sketch and splitting this curve at the nearest intersections to a specified point on the curve.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a
+SketchControlPointSpline
+object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Uses no optional arguments.
+returnValue = sketchControlPointSpline_var-&gt;
+breakCurve
+(segmentPoint);
+// Uses optional arguments.
+returnValue = sketchControlPointSpline_var-&gt;
+breakCurve
+(segmentPoint, createConstraints);</pre><p class="api">Return Value: ObjectCollection - All of the curves resulting from the break are returned in an ObjectCollection. In the case where no intersections are found and as a result the curve is not broken, an empty ObjectCollection is returned.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">segmentPoint</td><td class="api-list">Point3D</td><td class="api-list">A point that specifies the segment of the curve that is to be split from the rest of the curve. The nearest intersection(s) to this point define the break location(s).</td></tr><tr><td class="api-list">createConstraints</td><td class="api-list">boolean</td><td class="api-list">Optional argument that specifies if constraints should be created between the new curve segments. A value of true indicates constraints will be created. This is an optional argument whose default value is True.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+returnValue = adsk::fusion::SketchControlPointSpline::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">controlFrameLines Property</h3><p class="api">Returns the sketch lines that represent the control frame of the spline. The lines are in sequential order starting with the line that connects to the starting control point to the end.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;SketchLine&gt;&gt; propertyValue = sketchControlPointSpline_var-&gt;
+controlFrameLines
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type .</p><h3 class="api-member">controlPoints Property</h3><p class="api">Returns the set of sketch points that the control frame of the spline fits through. The points include the start and end points and are returned in the same order as the spline fits through them where the first point in the list is the start point and the last point is the end point. Editing the position of these sketch points will result in editing the spline. Deleting one of the sketch points will remove that point from the control frame and the curve will be recomputed.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+std::vector&lt;Ptr&lt;SketchPoint&gt;&gt; propertyValue = sketchControlPointSpline_var-&gt;
+controlPoints
+();</pre><p class="api">Property Value: This is a read only property whose value is an array of type .</p><h3 class="api-member">createForAssemblyContext Method</h3><p class="api">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a
+SketchControlPointSpline
+object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+returnValue = sketchControlPointSpline_var-&gt;
+createForAssemblyContext
+(occurrence);</pre><p class="api">Return Value: SketchControlPointSpline - Returns the proxy object or null if this isn't the NativeObject.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">occurrence</td><td class="api-list">Occurrence</td><td class="api-list">The occurrence that defines the context to create the proxy in.</td></tr></table><h3 class="api-member">degree Property</h3><p class="api">Gets and sets the degree of the spline.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+SplineDegrees propertyValue = sketchControlPointSpline_var-&gt;
+degree
+();
+// Set the value of the property, where value_var is a SplineDegrees.
+bool returnValue = sketchControlPointSpline_var-&gt;
+degree
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes the entity from the sketch.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a
+SketchControlPointSpline
+object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+returnValue = sketchControlPointSpline_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true is the delete was successful.</p><h3 class="api-member">endSketchPoint Property</h3><p class="api">The sketch point at the end of the spline. If the curve is closed the start and end sketch points will be the same.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+Ptr&lt;SketchPoint&gt; propertyValue = sketchControlPointSpline_var-&gt;
+endSketchPoint
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">entityToken Property</h3><p class="api">Returns a token for the SketchEntity object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same sketch entity. When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+string propertyValue = sketchControlPointSpline_var-&gt;
+entityToken
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">evaluator Property</h3><p class="api">Returns an evaluator object that lets you perform evaluations on the precise geometry of the curve.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+Ptr&lt;CurveEvaluator3D&gt; propertyValue = sketchControlPointSpline_var-&gt;
+evaluator
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">extend Method</h3><p class="api">Extend a curve by specifying a point that determines the end of the curve to extend</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a
+SketchControlPointSpline
+object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Uses no optional arguments.
+returnValue = sketchControlPointSpline_var-&gt;
+extend
+(endPoint);
+// Uses optional arguments.
+returnValue = sketchControlPointSpline_var-&gt;
+extend
+(endPoint, createConstraints);</pre><p class="api">Return Value: ObjectCollection - Returns the modified original curve if the start or end of the curve is extended If the extend joins a curve to another, the two original curves are deleted and a new curve is returned If an arc is extended so as to become a circle, the original arc is deleted and a new circle is returned</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">endPoint</td><td class="api-list">Point3D</td><td class="api-list">A point (transient Point3D) on or closest to the end of the curve to extend. (start or end) The end of the curve closest to the endPoint gets extended</td></tr><tr><td class="api-list">createConstraints</td><td class="api-list">boolean</td><td class="api-list">Constraints are created by default. Specify false to not create constraints. This is an optional argument whose default value is True.</td></tr></table><h3 class="api-member">geometricConstraints Property</h3><p class="api">Returns the sketch constraints that are attached to this curve.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+Ptr&lt;GeometricConstraintList&gt; propertyValue = sketchControlPointSpline_var-&gt;
+geometricConstraints
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">geometry Property</h3><p class="api">Returns the transient geometry of the curve which provides geometric information about the curve. The returned geometry is always in sketch space. Use the worldGeometry property to get it in the model's design space.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+Ptr&lt;NurbsCurve3D&gt; propertyValue = sketchControlPointSpline_var-&gt;
+geometry
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">intersections Method</h3><p class="api">Get the curves that intersect this curve along with the intersection points (Point3D)</p><pre class="api-code">#include &lt;Fusion/Sketch/SketchControlPointSpline.h
+// Declare the output arguments.
+Ptr&lt;ObjectCollection&gt; sketchCurves;
+Ptr&lt;ObjectCollection&gt; intersectingCurves;
+Ptr&lt;ObjectCollection&gt; intersectionPoints;
+boolean returnValue = sketchControlPointSpline_var-&gt;
+intersections
+(sketchCurves, intersectingCurves, intersectionPoints);</pre><p class="api">Return Value: boolean - Returns true if the method was successful. It can be successful regardless of whether intersections were found or not.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">sketchCurves</td><td class="api-list">ObjectCollection</td><td class="api-list">A collection of curves to attempt to find intersections with. Set the value of this parameter to null to use all curves in the sketch for the calculation.</td></tr><tr><td class="api-list">intersectingCurves</td><td class="api-list">ObjectCollection</td><td class="api-list">A collection of the actual intersecting curves</td></tr><tr><td class="api-list">intersectionPoints</td><td class="api-list">ObjectCollection</td><td class="api-list">A collection of intersection points (Point3D) Item numbers in this collection correspond to the item numbers in the intersectingCurves collection.</td></tr></table><h3 class="api-member">is2D Property</h3><p class="api">Indicates if this curve lies entirely on the sketch x-y plane.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchControlPointSpline_var-&gt;
+is2D
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isConstruction Property</h3><p class="api">Gets and sets whether this curve is construction geometry.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchControlPointSpline_var-&gt;
+isConstruction
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sketchControlPointSpline_var-&gt;
+isConstruction
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isControlFrameDisplayed Property</h3><p class="api">Gets and sets if the control frame of the curve is currently displayed. Using this property is useful to be able to determine if the controlPoints and controlFrameLines properties will return useful information or not and if the addControlPoint method will succeed or not.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchControlPointSpline_var-&gt;
+isControlFrameDisplayed
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sketchControlPointSpline_var-&gt;
+isControlFrameDisplayed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isDeletable Property</h3><p class="api">Indicates if this sketch entity can be deleted. There are cases, especially with sketch points where another entity is dependent on an entity so deleting it is not allowed. For example, you can't delete the center point of circle by itself but deleting the circle will delete the point. The same is true for the end points of a line.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchControlPointSpline_var-&gt;
+isDeletable
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isFixed Property</h3><p class="api">Indicates if this geometry is "fixed".</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchControlPointSpline_var-&gt;
+isFixed
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sketchControlPointSpline_var-&gt;
+isFixed
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isFullyConstrained Property</h3><p class="api">Indicates if this sketch entity is fully constrained.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchControlPointSpline_var-&gt;
+isFullyConstrained
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isLinked Property</h3><p class="api">Indicates if this sketch entity was created by a projection, inclusion, or driven by an API script. If this returns true, then the entity is presented to the user as not editable and with a 'break link' command available.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchControlPointSpline_var-&gt;
+isLinked
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isReference Property</h3><p class="api">Indicates if this geometry is a reference. Changing this property from true to false removes the reference. This property can not be set to true if it is already false.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchControlPointSpline_var-&gt;
+isReference
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sketchControlPointSpline_var-&gt;
+isReference
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchControlPointSpline_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isVisible Property</h3><p class="api">When a sketch is created, geometry is sometimes automatically added to the sketch. For example a sketch point that references the origin point is always included and if a face was selected to create the sketch on, geometry from the face is also included. This automatically created geometry behaves in a special way in that it is invisible but is available for selection and it also participates in profile calculations. It's not possible to make them visible but they can be deleted and they can be used for any other standard sketch operation.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchControlPointSpline_var-&gt;
+isVisible
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">length Property</h3><p class="api">Returns the length of the curve in centimeters.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+double propertyValue = sketchControlPointSpline_var-&gt;
+length
+();</pre><p class="api">Property Value: This is a read only property whose value is a double.</p><h3 class="api-member">nativeObject Property</h3><p class="api">The NativeObject is the object outside the context of an assembly and in the context of it's parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+Ptr&lt;SketchControlPointSpline&gt; propertyValue = sketchControlPointSpline_var-&gt;
+nativeObject
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+string propertyValue = sketchControlPointSpline_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentSketch Property</h3><p class="api">Returns the parent sketch.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+Ptr&lt;Sketch&gt; propertyValue = sketchControlPointSpline_var-&gt;
+parentSketch
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">referencedEntity Property</h3><p class="api">Returns the referenced entity in the case where IsReference is true. However, this property can also return null when IsReference is true in the case where the reference is not parametric.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = sketchControlPointSpline_var-&gt;
+referencedEntity
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">sketchDimensions Property</h3><p class="api">Returns the sketch dimensions that are attached to this curve.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+Ptr&lt;SketchDimensionList&gt; propertyValue = sketchControlPointSpline_var-&gt;
+sketchDimensions
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">split Method</h3><p class="api">Split a curve at a position specified along the curve</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a
+SketchControlPointSpline
+object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Uses no optional arguments.
+returnValue = sketchControlPointSpline_var-&gt;
+split
+(splitPoint);
+// Uses optional arguments.
+returnValue = sketchControlPointSpline_var-&gt;
+split
+(splitPoint, createConstraints);</pre><p class="api">Return Value: ObjectCollection - Returns the resulting 2 curves; the original curve + the newly created curve When split spline the original is deleted and two new curves returned. Empty collection returned if curve is closed.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">splitPoint</td><td class="api-list">Point3D</td><td class="api-list">A position (transient Point3D) on the curve that defines the point at which to split the curve</td></tr><tr><td class="api-list">createConstraints</td><td class="api-list">boolean</td><td class="api-list">Constraints are created by default. Specify false to create no constraints. This is an optional argument whose default value is True.</td></tr></table><h3 class="api-member">startSketchPoint Property</h3><p class="api">The sketch point at the start of the spline. If the curve is closed the start and end sketch points will be the same.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+Ptr&lt;SketchPoint&gt; propertyValue = sketchControlPointSpline_var-&gt;
+startSketchPoint
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">trim Method</h3><p class="api">Trim a curve by specifying a point that determines the segment of the curve to trim away</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a
+SketchControlPointSpline
+object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Uses no optional arguments.
+returnValue = sketchControlPointSpline_var-&gt;
+trim
+(segmentPoint);
+// Uses optional arguments.
+returnValue = sketchControlPointSpline_var-&gt;
+trim
+(segmentPoint, createConstraints);</pre><p class="api">Return Value: ObjectCollection - When trimming the start or end side of a line, unclosed circular or elliptical arc, the original entity is modified and returned When trimming the middle of a line, unclosed circular or elliptical arc the original entity is deleted and two new entities are returned When trimming the start or end of any type of closed curve, the original is deleted and a new curve is returned Any trimming of a spline (open or closed) deletes the original and new spline/s are returned Trimming a curve having no intersections deletes the original and returns an empty collection</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">segmentPoint</td><td class="api-list">Point3D</td><td class="api-list">A point (transient Point3D) on or closest to the segment of the curve to remove. (start, end or middle) The segment of the curve closest to the segmentPoint gets removed</td></tr><tr><td class="api-list">createConstraints</td><td class="api-list">boolean</td><td class="api-list">Constraints are created by default. Specify false to not create constraints. This is an optional argument whose default value is True.</td></tr></table><h3 class="api-member">worldGeometry Property</h3><p class="api">Returns a NurbsCurve3D object that is the equivalent of this sketch curve but is in the space of the parent component rather than in sketch space.</p><pre class="api-code">"sketchControlPointSpline_var" is a variable referencing a SketchControlPointSpline object.
+#include &lt;Fusion/Sketch/SketchControlPointSpline.h&gt;
+// Get the value of the property.
+Ptr&lt;NurbsCurve3D&gt; propertyValue = sketchControlPointSpline_var-&gt;
+worldGeometry
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

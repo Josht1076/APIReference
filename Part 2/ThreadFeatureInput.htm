@@ -1,0 +1,255 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ThreadFeatureInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="22/12/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ThreadFeatureInput" name="contextid"/>
+<meta content="ThreadFeatureInput Object" name="description"/>
+<meta content="GUID-7bb59f93-3394-4296-af8c-3c6811e74f29" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ThreadFeatureInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ThreadFeatureInput Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/ThreadFeatureInput.h&gt;<h2 class="api">
+          Description
+        </h2>This class defines the methods and properties that pertain to the definition of a thread feature.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadFeatureInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadFeatureInput_inputCylindricalFace.htm">inputCylindricalFace</a></td>
+<td class="api-list">Gets and sets the threaded face. In the case where there are multiple faces, only the first one is returned. Setting this results in a thread being applied to only a single face. It is recommended that you use the inputCylindricalfaces property in order to have full access to the collection of faces to be threaded.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadFeatureInput_inputCylindricalFaces.htm">inputCylindricalFaces</a></td>
+<td class="api-list">Gets and sets the cylindrical input faces.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadFeatureInput_isFullLength.htm">isFullLength</a></td>
+<td class="api-list">Gets and sets if this thread is the full length of the cylinder. It defaults to true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadFeatureInput_isModeled.htm">isModeled</a></td>
+<td class="api-list">Gets and sets if the thread is physical or cosmetic thread. A value of true indicates a physical thread. It defaults to false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadFeatureInput_isRightHanded.htm">isRightHanded</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Gets and sets if the thread is right or left-handed thread. A value of true indicates a right-handed thread. It defaults to true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadFeatureInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadFeatureInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadFeatureInput_targetBaseFeature.htm">targetBaseFeature</a></td>
+<td class="api-list">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature.<br/><br/> Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadFeatureInput_threadInfo.htm">threadInfo</a></td>
+<td class="api-list">Gets and sets the information that defines the thread.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadFeatureInput_threadLength.htm">threadLength</a></td>
+<td class="api-list">Gets and sets the thread length. It is only used in the case where the isFullLength property is false.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadFeatureInput_threadLocation.htm">threadLocation</a></td>
+<td class="api-list">Gets and sets which end of the cylinder the thread is measured from when it's not full length. The thread position and length can be measured from either the "low" or "high" end. You can determine the low and high end by using the Cylinder associated with the cylindrical BRepFace the thread is being added to. The BRepFace.geometry which will return a Cylinder object. The axis property of the Cylinder is a vector and the high end of the cylinder is at the far end of the cylinder with respect to the axis vector.<br/><br/> This property is only used in the case where the isFullLength property is false and is otherwise ignored. It defaults to creating a thread at the high end.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadFeatureInput_threadOffset.htm">threadOffset</a></td>
+<td class="api-list">Gets and sets the thread offset. The offset is the distance along the axis of the cylinder from the edge to the start of the thread. It is only used in the case where the isFullLength property is false. Returns nothing in the case where the feature is non-parametric.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="ThreadFeatures_createInput.htm">ThreadFeatures.createInput</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ThreadFeatureSample_Sample.htm">Thread Feature API Sample</a></td>
+<td class="api-list">Demonstrates creating a new thread feature.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version January 2015<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ThreadFeatureInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/ThreadFeatureInput.h&gt;
+returnValue = adsk::fusion::ThreadFeatureInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">inputCylindricalFace Property</h3><p class="api">Gets and sets the threaded face. In the case where there are multiple faces, only the first one is returned. Setting this results in a thread being applied to only a single face. It is recommended that you use the inputCylindricalfaces property in order to have full access to the collection of faces to be threaded.</p><pre class="api-code">"threadFeatureInput_var" is a variable referencing a ThreadFeatureInput object.
+#include &lt;Fusion/Features/ThreadFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BRepFace&gt; propertyValue = threadFeatureInput_var-&gt;
+inputCylindricalFace
+();
+// Set the value of the property, where value_var is a BRepFace.
+bool returnValue = threadFeatureInput_var-&gt;
+inputCylindricalFace
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">inputCylindricalFaces Property</h3><p class="api">Gets and sets the cylindrical input faces.</p><pre class="api-code">"threadFeatureInput_var" is a variable referencing a ThreadFeatureInput object.
+#include &lt;Fusion/Features/ThreadFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ObjectCollection&gt; propertyValue = threadFeatureInput_var-&gt;
+inputCylindricalFaces
+();
+// Set the value of the property, where value_var is an ObjectCollection.
+bool returnValue = threadFeatureInput_var-&gt;
+inputCylindricalFaces
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">isFullLength Property</h3><p class="api">Gets and sets if this thread is the full length of the cylinder. It defaults to true.</p><pre class="api-code">"threadFeatureInput_var" is a variable referencing a ThreadFeatureInput object.
+#include &lt;Fusion/Features/ThreadFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = threadFeatureInput_var-&gt;
+isFullLength
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = threadFeatureInput_var-&gt;
+isFullLength
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isModeled Property</h3><p class="api">Gets and sets if the thread is physical or cosmetic thread. A value of true indicates a physical thread. It defaults to false.</p><pre class="api-code">"threadFeatureInput_var" is a variable referencing a ThreadFeatureInput object.
+#include &lt;Fusion/Features/ThreadFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = threadFeatureInput_var-&gt;
+isModeled
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = threadFeatureInput_var-&gt;
+isModeled
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isRightHanded Property</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Gets and sets if the thread is right or left-handed thread. A value of true indicates a right-handed thread. It defaults to true.</p><pre class="api-code">"threadFeatureInput_var" is a variable referencing a ThreadFeatureInput object.
+#include &lt;Fusion/Features/ThreadFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = threadFeatureInput_var-&gt;
+isRightHanded
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = threadFeatureInput_var-&gt;
+isRightHanded
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"threadFeatureInput_var" is a variable referencing a ThreadFeatureInput object.
+#include &lt;Fusion/Features/ThreadFeatureInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = threadFeatureInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"threadFeatureInput_var" is a variable referencing a ThreadFeatureInput object.
+#include &lt;Fusion/Features/ThreadFeatureInput.h&gt;
+// Get the value of the property.
+string propertyValue = threadFeatureInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">targetBaseFeature Property</h3><p class="api">When creating a feature that is owned by a base feature, set this property to the base feature you want to associate the new feature with. By default, this is null, meaning it will not be associated with a base feature. Because of a current limitation, if you want to create a feature associated with a base feature, you must set this property AND call the startEdit method of the base feature, create the feature, and then call the finishEdit method of the base feature. The base feature must be in an "edit" state to be able to add any additional items to it.</p><pre class="api-code">"threadFeatureInput_var" is a variable referencing a ThreadFeatureInput object.
+#include &lt;Fusion/Features/ThreadFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;BaseFeature&gt; propertyValue = threadFeatureInput_var-&gt;
+targetBaseFeature
+();
+// Set the value of the property, where value_var is a BaseFeature.
+bool returnValue = threadFeatureInput_var-&gt;
+targetBaseFeature
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">threadInfo Property</h3><p class="api">Gets and sets the information that defines the thread.</p><pre class="api-code">"threadFeatureInput_var" is a variable referencing a ThreadFeatureInput object.
+#include &lt;Fusion/Features/ThreadFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ThreadInfo&gt; propertyValue = threadFeatureInput_var-&gt;
+threadInfo
+();
+// Set the value of the property, where value_var is a ThreadInfo.
+bool returnValue = threadFeatureInput_var-&gt;
+threadInfo
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">threadLength Property</h3><p class="api">Gets and sets the thread length. It is only used in the case where the isFullLength property is false.</p><pre class="api-code">"threadFeatureInput_var" is a variable referencing a ThreadFeatureInput object.
+#include &lt;Fusion/Features/ThreadFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = threadFeatureInput_var-&gt;
+threadLength
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = threadFeatureInput_var-&gt;
+threadLength
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">threadLocation Property</h3><p class="api">Gets and sets which end of the cylinder the thread is measured from when it's not full length. The thread position and length can be measured from either the "low" or "high" end. You can determine the low and high end by using the Cylinder associated with the cylindrical BRepFace the thread is being added to. The BRepFace.geometry which will return a Cylinder object. The axis property of the Cylinder is a vector and the high end of the cylinder is at the far end of the cylinder with respect to the axis vector. This property is only used in the case where the isFullLength property is false and is otherwise ignored. It defaults to creating a thread at the high end.</p><pre class="api-code">"threadFeatureInput_var" is a variable referencing a ThreadFeatureInput object.
+#include &lt;Fusion/Features/ThreadFeatureInput.h&gt;
+// Get the value of the property.
+ThreadLocations propertyValue = threadFeatureInput_var-&gt;
+threadLocation
+();
+// Set the value of the property, where value_var is a ThreadLocations.
+bool returnValue = threadFeatureInput_var-&gt;
+threadLocation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">threadOffset Property</h3><p class="api">Gets and sets the thread offset. The offset is the distance along the axis of the cylinder from the edge to the start of the thread. It is only used in the case where the isFullLength property is false. Returns nothing in the case where the feature is non-parametric.</p><pre class="api-code">"threadFeatureInput_var" is a variable referencing a ThreadFeatureInput object.
+#include &lt;Fusion/Features/ThreadFeatureInput.h&gt;
+// Get the value of the property.
+Ptr&lt;ValueInput&gt; propertyValue = threadFeatureInput_var-&gt;
+threadOffset
+();
+// Set the value of the property, where value_var is a ValueInput.
+bool returnValue = threadFeatureInput_var-&gt;
+threadOffset
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p></body>
+</html>

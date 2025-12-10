@@ -1,0 +1,251 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/VariableRadiusFilletEdgeSet.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="14/10/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="VariableRadiusFilletEdgeSet" name="contextid"/>
+<meta content="VariableRadiusFilletEdgeSet Object" name="description"/>
+<meta content="GUID-24dc63d0-b7fc-461e-860b-3a6db9f423c8" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>VariableRadiusFilletEdgeSet Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">VariableRadiusFilletEdgeSet Object
+			</h1>
+              Derived from: <a href="FilletEdgeSet.htm">FilletEdgeSet</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Features/VariableRadiusFilletEdgeSet.h&gt;<h2 class="api">
+          Description
+        </h2>Provides access to the edges and the parameters associated with a variable radius fillet.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="VariableRadiusFilletEdgeSet_addMidPosition.htm">addMidPosition</a></td>
+<td class="api-list">Creates a new mid position radius on the variable radius edge set.<br><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="VariableRadiusFilletEdgeSet_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VariableRadiusFilletEdgeSet_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes the fillet edge set from the fillet.<br/><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VariableRadiusFilletEdgeSet_deleteMidPosition.htm">deleteMidPosition</a></td>
+<td class="api-list">Deletes the specified mid position from the variable radius fillet.<br/><br/> To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="VariableRadiusFilletEdgeSet_continuity.htm">continuity</a></td>
+<td class="api-list">Gets and sets the continuity of the fillet edge set. Valid values are TangentSurfaceContinuityType and CurvatureSurfaceContinuityType.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VariableRadiusFilletEdgeSet_edges.htm">edges</a></td>
+<td class="api-list">Gets and sets an ObjectCollection containing the edges that are filleted.<br/><br/> To use this property, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VariableRadiusFilletEdgeSet_endRadius.htm">endRadius</a></td>
+<td class="api-list">Returns the model parameter that controls the end radius of the fillet. You can edit the end radius by using the properties on the returned ModelParameter object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VariableRadiusFilletEdgeSet_isTangentChain.htm">isTangentChain</a></td>
+<td class="api-list">Gets and sets the Tangent chain for fillet. This enables tangent chain option for fillet.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VariableRadiusFilletEdgeSet_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VariableRadiusFilletEdgeSet_midPositions.htm">midPositions</a></td>
+<td class="api-list">Returns a list of model parameters that control the location of each mid point radius. These positions are defined from 0 to 1 where 0 is at the start of the edge and 1 is at the end. You can edit any of these positions by using the properties on its returned ModelParameter object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VariableRadiusFilletEdgeSet_midRadii.htm">midRadii</a></td>
+<td class="api-list">Returns a list of model parameters that control radius of the fillet at each position defined along the edge set. You can edit any of these radii by using the properties on its returned ModelParameter object. This list does not include the parameters for the start and end radii. Use the startRadius and endRadius properties to get those.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VariableRadiusFilletEdgeSet_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VariableRadiusFilletEdgeSet_startRadius.htm">startRadius</a></td>
+<td class="api-list">Returns the model parameter that controls the start radius of the fillet. You can edit the start radius by using the properties on the returned ModelParameter object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="VariableRadiusFilletEdgeSet_tangencyWeight.htm">tangencyWeight</a></td>
+<td class="api-list">Returns the model parameter that controls the G1 or G2 tangency weight of the fillet. It must be a real value between 0.1 and 2.0 inclusive. You can edit the tangency weight by using the properties on the returned ModelParameter object.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="FilletEdgeSets_addVariableRadiusEdgeSet.htm">FilletEdgeSets.addVariableRadiusEdgeSet</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="FilletFeatureEditSample_Sample.htm">Fillet Feature Edit API Sample</a></td>
+<td class="api-list"><p></p>Demonstrates editing a fillet feature.<br/>To successfully run this sample you can use this <a api"="" href="../ExtraFiles/APISampleFilletEdgeSetData.f3d&gt; file&lt;/a&gt; or create a new model with the described fillet feature.&lt;/p&gt;
+	&lt;p&gt;
+	&lt;ol&gt;
+	&lt;li&gt;Create a new model and add a block feature.&lt;/li&gt;
+	&lt;li&gt;Create a single fillet feature that defines three different fillets. The fillets need to be created in a way where they don't interact with one another. The easiest way is to create the fillets only on the vertical edges of the box.
+	&lt;ol&gt;
+	&lt;li&gt;Create a constant radius fillet with a radius that is about 1/4 the size of the box.&lt;/li&gt;
+	&lt;li&gt;Create a chord length fillet whose radius is also about 1/4 the size of the box.&lt;/li&gt;
+	&lt;li&gt;Create a variable radius fillet with one intermediate radius and the radii are about 1/4 the size of the box and less.&lt;/li&gt;
+	&lt;/ol&gt;
+&lt;/ol&gt;
+Running the sample script will modify various settings of each fillet and change the edge each fillet is applied to.
+	&lt;/p&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/Table&gt;
+    &lt;h2 class=">
+            Version
+          
+        Introduced in version November 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(VariableRadiusFilletEdgeSet%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+</a></td></tr></table><h2 class="api">Members Detail (C++)</h2><h3 class="api-member">addMidPosition Method</h3><p class="api">Creates a new mid position radius on the variable radius edge set. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"variableRadiusFilletEdgeSet_var" is a variable referencing a
+VariableRadiusFilletEdgeSet
+object.
+#include &lt;Fusion/Features/VariableRadiusFilletEdgeSet.h&gt;
+returnValue = variableRadiusFilletEdgeSet_var-&gt;
+addMidPosition
+(position, radius);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">position</td><td class="api-list">ValueInput</td><td class="api-list">The position where the new radius is to be created. This is a value between 0 and 1 where 0 is at the start of the edge and 1 is at the end. If the ValueInput uses a real then it is interpreted as a unitless value. If it is a string then it must resolve to a unitless value.</td></tr><tr><td class="api-list">radius</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput object that defines the radius at the defined position. If the ValueInput uses a real then it is interpreted as centimeters. If it is a string then the units can be defined as part of the string (i.e. "2 in"). If no units are specified it will be interpreted using the current default units for length.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Features/VariableRadiusFilletEdgeSet.h&gt;
+returnValue = adsk::fusion::VariableRadiusFilletEdgeSet::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">continuity Property</h3><p class="api">Gets and sets the continuity of the fillet edge set. Valid values are TangentSurfaceContinuityType and CurvatureSurfaceContinuityType.</p><pre class="api-code">"variableRadiusFilletEdgeSet_var" is a variable referencing a VariableRadiusFilletEdgeSet object.
+#include &lt;Fusion/Features/VariableRadiusFilletEdgeSet.h&gt;
+// Get the value of the property.
+SurfaceContinuityTypes propertyValue = variableRadiusFilletEdgeSet_var-&gt;
+continuity
+();
+// Set the value of the property, where value_var is a SurfaceContinuityTypes.
+bool returnValue = variableRadiusFilletEdgeSet_var-&gt;
+continuity
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes the fillet edge set from the fillet. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"variableRadiusFilletEdgeSet_var" is a variable referencing a
+VariableRadiusFilletEdgeSet
+object.
+#include &lt;Fusion/Features/VariableRadiusFilletEdgeSet.h&gt;
+returnValue = variableRadiusFilletEdgeSet_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true if the operation was successful.</p><h3 class="api-member">deleteMidPosition Method</h3><p class="api">Deletes the specified mid position from the variable radius fillet. To use this method, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"variableRadiusFilletEdgeSet_var" is a variable referencing a
+VariableRadiusFilletEdgeSet
+object.
+#include &lt;Fusion/Features/VariableRadiusFilletEdgeSet.h&gt;
+returnValue = variableRadiusFilletEdgeSet_var-&gt;
+deleteMidPosition
+(positionIndex);</pre><p class="api">Return Value: boolean - Returns true if successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">positionIndex</td><td class="api-list">uinteger</td><td class="api-list">The index of the mid position to delete. The points are in the order they appear along the edge where the first point has an index of 0. The number of mid positions and their locations can be obtained by getting the list of mid positions using the midPositions property.</td></tr></table><h3 class="api-member">edges Property</h3><p class="api">Gets and sets an ObjectCollection containing the edges that are filleted. To use this property, you need to position the timeline marker to immediately before this feature. This can be accomplished using the following code: thisFeature.timelineObject.rollTo(True)</p><pre class="api-code">"variableRadiusFilletEdgeSet_var" is a variable referencing a VariableRadiusFilletEdgeSet object.
+#include &lt;Fusion/Features/VariableRadiusFilletEdgeSet.h&gt;
+// Get the value of the property.
+Ptr&lt;ObjectCollection&gt; propertyValue = variableRadiusFilletEdgeSet_var-&gt;
+edges
+();
+// Set the value of the property, where value_var is an ObjectCollection.
+bool returnValue = variableRadiusFilletEdgeSet_var-&gt;
+edges
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is an .</p><h3 class="api-member">endRadius Property</h3><p class="api">Returns the model parameter that controls the end radius of the fillet. You can edit the end radius by using the properties on the returned ModelParameter object.</p><pre class="api-code">"variableRadiusFilletEdgeSet_var" is a variable referencing a VariableRadiusFilletEdgeSet object.
+#include &lt;Fusion/Features/VariableRadiusFilletEdgeSet.h&gt;
+// Get the value of the property.
+Ptr&lt;ModelParameter&gt; propertyValue = variableRadiusFilletEdgeSet_var-&gt;
+endRadius
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">isTangentChain Property</h3><p class="api">Gets and sets the Tangent chain for fillet. This enables tangent chain option for fillet.</p><pre class="api-code">"variableRadiusFilletEdgeSet_var" is a variable referencing a VariableRadiusFilletEdgeSet object.
+#include &lt;Fusion/Features/VariableRadiusFilletEdgeSet.h&gt;
+// Get the value of the property.
+boolean propertyValue = variableRadiusFilletEdgeSet_var-&gt;
+isTangentChain
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = variableRadiusFilletEdgeSet_var-&gt;
+isTangentChain
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"variableRadiusFilletEdgeSet_var" is a variable referencing a VariableRadiusFilletEdgeSet object.
+#include &lt;Fusion/Features/VariableRadiusFilletEdgeSet.h&gt;
+// Get the value of the property.
+boolean propertyValue = variableRadiusFilletEdgeSet_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">midPositions Property</h3><p class="api">Returns a list of model parameters that control the location of each mid point radius. These positions are defined from 0 to 1 where 0 is at the start of the edge and 1 is at the end. You can edit any of these positions by using the properties on its returned ModelParameter object.</p><pre class="api-code">"variableRadiusFilletEdgeSet_var" is a variable referencing a VariableRadiusFilletEdgeSet object.
+#include &lt;Fusion/Features/VariableRadiusFilletEdgeSet.h&gt;
+// Get the value of the property.
+Ptr&lt;ParameterList&gt; propertyValue = variableRadiusFilletEdgeSet_var-&gt;
+midPositions
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">midRadii Property</h3><p class="api">Returns a list of model parameters that control radius of the fillet at each position defined along the edge set. You can edit any of these radii by using the properties on its returned ModelParameter object. This list does not include the parameters for the start and end radii. Use the startRadius and endRadius properties to get those.</p><pre class="api-code">"variableRadiusFilletEdgeSet_var" is a variable referencing a VariableRadiusFilletEdgeSet object.
+#include &lt;Fusion/Features/VariableRadiusFilletEdgeSet.h&gt;
+// Get the value of the property.
+Ptr&lt;ParameterList&gt; propertyValue = variableRadiusFilletEdgeSet_var-&gt;
+midRadii
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"variableRadiusFilletEdgeSet_var" is a variable referencing a VariableRadiusFilletEdgeSet object.
+#include &lt;Fusion/Features/VariableRadiusFilletEdgeSet.h&gt;
+// Get the value of the property.
+string propertyValue = variableRadiusFilletEdgeSet_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">startRadius Property</h3><p class="api">Returns the model parameter that controls the start radius of the fillet. You can edit the start radius by using the properties on the returned ModelParameter object.</p><pre class="api-code">"variableRadiusFilletEdgeSet_var" is a variable referencing a VariableRadiusFilletEdgeSet object.
+#include &lt;Fusion/Features/VariableRadiusFilletEdgeSet.h&gt;
+// Get the value of the property.
+Ptr&lt;ModelParameter&gt; propertyValue = variableRadiusFilletEdgeSet_var-&gt;
+startRadius
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">tangencyWeight Property</h3><p class="api">Returns the model parameter that controls the G1 or G2 tangency weight of the fillet. It must be a real value between 0.1 and 2.0 inclusive. You can edit the tangency weight by using the properties on the returned ModelParameter object.</p><pre class="api-code">"variableRadiusFilletEdgeSet_var" is a variable referencing a VariableRadiusFilletEdgeSet object.
+#include &lt;Fusion/Features/VariableRadiusFilletEdgeSet.h&gt;
+// Get the value of the property.
+Ptr&lt;ModelParameter&gt; propertyValue = variableRadiusFilletEdgeSet_var-&gt;
+tangencyWeight
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p></body>
+</html>

@@ -1,0 +1,248 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/SketchDistanceBetweenLineAndPlanarSurfaceDimension.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="22/08/2023" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="SketchDistanceBetweenLineAndPlanarSurfaceDimension" name="contextid"/>
+<meta content="SketchDistanceBetweenLineAndPlanarSurfaceDimension Object" name="description"/>
+<meta content="GUID-41D983FB-750B-450F-9AD5-D88BF63DF570" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>SketchDistanceBetweenLineAndPlanarSurfaceDimension Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">SketchDistanceBetweenLineAndPlanarSurfaceDimension Object
+			</h1>
+              Derived from: <a href="SketchDimension.htm">SketchDimension</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Sketch/SketchDistanceBetweenLineAndPlanarSurfaceDimension.h&gt;<h2 class="api">
+          Description
+        </h2>A linear dimension in a sketch between a sketch line and a planar surface.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_createForAssemblyContext.htm">createForAssemblyContext</a></td>
+<td class="api-list">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes this dimension. The IsDeletable property indicates if this dimension can be deleted.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_assemblyContext.htm">assemblyContext</a></td>
+<td class="api-list">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_attributes.htm">attributes</a></td>
+<td class="api-list">Returns the collection of attributes associated with this sketch dimension.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_entityToken.htm">entityToken</a></td>
+<td class="api-list">Returns a token for the SketchDimension object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same sketch dimension.<br><br/> When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_isDeletable.htm">isDeletable</a></td>
+<td class="api-list">Indicates if this dimension is deletable.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_isDriving.htm">isDriving</a></td>
+<td class="api-list">Gets and sets if the dimension is Driving or is Driven. Setting this property to true for a given dimension may fail if the result would over constrain the sketch. Fusion does not allow over-constrained sketches.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_line.htm">line</a></td>
+<td class="api-list">The sketch line being constrained.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_nativeObject.htm">nativeObject</a></td>
+<td class="api-list">The NativeObject is the object outside the context of an assembly and in the context of it's parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_parameter.htm">parameter</a></td>
+<td class="api-list">Returns the associated parameter or null if there is no associated parameter.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_parentSketch.htm">parentSketch</a></td>
+<td class="api-list">Returns the parent sketch object.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_planarSurface.htm">planarSurface</a></td>
+<td class="api-list">The planar surface the dimension is anchored to. This can be a planar BRepFace or a ConstructionPlane.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_textPosition.htm">textPosition</a></td>
+<td class="api-list">Gets and sets position of the dimension text.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_value.htm">value</a></td>
+<td class="api-list">Gets and sets the current value of the sketch dimension.<br/><br/> In a parametric modeling design and the isDriving property is True, this is exactly equivalent to getting the parameter associated with the dimension and editing its value. Editing this property will result in the parameter value being changed. If isDriving is False, this acts as a read-only property and attempting to set it will fail.<br/><br/> In a direct modeling design the parameter property will return null and this property can be used to get and set the value of the dimension because in this case, there isn't an associated parameter.<br/><br/> The value is always in internal units which means that for dimensions that represent a distance, the value is in Centimeters and for dimensions representing an angle the value is in Radians.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="SketchDimensions_addDistanceBetweenLineAndPlanarSurfaceDimension.htm">SketchDimensions.addDistanceBetweenLineAndPlanarSurfaceDimension</a>, <a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_createForAssemblyContext.htm">SketchDistanceBetweenLineAndPlanarSurfaceDimension.createForAssemblyContext</a>, <a href="SketchDistanceBetweenLineAndPlanarSurfaceDimension_nativeObject.htm">SketchDistanceBetweenLineAndPlanarSurfaceDimension.nativeObject</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version September 2023<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(SketchDistanceBetweenLineAndPlanarSurfaceDimension%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">assemblyContext Property</h3><p class="api">Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"sketchDistanceBetweenLineAndPlanarSurfaceDimension_var" is a variable referencing a SketchDistanceBetweenLineAndPlanarSurfaceDimension object.
+#include &lt;Fusion/Sketch/SketchDistanceBetweenLineAndPlanarSurfaceDimension.h&gt;
+// Get the value of the property.
+Ptr&lt;Occurrence&gt; propertyValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+assemblyContext
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">attributes Property</h3><p class="api">Returns the collection of attributes associated with this sketch dimension.</p><pre class="api-code">"sketchDistanceBetweenLineAndPlanarSurfaceDimension_var" is a variable referencing a SketchDistanceBetweenLineAndPlanarSurfaceDimension object.
+#include &lt;Fusion/Sketch/SketchDistanceBetweenLineAndPlanarSurfaceDimension.h&gt;
+// Get the value of the property.
+Ptr&lt;Attributes&gt; propertyValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+attributes
+();</pre><p class="api">Property Value: This is a read only property whose value is an .</p><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Sketch/SketchDistanceBetweenLineAndPlanarSurfaceDimension.h&gt;
+returnValue = adsk::fusion::SketchDistanceBetweenLineAndPlanarSurfaceDimension::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">createForAssemblyContext Method</h3><p class="api">Creates or returns a proxy for the native object - i.e. a new object that represents this object but adds the assembly context defined by the input occurrence.</p><pre class="api-code">"sketchDistanceBetweenLineAndPlanarSurfaceDimension_var" is a variable referencing a
+SketchDistanceBetweenLineAndPlanarSurfaceDimension
+object.
+#include &lt;Fusion/Sketch/SketchDistanceBetweenLineAndPlanarSurfaceDimension.h&gt;
+returnValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+createForAssemblyContext
+(occurrence);</pre><p class="api">Return Value: SketchDistanceBetweenLineAndPlanarSurfaceDimension - Returns the proxy object or null if this isn't the NativeObject.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">occurrence</td><td class="api-list">Occurrence</td><td class="api-list">The occurrence that defines the context to create the proxy in.</td></tr></table><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes this dimension. The IsDeletable property indicates if this dimension can be deleted.</p><pre class="api-code">"sketchDistanceBetweenLineAndPlanarSurfaceDimension_var" is a variable referencing a
+SketchDistanceBetweenLineAndPlanarSurfaceDimension
+object.
+#include &lt;Fusion/Sketch/SketchDistanceBetweenLineAndPlanarSurfaceDimension.h&gt;
+returnValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true if the delete was successful.</p><h3 class="api-member">entityToken Property</h3><p class="api">Returns a token for the SketchDimension object. This can be saved and used at a later time with the Design.findEntityByToken method to get back the same sketch dimension. When using entity tokens it's important to understand that the token string returned for a specific entity can be different over time. However, even if you have two different token strings that were obtained from the same entity, when you use findEntityByToken they will both return the same entity. Because of that you should never compare entity tokens as way to determine what the token represents. Instead, you need to use the findEntityByToken method to get the two entities identified by the tokens and then compare them.</p><pre class="api-code">"sketchDistanceBetweenLineAndPlanarSurfaceDimension_var" is a variable referencing a SketchDistanceBetweenLineAndPlanarSurfaceDimension object.
+#include &lt;Fusion/Sketch/SketchDistanceBetweenLineAndPlanarSurfaceDimension.h&gt;
+// Get the value of the property.
+string propertyValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+entityToken
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">isDeletable Property</h3><p class="api">Indicates if this dimension is deletable.</p><pre class="api-code">"sketchDistanceBetweenLineAndPlanarSurfaceDimension_var" is a variable referencing a SketchDistanceBetweenLineAndPlanarSurfaceDimension object.
+#include &lt;Fusion/Sketch/SketchDistanceBetweenLineAndPlanarSurfaceDimension.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+isDeletable
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isDriving Property</h3><p class="api">Gets and sets if the dimension is Driving or is Driven. Setting this property to true for a given dimension may fail if the result would over constrain the sketch. Fusion does not allow over-constrained sketches.</p><pre class="api-code">"sketchDistanceBetweenLineAndPlanarSurfaceDimension_var" is a variable referencing a SketchDistanceBetweenLineAndPlanarSurfaceDimension object.
+#include &lt;Fusion/Sketch/SketchDistanceBetweenLineAndPlanarSurfaceDimension.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+isDriving
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+isDriving
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"sketchDistanceBetweenLineAndPlanarSurfaceDimension_var" is a variable referencing a SketchDistanceBetweenLineAndPlanarSurfaceDimension object.
+#include &lt;Fusion/Sketch/SketchDistanceBetweenLineAndPlanarSurfaceDimension.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">line Property</h3><p class="api">The sketch line being constrained.</p><pre class="api-code">"sketchDistanceBetweenLineAndPlanarSurfaceDimension_var" is a variable referencing a SketchDistanceBetweenLineAndPlanarSurfaceDimension object.
+#include &lt;Fusion/Sketch/SketchDistanceBetweenLineAndPlanarSurfaceDimension.h&gt;
+// Get the value of the property.
+Ptr&lt;SketchLine&gt; propertyValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+line
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">nativeObject Property</h3><p class="api">The NativeObject is the object outside the context of an assembly and in the context of it's parent component. Returns null in the case where this object is not in the context of an assembly but is already the native object.</p><pre class="api-code">"sketchDistanceBetweenLineAndPlanarSurfaceDimension_var" is a variable referencing a SketchDistanceBetweenLineAndPlanarSurfaceDimension object.
+#include &lt;Fusion/Sketch/SketchDistanceBetweenLineAndPlanarSurfaceDimension.h&gt;
+// Get the value of the property.
+Ptr&lt;SketchDistanceBetweenLineAndPlanarSurfaceDimension&gt; propertyValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+nativeObject
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"sketchDistanceBetweenLineAndPlanarSurfaceDimension_var" is a variable referencing a SketchDistanceBetweenLineAndPlanarSurfaceDimension object.
+#include &lt;Fusion/Sketch/SketchDistanceBetweenLineAndPlanarSurfaceDimension.h&gt;
+// Get the value of the property.
+string propertyValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parameter Property</h3><p class="api">Returns the associated parameter or null if there is no associated parameter.</p><pre class="api-code">"sketchDistanceBetweenLineAndPlanarSurfaceDimension_var" is a variable referencing a SketchDistanceBetweenLineAndPlanarSurfaceDimension object.
+#include &lt;Fusion/Sketch/SketchDistanceBetweenLineAndPlanarSurfaceDimension.h&gt;
+// Get the value of the property.
+Ptr&lt;ModelParameter&gt; propertyValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+parameter
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">parentSketch Property</h3><p class="api">Returns the parent sketch object.</p><pre class="api-code">"sketchDistanceBetweenLineAndPlanarSurfaceDimension_var" is a variable referencing a SketchDistanceBetweenLineAndPlanarSurfaceDimension object.
+#include &lt;Fusion/Sketch/SketchDistanceBetweenLineAndPlanarSurfaceDimension.h&gt;
+// Get the value of the property.
+Ptr&lt;Sketch&gt; propertyValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+parentSketch
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">planarSurface Property</h3><p class="api">The planar surface the dimension is anchored to. This can be a planar BRepFace or a ConstructionPlane.</p><pre class="api-code">"sketchDistanceBetweenLineAndPlanarSurfaceDimension_var" is a variable referencing a SketchDistanceBetweenLineAndPlanarSurfaceDimension object.
+#include &lt;Fusion/Sketch/SketchDistanceBetweenLineAndPlanarSurfaceDimension.h&gt;
+// Get the value of the property.
+Ptr&lt;Base&gt; propertyValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+planarSurface
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">textPosition Property</h3><p class="api">Gets and sets position of the dimension text.</p><pre class="api-code">"sketchDistanceBetweenLineAndPlanarSurfaceDimension_var" is a variable referencing a SketchDistanceBetweenLineAndPlanarSurfaceDimension object.
+#include &lt;Fusion/Sketch/SketchDistanceBetweenLineAndPlanarSurfaceDimension.h&gt;
+// Get the value of the property.
+Ptr&lt;Point3D&gt; propertyValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+textPosition
+();
+// Set the value of the property, where value_var is a Point3D.
+bool returnValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+textPosition
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">value Property</h3><p class="api">Gets and sets the current value of the sketch dimension. In a parametric modeling design and the isDriving property is True, this is exactly equivalent to getting the parameter associated with the dimension and editing its value. Editing this property will result in the parameter value being changed. If isDriving is False, this acts as a read-only property and attempting to set it will fail. In a direct modeling design the parameter property will return null and this property can be used to get and set the value of the dimension because in this case, there isn't an associated parameter. The value is always in internal units which means that for dimensions that represent a distance, the value is in Centimeters and for dimensions representing an angle the value is in Radians.</p><pre class="api-code">"sketchDistanceBetweenLineAndPlanarSurfaceDimension_var" is a variable referencing a SketchDistanceBetweenLineAndPlanarSurfaceDimension object.
+#include &lt;Fusion/Sketch/SketchDistanceBetweenLineAndPlanarSurfaceDimension.h&gt;
+// Get the value of the property.
+double propertyValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+value
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = sketchDistanceBetweenLineAndPlanarSurfaceDimension_var-&gt;
+value
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p></body>
+</html>

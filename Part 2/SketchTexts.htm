@@ -1,0 +1,196 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/SketchTexts.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="3/2/2015" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="SketchTexts" name="contextid"/>
+<meta content="SketchTexts Object" name="description"/>
+<meta content="GUID-145bd2da-32af-438f-a3ec-b9da9292af31" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>SketchTexts Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">SketchTexts Object
+			</h1>
+              Derived from: <a href="Base.htm">Base</a> Object
+            <br/>Defined in namespace "adsk::fusion" and the header file is &lt;Fusion/Sketch/SketchTexts.h&gt;<h2 class="api">
+          Description
+        </h2>The collection of text blocks in a sketch. This provides access to the existing text blocks and supports creating new text blocks.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTexts_add.htm">add</a></td>
+<td class="api-list">Creates a sketch text.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTexts_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTexts_createInput.htm">createInput</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> Creates a SketchTextInput object that can be used to define additional settings when creating sketch text. The SketchTextInput object is equivalent to the Sketch Text dialog in that it collects all of the input required to create sketch text. Once the properties of the SketchTextInput object have been defined, use the add method to create the sketch text.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTexts_createInput2.htm">createInput2</a></td>
+<td class="api-list"><mark>**RETIRED**</mark> This method has been retired and replaced by createInput3. Use the new method to define text using an expression that can combine literal text with parameter values.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTexts_createInput3.htm">createInput3</a></td>
+<td class="api-list">Creates a SketchTextInput object that is used to define the additional input to create text. The SketchTextInput object is equivalent to the Sketch Text dialog in that it collects all of the input required to create sketch text. You must call setAsFitOnPath, setAsAlongPath, or setAsMultiLine methods to define one of the three types of text. Once the properties of the SketchTextInput object have been defined, pass the SketchTextInput to the add method to create the sketch text.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTexts_item.htm">item</a></td>
+<td class="api-list">Function that returns the specified sketch text using an index into the collection.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTexts_count.htm">count</a></td>
+<td class="api-list">Returns the number of texts in the sketch.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTexts_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTexts_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</br></td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="Sketch_sketchTexts.htm">Sketch.sketchTexts</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextinput_setAsAlongPath_Sample.htm">SketchTextInput.setAsAlongPath</a></td>
+<td class="api-list">Demonstrates the SketchTextInput.setAsAlongPath method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_setAsFitOnPath_Sample.htm">SketchTextInput.setAsFitOnPath</a></td>
+<td class="api-list">Demoonstrates the SketchTextInput.setAsFitOnPath method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextInput_setAsMultiLine_Sample.htm">SketchTextInput.setAsMultiLine</a></td>
+<td class="api-list">Demonstrates the SketchTextInput.setAsMultiLine method.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="SketchTextSample_Sample.htm">Sketch Text API Sample</a></td>
+<td class="api-list">Demonstrates creating sketch text by creating both mult-line text and text along a curve.</td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version March 2015<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(SketchTexts%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">add Method</h3><p class="api">Creates a sketch text.</p><pre class="api-code">"sketchTexts_var" is a variable referencing a
+SketchTexts
+object.
+#include &lt;Fusion/Sketch/SketchTexts.h&gt;
+returnValue = sketchTexts_var-&gt;
+add
+(input);</pre><p class="api">Return Value: SketchText - Returns the newly created SketchText object or null in the case of failure.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">input</td><td class="api-list">SketchTextInput</td><td class="api-list">A SketchTextInput object created using the SketchTexts.createInput method.</td></tr></table><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Fusion/Sketch/SketchTexts.h&gt;
+returnValue = adsk::fusion::SketchTexts::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">count Property</h3><p class="api">Returns the number of texts in the sketch.</p><pre class="api-code">"sketchTexts_var" is a variable referencing a SketchTexts object.
+#include &lt;Fusion/Sketch/SketchTexts.h&gt;
+// Get the value of the property.
+uinteger propertyValue = sketchTexts_var-&gt;
+count
+();</pre><p class="api">Property Value: This is a read only property whose value is a uinteger.</p><h3 class="api-member">createInput Method</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. Creates a SketchTextInput object that can be used to define additional settings when creating sketch text. The SketchTextInput object is equivalent to the Sketch Text dialog in that it collects all of the input required to create sketch text. Once the properties of the SketchTextInput object have been defined, use the add method to create the sketch text.</p><pre class="api-code">"sketchTexts_var" is a variable referencing a
+SketchTexts
+object.
+#include &lt;Fusion/Sketch/SketchTexts.h&gt;
+returnValue = sketchTexts_var-&gt;
+createInput
+(formattedText, height, position);</pre><p class="api">Return Value: SketchTextInput - Returns a SketchTextInput object that can be used to set additional formatting and is used as input to the add method.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">formattedText</td><td class="api-list">string</td><td class="api-list">The text used for the sketch text. This is a simple string as no additional formatting is currently supported.</td></tr><tr><td class="api-list">height</td><td class="api-list">double</td><td class="api-list">The height of the text in centimeters.</td></tr><tr><td class="api-list">position</td><td class="api-list">Point3D</td><td class="api-list">The position of the text on the x-y plane of the sketch. The text must lie on the x-y plane so the Z component of the point is ignored and always treated as zero.</td></tr></table><h3 class="api-member">createInput2 Method</h3><p class="api">This function is retired. See more information in the 'Remarks' section below. This method has been retired and replaced by createInput3. Use the new method to define text using an expression that can combine literal text with parameter values.</p><pre class="api-code">"sketchTexts_var" is a variable referencing a
+SketchTexts
+object.
+#include &lt;Fusion/Sketch/SketchTexts.h&gt;
+returnValue = sketchTexts_var-&gt;
+createInput2
+(formattedText, height);</pre><p class="api">Return Value: SketchTextInput - Returns a SketchTextInput object that can be used to set additional formatting and is used as input to the add method.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">formattedText</td><td class="api-list">string</td><td class="api-list">The text used for the sketch text. This is the equivalent of the text that would be entered into the "Text" command dialog. It can be a simple string or it can be an expression that combines text with parameter values. In the case of a simple string, no quotes are needed, but for an expression, text should be quoted using a single quote.</td></tr><tr><td class="api-list">height</td><td class="api-list">double</td><td class="api-list">The height of the text in centimeters.</td></tr></table><h3 class="api-member">createInput3 Method</h3><p class="api">Creates a SketchTextInput object that is used to define the additional input to create text. The SketchTextInput object is equivalent to the Sketch Text dialog in that it collects all of the input required to create sketch text. You must call setAsFitOnPath, setAsAlongPath, or setAsMultiLine methods to define one of the three types of text. Once the properties of the SketchTextInput object have been defined, pass the SketchTextInput to the add method to create the sketch text.</p><pre class="api-code">"sketchTexts_var" is a variable referencing a
+SketchTexts
+object.
+#include &lt;Fusion/Sketch/SketchTexts.h&gt;
+returnValue = sketchTexts_var-&gt;
+createInput3
+(expression, height);</pre><p class="api">Return Value: SketchTextInput - Returns a SketchTextInput object that can be used to set additional formatting and is used as input to the add method.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">expression</td><td class="api-list">string</td><td class="api-list">This defines the expression of the parameter that will be created when this SketchText is created. It can be a simple string or it can be an expression that combines text with parameter values. Simple text must be enclosed within single quotes, the same as it is required in the TEXT command dialog. An example of a valid expression is: "'Length: ' + lengthParam" and will result in "Length: 3.0 mm". The expression result can be obtained by using the text property on the created SketchTextInput object.</td></tr><tr><td class="api-list">height</td><td class="api-list">ValueInput</td><td class="api-list">A ValueInput that defines the height of the text. This value is used to create a parameter that will control the height of the text. It can be a value where it defines the height of the text in centimeters, or it can be a string where it defines the equation of the parameter and must evaluate to a valid length.</td></tr></table><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"sketchTexts_var" is a variable referencing a SketchTexts object.
+#include &lt;Fusion/Sketch/SketchTexts.h&gt;
+// Get the value of the property.
+boolean propertyValue = sketchTexts_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">item Method</h3><p class="api">Function that returns the specified sketch text using an index into the collection.</p><pre class="api-code">"sketchTexts_var" is a variable referencing a
+SketchTexts
+object.
+#include &lt;Fusion/Sketch/SketchTexts.h&gt;
+returnValue = sketchTexts_var-&gt;
+item
+(index);</pre><p class="api">Return Value: SketchText - Returns the specified item or null if an invalid index was specified.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">index</td><td class="api-list">uinteger</td><td class="api-list">The index of the item within the collection to return. The first item in the collection has an index of 0.</td></tr></table><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"sketchTexts_var" is a variable referencing a SketchTexts object.
+#include &lt;Fusion/Sketch/SketchTexts.h&gt;
+// Get the value of the property.
+string propertyValue = sketchTexts_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p></body>
+</html>

@@ -1,0 +1,1030 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/TriadCommandInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="09/05/2022" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="TriadCommandInput" name="contextid"/>
+<meta content="TriadCommandInput Object" name="description"/>
+<meta content="GUID-A2DC02EE-2592-4139-AB1C-178F7D25A30D" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>TriadCommandInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">TriadCommandInput Object
+			</h1>
+              Derived from: <a href="CommandInput.htm">CommandInput</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/UserInterface/TriadCommandInput.h&gt;<h2 class="api">
+          Description
+        </h2>Represents a command input that displays a triad and allows the user to control translation rotation, and scaling. Using properties on the input you can choose which controls are available to the user. This displays inputs in the command dialog where the user can enter values and also displays a manipulator in the graphics window to allow them to graphically set the values. The input boxes are displayed in the dialog when the isVisible property of the command input is true. The manipulator is displayed in the graphics window when both the isVisible and isEnabled properties are true.<br><br/> It will often be useful to first create a GroupCommandInput and then create the TriadCommandInput within the group so it's apparent to the user these items are related and they can be collapsed to reduce clutter in the dialog. This also allows you to label the set of displayed inputs by using the name of the GroupCommandInput.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes this Command input.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_hideAll.htm">hideAll</a></td>
+<td class="api-list">Hides all controls.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_hideAllRotations.htm">hideAllRotations</a></td>
+<td class="api-list">Sets all rotation related controls to be invisible. This is useful if you are only using translations or scaling.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_hideAllScaling.htm">hideAllScaling</a></td>
+<td class="api-list">Sets all scaling related controls to be invisible. This is useful if you are only using translations or rotations.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_setFlipVisibility.htm">setFlipVisibility</a></td>
+<td class="api-list">A convenience method to turn on and off the visibility of the horizontal and vertical flip controls.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_setFullVisibility.htm">setFullVisibility</a></td>
+<td class="api-list">A convenience method to turn on and off the visibility of commonly used controls in a triad. These include the X, Y, and Z axis translations, the X, Y, and Z axis rotations, scaling in the X, Y, and Z directions, scaling on the X-Y, Y-Z and Z-X planes, translation on the X-Y, Y-Z, and Z-X planes, and the origin move.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_setPlanarMoveVisibility.htm">setPlanarMoveVisibility</a></td>
+<td class="api-list">A convenience method to turn on and off the visibility of the X-Y, Y-Z, and Z-X planar translation controls.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_setRotateVisibility.htm">setRotateVisibility</a></td>
+<td class="api-list">A convenience method to turn on and off the visibility of the X, Y, and Z axis rotation controls.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_setScaleVisibility.htm">setScaleVisibility</a></td>
+<td class="api-list">A convenience method to turn on and off the visibility of the controls that define scaling in the X, Y, and Z direction and the X-Y, Y-Z, and Z-X planes.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_setTranslateVisibility.htm">setTranslateVisibility</a></td>
+<td class="api-list">A convenience method to turn on and off the visibility of the X, Y, and Z translation controls.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_commandInputs.htm">commandInputs</a></td>
+<td class="api-list">Gets the CommandInputs class of the parent, which can be a Command, GroupCommandInput or TabCommandInput.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_id.htm">id</a></td>
+<td class="api-list">Gets the unique identifier for this input in the command's CommandInputs.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isEnabled.htm">isEnabled</a></td>
+<td class="api-list">Gets or sets if this input is currently enabled or disabled for user interaction.<br/><br/> Currently, the isEnabled property does not disable SelectionCommandInput objects but instead has the same effect as the SelectionCommandInput.hasFocus property.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isFlippedHorizontal.htm">isFlippedHorizontal</a></td>
+<td class="api-list">Gets and sets if the triad is flipped horizontally (around the around the Y-Z plane of the triad).</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isFlippedVertical.htm">isFlippedVertical</a></td>
+<td class="api-list">Gets and sets if the triad is flipped vertically (around the around the X-Z plane of the triad).</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isFullWidth.htm">isFullWidth</a></td>
+<td class="api-list">Gets or sets if this input fills the entire width of the dialog. If true, the name is ignored and the input control will fill the entire width of the command dialog. The default value for this property in a new command input if false, or not to fill the width. This property does not apply to GroupCommandInputs or TabCommandInputs.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isHorizontalFlipVisible.htm">isHorizontalFlipVisible</a></td>
+<td class="api-list">Gets and sets if the control that lets the user flip horizontally (around the Y-Z plane of the triad) is visible in both the graphical manipulator and the dialog.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isOriginTranslationVisible.htm">isOriginTranslationVisible</a></td>
+<td class="api-list">Gets and sets if the control that supports translation in the X, Y, and Z directions is visible in both the graphical manipulator and in the dialog. In the manipulator, this is the large dot at the origin or the triad.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isUnifiedScalingVisible.htm">isUnifiedScalingVisible</a></td>
+<td class="api-list">Gets and sets if the control that defines the scaling in all directions visible in both the graphical manipulator and in the dialog.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isValidExpressions.htm">isValidExpressions</a></td>
+<td class="api-list">Returns true if all of the input fields have valid expressions. If this property is false, the triad is incorrectly defined and the current values should not be used.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isVerticalFlipVisible.htm">isVerticalFlipVisible</a></td>
+<td class="api-list">Gets and sets if the control that lets the user flip vertical (around the X-Z plane of the triad) is visible in both the graphical manipulator and the dialog.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isVisible.htm">isVisible</a></td>
+<td class="api-list">Gets or sets if this input will be visible to the user.<br/><br/> Setting a SelectionCommandInput to be invisible will clear any selections it currently has.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isXRotationVisible.htm">isXRotationVisible</a></td>
+<td class="api-list">Gets and sets if the control that defines the rotation around the X axis is visible in both the graphical manipulator and in the dialog.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isXScalingInXYVisible.htm">isXScalingInXYVisible</a></td>
+<td class="api-list">Gets and sets if the control that defines the scaling along the X axis is visible in both the graphical manipulator and in the dialog. This control lies on the X-Y plane of the triad.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isXScalingInXZVisible.htm">isXScalingInXZVisible</a></td>
+<td class="api-list">Gets and sets if the control that defines the scaling along the X axis is visible in both the graphical manipulator and in the dialog. This control lies on the X-Z plane of the triad.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isXTranslationVisible.htm">isXTranslationVisible</a></td>
+<td class="api-list">Gets and sets if the control that supports X Translation is visible in both the graphical manipulator and in the dialog.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isXYPlaneScalingVisible.htm">isXYPlaneScalingVisible</a></td>
+<td class="api-list">Gets and sets if the control that defines the scaling in the X-Y plane is visible in both the graphical manipulator and in the dialog.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isXYPlaneTranslationVisible.htm">isXYPlaneTranslationVisible</a></td>
+<td class="api-list">Gets and sets if the control that defines the translation in the X-Y plane is visible in both the graphical manipulator and in the dialog.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isXZPlaneScalingVisible.htm">isXZPlaneScalingVisible</a></td>
+<td class="api-list">Gets and sets if the control that defines the scaling in the X-Z plane is visible in both the graphical manipulator and in the dialog.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isXZPlaneTranslationVisible.htm">isXZPlaneTranslationVisible</a></td>
+<td class="api-list">Gets and sets if the control that defines the translation in the X-Z plane is visible in both the graphical manipulator and in the dialog.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isYRotationVisible.htm">isYRotationVisible</a></td>
+<td class="api-list">Gets and sets if the control that defines the rotation around the Y axis is visible in both the graphical manipulator and in the dialog.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isYScalingInXYVisible.htm">isYScalingInXYVisible</a></td>
+<td class="api-list">Gets and sets if the control that defines the scaling along the Y axis is visible in both the graphical manipulator and in the dialog. This control lies on the X-Y plane of the triad.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isYScalingInYZVisible.htm">isYScalingInYZVisible</a></td>
+<td class="api-list">Gets and sets if the control that defines the scaling along the Y axis is visible in both the graphical manipulator and in the dialog. This control lies on the Y-Z plane of the triad.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isYTranslationVisible.htm">isYTranslationVisible</a></td>
+<td class="api-list">Gets and sets if the control that defines the Y Translation is visible in both the graphical manipulator and in the dialog.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isYZPlaneScalingVisible.htm">isYZPlaneScalingVisible</a></td>
+<td class="api-list">Gets and sets if the control that defines the scaling in the Y-Z plane is visible in both the graphical manipulator and in the dialog.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isYZPlaneTranslationVisible.htm">isYZPlaneTranslationVisible</a></td>
+<td class="api-list">Gets and sets if the control that defines the translation in the Y-Z plane is visible in both the graphical manipulator and in the dialog.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isZRotationVisible.htm">isZRotationVisible</a></td>
+<td class="api-list">Gets and sets if the control that defines the rotation around the Z axis is visible in both the graphical manipulator and in the dialog.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isZScalingInXZVisible.htm">isZScalingInXZVisible</a></td>
+<td class="api-list">Gets and sets if the control that defines the scaling along the Z axis is visible in both the graphical manipulator and in the dialog. This control lies on the X-Z plane of the triad.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isZScalingInYZVisible.htm">isZScalingInYZVisible</a></td>
+<td class="api-list">Gets and sets if the control that defines the scaling along the Z axis is visible in both the graphical manipulator and in the dialog. This control lies on the Y-Z plane of the triad.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_isZTranslationVisible.htm">isZTranslationVisible</a></td>
+<td class="api-list">Gets and sets if the control that defines the Z Translation is visible in both the graphical manipulator and in the dialog.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_lastChangeMade.htm">lastChangeMade</a></td>
+<td class="api-list">Returns which value was most recently changed. To determine the actual change made you need to compare the transforms returned by the transform and lastTransform properties. Having information about the specific type of change made makes it easier to compare the matrices because you know what to look for.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_lastTransform.htm">lastTransform</a></td>
+<td class="api-list">Returns the transform of the triad before the latest change. Using the matrices returned by this property and the transform property you can determine what changed. The lastChangeMade property is also useful to help you know the type of change to look for when comparing the matrices.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_name.htm">name</a></td>
+<td class="api-list">Gets the user visible name of this input.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_parentCommand.htm">parentCommand</a></td>
+<td class="api-list">Gets the parent Command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_parentCommandInput.htm">parentCommandInput</a></td>
+<td class="api-list">Gets the parent CommandInput if this commandInput is the child of a TabCommandInput or GroupCommandInput. Returns null if there is no parent.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_positionTransform.htm">positionTransform</a></td>
+<td class="api-list">Gets the current position and orientation of the triad using a transformation matrix. This transform does not include any scaling.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_toolClipFilename.htm">toolClipFilename</a></td>
+<td class="api-list">Gets or sets the full filename of the image file (PNG) used for the tool clip. The tooltip is always shown but as the user hovers over the control it will progressively display the tool clip and description text.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_tooltip.htm">tooltip</a></td>
+<td class="api-list">Gets or sets the base tooltip string. This is always shown for commands. If the tooltip description and/or tool clip are also specified then the tooltip will progressively display more information as the user hovers the mouse over the control.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_tooltipDescription.htm">tooltipDescription</a></td>
+<td class="api-list">Gets or sets additional text to display progressively along with the tooltip. The text for the description can contain some basic HTML formatting tags to format the tags. For example the br tag can be used to create multiple paragraphs. The tooltip is always shown but as the user hovers over the control it will progressively display the tool clip and description text.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_transform.htm">transform</a></td>
+<td class="api-list">Gets or sets the current position, orientation, and scale of the triad using a transformation matrix.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_unifiedeScaleFactor.htm">unifiedeScaleFactor</a></td>
+<td class="api-list">Gets and sets the current value of the unified scale factor of the triad.<br/><br/> The isValidExpressions property should be checked before using the value within the command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_unifiedScaleFactorExpression.htm">unifiedScaleFactorExpression</a></td>
+<td class="api-list">Gets or sets the expression displayed in the input field for the unified scale. This can contain equations and references to parameters but must result in a valid unitless expression.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_xRotation.htm">xRotation</a></td>
+<td class="api-list">Gets and sets the current value of the rotation around the X axis of the triad. The value is in radians but will be displayed to the user in degrees.<br/><br/> The isValidExpressions property should be checked before using the value within the command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_xRotationExpression.htm">xRotationExpression</a></td>
+<td class="api-list">Gets or sets the expression displayed in the input field for the X rotation. This can contain equations and references to parameters but must result in a valid distance expression. If units are not specified as part of the expression degrees are used.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_xScaleFactor.htm">xScaleFactor</a></td>
+<td class="api-list">Gets and sets the current value of the scale factor along the X axis of the triad.<br/><br/> The isValidExpressions property should be checked before using the value within the command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_xScaleFactorExpression.htm">xScaleFactorExpression</a></td>
+<td class="api-list">Gets or sets the expression displayed in the input field for the X scale. This can contain equations and references to parameters but must result in a valid unitless expression.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_xTranslation.htm">xTranslation</a></td>
+<td class="api-list">Gets and sets the current value of the translation along the X axis of the triad. The value is in centimeters but will be displayed to the user in default units for the design.<br/><br/> The isValidExpressions property should be checked before using the returned value.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_xTranslationExpression.htm">xTranslationExpression</a></td>
+<td class="api-list">Gets or sets the expression displayed in the input field for the X translation. This can contain equations and references to parameters but must result in a valid distance expression. If units are not specified as part of the expression, the default user units of length are used.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_xYPlaneScaleFactor.htm">xYPlaneScaleFactor</a></td>
+<td class="api-list">Gets and sets the current value of the scale factor on the X-Y plane of the triad.<br/><br/> The isValidExpressions property should be checked before using the value within the command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_xYPlaneScaleFactorExpression.htm">xYPlaneScaleFactorExpression</a></td>
+<td class="api-list">Gets or sets the expression displayed in the input field for the X-Y plane scale. This can contain equations and references to parameters but must result in a valid unitless expression.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_yRotation.htm">yRotation</a></td>
+<td class="api-list">Gets and sets the current value of the rotation around the Y axis of the triad. The value is in radians but will be displayed to the user in degrees.<br/><br/> The isValidExpressions property should be checked before using the value within the command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_yRotationExpression.htm">yRotationExpression</a></td>
+<td class="api-list">Gets or sets the expression displayed in the input field for the Y rotation. This can contain equations and references to parameters but must result in a valid distance expression. If units are not specified as part of the expression degrees are used.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_yScaleFactor.htm">yScaleFactor</a></td>
+<td class="api-list">Gets and sets the current value of the scale factor along the Y axis of the triad.<br/><br/> The isValidExpressions property should be checked before using the value within the command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_yScaleFactorExpression.htm">yScaleFactorExpression</a></td>
+<td class="api-list">Gets or sets the expression displayed in the input field for the Y scale. This can contain equations and references to parameters but must result in a valid unitless expression.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_yTranslation.htm">yTranslation</a></td>
+<td class="api-list">Gets and sets the current value of the translation along the Y axis of the triad. The value is in centimeters but will be displayed to the user in default units for the design.<br/><br/> The isValidExpressions property should be checked before using the value within the command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_yTranslationExpression.htm">yTranslationExpression</a></td>
+<td class="api-list">Gets or sets the expression displayed in the input field for the Y translation. This can contain equations and references to parameters but must result in a valid distance expression. If units are not specified as part of the expression, the default user units of length are used.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_yZPlaneScaleFactor.htm">yZPlaneScaleFactor</a></td>
+<td class="api-list">Gets and sets the current value of the scale factor on the Y-Z plane of the triad.<br/><br/> The isValidExpressions property should be checked before using the value within the command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_yZPlaneScaleFactorExpression.htm">yZPlaneScaleFactorExpression</a></td>
+<td class="api-list">Gets or sets the expression displayed in the input field for the Y-Z plane scale. This can contain equations and references to parameters but must result in a valid unitless expression.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_zRotation.htm">zRotation</a></td>
+<td class="api-list">Gets and sets the current value of the rotation around the Z axis of the triad. The value is in radians but will be displayed to the user in degrees.<br/><br/> The isValidExpressions property should be checked before using the value within the command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_zRotationExpression.htm">zRotationExpression</a></td>
+<td class="api-list">Gets or sets the expression displayed in the input field for the Z rotation. This can contain equations and references to parameters but must result in a valid distance expression. If units are not specified as part of the expression degrees are used.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_zScaleFactor.htm">zScaleFactor</a></td>
+<td class="api-list">Gets and sets the current value of the scale factor along the Z axis of the triad.<br/><br/> The isValidExpressions property should be checked before using the value within the command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_zScaleFactorExpression.htm">zScaleFactorExpression</a></td>
+<td class="api-list">Gets or sets the expression displayed in the input field for the Z scale. This can contain equations and references to parameters but must result in a valid unitless expression.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_zTranslation.htm">zTranslation</a></td>
+<td class="api-list">Gets and sets the current value of the translation along the Z axis of the triad. The value is in centimeters but will be displayed to the user in default units for the design.<br/><br/> The isValidExpressions property should be checked before using the value within the command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_zTranslationExpression.htm">zTranslationExpression</a></td>
+<td class="api-list">Gets or sets the expression displayed in the input field for the Z translation. This can contain equations and references to parameters but must result in a valid distance expression. If units are not specified as part of the expression, the default user units of length are used.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_zXPlaneScaleFactor.htm">zXPlaneScaleFactor</a></td>
+<td class="api-list">Gets and sets the current value of the scale factor on the Z-X plane of the triad.<br/><br/> The isValidExpressions property should be checked before using the value within the command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="TriadCommandInput_zXPlaneScaleFactorExpression.htm">zXPlaneScaleFactorExpression</a></td>
+<td class="api-list">Gets or sets the expression displayed in the input field for the Z-X plane scale. This can contain equations and references to parameters but must result in a valid unitless expression.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CommandInputs_addTriadCommandInput.htm">CommandInputs.addTriadCommandInput</a><h2 class="api">
+            Version
+          </h2>
+        Introduced in version May 2022<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(TriadCommandInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+</br><h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+returnValue = adsk::core::TriadCommandInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">commandInputs Property</h3><p class="api">Gets the CommandInputs class of the parent, which can be a Command, GroupCommandInput or TabCommandInput.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+Ptr&lt;CommandInputs&gt; propertyValue = triadCommandInput_var-&gt;
+commandInputs
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes this Command input.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a
+TriadCommandInput
+object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+returnValue = triadCommandInput_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true if the delete was successful.</p><h3 class="api-member">hideAll Method</h3><p class="api">Hides all controls.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a
+TriadCommandInput
+object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+returnValue = triadCommandInput_var-&gt;
+hideAll
+();</pre><p class="api">Return Value: boolean - Returns true if hiding the controls was successful.</p><h3 class="api-member">hideAllRotations Method</h3><p class="api">Sets all rotation related controls to be invisible. This is useful if you are only using translations or scaling.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a
+TriadCommandInput
+object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+returnValue = triadCommandInput_var-&gt;
+hideAllRotations
+();</pre><p class="api">Return Value: boolean - Returns true if hiding the controls was successful.</p><h3 class="api-member">hideAllScaling Method</h3><p class="api">Sets all scaling related controls to be invisible. This is useful if you are only using translations or rotations.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a
+TriadCommandInput
+object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+returnValue = triadCommandInput_var-&gt;
+hideAllScaling
+();</pre><p class="api">Return Value: boolean - Returns true if hiding the controls was successful.</p><h3 class="api-member">id Property</h3><p class="api">Gets the unique identifier for this input in the command's CommandInputs.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+id
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">isEnabled Property</h3><p class="api">Gets or sets if this input is currently enabled or disabled for user interaction. Currently, the isEnabled property does not disable SelectionCommandInput objects but instead has the same effect as the SelectionCommandInput.hasFocus property.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isEnabled
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isEnabled
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isFlippedHorizontal Property</h3><p class="api">Gets and sets if the triad is flipped horizontally (around the around the Y-Z plane of the triad).</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isFlippedHorizontal
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isFlippedHorizontal
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isFlippedVertical Property</h3><p class="api">Gets and sets if the triad is flipped vertically (around the around the X-Z plane of the triad).</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isFlippedVertical
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isFlippedVertical
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isFullWidth Property</h3><p class="api">Gets or sets if this input fills the entire width of the dialog. If true, the name is ignored and the input control will fill the entire width of the command dialog. The default value for this property in a new command input if false, or not to fill the width. This property does not apply to GroupCommandInputs or TabCommandInputs.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isFullWidth
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isFullWidth
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isHorizontalFlipVisible Property</h3><p class="api">Gets and sets if the control that lets the user flip horizontally (around the Y-Z plane of the triad) is visible in both the graphical manipulator and the dialog.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isHorizontalFlipVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isHorizontalFlipVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isOriginTranslationVisible Property</h3><p class="api">Gets and sets if the control that supports translation in the X, Y, and Z directions is visible in both the graphical manipulator and in the dialog. In the manipulator, this is the large dot at the origin or the triad.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isOriginTranslationVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isOriginTranslationVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isUnifiedScalingVisible Property</h3><p class="api">Gets and sets if the control that defines the scaling in all directions visible in both the graphical manipulator and in the dialog.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isUnifiedScalingVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isUnifiedScalingVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValidExpressions Property</h3><p class="api">Returns true if all of the input fields have valid expressions. If this property is false, the triad is incorrectly defined and the current values should not be used.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isValidExpressions
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isVerticalFlipVisible Property</h3><p class="api">Gets and sets if the control that lets the user flip vertical (around the X-Z plane of the triad) is visible in both the graphical manipulator and the dialog.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isVerticalFlipVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isVerticalFlipVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isVisible Property</h3><p class="api">Gets or sets if this input will be visible to the user. Setting a SelectionCommandInput to be invisible will clear any selections it currently has.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isXRotationVisible Property</h3><p class="api">Gets and sets if the control that defines the rotation around the X axis is visible in both the graphical manipulator and in the dialog.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isXRotationVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isXRotationVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isXScalingInXYVisible Property</h3><p class="api">Gets and sets if the control that defines the scaling along the X axis is visible in both the graphical manipulator and in the dialog. This control lies on the X-Y plane of the triad.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isXScalingInXYVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isXScalingInXYVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isXScalingInXZVisible Property</h3><p class="api">Gets and sets if the control that defines the scaling along the X axis is visible in both the graphical manipulator and in the dialog. This control lies on the X-Z plane of the triad.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isXScalingInXZVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isXScalingInXZVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isXTranslationVisible Property</h3><p class="api">Gets and sets if the control that supports X Translation is visible in both the graphical manipulator and in the dialog.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isXTranslationVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isXTranslationVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isXYPlaneScalingVisible Property</h3><p class="api">Gets and sets if the control that defines the scaling in the X-Y plane is visible in both the graphical manipulator and in the dialog.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isXYPlaneScalingVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isXYPlaneScalingVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isXYPlaneTranslationVisible Property</h3><p class="api">Gets and sets if the control that defines the translation in the X-Y plane is visible in both the graphical manipulator and in the dialog.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isXYPlaneTranslationVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isXYPlaneTranslationVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isXZPlaneScalingVisible Property</h3><p class="api">Gets and sets if the control that defines the scaling in the X-Z plane is visible in both the graphical manipulator and in the dialog.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isXZPlaneScalingVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isXZPlaneScalingVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isXZPlaneTranslationVisible Property</h3><p class="api">Gets and sets if the control that defines the translation in the X-Z plane is visible in both the graphical manipulator and in the dialog.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isXZPlaneTranslationVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isXZPlaneTranslationVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isYRotationVisible Property</h3><p class="api">Gets and sets if the control that defines the rotation around the Y axis is visible in both the graphical manipulator and in the dialog.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isYRotationVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isYRotationVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isYScalingInXYVisible Property</h3><p class="api">Gets and sets if the control that defines the scaling along the Y axis is visible in both the graphical manipulator and in the dialog. This control lies on the X-Y plane of the triad.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isYScalingInXYVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isYScalingInXYVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isYScalingInYZVisible Property</h3><p class="api">Gets and sets if the control that defines the scaling along the Y axis is visible in both the graphical manipulator and in the dialog. This control lies on the Y-Z plane of the triad.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isYScalingInYZVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isYScalingInYZVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isYTranslationVisible Property</h3><p class="api">Gets and sets if the control that defines the Y Translation is visible in both the graphical manipulator and in the dialog.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isYTranslationVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isYTranslationVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isYZPlaneScalingVisible Property</h3><p class="api">Gets and sets if the control that defines the scaling in the Y-Z plane is visible in both the graphical manipulator and in the dialog.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isYZPlaneScalingVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isYZPlaneScalingVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isYZPlaneTranslationVisible Property</h3><p class="api">Gets and sets if the control that defines the translation in the Y-Z plane is visible in both the graphical manipulator and in the dialog.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isYZPlaneTranslationVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isYZPlaneTranslationVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isZRotationVisible Property</h3><p class="api">Gets and sets if the control that defines the rotation around the Z axis is visible in both the graphical manipulator and in the dialog.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isZRotationVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isZRotationVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isZScalingInXZVisible Property</h3><p class="api">Gets and sets if the control that defines the scaling along the Z axis is visible in both the graphical manipulator and in the dialog. This control lies on the X-Z plane of the triad.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isZScalingInXZVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isZScalingInXZVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isZScalingInYZVisible Property</h3><p class="api">Gets and sets if the control that defines the scaling along the Z axis is visible in both the graphical manipulator and in the dialog. This control lies on the Y-Z plane of the triad.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isZScalingInYZVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isZScalingInYZVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isZTranslationVisible Property</h3><p class="api">Gets and sets if the control that defines the Z Translation is visible in both the graphical manipulator and in the dialog.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = triadCommandInput_var-&gt;
+isZTranslationVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = triadCommandInput_var-&gt;
+isZTranslationVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">lastChangeMade Property</h3><p class="api">Returns which value was most recently changed. To determine the actual change made you need to compare the transforms returned by the transform and lastTransform properties. Having information about the specific type of change made makes it easier to compare the matrices because you know what to look for.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+TriadChanges propertyValue = triadCommandInput_var-&gt;
+lastChangeMade
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">lastTransform Property</h3><p class="api">Returns the transform of the triad before the latest change. Using the matrices returned by this property and the transform property you can determine what changed. The lastChangeMade property is also useful to help you know the type of change to look for when comparing the matrices.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Matrix3D&gt; propertyValue = triadCommandInput_var-&gt;
+lastTransform
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">name Property</h3><p class="api">Gets the user visible name of this input.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+name
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentCommand Property</h3><p class="api">Gets the parent Command.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Command&gt; propertyValue = triadCommandInput_var-&gt;
+parentCommand
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">parentCommandInput Property</h3><p class="api">Gets the parent CommandInput if this commandInput is the child of a TabCommandInput or GroupCommandInput. Returns null if there is no parent.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+Ptr&lt;CommandInput&gt; propertyValue = triadCommandInput_var-&gt;
+parentCommandInput
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">positionTransform Property</h3><p class="api">Gets the current position and orientation of the triad using a transformation matrix. This transform does not include any scaling.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Matrix3D&gt; propertyValue = triadCommandInput_var-&gt;
+positionTransform
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">setFlipVisibility Method</h3><p class="api">A convenience method to turn on and off the visibility of the horizontal and vertical flip controls.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a
+TriadCommandInput
+object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+returnValue = triadCommandInput_var-&gt;
+setFlipVisibility
+(isVisible);</pre><p class="api">Return Value: boolean - Returns true if it was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">isVisible</td><td class="api-list">boolean</td><td class="api-list">Defines if the visibility of the controls should be turned on or off. True indicates they will be visible.</td></tr></table><h3 class="api-member">setFullVisibility Method</h3><p class="api">A convenience method to turn on and off the visibility of commonly used controls in a triad. These include the X, Y, and Z axis translations, the X, Y, and Z axis rotations, scaling in the X, Y, and Z directions, scaling on the X-Y, Y-Z and Z-X planes, translation on the X-Y, Y-Z, and Z-X planes, and the origin move.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a
+TriadCommandInput
+object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+returnValue = triadCommandInput_var-&gt;
+setFullVisibility
+(isVisible);</pre><p class="api">Return Value: boolean - Returns true if it was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">isVisible</td><td class="api-list">boolean</td><td class="api-list">Defines if the visibility of the controls should be turned on or off. True indicates they will be visible.</td></tr></table><h3 class="api-member">setPlanarMoveVisibility Method</h3><p class="api">A convenience method to turn on and off the visibility of the X-Y, Y-Z, and Z-X planar translation controls.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a
+TriadCommandInput
+object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+returnValue = triadCommandInput_var-&gt;
+setPlanarMoveVisibility
+(isVisible);</pre><p class="api">Return Value: boolean - Returns true if it was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">isVisible</td><td class="api-list">boolean</td><td class="api-list">Defines if the visibility of the controls should be turned on or off. True indicates they will be visible.</td></tr></table><h3 class="api-member">setRotateVisibility Method</h3><p class="api">A convenience method to turn on and off the visibility of the X, Y, and Z axis rotation controls.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a
+TriadCommandInput
+object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+returnValue = triadCommandInput_var-&gt;
+setRotateVisibility
+(isVisible);</pre><p class="api">Return Value: boolean - Returns true if it was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">isVisible</td><td class="api-list">boolean</td><td class="api-list">Defines if the visibility of the controls should be turned on or off. True indicates they will be visible.</td></tr></table><h3 class="api-member">setScaleVisibility Method</h3><p class="api">A convenience method to turn on and off the visibility of the controls that define scaling in the X, Y, and Z direction and the X-Y, Y-Z, and Z-X planes.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a
+TriadCommandInput
+object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+returnValue = triadCommandInput_var-&gt;
+setScaleVisibility
+(isVisible);</pre><p class="api">Return Value: boolean - Returns true if it was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">isVisible</td><td class="api-list">boolean</td><td class="api-list">Defines if the visibility of the controls should be turned on or off. True indicates they will be visible.</td></tr></table><h3 class="api-member">setTranslateVisibility Method</h3><p class="api">A convenience method to turn on and off the visibility of the X, Y, and Z translation controls.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a
+TriadCommandInput
+object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+returnValue = triadCommandInput_var-&gt;
+setTranslateVisibility
+(isVisible);</pre><p class="api">Return Value: boolean - Returns true if it was successful.</p><table class="api-list"><tr class="header"><td class="api-list">Name</td><td class="api-list">Type</td><td class="api-list">Description</td></tr><tr><td class="api-list">isVisible</td><td class="api-list">boolean</td><td class="api-list">Defines if the visibility of the controls should be turned on or off. True indicates they will be visible.</td></tr></table><h3 class="api-member">toolClipFilename Property</h3><p class="api">Gets or sets the full filename of the image file (PNG) used for the tool clip. The tooltip is always shown but as the user hovers over the control it will progressively display the tool clip and description text.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+toolClipFilename
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = triadCommandInput_var-&gt;
+toolClipFilename
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">tooltip Property</h3><p class="api">Gets or sets the base tooltip string. This is always shown for commands. If the tooltip description and/or tool clip are also specified then the tooltip will progressively display more information as the user hovers the mouse over the control.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+tooltip
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = triadCommandInput_var-&gt;
+tooltip
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">tooltipDescription Property</h3><p class="api">Gets or sets additional text to display progressively along with the tooltip. The text for the description can contain some basic HTML formatting tags to format the tags. For example the br tag can be used to create multiple paragraphs. The tooltip is always shown but as the user hovers over the control it will progressively display the tool clip and description text.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+tooltipDescription
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = triadCommandInput_var-&gt;
+tooltipDescription
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">transform Property</h3><p class="api">Gets or sets the current position, orientation, and scale of the triad using a transformation matrix.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Matrix3D&gt; propertyValue = triadCommandInput_var-&gt;
+transform
+();
+// Set the value of the property, where value_var is a Matrix3D.
+bool returnValue = triadCommandInput_var-&gt;
+transform
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a .</p><h3 class="api-member">unifiedeScaleFactor Property</h3><p class="api">Gets and sets the current value of the unified scale factor of the triad. The isValidExpressions property should be checked before using the value within the command.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = triadCommandInput_var-&gt;
+unifiedeScaleFactor
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = triadCommandInput_var-&gt;
+unifiedeScaleFactor
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">unifiedScaleFactorExpression Property</h3><p class="api">Gets or sets the expression displayed in the input field for the unified scale. This can contain equations and references to parameters but must result in a valid unitless expression.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+unifiedScaleFactorExpression
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = triadCommandInput_var-&gt;
+unifiedScaleFactorExpression
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">xRotation Property</h3><p class="api">Gets and sets the current value of the rotation around the X axis of the triad. The value is in radians but will be displayed to the user in degrees. The isValidExpressions property should be checked before using the value within the command.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = triadCommandInput_var-&gt;
+xRotation
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = triadCommandInput_var-&gt;
+xRotation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">xRotationExpression Property</h3><p class="api">Gets or sets the expression displayed in the input field for the X rotation. This can contain equations and references to parameters but must result in a valid distance expression. If units are not specified as part of the expression degrees are used.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+xRotationExpression
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = triadCommandInput_var-&gt;
+xRotationExpression
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">xScaleFactor Property</h3><p class="api">Gets and sets the current value of the scale factor along the X axis of the triad. The isValidExpressions property should be checked before using the value within the command.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = triadCommandInput_var-&gt;
+xScaleFactor
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = triadCommandInput_var-&gt;
+xScaleFactor
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">xScaleFactorExpression Property</h3><p class="api">Gets or sets the expression displayed in the input field for the X scale. This can contain equations and references to parameters but must result in a valid unitless expression.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+xScaleFactorExpression
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = triadCommandInput_var-&gt;
+xScaleFactorExpression
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">xTranslation Property</h3><p class="api">Gets and sets the current value of the translation along the X axis of the triad. The value is in centimeters but will be displayed to the user in default units for the design. The isValidExpressions property should be checked before using the returned value.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = triadCommandInput_var-&gt;
+xTranslation
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = triadCommandInput_var-&gt;
+xTranslation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">xTranslationExpression Property</h3><p class="api">Gets or sets the expression displayed in the input field for the X translation. This can contain equations and references to parameters but must result in a valid distance expression. If units are not specified as part of the expression, the default user units of length are used.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+xTranslationExpression
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = triadCommandInput_var-&gt;
+xTranslationExpression
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">xYPlaneScaleFactor Property</h3><p class="api">Gets and sets the current value of the scale factor on the X-Y plane of the triad. The isValidExpressions property should be checked before using the value within the command.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = triadCommandInput_var-&gt;
+xYPlaneScaleFactor
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = triadCommandInput_var-&gt;
+xYPlaneScaleFactor
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">xYPlaneScaleFactorExpression Property</h3><p class="api">Gets or sets the expression displayed in the input field for the X-Y plane scale. This can contain equations and references to parameters but must result in a valid unitless expression.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+xYPlaneScaleFactorExpression
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = triadCommandInput_var-&gt;
+xYPlaneScaleFactorExpression
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">yRotation Property</h3><p class="api">Gets and sets the current value of the rotation around the Y axis of the triad. The value is in radians but will be displayed to the user in degrees. The isValidExpressions property should be checked before using the value within the command.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = triadCommandInput_var-&gt;
+yRotation
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = triadCommandInput_var-&gt;
+yRotation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">yRotationExpression Property</h3><p class="api">Gets or sets the expression displayed in the input field for the Y rotation. This can contain equations and references to parameters but must result in a valid distance expression. If units are not specified as part of the expression degrees are used.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+yRotationExpression
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = triadCommandInput_var-&gt;
+yRotationExpression
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">yScaleFactor Property</h3><p class="api">Gets and sets the current value of the scale factor along the Y axis of the triad. The isValidExpressions property should be checked before using the value within the command.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = triadCommandInput_var-&gt;
+yScaleFactor
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = triadCommandInput_var-&gt;
+yScaleFactor
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">yScaleFactorExpression Property</h3><p class="api">Gets or sets the expression displayed in the input field for the Y scale. This can contain equations and references to parameters but must result in a valid unitless expression.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+yScaleFactorExpression
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = triadCommandInput_var-&gt;
+yScaleFactorExpression
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">yTranslation Property</h3><p class="api">Gets and sets the current value of the translation along the Y axis of the triad. The value is in centimeters but will be displayed to the user in default units for the design. The isValidExpressions property should be checked before using the value within the command.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = triadCommandInput_var-&gt;
+yTranslation
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = triadCommandInput_var-&gt;
+yTranslation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">yTranslationExpression Property</h3><p class="api">Gets or sets the expression displayed in the input field for the Y translation. This can contain equations and references to parameters but must result in a valid distance expression. If units are not specified as part of the expression, the default user units of length are used.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+yTranslationExpression
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = triadCommandInput_var-&gt;
+yTranslationExpression
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">yZPlaneScaleFactor Property</h3><p class="api">Gets and sets the current value of the scale factor on the Y-Z plane of the triad. The isValidExpressions property should be checked before using the value within the command.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = triadCommandInput_var-&gt;
+yZPlaneScaleFactor
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = triadCommandInput_var-&gt;
+yZPlaneScaleFactor
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">yZPlaneScaleFactorExpression Property</h3><p class="api">Gets or sets the expression displayed in the input field for the Y-Z plane scale. This can contain equations and references to parameters but must result in a valid unitless expression.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+yZPlaneScaleFactorExpression
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = triadCommandInput_var-&gt;
+yZPlaneScaleFactorExpression
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">zRotation Property</h3><p class="api">Gets and sets the current value of the rotation around the Z axis of the triad. The value is in radians but will be displayed to the user in degrees. The isValidExpressions property should be checked before using the value within the command.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = triadCommandInput_var-&gt;
+zRotation
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = triadCommandInput_var-&gt;
+zRotation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">zRotationExpression Property</h3><p class="api">Gets or sets the expression displayed in the input field for the Z rotation. This can contain equations and references to parameters but must result in a valid distance expression. If units are not specified as part of the expression degrees are used.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+zRotationExpression
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = triadCommandInput_var-&gt;
+zRotationExpression
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">zScaleFactor Property</h3><p class="api">Gets and sets the current value of the scale factor along the Z axis of the triad. The isValidExpressions property should be checked before using the value within the command.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = triadCommandInput_var-&gt;
+zScaleFactor
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = triadCommandInput_var-&gt;
+zScaleFactor
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">zScaleFactorExpression Property</h3><p class="api">Gets or sets the expression displayed in the input field for the Z scale. This can contain equations and references to parameters but must result in a valid unitless expression.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+zScaleFactorExpression
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = triadCommandInput_var-&gt;
+zScaleFactorExpression
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">zTranslation Property</h3><p class="api">Gets and sets the current value of the translation along the Z axis of the triad. The value is in centimeters but will be displayed to the user in default units for the design. The isValidExpressions property should be checked before using the value within the command.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = triadCommandInput_var-&gt;
+zTranslation
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = triadCommandInput_var-&gt;
+zTranslation
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">zTranslationExpression Property</h3><p class="api">Gets or sets the expression displayed in the input field for the Z translation. This can contain equations and references to parameters but must result in a valid distance expression. If units are not specified as part of the expression, the default user units of length are used.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+zTranslationExpression
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = triadCommandInput_var-&gt;
+zTranslationExpression
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">zXPlaneScaleFactor Property</h3><p class="api">Gets and sets the current value of the scale factor on the Z-X plane of the triad. The isValidExpressions property should be checked before using the value within the command.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = triadCommandInput_var-&gt;
+zXPlaneScaleFactor
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = triadCommandInput_var-&gt;
+zXPlaneScaleFactor
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">zXPlaneScaleFactorExpression Property</h3><p class="api">Gets or sets the expression displayed in the input field for the Z-X plane scale. This can contain equations and references to parameters but must result in a valid unitless expression.</p><pre class="api-code">"triadCommandInput_var" is a variable referencing a TriadCommandInput object.
+#include &lt;Core/UserInterface/TriadCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = triadCommandInput_var-&gt;
+zXPlaneScaleFactorExpression
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = triadCommandInput_var-&gt;
+zXPlaneScaleFactorExpression
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p></body>
+</html>

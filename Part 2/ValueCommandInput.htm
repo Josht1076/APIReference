@@ -1,0 +1,385 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="reference-adsk" name="topic-type"/>
+<meta content="/view/NINVFUS/ENU/" name="helpsystempath"/>
+<link href="/cloudhelp/ENU/Fusion-360-API/files/ValueCommandInput.htm#!" rel="canonical"/>
+<meta content="NINVFUS" name="product"/>
+<meta content="NA" name="release"/>
+<meta content="Developer" name="book"/>
+<meta content="Fusion-360-API" name="component"/>
+<meta content="19/8/2014" name="created"/>
+<meta content="enable" name="user-comments"/>
+<meta content="ValueCommandInput" name="contextid"/>
+<meta content="ValueCommandInput Object" name="description"/>
+<meta content="GUID-671f0782-efe0-4e33-a744-afa3d5619a01" name="topicid"/>
+<meta content="ENU" name="language"/>
+<meta content="expert" name="experiencelevel"/>
+<meta content="programmer" name="audience"/>
+<title>ValueCommandInput Object
+			</title>
+<link href="../Style/APIHelp-chm.css" rel="stylesheet" type="text/css"/>
+<link href="/view/clientframework/client.css" rel="stylesheet" type="text/css"/><script src="/view/clientframework/client.js" type="text/javascript"></script><script>
+				// This turns on the display of the copyright notice which is not visible by default.
+				// Because the head is removed when used in the web help, this function will only exists
+				// when the chm help is being created.
+				window.onload = function() {
+				copyrightElement = document.getElementById('CopyrightNotice');
+				copyrightElement.style.display = 'block';
+				};
+			</script></head>
+<body>
+<link href="../Style/APIHelp.css" rel="stylesheet" type="text/css"/>
+<h1 class="api">ValueCommandInput Object
+			</h1>
+              Derived from: <a href="CommandInput.htm">CommandInput</a> Object
+            <br/>Defined in namespace "adsk::core" and the header file is &lt;Core/UserInterface/ValueCommandInput.h&gt;<h2 class="api">
+          Description
+        </h2>Provides a command input to get a unit based value from the user.<h2 class="api">
+            Methods
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_classType.htm">classType</a></td>
+<td class="api-list">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_deleteMe.htm">deleteMe</a></td>
+<td class="api-list">Deletes this Command input.</td>
+</tr>
+</table>
+<h2 class="api">
+            Properties
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list" style="width:1%;">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_commandInputs.htm">commandInputs</a></td>
+<td class="api-list">Gets the CommandInputs class of the parent, which can be a Command, GroupCommandInput or TabCommandInput.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_expression.htm">expression</a></td>
+<td class="api-list">Gets or sets the expression displayed in the input field. This can contain equations and references to parameters. It is evaluated using the specified unit type.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_id.htm">id</a></td>
+<td class="api-list">Gets the unique identifier for this input in the command's CommandInputs.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_isEnabled.htm">isEnabled</a></td>
+<td class="api-list">Gets or sets if this input is currently enabled or disabled for user interaction.<br><br/> Currently, the isEnabled property does not disable SelectionCommandInput objects but instead has the same effect as the SelectionCommandInput.hasFocus property.</br></td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_isFullWidth.htm">isFullWidth</a></td>
+<td class="api-list">Gets or sets if this input fills the entire width of the dialog. If true, the name is ignored and the input control will fill the entire width of the command dialog. The default value for this property in a new command input if false, or not to fill the width. This property does not apply to GroupCommandInputs or TabCommandInputs.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_isMaximumInclusive.htm">isMaximumInclusive</a></td>
+<td class="api-list">Gets and sets if the maximum value can be equal to the value defined by the maximumValue property or if it must be less than the maximum.<br/><br/> When a new ValueCommandInput is created, this defaults to true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_isMaximumLimited.htm">isMaximumLimited</a></td>
+<td class="api-list">Gets and sets whether the maximum value has a limit. The maximum limit is set using the maximumValue property, and the isMaximumInclusive property controls whether the maximum includes the maximum value or must be less than the maximum.<br/><br/> When a new ValueCommandInput is created this defaults to false so there is no limit.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_isMinimumInclusive.htm">isMinimumInclusive</a></td>
+<td class="api-list">Gets and sets if the minimum value can be equal to the value defined by the minimumValue property or if it must be greater than.<br/><br/> When a new ValueCommandInput is created, this defaults to true.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_isMinimumLimited.htm">isMinimumLimited</a></td>
+<td class="api-list">Gets and sets whether the minimum value has a limit. The minimum limit is set using the minimumValue property, and the isMinimumInclusive property controls whether the minimum includes the minimum value or must be greater than the minimum.<br/><br/> When a new ValueCommandInput is created this defaults to false so there is no limit.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_isValid.htm">isValid</a></td>
+<td class="api-list">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_isValidExpression.htm">isValidExpression</a></td>
+<td class="api-list">Returns true if the current expression is valid and can be evaluated. If this is false, the value returned should be ignored because there currently is not a valid value.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_isVisible.htm">isVisible</a></td>
+<td class="api-list">Gets or sets if this input will be visible to the user.<br/><br/> Setting a SelectionCommandInput to be invisible will clear any selections it currently has.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_maximumValue.htm">maximumValue</a></td>
+<td class="api-list">Gets and sets the maximum value for the input. Setting this value will automatically set the isMaximumLimited property to true, enabling the use of the maximum value. Use the isMaximumInclusive property to control if the maximum can be equal to this value or must be less than the maximum.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_minimumValue.htm">minimumValue</a></td>
+<td class="api-list">Gets and sets the minimum value for the input. Setting this value will automatically set the isMinimumLimited property to true, enabling the use of the minimum value. Use the isMinimumInclusive property to control if the minimum can be equal to this value or must be greater than the minimum.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_name.htm">name</a></td>
+<td class="api-list">Gets the user visible name of this input.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_objectType.htm">objectType</a></td>
+<td class="api-list">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object.<br/><br/> It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_parentCommand.htm">parentCommand</a></td>
+<td class="api-list">Gets the parent Command.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_parentCommandInput.htm">parentCommandInput</a></td>
+<td class="api-list">Gets the parent CommandInput if this commandInput is the child of a TabCommandInput or GroupCommandInput. Returns null if there is no parent.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_toolClipFilename.htm">toolClipFilename</a></td>
+<td class="api-list">Gets or sets the full filename of the image file (PNG) used for the tool clip. The tooltip is always shown but as the user hovers over the control it will progressively display the tool clip and description text.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_tooltip.htm">tooltip</a></td>
+<td class="api-list">Gets or sets the base tooltip string. This is always shown for commands. If the tooltip description and/or tool clip are also specified then the tooltip will progressively display more information as the user hovers the mouse over the control.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_tooltipDescription.htm">tooltipDescription</a></td>
+<td class="api-list">Gets or sets additional text to display progressively along with the tooltip. The text for the description can contain some basic HTML formatting tags to format the tags. For example the br tag can be used to create multiple paragraphs. The tooltip is always shown but as the user hovers over the control it will progressively display the tool clip and description text.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_unitType.htm">unitType</a></td>
+<td class="api-list">Gets and sets the unit type that is used when evaluating the user's input.</td>
+</tr>
+<tr>
+<td class="api-list"><a href="ValueCommandInput_value.htm">value</a></td>
+<td class="api-list">Gets or sets the value associated with this input. The value is always in the database units of the unit type specified. For example, if the unit type is "inch" this value is in centimeters since centimeters are the database length unit. When setting the value it is converted into a string using the unit type and displayed in the input box. When getting the value, the current expression string is evaluated and the database value for the unit type is returned.</td>
+</tr>
+</table>
+<h2 class="api">
+            Accessed From
+          </h2><a href="CommandInputs_addValueInput.htm">CommandInputs.addValueInput</a><h2 class="api">
+            Samples
+          </h2>
+<table class="api-list">
+<tr class="header">
+<td class="api-list">
+                Name
+              </td>
+<td class="api-list">
+                Description
+              </td>
+</tr>
+<tr>
+<td class="api-list"><a href="CommandInputsSample_Sample.htm">Command Inputs API Sample</a></td>
+<td class="api-list"><p>Creates a command dialog that demonstrates all of the available command inputs.</p>
+<p>To use the sample, create a new Python or C++ script and copy and paste this code, replacing the default code.  You also need to unpack this zip file which contains a <a href="../ExtraFiles/CommandInputsResources.zip">resource folder</a> into the same folder where the source code file (.py or .cpp) is.</p></td>
+</tr>
+</table>
+<h2 class="api">
+            Version
+          </h2>
+        Introduced in version August 2014<br/><br/><div id="CopyrightNotice" style="display:none;">
+<hr/>
+<table style="font-size:15" width="100%">
+<tr>
+<td align="left">
+                © Copyright 2025 Autodesk, Inc.
+              </td>
+<td align="right"><a href="mailto:mfg.api.help.comments@autodesk.com?subject=Fusion%20November 2025%20API%20Help%20(ValueCommandInput%20Object%20Help%20Topic)">Comment on this page.</a></td>
+</tr>
+</table>
+</div>
+<h2 class="api">Members Detail (C++)</h2><h3 class="api-member">classType Method</h3><p class="api">Static function that all classes support that returns the type of the class as a string. The returned string matches the string returned by the objectType property. For example if you have a reference to an object and you want to check if it's a SketchLine you can use myObject.objectType == fusion.SketchLine.classType().</p><pre class="api-code">This is a static method.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+returnValue = adsk::core::ValueCommandInput::
+classType
+();</pre><p class="api">Return Value: string - Returns a string indicating the type of the object.</p><h3 class="api-member">commandInputs Property</h3><p class="api">Gets the CommandInputs class of the parent, which can be a Command, GroupCommandInput or TabCommandInput.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+Ptr&lt;CommandInputs&gt; propertyValue = valueCommandInput_var-&gt;
+commandInputs
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">deleteMe Method</h3><p class="api">Deletes this Command input.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a
+ValueCommandInput
+object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+returnValue = valueCommandInput_var-&gt;
+deleteMe
+();</pre><p class="api">Return Value: boolean - Returns true if the delete was successful.</p><h3 class="api-member">expression Property</h3><p class="api">Gets or sets the expression displayed in the input field. This can contain equations and references to parameters. It is evaluated using the specified unit type.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = valueCommandInput_var-&gt;
+expression
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = valueCommandInput_var-&gt;
+expression
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">id Property</h3><p class="api">Gets the unique identifier for this input in the command's CommandInputs.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = valueCommandInput_var-&gt;
+id
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">isEnabled Property</h3><p class="api">Gets or sets if this input is currently enabled or disabled for user interaction. Currently, the isEnabled property does not disable SelectionCommandInput objects but instead has the same effect as the SelectionCommandInput.hasFocus property.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = valueCommandInput_var-&gt;
+isEnabled
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = valueCommandInput_var-&gt;
+isEnabled
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isFullWidth Property</h3><p class="api">Gets or sets if this input fills the entire width of the dialog. If true, the name is ignored and the input control will fill the entire width of the command dialog. The default value for this property in a new command input if false, or not to fill the width. This property does not apply to GroupCommandInputs or TabCommandInputs.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = valueCommandInput_var-&gt;
+isFullWidth
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = valueCommandInput_var-&gt;
+isFullWidth
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isMaximumInclusive Property</h3><p class="api">Gets and sets if the maximum value can be equal to the value defined by the maximumValue property or if it must be less than the maximum. When a new ValueCommandInput is created, this defaults to true.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = valueCommandInput_var-&gt;
+isMaximumInclusive
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = valueCommandInput_var-&gt;
+isMaximumInclusive
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isMaximumLimited Property</h3><p class="api">Gets and sets whether the maximum value has a limit. The maximum limit is set using the maximumValue property, and the isMaximumInclusive property controls whether the maximum includes the maximum value or must be less than the maximum. When a new ValueCommandInput is created this defaults to false so there is no limit.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = valueCommandInput_var-&gt;
+isMaximumLimited
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = valueCommandInput_var-&gt;
+isMaximumLimited
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isMinimumInclusive Property</h3><p class="api">Gets and sets if the minimum value can be equal to the value defined by the minimumValue property or if it must be greater than. When a new ValueCommandInput is created, this defaults to true.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = valueCommandInput_var-&gt;
+isMinimumInclusive
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = valueCommandInput_var-&gt;
+isMinimumInclusive
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isMinimumLimited Property</h3><p class="api">Gets and sets whether the minimum value has a limit. The minimum limit is set using the minimumValue property, and the isMinimumInclusive property controls whether the minimum includes the minimum value or must be greater than the minimum. When a new ValueCommandInput is created this defaults to false so there is no limit.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = valueCommandInput_var-&gt;
+isMinimumLimited
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = valueCommandInput_var-&gt;
+isMinimumLimited
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">isValid Property</h3><p class="api">Indicates if this object is still valid, i.e. hasn't been deleted or some other action done to invalidate the reference.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = valueCommandInput_var-&gt;
+isValid
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isValidExpression Property</h3><p class="api">Returns true if the current expression is valid and can be evaluated. If this is false, the value returned should be ignored because there currently is not a valid value.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = valueCommandInput_var-&gt;
+isValidExpression
+();</pre><p class="api">Property Value: This is a read only property whose value is a boolean.</p><h3 class="api-member">isVisible Property</h3><p class="api">Gets or sets if this input will be visible to the user. Setting a SelectionCommandInput to be invisible will clear any selections it currently has.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+boolean propertyValue = valueCommandInput_var-&gt;
+isVisible
+();
+// Set the value of the property, where value_var is a boolean.
+bool returnValue = valueCommandInput_var-&gt;
+isVisible
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a boolean.</p><h3 class="api-member">maximumValue Property</h3><p class="api">Gets and sets the maximum value for the input. Setting this value will automatically set the isMaximumLimited property to true, enabling the use of the maximum value. Use the isMaximumInclusive property to control if the maximum can be equal to this value or must be less than the maximum.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = valueCommandInput_var-&gt;
+maximumValue
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = valueCommandInput_var-&gt;
+maximumValue
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">minimumValue Property</h3><p class="api">Gets and sets the minimum value for the input. Setting this value will automatically set the isMinimumLimited property to true, enabling the use of the minimum value. Use the isMinimumInclusive property to control if the minimum can be equal to this value or must be greater than the minimum.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = valueCommandInput_var-&gt;
+minimumValue
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = valueCommandInput_var-&gt;
+minimumValue
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p><h3 class="api-member">name Property</h3><p class="api">Gets the user visible name of this input.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = valueCommandInput_var-&gt;
+name
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">objectType Property</h3><p class="api">This property is supported by all objects in the API and returns a string that contains the full name (namespace::objecttype) describing the type of the object. It's often useful to use this in combination with the classType method to see if an object is a certain type. For example: if obj.objectType == adsk.core.Point3D.classType():</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = valueCommandInput_var-&gt;
+objectType
+();</pre><p class="api">Property Value: This is a read only property whose value is a string.</p><h3 class="api-member">parentCommand Property</h3><p class="api">Gets the parent Command.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+Ptr&lt;Command&gt; propertyValue = valueCommandInput_var-&gt;
+parentCommand
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">parentCommandInput Property</h3><p class="api">Gets the parent CommandInput if this commandInput is the child of a TabCommandInput or GroupCommandInput. Returns null if there is no parent.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+Ptr&lt;CommandInput&gt; propertyValue = valueCommandInput_var-&gt;
+parentCommandInput
+();</pre><p class="api">Property Value: This is a read only property whose value is a .</p><h3 class="api-member">toolClipFilename Property</h3><p class="api">Gets or sets the full filename of the image file (PNG) used for the tool clip. The tooltip is always shown but as the user hovers over the control it will progressively display the tool clip and description text.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = valueCommandInput_var-&gt;
+toolClipFilename
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = valueCommandInput_var-&gt;
+toolClipFilename
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">tooltip Property</h3><p class="api">Gets or sets the base tooltip string. This is always shown for commands. If the tooltip description and/or tool clip are also specified then the tooltip will progressively display more information as the user hovers the mouse over the control.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = valueCommandInput_var-&gt;
+tooltip
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = valueCommandInput_var-&gt;
+tooltip
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">tooltipDescription Property</h3><p class="api">Gets or sets additional text to display progressively along with the tooltip. The text for the description can contain some basic HTML formatting tags to format the tags. For example the br tag can be used to create multiple paragraphs. The tooltip is always shown but as the user hovers over the control it will progressively display the tool clip and description text.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = valueCommandInput_var-&gt;
+tooltipDescription
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = valueCommandInput_var-&gt;
+tooltipDescription
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">unitType Property</h3><p class="api">Gets and sets the unit type that is used when evaluating the user's input.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+string propertyValue = valueCommandInput_var-&gt;
+unitType
+();
+// Set the value of the property, where value_var is a string.
+bool returnValue = valueCommandInput_var-&gt;
+unitType
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a string.</p><h3 class="api-member">value Property</h3><p class="api">Gets or sets the value associated with this input. The value is always in the database units of the unit type specified. For example, if the unit type is "inch" this value is in centimeters since centimeters are the database length unit. When setting the value it is converted into a string using the unit type and displayed in the input box. When getting the value, the current expression string is evaluated and the database value for the unit type is returned.</p><pre class="api-code">"valueCommandInput_var" is a variable referencing a ValueCommandInput object.
+#include &lt;Core/UserInterface/ValueCommandInput.h&gt;
+// Get the value of the property.
+double propertyValue = valueCommandInput_var-&gt;
+value
+();
+// Set the value of the property, where value_var is a double.
+bool returnValue = valueCommandInput_var-&gt;
+value
+(value_var);</pre><p class="api">Property Value: This is a read/write property whose value is a double.</p></body>
+</html>
